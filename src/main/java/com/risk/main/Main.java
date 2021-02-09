@@ -28,6 +28,9 @@ public class Main {
         runGame();
     }
 
+    /**
+     * The Game execution begins from this method.
+     */
     public static void runGame()
     {
         Scanner l_Scanner = new Scanner(System.in);
@@ -47,6 +50,11 @@ public class Main {
 
     }
 
+    /**
+     * The method compares the command input from user to check what type of command is entered.
+     *
+     * @param p_Command command line input
+     */
     private static void compareCommand(String p_Command)
     {
             String l_Action = p_Command.split(" ")[0];
@@ -74,11 +82,17 @@ public class Main {
 
     }
 
+   /**
+    * Finds whether the command type is Map Command or Game Command
+    *
+    * @param l_action command value
+    * @return String expressing type of command
+    */
     private static String getCommandType(String l_action)
     {
         List<String> l_GameCommands = Arrays.asList("showmap", "loadmap", "gameplayer", "assigncountries", "deploy");
 
-        List<String> l_MapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbour", "showmap");
+        List<String> l_MapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
 
         if(l_MapCommands.contains(l_action))
         {

@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * The CommandParser class is used to determine whether command is a Map Command or Game Command
- * and call the necessory actions according to command type.
+ * and call the necessary actions according to command type.
  * @author Harshil
  */
 public class CommandParser {
@@ -103,9 +103,10 @@ public class CommandParser {
      */
     public static void gameCommandParser(String p_Action, String p_Arguments)
     {
-//        Refactor this method to Game Engine
-//        System.out.println("Inside Game Command Parser");
-//        System.out.println("Command : " + p_Action);
-//        System.out.println("Arguments : " + p_Arguments);
+
+
+        //Refactor this method to Game Engine
+
+
     }
 }
