@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This class defines Country and its properties such as the continent to which it
- * belongs, its adjacent Countries and whether its been assigned to any player or not.
+ * This class defines Country and its properties such as
+ * the continent to which it belongs, its adjacent Countries and whether its been assigned to any player or not.
  *
  * @author Harshil
  */
 public class Country {
-    private int d_countryID;
-    private String d_countryName;
-    private Continent d_belongToContinent;
-    private Player d_player;
-    private List<Country> d_adjacentCountries;
-    private boolean d_isProcessed = false;
+    private int d_CountryID;
+    private String d_CountryName;
+    private Continent d_BelongToContinent;
+    private Player d_Player;
+    private List<Country> d_AdjacentCountries;
+    private boolean d_IsProcessed = false;
     //private List<Integer> d_adjCountries;
 
 
@@ -23,19 +23,18 @@ public class Country {
      * Default Constructor
      */
     public Country() {
-        //d_adjCountries = new ArrayList<>();
-        d_adjacentCountries = new ArrayList<>();
+        d_AdjacentCountries = new ArrayList<>();
     }
 
     /**
      * Instantiates a new Country.
      *
-     * @param p_countryID         List of adjacent territories names
-     * @param p_adjacentCountries List of object of adjacent territories
+     * @param p_CountryID         List of adjacent territories names
+     * @param p_AdjacentCountries List of object of adjacent territories
      */
-    public Country(int p_countryID, List<Country> p_adjacentCountries) {
-        d_countryID = p_countryID;
-        d_adjacentCountries = p_adjacentCountries;
+    public Country(int p_CountryID, List<Country> p_AdjacentCountries) {
+        d_CountryID = p_CountryID;
+        d_AdjacentCountries = p_AdjacentCountries;
     }
 
     /**
@@ -43,18 +42,18 @@ public class Country {
      *
      * @return The Country ID
      */
-    public int getD_countryID() {
-        return d_countryID;
+    public int getD_CountryID() {
+        return d_CountryID;
     }
 
 
     /**
      * Sets Country ID.
      *
-     * @param p_countryID Country ID
+     * @param p_CountryID Country ID
      */
-    public void setD_countryID(int p_countryID) {
-        d_countryID = p_countryID;
+    public void setD_CountryID(int p_CountryID) {
+        d_CountryID = p_CountryID;
     }
 
     /**
@@ -62,17 +61,17 @@ public class Country {
      *
      * @return The Country Name
      */
-    public String getD_countryName() {
-        return d_countryName;
+    public String getD_CountryName() {
+        return d_CountryName;
     }
 
     /**
      * Sets Country name.
      *
-     * @param p_countryName Country Name
+     * @param p_CountryName Country Name
      */
-    public void setD_countryName(String p_countryName) {
-        d_countryName = p_countryName;
+    public void setD_CountryName(String p_CountryName) {
+        d_CountryName = p_CountryName;
     }
 
     /**
@@ -80,17 +79,17 @@ public class Country {
      *
      * @return Continent of the country
      */
-    public Continent getD_belongToContinent() {
-        return d_belongToContinent;
+    public Continent getD_BelongToContinent() {
+        return d_BelongToContinent;
     }
 
     /**
      * Sets Continent to which country belongs to
      *
-     * @param p_belongToContinent Continent of the country
+     * @param p_BelongToContinent Continent of the country
      */
-    public void setD_belongToContinent(Continent p_belongToContinent) {
-        d_belongToContinent = p_belongToContinent;
+    public void setD_BelongToContinent(Continent p_BelongToContinent) {
+        d_BelongToContinent = p_BelongToContinent;
     }
 
     /**
@@ -98,17 +97,17 @@ public class Country {
      *
      * @return Player who owns the country
      */
-    public Player getD_player() {
-        return d_player;
+    public Player getD_Player() {
+        return d_Player;
     }
 
     /**
      * Sets Player to which country belongs to
      *
-     * @param p_player Player who owns the country
+     * @param p_Player Player who owns the country
      */
-    public void setD_player(Player p_player) {
-        d_player = p_player;
+    public void setD_Player(Player p_Player) {
+        d_Player = p_Player;
     }
 
     /**
@@ -116,17 +115,17 @@ public class Country {
      *
      * @return adjacent countries list
      */
-    public List<Country> getD_adjacentCountries() {
-        return d_adjacentCountries;
+    public List<Country> getD_AdjacentCountries() {
+        return d_AdjacentCountries;
     }
 
     /**
      * Sets a list of adjacent countries.
      *
-     * @param p_adjacentCountries adjacent countries list
+     * @param p_AdjacentCountries adjacent countries list
      */
-    public void setD_adjacentCountries(List<Country> p_adjacentCountries) {
-        d_adjacentCountries = p_adjacentCountries;
+    public void setD_AdjacentCountries(List<Country> p_AdjacentCountries) {
+        d_AdjacentCountries = p_AdjacentCountries;
     }
 
     /**
@@ -134,34 +133,34 @@ public class Country {
      *
      * @return whether country is processed or not
      */
-    public boolean isD_isProcessed() {
-        return d_isProcessed;
+    public boolean isD_IsProcessed() {
+        return d_IsProcessed;
     }
 
     /**
      * To notify that that country had been assigned to a player.
      *
-     * @param p_isProcessed whether country is processed or not
+     * @param p_IsProcessed whether country is processed or not
      */
-    public void setD_isProcessed(boolean p_isProcessed) {
-        d_isProcessed = p_isProcessed;
+    public void setD_IsProcessed(boolean p_IsProcessed) {
+        d_IsProcessed = p_IsProcessed;
     }
 
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object p_object) {
+    public boolean equals(Object p_Object) {
 
-        if (!(p_object instanceof Country)) {
+        if (!(p_Object instanceof Country)) {
             return false;
         }
 
-        if (p_object == this) {
+        if (p_Object == this) {
             return true;
         }
 
-        Country l_country = (Country) p_object;
-        return l_country.getD_countryName().equalsIgnoreCase(d_countryName);
+        Country l_Country = (Country) p_Object;
+        return l_Country.getD_CountryName().equalsIgnoreCase(d_CountryName);
     }
 }

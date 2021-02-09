@@ -15,17 +15,17 @@ import java.util.Observable;
  */
 public class Map extends Observable {
 
-    private HashMap<String, String> d_mapData;
-    private List<Continent> d_continents;
-    private HashMap<String, Continent> d_continentMap;
+    private HashMap<String, String> d_MapData;
+    private List<Continent> d_Continents;
+    private HashMap<String, Continent> d_ContinentMap;
 
     /**
      * Default Constructor
      */
     public Map() {
-        d_mapData = new HashMap<String, String>();
-        d_continents = new ArrayList<Continent>();
-        d_continentMap = new HashMap<String, Continent>();
+        d_MapData = new HashMap<String, String>();
+        d_Continents = new ArrayList<Continent>();
+        d_ContinentMap = new HashMap<String, Continent>();
     }
 
 
@@ -34,17 +34,17 @@ public class Map extends Observable {
      *
      * @return map data
      */
-    public HashMap<String, String> getD_mapData() {
-        return d_mapData;
+    public HashMap<String, String> getD_MapData() {
+        return d_MapData;
     }
 
     /**
      * Sets map data in a HashMap format
      *
-     * @param p_mapData map data
+     * @param p_MapData map data
      */
-    public void setD_mapData(HashMap<String, String> p_mapData) {
-        d_mapData = p_mapData;
+    public void setD_MapData(HashMap<String, String> p_MapData) {
+        d_MapData = p_MapData;
     }
 
     /**
@@ -52,17 +52,17 @@ public class Map extends Observable {
      *
      * @return continent list
      */
-    public List<Continent> getD_continents() {
-        return d_continents;
+    public List<Continent> getD_Continents() {
+        return d_Continents;
     }
 
     /**
      * Sets a list of continent to the map.
      *
-     * @param p_continents continent list
+     * @param p_Continents continent list
      */
-    public void setD_continents(List<Continent> p_continents) {
-        d_continents = p_continents;
+    public void setD_Continents(List<Continent> p_Continents) {
+        d_Continents = p_Continents;
     }
 
     /**
@@ -70,16 +70,16 @@ public class Map extends Observable {
      *
      * @return continentMap HashMap
      */
-    public HashMap<String, Continent> getD_continentMap() {
-        return d_continentMap;
+    public HashMap<String, Continent> getD_ContinentMap() {
+        return d_ContinentMap;
     }
 
     /**
      * Sets a HashMap of continent and map
      *
-     * @param p_continentMap continentMap HasHMap
+     * @param p_ContinentMap continentMap HasHMap
      */
-    public void setD_continentMap(HashMap<String, Continent> p_continentMap) {
-        d_continentMap = p_continentMap;
+    public void setD_ContinentMap(HashMap<String, Continent> p_ContinentMap) {
+        d_ContinentMap = p_ContinentMap;
     }
 }

@@ -5,28 +5,29 @@ import java.util.List;
 
 
 /**
- * This class defines Player and its properties such as id, name, armies and number of territories owned by player
+ * This class defines Player and its properties such as
+ * ID, Name, number of Armies and number of countries owned by player
  *
  * @author Harshil
  */
 public class Player {
 
-    private int d_playerID;
-    private String d_playerName;
-    private int d_armies;
-    private List<Country> d_assignedCountries;
+    private int d_PlayerID;
+    private String d_PlayerName;
+    private int d_Armies;
+    private List<Country> d_AssignedCountries;
 
     /**
      * Instantiates a new Player.
      *
-     * @param p_playerID   Unique ID of the player
-     * @param p_playerName Name of the player
+     * @param p_PlayerID   Unique ID of the player
+     * @param p_PlayerName Name of the player
      */
-    public Player(int p_playerID, String p_playerName) {
+    public Player(int p_PlayerID, String p_PlayerName) {
         super();
-        d_playerID = p_playerID;
-        d_playerName = p_playerName;
-        d_assignedCountries = new ArrayList<Country>();
+        d_PlayerID = p_PlayerID;
+        d_PlayerName = p_PlayerName;
+        d_AssignedCountries = new ArrayList<Country>();
     }
 
     /**
@@ -34,17 +35,17 @@ public class Player {
      *
      * @return player id
      */
-    public int getD_playerID() {
-        return d_playerID;
+    public int getD_PlayerID() {
+        return d_PlayerID;
     }
 
     /**
      * Sets player id.
      *
-     * @param p_playerID player id
+     * @param p_PlayerID player id
      */
-    public void setD_playerID(int p_playerID) {
-        d_playerID = p_playerID;
+    public void setD_PlayerID(int p_PlayerID) {
+        d_PlayerID = p_PlayerID;
     }
 
     /**
@@ -52,17 +53,17 @@ public class Player {
      *
      * @return player name
      */
-    public String getD_playerName() {
-        return d_playerName;
+    public String getD_PlayerName() {
+        return d_PlayerName;
     }
 
     /**
      * Sets player name.
      *
-     * @param p_playerName player name
+     * @param p_PlayerName player name
      */
-    public void setD_playerName(String p_playerName) {
-        d_playerName = p_playerName;
+    public void setD_PlayerName(String p_PlayerName) {
+        d_PlayerName = p_PlayerName;
     }
 
     /**
@@ -70,17 +71,17 @@ public class Player {
      *
      * @return armies count
      */
-    public int getD_armies() {
-        return d_armies;
+    public int getD_Armies() {
+        return d_Armies;
     }
 
     /**
      * Sets number of armies owned by the player.
      *
-     * @param p_armies armies count
+     * @param p_Armies armies count
      */
-    public void setD_armies(int p_armies) {
-        d_armies = p_armies;
+    public void setD_Armies(int p_Armies) {
+        d_Armies = p_Armies;
     }
 
     /**
@@ -88,35 +89,35 @@ public class Player {
      *
      * @return list of assigned countries
      */
-    public List<Country> getD_assignedCountries() {
-        return d_assignedCountries;
+    public List<Country> getD_AssignedCountries() {
+        return d_AssignedCountries;
     }
 
     /**
      * Sets a list of countries assigned to the player.
      *
-     * @param p_assignedCountries list of assigned countries
+     * @param p_AssignedCountries list of assigned countries
      */
-    public void setD_assignedCountries(List<Country> p_assignedCountries) {
-        d_assignedCountries = p_assignedCountries;
+    public void setD_AssignedCountries(List<Country> p_AssignedCountries) {
+        d_AssignedCountries = p_AssignedCountries;
     }
 
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object p_object) {
+    public boolean equals(Object p_Object) {
 
-        if (!(p_object instanceof Player)) {
+        if (!(p_Object instanceof Player)) {
             return false;
         }
 
-        if (p_object == this) {
+        if (p_Object == this) {
             return true;
         }
 
-        Player l_player = (Player) p_object;
-        return l_player.getD_playerName().equalsIgnoreCase(d_playerName);
+        Player l_Player = (Player) p_Object;
+        return l_Player.getD_PlayerName().equalsIgnoreCase(d_PlayerName);
     }
 
 }

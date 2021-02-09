@@ -1,43 +1,42 @@
 package com.risk.models;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 
 /**
- * This class defines Continent and its properties such as Name, control value, list of Countries it has
+ * This class defines Continent and its properties such as
+ * Name, control value, list of Countries it has
  *
  * @author Harshil
  */
 public class Continent {
-    private int d_continentID;
-    private String d_continentName;
-    private int d_continentValue;
-    private List<Country> d_countries;
-    private boolean d_isVisited = false;
+    private int d_ContinentID;
+    private String d_ContinentName;
+    private int d_ContinentValue;
+    private List<Country> d_Countries;
+    private boolean d_IsVisited = false;
     //private HashMap<String, Country> d_countryMap;
 
     /**
      * Default Constructor
      */
     public Continent() {
-        this.d_countries = new ArrayList<>();
-        //this.d_countryMap = new HashMap<>();
+        this.d_Countries = new ArrayList<>();
+
     }
 
     /**
      * Instantiates a new Continent.
      *
-     * @param p_continentName  Name of the continent
-     * @param p_continentValue control value of the continent
+     * @param p_ContinentName  Name of the continent
+     * @param p_ContinentValue control value of the continent
      */
-    public Continent(String p_continentName, int p_continentValue) {
+    public Continent(String p_ContinentName, int p_ContinentValue) {
         super();
-        d_continentName = p_continentName;
-        d_continentValue = p_continentValue;
-        this.d_countries = new ArrayList<>();
-        //this.d_countryMap = new HashMap<>();
+        d_ContinentName = p_ContinentName;
+        d_ContinentValue = p_ContinentValue;
+        this.d_Countries = new ArrayList<>();
     }
 
     /**
@@ -45,17 +44,17 @@ public class Continent {
      *
      * @return continent id
      */
-    public int getD_continentID() {
-        return d_continentID;
+    public int getD_ContinentID() {
+        return d_ContinentID;
     }
 
     /**
      * Sets continent id.
      *
-     * @param p_continentID continent id
+     * @param p_ContinentID continent id
      */
-    public void setD_continentID(int p_continentID) {
-        d_continentID = p_continentID;
+    public void setD_ContinentID(int p_ContinentID) {
+        d_ContinentID = p_ContinentID;
     }
 
     /**
@@ -63,17 +62,17 @@ public class Continent {
      *
      * @return continent name
      */
-    public String getD_continentName() {
-        return d_continentName;
+    public String getD_ContinentName() {
+        return d_ContinentName;
     }
 
     /**
      * Sets continent name.
      *
-     * @param p_continentName continent name
+     * @param p_ContinentName continent name
      */
-    public void setD_continentName(String p_continentName) {
-        d_continentName = p_continentName;
+    public void setD_ContinentName(String p_ContinentName) {
+        d_ContinentName = p_ContinentName;
     }
 
     /**
@@ -81,17 +80,17 @@ public class Continent {
      *
      * @return continent control value
      */
-    public int getD_continentValue() {
-        return d_continentValue;
+    public int getD_ContinentValue() {
+        return d_ContinentValue;
     }
 
     /**
      * Sets control value of continent
      *
-     * @param p_continentValue continent control value
+     * @param p_ContinentValue continent control value
      */
-    public void setD_continentValue(int p_continentValue) {
-        d_continentValue = p_continentValue;
+    public void setD_ContinentValue(int p_ContinentValue) {
+        d_ContinentValue = p_ContinentValue;
     }
 
     /**
@@ -99,17 +98,17 @@ public class Continent {
      *
      * @return countries list
      */
-    public List<Country> getD_countries() {
-        return d_countries;
+    public List<Country> getD_Countries() {
+        return d_Countries;
     }
 
     /**
      * Sets list of countries to the continent.
      *
-     * @param p_countries countries list
+     * @param p_Countries countries list
      */
-    public void setD_countries(List<Country> p_countries) {
-        d_countries = p_countries;
+    public void setD_Countries(List<Country> p_Countries) {
+        d_Countries = p_Countries;
     }
 
     /**
@@ -117,34 +116,34 @@ public class Continent {
      *
      * @return whether continent is visited or not
      */
-    public boolean isD_isVisited() {
-        return d_isVisited;
+    public boolean isD_IsVisited() {
+        return d_IsVisited;
     }
 
     /**
      * Sets visited value of continent
      *
-     * @param p_isVisited whether continent is visited or not
+     * @param p_IsVisited whether continent is visited or not
      */
-    public void setD_isVisited(boolean p_isVisited) {
-        d_isVisited = p_isVisited;
+    public void setD_IsVisited(boolean p_IsVisited) {
+        d_IsVisited = p_IsVisited;
     }
 
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object p_object) {
+    public boolean equals(Object p_Object) {
 
-        if (!(p_object instanceof Continent)) {
+        if (!(p_Object instanceof Continent)) {
             return false;
         }
 
-        if (p_object == this) {
+        if (p_Object == this) {
             return true;
         }
 
-        Continent l_continent = (Continent) p_object;
-        return l_continent.getD_continentName().equalsIgnoreCase(d_continentName);
+        Continent l_Continent = (Continent) p_Object;
+        return l_Continent.getD_ContinentName().equalsIgnoreCase(d_ContinentName);
     }
 }
