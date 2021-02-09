@@ -10,11 +10,16 @@ import java.util.Scanner;
 
 /**
  * This is main entrance point of the program. The execution of the game begins from here.
- * @author Harshil
  *
-*/
+ * @author Harshil
+ */
 public class Main {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args)
     {
         System.out.println("Welcome to WARZONE");
@@ -50,8 +55,6 @@ public class Main {
 
             String l_CommandType = getCommandType(l_Action);
 
-            //To check if string is properly split or not
-            //System.out.println("Action: " + l_Action + " Arguments: " + l_Arguments + " Command Type: " + l_CommandType);
 
             if(l_CommandType.equals("Map Command"))
             {
@@ -59,6 +62,7 @@ public class Main {
             }
             else if(l_CommandType.equals("Game Command"))
             {
+                //Call GAME ENGINE to Take over and initiate Game. Dont return here.
                 CommandParser.gameCommandParser(l_Action,l_Arguments);
 
             }
