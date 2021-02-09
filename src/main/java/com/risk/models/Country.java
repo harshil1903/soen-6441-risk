@@ -16,6 +16,10 @@ public class Country {
     private Player d_Player;
     private List<Country> d_AdjacentCountries;
     private boolean d_IsProcessed = false;
+
+
+
+    private int d_NumberOfArmies;
     //private List<Integer> d_adjCountries;
 
 
@@ -144,6 +148,24 @@ public class Country {
      */
     public void setD_IsProcessed(boolean p_IsProcessed) {
         d_IsProcessed = p_IsProcessed;
+    }
+
+    /**
+     * Gets number of armies deployed by the player
+     *
+     * @return number of armies
+     */
+    public int getD_NumberOfArmies() {
+        return d_NumberOfArmies;
+    }
+
+    /**
+     * Sets number of armies to be deployed in the country.
+     *
+     * @param p_NumberOfArmies number of armies
+     */
+    public void setD_NumberOfArmies(int p_NumberOfArmies) {
+        d_NumberOfArmies = p_NumberOfArmies;
     }
 
     /* (non-Javadoc)
