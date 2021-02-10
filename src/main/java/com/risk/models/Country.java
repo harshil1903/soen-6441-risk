@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class Country {
     private int d_CountryID;
+    private int d_ContinentID;
     private String d_CountryName;
     private Continent d_BelongToContinent;
     private Player d_Player;
@@ -58,6 +59,27 @@ public class Country {
      */
     public void setD_CountryID(int p_CountryID) {
         d_CountryID = p_CountryID;
+    }
+
+
+    /**
+     * Gets continent id.
+     *
+     * @return Continent ID
+     */
+    public int getD_ContinentID()
+    {
+        return d_ContinentID;
+    }
+
+    /**
+     * Sets continent id.
+     *
+     * @param p_ContinentID Continent ID
+     */
+    public void setD_ContinentID(int p_ContinentID)
+    {
+        d_ContinentID = p_ContinentID;
     }
 
     /**
