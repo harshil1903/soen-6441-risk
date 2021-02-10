@@ -1,6 +1,8 @@
 package com.risk.maputils;
 
 import com.risk.exception.InvalidMapException;
+import com.risk.models.Continent;
+import com.risk.models.Map;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,8 +51,7 @@ public class MapOperations {
 
     public static void removeContinent(Map p_map, int p_ContinentID) throws InvalidMapException {
         Continent d_rcontinent = new Continent();
-        if (d_rcontinent.getD_ContinentID()==p_ContinentID)
-        {
+        if (d_rcontinent.getD_ContinentID() == p_ContinentID) {
             p_map.getD_Continents().remove(d_rcontinent);
         }
 
@@ -88,7 +89,7 @@ public class MapOperations {
     /**
      * Remove continent to map with details such as ID and Value
      *
-     * @param p_map         current map object
+     * @param p_map       current map object
      * @param p_CountryID ID of the continent
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
@@ -96,3 +97,4 @@ public class MapOperations {
     public static void removeCountry(Map p_map, int p_CountryID) throws InvalidMapException {
 
     }
+}
