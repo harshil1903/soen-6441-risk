@@ -139,7 +139,7 @@ public class Continent {
      *
      * @param p_IsVisited whether continent is visited or not
      */
-    public void setD_IsVisited(boolean p_IsVisited) {
+    public void setD_Visited(boolean p_IsVisited) {
         d_IsVisited = p_IsVisited;
     }
 
