@@ -102,6 +102,39 @@ public class Player {
         d_AssignedCountries = p_AssignedCountries;
     }
 
+
+    /**
+     * Add country to assigned countries.
+     *
+     * @param p_Country Country to be added
+     */
+    public void addCountryToAssignedCountries(Country p_Country)
+    {
+        d_AssignedCountries.add(p_Country);
+    }
+
+    /**
+     * Remove country from assigned countries.
+     *
+     * @param p_Country Country to be removed
+     */
+    public void removeCountryFromAssignedCountries(Country p_Country)
+    {
+        d_AssignedCountries.remove(p_Country);
+    }
+
+    /**
+     * To check if country present in assigned countries boolean.
+     *
+     * @param p_Country Country to be checked
+     * @return whether country is present in the assigned country list or not
+     */
+    public boolean isCountryPresentInAssignedCountries(Country p_Country)
+    {
+        return d_AssignedCountries.contains(p_Country);
+    }
+
+
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */

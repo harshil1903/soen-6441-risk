@@ -190,6 +190,39 @@ public class Country {
         d_NumberOfArmies = p_NumberOfArmies;
     }
 
+
+    /**
+     * Add country to adjacent countries list.
+     *
+     * @param p_Country country to be added
+     */
+    public void addCountryToAdjacentCountries(Country p_Country)
+    {
+        d_AdjacentCountries.add(p_Country);
+    }
+
+    /**
+     * Remove country from adjacent countries list.
+     *
+     * @param p_Country country to be removed
+     */
+    public void removeCountryFromAdjacentCountries(Country p_Country)
+    {
+        d_AdjacentCountries.remove(p_Country);
+    }
+
+    /**
+     * To check if country present in adjacent countries list.
+     *
+     * @param p_Country country to checked for presence
+     * @return whether country is present in the adjacent country list or not
+     */
+    public boolean isCountryPresentInAdjacentCountries(Country p_Country)
+    {
+        return d_AdjacentCountries.contains(p_Country);
+    }
+
+
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */

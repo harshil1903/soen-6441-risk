@@ -129,6 +129,37 @@ public class Continent {
         d_IsVisited = p_IsVisited;
     }
 
+    /**
+     * Add country to country list
+     *
+     * @param p_Country country to be added
+     */
+    public void addCountryToCountryList(Country p_Country)
+    {
+        d_Countries.add(p_Country);
+    }
+
+    /**
+     * Remove country from country list.
+     *
+     * @param p_Country country to be removed
+     */
+    public void removeCountryFromCountryList(Country p_Country)
+    {
+        d_Countries.remove(p_Country);
+    }
+
+    /**
+     * To check if country present in country list of the continent or not.
+     *
+     * @param p_Country country to be checked
+     * @return whether country is present in the country list or not
+     */
+    public boolean isCountryPresentInCountryList(Country p_Country)
+    {
+        return d_Countries.contains(p_Country);
+    }
+
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */

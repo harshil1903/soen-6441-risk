@@ -17,7 +17,6 @@ public class Map extends Observable {
 
     private HashMap<String, String> d_MapData;
     private List<Continent> d_Continents;
-    private HashMap<String, Continent> d_ContinentMap;
 
     /**
      * Default Constructor
@@ -25,7 +24,6 @@ public class Map extends Observable {
     public Map() {
         d_MapData = new HashMap<String, String>();
         d_Continents = new ArrayList<Continent>();
-        d_ContinentMap = new HashMap<String, Continent>();
     }
 
 
@@ -65,21 +63,35 @@ public class Map extends Observable {
         d_Continents = p_Continents;
     }
 
+
     /**
-     * Gets a HashMap of continent and map.
+     * Add continent to continent list.
      *
-     * @return continentMap HashMap
+     * @param p_Continent continent
      */
-    public HashMap<String, Continent> getD_ContinentMap() {
-        return d_ContinentMap;
+    public void addContinentToContinentList(Continent p_Continent)
+    {
+        d_Continents.add(p_Continent);
     }
 
     /**
-     * Sets a HashMap of continent and map
+     * Remove continent from continent list.
      *
-     * @param p_ContinentMap continentMap HasHMap
+     * @param p_Continent continent
      */
-    public void setD_ContinentMap(HashMap<String, Continent> p_ContinentMap) {
-        d_ContinentMap = p_ContinentMap;
+    public void removeContinentFromContinentList(Continent p_Continent)
+    {
+        d_Continents.remove(p_Continent);
+    }
+
+    /**
+     * TO check if continent present in continent list
+     *
+     * @param p_Continent continent
+     * @return whether Continent is present in Map or not
+     */
+    public boolean isContinentPresentInContinentList(Continent p_Continent)
+    {
+        return d_Continents.contains(p_Continent);
     }
 }
