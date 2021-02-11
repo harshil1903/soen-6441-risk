@@ -55,7 +55,7 @@ public class Main {
      *
      * @param p_Command command line input
      */
-    private static void compareCommand(String p_Command)
+    public static void compareCommand(String p_Command)
     {
             String l_Action = p_Command.split(" ")[0];
 
@@ -88,7 +88,7 @@ public class Main {
     * @param l_action command value
     * @return String expressing type of command
     */
-    private static String getCommandType(String l_action)
+    public static String getCommandType(String l_action)
     {
         List<String> l_GameCommands = Arrays.asList("showmap", "loadmap", "gameplayer", "assigncountries", "deploy");
 
