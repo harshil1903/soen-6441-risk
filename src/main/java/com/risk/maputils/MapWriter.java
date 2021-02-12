@@ -44,7 +44,28 @@ public class MapWriter {
     private String parseMapAndReturnString(Map map) {
 
         StringBuilder content = new StringBuilder();
-
-        return null;
+        content = processMapAttribute(map);
+/*        content.append(processContinent(map));
+        content.append(processCountries(map)); */
+        return content.toString();
     }
+
+/**
+ * This method processes map attributes.
+ * @param map object of the map is being processed
+ * @return a String that contains map properties.
+ */
+
+private StringBuilder processMapAttribute(Map map){
+    StringBuilder mapAttribute = new StringBuilder();
+    mapAttribute.append("[Map]");
+    mapAttribute.append("\n");
+/*
+    for(Entry<String, String> keymap: map.getD_MapData().entrySet()){
+        mapAttribute.append(keymap.getKey() + "=" + keymap.getValue());
+        mapAttribute.append("\n");
+*/
+    return mapAttribute;
 }
+}
+
