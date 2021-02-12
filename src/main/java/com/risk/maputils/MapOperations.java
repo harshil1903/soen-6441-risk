@@ -75,7 +75,6 @@ public class MapOperations {
         l_country.setD_CountryID(p_CountryID);
         l_country.setD_ContinentID(p_ContinentID);
         List<Country> l_tempCountry=new ArrayList<Country>();
-
         return l_country;
     }
 
@@ -88,5 +87,18 @@ public class MapOperations {
 
     public static void removeCountry(Map p_map, int p_CountryID) throws InvalidMapException {
 
+    }
+    /**
+     * Add country to map with details such as ID and Value
+     * @param p_Map         current map object
+     * @param p_NeighborID   ID of the country
+     * @param p_CountryID Value of the country
+     * @return Returns the new neighbor country
+     * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
+     */
+
+    public static Country neighborCountry(Map p_Map, int p_NeighborID, int p_CountryID) throws InvalidMapException {
+        Country l_country = new Country();
+        return l_country;
     }
 }
