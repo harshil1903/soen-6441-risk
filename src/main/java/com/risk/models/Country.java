@@ -155,20 +155,20 @@ public class Country {
     }
 
     /**
-     * To check whether country has been distributed to any player or not.
+     * To check whether country is processed or not.
      *
-     * @return whether country is processed or not
+     * @return  d_IsProcessed returns boolean value whether country is processed or not
      */
     public boolean isD_IsProcessed() {
         return d_IsProcessed;
     }
 
     /**
-     * To notify that that country had been assigned to a player.
+     * To set the country as processed.
      *
-     * @param p_IsProcessed whether country is processed or not
+     * @param p_IsProcessed is used to set that the country is processed.
      */
-    public void setD_IsProcessed(boolean p_IsProcessed) {
+    public void setD_Processed(boolean p_IsProcessed) {
         d_IsProcessed = p_IsProcessed;
     }
 
