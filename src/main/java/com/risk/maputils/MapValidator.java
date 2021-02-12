@@ -229,7 +229,7 @@ public class MapValidator {
         return adjacentContinents;
     }
 
-    
+
 
 
 
