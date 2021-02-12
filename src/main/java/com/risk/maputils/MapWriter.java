@@ -48,15 +48,15 @@ public class MapWriter {
 
         StringBuilder content = new StringBuilder();
         content = processMapAttribute(map);
-        content.append(processContinent(map));
-        /**  content.append(processCountries(map)); */
+        /**content.append(processContinent(map));
+          content.append(processCountries(map)); */
         return content.toString();
     }
         /**
      * This method processes map attributes.
      * @param map object of the map is being processed
      * @return a String that contains map properties.
-     */
+
 
     private StringBuilder processMapAttribute(Map map){
         StringBuilder mapAttribute = new StringBuilder();
@@ -68,7 +68,7 @@ public class MapWriter {
             mapAttribute.append("\n");
         }
         return mapAttribute;
-    }
+    }*/
 
     /**
      * This method processes the continents.
