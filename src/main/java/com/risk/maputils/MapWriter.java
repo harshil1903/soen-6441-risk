@@ -35,9 +35,16 @@ public class MapWriter {
         }
     }
 
+    /**
+     * this method processes the map by calling three different methods and makes a string to be written in map file.
+     * @param map object of the map which is processed
+     * @return String to be written in the map file
+     */
+
     private String parseMapAndReturnString(Map map) {
 
         StringBuilder content = new StringBuilder();
+
         return null;
     }
 }
