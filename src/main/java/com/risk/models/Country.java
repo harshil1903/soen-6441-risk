@@ -43,6 +43,21 @@ public class Country {
     }
 
     /**
+     * Parameterized constructor which instantiates a new country
+     * @param p_CountryID
+     * @param p_CountryName
+     * @param p_ContinentID
+     */
+    public Country(int p_CountryID, String p_CountryName, int p_ContinentID) {
+
+        d_CountryID = p_CountryID;
+        d_CountryName=p_CountryName;
+        p_ContinentID=p_ContinentID;
+        d_AdjacentCountries = new ArrayList<>();
+
+    }
+
+    /**
      * Gets Country ID.
      *
      * @return The Country ID
