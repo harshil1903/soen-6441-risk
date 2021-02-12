@@ -1,8 +1,8 @@
 package com.risk.maputils;
+import com.risk.exception.InvalidMapException;
+import com.risk.models.Country;
 import com.risk.models.Map;
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
 import com.risk.models.Continent;
 
 /**
@@ -14,6 +14,7 @@ import com.risk.models.Continent;
 public class EditMap {
     // Object map that will be returned after processing.
     public static Map d_Map = new Map();
+
     /**
      * Default constructor
      */
@@ -41,9 +42,10 @@ public class EditMap {
 
     /**
      * This Method reads Continents from map file and add it to d_Map variable.
+     *
      * @param p_MapReader Scanner object that helps to read map file.
      */
-    public void GetContinets(Scanner p_MapReader) {
+    public void GetContinets(Scanner p_MapReader) throws InvalidMapException {
         //Countinent Id is auto incremented.
         int l_Continet_Id = 1;
         while (p_MapReader.hasNextLine()) {
@@ -59,43 +61,48 @@ public class EditMap {
     }
 
     /**
+     * This method gets country from d_Map.
+     *
+     * @param p_Country_Id id of the country.
+     * @return the country object for used in GetCountries.
+     */
+    public static Country getCountry(int p_Country_Id) {
+        for (Continent l_Continent : d_Map.d_Continents) {
+            for (Country l_Country : l_Continent.d_Countries) {
+                if (l_Country.d_CountryID == p_Country_Id) {
+                    return l_Country;
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
      * This Method reads Countries from map file and add it to list in Continent.
+     *
      * @param p_MapReader
      */
 
     public static void GetCountries(Scanner p_MapReader) {
+        while (p_MapReader.hasNextLine()) {
+            String line = p_MapReader.nextLine();
+            if (line.equals("")) break;
+            String[] parts = line.split(" ");
+            int continent_id = Integer.parseInt(parts[3]);
+            int conti_id = Integer.parseInt(parts[2]);
+            Continent continent = d_Map.d_Continents.get(conti_id - 1);
+            Country country = new Country(Integer.parseInt(parts[0]), parts[1], Integer.parseInt(parts[2]));
+            continent.d_Countries.add(country);
+        }
     }
+
 
     /**
      * This Method reads Adjacent Countries to a country and it to Adjacency countries list.
+     *
      * @param p_MapReader
      */
+
     public static void GetAdj(Scanner p_MapReader) {
-    }
-
-    /**
-     * This Method loads map and process it accordingly.
-     */
-
-    public void EditMap() {
-        try {
-            File Map = new File("../soen-6441-risk/src/main/resources/europe.map");
-            Scanner MapReader = new Scanner(Map);
-            while (MapReader.hasNextLine()) {
-                String l_Line = MapReader.nextLine();
-                if (l_Line.equals("[continents]")) {
-                    GetContinets(MapReader);
-                }
-                if (l_Line.equals("[countries]")) {
-                    GetCountries(MapReader);
-                }
-                if (l_Line.equals("[borders]")) {
-                    GetAdj(MapReader);
-                }
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Map not Found" + e);
-        }
-
     }
 }
