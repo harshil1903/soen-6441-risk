@@ -1,9 +1,6 @@
 package com.risk.maputils;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 import com.risk.exception.InvalidMapException;
 import com.risk.models.Map;
@@ -11,6 +8,7 @@ import com.risk.models.Continent;
 import com.risk.models.Country;
 import jdk.jfr.internal.tool.PrettyWriter;
 
+import javax.smartcardio.TerminalFactory;
 
 
 /**
@@ -148,7 +146,91 @@ public class MapValidator {
 
     }
 
+    /**
+     * This method is used to validate that whether the continents in the map form a graph or not.
+     * @param map refers to the map object
+     * @return returns true if it the map is connected graph.
+     */
+
+    public static boolean isMapConnectedGraph(Map map){
+        System.out.println("The map is connected");
+        if(map.getD_Continents().size()<2){
+            return false;
+        }
+
+        bfsTraversalContinent(map.getD_Continents().get(0),map);
+
+        boolean d_returnvalue = true;
+        for(Continent continent : map.getD_Continents()){
+            if(continent.isD_IsVisited() == false){
+                System.out.println(continent.getD_ContinentName()+"XXXXXX");
+                d_returnvalue = false;
+                break;
+            }
+        }
+
+        for(Continent continent : map.getD_Continents()){
+            continent.setD_Visited(false);
+        }
+        return d_returnvalue;
+    }
+
+    /**
+     * This method performs the traversal of continents in BFS manner.
+     * @param continent refers to the continent to be traversed.
+     * @map refers to the map object
+     */
+
+    public static void bfsTraversalContinent(Continent continent,Map map){
+        if(continent.isD_IsVisited()==true){
+            return;
+        }
+
+        continent.setD_Visited(true);
+
+        System.out.println("continent in bfs"+continent.getD_ContinentName());
+        for(Continent c : getAdjacentContinents(continent,map)){
+            System.out.println("Control is inside the adjacent continents loop");
+            if(c.isD_IsVisited() == false)
+                bfsTraversalContinent(c,map);
+        }
+
+    }
+
+    /**
+     * This method is used to return the adjacent continents as a list for any particular continent.
+     * @param continent refers to the continent whose adjacent continents are to be found.
+     * @param map refers to the map object.
+     * @return will return the list of adjacent continents of the current continent.
+     */
+
+    public static List<Continent> getAdjacentContinents(Continent continent, Map map){
+        List<Continent> adjacentContinents = new ArrayList<>();
+
+        HashSet<Country> adjCountryMainSet = new HashSet<>();
+        for(Country country : continent.getD_Countries()){
+            adjCountryMainSet.addAll(country.getD_AdjacentCountries());
+        }
+
+        System.out.println(adjCountryMainSet);
+
+        for(Continent remainingContinent : map.getD_Continents()){
+            if(!continent.equals(remainingContinent)){
+                //this will be processed if there is any relation between two continents.
+                //also it will return true ony if both the continents are different.
+                if(!Collections.disjoint(adjCountryMainSet,remainingContinent.getD_Countries())){
+                    System.out.println ("Inside the disjoint method");
+                    //There are some countries which are common.
+                    adjacentContinents.add(remainingContinent);
+
+                }
+            }
+        }
+        return adjacentContinents;
+    }
+
     
+
 
 
 }
