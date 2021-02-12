@@ -40,6 +40,20 @@ public class Continent {
     }
 
     /**
+     * Instantiates new Continent.
+     * @param p_ContinentID ID of the continent
+     * @param p_ContinentName Name of the continent
+     * @param p_ContinentValue control value of the continent
+     */
+
+    public Continent(int p_ContinentID, String p_ContinentName,int p_ContinentValue){
+        super();
+        d_ContinentID=p_ContinentID;
+        d_ContinentName=p_ContinentName;
+        d_ContinentValue=p_ContinentValue;
+        this.d_Countries=new ArrayList<>();
+    }
+    /**
      * Gets continent id.
      *
      * @return continent id
@@ -125,7 +139,7 @@ public class Continent {
      *
      * @param p_IsVisited whether continent is visited or not
      */
-    public void setD_IsVisited(boolean p_IsVisited) {
+    public void setD_Visited(boolean p_IsVisited) {
         d_IsVisited = p_IsVisited;
     }
 
