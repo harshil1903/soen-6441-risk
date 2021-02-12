@@ -89,7 +89,7 @@ public class MapOperations {
 
     }
     /**
-     * Add country to map with details such as ID and Value
+     * Add neighbor country to map with details such as ID and Value
      * @param p_Map         current map object
      * @param p_NeighborID   ID of the country
      * @param p_CountryID Value of the country
@@ -100,5 +100,15 @@ public class MapOperations {
     public static Country neighborCountry(Map p_Map, int p_NeighborID, int p_CountryID) throws InvalidMapException {
         Country l_country = new Country();
         return l_country;
+    }
+    /**
+     * Remove country from map with details such as ID and Value
+     * @param p_map       current map object
+     * @param p_CountryID ID of the continent
+     * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
+     */
+
+    public static void removeNeighborCountry(Map p_map, int p_CountryID) throws InvalidMapException {
+
     }
 }
