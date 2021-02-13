@@ -14,7 +14,7 @@ import java.util.List;
  * country add and remove
  * neighbor add and remove
  *
- * @author Parth Navsari
+ * @author Parth Navsariwala
  */
 
 public class MapOperations {
@@ -34,7 +34,7 @@ public class MapOperations {
         l_continent.setD_ContinentID(p_ContinentID);
         l_continent.setD_ContinentValue(p_ContinentValue);
 
-        if (p_Map.getD_Continents().contains(l_continent)) {
+        if (p_Map.isContinentPresentInContinentList(l_continent)) {
             throw new InvalidMapException("The Continent" + p_ContinentID + "Already Exist");
         } else {
             p_Map.addContinentToContinentList(l_continent);
@@ -86,6 +86,7 @@ public class MapOperations {
      */
 
     public static void removeCountry(Map p_map, int p_CountryID) throws InvalidMapException {
+
 
     }
     /**

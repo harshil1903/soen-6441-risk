@@ -178,7 +178,7 @@ public class Continent {
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object p_Object) {
+    public boolean equals(Object p_Object){
 
         if (!(p_Object instanceof Continent)) {
             return false;
