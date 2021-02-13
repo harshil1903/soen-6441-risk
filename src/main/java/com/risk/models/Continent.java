@@ -143,6 +143,28 @@ public class Continent {
         d_IsVisited = p_IsVisited;
     }
 
+
+    /**
+     * Gets continent object from continent id.
+     *
+     * @param p_ContinentID continent id
+     * @return the continent object
+     */
+    public Continent getContinentFromContinentID(int p_ContinentID)
+    {
+        if(d_ContinentID == p_ContinentID)
+        {
+            return this;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+
+
     /**
      * Add country to country list
      *

@@ -61,14 +61,15 @@ public class Main {
 
             String l_Arguments = p_Command.substring(l_Action.length());
 
-            String l_CommandType = getCommandType(l_Action);
+            List<String> l_GameCommands = Arrays.asList("showmap", "loadmap", "gameplayer", "assigncountries", "deploy");
 
+            List<String> l_MapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
 
-            if(l_CommandType.equals("Map Command"))
+            if(l_MapCommands.contains(l_Action))
             {
                 CommandParser.mapCommandParser(l_Action,l_Arguments);
             }
-            else if(l_CommandType.equals("Game Command"))
+            else if(l_GameCommands.contains(l_Action))
             {
                 //Call GAME ENGINE to Take over and initiate Game. Dont return here.
                 CommandParser.gameCommandParser(l_Action,l_Arguments);
@@ -82,29 +83,6 @@ public class Main {
 
     }
 
-   /**
-    * Finds whether the command type is Map Command or Game Command
-    *
-    * @param l_action command value
-    * @return String expressing type of command
-    */
-    public static String getCommandType(String l_action)
-    {
-        List<String> l_GameCommands = Arrays.asList("showmap", "loadmap", "gameplayer", "assigncountries", "deploy");
 
-        List<String> l_MapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
-
-        if(l_MapCommands.contains(l_action))
-        {
-            return("Map Command");
-        }
-
-        if(l_GameCommands.contains(l_action))
-        {
-            return("Game Command");
-        }
-
-        return ("Invalid Command");
-    }
 
 }

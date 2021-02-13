@@ -59,7 +59,7 @@ public class EditMap {
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
             Continent continent = new Continent(l_Continet_Id, l_Parts[0], Integer.parseInt(l_Parts[1]));
-            d_Map.d_Continents.add(continent);
+            d_Map.getD_Continents().add(continent);
             l_Continet_Id++;
         }
 
@@ -72,9 +72,9 @@ public class EditMap {
      * @return the country object for used in GetCountries.
      */
     public static Country GetCountry(int p_Country_Id) {
-        for (Continent l_Continent : d_Map.d_Continents) {
-            for (Country l_Country : l_Continent.d_Countries) {
-                if (l_Country.d_CountryID == p_Country_Id) {
+        for (Continent l_Continent : d_Map.getD_Continents()) {
+            for (Country l_Country : l_Continent.getD_Countries()) {
+                if (l_Country.getD_CountryID() == p_Country_Id) {
                     return l_Country;
                 }
             }
@@ -95,9 +95,9 @@ public class EditMap {
             String[] l_Parts = l_Line.split(" ");
             int continent_id = Integer.parseInt(l_Parts[3]);
             int l_Continent_Id = Integer.parseInt(l_Parts[2]);
-            Continent l_Continent = d_Map.d_Continents.get(l_Continent_Id - 1);
+            Continent l_Continent = d_Map.getD_Continents().get(l_Continent_Id - 1);
             Country l_Country = new Country(Integer.parseInt(l_Parts[0]), l_Parts[1], Integer.parseInt(l_Parts[2]));
-            l_Continent.d_Countries.add(l_Country);
+            l_Continent.getD_Countries().add(l_Country);
         }
     }
 
@@ -118,7 +118,7 @@ public class EditMap {
             for (int i = 1; i < l_Parts.length; i++) {
                 int l_Adjacent_Id = Integer.parseInt(l_Parts[i]);
                 Country l_Neighbour = GetCountry(l_Adjacent_Id);
-                l_Country.d_AdjacentCountries.add(l_Neighbour);
+                l_Country.getD_AdjacentCountries().add(l_Neighbour);
             }
 
         }
