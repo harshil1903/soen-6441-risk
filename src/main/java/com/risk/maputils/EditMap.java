@@ -152,6 +152,13 @@ public class EditMap {
     }
 
     /**
+     * This Method Creates a new map if map is not present.
+     */
+    public void CreateMap() {
+
+    }
+
+    /**
      * This Method loads map and process it accordingly.
      */
 
@@ -159,12 +166,8 @@ public class EditMap {
         File l_Map = new File("../soen-6441-risk/src/main/resources/europe.map");
         if (l_Map != null) {
             LoadMap(l_Map);
+        } else {
+            CreateMap();
         }
-    }
-
-
-    public static void main(String[] args) {
-        EditMap c_EditMap = new EditMap();
-        c_EditMap.EditMap();
     }
 }
