@@ -205,6 +205,28 @@ public class Country {
 
 
     /**
+     * Gets country object from country id.
+     *
+     * @param p_CountryID country id
+     * @return the country object
+     */
+    public Country getCountryFromCountryID(int p_CountryID)
+    {
+        if(d_CountryID == p_CountryID)
+        {
+            return this;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+
+
+
+    /**
      * Add country to adjacent countries list.
      *
      * @param p_CountryID country to be added
