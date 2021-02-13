@@ -69,8 +69,7 @@ public class Map extends Observable {
      *
      * @param p_ContinentID continent
      */
-    public void addContinentToContinentList(int p_ContinentID)
-    {
+    public void addContinentToContinentList(int p_ContinentID) {
         //To be finished later
         //d_Continents.add(p_ContinentID);
     }
@@ -80,8 +79,7 @@ public class Map extends Observable {
      *
      * @param p_ContinentID continent
      */
-    public void removeContinentFromContinentList(int p_ContinentID)
-    {
+    public void removeContinentFromContinentList(int p_ContinentID) {
         //To be finished later
         //d_Continents.remove(p_ContinentID);
     }
@@ -92,8 +90,7 @@ public class Map extends Observable {
      * @param p_ContinentID continent
      * @return whether Continent is present in Map or not
      */
-    public boolean isContinentPresentInContinentList(int p_ContinentID)
-    {
+    public boolean isContinentPresentInContinentList(int p_ContinentID) {
         //To be finished later
         //return d_Continents.contains(p_ContinentID);
         return true;

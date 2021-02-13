@@ -19,7 +19,6 @@ public class Country {
     private boolean d_IsProcessed = false;
 
 
-
     private int d_NumberOfArmies;
     //private List<Integer> d_adjCountries;
 
@@ -44,6 +43,7 @@ public class Country {
 
     /**
      * Parameterized constructor which instantiates a new country
+     *
      * @param p_CountryID
      * @param p_CountryName
      * @param p_ContinentID
@@ -51,8 +51,8 @@ public class Country {
     public Country(int p_CountryID, String p_CountryName, int p_ContinentID) {
 
         d_CountryID = p_CountryID;
-        d_CountryName=p_CountryName;
-        p_ContinentID=p_ContinentID;
+        d_CountryName = p_CountryName;
+        p_ContinentID = p_ContinentID;
         d_AdjacentCountries = new ArrayList<>();
 
     }
@@ -82,8 +82,7 @@ public class Country {
      *
      * @return Continent ID
      */
-    public int getD_ContinentID()
-    {
+    public int getD_ContinentID() {
         return d_ContinentID;
     }
 
@@ -92,8 +91,7 @@ public class Country {
      *
      * @param p_ContinentID Continent ID
      */
-    public void setD_ContinentID(int p_ContinentID)
-    {
+    public void setD_ContinentID(int p_ContinentID) {
         d_ContinentID = p_ContinentID;
     }
 
@@ -172,7 +170,7 @@ public class Country {
     /**
      * To check whether country is processed or not.
      *
-     * @return  d_IsProcessed returns boolean value whether country is processed or not
+     * @return d_IsProcessed returns boolean value whether country is processed or not
      */
     public boolean isD_IsProcessed() {
         return d_IsProcessed;
@@ -211,8 +209,7 @@ public class Country {
      *
      * @param p_CountryID country to be added
      */
-    public void addCountryToAdjacentCountries(int p_CountryID)
-    {
+    public void addCountryToAdjacentCountries(int p_CountryID) {
         //To be finished later
         //d_AdjacentCountries.add(p_CountryID);
     }
@@ -222,8 +219,7 @@ public class Country {
      *
      * @param p_CountryID country to be removed
      */
-    public void removeCountryFromAdjacentCountries(int p_CountryID)
-    {
+    public void removeCountryFromAdjacentCountries(int p_CountryID) {
         //To be finished later
         //d_AdjacentCountries.remove(p_CountryID);
     }
@@ -234,8 +230,7 @@ public class Country {
      * @param p_CountryID country to checked for presence
      * @return whether country is present in the adjacent country list or not
      */
-    public boolean isCountryPresentInAdjacentCountries(int p_CountryID)
-    {
+    public boolean isCountryPresentInAdjacentCountries(int p_CountryID) {
         //return d_AdjacentCountries.contains(p_CountryID);
         return true;
     }

@@ -41,18 +41,20 @@ public class Continent {
 
     /**
      * Instantiates new Continent.
-     * @param p_ContinentID ID of the continent
-     * @param p_ContinentName Name of the continent
+     *
+     * @param p_ContinentID    ID of the continent
+     * @param p_ContinentName  Name of the continent
      * @param p_ContinentValue control value of the continent
      */
 
-    public Continent(int p_ContinentID, String p_ContinentName,int p_ContinentValue){
+    public Continent(int p_ContinentID, String p_ContinentName, int p_ContinentValue) {
         super();
-        d_ContinentID=p_ContinentID;
-        d_ContinentName=p_ContinentName;
-        d_ContinentValue=p_ContinentValue;
-        this.d_Countries=new ArrayList<>();
+        d_ContinentID = p_ContinentID;
+        d_ContinentName = p_ContinentName;
+        d_ContinentValue = p_ContinentValue;
+        this.d_Countries = new ArrayList<>();
     }
+
     /**
      * Gets continent id.
      *
@@ -148,8 +150,7 @@ public class Continent {
      *
      * @param p_CountryID country to be added
      */
-    public void addCountryToCountryList(int p_CountryID)
-    {
+    public void addCountryToCountryList(int p_CountryID) {
         //To be finished later
         //d_Countries.add(p_CountryID);
     }
@@ -159,8 +160,7 @@ public class Continent {
      *
      * @param p_CountryID country to be removed
      */
-    public void removeCountryFromCountryList(int p_CountryID)
-    {
+    public void removeCountryFromCountryList(int p_CountryID) {
         //To be finished later
         //d_Countries.remove(p_CountryID);
     }
@@ -171,8 +171,7 @@ public class Continent {
      * @param p_CountryID country to be checked
      * @return whether country is present in the country list or not
      */
-    public boolean isCountryPresentInCountryList(int p_CountryID)
-    {
+    public boolean isCountryPresentInCountryList(int p_CountryID) {
         //To be finished later
         //return d_Countries.contains(p_CountryID);
         return true;
@@ -182,7 +181,7 @@ public class Continent {
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object p_Object){
+    public boolean equals(Object p_Object) {
 
         if (!(p_Object instanceof Continent)) {
             return false;
