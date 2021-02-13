@@ -74,6 +74,7 @@ public class MapWriter {
      * This method processes the continents.
      * @param map object of the map which is being processed
      * @return a string that contains details of the continents that will eventually be written in the map file.
+     great
      */
 
     private StringBuilder processContinent(Map map){
