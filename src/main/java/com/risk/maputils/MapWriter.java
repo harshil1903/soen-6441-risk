@@ -74,7 +74,6 @@ public class MapWriter {
      * This method processes the continents.
      * @param map object of the map which is being processed
      * @return a string that contains details of the continents that will eventually be written in the map file.
-     * Changes in this method.
      */
 
     private StringBuilder processContinent(Map map){
@@ -101,7 +100,7 @@ public class MapWriter {
         countryData.append("[Countries]");
         countryData.append("\n");
 
-        /*for (Continent continent : map.getD_Continents()){
+        for (Continent continent : map.getD_Continents()){
             List<Country> countryList = continent.getD_Countries();
             if (countryList != null){
                 for (Country country : countryList){
@@ -116,7 +115,7 @@ public class MapWriter {
                 countryData.append("\n");
             }
             countryData.append("\n");
-        }*/
+        }
         return countryData;
     }
 }
