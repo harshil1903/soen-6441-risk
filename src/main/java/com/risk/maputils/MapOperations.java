@@ -14,7 +14,7 @@ import java.util.List;
  * country add and remove
  * neighbor add and remove
  *
- * @author Parth Navsari
+ * @author Parth Navsariwala
  */
 
 public class MapOperations {
@@ -34,34 +34,41 @@ public class MapOperations {
         l_continent.setD_ContinentID(p_ContinentID);
         l_continent.setD_ContinentValue(p_ContinentValue);
 
-        if (p_Map.getD_Continents().contains(l_continent)) {
+        if (p_Map.isContinentPresentInContinentList(p_ContinentID)) {
             throw new InvalidMapException("The Continent" + p_ContinentID + "Already Exist");
         } else {
-            p_Map.addContinentToContinentList(l_continent);
+            p_Map.addContinentToContinentList(p_ContinentID);
         }
         return l_continent;
     }
 
     /**
      * Remove continent to map with details such as ID and Valu
-     * @param p_Map current map object
+     *
+     * @param p_Map         current map object
      * @param p_ContinentID ID of the continent
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
 
     public static void removeContinent(Map p_Map, int p_ContinentID) throws InvalidMapException {
-        Continent l_rcontinent = new Continent();
-        l_rcontinent.setD_ContinentID(p_ContinentID);
-        if(p_Map.isContinentPresentInContinentList(l_rcontinent)){
-            p_Map.removeContinentFromContinentList(l_rcontinent);
-        }
-        else{
-            throw new InvalidMapException("The Continent Not Present In The List");
+
+        for (Continent l_tempContinent : p_Map.getD_Continents()) {
+            for (Country l_tempCcountry : l_tempContinent.getD_Countries()) {
+                for (Country l_tempAdjcountry : l_tempCcountry.getD_AdjacentCountries()) {
+                    if (l_tempAdjcountry.getD_ContinentID() == p_ContinentID) {
+                        l_tempAdjcountry.getD_AdjacentCountries().remove(l_tempAdjcountry);
+                    }
+                }
+            }
+            if (p_Map.isContinentPresentInContinentList(p_ContinentID)) {
+                p_Map.removeContinentFromContinentList(p_ContinentID);
+            }
         }
     }
 
     /**
      * Add country to map with details such as ID and Value
+     *
      * @param p_Map         current map object
      * @param p_CountryID   ID of the country
      * @param p_ContinentID Value of the country
@@ -71,44 +78,76 @@ public class MapOperations {
 
     public static Country addCountry(Map p_Map, int p_CountryID, int p_ContinentID) throws InvalidMapException {
         Country l_country = new Country();
-        Continent l_continent=new Continent();
         l_country.setD_CountryID(p_CountryID);
-        l_country.setD_ContinentID(p_ContinentID);
-        List<Country> l_tempCountry=new ArrayList<Country>();
+        for (Continent l_continent : p_Map.getD_Continents()) {
+            if (l_continent.getD_ContinentID() == p_ContinentID) {
+                l_continent.addCountryToCountryList(p_CountryID);
+            }
+        }
         return l_country;
     }
 
     /**
      * Remove continent to map with details such as ID and Value
+     *
      * @param p_map       current map object
      * @param p_CountryID ID of the continent
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
 
     public static void removeCountry(Map p_map, int p_CountryID) throws InvalidMapException {
-
+        for (Continent l_continent : p_map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
+                    if (l_adjCountry.getD_CountryID() == p_CountryID) {
+                        l_adjCountry.removeCountryFromAdjacentCountries(p_CountryID);
+                    }
+                }
+            }
+            if (l_continent.isCountryPresentInCountryList(p_CountryID)) {
+                l_continent.removeCountryFromCountryList(p_CountryID);
+            }
+        }
     }
+
     /**
      * Add neighbor country to map with details such as ID and Value
-     * @param p_Map         current map object
-     * @param p_NeighborID   ID of the country
-     * @param p_CountryID Value of the country
-     * @return Returns the new neighbor country
+     *
+     * @param p_Map        current map object
+     * @param p_NeighborID ID of the country
+     * @param p_CountryID  Value of the country
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
 
-    public static Country neighborCountry(Map p_Map, int p_NeighborID, int p_CountryID) throws InvalidMapException {
-        Country l_country = new Country();
-        return l_country;
+    public static void addNeighborCountry(Map p_Map, int p_NeighborID, int p_CountryID) throws InvalidMapException {
+        for (Continent l_continent : p_Map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                if (l_country.getD_CountryID() == p_CountryID) {
+                    Country l_tempCountry = l_country.getCountryFromCountryID(p_NeighborID);
+                    l_country.addCountryToAdjacentCountries(p_NeighborID);
+                }
+            }
+        }
+
     }
+
     /**
      * Remove country from map with details such as ID and Value
+     *
      * @param p_map       current map object
      * @param p_CountryID ID of the continent
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
 
-    public static void removeNeighborCountry(Map p_map, int p_CountryID) throws InvalidMapException {
+    public static void removeNeighborCountry(Map p_map, int p_NeighborID, int p_CountryID) throws InvalidMapException {
+        for (Continent l_continent : p_map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                if (l_country.getD_CountryID() == p_CountryID) {
+                    Country l_tempCountry = l_country.getCountryFromCountryID(p_NeighborID);
+                    l_country.removeCountryFromAdjacentCountries(p_NeighborID);
+                }
+            }
+        }
 
     }
 }

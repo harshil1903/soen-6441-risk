@@ -41,18 +41,20 @@ public class Continent {
 
     /**
      * Instantiates new Continent.
-     * @param p_ContinentID ID of the continent
-     * @param p_ContinentName Name of the continent
+     *
+     * @param p_ContinentID    ID of the continent
+     * @param p_ContinentName  Name of the continent
      * @param p_ContinentValue control value of the continent
      */
 
-    public Continent(int p_ContinentID, String p_ContinentName,int p_ContinentValue){
+    public Continent(int p_ContinentID, String p_ContinentName, int p_ContinentValue) {
         super();
-        d_ContinentID=p_ContinentID;
-        d_ContinentName=p_ContinentName;
-        d_ContinentValue=p_ContinentValue;
-        this.d_Countries=new ArrayList<>();
+        d_ContinentID = p_ContinentID;
+        d_ContinentName = p_ContinentName;
+        d_ContinentValue = p_ContinentValue;
+        this.d_Countries = new ArrayList<>();
     }
+
     /**
      * Gets continent id.
      *
@@ -143,35 +145,58 @@ public class Continent {
         d_IsVisited = p_IsVisited;
     }
 
+
+    /**
+     * Gets continent object from continent id.
+     *
+     * @param p_ContinentID continent id
+     * @return the continent object
+     */
+    public Continent getContinentFromContinentID(int p_ContinentID)
+    {
+        if(d_ContinentID == p_ContinentID)
+        {
+            return this;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+
+
     /**
      * Add country to country list
      *
-     * @param p_Country country to be added
+     * @param p_CountryID country to be added
      */
-    public void addCountryToCountryList(Country p_Country)
-    {
-        d_Countries.add(p_Country);
+    public void addCountryToCountryList(int p_CountryID) {
+        //To be finished later
+        //d_Countries.add(p_CountryID);
     }
 
     /**
      * Remove country from country list.
      *
-     * @param p_Country country to be removed
+     * @param p_CountryID country to be removed
      */
-    public void removeCountryFromCountryList(Country p_Country)
-    {
-        d_Countries.remove(p_Country);
+    public void removeCountryFromCountryList(int p_CountryID) {
+        //To be finished later
+        //d_Countries.remove(p_CountryID);
     }
 
     /**
      * To check if country present in country list of the continent or not.
      *
-     * @param p_Country country to be checked
+     * @param p_CountryID country to be checked
      * @return whether country is present in the country list or not
      */
-    public boolean isCountryPresentInCountryList(Country p_Country)
-    {
-        return d_Countries.contains(p_Country);
+    public boolean isCountryPresentInCountryList(int p_CountryID) {
+        //To be finished later
+        //return d_Countries.contains(p_CountryID);
+        return true;
     }
 
     /* (non-Javadoc)

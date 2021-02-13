@@ -19,7 +19,6 @@ public class Country {
     private boolean d_IsProcessed = false;
 
 
-
     private int d_NumberOfArmies;
     //private List<Integer> d_adjCountries;
 
@@ -44,6 +43,7 @@ public class Country {
 
     /**
      * Parameterized constructor which instantiates a new country
+     *
      * @param p_CountryID
      * @param p_CountryName
      * @param p_ContinentID
@@ -51,8 +51,8 @@ public class Country {
     public Country(int p_CountryID, String p_CountryName, int p_ContinentID) {
 
         d_CountryID = p_CountryID;
-        d_CountryName=p_CountryName;
-        p_ContinentID=p_ContinentID;
+        d_CountryName = p_CountryName;
+        p_ContinentID = p_ContinentID;
         d_AdjacentCountries = new ArrayList<>();
 
     }
@@ -82,8 +82,7 @@ public class Country {
      *
      * @return Continent ID
      */
-    public int getD_ContinentID()
-    {
+    public int getD_ContinentID() {
         return d_ContinentID;
     }
 
@@ -92,8 +91,7 @@ public class Country {
      *
      * @param p_ContinentID Continent ID
      */
-    public void setD_ContinentID(int p_ContinentID)
-    {
+    public void setD_ContinentID(int p_ContinentID) {
         d_ContinentID = p_ContinentID;
     }
 
@@ -172,7 +170,7 @@ public class Country {
     /**
      * To check whether country is processed or not.
      *
-     * @return  d_IsProcessed returns boolean value whether country is processed or not
+     * @return d_IsProcessed returns boolean value whether country is processed or not
      */
     public boolean isD_IsProcessed() {
         return d_IsProcessed;
@@ -207,34 +205,56 @@ public class Country {
 
 
     /**
+     * Gets country object from country id.
+     *
+     * @param p_CountryID country id
+     * @return the country object
+     */
+    public Country getCountryFromCountryID(int p_CountryID)
+    {
+        if(d_CountryID == p_CountryID)
+        {
+            return this;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+
+
+
+    /**
      * Add country to adjacent countries list.
      *
-     * @param p_Country country to be added
+     * @param p_CountryID country to be added
      */
-    public void addCountryToAdjacentCountries(Country p_Country)
-    {
-        d_AdjacentCountries.add(p_Country);
+    public void addCountryToAdjacentCountries(int p_CountryID) {
+        //To be finished later
+        //d_AdjacentCountries.add(p_CountryID);
     }
 
     /**
      * Remove country from adjacent countries list.
      *
-     * @param p_Country country to be removed
+     * @param p_CountryID country to be removed
      */
-    public void removeCountryFromAdjacentCountries(Country p_Country)
-    {
-        d_AdjacentCountries.remove(p_Country);
+    public void removeCountryFromAdjacentCountries(int p_CountryID) {
+        //To be finished later
+        //d_AdjacentCountries.remove(p_CountryID);
     }
 
     /**
      * To check if country present in adjacent countries list.
      *
-     * @param p_Country country to checked for presence
+     * @param p_CountryID country to checked for presence
      * @return whether country is present in the adjacent country list or not
      */
-    public boolean isCountryPresentInAdjacentCountries(Country p_Country)
-    {
-        return d_AdjacentCountries.contains(p_Country);
+    public boolean isCountryPresentInAdjacentCountries(int p_CountryID) {
+        //return d_AdjacentCountries.contains(p_CountryID);
+        return true;
     }
 
 

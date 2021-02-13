@@ -104,34 +104,57 @@ public class Player {
 
 
     /**
+     * Gets player object from player id.
+     *
+     * @param p_PlayerID player id
+     * @return the player object
+     */
+    public Player getPlayerFromPlayerID(int p_PlayerID)
+    {
+        if(d_PlayerID == p_PlayerID)
+        {
+            return this;
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+
+    /**
      * Add country to assigned countries.
      *
-     * @param p_Country Country to be added
+     * @param p_CountryID Country to be added
      */
-    public void addCountryToAssignedCountries(Country p_Country)
+    public void addCountryToAssignedCountries(int p_CountryID)
     {
-        d_AssignedCountries.add(p_Country);
+        //To be finished later
+        //d_AssignedCountries.add(p_CountryID);
     }
 
     /**
      * Remove country from assigned countries.
      *
-     * @param p_Country Country to be removed
+     * @param p_CountryID Country to be removed
      */
-    public void removeCountryFromAssignedCountries(Country p_Country)
+    public void removeCountryFromAssignedCountries(int p_CountryID)
     {
-        d_AssignedCountries.remove(p_Country);
+        //To be finished later
+        //d_AssignedCountries.remove(p_Country);
     }
 
     /**
      * To check if country present in assigned countries boolean.
      *
-     * @param p_Country Country to be checked
+     * @param p_CountryID Country to be checked
      * @return whether country is present in the assigned country list or not
      */
-    public boolean isCountryPresentInAssignedCountries(Country p_Country)
+    public boolean isCountryPresentInAssignedCountries(int p_CountryID)
     {
-        return d_AssignedCountries.contains(p_Country);
+        //return d_AssignedCountries.contains(p_CountryID);
+        return true;
     }
 
 

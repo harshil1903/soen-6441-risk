@@ -229,6 +229,24 @@ public class MapValidator {
         return adjacentContinents;
     }
 
+    /**
+     * This method is used to check whether the country is belonging to only one continent or not.
+     * @param map refers to map object.
+     * @throws InvalidMapException throws InvalidMapException if map is not valid.
+     */
+    public static void validateCountryBelongsToOneContinent(Map map) throws InvalidMapException{
+        HashMap<Country, Integer> countryBelongsToContinentCount = new HashMap<>();
+
+        for(Continent continent : map.getD_Continents()){
+            for(Country country : continent.getD_Countries()){
+                if(!countryBelongsToContinentCount.containsKey(country)){
+                    countryBelongsToContinentCount.put(country,1);
+                }else{
+                    throw new InvalidMapException("Country:"+country.getD_CountryName()+"must belong to only one continent.")
+                }
+            }
+        }
+    }
 
 
 
