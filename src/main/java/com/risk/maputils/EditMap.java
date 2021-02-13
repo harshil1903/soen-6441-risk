@@ -93,7 +93,6 @@ public class EditMap {
             String l_Line = p_MapReader.nextLine();
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
-            int continent_id = Integer.parseInt(l_Parts[3]);
             int l_Continent_Id = Integer.parseInt(l_Parts[2]);
             Continent l_Continent = d_Map.d_Continents.get(l_Continent_Id - 1);
             Country l_Country = new Country(Integer.parseInt(l_Parts[0]), l_Parts[1], Integer.parseInt(l_Parts[2]));
@@ -125,13 +124,14 @@ public class EditMap {
     }
 
     /**
-     * This Method loads map and process it accordingly.
+     * This Method Loads the Map passed to it.
+     *
+     * @param p_Map Reads the map file.
      */
-
-    public void EditMap() {
+    public void LoadMap(File p_Map) {
+        Scanner MapReader = null;
         try {
-            File Map = new File("../soen-6441-risk/src/main/resources/europe.map");
-            Scanner MapReader = new Scanner(Map);
+            MapReader = new Scanner(p_Map);
             while (MapReader.hasNextLine()) {
                 String l_Line = MapReader.nextLine();
                 if (l_Line.equals("[continents]")) {
@@ -144,9 +144,27 @@ public class EditMap {
                     GetAdjacentCountries(MapReader);
                 }
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Map not Found" + e);
-        }
 
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
-} 
+
+    /**
+     * This Method loads map and process it accordingly.
+     */
+
+    public void EditMap() {
+        File l_Map = new File("../soen-6441-risk/src/main/resources/europe.map");
+        if (l_Map != null) {
+            LoadMap(l_Map);
+        }
+    }
+
+
+    public static void main(String[] args) {
+        EditMap c_EditMap = new EditMap();
+        c_EditMap.EditMap();
+    }
+}
