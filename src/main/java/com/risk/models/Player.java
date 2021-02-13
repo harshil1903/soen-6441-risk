@@ -106,21 +106,23 @@ public class Player {
     /**
      * Add country to assigned countries.
      *
-     * @param p_Country Country to be added
+     * @param p_CountryID Country to be added
      */
-    public void addCountryToAssignedCountries(Country p_Country)
+    public void addCountryToAssignedCountries(int p_CountryID)
     {
-        d_AssignedCountries.add(p_Country);
+        //To be finished later
+        //d_AssignedCountries.add(p_CountryID);
     }
 
     /**
      * Remove country from assigned countries.
      *
-     * @param p_Country Country to be removed
+     * @param p_CountryID Country to be removed
      */
-    public void removeCountryFromAssignedCountries(Country p_Country)
+    public void removeCountryFromAssignedCountries(int p_CountryID)
     {
-        d_AssignedCountries.remove(p_Country);
+        //To be finished later
+        //d_AssignedCountries.remove(p_Country);
     }
 
     /**

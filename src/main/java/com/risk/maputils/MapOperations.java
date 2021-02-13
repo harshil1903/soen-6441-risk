@@ -37,7 +37,7 @@ public class MapOperations {
         if (p_Map.getD_Continents().contains(l_continent)) {
             throw new InvalidMapException("The Continent" + p_ContinentID + "Already Exist");
         } else {
-            p_Map.addContinentToContinentList(l_continent);
+            p_Map.addContinentToContinentList(p_ContinentID);
         }
         return l_continent;
     }
@@ -50,10 +50,19 @@ public class MapOperations {
      */
 
     public static void removeContinent(Map p_Map, int p_ContinentID) throws InvalidMapException {
+
+
+        //For each continent in MAP.continents
+        //  For each country in continent.countries
+        //      For each country in country.adjacentcountries
+        //          if(country.continentID == p_continentID
+        //              country.adjacentCountries.remove(country)
+
+
         Continent l_rcontinent = new Continent();
         l_rcontinent.setD_ContinentID(p_ContinentID);
-        if(p_Map.isContinentPresentInContinentList(l_rcontinent)){
-            p_Map.removeContinentFromContinentList(l_rcontinent);
+        if(p_Map.isContinentPresentInContinentList(p_ContinentID)){
+            p_Map.removeContinentFromContinentList(p_ContinentID);
         }
         else{
             throw new InvalidMapException("The Continent Not Present In The List");
@@ -70,6 +79,13 @@ public class MapOperations {
      */
 
     public static Country addCountry(Map p_Map, int p_CountryID, int p_ContinentID) throws InvalidMapException {
+
+        //create newcountry with countryid
+        //For each continent in MAP.continents
+        //  if continent.ID == p_continentID
+        //      continent.addcountrytocountrylist(country)
+
+
         Country l_country = new Country();
         Continent l_continent=new Continent();
         l_country.setD_CountryID(p_CountryID);
@@ -87,6 +103,16 @@ public class MapOperations {
 
     public static void removeCountry(Map p_map, int p_CountryID) throws InvalidMapException {
 
+        //For each continent in MAP.continents
+        //      For each country in continent.countries
+        //          For each country in country.adjacentcountries
+        //              if(country.countryID == p_countryID
+        //                  country.adjacentCountries.remove(country)
+        //
+        //      if(Continent.iscountrypresentinthiscontinent(p_CountryID))
+        //          Continent.removeCountry(p_CountryID)
+
+
     }
     /**
      * Add neighbor country to map with details such as ID and Value
@@ -97,7 +123,15 @@ public class MapOperations {
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
 
-    public static Country neighborCountry(Map p_Map, int p_NeighborID, int p_CountryID) throws InvalidMapException {
+    public static Country addNeighborCountry(Map p_Map, int p_NeighborID, int p_CountryID) throws InvalidMapException {
+        //For each continent in MAP.continents
+        //      For each country in continent.countries
+        //          if(country.countryID == p_countryID)
+        //              tempcountry = Country.getObjectfromID(p_NeighborID)
+        //              country.addCountrytoAdjacentlist(tempCountry)
+
+
+
         Country l_country = new Country();
         return l_country;
     }
@@ -109,6 +143,11 @@ public class MapOperations {
      */
 
     public static void removeNeighborCountry(Map p_map, int p_CountryID) throws InvalidMapException {
+        //For each continent in MAP.continents
+        //      For each country in continent.countries
+        //          if(country.countryID == p_countryID)
+        //              tempcountry = Country.getObjectfromID(p_NeighborID)
+        //              country.removeCountrytoAdjacentlist(tempCountry)
 
     }
 }
