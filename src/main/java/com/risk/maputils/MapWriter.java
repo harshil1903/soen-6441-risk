@@ -4,9 +4,9 @@ import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
 
+import java.io.IOException;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -48,15 +48,15 @@ public class MapWriter {
 
         StringBuilder content = new StringBuilder();
         content = processMapAttribute(map);
-        /**content.append(processContinent(map));
-          content.append(processCountries(map)); */
+        content.append(processContinent(map));
+        content.append(processCountries(map));
         return content.toString();
     }
-        /**
+    /**
      * This method processes map attributes.
      * @param map object of the map is being processed
      * @return a String that contains map properties.
-
+     **/
 
     private StringBuilder processMapAttribute(Map map){
         StringBuilder mapAttribute = new StringBuilder();
@@ -68,7 +68,7 @@ public class MapWriter {
             mapAttribute.append("\n");
         }
         return mapAttribute;
-    }*/
+    }
 
     /**
      * This method processes the continents.
@@ -92,7 +92,7 @@ public class MapWriter {
      * This method is for processing countries.
      * @param map object of the map that is being processed
      * @return a string that contains details of countries that will ultimately be written in the map file.
-
+     */
 
     private StringBuilder processCountries(Map map){
         StringBuilder countryData = new StringBuilder();
@@ -100,7 +100,7 @@ public class MapWriter {
         countryData.append("[Countries]");
         countryData.append("\n");
 
-        for (Continent continent : map.getD_Continents()){
+        /*for (Continent continent : map.getD_Continents()){
             List<Country> countryList = continent.getD_Countries();
             if (countryList != null){
                 for (Country country : countryList){
@@ -115,9 +115,7 @@ public class MapWriter {
                 countryData.append("\n");
             }
             countryData.append("\n");
-        }
+        }*/
         return countryData;
     }
-     */
-
 }
