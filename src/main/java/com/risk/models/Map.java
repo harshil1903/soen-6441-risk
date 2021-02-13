@@ -67,31 +67,35 @@ public class Map extends Observable {
     /**
      * Add continent to continent list.
      *
-     * @param p_Continent continent
+     * @param p_ContinentID continent
      */
-    public void addContinentToContinentList(Continent p_Continent)
+    public void addContinentToContinentList(int p_ContinentID)
     {
-        d_Continents.add(p_Continent);
+        //To be finished later
+        //d_Continents.add(p_ContinentID);
     }
 
     /**
      * Remove continent from continent list.
      *
-     * @param p_Continent continent
+     * @param p_ContinentID continent
      */
-    public void removeContinentFromContinentList(Continent p_Continent)
+    public void removeContinentFromContinentList(int p_ContinentID)
     {
-        d_Continents.remove(p_Continent);
+        //To be finished later
+        //d_Continents.remove(p_ContinentID);
     }
 
     /**
      * TO check if continent present in continent list
      *
-     * @param p_Continent continent
+     * @param p_ContinentID continent
      * @return whether Continent is present in Map or not
      */
-    public boolean isContinentPresentInContinentList(Continent p_Continent)
+    public boolean isContinentPresentInContinentList(int p_ContinentID)
     {
-        return d_Continents.contains(p_Continent);
+        //To be finished later
+        //return d_Continents.contains(p_ContinentID);
+        return true;
     }
 }

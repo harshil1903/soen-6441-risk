@@ -146,32 +146,36 @@ public class Continent {
     /**
      * Add country to country list
      *
-     * @param p_Country country to be added
+     * @param p_CountryID country to be added
      */
-    public void addCountryToCountryList(Country p_Country)
+    public void addCountryToCountryList(int p_CountryID)
     {
-        d_Countries.add(p_Country);
+        //To be finished later
+        //d_Countries.add(p_CountryID);
     }
 
     /**
      * Remove country from country list.
      *
-     * @param p_Country country to be removed
+     * @param p_CountryID country to be removed
      */
-    public void removeCountryFromCountryList(Country p_Country)
+    public void removeCountryFromCountryList(int p_CountryID)
     {
-        d_Countries.remove(p_Country);
+        //To be finished later
+        //d_Countries.remove(p_CountryID);
     }
 
     /**
      * To check if country present in country list of the continent or not.
      *
-     * @param p_Country country to be checked
+     * @param p_CountryID country to be checked
      * @return whether country is present in the country list or not
      */
-    public boolean isCountryPresentInCountryList(Country p_Country)
+    public boolean isCountryPresentInCountryList(int p_CountryID)
     {
-        return d_Countries.contains(p_Country);
+        //To be finished later
+        //return d_Countries.contains(p_CountryID);
+        return true;
     }
 
     /* (non-Javadoc)

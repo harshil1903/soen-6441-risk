@@ -43,6 +43,21 @@ public class Country {
     }
 
     /**
+     * Parameterized constructor which instantiates a new country
+     * @param p_CountryID
+     * @param p_CountryName
+     * @param p_ContinentID
+     */
+    public Country(int p_CountryID, String p_CountryName, int p_ContinentID) {
+
+        d_CountryID = p_CountryID;
+        d_CountryName=p_CountryName;
+        p_ContinentID=p_ContinentID;
+        d_AdjacentCountries = new ArrayList<>();
+
+    }
+
+    /**
      * Gets Country ID.
      *
      * @return The Country ID
@@ -194,32 +209,35 @@ public class Country {
     /**
      * Add country to adjacent countries list.
      *
-     * @param p_Country country to be added
+     * @param p_CountryID country to be added
      */
-    public void addCountryToAdjacentCountries(Country p_Country)
+    public void addCountryToAdjacentCountries(int p_CountryID)
     {
-        d_AdjacentCountries.add(p_Country);
+        //To be finished later
+        //d_AdjacentCountries.add(p_CountryID);
     }
 
     /**
      * Remove country from adjacent countries list.
      *
-     * @param p_Country country to be removed
+     * @param p_CountryID country to be removed
      */
-    public void removeCountryFromAdjacentCountries(Country p_Country)
+    public void removeCountryFromAdjacentCountries(int p_CountryID)
     {
-        d_AdjacentCountries.remove(p_Country);
+        //To be finished later
+        //d_AdjacentCountries.remove(p_CountryID);
     }
 
     /**
      * To check if country present in adjacent countries list.
      *
-     * @param p_Country country to checked for presence
+     * @param p_CountryID country to checked for presence
      * @return whether country is present in the adjacent country list or not
      */
-    public boolean isCountryPresentInAdjacentCountries(Country p_Country)
+    public boolean isCountryPresentInAdjacentCountries(int p_CountryID)
     {
-        return d_AdjacentCountries.contains(p_Country);
+        //return d_AdjacentCountries.contains(p_CountryID);
+        return true;
     }
 
 
