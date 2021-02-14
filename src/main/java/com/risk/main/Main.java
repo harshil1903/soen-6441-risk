@@ -3,10 +3,12 @@ package com.risk.main;
 
 import com.risk.controller.CommandParser;
 import com.risk.exception.InvalidCommand;
+import com.risk.models.Map;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
 
 /**
  * This is main entrance point of the program. The execution of the game begins from here.
@@ -14,6 +16,7 @@ import java.util.Scanner;
  * @author Harshil
  */
 public class Main {
+    public static Map d_Map = new Map();
 
     /**
      * The entry point of application.

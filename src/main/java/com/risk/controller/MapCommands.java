@@ -6,6 +6,8 @@ import com.risk.maputils.ShowMap;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.risk.main.Main.d_Map;
+
 /**
  * The Map Commands class performs various map related commands.
  * It verifies whether the arguments provided for the commands are valid or not.
@@ -29,7 +31,7 @@ public class MapCommands {
 
 
         //Call MAP READER Function by passing filename.
-        new EditMap();
+        new EditMap(d_Map);
 
         //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);
         return true;
