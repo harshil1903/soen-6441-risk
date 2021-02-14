@@ -11,8 +11,7 @@ import java.io.FileWriter;
 import java.util.List;
 
 /**
- * The class MapWriter will write the data in map file when the user creates a map.
- *
+ * The class MapWriter will write the data in map file when the user creates a map
  * @author Rishabh
  */
 
@@ -45,32 +44,32 @@ public class MapWriter {
     /**
      * Below method processes the map by calling three different methods and makes a string to be written in map file.
      *
-     * @param p_map object of the map which is processed
+     * @param p_Map object of the map which is processed
      * @return String to be written in the map file
      */
 
-    private String parseMapAndReturnString(Map p_map) {
+    private String parseMapAndReturnString(Map p_Map) {
 
         StringBuilder l_content = new StringBuilder();
-        l_content = processMapAttribute(p_map);
-        l_content.append(processContinent(p_map));
-        l_content.append(processCountries(p_map));
+        l_content = processMapAttribute(p_Map);
+        l_content.append(processContinent(p_Map));
+        l_content.append(processCountries(p_Map));
         return l_content.toString();
     }
 
     /**
      * Below method processes map attributes.
      *
-     * @param p_map object of the map is being processed
+     * @param p_Map object of the map is being processed
      * @return a String that contains map properties.
      **/
 
-    private StringBuilder processMapAttribute(Map p_map) {
+    private StringBuilder processMapAttribute(Map p_Map) {
         StringBuilder l_mapAttribute = new StringBuilder();
         l_mapAttribute.append("[Map]");
         l_mapAttribute.append("\n");
 
-        for (java.util.Map.Entry<String, String> keymap : p_map.getD_MapData().entrySet()) {
+        for (java.util.Map.Entry<String, String> keymap : p_Map.getD_MapData().entrySet()) {
             l_mapAttribute.append(keymap.getKey() + "=" + keymap.getValue());
             l_mapAttribute.append("\n");
         }
