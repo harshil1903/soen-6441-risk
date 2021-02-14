@@ -3,13 +3,13 @@ package com.risk.maputils;
 import com.risk.exception.InvalidMapException;
 import com.risk.models.Country;
 import com.risk.models.Map;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import com.risk.maputils.MapOperations;
 import com.risk.models.Continent;
+import static com.risk.maputils.MapOperations.addContinent;
 
 /**
  * This class loads a map from an existing domination map file,
@@ -52,14 +52,15 @@ public class EditMap {
      *
      * @param p_MapReader Scanner object that helps to read map file.
      */
-    public void GetContinets(Scanner p_MapReader) {
+    public void GetContinets(Scanner p_MapReader) throws InvalidMapException {
         int l_Continet_Id = 1;
         while (p_MapReader.hasNextLine()) {
             String l_Line = p_MapReader.nextLine();
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
-            Continent continent = new Continent(l_Continet_Id, l_Parts[0], Integer.parseInt(l_Parts[1]));
-            d_Map.getD_Continents().add(continent);
+            String l_CountinentName = l_Parts[0];
+            int l_ControlValue = Integer.parseInt(l_Parts[1]);
+            addContinent(d_Map, l_Continet_Id, l_ControlValue);
             l_Continet_Id++;
         }
 
@@ -95,7 +96,10 @@ public class EditMap {
             String[] l_Parts = l_Line.split(" ");
             int l_Continent_Id = Integer.parseInt(l_Parts[2]);
             Continent l_Continent = d_Map.getD_Continents().get(l_Continent_Id - 1);
-            Country l_Country = new Country(Integer.parseInt(l_Parts[0]), l_Parts[1], Integer.parseInt(l_Parts[2]));
+            int l_Country_Id = Integer.parseInt(l_Parts[0]);
+            String l_CountryName = l_Parts[1];
+            int l_ContinentId = Integer.parseInt(l_Parts[2]);
+            Country l_Country = new Country(l_Country_Id, l_CountryName, l_Continent_Id);
             l_Continent.getD_Countries().add(l_Country);
         }
     }
@@ -146,7 +150,7 @@ public class EditMap {
             }
 
 
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException | InvalidMapException e) {
             e.printStackTrace();
         }
     }
