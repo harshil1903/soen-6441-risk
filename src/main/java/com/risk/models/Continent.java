@@ -184,6 +184,9 @@ public class Continent {
      */
     public void removeCountryFromCountryList(int p_CountryID) {
         //To be finished later
+        Country l_CountryToBeRemoved = new Country().getCountryFromCountryID(p_CountryID);
+
+        d_Countries.remove(l_CountryToBeRemoved);
         //d_Countries.remove(p_CountryID);
     }
 
@@ -195,8 +198,9 @@ public class Continent {
      */
     public boolean isCountryPresentInCountryList(int p_CountryID) {
         //To be finished later
-        //return d_Countries.contains(p_CountryID);
-        return true;
+        Country l_Country = new Country().getCountryFromCountryID(p_CountryID);
+
+        return d_Countries.contains(l_Country);
     }
 
     /* (non-Javadoc)

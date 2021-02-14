@@ -141,6 +141,9 @@ public class Player {
      */
     public void removeCountryFromAssignedCountries(int p_CountryID)
     {
+        Country l_CountryToBeRemoved = new Country().getCountryFromCountryID(p_CountryID);
+
+        d_AssignedCountries.remove(l_CountryToBeRemoved);
         //To be finished later
         //d_AssignedCountries.remove(p_Country);
     }
@@ -154,7 +157,9 @@ public class Player {
     public boolean isCountryPresentInAssignedCountries(int p_CountryID)
     {
         //return d_AssignedCountries.contains(p_CountryID);
-        return true;
+        Country l_Country = new Country().getCountryFromCountryID(p_CountryID);
+
+        return d_AssignedCountries.contains(l_Country);
     }
 
 

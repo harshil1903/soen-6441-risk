@@ -243,6 +243,9 @@ public class Country {
      */
     public void removeCountryFromAdjacentCountries(int p_CountryID) {
         //To be finished later
+        Country l_CountryToBeRemoved = new Country().getCountryFromCountryID(p_CountryID);
+
+        d_AdjacentCountries.remove(l_CountryToBeRemoved);
         //d_AdjacentCountries.remove(p_CountryID);
     }
 
@@ -254,7 +257,9 @@ public class Country {
      */
     public boolean isCountryPresentInAdjacentCountries(int p_CountryID) {
         //return d_AdjacentCountries.contains(p_CountryID);
-        return true;
+        Country l_Country = new Country().getCountryFromCountryID(p_CountryID);
+
+        return d_AdjacentCountries.contains(l_Country);
     }
 
 

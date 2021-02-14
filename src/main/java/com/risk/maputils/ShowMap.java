@@ -22,7 +22,9 @@ public class ShowMap {
                 {
                     System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
                 }
+                System.out.println("\n");
             }
+            System.out.println("\n");
         }
     }
 
@@ -43,7 +45,9 @@ public class ShowMap {
                 {
                     System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
                 }
+                System.out.println("\n");
             }
+            System.out.println("\n");
         }
     }
 }
