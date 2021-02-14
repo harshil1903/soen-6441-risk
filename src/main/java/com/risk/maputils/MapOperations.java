@@ -32,12 +32,13 @@ public class MapOperations {
         Continent l_continent = new Continent();
         l_continent.setD_ContinentID(p_ContinentID);
         l_continent.setD_ContinentValue(p_ContinentValue);
+        l_continent.setD_ContinentName("Temp - "+p_ContinentID);
 
         if (p_Map.isContinentPresentInContinentList(p_ContinentID)) {
-            throw new InvalidMapException("The Continent" + p_ContinentID + "Already Exist");
+            throw new InvalidMapException("The Continent Temp - " + p_ContinentID + "Already Exist");
         } else {
             p_Map.addContinentToContinentList(l_continent);
-            System.out.println("The Continent Added Successfully");
+            System.out.println("The Continent Temp - "+p_ContinentID +"Added Successfully");
         }
         return l_continent;
     }
