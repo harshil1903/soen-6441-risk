@@ -6,7 +6,7 @@ import com.risk.exception.InvalidMapException;
 import com.risk.models.Map;
 import com.risk.models.Continent;
 import com.risk.models.Country;
-import jdk.jfr.internal.tool.PrettyWriter;
+//import jdk.jfr.internal.tool.PrettyWriter;
 
 import javax.smartcardio.TerminalFactory;
 
@@ -62,7 +62,7 @@ public class MapValidator {
 
         for(Continent continent : map.getD_Continents()){
             if(continent.getD_Countries().size() < 1){
-                throw new InvalidMapException("There should be atleast one country in any continent.")
+                throw new InvalidMapException("There should be atleast one country in any continent.");
             }
             //At this point it is validated that map is subgraph of continents, now validate whether continent is subgraph of countries.
             for(Country country : continent.getD_Countries()){
@@ -71,7 +71,7 @@ public class MapValidator {
 
             //This method will check whether if the continent is a subgraph of countries.
             if(!isContinentConnectedGraph(continent,map)){
-                throw new InvalidMapException(message+"The Continent:- "+continent.getD_ContinentName()+" is not connected by its neighbouring countries.A Continent must be connected graph formed by its neighbouring countries in the map.");
+                throw new InvalidMapException("The Continent:- "+continent.getD_ContinentName()+" is not connected by its neighbouring countries.A Continent must be connected graph formed by its neighbouring countries in the map.");
             }
         }
     }
@@ -129,7 +129,7 @@ public class MapValidator {
      * @throws InvalidMapException throws exception if the map is not valid.
      */
 
-    public static void validateCountry(Country country,Map map) throws new InvalidMapException{
+    public static void validateCountry(Country country,Map map) throws InvalidMapException{
         List<Country> adjCountryList = country.getD_AdjacentCountries();
 
         if((adjCountryList == null) && (adjCountryList.size()<1)){
@@ -242,7 +242,7 @@ public class MapValidator {
                 if(!countryBelongsToContinentCount.containsKey(country)){
                     countryBelongsToContinentCount.put(country,1);
                 }else{
-                    throw new InvalidMapException("Country:"+country.getD_CountryName()+"must belong to only one continent.")
+                    throw new InvalidMapException("Country:"+country.getD_CountryName()+"must belong to only one continent.");
                 }
             }
         }
