@@ -13,7 +13,6 @@ import java.util.List;
  * continent add and remove
  * country add and remove
  * neighbor add and remove
- *
  * @author Parth Navsariwala
  */
 
@@ -38,6 +37,7 @@ public class MapOperations {
             throw new InvalidMapException("The Continent" + p_ContinentID + "Already Exist");
         } else {
             p_Map.addContinentToContinentList(p_ContinentID);
+            System.out.println("The Continent Added Successfully");
         }
         return l_continent;
     }
@@ -72,19 +72,18 @@ public class MapOperations {
      * @param p_Map         current map object
      * @param p_CountryID   ID of the country
      * @param p_ContinentID Value of the country
-     * @return Returns the new country
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
 
-    public static Country addCountry(Map p_Map, int p_CountryID, int p_ContinentID) throws InvalidMapException {
+    public static void addCountry(Map p_Map, int p_CountryID, int p_ContinentID) throws InvalidMapException {
         Country l_country = new Country();
         l_country.setD_CountryID(p_CountryID);
         for (Continent l_continent : p_Map.getD_Continents()) {
             if (l_continent.getD_ContinentID() == p_ContinentID) {
                 l_continent.addCountryToCountryList(p_CountryID);
+                System.out.println("The Country Added Successfully");
             }
         }
-        return l_country;
     }
 
     /**
@@ -125,6 +124,7 @@ public class MapOperations {
                 if (l_country.getD_CountryID() == p_CountryID) {
                     Country l_tempCountry = l_country.getCountryFromCountryID(p_NeighborID);
                     l_country.addCountryToAdjacentCountries(p_NeighborID);
+                    System.out.println("Neighbor Country Added Successfully");
                 }
             }
         }
