@@ -4,8 +4,19 @@ import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
 
+/**
+ * This Class is used for displaying the loaded map as well
+ * as displaying the game map.
+ */
+
+
 public class ShowMap {
 
+    /**
+     * This method is used to display the Contents of the map i.e the continents,
+     * countries and the adjacent countries.
+     * @param p_Map
+     */
     public static void displayEditorMap(Map p_Map)
     {
 
