@@ -6,10 +6,11 @@ import com.risk.exception.InvalidMapException;
 import com.risk.models.Map;
 import com.risk.models.Continent;
 import com.risk.models.Country;
+
+
 import jdk.jfr.internal.tool.PrettyWriter;
 
 import javax.smartcardio.TerminalFactory;
-
 
 /**
  * This class performs validation of map correctness, also after loading
@@ -207,7 +208,7 @@ public class MapValidator {
     public static List<Continent> getAdjacentContinents(Continent continent, Map map){
         List<Continent> adjacentContinents = new ArrayList<>();
 
-        HashSet<Country> adjCountryMainSet = new HashSet<>();
+        HashSet<Country> adjCountryMainSet = new HashSet<>(); //hash set allows unique value only
         for(Country country : continent.getD_Countries()){
             adjCountryMainSet.addAll(country.getD_AdjacentCountries());
         }
