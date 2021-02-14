@@ -229,11 +229,11 @@ public class Country {
     /**
      * Add country to adjacent countries list.
      *
-     * @param p_CountryID country to be added
+     * @param p_Country country to be added
      */
-    public void addCountryToAdjacentCountries(Country p_CountryID) {
+    public void addCountryToAdjacentCountries(Country p_Country) {
         //To be finished later
-        //d_AdjacentCountries.add(p_CountryID);
+        d_AdjacentCountries.add(p_Country);
     }
 
     /**

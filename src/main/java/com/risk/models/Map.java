@@ -67,11 +67,11 @@ public class Map extends Observable {
     /**
      * Add continent to continent list.
      *
-     * @param p_ContinentID continent
+     * @param p_Continent continent
      */
-    public void addContinentToContinentList(Continent p_ContinentID) {
+    public void addContinentToContinentList(Continent p_Continent) {
         //To be finished later
-        //d_Continents.add(p_ContinentID);
+        d_Continents.add(p_Continent);
     }
 
     /**
