@@ -172,7 +172,7 @@ public class Continent {
      *
      * @param p_CountryID country to be added
      */
-    public void addCountryToCountryList(int p_CountryID) {
+    public void addCountryToCountryList(Country p_CountryID) {
         //To be finished later
         //d_Countries.add(p_CountryID);
     }

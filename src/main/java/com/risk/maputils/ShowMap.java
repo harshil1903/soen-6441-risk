@@ -8,6 +8,7 @@ public class ShowMap {
 
     public static void displayEditorMap(Map p_Map)
     {
+
         System.out.println("DISPLAYING MAP");
         for (Continent l_continent : p_Map.getD_Continents())
         {

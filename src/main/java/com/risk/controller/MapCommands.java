@@ -1,5 +1,8 @@
 package com.risk.controller;
 
+import com.risk.maputils.EditMap;
+import com.risk.maputils.ShowMap;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,7 +29,7 @@ public class MapCommands {
 
 
         //Call MAP READER Function by passing filename.
-
+        new EditMap();
 
         //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);
         return true;
@@ -87,7 +90,7 @@ public class MapCommands {
 
 
         //Call MAP Display method.
-
+        //ShowMap.displayEditorMap();
 
         //System.out.println("Reached Show Map Command. Argument List : " + p_ArgumentTokens);
     }

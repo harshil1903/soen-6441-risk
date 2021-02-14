@@ -231,7 +231,7 @@ public class Country {
      *
      * @param p_CountryID country to be added
      */
-    public void addCountryToAdjacentCountries(int p_CountryID) {
+    public void addCountryToAdjacentCountries(Country p_CountryID) {
         //To be finished later
         //d_AdjacentCountries.add(p_CountryID);
     }

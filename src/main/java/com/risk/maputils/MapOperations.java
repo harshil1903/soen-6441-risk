@@ -36,7 +36,7 @@ public class MapOperations {
         if (p_Map.isContinentPresentInContinentList(p_ContinentID)) {
             throw new InvalidMapException("The Continent" + p_ContinentID + "Already Exist");
         } else {
-            p_Map.addContinentToContinentList(p_ContinentID);
+            p_Map.addContinentToContinentList(l_continent);
             System.out.println("The Continent Added Successfully");
         }
         return l_continent;
@@ -80,7 +80,7 @@ public class MapOperations {
         l_country.setD_CountryID(p_CountryID);
         for (Continent l_continent : p_Map.getD_Continents()) {
             if (l_continent.getD_ContinentID() == p_ContinentID) {
-                l_continent.addCountryToCountryList(p_CountryID);
+                l_continent.addCountryToCountryList(l_country);
                 System.out.println("The Country Added Successfully");
             }
         }
@@ -123,7 +123,7 @@ public class MapOperations {
             for (Country l_country : l_continent.getD_Countries()) {
                 if (l_country.getD_CountryID() == p_CountryID) {
                     Country l_tempCountry = l_country.getCountryFromCountryID(p_NeighborID);
-                    l_country.addCountryToAdjacentCountries(p_NeighborID);
+                    l_country.addCountryToAdjacentCountries(l_tempCountry);
                     System.out.println("Neighbor Country Added Successfully");
                 }
             }

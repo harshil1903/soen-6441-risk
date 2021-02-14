@@ -128,7 +128,7 @@ public class Player {
      *
      * @param p_CountryID Country to be added
      */
-    public void addCountryToAssignedCountries(int p_CountryID)
+    public void addCountryToAssignedCountries(Country p_CountryID)
     {
         //To be finished later
         //d_AssignedCountries.add(p_CountryID);
