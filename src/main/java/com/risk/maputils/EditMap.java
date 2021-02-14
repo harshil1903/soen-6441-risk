@@ -155,7 +155,7 @@ public class EditMap {
      * This Method Creates a new map if map is not present.
      */
     public void CreateMap() {
-
+        d_Map = new Map();
     }
 
     /**
