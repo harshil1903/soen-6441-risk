@@ -52,16 +52,16 @@ public class EditMap {
      *
      * @param p_MapReader Scanner object that helps to read map file.
      */
-    public void GetContinets(Scanner p_MapReader) throws InvalidMapException {
-        int l_Continet_Id = 1;
+    public void GetContinents(Scanner p_MapReader) throws InvalidMapException {
+        int l_Continent_Id = 1;
         while (p_MapReader.hasNextLine()) {
             String l_Line = p_MapReader.nextLine();
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
-            String l_CountinentName = l_Parts[0];
+            String l_ContinentName = l_Parts[0];
             int l_ControlValue = Integer.parseInt(l_Parts[1]);
-            addContinent(d_Map, l_Continet_Id, l_ControlValue);
-            l_Continet_Id++;
+            addContinent(d_Map, l_Continent_Id, l_ControlValue);
+            l_Continent_Id++;
         }
 
     }
@@ -139,7 +139,7 @@ public class EditMap {
             while (MapReader.hasNextLine()) {
                 String l_Line = MapReader.nextLine();
                 if (l_Line.equals("[continents]")) {
-                    GetContinets(MapReader);
+                    GetContinents(MapReader);
                 }
                 if (l_Line.equals("[countries]")) {
                     GetCountries(MapReader);
