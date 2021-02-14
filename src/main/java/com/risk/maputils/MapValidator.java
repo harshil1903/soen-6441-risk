@@ -207,7 +207,7 @@ public class MapValidator {
     public static List<Continent> getAdjacentContinents(Continent continent, Map map){
         List<Continent> adjacentContinents = new ArrayList<>();
 
-        HashSet<Country> adjCountryMainSet = new HashSet<>();
+        HashSet<Country> adjCountryMainSet = new HashSet<>(); ////hash set allows unique value only
         for(Country country : continent.getD_Countries()){
             adjCountryMainSet.addAll(country.getD_AdjacentCountries());
         }
