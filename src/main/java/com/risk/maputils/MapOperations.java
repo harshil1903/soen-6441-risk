@@ -10,9 +10,9 @@ import java.util.List;
 
 /**
  * This class defined different operation on class such as
- * continent add and remove
- * country add and remove
- * neighbor add and remove
+ * continent add and remove for adding and remove continent from continent list
+ * country add and remove for adding and remove country from country list
+ * neighbor add and remove for adding and remove adjacent countries from list
  * @author Parth Navsariwala
  */
 
@@ -24,11 +24,10 @@ public class MapOperations {
      * @param p_Map            current map object
      * @param p_ContinentID    ID of the continent
      * @param p_ContinentValue Value of the continent
-     * @return Returns the new continent
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
 
-    public static Continent addContinent(Map p_Map, int p_ContinentID, int p_ContinentValue) throws InvalidMapException {
+    public static void addContinent(Map p_Map, int p_ContinentID, int p_ContinentValue) throws InvalidMapException {
         Continent l_continent = new Continent();
         l_continent.setD_ContinentID(p_ContinentID);
         l_continent.setD_ContinentValue(p_ContinentValue);
@@ -40,12 +39,10 @@ public class MapOperations {
             p_Map.addContinentToContinentList(l_continent);
             System.out.println("The Continent Temp - "+p_ContinentID +"Added Successfully");
         }
-        return l_continent;
     }
 
     /**
-     * Remove continent to map with details such as ID and Valu
-     *
+     * Remove continent to map with details such as ID and Value
      * @param p_Map         current map object
      * @param p_ContinentID ID of the continent
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
@@ -79,6 +76,8 @@ public class MapOperations {
     public static void addCountry(Map p_Map, int p_CountryID, int p_ContinentID) throws InvalidMapException {
         Country l_country = new Country();
         l_country.setD_CountryID(p_CountryID);
+        l_country.setD_ContinentID(p_ContinentID);
+        l_country.setD_CountryName("Temp - "+p_CountryID);
         for (Continent l_continent : p_Map.getD_Continents()) {
             if (l_continent.getD_ContinentID() == p_ContinentID) {
                 l_continent.addCountryToCountryList(l_country);
