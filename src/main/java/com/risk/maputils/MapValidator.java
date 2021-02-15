@@ -87,12 +87,14 @@ public class MapValidator {
         boolean l_returnValue = true;
         for(Country c : p_Continent.getD_Countries()){
             if(c.isD_IsProcessed() == false){
-                c.setD_Processed(false);
+                c.setD_Processed(false);    //The Continent won't be connected only when any of the country is not being visited.
                 d_AlertMessage = c.getD_CountryName()+"country is not forming connected graph in the continent"+p_Continent.getD_ContinentName()+".";
                 l_returnValue = false;
                 break;
             }
         }
+
+        //This loop sets the value setD_Processed for all the countries to false for future usage of validation
 
         for(Country c : p_Continent.getD_Countries()){
             c.setD_Processed(false);
@@ -112,6 +114,7 @@ public class MapValidator {
         }
 
         p_Country.setD_Processed(true);
+
 
         for(Country c : p_Country.getD_AdjacentCountries()){
             if((c.getD_BelongToContinent() == p_Country.getD_BelongToContinent()) && c.isD_IsProcessed() == false)
@@ -207,7 +210,7 @@ public class MapValidator {
 
         HashSet<Country> l_adjCountryMainSet = new HashSet<>(); ////hash set allows unique value only
         for(Country l_country : p_Continent.getD_Countries()){
-            l_adjCountryMainSet.addAll(l_country.getD_AdjacentCountries());
+            l_adjCountryMainSet.addAll(l_country.getD_AdjacentCountries()); //all unique adjacent countries of entire continent will be added to this list
         }
 
         System.out.println(l_adjCountryMainSet);
@@ -216,6 +219,7 @@ public class MapValidator {
             if(!p_Continent.equals(l_remainingContinent)){
                 //this will be processed if there is any relation between two continents.
                 //also it will return true ony if both the continents are different.
+                //if there are some countries common between two continents i.e they are connected i.e disjoint set is not formed then that continent is adjacent continent.
                 if(!Collections.disjoint(l_adjCountryMainSet,l_remainingContinent.getD_Countries())){
                     System.out.println ("Inside the disjoint method");
                     //There are some countries which are common.
@@ -237,8 +241,8 @@ public class MapValidator {
 
         for(Continent l_continent : p_Map.getD_Continents()){
             for(Country l_country : l_continent.getD_Countries()){
-                if(!countryBelongsToContinentCount.containsKey(l_country)){
-                    countryBelongsToContinentCount.put(l_country,1);
+                if(!l_countryBelongsToContinentCount.containsKey(l_country)){
+                    l_countryBelongsToContinentCount.put(l_country,1);
                 }else{
                     throw new InvalidMapException("Country:"+l_country.getD_CountryName()+"must belong to only one continent.");
                 }
