@@ -11,8 +11,7 @@ import java.util.Scanner;
 
 import com.risk.models.Continent;
 
-import static com.risk.maputils.MapOperations.addContinent;
-import static com.risk.maputils.MapOperations.addCountry;
+import static com.risk.maputils.MapOperations.*;
 
 /**
  * This class loads a map from an existing domination map file,
@@ -74,8 +73,8 @@ public class EditMap {
      * @return the country object for used in GetCountries.
      */
     public static Country getCountry(int p_Country_Id) {
-        for (Continent l_Continent : d_Map.getD_Continents()) {
-            for (Country l_Country : l_Continent.getD_Countries()) {
+        for (Continent l_Continent : d_Map.d_Continents) {
+            for (Country l_Country : l_Continent.d_Countries) {
                 if (l_Country.getD_CountryID() == p_Country_Id) {
                     return l_Country;
                 }
@@ -109,19 +108,18 @@ public class EditMap {
      *
      * @param p_MapReader Scanner object that helps to read map.
      */
-    public static void GetAdjacentCountries(Scanner p_MapReader) {
+    public static void getAdjacentCountries(Scanner p_MapReader) throws InvalidMapException {
         while (p_MapReader.hasNextLine()) {
             String l_Line = p_MapReader.nextLine();
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
-            int l_Base = Integer.parseInt(l_Parts[0]);
-            Country l_Country = getCountry(l_Base);
+            int l_Country_Id = Integer.parseInt(l_Parts[0]);
+            Country l_Country = getCountry(l_Country_Id);
             for (int i = 1; i < l_Parts.length; i++) {
-                int l_Adjacent_Id = Integer.parseInt(l_Parts[i]);
-                Country l_Neighbour = getCountry(l_Adjacent_Id);
-                l_Country.getD_AdjacentCountries().add(l_Neighbour);
+                int l_Neighbour_Id = Integer.parseInt(l_Parts[i]);
+                Country l_Neighbour = getCountry(l_Neighbour_Id);
+                addNeighborCountry(d_Map, l_Neighbour_Id, l_Country_Id);
             }
-
         }
     }
 
@@ -143,7 +141,7 @@ public class EditMap {
                     getCountries(MapReader);
                 }
                 if (l_Line.equals("[borders]")) {
-                    GetAdjacentCountries(MapReader);
+                    getAdjacentCountries(MapReader);
                 }
             }
 
