@@ -94,7 +94,7 @@ public class MapValidator {
             }
         }
 
-        //This loop sets the value setD_Processed for all the countries to false for future usage of validation
+        //This loop sets the value setD_Processed for all the countries to false for future usage of validation.
 
         for(Country c : p_Continent.getD_Countries()){
             c.setD_Processed(false);
