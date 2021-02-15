@@ -3,13 +3,16 @@ package com.risk.maputils;
 import com.risk.exception.InvalidMapException;
 import com.risk.models.Country;
 import com.risk.models.Map;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import com.risk.maputils.MapOperations;
+
 import com.risk.models.Continent;
+
 import static com.risk.maputils.MapOperations.addContinent;
+import static com.risk.maputils.MapOperations.addCountry;
 
 /**
  * This class loads a map from an existing domination map file,
@@ -17,7 +20,6 @@ import static com.risk.maputils.MapOperations.addContinent;
  *
  * @author Chirag
  */
-
 public class EditMap {
     // Object map that will be returned after processing.
     public static Map d_Map = new Map();
@@ -52,7 +54,7 @@ public class EditMap {
      *
      * @param p_MapReader Scanner object that helps to read map file.
      */
-    public void GetContinents(Scanner p_MapReader) throws InvalidMapException {
+    public void getContinents(Scanner p_MapReader) throws InvalidMapException {
         int l_Continent_Id = 1;
         while (p_MapReader.hasNextLine()) {
             String l_Line = p_MapReader.nextLine();
@@ -63,7 +65,6 @@ public class EditMap {
             addContinent(d_Map, l_Continent_Id, l_ControlValue);
             l_Continent_Id++;
         }
-
     }
 
     /**
@@ -72,7 +73,7 @@ public class EditMap {
      * @param p_Country_Id id of the country.
      * @return the country object for used in GetCountries.
      */
-    public static Country GetCountry(int p_Country_Id) {
+    public static Country getCountry(int p_Country_Id) {
         for (Continent l_Continent : d_Map.getD_Continents()) {
             for (Country l_Country : l_Continent.getD_Countries()) {
                 if (l_Country.getD_CountryID() == p_Country_Id) {
@@ -88,19 +89,17 @@ public class EditMap {
      *
      * @param p_MapReader Scanner objects that helps to read the map.
      */
-
-    public static void GetCountries(Scanner p_MapReader) {
+    public static void getCountries(Scanner p_MapReader) throws InvalidMapException {
         while (p_MapReader.hasNextLine()) {
             String l_Line = p_MapReader.nextLine();
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
             int l_Continent_Id = Integer.parseInt(l_Parts[2]);
-            Continent l_Continent = d_Map.getD_Continents().get(l_Continent_Id - 1);
+            Continent l_Continent = d_Map.d_Continents.get(l_Continent_Id - 1);
             int l_Country_Id = Integer.parseInt(l_Parts[0]);
             String l_CountryName = l_Parts[1];
             int l_ContinentId = Integer.parseInt(l_Parts[2]);
-            Country l_Country = new Country(l_Country_Id, l_CountryName, l_Continent_Id);
-            l_Continent.getD_Countries().add(l_Country);
+            addCountry(d_Map, l_Country_Id, l_Continent_Id);
         }
     }
 
@@ -110,17 +109,16 @@ public class EditMap {
      *
      * @param p_MapReader Scanner object that helps to read map.
      */
-
     public static void GetAdjacentCountries(Scanner p_MapReader) {
         while (p_MapReader.hasNextLine()) {
             String l_Line = p_MapReader.nextLine();
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
             int l_Base = Integer.parseInt(l_Parts[0]);
-            Country l_Country = GetCountry(l_Base);
+            Country l_Country = getCountry(l_Base);
             for (int i = 1; i < l_Parts.length; i++) {
                 int l_Adjacent_Id = Integer.parseInt(l_Parts[i]);
-                Country l_Neighbour = GetCountry(l_Adjacent_Id);
+                Country l_Neighbour = getCountry(l_Adjacent_Id);
                 l_Country.getD_AdjacentCountries().add(l_Neighbour);
             }
 
@@ -139,10 +137,10 @@ public class EditMap {
             while (MapReader.hasNextLine()) {
                 String l_Line = MapReader.nextLine();
                 if (l_Line.equals("[continents]")) {
-                    GetContinents(MapReader);
+                    getContinents(MapReader);
                 }
                 if (l_Line.equals("[countries]")) {
-                    GetCountries(MapReader);
+                    getCountries(MapReader);
                 }
                 if (l_Line.equals("[borders]")) {
                     GetAdjacentCountries(MapReader);
@@ -165,7 +163,6 @@ public class EditMap {
     /**
      * This Method loads map and process it accordingly.
      */
-
     public void EditMap() {
         File l_Map = new File("../soen-6441-risk/src/main/resources/europe.map");
         if (l_Map != null) {
