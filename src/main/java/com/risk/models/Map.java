@@ -75,6 +75,15 @@ public class Map extends Observable {
     }
 
     /**
+     * This method returns continent from continents list.
+     * @param p_Continent_Id gives the id of the continent to be fetced.
+     * @return matching continent from the list.
+     */
+    public Continent getContinentFromContinentList(int p_Continent_Id){
+        Continent l_Continet=d_Continents.get(p_Continent_Id-1);
+        return l_Continet;
+    }
+    /**
      * Remove continent from continent list.
      *
      * @param p_ContinentID continent
@@ -82,6 +91,8 @@ public class Map extends Observable {
     public void removeContinentFromContinentList(int p_ContinentID) {
         //To be finished later
         Continent l_ContinentToBeRemoved = new Continent().getContinentFromContinentID(p_ContinentID);
+
+        System.out.println("\n Continent Remove Info  " + l_ContinentToBeRemoved.getD_ContinentName() + " " + l_ContinentToBeRemoved.getD_ContinentID() );
 
         d_Continents.remove(l_ContinentToBeRemoved);
         //d_Continents.remove(p_ContinentID);
