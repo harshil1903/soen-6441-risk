@@ -61,7 +61,8 @@ public class EditMap {
             String[] l_Parts = l_Line.split(" ");
             String l_ContinentName = l_Parts[0];
             int l_ControlValue = Integer.parseInt(l_Parts[1]);
-            addContinent(d_Map, l_Continent_Id, l_ControlValue);
+            d_Map.addContinentToContinentList(new Continent(l_ContinentName, l_ControlValue));
+            //addContinent(d_Map, l_Continent_Id, l_ControlValue);
             l_Continent_Id++;
         }
     }
@@ -94,11 +95,14 @@ public class EditMap {
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
             int l_Continent_Id = Integer.parseInt(l_Parts[2]);
+
             Continent l_Continent = d_Map.getD_Continents().get(l_Continent_Id - 1);
             int l_Country_Id = Integer.parseInt(l_Parts[0]);
             String l_CountryName = l_Parts[1];
             int l_ContinentId = Integer.parseInt(l_Parts[2]);
-            addCountry(d_Map, l_Country_Id, l_Continent_Id);
+
+            l_Continent.addCountryToCountryList(new Country(l_Country_Id, l_CountryName, l_ContinentId));
+            //addCountry(d_Map, l_Country_Id, l_Continent_Id);
         }
     }
 

@@ -3,6 +3,8 @@ package com.risk.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.risk.main.Main.d_Map;
+
 
 /**
  * This class defines Continent and its properties such as
@@ -154,14 +156,15 @@ public class Continent {
      */
     public Continent getContinentFromContinentID(int p_ContinentID)
     {
-        if(d_ContinentID == p_ContinentID)
+
+        for(Continent l_Continent : d_Map.getD_Continents())
         {
-            return this;
+            if(l_Continent.getD_ContinentID() == p_ContinentID)
+            {
+                return l_Continent;
+            }
         }
-        else
-        {
-            return null;
-        }
+        return null;
 
     }
 

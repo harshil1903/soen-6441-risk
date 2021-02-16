@@ -19,7 +19,7 @@ import java.util.Scanner;
  */
 public class Main {
     public static Map d_Map = new Map();
-    public static ArrayList<Player> d_Playerlist = new ArrayList<Player>();
+    public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
 
     /**
      * The entry point of application.

@@ -2,7 +2,7 @@ package com.risk.models;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import static com.risk.main.Main.d_Map;
 /**
  * This class defines Country and its properties such as
  * the continent to which it belongs, its adjacent Countries and whether its been assigned to any player or not.
@@ -212,14 +212,17 @@ public class Country {
      */
     public Country getCountryFromCountryID(int p_CountryID)
     {
-        if(d_CountryID == p_CountryID)
+        for(Continent l_Continent : d_Map.getD_Continents())
         {
-            return this;
+            for(Country l_Country : l_Continent.getD_Countries())
+            {
+                if (l_Country.getD_CountryID() == p_CountryID)
+                {
+                    return l_Country;
+                }
+            }
         }
-        else
-        {
-            return null;
-        }
+        return null;
 
     }
 

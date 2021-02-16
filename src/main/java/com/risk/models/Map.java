@@ -83,6 +83,8 @@ public class Map extends Observable {
         //To be finished later
         Continent l_ContinentToBeRemoved = new Continent().getContinentFromContinentID(p_ContinentID);
 
+        System.out.println("\n Continent Remove Info  " + l_ContinentToBeRemoved.getD_ContinentName() + " " + l_ContinentToBeRemoved.getD_ContinentID() );
+
         d_Continents.remove(l_ContinentToBeRemoved);
         //d_Continents.remove(p_ContinentID);
     }

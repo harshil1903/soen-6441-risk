@@ -8,6 +8,8 @@ import com.risk.models.Map;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.risk.main.Main.d_Map;
+
 /**
  * This class defined different operation on class such as
  * continent add and remove for adding and remove continent from continent list
@@ -50,6 +52,7 @@ public class MapOperations {
 
     public static void removeContinent(Map p_Map, int p_ContinentID) throws InvalidMapException {
 
+        /*
         for (Continent l_tempContinent : p_Map.getD_Continents()) {
             for (Country l_tempCcountry : l_tempContinent.getD_Countries()) {
                 for (Country l_tempAdjcountry : l_tempCcountry.getD_AdjacentCountries()) {
@@ -62,6 +65,22 @@ public class MapOperations {
                 p_Map.removeContinentFromContinentList(p_ContinentID);
             }
         }
+        */
+        for(Continent l_Continent : d_Map.getD_Continents())
+        {
+            if(l_Continent.getD_ContinentID() == p_ContinentID)
+            {
+                if(!l_Continent.getD_Countries().isEmpty())
+                {
+                    System.out.println("Remove Countries from the continent first");
+                    return;
+                }
+            }
+        }
+        p_Map.removeContinentFromContinentList(p_ContinentID);
+
+        //d_Map.removeContinentFromContinentList(p_ContinentID);
+        //System.out.println(d_Map.getD_Continents());
     }
 
     /**

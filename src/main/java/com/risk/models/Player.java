@@ -3,6 +3,8 @@ package com.risk.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.risk.main.Main.d_PlayerList;
+
 
 /**
  * This class defines Player and its properties such as
@@ -111,14 +113,14 @@ public class Player {
      */
     public Player getPlayerFromPlayerID(int p_PlayerID)
     {
-        if(d_PlayerID == p_PlayerID)
+        for(Player l_Player : d_PlayerList)
         {
-            return this;
+            if(l_Player.getD_PlayerID() == p_PlayerID)
+            {
+                return l_Player;
+            }
         }
-        else
-        {
-            return null;
-        }
+        return null;
 
     }
 
