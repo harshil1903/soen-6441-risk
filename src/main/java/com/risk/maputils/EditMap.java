@@ -61,7 +61,8 @@ public class EditMap {
             String[] l_Parts = l_Line.split(" ");
             String l_ContinentName = l_Parts[0];
             int l_ControlValue = Integer.parseInt(l_Parts[1]);
-            addContinent(d_Map, l_Continent_Id, l_ControlValue);
+            Continent l_Continent = new Continent(l_Continent_Id, l_ContinentName, l_ControlValue);
+            d_Map.addContinentToContinentList(l_Continent);
             l_Continent_Id++;
         }
     }
@@ -145,8 +146,6 @@ public class EditMap {
                     getAdjacentCountries(MapReader);
                 }
             }
-
-
         } catch (FileNotFoundException | InvalidMapException e) {
             e.printStackTrace();
         }
@@ -169,7 +168,6 @@ public class EditMap {
         } else {
             CreateMap();
         }
-
         return d_Map;
     }
 }
