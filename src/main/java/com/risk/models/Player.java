@@ -1,15 +1,9 @@
 package com.risk.models;
 
-import com.risk.controller.CommandParser;
-import com.risk.maputils.MapOperations;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
-import static com.risk.main.Main.d_Map;
-import static com.risk.main.Main.d_PlayerList;
 
 
 /**
@@ -224,9 +218,9 @@ public class Player {
         String[] l_ArgumentTokens = l_Arguments.split(" ");
         List<String> l_ArgumentList = new ArrayList<>(Arrays.asList(l_ArgumentTokens.clone()));
 
-        if(l_ArgumentList.stream().count() != 1)
+        if(l_ArgumentList.stream().count() != 2)
         {
-            System.out.println("Wrong Number of Arguments provided. editmap command has only one argument.");
+            System.out.println("Wrong Number of Arguments provided.");
         }
 
         int l_countryId;
@@ -238,9 +232,13 @@ public class Player {
             {
                 l_countryId = Integer.parseInt(l_ArgumentList.get(++i));
                 l_numberOfArmies =Integer.parseInt(l_ArgumentList.get(++i));
-                System.out.println("Continent ID: " + l_countryId + " Control Value: " + l_numberOfArmies);
-                orders.setD_countryId(l_countryId);
-                orders.setD_numberOfArmies(l_numberOfArmies);
+                System.out.println("Country: " + l_countryId + " Number of Armies: " + l_numberOfArmies);
+                if(d_Armies>0) {
+                    orders.setD_countryId(l_countryId);
+                    orders.setD_numberOfArmies(l_numberOfArmies);
+                    d_Armies = d_Armies - l_numberOfArmies;
+                    d_OrderList.add(orders);
+                }
             }
             catch (Exception e)
             {
@@ -250,9 +248,20 @@ public class Player {
         }
 
     }
-    public void next_order()
+    public Orders next_order()
     {
-
+        Orders l_tempOrder=new Orders();
+        Orders orders=new Orders();
+        for(int i=0;i<d_OrderList.size();i++){
+            if(d_OrderList.isEmpty()){
+                return null;
+            }
+            else{
+                l_tempOrder=d_OrderList.get(i);
+                d_OrderList.remove(d_OrderList.get(i));
+            }
+        }
+        return l_tempOrder;
     }
 
 

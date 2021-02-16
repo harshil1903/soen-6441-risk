@@ -1,7 +1,10 @@
 package com.risk.models;
 
+import java.util.List;
+
 public class Orders {
     int d_countryId;
+    Country d_Countries;
     int d_numberOfArmies;
 
     public void setD_countryId(int d_countryId) {
@@ -18,6 +21,8 @@ public class Orders {
 
     public int getD_numberOfArmies() {
         return d_numberOfArmies;
+    }
+    public void execute(){
     }
 
 
