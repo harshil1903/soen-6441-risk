@@ -75,6 +75,15 @@ public class Map extends Observable {
     }
 
     /**
+     * This method returns continent from continents list.
+     * @param p_Continent_Id gives the id of the continent to be fetced.
+     * @return matching continent from the list.
+     */
+    public Continent getContinentFromContinentList(int p_Continent_Id){
+        Continent l_Continet=d_Continents.get(p_Continent_Id-1);
+        return l_Continet;
+    }
+    /**
      * Remove continent from continent list.
      *
      * @param p_ContinentID continent
