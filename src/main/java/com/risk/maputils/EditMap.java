@@ -118,7 +118,8 @@ public class EditMap {
             for (int i = 1; i < l_Parts.length; i++) {
                 int l_Neighbour_Id = Integer.parseInt(l_Parts[i]);
                 Country l_Neighbour = getCountry(l_Neighbour_Id);
-                addNeighborCountry(d_Map, l_Neighbour_Id, l_Country_Id);
+                l_Country.addCountryToAdjacentCountries(l_Neighbour);
+                //addNeighborCountry(d_Map, l_Neighbour_Id, l_Country_Id);
             }
         }
     }
@@ -161,12 +162,14 @@ public class EditMap {
     /**
      * This Method loads map and process it accordingly.
      */
-    public void EditMap() {
-        File l_Map = new File("../soen-6441-risk/src/main/resources/europe.map");
+    public Map EditMap() {
+        File l_Map = new File("../SOEN 6441/src/main/resources/europe.map");
         if (l_Map != null) {
             LoadMap(l_Map);
         } else {
             CreateMap();
         }
+
+        return d_Map;
     }
 }

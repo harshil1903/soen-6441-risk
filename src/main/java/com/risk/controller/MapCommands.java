@@ -32,7 +32,7 @@ public class MapCommands {
 
         //Call MAP READER Function by passing filename.
         //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
-        new EditMap().EditMap();
+        d_Map = new EditMap().EditMap();
 
         //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);
         return true;
