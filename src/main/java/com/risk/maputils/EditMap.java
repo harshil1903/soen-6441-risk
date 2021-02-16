@@ -73,8 +73,8 @@ public class EditMap {
      * @return the country object for used in GetCountries.
      */
     public static Country getCountry(int p_Country_Id) {
-        for (Continent l_Continent : d_Map.d_Continents) {
-            for (Country l_Country : l_Continent.d_Countries) {
+        for (Continent l_Continent : d_Map.getD_Continents()) {
+            for (Country l_Country : l_Continent.getD_Countries()) {
                 if (l_Country.getD_CountryID() == p_Country_Id) {
                     return l_Country;
                 }
@@ -94,7 +94,7 @@ public class EditMap {
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
             int l_Continent_Id = Integer.parseInt(l_Parts[2]);
-            Continent l_Continent = d_Map.d_Continents.get(l_Continent_Id - 1);
+            Continent l_Continent = d_Map.getD_Continents().get(l_Continent_Id - 1);
             int l_Country_Id = Integer.parseInt(l_Parts[0]);
             String l_CountryName = l_Parts[1];
             int l_ContinentId = Integer.parseInt(l_Parts[2]);

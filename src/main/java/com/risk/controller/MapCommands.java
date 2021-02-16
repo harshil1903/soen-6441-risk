@@ -1,8 +1,8 @@
 package com.risk.controller;
 
-import com.risk.maputils.EditMap;
-import com.risk.maputils.ShowMap;
+import com.risk.maputils.*;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,7 +31,8 @@ public class MapCommands {
 
 
         //Call MAP READER Function by passing filename.
-        new EditMap(d_Map);
+        //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
+        new EditMap().EditMap();
 
         //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);
         return true;
@@ -51,9 +52,9 @@ public class MapCommands {
             return;
         }
 
-
+        File l_File = new File("../soen-6441-risk/src/main/resources/"+p_ArgumentTokens.get(0)+".map");
         //Call MAP Writer Function by passing filename.
-
+        new MapWriter().writeMapFile(d_Map,l_File);
 
         //System.out.println("Reached Save Map Command. Argument List : " + p_ArgumentTokens);
     }
@@ -73,6 +74,14 @@ public class MapCommands {
 
 
         //Call MAP Validator Function to validate the map
+        try
+        {
+            MapValidator.validateMap(d_Map);
+        }
+        catch (Exception e)
+        {
+            System.out.println("Map Validation Failed");
+        }
 
 
         //System.out.println("Reached Validate Map Command. Argument List : " + p_ArgumentTokens);
@@ -92,7 +101,7 @@ public class MapCommands {
 
 
         //Call MAP Display method.
-        //ShowMap.displayEditorMap();
+        ShowMap.displayEditorMap(d_Map);
 
         //System.out.println("Reached Show Map Command. Argument List : " + p_ArgumentTokens);
     }
@@ -121,7 +130,7 @@ public class MapCommands {
 
 
                         //CALL ADD CONTINENT FUNCTION
-
+                        MapOperations.addContinent(d_Map, l_ContinentID, l_ContinentValue );
 
 
                     }
@@ -142,6 +151,7 @@ public class MapCommands {
 
 
                         //CALL REMOVE CONTINENT FUNCTION
+                        MapOperations.removeContinent(d_Map, l_ContinentID);
 
 
 
@@ -187,6 +197,7 @@ public class MapCommands {
 
 
                     //CALL ADD COUNTRY FUNCTION
+                    MapOperations.addCountry(d_Map, l_CountryID, l_ContinentID);
 
 
 
@@ -208,6 +219,7 @@ public class MapCommands {
 
 
                     //CALL REMOVE COUNTRY FUNCTION
+                    MapOperations.removeCountry(d_Map, l_CountryID);
 
 
 
@@ -252,6 +264,7 @@ public class MapCommands {
 
 
                     //CALL ADD NEIGHBOR COUNTRY FUNCTION
+                    MapOperations.addNeighborCountry(d_Map, l_NeighborCountryID, l_CountryID);
 
 
 
@@ -275,6 +288,7 @@ public class MapCommands {
 
 
                     //CALL REMOVE NEIGHBOR COUNTRY FUNCTION
+                    MapOperations.removeNeighborCountry(d_Map, l_NeighborCountryID, l_CountryID);
 
 
 

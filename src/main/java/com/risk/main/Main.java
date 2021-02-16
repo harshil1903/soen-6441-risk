@@ -27,7 +27,6 @@ public class Main {
     {
         System.out.println("Welcome to WARZONE");
         System.out.println("GAME BEGINS");
-
         runGame();
     }
 

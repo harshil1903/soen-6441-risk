@@ -15,8 +15,8 @@ import java.util.Observable;
  */
 public class Map extends Observable {
 
-    private HashMap<String, String> d_MapData;
-    private List<Continent> d_Continents;
+    public HashMap<String, String> d_MapData;
+    public List<Continent> d_Continents;
 
     /**
      * Default Constructor
