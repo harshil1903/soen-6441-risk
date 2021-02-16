@@ -1,8 +1,7 @@
 package com.risk.main;
 
 
-import com.risk.controller.CommandParser;
-import com.risk.exception.InvalidCommand;
+import com.risk.controller.MapCommandParser;
 import com.risk.models.Map;
 import com.risk.models.Player;
 
@@ -72,12 +71,12 @@ public class Main {
 
             if(l_MapCommands.contains(l_Action))
             {
-                CommandParser.mapCommandParser(l_Action,l_Arguments);
+                MapCommandParser.mapCommandParser(l_Action,l_Arguments);
             }
             else if(l_GameCommands.contains(l_Action))
             {
                 //Call GAME ENGINE to Take over and initiate Game. Dont return here.
-                CommandParser.gameCommandParser(l_Action,l_Arguments);
+                GameEngine.gameCommandParser(l_Action,l_Arguments);
 
             }
             else
