@@ -1,8 +1,14 @@
 package com.risk.models;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.risk.controller.CommandParser;
+import com.risk.maputils.MapOperations;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
 
@@ -204,12 +210,49 @@ public class Player {
 
     public void issue_order()
     {
+        Scanner l_Scanner = new Scanner(System.in);
+        String l_Command;
+
+        System.out.println("Enter command: ");
+        l_Command = l_Scanner.nextLine();
+
+        String l_Action=l_Command.split(" ")[0];
+        String l_Arguments =l_Command.substring(l_Action.length());
+
+        List<String> l_OrderCommands = Arrays.asList("deploy");
+
+        String[] l_ArgumentTokens = l_Arguments.split(" ");
+        List<String> l_ArgumentList = new ArrayList<>(Arrays.asList(l_ArgumentTokens.clone()));
+
+        if(l_ArgumentList.stream().count() != 1)
+        {
+            System.out.println("Wrong Number of Arguments provided. editmap command has only one argument.");
+        }
+
+        int l_countryId;
+        int l_numberOfArmies;
+        Orders orders=new Orders();
+
+        for(int i = 0; i <l_ArgumentList.size() ; i++){
+            try
+            {
+                l_countryId = Integer.parseInt(l_ArgumentList.get(++i));
+                l_numberOfArmies =Integer.parseInt(l_ArgumentList.get(++i));
+                System.out.println("Continent ID: " + l_countryId + " Control Value: " + l_numberOfArmies);
+                orders.setD_countryId(l_countryId);
+                orders.setD_numberOfArmies(l_numberOfArmies);
+            }
+            catch (Exception e)
+            {
+                System.out.println("Wrong number of Arguments provided.deploy option has 2 arguments");
+                return;
+            }
+        }
 
     }
     public void next_order()
     {
-        Orders p_order=new Orders();
-        p_order.execute();
+
     }
 
 
