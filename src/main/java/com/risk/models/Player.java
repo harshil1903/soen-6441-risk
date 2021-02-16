@@ -15,7 +15,10 @@ public class Player {
     private int d_PlayerID;
     private String d_PlayerName;
     private int d_Armies;
+    private Player d_currentPlayer;
     private List<Country> d_AssignedCountries;
+    private List<Orders> d_OrderList;
+    private List<Player> d_PlayerList;
 
     /**
      * Instantiates a new Player.
@@ -28,6 +31,8 @@ public class Player {
         d_PlayerID = p_PlayerID;
         d_PlayerName = p_PlayerName;
         d_AssignedCountries = new ArrayList<Country>();
+        d_OrderList=new ArrayList<Orders>();
+        d_PlayerList=new ArrayList<Player>();
     }
 
     /**
@@ -102,6 +107,39 @@ public class Player {
         d_AssignedCountries = p_AssignedCountries;
     }
 
+    /**
+     * Gets a list of orders given by the player.
+     *
+     * @return list of orders
+     */
+    public List<Orders> getD_OrderList(){return d_OrderList;}
+
+    /**
+     * Sets a list of orders given by the player.
+     * @param p_orderList list of orders
+     * @return list of orders
+     */
+    public void setD_OrderList(List<Orders> p_orderList){d_OrderList=p_orderList;}
+
+    /**
+     * Gets a list of  player.
+     *
+     * @return list of player
+     */
+    public List<Player> getD_PlayerList(){return d_PlayerList;}
+
+    /**
+     * Sets a list of player.
+     * @param p_playerList list of players
+     * @return list of players
+     */
+    public void setD_PlayerList(List<Player> p_playerList){d_PlayerList=p_playerList;}
+
+    public Player getD_currentPlayer(){return d_currentPlayer;}
+
+    public void setD_currentPlayer(Player p_currentPlayer){d_currentPlayer=p_currentPlayer;}
+
+
 
     /**
      * Gets player object from player id.
@@ -162,6 +200,16 @@ public class Player {
         return d_AssignedCountries.contains(l_Country);
     }
 
+    public void issue_order()
+    {
+
+    }
+    public void next_order()
+    {
+        Orders p_order=new Orders();
+        p_order.execute();
+    }
+
 
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
@@ -180,5 +228,4 @@ public class Player {
         Player l_Player = (Player) p_Object;
         return l_Player.getD_PlayerName().equalsIgnoreCase(d_PlayerName);
     }
-
 }

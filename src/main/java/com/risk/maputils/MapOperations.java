@@ -123,7 +123,6 @@ public class MapOperations {
             for (Country l_country : l_continent.getD_Countries()) {
                 if (l_country.getD_CountryID() == p_CountryID) {
                     Country l_tempCountry = l_country.getCountryFromCountryID(p_NeighborID);
-                    //Country l_adjCountry=l_country.getCountryFromCountryID(p_CountryID);
                     l_country.addCountryToAdjacentCountries(l_tempCountry);
                     l_tempCountry.addCountryToAdjacentCountries(l_country);
                     System.out.println("Neighbor Country Added Successfully");
