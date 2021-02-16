@@ -25,13 +25,12 @@ public class Player {
     /**
      * Instantiates a new Player.
      *
-     * @param p_PlayerID   Unique ID of the player
      * @param p_PlayerName Name of the player
      */
-    public Player(int p_PlayerID, String p_PlayerName) {
+    public Player(String p_PlayerName) {
         super();
-        d_PlayerID = p_PlayerID;
         d_PlayerName = p_PlayerName;
+        d_Armies = 0;
         d_AssignedCountries = new ArrayList<Country>();
         d_OrderList=new ArrayList<Orders>();
         d_PlayerList=new ArrayList<Player>();

@@ -61,8 +61,8 @@ public class EditMap {
             String[] l_Parts = l_Line.split(" ");
             String l_ContinentName = l_Parts[0];
             int l_ControlValue = Integer.parseInt(l_Parts[1]);
-            d_Map.addContinentToContinentList(new Continent(l_ContinentName, l_ControlValue));
-            //addContinent(d_Map, l_Continent_Id, l_ControlValue);
+            Continent l_Continent = new Continent(l_Continent_Id, l_ContinentName, l_ControlValue);
+            d_Map.addContinentToContinentList(l_Continent);
             l_Continent_Id++;
         }
     }
@@ -95,17 +95,14 @@ public class EditMap {
             if (l_Line.equals("")) break;
             String[] l_Parts = l_Line.split(" ");
             int l_Continent_Id = Integer.parseInt(l_Parts[2]);
-
-            Continent l_Continent = d_Map.getD_Continents().get(l_Continent_Id - 1);
+            Continent l_Continent = d_Map.getContinentFromContinentList(l_Continent_Id);
             int l_Country_Id = Integer.parseInt(l_Parts[0]);
             String l_CountryName = l_Parts[1];
             int l_ContinentId = Integer.parseInt(l_Parts[2]);
-
-            l_Continent.addCountryToCountryList(new Country(l_Country_Id, l_CountryName, l_ContinentId));
-            //addCountry(d_Map, l_Country_Id, l_Continent_Id);
+            Country l_Country = new Country(l_Country_Id, l_CountryName, l_ContinentId);
+            l_Continent.addCountryToCountryList(l_Country);
         }
     }
-
 
     /**
      * This Method reads Adjacent Countries to a country and it to Adjacency countries list.
@@ -149,8 +146,6 @@ public class EditMap {
                     getAdjacentCountries(MapReader);
                 }
             }
-
-
         } catch (FileNotFoundException | InvalidMapException e) {
             e.printStackTrace();
         }
@@ -173,7 +168,6 @@ public class EditMap {
         } else {
             CreateMap();
         }
-
         return d_Map;
     }
 }

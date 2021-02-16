@@ -5,14 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * The CommandParser class is used to determine whether command is a Map Command or Game Command
+ * The MapCommandParser class is used to determine whether command is a Map Command or Game Command
  * and call the necessary actions according to command type.
  * @author Harshil
  */
-public class CommandParser {
+public class MapCommandParser {
 
     public static boolean d_MapLoaded = false;
-    public static boolean d_GameLoaded = false;
 
     /**
      * Parses map related commands and calls the appropriate MapCommand method.
@@ -95,18 +94,5 @@ public class CommandParser {
 
     }
 
-    /**
-     * Parses GAME related commands and calls the appropriate Game Command method.
-     *
-     * @param p_Action    command name
-     * @param p_Arguments command options/arguments (if any)
-     */
-    public static void gameCommandParser(String p_Action, String p_Arguments)
-    {
 
-
-        //Refactor this method to Game Engine
-
-
-    }
 }
