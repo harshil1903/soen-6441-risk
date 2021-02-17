@@ -2,6 +2,7 @@ package com.risk.main;
 
 import com.risk.controller.GameCommands;
 import com.risk.controller.MapCommands;
+import com.risk.models.Orders;
 import com.risk.models.Player;
 
 import java.util.ArrayList;
@@ -58,6 +59,7 @@ public class GameEngine {
                     if(l_Player.getD_Armies() != 0)
                     {
                         System.out.println("Player " + l_Player.getD_PlayerName() + "'s turn to issue order");
+                        l_Player.issue_order();
                         //l_Player.issue_order();
                     }
                 }
@@ -74,11 +76,13 @@ public class GameEngine {
             {
                 for (Player l_Player : d_PlayerList)
                 {
+                    Orders l_Order = l_Player.next_order();
                     //l_Order = l_Player.nextOrder();
                     //if(l_Order != null)
-                    if(l_Player.getD_Armies() != 0)
+                    if(l_Order != null)
                     {
                         //Order.execute()
+                        l_Order.execute();
                     }
                 }
             }
@@ -115,7 +119,13 @@ public class GameEngine {
     {
         for (Player l_Player : d_PlayerList)
         {
+            int l_CountriesOwned = l_Player.getD_AssignedCountries().size();
 
+            int l_ReinforcementCount;
+
+            l_ReinforcementCount = Math.max((l_CountriesOwned/3) , 3);
+
+            l_Player.setD_Armies(l_ReinforcementCount);
         }
     }
 
