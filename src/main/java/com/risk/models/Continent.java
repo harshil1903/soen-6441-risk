@@ -168,6 +168,26 @@ public class Continent {
 
     }
 
+    /**
+     * Gets continent object from continent id.
+     *
+     * @param p_ContinentName continent id
+     * @return the continent object
+     */
+    public Continent getContinentFromContinentName(String p_ContinentName)
+    {
+
+        for(Continent l_Continent : d_Map.getD_Continents())
+        {
+            if(l_Continent.getD_ContinentName().equals(p_ContinentName))
+            {
+                return l_Continent;
+            }
+        }
+        return null;
+
+    }
+
 
 
     /**
@@ -183,11 +203,11 @@ public class Continent {
     /**
      * Remove country from country list.
      *
-     * @param p_CountryID country to be removed
+     * @param p_CountryName country to be removed
      */
-    public void removeCountryFromCountryList(int p_CountryID) {
+    public void removeCountryFromCountryList(String p_CountryName) {
         //To be finished later
-        Country l_CountryToBeRemoved = new Country().getCountryFromCountryID(p_CountryID);
+        Country l_CountryToBeRemoved = new Country().getCountryFromCountryName(p_CountryName);
 
         d_Countries.remove(l_CountryToBeRemoved);
         //d_Countries.remove(p_CountryID);
@@ -196,12 +216,12 @@ public class Continent {
     /**
      * To check if country present in country list of the continent or not.
      *
-     * @param p_CountryID country to be checked
+     * @param p_CountryName country to be checked
      * @return whether country is present in the country list or not
      */
-    public boolean isCountryPresentInCountryList(int p_CountryID) {
+    public boolean isCountryPresentInCountryList(String p_CountryName) {
         //To be finished later
-        Country l_Country = new Country().getCountryFromCountryID(p_CountryID);
+        Country l_Country = new Country().getCountryFromCountryName(p_CountryName);
 
         return d_Countries.contains(l_Country);
     }

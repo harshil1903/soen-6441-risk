@@ -114,7 +114,7 @@ public class MapCommands {
     public static void editContinentCommand(List<String> p_ArgumentTokens)
     {
 
-            int l_ContinentID;
+            String l_ContinentName;
             int l_ContinentValue;
 
             for(int i = 0; i < p_ArgumentTokens.size() ; i++)
@@ -122,15 +122,16 @@ public class MapCommands {
                 if(p_ArgumentTokens.get(i).equals("-add"))
                 {
                     try
+
                     {
-                        l_ContinentID = Integer.parseInt(p_ArgumentTokens.get(++i));
+                        l_ContinentName = p_ArgumentTokens.get(++i);
                         l_ContinentValue =Integer.parseInt(p_ArgumentTokens.get(++i));
-                        System.out.println("Continent ID: " + l_ContinentID + " Control Value: " + l_ContinentValue);
+                        System.out.println("Continent ID: " + l_ContinentName + " Control Value: " + l_ContinentValue);
 
 
 
                         //CALL ADD CONTINENT FUNCTION
-                        MapOperations.addContinent(d_Map, l_ContinentID, l_ContinentValue );
+                        MapOperations.addContinent(d_Map, l_ContinentName, l_ContinentValue );
 
 
                     }
@@ -145,13 +146,13 @@ public class MapCommands {
                 {
                     try
                     {
-                        l_ContinentID = Integer.parseInt(p_ArgumentTokens.get(++i));
-                        System.out.println("Continent ID: " + l_ContinentID);
+                        l_ContinentName = p_ArgumentTokens.get(++i);
+                        System.out.println("Continent ID: " + l_ContinentName);
 
 
 
                         //CALL REMOVE CONTINENT FUNCTION
-                        MapOperations.removeContinent(d_Map, l_ContinentID);
+                        MapOperations.removeContinent(d_Map, l_ContinentName);
 
 
 
@@ -181,8 +182,8 @@ public class MapCommands {
     public static void editCountryCommand(List<String> p_ArgumentTokens)
     {
 
-        int l_CountryID;
-        int l_ContinentID;
+        String l_CountryName;
+        String l_ContinentName;
 
         for(int i = 0; i < p_ArgumentTokens.size() ; i++)
         {
@@ -190,15 +191,15 @@ public class MapCommands {
             {
                 try
                 {
-                    l_CountryID =Integer.parseInt(p_ArgumentTokens.get(++i));
-                    l_ContinentID = Integer.parseInt(p_ArgumentTokens.get(++i));
+                    l_CountryName =p_ArgumentTokens.get(++i);
+                    l_ContinentName = p_ArgumentTokens.get(++i);
 
-                    System.out.println("Country ID: " + l_CountryID + " Continent ID: " + l_ContinentID);
+                    System.out.println("Country ID: " + l_CountryName + " Continent ID: " + l_ContinentName);
 
 
 
                     //CALL ADD COUNTRY FUNCTION
-                    MapOperations.addCountry(d_Map, l_CountryID, l_ContinentID);
+                    MapOperations.addCountry(d_Map, l_CountryName, l_ContinentName);
 
 
 
@@ -214,13 +215,13 @@ public class MapCommands {
             {
                 try
                 {
-                    l_CountryID = Integer.parseInt(p_ArgumentTokens.get(++i));
-                    System.out.println("Country ID: " + l_CountryID);
+                    l_CountryName = p_ArgumentTokens.get(++i);
+                    System.out.println("Country ID: " + l_CountryName);
 
 
 
                     //CALL REMOVE COUNTRY FUNCTION
-                    MapOperations.removeCountry(d_Map, l_CountryID);
+                    MapOperations.removeCountry(d_Map, l_CountryName);
 
 
 
@@ -248,8 +249,8 @@ public class MapCommands {
     public static void editNeighborCommand(List<String> p_ArgumentTokens)
     {
 
-        int l_CountryID;
-        int l_NeighborCountryID;
+        String l_CountryName;
+        String l_NeighborCountryName;
 
         for(int i = 0; i < p_ArgumentTokens.size() ; i++)
         {
@@ -257,15 +258,15 @@ public class MapCommands {
             {
                 try
                 {
-                    l_CountryID =Integer.parseInt(p_ArgumentTokens.get(++i));
-                    l_NeighborCountryID = Integer.parseInt(p_ArgumentTokens.get(++i));
+                    l_CountryName = p_ArgumentTokens.get(++i);
+                    l_NeighborCountryName = p_ArgumentTokens.get(++i);
 
-                    System.out.println("Country ID: " + l_CountryID + " Neighbor Country ID: " + l_NeighborCountryID);
+                    System.out.println("Country ID: " + l_CountryName + " Neighbor Country ID: " + l_NeighborCountryName);
 
 
 
                     //CALL ADD NEIGHBOR COUNTRY FUNCTION
-                    MapOperations.addNeighborCountry(d_Map, l_NeighborCountryID, l_CountryID);
+                    MapOperations.addNeighborCountry(d_Map, l_NeighborCountryName, l_CountryName);
 
 
 
@@ -281,15 +282,15 @@ public class MapCommands {
             {
                 try
                 {
-                    l_CountryID = Integer.parseInt(p_ArgumentTokens.get(++i));
-                    l_NeighborCountryID = Integer.parseInt(p_ArgumentTokens.get(++i));
+                    l_CountryName = p_ArgumentTokens.get(++i);
+                    l_NeighborCountryName = p_ArgumentTokens.get(++i);
 
-                    System.out.println("Country ID: " + l_CountryID + " Neighbor Country ID: " + l_NeighborCountryID);
+                    System.out.println("Country ID: " + l_CountryName + " Neighbor Country ID: " + l_NeighborCountryName);
 
 
 
                     //CALL REMOVE NEIGHBOR COUNTRY FUNCTION
-                    MapOperations.removeNeighborCountry(d_Map, l_NeighborCountryID, l_CountryID);
+                    MapOperations.removeNeighborCountry(d_Map, l_NeighborCountryName, l_CountryName);
 
 
 

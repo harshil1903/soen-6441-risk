@@ -77,8 +77,8 @@ public class MapValidator {
 
     /**
      * This method is used for validating that whether the continents are connected or not.
-     * @param p_continent is the continent to be validated.
-     * @map is the current map object.
+     * @param p_Continent is the continent to be validated.
+     * @param p_Map is the current map object.
      * @return will return true if the continent is connected in the map.
      */
 
@@ -104,8 +104,8 @@ public class MapValidator {
 
     /**
      *This method performs the traversal of the countries in BFS manner.
-     * @param country refers to the country that is to be travversed.
-     * @map refers to the map object.
+     * @param p_Country refers to the country that is to be travversed.
+     * @param p_Map refers to the map object.
      */
 
     public static void bfsTraversalCountry(Country p_Country,Map p_Map){
@@ -125,8 +125,8 @@ public class MapValidator {
 
     /**
      * This method is used to validate that the country is connected or not.
-     * @param country refers to the country that is to be verified.
-     * @map refers to the map object.
+     * @param p_Country refers to the country that is to be verified.
+     * @param p_Map  refers to the map object.
      * @throws InvalidMapException throws exception if the map is not valid.
      */
 
@@ -149,7 +149,7 @@ public class MapValidator {
 
     /**
      * This method is used to validate that whether the continents in the map form a graph or not.
-     * @param map refers to the map object
+     * @param p_Map refers to the map object
      * @return returns true if it the map is connected graph.
      */
 
@@ -178,8 +178,8 @@ public class MapValidator {
 
     /**
      * This method performs the traversal of continents in BFS manner.
-     * @param continent refers to the continent to be traversed.
-     * @map refers to the map object
+     * @param p_Continent refers to the continent to be traversed.
+     * @param p_Map  refers to the map object
      */
 
     public static void bfsTraversalContinent(Continent p_Continent,Map p_Map){
@@ -200,8 +200,8 @@ public class MapValidator {
 
     /**
      * This method is used to return the adjacent continents as a list for any particular continent.
-     * @param continent refers to the continent whose adjacent continents are to be found.
-     * @param map refers to the map object.
+     * @param p_Continent refers to the continent whose adjacent continents are to be found.
+     * @param p_Map refers to the map object.
      * @return will return the list of adjacent continents of the current continent.
      */
 
@@ -233,7 +233,7 @@ public class MapValidator {
 
     /**
      * This method is used to check whether the country is belonging to only one continent or not.
-     * @param map refers to map object.
+     * @param p_Map refers to map object.
      * @throws InvalidMapException throws InvalidMapException if map is not valid.
      */
     public static void validateCountryBelongsToOneContinent(Map p_Map) throws InvalidMapException{

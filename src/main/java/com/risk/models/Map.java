@@ -76,21 +76,21 @@ public class Map extends Observable {
 
     /**
      * This method returns continent from continents list.
-     * @param p_Continent_Id gives the id of the continent to be fetced.
+     * @param p_ContinentId gives the id of the continent to be fetced.
      * @return matching continent from the list.
      */
-    public Continent getContinentFromContinentList(int p_Continent_Id){
-        Continent l_Continet=d_Continents.get(p_Continent_Id-1);
-        return l_Continet;
+    public Continent getContinentFromContinentList(int p_ContinentId){
+        Continent l_Continent=d_Continents.get(p_ContinentId-1);
+        return l_Continent;
     }
     /**
      * Remove continent from continent list.
      *
-     * @param p_ContinentID continent
+     * @param p_ContinentName continent
      */
-    public void removeContinentFromContinentList(int p_ContinentID) {
+    public void removeContinentFromContinentList(String p_ContinentName) {
         //To be finished later
-        Continent l_ContinentToBeRemoved = new Continent().getContinentFromContinentID(p_ContinentID);
+        Continent l_ContinentToBeRemoved = new Continent().getContinentFromContinentName(p_ContinentName);
 
         System.out.println("\n Continent Remove Info  " + l_ContinentToBeRemoved.getD_ContinentName() + " " + l_ContinentToBeRemoved.getD_ContinentID() );
 
@@ -101,12 +101,12 @@ public class Map extends Observable {
     /**
      * TO check if continent present in continent list
      *
-     * @param p_ContinentID continent
+     * @param p_ContinentName continent
      * @return whether Continent is present in Map or not
      */
-    public boolean isContinentPresentInContinentList(int p_ContinentID) {
+    public boolean isContinentPresentInContinentList(String p_ContinentName) {
         //To be finished later
-        Continent l_Continent = new Continent().getContinentFromContinentID(p_ContinentID);
+        Continent l_Continent = new Continent().getContinentFromContinentName(p_ContinentName);
 
         return d_Continents.contains(l_Continent);
     }

@@ -197,6 +197,12 @@ public class GameEngine {
     }
 
 
+    /**
+     * Scan and parse Game related Commands Only
+     *
+     * @param p_Action    command name
+     * @param p_Arguments command options/arguments (if any)
+     */
     public static void checkNextGameCommands(String p_Action, String p_Arguments)
     {
 

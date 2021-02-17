@@ -12,6 +12,7 @@ import static com.risk.main.Main.d_Map;
 public class Country {
     private int d_CountryID;
     private int d_ContinentID;
+    private String d_ContinentName;
     private String d_CountryName;
     private Continent d_BelongToContinent;
     private Player d_Player;
@@ -93,6 +94,24 @@ public class Country {
      */
     public void setD_ContinentID(int p_ContinentID) {
         d_ContinentID = p_ContinentID;
+    }
+
+    /**
+     * Gets continent name.
+     *
+     * @return continent name
+     */
+    public String getD_ContinentName() {
+        return d_ContinentName;
+    }
+
+    /**
+     * Sets continent name.
+     *
+     * @param d_ContinentName continent name
+     */
+    public void setD_ContinentName(String d_ContinentName) {
+        this.d_ContinentName = d_ContinentName;
     }
 
     /**
@@ -227,6 +246,28 @@ public class Country {
     }
 
 
+    /**
+     * Gets country object from country Name.
+     *
+     * @param p_CountryName country id
+     * @return the country object
+     */
+    public Country getCountryFromCountryName(String p_CountryName)
+    {
+        for(Continent l_Continent : d_Map.getD_Continents())
+        {
+            for(Country l_Country : l_Continent.getD_Countries())
+            {
+                if (l_Country.getD_CountryName().equals(p_CountryName))
+                {
+                    return l_Country;
+                }
+            }
+        }
+        return null;
+
+    }
+
 
 
     /**
@@ -242,25 +283,25 @@ public class Country {
     /**
      * Remove country from adjacent countries list.
      *
-     * @param p_CountryID country to be removed
+     * @param p_CountryName country to be removed
      */
-    public void removeCountryFromAdjacentCountries(int p_CountryID) {
+    public void removeCountryFromAdjacentCountries(String p_CountryName) {
         //To be finished later
-        Country l_CountryToBeRemoved = new Country().getCountryFromCountryID(p_CountryID);
+        Country l_CountryToBeRemoved = new Country().getCountryFromCountryName(p_CountryName);
 
         d_AdjacentCountries.remove(l_CountryToBeRemoved);
-        //d_AdjacentCountries.remove(p_CountryID);
+        //d_AdjacentCountries.remove(p_CountryName);
     }
 
     /**
      * To check if country present in adjacent countries list.
      *
-     * @param p_CountryID country to checked for presence
+     * @param p_CountryName country to checked for presence
      * @return whether country is present in the adjacent country list or not
      */
-    public boolean isCountryPresentInAdjacentCountries(int p_CountryID) {
-        //return d_AdjacentCountries.contains(p_CountryID);
-        Country l_Country = new Country().getCountryFromCountryID(p_CountryID);
+    public boolean isCountryPresentInAdjacentCountries(String p_CountryName) {
+        //return d_AdjacentCountries.contains(p_CountryName);
+        Country l_Country = new Country().getCountryFromCountryName(p_CountryName);
 
         return d_AdjacentCountries.contains(l_Country);
     }
