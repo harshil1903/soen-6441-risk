@@ -8,6 +8,7 @@ import com.risk.models.Player;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
@@ -193,6 +194,30 @@ public class GameEngine {
             System.out.println("No Map is loaded yet, use loadmap command to load map");
         }
 
+        checkNextGameCommands();
+
+    }
+
+
+    public static void checkNextGameCommands()
+    {
+        Scanner l_Scanner = new Scanner(System.in);
+        String l_Command;
+
+        System.out.println("Enter command: ");
+        l_Command = l_Scanner.nextLine();
+
+        while (!l_Command.equals("EXITGAME"))
+        {
+            String l_Action = l_Command.split(" ")[0];
+
+            String l_Arguments = l_Command.substring(l_Action.length());
+
+            gameCommandParser(l_Action,l_Arguments);
+
+            System.out.println("Enter command: ");
+            l_Command = l_Scanner.nextLine();
+        }
     }
 
 
