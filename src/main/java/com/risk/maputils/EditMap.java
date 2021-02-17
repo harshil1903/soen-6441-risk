@@ -1,19 +1,11 @@
 package com.risk.maputils;
-
 import com.risk.exception.InvalidMapException;
 import com.risk.models.Country;
 import com.risk.models.Map;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
-
 import com.risk.models.Continent;
-
-import static com.risk.maputils.MapOperations.*;
-import static com.risk.maputils.MapValidator.validateMap;
-
 /**
  * This class loads a map from an existing domination map file,
  * or if file doesn't exits creates a new map from scratch.
@@ -171,7 +163,6 @@ public class EditMap {
         String l_FileName="europe.map";
         File l_Map = new File(l_Path+l_FileName);
         if (l_Map != null) {
-            validateMap(d_Map);
             LoadMap(l_Map);
         } else {
             CreateMap();
