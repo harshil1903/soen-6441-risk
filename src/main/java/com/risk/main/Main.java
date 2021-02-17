@@ -76,7 +76,7 @@ public class Main {
             else if(l_GameCommands.contains(l_Action))
             {
                 //Call GAME ENGINE to Take over and initiate Game. Dont return here.
-                GameEngine.gameCommandParser(l_Action,l_Arguments);
+                GameEngine.checkNextGameCommands(l_Action, l_Arguments);
 
             }
             else

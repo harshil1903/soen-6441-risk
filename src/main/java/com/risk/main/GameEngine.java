@@ -194,13 +194,14 @@ public class GameEngine {
             System.out.println("No Map is loaded yet, use loadmap command to load map");
         }
 
-        checkNextGameCommands();
-
     }
 
 
-    public static void checkNextGameCommands()
+    public static void checkNextGameCommands(String p_Action, String p_Arguments)
     {
+
+        gameCommandParser(p_Action, p_Arguments);
+
         Scanner l_Scanner = new Scanner(System.in);
         String l_Command;
 
