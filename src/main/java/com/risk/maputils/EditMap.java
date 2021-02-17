@@ -12,6 +12,7 @@ import java.util.Scanner;
 import com.risk.models.Continent;
 
 import static com.risk.maputils.MapOperations.*;
+import static com.risk.maputils.MapValidator.validateMap;
 
 /**
  * This class loads a map from an existing domination map file,
@@ -52,6 +53,7 @@ public class EditMap {
      * This Method reads Continents from map file and add it to d_Map variable.
      *
      * @param p_MapReader Scanner object that helps to read map file.
+     * @throws InvalidMapException if map is not valid.
      */
     public void getContinents(Scanner p_MapReader) throws InvalidMapException {
         int l_Continent_Id = 1;
@@ -88,6 +90,7 @@ public class EditMap {
      * This Method reads Countries from map file and add it to list in Continent.
      *
      * @param p_MapReader Scanner objects that helps to read the map.
+     * @throws InvalidMapException if map is not valid.
      */
     public static void getCountries(Scanner p_MapReader) throws InvalidMapException {
         while (p_MapReader.hasNextLine()) {
@@ -108,6 +111,7 @@ public class EditMap {
      * This Method reads Adjacent Countries to a country and it to Adjacency countries list.
      *
      * @param p_MapReader Scanner object that helps to read map.
+     * @throws InvalidMapException if map is not valid.
      */
     public static void getAdjacentCountries(Scanner p_MapReader) throws InvalidMapException {
         while (p_MapReader.hasNextLine()) {
@@ -120,7 +124,6 @@ public class EditMap {
                 int l_Neighbour_Id = Integer.parseInt(l_Parts[i]);
                 Country l_Neighbour = getCountry(l_Neighbour_Id);
                 l_Country.addCountryToAdjacentCountries(l_Neighbour);
-                //addNeighborCountry(d_Map, l_Neighbour_Id, l_Country_Id);
             }
         }
     }
@@ -160,10 +163,15 @@ public class EditMap {
 
     /**
      * This Method loads map and process it accordingly.
+     * @return the Map object with loaded values.
+     * @throws InvalidMapException if map is not valid.
      */
-    public Map EditMap() {
-        File l_Map = new File("../SOEN 6441/src/main/resources/europe.map");
+    public Map EditMap() throws InvalidMapException {
+        String l_Path="../SOEN 6441/src/main/resources/";
+        String l_FileName="europe.map";
+        File l_Map = new File(l_Path+l_FileName);
         if (l_Map != null) {
+            validateMap(d_Map);
             LoadMap(l_Map);
         } else {
             CreateMap();
