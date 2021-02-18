@@ -161,7 +161,12 @@ public class GameEngine {
         switch (p_Action)
         {
             case "loadmap":
-                d_GameLoaded = GameCommands.loadMapCommand(l_ArgumentList);
+                try{
+                    d_GameLoaded = GameCommands.loadMapCommand(l_ArgumentList);
+                }
+                catch (Exception e)
+                {}
+
                 break;
 
             case "gameplayer":

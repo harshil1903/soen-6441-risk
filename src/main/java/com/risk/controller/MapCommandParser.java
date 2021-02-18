@@ -33,7 +33,12 @@ public class MapCommandParser {
         switch (p_Action)
         {
             case "editmap":
-                d_MapLoaded = MapCommands.editMapCommand(l_ArgumentList);
+                try {
+                    d_MapLoaded = MapCommands.editMapCommand(l_ArgumentList);
+                }
+                catch (Exception e)
+                {}
+
                 break;
 
             case "editcontinent":

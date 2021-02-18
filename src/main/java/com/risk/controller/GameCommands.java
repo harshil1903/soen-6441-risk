@@ -1,5 +1,6 @@
 package com.risk.controller;
 
+import com.risk.exception.InvalidMapException;
 import com.risk.maputils.*;
 import com.risk.models.Continent;
 import com.risk.models.Player;
@@ -25,7 +26,7 @@ public class GameCommands
      * @param p_ArgumentTokens list of arguments provided with the command
      * @return true if map is successfully loaded into the Game
      */
-    public static boolean loadMapCommand(List<String> p_ArgumentTokens)
+    public static boolean loadMapCommand(List<String> p_ArgumentTokens) throws InvalidMapException
     {
         if(p_ArgumentTokens.stream().count() != 1)
         {
@@ -37,7 +38,15 @@ public class GameCommands
 
         //Remember to change return type of map validator to stop map from being loaded
         //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
-        d_Map = new EditMap().EditMap();
+
+        try {
+            d_Map = new EditMap().EditMap();
+        }
+        catch (Exception e)
+        {
+            throw new InvalidMapException(e.getMessage());
+        }
+
         MapCommands.validateMapCommand(l_ArgumentTokens);
 
         //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);

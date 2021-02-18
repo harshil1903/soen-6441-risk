@@ -1,5 +1,6 @@
 package com.risk.controller;
 
+import com.risk.exception.InvalidMapException;
 import com.risk.maputils.*;
 
 import java.io.File;
@@ -21,7 +22,7 @@ public class MapCommands {
      * @param p_ArgumentTokens list of arguments provided with the command
      * @return true if map is successfully loaded into the Game
      */
-    public static boolean editMapCommand(List<String> p_ArgumentTokens)
+    public static boolean editMapCommand(List<String> p_ArgumentTokens) throws InvalidMapException
     {
         if(p_ArgumentTokens.stream().count() != 1)
         {
@@ -32,8 +33,13 @@ public class MapCommands {
 
         //Call MAP READER Function by passing filename.
         //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
-        d_Map = new EditMap().EditMap();
-
+        try {
+            d_Map = new EditMap().EditMap();
+        }
+        catch (Exception e)
+        {
+            throw new InvalidMapException(e.getMessage());
+        }
         //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);
         return true;
     }
