@@ -45,9 +45,9 @@ public class Country {
     /**
      * Parameterized constructor which instantiates a new country
      *
-     * @param p_CountryID
-     * @param p_CountryName
-     * @param p_ContinentID
+     * @param p_CountryID       Country ID
+     * @param p_CountryName     Country Name
+     * @param p_ContinentID     Continent ID
      */
     public Country(int p_CountryID, String p_CountryName, int p_ContinentID) {
 

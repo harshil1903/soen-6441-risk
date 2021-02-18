@@ -25,6 +25,7 @@ public class GameCommands
      *
      * @param p_ArgumentTokens list of arguments provided with the command
      * @return true if map is successfully loaded into the Game
+     * @throws InvalidMapException Invalid Map Exception
      */
     public static boolean loadMapCommand(List<String> p_ArgumentTokens) throws InvalidMapException
     {

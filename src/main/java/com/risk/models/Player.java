@@ -118,7 +118,7 @@ public class Player {
     /**
      * Sets a list of orders given by the player.
      * @param p_orderList list of orders
-     * @return list of orders
+     *
      */
     public void setD_OrderList(List<Orders> p_orderList){d_OrderList=p_orderList;}
 
@@ -132,12 +132,21 @@ public class Player {
     /**
      * Sets a list of player.
      * @param p_playerList list of players
-     * @return list of players
      */
     public void setD_PlayerList(List<Player> p_playerList){d_PlayerList=p_playerList;}
 
+    /**
+     * Gets Current Player.
+     *
+     * @return Current Player
+     */
     public Player getD_currentPlayer(){return d_currentPlayer;}
 
+    /**
+     * Sets current player.
+     *
+     * @param p_currentPlayer Current Player to be set
+     */
     public void setD_currentPlayer(Player p_currentPlayer){d_currentPlayer=p_currentPlayer;}
 
 

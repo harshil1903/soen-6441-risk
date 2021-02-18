@@ -21,6 +21,7 @@ public class MapCommands {
      *
      * @param p_ArgumentTokens list of arguments provided with the command
      * @return true if map is successfully loaded into the Game
+     * @throws InvalidMapException Invalid Map Exception
      */
     public static boolean editMapCommand(List<String> p_ArgumentTokens) throws InvalidMapException
     {

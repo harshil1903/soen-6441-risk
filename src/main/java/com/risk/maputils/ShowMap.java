@@ -15,7 +15,7 @@ public class ShowMap {
     /**
      * This method is used to display the Contents of the map i.e the continents,
      * countries and the adjacent countries.
-     * @param p_Map
+     * @param p_Map Loaded MAP
      */
     public static void displayEditorMap(Map p_Map)
     {
