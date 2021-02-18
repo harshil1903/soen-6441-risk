@@ -5,8 +5,10 @@ import com.risk.maputils.EditMap;
 import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
+import com.risk.models.Player;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 
 /**
@@ -60,6 +62,31 @@ public class AssignCountries {
             p_Countries.remove(l_Num);
         }
         return l_Country;
+    }
+
+    /**
+     * assign random countries to players
+     *
+     * @param p_List      contains list of players.
+     * @param p_Countries contains list of countries.
+     * @param p_HashMap   contains no of countries left to assign to that player.
+     */
+    public static void assignRandomCountries(ArrayList<Player> p_List, ArrayList<Country> p_Countries,
+                                             HashMap<Integer, Integer> p_HashMap) {
+
+        for (int i = 0; i < p_List.size(); i++) {
+            int l_Frequency = p_HashMap.get(i);
+            while (l_Frequency != 0) {
+                Country l_RandomCountry = getRandomCountry(p_Countries);
+                p_List.get(i).addCountryToAssignedCountries(l_RandomCountry);
+                l_Frequency--;
+            }
+        }
+        while (p_Countries.size() != 0) {
+            Country l_RandomCountry = getRandomCountry(p_Countries);
+            int playerId = getRandomNumber(p_List.size());
+            p_List.get(playerId).addCountryToAssignedCountries(l_RandomCountry);
+        }
     }
 
     /**
