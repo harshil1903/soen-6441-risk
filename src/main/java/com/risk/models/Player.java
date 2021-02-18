@@ -210,6 +210,10 @@ public class Player {
         return d_AssignedCountries.contains(l_Country);
     }
 
+    /**
+     * To add an order to the list of orders held by the player
+     * Issue order phase of game
+     */
     public void issue_order()
     {
         Scanner l_Scanner = new Scanner(System.in);
@@ -256,6 +260,11 @@ public class Player {
         }
 
     }
+
+    /**
+     *  first order in the player’s list of orders, then removes it from the list.
+     * @return l_tempOrder object of the order class
+     */
     public Orders next_order()
     {
         Orders l_tempOrder=new Orders();
