@@ -90,12 +90,25 @@ public class AssignCountries {
     }
 
     /**
-     * assigns random countries to the players.
+     * assigns countries to the player.
+     * Method to be called and used in GameEngine.
      *
      * @throws InvalidMapException if Map is not present.
      */
     public static void assignCountries() throws InvalidMapException {
         Map d_Map = new EditMap().EditMap();
+        ArrayList<Country> l_Countries = fillCountryList(d_Map);
+        int l_NoOfPlayer = 5;
+        ArrayList<Player> l_PlayerList = new ArrayList<>(l_NoOfPlayer);
         ArrayList<Country> countries = fillCountryList(d_Map);
+        for (int i = 0; i < l_NoOfPlayer; i++) {
+            Player l_Player = new Player("Player" + (i + 1));
+            l_PlayerList.add(l_Player);
+        }
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < l_PlayerList.size(); i++) {
+            map.put(i, countries.size() / l_NoOfPlayer);
+        }
+        assignRandomCountries(l_PlayerList, countries, map);
     }
 }
