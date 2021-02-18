@@ -18,7 +18,7 @@ import java.util.List;
 public class MapWriter {
 
     /**
-     * Below method writes the map details to map file
+     * This method writes the map details to map file
      *
      * @param p_Map  object of the map which is being processed..
      * @param p_file file path
@@ -42,7 +42,7 @@ public class MapWriter {
     }
 
     /**
-     * Below method processes the map by calling three different methods and makes a string to be written in map file.
+     * This method processes the map by calling three different methods and makes a string to be written in map file.
      *
      * @param p_Map object of the map which is processed
      * @return String to be written in the map file
@@ -58,7 +58,7 @@ public class MapWriter {
     }
 
     /**
-     * Below method processes map attributes.
+     * This method processes map attributes.
      *
      * @param p_Map object of the map is being processed
      * @return a String that contains map properties.
@@ -77,7 +77,7 @@ public class MapWriter {
     }
 
     /**
-     * Below method processes the continents.
+     * This method processes the continents.
      *
      * @param p_Map object of the map which is being processed
      * @return a string that contains details of the continents that will eventually be written in the map file.
@@ -97,7 +97,7 @@ public class MapWriter {
     }
 
     /**
-     * Below method is for processing countries.
+     * This method is for processing countries.
      *
      * @param p_Map object of the map that is being processed
      * @return a string that contains details of countries that will ultimately be written in the map file.
