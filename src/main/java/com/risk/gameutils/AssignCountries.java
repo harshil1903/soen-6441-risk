@@ -46,6 +46,23 @@ public class AssignCountries {
     }
 
     /**
+     * gets a random country form the list and removes it.
+     *
+     * @param p_Countries holds the list of all countries yet to assigned.
+     * @return the randomly selected Country.
+     */
+    public static Country getRandomCountry(ArrayList<Country> p_Countries) {
+        Country l_Country = null;
+        if (p_Countries.size() != 0) {
+            int l_Num = getRandomNumber(p_Countries.size());
+            l_Country = p_Countries.get(l_Num);
+            int cid = l_Country.getD_CountryID();
+            p_Countries.remove(l_Num);
+        }
+        return l_Country;
+    }
+
+    /**
      * assigns random countries to the players.
      *
      * @throws InvalidMapException if Map is not present.
