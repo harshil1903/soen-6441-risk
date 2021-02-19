@@ -3,16 +3,23 @@ package com.risk.models;
 import java.util.List;
 
 public class Orders {
-    int d_countryId;
-    Country d_Countries;
+    String d_countryName;
+    Country d_countries;
     int d_numberOfArmies;
 
     /**
-     * Sets country Id
-     * @param d_countryId country Id
+     * constructor for the Orders class
      */
-    public void setD_countryId(int d_countryId) {
-        this.d_countryId = d_countryId;
+    public Orders(){
+        d_countries=new Country();
+    }
+
+    /**
+     * Sets country Id
+     * @param d_countryName country Id
+     */
+    public void setD_countryName(String d_countryName) {
+        this.d_countryName = d_countryName;
     }
 
     /**
@@ -27,8 +34,8 @@ public class Orders {
      * Get Id of country
      * @return  country ID
      */
-    public int getD_countryId() {
-        return d_countryId;
+    public String getD_countryName() {
+        return d_countryName;
     }
 
     /**
@@ -39,6 +46,7 @@ public class Orders {
         return d_numberOfArmies;
     }
     public void execute(){
+        d_countries.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies);
     }
 
 }

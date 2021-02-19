@@ -235,18 +235,18 @@ public class Player {
             System.out.println("Wrong Number of Arguments provided.");
         }
 
-        int l_countryId;
+        String l_countryName;
         int l_numberOfArmies;
         Orders orders=new Orders();
 
         for(int i = 0; i <l_ArgumentList.size() ; i++){
             try
             {
-                l_countryId = Integer.parseInt(l_ArgumentList.get(++i));
+                l_countryName = l_ArgumentList.get(++i);
                 l_numberOfArmies =Integer.parseInt(l_ArgumentList.get(++i));
-                System.out.println("Country: " + l_countryId + " Number of Armies: " + l_numberOfArmies);
+                System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies);
                 if(d_Armies>0) {
-                    orders.setD_countryId(l_countryId);
+                    orders.setD_countryName(l_countryName);
                     orders.setD_numberOfArmies(l_numberOfArmies);
                     d_Armies = d_Armies - l_numberOfArmies;
                     d_OrderList.add(orders);
