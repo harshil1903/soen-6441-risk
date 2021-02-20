@@ -37,6 +37,6 @@ public class GameEngineTest
         AssignCountries.assignCountries();
         GameEngine.assignReinforcementArmies();
 
-        assertEquals(3,l_Player.getD_Armies());
+        assertEquals(8,l_Player.getD_Armies());
     }
 }
