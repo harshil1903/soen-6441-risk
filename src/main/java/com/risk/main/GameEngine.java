@@ -2,6 +2,8 @@ package com.risk.main;
 
 import com.risk.controller.GameCommands;
 import com.risk.controller.MapCommands;
+import com.risk.exception.InvalidMapException;
+import com.risk.gameutils.AssignCountries;
 import com.risk.models.Orders;
 import com.risk.models.Player;
 
@@ -136,7 +138,11 @@ public class GameEngine {
     public static void assignCountries()
     {
         //Add a method to randomly assign countries to every player
-
+        try {
+            AssignCountries.assignCountries();
+        }
+        catch (Exception e){
+        }
         GamePlay();
 
     }
