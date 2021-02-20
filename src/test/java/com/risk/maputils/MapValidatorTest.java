@@ -1,5 +1,6 @@
 package com.risk.maputils;
 
+import static com.risk.main.Main.d_Map;
 import static org.junit.Assert.*;
 import java.io.File;
 import java.util.*;
@@ -34,10 +35,17 @@ public class MapValidatorTest {
      * This method runs before any test methods in the class, as these are static methods,they can work only upon static members.
      */
     @BeforeClass
-    public static void beforeClass(){
+    public static void beforeClass() throws InvalidMapException {
         S_Continent = new Continent();
         S_Country = new Country();
         S_Map = new Map();
+        try {
+            S_Map = new EditMap().editMap("europe");
+        }
+        catch (Exception e)
+        {
+            throw new InvalidMapException(e.getMessage());
+        }
 
     }
 
@@ -84,7 +92,7 @@ public class MapValidatorTest {
      */
     @Test (expected = InvalidMapException.class)
     public void validateMapForSubgraph() throws InvalidMapException{
-        assertFalse(MapValidator.isMapConnectedGraph(S_Map));
+        assertTrue(MapValidator.isMapConnectedGraph(S_Map));
     }
 
 
