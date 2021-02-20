@@ -1,21 +1,20 @@
 package com.risk.models;
 
-import java.util.List;
-
 public class Orders {
     String d_countryName;
-    Country d_countries;
+    Country d_Country;
     int d_numberOfArmies;
 
     /**
      * constructor for the Orders class
      */
-    public Orders(){
-        d_countries=new Country();
+    public Orders() {
+        d_Country = new Country();
     }
 
     /**
      * Sets country Id
+     *
      * @param d_countryName country Id
      */
     public void setD_countryName(String d_countryName) {
@@ -24,6 +23,7 @@ public class Orders {
 
     /**
      * Sets number of armies
+     *
      * @param d_numberOfArmies number of armies
      */
     public void setD_numberOfArmies(int d_numberOfArmies) {
@@ -32,7 +32,8 @@ public class Orders {
 
     /**
      * Get Id of country
-     * @return  country ID
+     *
+     * @return country ID
      */
     public String getD_countryName() {
         return d_countryName;
@@ -40,13 +41,19 @@ public class Orders {
 
     /**
      * Get number of armies
+     *
      * @return number of armies
      */
     public int getD_numberOfArmies() {
         return d_numberOfArmies;
     }
-    public void execute(){
-        d_countries.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies);
+
+    /**
+     * Execute phase of the game
+     * Set number of army in each player country
+     */
+    public void execute() {
+        d_Country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies);
     }
 
 }

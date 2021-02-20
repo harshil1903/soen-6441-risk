@@ -52,20 +52,6 @@ public class MapOperations {
 
     public static void removeContinent(Map p_Map, String p_ContinentName) throws InvalidMapException {
 
-        /*
-        for (Continent l_tempContinent : p_Map.getD_Continents()) {
-            for (Country l_tempCcountry : l_tempContinent.getD_Countries()) {
-                for (Country l_tempAdjcountry : l_tempCcountry.getD_AdjacentCountries()) {
-                    if (l_tempAdjcountry.getD_ContinentID() == p_ContinentName) {
-                        l_tempAdjcountry.getD_AdjacentCountries().remove(l_tempAdjcountry);
-                    }
-                }
-            }
-            if (p_Map.isContinentPresentInContinentList(p_ContinentName)) {
-                p_Map.removeContinentFromContinentList(p_ContinentName);
-            }
-        }
-        */
         for(Continent l_Continent : d_Map.getD_Continents())
         {
             if(l_Continent.getD_ContinentName().equals(p_ContinentName))
@@ -78,9 +64,6 @@ public class MapOperations {
             }
         }
         p_Map.removeContinentFromContinentList(p_ContinentName);
-
-        //d_Map.removeContinentFromContinentList(p_ContinentName);
-        //System.out.println(d_Map.getD_Continents());
     }
 
     /**
@@ -122,7 +105,8 @@ public class MapOperations {
             for (Country l_country : l_continent.getD_Countries()) {
                 for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
                     if (l_adjCountry.getD_CountryName().equals(p_CountryName)) {
-                        l_adjCountry.removeCountryFromAdjacentCountries(p_CountryName);
+                        l_country.removeCountryFromAdjacentCountries(p_CountryName);
+                        System.out.println("Country remove successfully");
                     }
                 }
             }
@@ -171,9 +155,9 @@ public class MapOperations {
                     Country l_tempCountry = l_country.getCountryFromCountryName(p_NeighborName);
                     l_country.removeCountryFromAdjacentCountries(p_NeighborName);
                     l_tempCountry.removeCountryFromAdjacentCountries(p_CountryName);
+                    System.out.println("Neighbor country remove successfully");
                 }
             }
         }
-
     }
 }
