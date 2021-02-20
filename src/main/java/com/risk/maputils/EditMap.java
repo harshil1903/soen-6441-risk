@@ -1,11 +1,15 @@
 package com.risk.maputils;
+
 import com.risk.exception.InvalidMapException;
 import com.risk.models.Country;
 import com.risk.models.Map;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
 import com.risk.models.Continent;
+
 /**
  * This class loads a map from an existing domination map file,
  * or if file doesn't exits creates a new map from scratch.
@@ -37,7 +41,7 @@ public class EditMap {
      *
      * @return the map
      */
-    private Map GetMap() {
+    private Map getMap() {
         return d_Map;
     }
 
@@ -47,7 +51,7 @@ public class EditMap {
      * @param p_MapReader Scanner object that helps to read map file.
      * @throws InvalidMapException if map is not valid.
      */
-    public void getContinents(Scanner p_MapReader) throws InvalidMapException {
+    public static void getContinents(Scanner p_MapReader) throws InvalidMapException {
         int l_Continent_Id = 1;
         while (p_MapReader.hasNextLine()) {
             String l_Line = p_MapReader.nextLine();
@@ -125,7 +129,7 @@ public class EditMap {
      *
      * @param p_Map Reads the map file.
      */
-    public void LoadMap(File p_Map) {
+    public static void loadMap(File p_Map) {
         Scanner MapReader = null;
         try {
             MapReader = new Scanner(p_Map);
@@ -141,32 +145,34 @@ public class EditMap {
                     getAdjacentCountries(MapReader);
                 }
             }
+            System.out.println("Loaded map successfully form existing domination file");
         } catch (FileNotFoundException | InvalidMapException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            createMap();
         }
+
     }
 
     /**
      * This Method Creates a new map if map is not present.
      */
-    public void CreateMap() {
+    public static void createMap() {
         d_Map = new Map();
+        System.out.println("Map file not presented will be created from scratch");
     }
 
     /**
      * This Method loads map and process it accordingly.
+     *
+     * @param p_FileName Filename to be loaded if already present or to be created if not.
      * @return the Map object with loaded values.
      * @throws InvalidMapException if map is not valid.
      */
-    public Map EditMap() throws InvalidMapException {
-        String l_Path="../SOEN 6441/src/main/resources/";
-        String l_FileName="europe.map";
-        File l_Map = new File(l_Path+l_FileName);
-        if (l_Map != null) {
-            LoadMap(l_Map);
-        } else {
-            CreateMap();
-        }
+    public static Map editMap(String p_FileName) throws InvalidMapException {
+        String l_Path = "src/main/resources/";
+        String l_FileName = p_FileName + ".map";
+        File l_Map = new File(l_Path + l_FileName);
+        loadMap(l_Map);
         return d_Map;
     }
 }

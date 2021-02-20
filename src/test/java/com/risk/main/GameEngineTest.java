@@ -21,7 +21,7 @@ public class GameEngineTest
     @Before
     public void beforeTest() throws InvalidMapException {
         try {
-            d_Map = new EditMap().EditMap();
+            d_Map = new EditMap().editMap("europe");
         }
         catch (Exception e)
         {
