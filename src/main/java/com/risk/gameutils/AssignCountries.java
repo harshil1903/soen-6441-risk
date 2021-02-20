@@ -1,7 +1,6 @@
 package com.risk.gameutils;
 
 import com.risk.exception.InvalidMapException;
-import com.risk.maputils.EditMap;
 import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
@@ -10,6 +9,9 @@ import com.risk.models.Player;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
+
+import static com.risk.main.Main.d_Map;
+import static com.risk.main.Main.d_PlayerList;
 
 /**
  * AssignCountires helps in assigning random countries to players.
@@ -96,19 +98,12 @@ public class AssignCountries {
      * @throws InvalidMapException if Map is not present.
      */
     public static void assignCountries() throws InvalidMapException {
-        Map d_Map = new EditMap().EditMap();
         ArrayList<Country> l_Countries = fillCountryList(d_Map);
-        int l_NoOfPlayer = 5;
-        ArrayList<Player> l_PlayerList = new ArrayList<>(l_NoOfPlayer);
-        ArrayList<Country> countries = fillCountryList(d_Map);
-        for (int i = 0; i < l_NoOfPlayer; i++) {
-            Player l_Player = new Player("Player" + (i + 1));
-            l_PlayerList.add(l_Player);
-        }
         HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < l_PlayerList.size(); i++) {
-            map.put(i, countries.size() / l_NoOfPlayer);
+        for (int i = 0; i < d_PlayerList.size(); i++) {
+            map.put(i, l_Countries.size() / d_PlayerList.size());
         }
-        assignRandomCountries(l_PlayerList, countries, map);
+        assignRandomCountries(d_PlayerList, l_Countries, map);
+        System.out.println("Assigned countries randomly to players");
     }
 }
