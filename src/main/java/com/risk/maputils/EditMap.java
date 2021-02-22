@@ -19,6 +19,9 @@ import static com.risk.main.Main.d_Map;
  */
 public class EditMap {
     // Object map that will be returned after processing.
+    /**
+     * Generates object of Map class to be used.
+     */
     public static Map d_Map = new Map();
 
     /**

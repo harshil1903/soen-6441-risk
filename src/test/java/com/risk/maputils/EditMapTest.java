@@ -5,6 +5,9 @@ import org.junit.*;
 
 import static org.junit.Assert.*;
 
+/**
+ * This is test class for EditMap
+ */
 public class EditMapTest {
 
     /**
