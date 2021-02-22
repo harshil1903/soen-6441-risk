@@ -241,41 +241,24 @@ public class Player {
             return;
         }
 
-        String l_countryName;
-        int l_numberOfArmies;
-        Orders orders=new Orders();
+        String l_CountryName;
+        int l_NumberOfArmies;
+        boolean l_DeploySuccess;
 
-        try
+
+        l_CountryName = l_ArgumentList.get(0);
+        l_NumberOfArmies =Integer.parseInt(l_ArgumentList.get(1));
+        l_DeploySuccess = deployOrder(l_CountryName, l_NumberOfArmies);
+
+        if(!l_DeploySuccess)
         {
-            l_countryName = l_ArgumentList.get(0);
-            l_numberOfArmies =Integer.parseInt(l_ArgumentList.get(1));
-
-            if(d_Armies>=l_numberOfArmies)
-            {
-                orders.setD_countryName(l_countryName);
-                orders.setD_numberOfArmies(l_numberOfArmies);
-                d_Armies = d_Armies - l_numberOfArmies;
-                d_OrderList.add(orders);
-                System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies + " successfully deployed");
-            }
-            else
-            {
-                System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
-                System.out.println("You currently have " + d_Armies + "number of reinforcement armies left.");
-            }
+            issue_order();
         }
-        catch (Exception e)
-        {
-            System.out.println("Wrong number of Arguments provided.deploy option has 2 arguments");
-            System.out.println(e.getMessage());
-            return;
-        }
-
 
     }
 
     /**
-     *  first order in the player’s list of orders, then removes it from the list.
+     *  First order in the player’s list of orders, then removes it from the list.
      * @return l_tempOrder object of the order class
      */
     public Orders next_order()
@@ -292,6 +275,41 @@ public class Player {
             }
 
         return l_tempOrder;
+    }
+
+    public boolean deployOrder(String l_CountryName, int l_NumberOfArmies)
+    {
+
+        Orders l_Orders=new Orders();
+        if(d_Armies>=l_NumberOfArmies)
+        {
+            l_Orders.setD_countryName(l_CountryName);
+            l_Orders.setD_numberOfArmies(l_NumberOfArmies);
+
+            ArrayList<String> l_CountriesOwnedList = new ArrayList<>();
+            for(Country l_Country : d_AssignedCountries)
+            {
+                l_CountriesOwnedList.add(l_Country.getD_CountryName());
+            }
+            if(!l_CountriesOwnedList.contains(l_CountryName))
+            {
+                System.out.println("You do not own this country. Try Again with a country name that has been assigned to you.");
+                return false;
+            }
+
+
+
+            d_Armies = d_Armies - l_NumberOfArmies;
+            d_OrderList.add(l_Orders);
+            System.out.println("Country: " + l_CountryName + " Number of Armies: " + l_NumberOfArmies + " successfully deployed");
+            return true;
+        }
+        else
+        {
+            System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
+            System.out.println("You currently have " + d_Armies + " number of reinforcement armies left.");
+            return false;
+        }
     }
 
 

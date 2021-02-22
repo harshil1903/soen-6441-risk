@@ -3,6 +3,7 @@ package com.risk.controller;
 import com.risk.exception.InvalidMapException;
 import com.risk.maputils.*;
 import com.risk.models.Continent;
+import com.risk.models.Map;
 import com.risk.models.Player;
 
 import java.io.File;
@@ -40,11 +41,18 @@ public class GameCommands
         //Remember to change return type of map validator to stop map from being loaded
         //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
 
+        //d_Map.setD_Continents(null);
+        //d_Map.setD_MapData(null);
+        //d_Map = new Map();
+
+        d_Map.getD_Continents().clear();
+
         try {
-            d_Map = new EditMap().editMap("europe");
+            d_Map = new EditMap().editMap(p_ArgumentTokens.get(0));
         }
         catch (Exception e)
         {
+            System.out.println(e.getMessage());
             throw new InvalidMapException(e.getMessage());
         }
 

@@ -42,10 +42,9 @@ public class GameEngine {
 
 
 
-
-
         //MAIN GAME LOOP
-        while (true)
+        boolean l_ContinueMainGameLoop = true;
+        while (l_ContinueMainGameLoop)
         {
             //REINFORCEMENT PHASE
             //Method to assign reinforcement armies to each player
@@ -87,6 +86,8 @@ public class GameEngine {
 
             //While(l_Order != null)
             int l_NoOrdersPlayerCount = 0;
+            Scanner l_Scanner = new Scanner(System.in);
+            String l_Choice;
             while(l_NoOrdersPlayerCount <= d_PlayerList.size())
             {
 
@@ -112,6 +113,16 @@ public class GameEngine {
 
             GameCommands.showMapCommand(new ArrayList<>());
 
+
+            System.out.print("Continue Main Game Loop? (y/n) : ");
+
+            System.out.println("\nEnter command: ");
+            l_Choice = l_Scanner.nextLine();
+
+            if(l_Choice.equals("n"))
+            {
+                l_ContinueMainGameLoop = false;
+            }
 
         }
 
