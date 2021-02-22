@@ -35,18 +35,10 @@ public class MapValidatorTest {
      * This method runs before any test methods in the class, as these are static methods,they can work only upon static members.
      */
     @BeforeClass
-    public static void beforeClass() throws InvalidMapException {
+    public static void beforeClass() {
         S_Continent = new Continent();
         S_Country = new Country();
         S_Map = new Map();
-        try {
-            S_Map = new EditMap().editMap("europe");
-        }
-        catch (Exception e)
-        {
-            throw new InvalidMapException(e.getMessage());
-        }
-
     }
 
 
@@ -54,7 +46,14 @@ public class MapValidatorTest {
      * This method is executed before every test method.
      */
     @Before
-    public void beforeTest(){
+    public void beforeTest() throws InvalidMapException{
+        try {
+            S_Map = new EditMap().editMap("europe");
+        }
+        catch (Exception e)
+        {
+            throw new InvalidMapException(e.getMessage());
+        }
         S_Continent.setD_ContinentName(d_continentName);
         S_Continent.setD_ContinentValue(d_controlValue);
         S_Country.setD_CountryName("Country No.2");
@@ -90,9 +89,10 @@ public class MapValidatorTest {
      * This method is used to test whether the continents in the map form subgraph or not
      * @throws InvalidMapException invalid map exception.
      */
-    @Test (expected = InvalidMapException.class)
+    @Test
     public void validateMapForSubgraph() throws InvalidMapException{
-        assertTrue(MapValidator.isMapConnectedGraph(S_Map));
+
+        assertEquals(true, !MapValidator.isMapConnectedGraph(S_Map));
     }
 
 
