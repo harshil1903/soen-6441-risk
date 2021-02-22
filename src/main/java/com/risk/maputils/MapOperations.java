@@ -95,13 +95,13 @@ public class MapOperations {
     /**
      * Remove continent to map with details such as ID and Value
      *
-     * @param p_map       current map object
+     * @param p_Map       current map object
      * @param p_CountryName ID of the continent
      * @throws InvalidMapException throws IO Exception if there is any error while doing operations on map
      */
 
-    public static void removeCountry(Map p_map, String p_CountryName) throws InvalidMapException {
-        for (Continent l_continent : p_map.getD_Continents()) {
+    public static void removeCountry(Map p_Map, String p_CountryName) throws InvalidMapException {
+        for (Continent l_continent : p_Map.getD_Continents()) {
             for (Country l_country : l_continent.getD_Countries()) {
                 for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
                     if (l_adjCountry.getD_CountryName().equals(p_CountryName)) {

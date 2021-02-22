@@ -50,6 +50,7 @@ public class GameEngine {
             //Method to assign reinforcement armies to each player
             assignReinforcementArmies();
 
+            //GameCommands.showMapCommand(new ArrayList<>());
 
             //ISSUE ORDERS PHASE
             //Scan for deploy command
@@ -143,6 +144,7 @@ public class GameEngine {
         }
         catch (Exception e){
         }
+        GameCommands.showMapCommand(new ArrayList<>());
         GamePlay();
 
     }
@@ -171,7 +173,9 @@ public class GameEngine {
                     d_GameLoaded = GameCommands.loadMapCommand(l_ArgumentList);
                 }
                 catch (Exception e)
-                {}
+                {
+                    System.out.println("Could not load the requested map.");
+                }
 
                 break;
 
@@ -194,7 +198,7 @@ public class GameEngine {
             case "showmap":
                 if(d_GameLoaded)
                 {
-                    MapCommands.showMapCommand(l_ArgumentList);
+                    GameCommands.showMapCommand(l_ArgumentList);
                     break;
                 }
                 break;

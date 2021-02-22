@@ -28,7 +28,7 @@ public class ShowMap {
             for (Country l_country : l_continent.getD_Countries())
             {
                 System.out.println("\t" + l_country.getD_CountryName());
-                System.out.println("\tAdjacent Countries : ");
+                System.out.print("\tAdjacent Countries : ");
                 for (Country l_adjCountry : l_country.getD_AdjacentCountries())
                 {
                     System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
@@ -49,9 +49,15 @@ public class ShowMap {
 
             for (Country l_country : l_continent.getD_Countries())
             {
-                System.out.println("\t" + l_country.getD_CountryName() + "\nOwned by : " + l_country.getD_Player() + "\nNumber of Armies " + l_country.getD_NumberOfArmies());
-                System.out.println("\tAdjacent Countries : ");
+                try {
+                    System.out.println("\t" + l_country.getD_CountryName() + " Owned by : " + l_country.getD_Player().getD_PlayerName() + " Number of Armies " + l_country.getD_NumberOfArmies());
+                }
+                catch (Exception e)
+                {
+                    System.out.println("\t" + l_country.getD_CountryName() + " Owned by : " + l_country.getD_Player() + " Number of Armies " + l_country.getD_NumberOfArmies());
 
+                }
+                System.out.print("\tAdjacent Countries : ");
                 for (Country l_adjCountry : l_country.getD_AdjacentCountries())
                 {
                     System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
