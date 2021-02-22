@@ -44,6 +44,8 @@ public class MapValidatorTest {
 
     /**
      * This method is executed before every test method.
+     *
+     * @throws InvalidMapException throws exception if Map Loading Fails
      */
     @Before
     public void beforeTest() throws InvalidMapException{
