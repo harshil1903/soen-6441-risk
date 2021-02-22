@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * The class MapWriter will write the data in map file when the user creates a map
+ *
  * @author Rishabh
  */
 
@@ -19,22 +20,22 @@ public class MapWriter {
     /**
      * This method writes the map details to map file
      *
-     * @param p_Map  object of the map which is being processed.
-     * @param p_file file path
+     * @param p_Map object of the map which is being processed.
+     * @param p_File object of file to store map data.
      */
 
-    public void writeMapFile(Map p_Map, File p_file) {
+    public static void writeMapFile(Map p_Map, File p_File) {
 
-        FileWriter fileWriter;
+        FileWriter l_FileWriter;
         try {
             if (p_Map == null) {
                 System.out.println("Map object is NULL! ");
             }
 
-            String l_content = parseMapAndReturnString(p_Map);
-            fileWriter = new FileWriter(p_file, false);
-            fileWriter.write(l_content);
-            fileWriter.close();
+            String l_Content = parseMapAndReturnString(p_Map);
+            l_FileWriter = new FileWriter(p_File, false);
+            l_FileWriter.write(l_Content);
+            l_FileWriter.close();
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
@@ -46,14 +47,13 @@ public class MapWriter {
      * @param p_Map object of the map which is processed
      * @return String to be written in the map file
      */
+    private static String parseMapAndReturnString(Map p_Map) {
 
-    private String parseMapAndReturnString(Map p_Map) {
-
-        StringBuilder l_content = new StringBuilder();
-        l_content = processMapAttribute(p_Map);
-        l_content.append(processContinent(p_Map));
-        l_content.append(processCountries(p_Map));
-        return l_content.toString();
+        StringBuilder l_Content = new StringBuilder();
+        l_Content.append(processContinent(p_Map));
+        l_Content.append(processCountries(p_Map));
+        l_Content.append(processAdjacentCountries(p_Map));
+        return l_Content.toString();
     }
 
     /**
@@ -61,18 +61,17 @@ public class MapWriter {
      *
      * @param p_Map object of the map is being processed
      * @return a String that contains map properties.
-     **/
+     */
+    private static StringBuilder processMapAttribute(Map p_Map) {
+        StringBuilder l_MapAttribute = new StringBuilder();
+        l_MapAttribute.append("[Map]");
+        l_MapAttribute.append("\n");
 
-    private StringBuilder processMapAttribute(Map p_Map) {
-        StringBuilder l_mapAttribute = new StringBuilder();
-        l_mapAttribute.append("[Map]");
-        l_mapAttribute.append("\n");
-
-        for (java.util.Map.Entry<String, String> keymap : p_Map.getD_MapData().entrySet()) {
-            l_mapAttribute.append(keymap.getKey() + "=" + keymap.getValue());
-            l_mapAttribute.append("\n");
+        for (java.util.Map.Entry<String, String> l_KeyMap : p_Map.getD_MapData().entrySet()) {
+            l_MapAttribute.append(l_KeyMap.getKey() + "=" + l_KeyMap.getValue());
+            l_MapAttribute.append("\n");
         }
-        return l_mapAttribute;
+        return l_MapAttribute;
     }
 
     /**
@@ -80,19 +79,16 @@ public class MapWriter {
      *
      * @param p_Map object of the map which is being processed
      * @return a string that contains details of the continents that will eventually be written in the map file.
-     * great
      */
-
-    private StringBuilder processContinent(Map p_Map) {
-        StringBuilder l_continentData = new StringBuilder();
-        l_continentData.append("\n");
-        l_continentData.append("[continents]");
-        l_continentData.append("\n");
+    private static StringBuilder processContinent(Map p_Map) {
+        StringBuilder l_ContinentData = new StringBuilder();
+        l_ContinentData.append("[continents]");
+        l_ContinentData.append("\n");
         for (Continent l_continent : p_Map.getD_Continents()) {
-            l_continentData.append(l_continent.getD_ContinentName() + "=" + l_continent.getD_ContinentValue());
-            l_continentData.append("\n");
+            l_ContinentData.append(l_continent.getD_ContinentName() + " " + l_continent.getD_ContinentValue());
+            l_ContinentData.append("\n");
         }
-        return l_continentData;
+        return l_ContinentData;
     }
 
     /**
@@ -101,28 +97,45 @@ public class MapWriter {
      * @param p_Map object of the map that is being processed
      * @return a string that contains details of countries that will ultimately be written in the map file.
      */
-
-    private StringBuilder processCountries(Map p_Map) {
-        StringBuilder l_countryData = new StringBuilder();
-        l_countryData.append("\n");
-        l_countryData.append("[countries]");
-        l_countryData.append("\n");
+    private static StringBuilder processCountries(Map p_Map) {
+        StringBuilder l_CountryData = new StringBuilder();
+        l_CountryData.append("\n");
+        l_CountryData.append("[countries]");
+        l_CountryData.append("\n");
 
         for (Continent l_continent : p_Map.getD_Continents()) {
-            List<Country> countryList = l_continent.getD_Countries();
-            if (countryList != null) {
-                for (Country l_country : countryList) {
-                    l_countryData.append(l_country.getD_CountryID() + "," + l_country.getD_CountryName() + "," + l_country.getD_BelongToContinent().getD_ContinentName());
-                    for (Country l_adjacentCountries : l_country.getD_AdjacentCountries()) {
-                        l_countryData.append(",");
-                        l_countryData.append(l_adjacentCountries.getD_CountryName());
-                    }
-                    l_countryData.append("\n");
-                }
-                l_countryData.append("\n");
+            for (Country l_country : l_continent.getD_Countries()) {
+                l_CountryData.append(l_country.getD_CountryID() + " " + l_country.getD_CountryName() + " " + l_continent.getD_ContinentID());
+                l_CountryData.append("\n");
             }
-            l_countryData.append("\n");
         }
-        return l_countryData;
+        return l_CountryData;
+    }
+
+    /**
+     * This method is for processing adjacent countries.
+     *
+     * @param p_Map object of map that is being processed.
+     * @return a string that contains adjacent countries and that will be written in map file.
+     */
+    private static StringBuilder processAdjacentCountries(Map p_Map) {
+        StringBuilder l_CountryData = new StringBuilder();
+        l_CountryData.append("\n");
+        l_CountryData.append("[borders]");
+        l_CountryData.append("\n");
+        for (Continent l_Continent : p_Map.getD_Continents()) {
+            List<Country> l_CountryList = l_Continent.getD_Countries();
+            if (l_CountryList != null) {
+                for (Country l_country : l_CountryList) {
+                    l_CountryData.append(l_country.getD_CountryID());
+                    for (Country l_adjacentCountries : l_country.getD_AdjacentCountries()) {
+                        l_CountryData.append(" ");
+                        l_CountryData.append(l_adjacentCountries.getD_CountryID());
+                    }
+                    l_CountryData.append("\n");
+                }
+            }
+        }
+        return l_CountryData;
     }
 }
