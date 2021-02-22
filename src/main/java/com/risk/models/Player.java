@@ -219,7 +219,7 @@ public class Player {
         Scanner l_Scanner = new Scanner(System.in);
         String l_Command;
 
-        System.out.println("Enter command: ");
+        System.out.println("\nEnter command: ");
         l_Command = l_Scanner.nextLine();
 
         String l_Action=l_Command.split(" ")[0];
@@ -230,34 +230,47 @@ public class Player {
         String[] l_ArgumentTokens = l_Arguments.split(" ");
         List<String> l_ArgumentList = new ArrayList<>(Arrays.asList(l_ArgumentTokens.clone()));
 
+        if(!l_ArgumentList.isEmpty())
+        {
+            l_ArgumentList.remove(0);
+        }
+
         if(l_ArgumentList.stream().count() != 2)
         {
             System.out.println("Wrong Number of Arguments provided.");
+            return;
         }
 
         String l_countryName;
         int l_numberOfArmies;
         Orders orders=new Orders();
 
-        for(int i = 0; i <l_ArgumentList.size() ; i++){
-            try
+        try
+        {
+            l_countryName = l_ArgumentList.get(0);
+            l_numberOfArmies =Integer.parseInt(l_ArgumentList.get(1));
+
+            if(d_Armies>=l_numberOfArmies)
             {
-                l_countryName = l_ArgumentList.get(++i);
-                l_numberOfArmies =Integer.parseInt(l_ArgumentList.get(++i));
-                System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies);
-                if(d_Armies>0) {
-                    orders.setD_countryName(l_countryName);
-                    orders.setD_numberOfArmies(l_numberOfArmies);
-                    d_Armies = d_Armies - l_numberOfArmies;
-                    d_OrderList.add(orders);
-                }
+                orders.setD_countryName(l_countryName);
+                orders.setD_numberOfArmies(l_numberOfArmies);
+                d_Armies = d_Armies - l_numberOfArmies;
+                d_OrderList.add(orders);
+                System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies + " successfully deployed");
             }
-            catch (Exception e)
+            else
             {
-                System.out.println("Wrong number of Arguments provided.deploy option has 2 arguments");
-                return;
+                System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
+                System.out.println("You currently have " + d_Armies + "number of reinforcement armies left.");
             }
         }
+        catch (Exception e)
+        {
+            System.out.println("Wrong number of Arguments provided.deploy option has 2 arguments");
+            System.out.println(e.getMessage());
+            return;
+        }
+
 
     }
 
@@ -269,15 +282,15 @@ public class Player {
     {
         Orders l_tempOrder=new Orders();
         Orders orders=new Orders();
-        for(int i=0;i<d_OrderList.size();i++){
+
             if(d_OrderList.isEmpty()){
                 return null;
             }
             else{
-                l_tempOrder=d_OrderList.get(i);
-                d_OrderList.remove(d_OrderList.get(i));
+                l_tempOrder=d_OrderList.get(0);
+                d_OrderList.remove(d_OrderList.get(0));
             }
-        }
+
         return l_tempOrder;
     }
 

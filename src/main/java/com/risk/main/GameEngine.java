@@ -4,6 +4,7 @@ import com.risk.controller.GameCommands;
 import com.risk.controller.MapCommands;
 import com.risk.exception.InvalidMapException;
 import com.risk.gameutils.AssignCountries;
+import com.risk.models.Country;
 import com.risk.models.Orders;
 import com.risk.models.Player;
 
@@ -62,22 +63,33 @@ public class GameEngine {
                 {
                     if(l_Player.getD_Armies() != 0)
                     {
-                        System.out.println("Player " + l_Player.getD_PlayerName() + "'s turn to issue order");
+                        System.out.println("\n\nPlayer " + l_Player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
+                        System.out.println("You have " + l_Player.getD_Armies() + " number of reinforcement armies");
+                        System.out.println("You own the following Countries");
+                        for (Country l_country : l_Player.getD_AssignedCountries())
+                        {
+                            System.out.print("\t\t" + l_country.getD_CountryName()  + ", ");
+                        }
                         l_Player.issue_order();
                         //l_Player.issue_order();
                     }
+                    else
+                    {
+                        System.out.println("Player " + l_Player.getD_PlayerName() + "'s turn is skipped due to no reinforcement armies left");
+                    }
                 }
             }
-
+            System.out.println();
 
             //EXECUTE ORDERS PHASE
             //Call next_Order() for each player which returns Order Object
             //call Order.execute()
 
-
             //While(l_Order != null)
-            while(true)
+            int l_NoOrdersPlayerCount = 0;
+            while(l_NoOrdersPlayerCount <= d_PlayerList.size())
             {
+
                 for (Player l_Player : d_PlayerList)
                 {
                     Orders l_Order = l_Player.next_order();
@@ -87,10 +99,18 @@ public class GameEngine {
                     {
                         //Order.execute()
                         l_Order.execute();
+                        System.out.println("Order : " + l_Order.getD_countryName() + " has " + l_Order.getD_numberOfArmies() + " armies.");
+                    }
+                    else
+                    {
+                        ++l_NoOrdersPlayerCount;
+                        System.out.println("Number of Players with No Orders : " + l_NoOrdersPlayerCount);
                     }
                 }
+
             }
 
+            GameCommands.showMapCommand(new ArrayList<>());
 
 
         }
@@ -139,12 +159,25 @@ public class GameEngine {
     public static void assignCountries()
     {
         //Add a method to randomly assign countries to every player
+        if(d_PlayerList.isEmpty())
+        {
+            System.out.println("No players added, add players first");
+            return;
+        }
+        else if (d_PlayerList.size() == 1)
+        {
+            System.out.println("Cant play the game with 1 player, add atleast 1 more player");
+            return;
+        }
+
         try {
             AssignCountries.assignCountries();
+            System.out.println("Countries have been successfully assigned to all the players");
         }
         catch (Exception e){
         }
-        GameCommands.showMapCommand(new ArrayList<>());
+
+        //GameCommands.showMapCommand(new ArrayList<>());
         GamePlay();
 
     }

@@ -14,7 +14,7 @@ import static com.risk.main.Main.d_PlayerList;
 
 public class GameEngineTest
 {
-    Player l_Player;
+    Player l_Player1, l_Player2;
     /**
      * This method is executed before every test method.
      */
@@ -27,8 +27,10 @@ public class GameEngineTest
         {
             throw new InvalidMapException(e.getMessage());
         }
-        l_Player = new Player("TestPlayer");
-        d_PlayerList.add(l_Player);
+        l_Player1 = new Player("TestPlayer1");
+        d_PlayerList.add(l_Player1);
+        l_Player2 = new Player("TestPlayer2");
+        d_PlayerList.add(l_Player2);
     }
 
     @Test
@@ -37,6 +39,6 @@ public class GameEngineTest
         AssignCountries.assignCountries();
         GameEngine.assignReinforcementArmies();
 
-        assertEquals(8,l_Player.getD_Armies());
+        assertEquals(4,l_Player1.getD_Armies());
     }
 }

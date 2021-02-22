@@ -53,7 +53,8 @@ public class Orders {
      * Set number of army in each player country
      */
     public void execute() {
-        d_Country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies);
+        int l_PreviousArmies = d_Country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
+        d_Country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_PreviousArmies);
     }
 
 }
