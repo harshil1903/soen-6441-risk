@@ -37,7 +37,7 @@ public class MapCommands {
         //Call MAP READER Function by passing filename.
         //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
         try {
-            d_Map = new EditMap().editMap("europe");
+            d_Map = new EditMap().editMap(p_ArgumentTokens.get(0));
         }
         catch (Exception e)
         {

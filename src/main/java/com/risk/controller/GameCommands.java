@@ -48,7 +48,7 @@ public class GameCommands
         d_Map.getD_Continents().clear();
 
         try {
-            d_Map = new EditMap().editMap("europe");
+            d_Map = new EditMap().editMap(p_ArgumentTokens.get(0));
         }
         catch (Exception e)
         {
