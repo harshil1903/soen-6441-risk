@@ -1,6 +1,5 @@
 package com.risk.maputils;
 
-import com.risk.exception.InvalidMapException;
 import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
@@ -20,7 +19,7 @@ public class MapWriter {
     /**
      * This method writes the map details to map file
      *
-     * @param p_Map  object of the map which is being processed..
+     * @param p_Map  object of the map which is being processed.
      * @param p_file file path
      */
 
@@ -87,7 +86,7 @@ public class MapWriter {
     private StringBuilder processContinent(Map p_Map) {
         StringBuilder l_continentData = new StringBuilder();
         l_continentData.append("\n");
-        l_continentData.append("[Continents]");
+        l_continentData.append("[continents]");
         l_continentData.append("\n");
         for (Continent l_continent : p_Map.getD_Continents()) {
             l_continentData.append(l_continent.getD_ContinentName() + "=" + l_continent.getD_ContinentValue());
@@ -106,14 +105,14 @@ public class MapWriter {
     private StringBuilder processCountries(Map p_Map) {
         StringBuilder l_countryData = new StringBuilder();
         l_countryData.append("\n");
-        l_countryData.append("[Countries]");
+        l_countryData.append("[countries]");
         l_countryData.append("\n");
 
         for (Continent l_continent : p_Map.getD_Continents()) {
             List<Country> countryList = l_continent.getD_Countries();
             if (countryList != null) {
                 for (Country l_country : countryList) {
-                    l_countryData.append(l_country.getD_CountryName() + "," + l_country.getD_BelongToContinent().getD_ContinentName());
+                    l_countryData.append(l_country.getD_CountryID() + "," + l_country.getD_CountryName() + "," + l_country.getD_BelongToContinent().getD_ContinentName());
                     for (Country l_adjacentCountries : l_country.getD_AdjacentCountries()) {
                         l_countryData.append(",");
                         l_countryData.append(l_adjacentCountries.getD_CountryName());

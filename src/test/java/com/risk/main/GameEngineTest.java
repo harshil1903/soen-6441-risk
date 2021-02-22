@@ -12,11 +12,17 @@ import java.util.ArrayList;
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * To test the Game Engine functions
+ * @author Harshil
+ */
 public class GameEngineTest
 {
-    Player l_Player;
+    Player l_Player1, l_Player2;
     /**
      * This method is executed before every test method.
+     *
+     * @throws InvalidMapException throws exception if Map Loading Fails
      */
     @Before
     public void beforeTest() throws InvalidMapException {
@@ -27,16 +33,42 @@ public class GameEngineTest
         {
             throw new InvalidMapException(e.getMessage());
         }
-        l_Player = new Player("TestPlayer");
-        d_PlayerList.add(l_Player);
+        l_Player1 = new Player("TestPlayer1");
+        d_PlayerList.add(l_Player1);
+        l_Player2 = new Player("TestPlayer2");
+        d_PlayerList.add(l_Player2);
+        AssignCountries.assignCountries();
     }
 
+    /**
+     * Test reinforcement armies count that is assigned to the player.
+     *
+     */
     @Test
-    public void testReinforcementArmies() throws InvalidMapException
+    public void testReinforcementArmies()
     {
-        AssignCountries.assignCountries();
         GameEngine.assignReinforcementArmies();
 
-        assertEquals(8,l_Player.getD_Armies());
+        assertEquals(4,l_Player1.getD_Armies());
     }
+
+    /**
+     * player cannot deploy more armies that there is in their reinforcement pool.
+     *
+     */
+    @Test
+    public void testDeployMoreThanReinforcementArmies()
+    {
+        GameEngine.assignReinforcementArmies();
+
+        String l_CountryName = l_Player1.getD_AssignedCountries().get(0).getD_CountryName();
+        int l_NumberOfArmies = 6;
+
+        assertFalse(l_Player1.deployOrder(l_CountryName,l_NumberOfArmies));
+
+        l_NumberOfArmies = 2;
+        assertTrue(l_Player1.deployOrder(l_CountryName,l_NumberOfArmies));
+    }
+
+
 }

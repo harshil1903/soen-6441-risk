@@ -1,5 +1,6 @@
 com.risk.controller
 com.risk.exception
+com.risk.gameutils
 com.risk.main
 com.risk.maputils
 com.risk.models

@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import com.risk.models.Continent;
+import static com.risk.main.Main.d_Map;
 
 /**
  * This class loads a map from an existing domination map file,
@@ -33,7 +34,7 @@ public class EditMap {
      * @param p_map provides the map for loading
      */
     public EditMap(Map p_map) {
-        this.d_Map = p_map;
+        d_Map = p_map;
     }
 
     /**

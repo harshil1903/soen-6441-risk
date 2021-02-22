@@ -1,5 +1,11 @@
 package com.risk.models;
 
+/**
+ * This class defines Orders and its properties such as
+ * number of Armies and country in which armies are to be deployed
+ *
+ * @author Parth Navsariwala
+ */
 public class Orders {
     String d_countryName;
     Country d_Country;
@@ -53,7 +59,8 @@ public class Orders {
      * Set number of army in each player country
      */
     public void execute() {
-        d_Country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies);
+        int l_PreviousArmies = d_Country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
+        d_Country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_PreviousArmies);
     }
 
 }

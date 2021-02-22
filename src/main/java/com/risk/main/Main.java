@@ -65,7 +65,7 @@ public class Main {
 
             String l_Arguments = p_Command.substring(l_Action.length());
 
-            List<String> l_GameCommands = Arrays.asList("showmap", "loadmap", "gameplayer", "assigncountries", "deploy");
+            List<String> l_GameCommands = Arrays.asList( "loadmap");
 
             List<String> l_MapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
 

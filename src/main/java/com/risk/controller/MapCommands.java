@@ -2,6 +2,7 @@ package com.risk.controller;
 
 import com.risk.exception.InvalidMapException;
 import com.risk.maputils.*;
+import com.risk.models.Map;
 
 import java.io.File;
 import java.util.Arrays;
@@ -31,15 +32,18 @@ public class MapCommands {
             return false;
         }
 
+        d_Map.getD_Continents().clear();
 
         //Call MAP READER Function by passing filename.
         //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
         try {
-            d_Map = new EditMap().editMap("europe");
+            d_Map = new EditMap().editMap(p_ArgumentTokens.get(0));
         }
         catch (Exception e)
         {
+            System.out.println(e.getMessage());
             throw new InvalidMapException(e.getMessage());
+
         }
         //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);
         return true;
@@ -88,6 +92,7 @@ public class MapCommands {
         catch (Exception e)
         {
             System.out.println("Map Validation Failed");
+            System.out.println(e.getMessage());
         }
 
 

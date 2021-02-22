@@ -1,0 +1,28 @@
+STEPS to run the game
+
+
+MAIN GAME STEPS
+
+(Here you can use loadmap command to load game again or use Map editor commands to edit map)
+
+loadmap europe
+
+showmap
+
+gameplayer -add john -add kris -add megan
+
+assigncountries
+
+loop
+deploy <countryname from given list for given player> <value less than listed reinforcement armies>
+
+for eg:  deploy Spain 2
+
+after loop ends press "n" to exit main loop when asked
+
+EXITGAME (in capital to Exit Game Mode)
+
+(Here you can use loadmap command to load game again or use Map editor commands to edit map)
+
+EXIT(to exit Game entirely)
+

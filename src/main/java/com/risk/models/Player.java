@@ -219,7 +219,7 @@ public class Player {
         Scanner l_Scanner = new Scanner(System.in);
         String l_Command;
 
-        System.out.println("Enter command: ");
+        System.out.println("\nEnter command: ");
         l_Command = l_Scanner.nextLine();
 
         String l_Action=l_Command.split(" ")[0];
@@ -230,55 +230,86 @@ public class Player {
         String[] l_ArgumentTokens = l_Arguments.split(" ");
         List<String> l_ArgumentList = new ArrayList<>(Arrays.asList(l_ArgumentTokens.clone()));
 
+        if(!l_ArgumentList.isEmpty())
+        {
+            l_ArgumentList.remove(0);
+        }
+
         if(l_ArgumentList.stream().count() != 2)
         {
             System.out.println("Wrong Number of Arguments provided.");
+            return;
         }
 
-        String l_countryName;
-        int l_numberOfArmies;
-        Orders orders=new Orders();
+        String l_CountryName;
+        int l_NumberOfArmies;
+        boolean l_DeploySuccess;
 
-        for(int i = 0; i <l_ArgumentList.size() ; i++){
-            try
-            {
-                l_countryName = l_ArgumentList.get(++i);
-                l_numberOfArmies =Integer.parseInt(l_ArgumentList.get(++i));
-                System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies);
-                if(d_Armies>0) {
-                    orders.setD_countryName(l_countryName);
-                    orders.setD_numberOfArmies(l_numberOfArmies);
-                    d_Armies = d_Armies - l_numberOfArmies;
-                    d_OrderList.add(orders);
-                }
-            }
-            catch (Exception e)
-            {
-                System.out.println("Wrong number of Arguments provided.deploy option has 2 arguments");
-                return;
-            }
+
+        l_CountryName = l_ArgumentList.get(0);
+        l_NumberOfArmies =Integer.parseInt(l_ArgumentList.get(1));
+        l_DeploySuccess = deployOrder(l_CountryName, l_NumberOfArmies);
+
+        if(!l_DeploySuccess)
+        {
+            issue_order();
         }
 
     }
 
     /**
-     *  first order in the player’s list of orders, then removes it from the list.
+     *  First order in the player’s list of orders, then removes it from the list.
      * @return l_tempOrder object of the order class
      */
     public Orders next_order()
     {
         Orders l_tempOrder=new Orders();
         Orders orders=new Orders();
-        for(int i=0;i<d_OrderList.size();i++){
+
             if(d_OrderList.isEmpty()){
                 return null;
             }
             else{
-                l_tempOrder=d_OrderList.get(i);
-                d_OrderList.remove(d_OrderList.get(i));
+                l_tempOrder=d_OrderList.get(0);
+                d_OrderList.remove(d_OrderList.get(0));
             }
-        }
+
         return l_tempOrder;
+    }
+
+    public boolean deployOrder(String l_CountryName, int l_NumberOfArmies)
+    {
+
+        Orders l_Orders=new Orders();
+        if(d_Armies>=l_NumberOfArmies)
+        {
+            l_Orders.setD_countryName(l_CountryName);
+            l_Orders.setD_numberOfArmies(l_NumberOfArmies);
+
+            ArrayList<String> l_CountriesOwnedList = new ArrayList<>();
+            for(Country l_Country : d_AssignedCountries)
+            {
+                l_CountriesOwnedList.add(l_Country.getD_CountryName());
+            }
+            if(!l_CountriesOwnedList.contains(l_CountryName))
+            {
+                System.out.println("You do not own this country. Try Again with a country name that has been assigned to you.");
+                return false;
+            }
+
+
+
+            d_Armies = d_Armies - l_NumberOfArmies;
+            d_OrderList.add(l_Orders);
+            System.out.println("Country: " + l_CountryName + " Number of Armies: " + l_NumberOfArmies + " successfully deployed");
+            return true;
+        }
+        else
+        {
+            System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
+            System.out.println("You currently have " + d_Armies + " number of reinforcement armies left.");
+            return false;
+        }
     }
 
 

@@ -164,7 +164,7 @@ public class MapValidator {
         boolean l_returnvalue = true;
         for(Continent l_continent : p_Map.getD_Continents()){
             if(l_continent.isD_IsVisited() == false){
-                System.out.println(l_continent.getD_ContinentName()+"XXXXXX");
+              //  System.out.println(l_continent.getD_ContinentName()+"XXXXXX");
                 l_returnvalue = false;
                 break;
             }
@@ -189,9 +189,9 @@ public class MapValidator {
 
         p_Continent.setD_Visited(true);
 
-        System.out.println("continent in bfs"+p_Continent.getD_ContinentName());
+       // System.out.println("continent in bfs "+p_Continent.getD_ContinentName());
         for(Continent c : getAdjacentContinents(p_Continent,p_Map)){
-            System.out.println("Control is inside the adjacent continents loop");
+           // System.out.println("Control is inside the adjacent continents loop");
             if(c.isD_IsVisited() == false)
                 bfsTraversalContinent(c,p_Map);
         }
@@ -213,7 +213,7 @@ public class MapValidator {
             l_adjCountryMainSet.addAll(l_country.getD_AdjacentCountries()); //all unique adjacent countries of entire continent will be added to this list
         }
 
-        System.out.println(l_adjCountryMainSet);
+       // System.out.println(l_adjCountryMainSet);
 
         for(Continent l_remainingContinent : p_Map.getD_Continents()){
             if(!p_Continent.equals(l_remainingContinent)){
@@ -221,7 +221,7 @@ public class MapValidator {
                 //also it will return true ony if both the continents are different.
                 //if there are some countries common between two continents i.e they are connected i.e disjoint set is not formed then that continent is adjacent continent.
                 if(!Collections.disjoint(l_adjCountryMainSet,l_remainingContinent.getD_Countries())){
-                    System.out.println ("Inside the disjoint method");
+                   // System.out.println ("Inside the disjoint method");
                     //There are some countries which are common.
                     l_adjacentContinents.add(l_remainingContinent);
 
