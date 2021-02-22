@@ -26,8 +26,8 @@ public class MapValidatorTest {
     static Map S_Map;
 
 
-    String d_continentName = "North_Europe";
-    int d_controlValue = 5;
+    String d_continentName = "Temp_Cont";
+    int d_controlValue = 6;
 
     List<Continent> d_continentList;
 
@@ -56,7 +56,7 @@ public class MapValidatorTest {
         }
         S_Continent.setD_ContinentName(d_continentName);
         S_Continent.setD_ContinentValue(d_controlValue);
-        S_Country.setD_CountryName("Country No.2");
+        S_Country.setD_CountryName("Country No.1");
 
         d_continentList = new ArrayList<>();
         d_continentList.add(S_Continent);
@@ -80,7 +80,7 @@ public class MapValidatorTest {
      */
     @Test (expected = InvalidMapException.class)
     public void validateContinentForNullCountry() throws InvalidMapException {
-        S_Map.setD_Continents(d_continentList);
+        S_Map.addContinentToContinentList(S_Continent);
         MapValidator.validateContinents(S_Map);
     }
 
@@ -91,7 +91,7 @@ public class MapValidatorTest {
      */
     @Test
     public void validateMapForSubgraph() throws InvalidMapException{
-
+        
         assertEquals(true, !MapValidator.isMapConnectedGraph(S_Map));
     }
 
@@ -106,9 +106,9 @@ public class MapValidatorTest {
         l_CountryList.add(S_Country);
         Country l_NewCountry = new Country();
         l_NewCountry.setD_CountryName("Country No.2");
-        l_CountryList.add(S_Country);
+        l_CountryList.add(l_NewCountry);
         S_Continent.setD_Countries(l_CountryList);
-        assertEquals(MapValidator.isContinentConnectedGraph(S_Continent,S_Map),true);
+        assertEquals(MapValidator.isContinentConnectedGraph(S_Continent,S_Map),false);
 
         List<Country> l_AdjCountryList =new ArrayList<>();
         l_AdjCountryList.add(S_Country);
@@ -118,10 +118,9 @@ public class MapValidatorTest {
         l_AdjCountryList.add(l_NewCountry);
         S_Country.setD_AdjacentCountries(l_AdjCountryList);
 
-        l_CountryList.remove(1);
-        l_CountryList.add(l_NewCountry);
-        S_Continent.setD_Countries(l_CountryList);
+
         assertTrue(MapValidator.isContinentConnectedGraph(S_Continent,S_Map));
+        assertEquals(MapValidator.isContinentConnectedGraph(S_Continent,S_Map),true);
     }
 
 

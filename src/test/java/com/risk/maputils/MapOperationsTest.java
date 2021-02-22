@@ -43,7 +43,8 @@ public class MapOperationsTest {
      */
     @Test
     public void testAddContinent() throws InvalidMapException{
-        
+        //S_Continent = MapOperations.addContinent(S_Map,d_ContinentName,d_ControlValue1);
+
 
     }
 
