@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Observable;
 
-
 /**
  * This class defines Map and its list of continents.
  *
@@ -76,13 +75,15 @@ public class Map extends Observable {
 
     /**
      * This method returns continent from continents list.
+     *
      * @param p_ContinentId gives the id of the continent to be fetced.
      * @return matching continent from the list.
      */
-    public Continent getContinentFromContinentList(int p_ContinentId){
-        Continent l_Continent=d_Continents.get(p_ContinentId-1);
+    public Continent getContinentFromContinentList(int p_ContinentId) {
+        Continent l_Continent = d_Continents.get(p_ContinentId - 1);
         return l_Continent;
     }
+
     /**
      * Remove continent from continent list.
      *
@@ -92,7 +93,7 @@ public class Map extends Observable {
         //To be finished later
         Continent l_ContinentToBeRemoved = new Continent().getContinentFromContinentName(p_ContinentName);
 
-        System.out.println("\n Continent Remove Info  " + l_ContinentToBeRemoved.getD_ContinentName() + " " + l_ContinentToBeRemoved.getD_ContinentID() );
+        System.out.println("\n Continent Remove Info  " + l_ContinentToBeRemoved.getD_ContinentName() + " " + l_ContinentToBeRemoved.getD_ContinentID());
 
         d_Continents.remove(l_ContinentToBeRemoved);
         //d_Continents.remove(p_ContinentID);

@@ -83,14 +83,11 @@ public class AssignCountries {
                 p_List.get(i).addCountryToAssignedCountries(l_RandomCountry);
 
                 //Added by Harshil, Check later on
-                for (Continent l_continent : d_Map.getD_Continents())
-                {
-                    for (Country l_country : l_continent.getD_Countries())
-                    {
-                            if (l_country.getD_CountryName().equals(l_RandomCountry.getD_CountryName()))
-                            {
-                                l_country.setD_Player(p_List.get(i));
-                            }
+                for (Continent l_continent : d_Map.getD_Continents()) {
+                    for (Country l_country : l_continent.getD_Countries()) {
+                        if (l_country.getD_CountryName().equals(l_RandomCountry.getD_CountryName())) {
+                            l_country.setD_Player(p_List.get(i));
+                        }
                     }
                 }
                 //

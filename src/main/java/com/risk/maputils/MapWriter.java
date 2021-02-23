@@ -20,7 +20,7 @@ public class MapWriter {
     /**
      * This method writes the map details to map file
      *
-     * @param p_Map object of the map which is being processed.
+     * @param p_Map  object of the map which is being processed.
      * @param p_File object of file to store map data.
      */
 

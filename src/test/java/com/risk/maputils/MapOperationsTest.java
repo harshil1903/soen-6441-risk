@@ -1,17 +1,17 @@
 package com.risk.maputils;
-import static com.risk.main.Main.d_Map;
+
 import static org.junit.Assert.*;
-import java.util.*;
+
 import org.junit.*;
 import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
-
 import com.risk.exception.InvalidMapException;
 
 
 /**
  * This test class is for map operations.
+ *
  * @author Harsh
  */
 
@@ -51,7 +51,7 @@ public class MapOperationsTest {
     @Test
     public void testAddContinent() throws InvalidMapException {
         MapOperations.addContinent(S_Map, d_ContinentName, d_ControlValue1);
-       for (Continent l_Continent : S_Map.getD_Continents()) {
+        for (Continent l_Continent : S_Map.getD_Continents()) {
             assertEquals(l_Continent.getD_ContinentValue(), d_ControlValue1);
             assertNotEquals(l_Continent.getD_ContinentValue(), d_ControlValue2);
             assertEquals(l_Continent.getD_ContinentName(), d_ContinentName);
@@ -81,16 +81,17 @@ public class MapOperationsTest {
 
     /**
      * This test case is used to check the add country functionality.
+     *
      * @throws InvalidMapException InvalidMapException
      */
     @Test
-    public void testAddCountry() throws InvalidMapException{
+    public void testAddCountry() throws InvalidMapException {
         String cont = null;
-        MapOperations.addCountry(S_Map,d_CountryName,d_ContinentName);
-        for(Continent l_Continent : S_Map.getD_Continents()){
-            if(l_Continent.getD_ContinentName().equals(d_ContinentName)){
+        MapOperations.addCountry(S_Map, d_CountryName, d_ContinentName);
+        for (Continent l_Continent : S_Map.getD_Continents()) {
+            if (l_Continent.getD_ContinentName().equals(d_ContinentName)) {
                 assertNotNull(l_Continent);
-                cont=l_Continent.getD_ContinentName();
+                cont = l_Continent.getD_ContinentName();
                 System.out.println(cont);
                 assertFalse(l_Continent.getD_Countries().contains(d_CountryName));
             }
@@ -101,28 +102,31 @@ public class MapOperationsTest {
 
     /**
      * This test case is used to check the remove country functionality
+     *
      * @throws InvalidMapException InvalidMapException
      */
     @Test
-    public void testRemoveCountry() throws InvalidMapException{
+    public void testRemoveCountry() throws InvalidMapException {
 
     }
 
     /**
      * This test case is used to check the add neighbour country functionality to any country in the map.
+     *
      * @throws InvalidMapException InvalidMapException
      */
     @Test
-    public void testAddNeighbourCountry() throws InvalidMapException{
+    public void testAddNeighbourCountry() throws InvalidMapException {
 
     }
 
     /**
      * This test case is used to check the remove neighbour country functionality to any country in the map.
+     *
      * @throws InvalidMapException
      */
     @Test
-    public void testRemoveNeighbourCountry() throws InvalidMapException{
+    public void testRemoveNeighbourCountry() throws InvalidMapException {
 
     }
 

@@ -2,13 +2,9 @@ package com.risk.controller;
 
 import com.risk.exception.InvalidMapException;
 import com.risk.maputils.*;
-import com.risk.models.Continent;
-import com.risk.models.Map;
 import com.risk.models.Player;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static com.risk.main.Main.d_Map;
@@ -17,10 +13,10 @@ import static com.risk.main.Main.d_PlayerList;
 /**
  * The Game Commands class performs various Game related commands.
  * It verifies whether the arguments provided for the commands are valid or not.
+ *
  * @author Harshil
  */
-public class GameCommands
-{
+public class GameCommands {
     /**
      * Validates the command arguments and then loads the map.
      *
@@ -28,10 +24,8 @@ public class GameCommands
      * @return true if map is successfully loaded into the Game
      * @throws InvalidMapException Invalid Map Exception
      */
-    public static boolean loadMapCommand(List<String> p_ArgumentTokens) throws InvalidMapException
-    {
-        if(p_ArgumentTokens.stream().count() != 1)
-        {
+    public static boolean loadMapCommand(List<String> p_ArgumentTokens) throws InvalidMapException {
+        if (p_ArgumentTokens.stream().count() != 1) {
             System.out.println("Wrong Number of Arguments provided. editmap command has only one argument.");
             return false;
         }
@@ -49,9 +43,7 @@ public class GameCommands
 
         try {
             d_Map = new EditMap().editMap(p_ArgumentTokens.get(0));
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             throw new InvalidMapException(e.getMessage());
         }
@@ -67,10 +59,8 @@ public class GameCommands
      *
      * @param p_ArgumentTokens list of arguments provided with the command
      */
-    public static void showMapCommand(List<String> p_ArgumentTokens)
-    {
-        if(p_ArgumentTokens.stream().count() != 0)
-        {
+    public static void showMapCommand(List<String> p_ArgumentTokens) {
+        if (p_ArgumentTokens.stream().count() != 0) {
             System.out.println("Wrong Number of Arguments provided. showmap command has no argument.");
         }
 
@@ -87,20 +77,15 @@ public class GameCommands
      *
      * @param p_ArgumentTokens list of arguments provided with the command
      */
-    public static void gamePlayerCommand(List<String> p_ArgumentTokens)
-    {
+    public static void gamePlayerCommand(List<String> p_ArgumentTokens) {
 
         String l_PlayerName;
 
-        for(int i = 0; i < p_ArgumentTokens.size() ; i++)
-        {
-            if(p_ArgumentTokens.get(i).equals("-add"))
-            {
-                try
-                {
+        for (int i = 0; i < p_ArgumentTokens.size(); i++) {
+            if (p_ArgumentTokens.get(i).equals("-add")) {
+                try {
                     l_PlayerName = p_ArgumentTokens.get(++i);
                     System.out.println("Player Name: " + l_PlayerName);
-
 
 
                     //CALL ADD Player FUNCTION
@@ -108,46 +93,30 @@ public class GameCommands
                     d_PlayerList.add(l_Player);
 
 
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 1 arguments");
                     return;
                 }
-            }
-
-            else if(p_ArgumentTokens.get(i).equals("-remove"))
-            {
-                try
-                {
+            } else if (p_ArgumentTokens.get(i).equals("-remove")) {
+                try {
                     l_PlayerName = p_ArgumentTokens.get(++i);
                     System.out.println("Player Name: " + l_PlayerName);
 
 
-
                     //CALL REMOVE Player FUNCTION
-                    for(Player l_Player : d_PlayerList)
-                    {
-                        if(l_Player.getD_PlayerName().equals(l_PlayerName))
-                        {
+                    for (Player l_Player : d_PlayerList) {
+                        if (l_Player.getD_PlayerName().equals(l_PlayerName)) {
                             d_PlayerList.remove(l_Player);
                         }
                     }
 
 
-
-
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 1 argument");
                     e.printStackTrace();
                     return;
                 }
-            }
-
-            else
-            {
+            } else {
                 System.out.println("Invalid option. gameplayer has -add and -remove options only");
             }
 

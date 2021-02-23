@@ -5,20 +5,19 @@ import com.risk.gameutils.AssignCountries;
 import com.risk.maputils.EditMap;
 import com.risk.models.Player;
 import org.junit.*;
+
 import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
  * To test the Game Engine functions
+ *
  * @author Harshil
  */
-public class GameEngineTest
-{
+public class GameEngineTest {
     Player l_Player1, l_Player2;
+
     /**
      * This method is executed before every test method.
      *
@@ -28,9 +27,7 @@ public class GameEngineTest
     public void beforeTest() throws InvalidMapException {
         try {
             d_Map = new EditMap().editMap("europe");
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             throw new InvalidMapException(e.getMessage());
         }
         l_Player1 = new Player("TestPlayer1");
@@ -42,32 +39,28 @@ public class GameEngineTest
 
     /**
      * Test reinforcement armies count that is assigned to the player.
-     *
      */
     @Test
-    public void testReinforcementArmies()
-    {
+    public void testReinforcementArmies() {
         GameEngine.assignReinforcementArmies();
 
-        assertEquals(4,l_Player1.getD_Armies());
+        assertEquals(4, l_Player1.getD_Armies());
     }
 
     /**
      * player cannot deploy more armies that there is in their reinforcement pool.
-     *
      */
     @Test
-    public void testDeployMoreThanReinforcementArmies()
-    {
+    public void testDeployMoreThanReinforcementArmies() {
         GameEngine.assignReinforcementArmies();
 
         String l_CountryName = l_Player1.getD_AssignedCountries().get(0).getD_CountryName();
         int l_NumberOfArmies = 6;
 
-        assertFalse(l_Player1.deployOrder(l_CountryName,l_NumberOfArmies));
+        assertFalse(l_Player1.deployOrder(l_CountryName, l_NumberOfArmies));
 
         l_NumberOfArmies = 2;
-        assertTrue(l_Player1.deployOrder(l_CountryName,l_NumberOfArmies));
+        assertTrue(l_Player1.deployOrder(l_CountryName, l_NumberOfArmies));
     }
 
 

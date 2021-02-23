@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-
 /**
  * This class defines Player and its properties such as
  * ID, Name, number of Armies and number of countries owned by player
@@ -32,8 +31,8 @@ public class Player {
         d_PlayerName = p_PlayerName;
         d_Armies = 0;
         d_AssignedCountries = new ArrayList<Country>();
-        d_OrderList=new ArrayList<Orders>();
-        d_PlayerList=new ArrayList<Player>();
+        d_OrderList = new ArrayList<Orders>();
+        d_PlayerList = new ArrayList<Player>();
     }
 
     /**
@@ -113,42 +112,54 @@ public class Player {
      *
      * @return list of orders
      */
-    public List<Orders> getD_OrderList(){return d_OrderList;}
+    public List<Orders> getD_OrderList() {
+        return d_OrderList;
+    }
 
     /**
      * Sets a list of orders given by the player.
-     * @param p_orderList list of orders
      *
+     * @param p_orderList list of orders
      */
-    public void setD_OrderList(List<Orders> p_orderList){d_OrderList=p_orderList;}
+    public void setD_OrderList(List<Orders> p_orderList) {
+        d_OrderList = p_orderList;
+    }
 
     /**
      * Gets a list of  player.
      *
      * @return list of player
      */
-    public List<Player> getD_PlayerList(){return d_PlayerList;}
+    public List<Player> getD_PlayerList() {
+        return d_PlayerList;
+    }
 
     /**
      * Sets a list of player.
+     *
      * @param p_playerList list of players
      */
-    public void setD_PlayerList(List<Player> p_playerList){d_PlayerList=p_playerList;}
+    public void setD_PlayerList(List<Player> p_playerList) {
+        d_PlayerList = p_playerList;
+    }
 
     /**
      * Gets Current Player.
      *
      * @return Current Player
      */
-    public Player getD_currentPlayer(){return d_currentPlayer;}
+    public Player getD_currentPlayer() {
+        return d_currentPlayer;
+    }
 
     /**
      * Sets current player.
      *
      * @param p_currentPlayer Current Player to be set
      */
-    public void setD_currentPlayer(Player p_currentPlayer){d_currentPlayer=p_currentPlayer;}
-
+    public void setD_currentPlayer(Player p_currentPlayer) {
+        d_currentPlayer = p_currentPlayer;
+    }
 
 
     /**
@@ -157,12 +168,9 @@ public class Player {
      * @param p_PlayerID player id
      * @return the player object
      */
-    public Player getPlayerFromPlayerID(int p_PlayerID)
-    {
-        for(Player l_Player : d_PlayerList)
-        {
-            if(l_Player.getD_PlayerID() == p_PlayerID)
-            {
+    public Player getPlayerFromPlayerID(int p_PlayerID) {
+        for (Player l_Player : d_PlayerList) {
+            if (l_Player.getD_PlayerID() == p_PlayerID) {
                 return l_Player;
             }
         }
@@ -176,8 +184,7 @@ public class Player {
      *
      * @param p_Country Country to be added
      */
-    public void addCountryToAssignedCountries(Country p_Country)
-    {
+    public void addCountryToAssignedCountries(Country p_Country) {
         //To be finished later
         d_AssignedCountries.add(p_Country);
     }
@@ -187,8 +194,7 @@ public class Player {
      *
      * @param p_CountryID Country to be removed
      */
-    public void removeCountryFromAssignedCountries(int p_CountryID)
-    {
+    public void removeCountryFromAssignedCountries(int p_CountryID) {
         Country l_CountryToBeRemoved = new Country().getCountryFromCountryID(p_CountryID);
 
         d_AssignedCountries.remove(l_CountryToBeRemoved);
@@ -202,8 +208,7 @@ public class Player {
      * @param p_CountryID Country to be checked
      * @return whether country is present in the assigned country list or not
      */
-    public boolean isCountryPresentInAssignedCountries(int p_CountryID)
-    {
+    public boolean isCountryPresentInAssignedCountries(int p_CountryID) {
         //return d_AssignedCountries.contains(p_CountryID);
         Country l_Country = new Country().getCountryFromCountryID(p_CountryID);
 
@@ -214,29 +219,26 @@ public class Player {
      * To add an order to the list of orders held by the player
      * Issue order phase of game
      */
-    public void issue_order()
-    {
+    public void issue_order() {
         Scanner l_Scanner = new Scanner(System.in);
         String l_Command;
 
         System.out.println("\nEnter command: ");
         l_Command = l_Scanner.nextLine();
 
-        String l_Action=l_Command.split(" ")[0];
-        String l_Arguments =l_Command.substring(l_Action.length());
+        String l_Action = l_Command.split(" ")[0];
+        String l_Arguments = l_Command.substring(l_Action.length());
 
         List<String> l_OrderCommands = Arrays.asList("deploy");
 
         String[] l_ArgumentTokens = l_Arguments.split(" ");
         List<String> l_ArgumentList = new ArrayList<>(Arrays.asList(l_ArgumentTokens.clone()));
 
-        if(!l_ArgumentList.isEmpty())
-        {
+        if (!l_ArgumentList.isEmpty()) {
             l_ArgumentList.remove(0);
         }
 
-        if(l_ArgumentList.stream().count() != 2)
-        {
+        if (l_ArgumentList.stream().count() != 2) {
             System.out.println("Wrong Number of Arguments provided.");
             return;
         }
@@ -247,65 +249,56 @@ public class Player {
 
 
         l_CountryName = l_ArgumentList.get(0);
-        l_NumberOfArmies =Integer.parseInt(l_ArgumentList.get(1));
+        l_NumberOfArmies = Integer.parseInt(l_ArgumentList.get(1));
         l_DeploySuccess = deployOrder(l_CountryName, l_NumberOfArmies);
 
-        if(!l_DeploySuccess)
-        {
+        if (!l_DeploySuccess) {
             issue_order();
         }
 
     }
 
     /**
-     *  First order in the player’s list of orders, then removes it from the list.
+     * First order in the player’s list of orders, then removes it from the list.
+     *
      * @return l_tempOrder object of the order class
      */
-    public Orders next_order()
-    {
-        Orders l_tempOrder=new Orders();
-        Orders orders=new Orders();
+    public Orders next_order() {
+        Orders l_tempOrder = new Orders();
+        Orders orders = new Orders();
 
-            if(d_OrderList.isEmpty()){
-                return null;
-            }
-            else{
-                l_tempOrder=d_OrderList.get(0);
-                d_OrderList.remove(d_OrderList.get(0));
-            }
+        if (d_OrderList.isEmpty()) {
+            return null;
+        } else {
+            l_tempOrder = d_OrderList.get(0);
+            d_OrderList.remove(d_OrderList.get(0));
+        }
 
         return l_tempOrder;
     }
 
-    public boolean deployOrder(String l_CountryName, int l_NumberOfArmies)
-    {
+    public boolean deployOrder(String l_CountryName, int l_NumberOfArmies) {
 
-        Orders l_Orders=new Orders();
-        if(d_Armies>=l_NumberOfArmies)
-        {
+        Orders l_Orders = new Orders();
+        if (d_Armies >= l_NumberOfArmies) {
             l_Orders.setD_countryName(l_CountryName);
             l_Orders.setD_numberOfArmies(l_NumberOfArmies);
 
             ArrayList<String> l_CountriesOwnedList = new ArrayList<>();
-            for(Country l_Country : d_AssignedCountries)
-            {
+            for (Country l_Country : d_AssignedCountries) {
                 l_CountriesOwnedList.add(l_Country.getD_CountryName());
             }
-            if(!l_CountriesOwnedList.contains(l_CountryName))
-            {
+            if (!l_CountriesOwnedList.contains(l_CountryName)) {
                 System.out.println("You do not own this country. Try Again with a country name that has been assigned to you.");
                 return false;
             }
-
 
 
             d_Armies = d_Armies - l_NumberOfArmies;
             d_OrderList.add(l_Orders);
             System.out.println("Country: " + l_CountryName + " Number of Armies: " + l_NumberOfArmies + " successfully deployed");
             return true;
-        }
-        else
-        {
+        } else {
             System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
             System.out.println("You currently have " + d_Armies + " number of reinforcement armies left.");
             return false;

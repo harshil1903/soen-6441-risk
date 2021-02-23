@@ -154,13 +154,10 @@ public class Continent {
      * @param p_ContinentID continent id
      * @return the continent object
      */
-    public Continent getContinentFromContinentID(int p_ContinentID)
-    {
+    public Continent getContinentFromContinentID(int p_ContinentID) {
 
-        for(Continent l_Continent : d_Map.getD_Continents())
-        {
-            if(l_Continent.getD_ContinentID() == p_ContinentID)
-            {
+        for (Continent l_Continent : d_Map.getD_Continents()) {
+            if (l_Continent.getD_ContinentID() == p_ContinentID) {
                 return l_Continent;
             }
         }
@@ -174,20 +171,16 @@ public class Continent {
      * @param p_ContinentName continent id
      * @return the continent object
      */
-    public Continent getContinentFromContinentName(String p_ContinentName)
-    {
+    public Continent getContinentFromContinentName(String p_ContinentName) {
 
-        for(Continent l_Continent : d_Map.getD_Continents())
-        {
-            if(l_Continent.getD_ContinentName().equals(p_ContinentName))
-            {
+        for (Continent l_Continent : d_Map.getD_Continents()) {
+            if (l_Continent.getD_ContinentName().equals(p_ContinentName)) {
                 return l_Continent;
             }
         }
         return null;
 
     }
-
 
 
     /**

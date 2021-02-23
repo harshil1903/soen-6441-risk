@@ -2,7 +2,9 @@ package com.risk.models;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import static com.risk.main.Main.d_Map;
+
 /**
  * This class defines Country and its properties such as
  * the continent to which it belongs, its adjacent Countries and whether its been assigned to any player or not.
@@ -45,9 +47,9 @@ public class Country {
     /**
      * Parameterized constructor which instantiates a new country
      *
-     * @param p_CountryID       Country ID
-     * @param p_CountryName     Country Name
-     * @param p_ContinentID     Continent ID
+     * @param p_CountryID   Country ID
+     * @param p_CountryName Country Name
+     * @param p_ContinentID Continent ID
      */
     public Country(int p_CountryID, String p_CountryName, int p_ContinentID) {
 
@@ -229,14 +231,10 @@ public class Country {
      * @param p_CountryID country id
      * @return the country object
      */
-    public Country getCountryFromCountryID(int p_CountryID)
-    {
-        for(Continent l_Continent : d_Map.getD_Continents())
-        {
-            for(Country l_Country : l_Continent.getD_Countries())
-            {
-                if (l_Country.getD_CountryID() == p_CountryID)
-                {
+    public Country getCountryFromCountryID(int p_CountryID) {
+        for (Continent l_Continent : d_Map.getD_Continents()) {
+            for (Country l_Country : l_Continent.getD_Countries()) {
+                if (l_Country.getD_CountryID() == p_CountryID) {
                     return l_Country;
                 }
             }
@@ -252,14 +250,10 @@ public class Country {
      * @param p_CountryName country id
      * @return the country object
      */
-    public Country getCountryFromCountryName(String p_CountryName)
-    {
-        for(Continent l_Continent : d_Map.getD_Continents())
-        {
-            for(Country l_Country : l_Continent.getD_Countries())
-            {
-                if (l_Country.getD_CountryName().equals(p_CountryName))
-                {
+    public Country getCountryFromCountryName(String p_CountryName) {
+        for (Continent l_Continent : d_Map.getD_Continents()) {
+            for (Country l_Country : l_Continent.getD_Countries()) {
+                if (l_Country.getD_CountryName().equals(p_CountryName)) {
                     return l_Country;
                 }
             }
@@ -267,7 +261,6 @@ public class Country {
         return null;
 
     }
-
 
 
     /**

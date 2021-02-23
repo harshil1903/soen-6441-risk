@@ -9,7 +9,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import com.risk.models.Continent;
-import static com.risk.main.Main.d_Map;
 
 /**
  * This class loads a map from an existing domination map file,
