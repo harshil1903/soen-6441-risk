@@ -87,7 +87,7 @@ public class MapOperations {
                 l_country.setD_CountryID(l_continent.getD_Countries().size() + 1);
                 l_country.setD_ContinentID(l_continent.getD_ContinentID());
                 l_continent.addCountryToCountryList(l_country);
-                System.out.println("The Country "+l_country +" Added Successfully");
+                System.out.println("The Country "+p_CountryName +" Added Successfully");
             }
         }
 
@@ -133,7 +133,7 @@ public class MapOperations {
                     Country l_tempCountry = l_country.getCountryFromCountryName(p_NeighborName);
                     l_country.addCountryToAdjacentCountries(l_tempCountry);
                     l_tempCountry.addCountryToAdjacentCountries(l_country);
-                    System.out.println("Neighbor Country "+l_tempCountry +" Added Successfully");
+                    System.out.println("Neighbor Country "+p_NeighborName +" Added Successfully");
                 }
             }
         }
@@ -156,7 +156,7 @@ public class MapOperations {
                     Country l_tempCountry = l_country.getCountryFromCountryName(p_NeighborName);
                     l_country.removeCountryFromAdjacentCountries(p_NeighborName);
                     l_tempCountry.removeCountryFromAdjacentCountries(p_CountryName);
-                    System.out.println("Neighbor country "+l_tempCountry+" remove successfully");
+                    System.out.println("Neighbor country "+p_NeighborName+" remove successfully");
                 }
             }
         }
