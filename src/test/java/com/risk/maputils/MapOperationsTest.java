@@ -28,6 +28,8 @@ public class MapOperationsTest {
 
     /**
      * This method is executed before any test methods of the class.
+     *
+     * @throws InvalidMapException InvalidMapException
      */
     @BeforeClass
     public static void beforeClass() throws InvalidMapException {
@@ -123,7 +125,7 @@ public class MapOperationsTest {
     /**
      * This test case is used to check the remove neighbour country functionality to any country in the map.
      *
-     * @throws InvalidMapException
+     * @throws InvalidMapException InvaliadMapException
      */
     @Test
     public void testRemoveNeighbourCountry() throws InvalidMapException {

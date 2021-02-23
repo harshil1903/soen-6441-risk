@@ -15,6 +15,9 @@ import static com.risk.main.Main.d_PlayerList;
 
 /**
  * Game Engine Class controls the entire flow of Gameplay including all the game phases
+ * and main game loop
+ *
+ * @author Harshil
  */
 public class GameEngine {
 
