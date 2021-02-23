@@ -63,7 +63,7 @@ public class MapCommands {
             return;
         }
 
-        File l_File = new File("../soen-6441-risk/src/main/resources/"+p_ArgumentTokens.get(0)+".map");
+        File l_File = new File("src/main/resources/"+p_ArgumentTokens.get(0)+".map");
         //Call MAP Writer Function by passing filename.
         new MapWriter().writeMapFile(d_Map,l_File);
 
