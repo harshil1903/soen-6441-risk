@@ -66,11 +66,9 @@ public class Main {
         if (l_MapCommands.contains(l_Action)) {
             MapCommandParser.mapCommandParser(l_Action, l_Arguments);
         } else if (l_GameCommands.contains(l_Action)) {
-            //Call GAME ENGINE to Take over and initiate Game. Dont return here.
             GameEngine.checkNextGameCommands(l_Action, l_Arguments);
 
         } else {
-            //new InvalidCommand("Invalid Command");
             System.out.println("Invalid Command, Try again");
         }
 

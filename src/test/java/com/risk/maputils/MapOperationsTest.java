@@ -17,10 +17,10 @@ import com.risk.exception.InvalidMapException;
 
 public class MapOperationsTest {
 
-    static Map S_Map;
-    static Continent S_Continent;
-    static Country S_Country;
-    static Country S_AdjCountry;
+    static Map d_Map;
+    static Continent d_Continent;
+    static Country d_Country;
+    static Country d_AdjCountry;
     int d_ControlValue1 = 1;
     int d_ControlValue2 = 2;
     String d_ContinentName = "TempContinent";
@@ -34,14 +34,14 @@ public class MapOperationsTest {
     @BeforeClass
     public static void beforeClass() throws InvalidMapException {
         try {
-            S_Map = new EditMap().editMap("europe");
+            d_Map = new EditMap().editMap("europe");
         } catch (Exception e) {
             throw new InvalidMapException(e.getMessage());
         }
-        S_Map = new Map();
-        S_Country = new Country();
-        S_AdjCountry = new Country();
-        S_Continent = new Continent();
+        d_Map = new Map();
+        d_Country = new Country();
+        d_AdjCountry = new Country();
+        d_Continent = new Continent();
 
     }
 
@@ -52,8 +52,8 @@ public class MapOperationsTest {
      */
     @Test
     public void testAddContinent() throws InvalidMapException {
-        MapOperations.addContinent(S_Map, d_ContinentName, d_ControlValue1);
-        for (Continent l_Continent : S_Map.getD_Continents()) {
+        MapOperations.addContinent(d_Map, d_ContinentName, d_ControlValue1);
+        for (Continent l_Continent : d_Map.getD_Continents()) {
             assertEquals(l_Continent.getD_ContinentValue(), d_ControlValue1);
             assertNotEquals(l_Continent.getD_ContinentValue(), d_ControlValue2);
             assertEquals(l_Continent.getD_ContinentName(), d_ContinentName);
@@ -89,8 +89,8 @@ public class MapOperationsTest {
     @Test
     public void testAddCountry() throws InvalidMapException {
         String cont = null;
-        MapOperations.addCountry(S_Map, d_CountryName, d_ContinentName);
-        for (Continent l_Continent : S_Map.getD_Continents()) {
+        MapOperations.addCountry(d_Map, d_CountryName, d_ContinentName);
+        for (Continent l_Continent : d_Map.getD_Continents()) {
             if (l_Continent.getD_ContinentName().equals(d_ContinentName)) {
                 assertNotNull(l_Continent);
                 cont = l_Continent.getD_ContinentName();

@@ -76,7 +76,7 @@ public class Map extends Observable {
     /**
      * This method returns continent from continents list.
      *
-     * @param p_ContinentId gives the id of the continent to be fetced.
+     * @param p_ContinentId gives the id of the continent to be fetched.
      * @return matching continent from the list.
      */
     public Continent getContinentFromContinentList(int p_ContinentId) {
@@ -90,13 +90,11 @@ public class Map extends Observable {
      * @param p_ContinentName continent
      */
     public void removeContinentFromContinentList(String p_ContinentName) {
-        //To be finished later
         Continent l_ContinentToBeRemoved = new Continent().getContinentFromContinentName(p_ContinentName);
 
         System.out.println("\n Continent Remove Info  " + l_ContinentToBeRemoved.getD_ContinentName() + " " + l_ContinentToBeRemoved.getD_ContinentID());
 
         d_Continents.remove(l_ContinentToBeRemoved);
-        //d_Continents.remove(p_ContinentID);
     }
 
     /**
@@ -106,7 +104,6 @@ public class Map extends Observable {
      * @return whether Continent is present in Map or not
      */
     public boolean isContinentPresentInContinentList(String p_ContinentName) {
-        //To be finished later
         Continent l_Continent = new Continent().getContinentFromContinentName(p_ContinentName);
 
         return d_Continents.contains(l_Continent);

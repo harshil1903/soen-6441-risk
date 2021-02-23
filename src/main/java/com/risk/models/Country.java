@@ -20,11 +20,7 @@ public class Country {
     private Player d_Player;
     private List<Country> d_AdjacentCountries;
     private boolean d_IsProcessed = false;
-
-
     private int d_NumberOfArmies;
-    //private List<Integer> d_adjCountries;
-
 
     /**
      * Default Constructor
@@ -269,7 +265,6 @@ public class Country {
      * @param p_Country country to be added
      */
     public void addCountryToAdjacentCountries(Country p_Country) {
-        //To be finished later
         d_AdjacentCountries.add(p_Country);
     }
 
@@ -279,11 +274,9 @@ public class Country {
      * @param p_CountryName country to be removed
      */
     public void removeCountryFromAdjacentCountries(String p_CountryName) {
-        //To be finished later
         Country l_CountryToBeRemoved = new Country().getCountryFromCountryName(p_CountryName);
 
         d_AdjacentCountries.remove(l_CountryToBeRemoved);
-        //d_AdjacentCountries.remove(p_CountryName);
     }
 
     /**
@@ -293,7 +286,6 @@ public class Country {
      * @return whether country is present in the adjacent country list or not
      */
     public boolean isCountryPresentInAdjacentCountries(String p_CountryName) {
-        //return d_AdjacentCountries.contains(p_CountryName);
         Country l_Country = new Country().getCountryFromCountryName(p_CountryName);
 
         return d_AdjacentCountries.contains(l_Country);

@@ -17,10 +17,7 @@ import com.risk.models.Continent;
  * @author Chirag
  */
 public class EditMap {
-    // Object map that will be returned after processing.
-    /**
-     * Generates object of Map class to be used.
-     */
+
     public static Map d_Map = new Map();
 
     /**
@@ -150,7 +147,6 @@ public class EditMap {
             }
             System.out.println("Loaded map successfully form existing domination file");
         } catch (FileNotFoundException | InvalidMapException e) {
-            //e.printStackTrace();
             createMap();
         }
 

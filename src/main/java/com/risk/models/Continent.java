@@ -18,7 +18,6 @@ public class Continent {
     private int d_ContinentValue;
     private List<Country> d_Countries;
     private boolean d_IsVisited = false;
-    //private HashMap<String, Country> d_countryMap;
 
     /**
      * Default Constructor
@@ -189,7 +188,6 @@ public class Continent {
      * @param p_Country country to be added
      */
     public void addCountryToCountryList(Country p_Country) {
-        //To be finished later
         d_Countries.add(p_Country);
     }
 
@@ -199,11 +197,9 @@ public class Continent {
      * @param p_CountryName country to be removed
      */
     public void removeCountryFromCountryList(String p_CountryName) {
-        //To be finished later
         Country l_CountryToBeRemoved = new Country().getCountryFromCountryName(p_CountryName);
 
         d_Countries.remove(l_CountryToBeRemoved);
-        //d_Countries.remove(p_CountryID);
     }
 
     /**
@@ -213,7 +209,6 @@ public class Continent {
      * @return whether country is present in the country list or not
      */
     public boolean isCountryPresentInCountryList(String p_CountryName) {
-        //To be finished later
         Country l_Country = new Country().getCountryFromCountryName(p_CountryName);
 
         return d_Countries.contains(l_Country);

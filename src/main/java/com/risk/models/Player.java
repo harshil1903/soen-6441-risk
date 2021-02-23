@@ -16,7 +16,6 @@ public class Player {
     private int d_PlayerID;
     private String d_PlayerName;
     private int d_Armies;
-    private Player d_currentPlayer;
     private List<Country> d_AssignedCountries;
     private List<Orders> d_OrderList;
     private List<Player> d_PlayerList;
@@ -144,25 +143,6 @@ public class Player {
     }
 
     /**
-     * Gets Current Player.
-     *
-     * @return Current Player
-     */
-    public Player getD_currentPlayer() {
-        return d_currentPlayer;
-    }
-
-    /**
-     * Sets current player.
-     *
-     * @param p_currentPlayer Current Player to be set
-     */
-    public void setD_currentPlayer(Player p_currentPlayer) {
-        d_currentPlayer = p_currentPlayer;
-    }
-
-
-    /**
      * Gets player object from player id.
      *
      * @param p_PlayerID player id
@@ -198,8 +178,6 @@ public class Player {
         Country l_CountryToBeRemoved = new Country().getCountryFromCountryID(p_CountryID);
 
         d_AssignedCountries.remove(l_CountryToBeRemoved);
-        //To be finished later
-        //d_AssignedCountries.remove(p_Country);
     }
 
     /**
@@ -209,7 +187,6 @@ public class Player {
      * @return whether country is present in the assigned country list or not
      */
     public boolean isCountryPresentInAssignedCountries(int p_CountryID) {
-        //return d_AssignedCountries.contains(p_CountryID);
         Country l_Country = new Country().getCountryFromCountryID(p_CountryID);
 
         return d_AssignedCountries.contains(l_Country);

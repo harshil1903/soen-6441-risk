@@ -14,7 +14,7 @@ import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
- * AssignCountires helps in assigning random countries to players.
+ * AssignCountries helps in assigning random countries to players.
  *
  * @author Chirag
  */
@@ -82,7 +82,6 @@ public class AssignCountries {
                 Country l_RandomCountry = getRandomCountry(p_Countries);
                 p_List.get(i).addCountryToAssignedCountries(l_RandomCountry);
 
-                //Added by Harshil, Check later on
                 for (Continent l_continent : d_Map.getD_Continents()) {
                     for (Country l_country : l_continent.getD_Countries()) {
                         if (l_country.getD_CountryName().equals(l_RandomCountry.getD_CountryName())) {
@@ -90,8 +89,6 @@ public class AssignCountries {
                         }
                     }
                 }
-                //
-
                 l_Frequency--;
             }
         }

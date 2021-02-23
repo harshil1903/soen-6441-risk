@@ -32,13 +32,6 @@ public class GameCommands {
 
         ArrayList<String> l_ArgumentTokens = new ArrayList<>();
 
-        //Remember to change return type of map validator to stop map from being loaded
-        //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
-
-        //d_Map.setD_Continents(null);
-        //d_Map.setD_MapData(null);
-        //d_Map = new Map();
-
         d_Map.getD_Continents().clear();
 
         try {
@@ -50,7 +43,6 @@ public class GameCommands {
 
         MapCommands.validateMapCommand(l_ArgumentTokens);
 
-        //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);
         return true;
     }
 
@@ -64,11 +56,8 @@ public class GameCommands {
             System.out.println("Wrong Number of Arguments provided. showmap command has no argument.");
         }
 
-
-        //Call MAP Display method.
         ShowMap.displayGameMap(d_Map);
 
-        //System.out.println("Reached Show Map Command. Argument List : " + p_ArgumentTokens);
     }
 
 

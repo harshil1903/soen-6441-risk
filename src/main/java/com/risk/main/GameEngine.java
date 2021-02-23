@@ -28,31 +28,14 @@ public class GameEngine {
      * Main Game Loop begins from here
      */
     public static void GamePlay() {
-        //STARTUP PHASE
-
-        //"loadmap filename"
-        //Call editmap function to load map and run validate map function on the map
-
-        //"gameplayer -add playername -remove playername"
-        //Add or remove player from player list created in MAIN
-
-        //"assigncountries"
-        //Assign countries to players
-
 
         //MAIN GAME LOOP
         boolean l_ContinueMainGameLoop = true;
         while (l_ContinueMainGameLoop) {
             //REINFORCEMENT PHASE
-            //Method to assign reinforcement armies to each player
             assignReinforcementArmies();
 
-            //GameCommands.showMapCommand(new ArrayList<>());
-
             //ISSUE ORDERS PHASE
-            //Scan for deploy command
-            //Add the order by calling Player.issue_Order();
-            //Subtract reinforcement armies from that player
             while (!checkReinforcementArmiesCount()) {
                 for (Player l_Player : d_PlayerList) {
                     if (l_Player.getD_Armies() != 0) {
@@ -63,7 +46,6 @@ public class GameEngine {
                             System.out.print("\t\t" + l_country.getD_CountryName() + ", ");
                         }
                         l_Player.issue_order();
-                        //l_Player.issue_order();
                     } else {
                         System.out.println("Player " + l_Player.getD_PlayerName() + "'s turn is skipped due to no reinforcement armies left");
                     }
@@ -72,10 +54,6 @@ public class GameEngine {
             System.out.println();
 
             //EXECUTE ORDERS PHASE
-            //Call next_Order() for each player which returns Order Object
-            //call Order.execute()
-
-            //While(l_Order != null)
             int l_NoOrdersPlayerCount = 0;
             Scanner l_Scanner = new Scanner(System.in);
             String l_Choice;
@@ -83,10 +61,7 @@ public class GameEngine {
 
                 for (Player l_Player : d_PlayerList) {
                     Orders l_Order = l_Player.next_order();
-                    //l_Order = l_Player.nextOrder();
-                    //if(l_Order != null)
                     if (l_Order != null) {
-                        //Order.execute()
                         l_Order.execute();
                         System.out.println("Order : " + l_Order.getD_countryName() + " has " + l_Order.getD_numberOfArmies() + " armies.");
                     } else {
@@ -96,12 +71,9 @@ public class GameEngine {
                 }
 
             }
-
             GameCommands.showMapCommand(new ArrayList<>());
 
-
             System.out.print("Continue Main Game Loop? (y/n) : ");
-
             System.out.println("\nEnter command: ");
             l_Choice = l_Scanner.nextLine();
 
@@ -123,7 +95,6 @@ public class GameEngine {
             if (l_Player.getD_Armies() != 0) {
                 return false;
             }
-
         }
         return true;
     }
@@ -135,11 +106,9 @@ public class GameEngine {
     public static void assignReinforcementArmies() {
         for (Player l_Player : d_PlayerList) {
             int l_CountriesOwned = l_Player.getD_AssignedCountries().size();
-
             int l_ReinforcementCount;
 
             l_ReinforcementCount = Math.max((l_CountriesOwned / 3), 3);
-
             l_Player.setD_Armies(l_ReinforcementCount);
         }
     }
@@ -148,7 +117,6 @@ public class GameEngine {
      * Assign Countries randomly among players
      */
     public static void assignCountries() {
-        //Add a method to randomly assign countries to every player
         if (d_PlayerList.isEmpty()) {
             System.out.println("No players added, add players first");
             return;
@@ -163,7 +131,6 @@ public class GameEngine {
         } catch (Exception e) {
         }
 
-        //GameCommands.showMapCommand(new ArrayList<>());
         GamePlay();
 
     }

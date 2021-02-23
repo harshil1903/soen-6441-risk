@@ -31,8 +31,6 @@ public class MapCommands {
 
         d_Map.getD_Continents().clear();
 
-        //Call MAP READER Function by passing filename.
-        //new EditMap.EditMap(d_Map);       Change Method Name, its same as class name
         try {
             d_Map = new EditMap().editMap(p_ArgumentTokens.get(0));
         } catch (Exception e) {
@@ -40,7 +38,7 @@ public class MapCommands {
             throw new InvalidMapException(e.getMessage());
 
         }
-        //System.out.println("Reached Edit Map Command. Argument List : " + p_ArgumentTokens);
+
         return true;
     }
 
@@ -57,10 +55,9 @@ public class MapCommands {
         }
 
         File l_File = new File("src/main/resources/" + p_ArgumentTokens.get(0) + ".map");
-        //Call MAP Writer Function by passing filename.
+
         new MapWriter().writeMapFile(d_Map, l_File);
 
-        //System.out.println("Reached Save Map Command. Argument List : " + p_ArgumentTokens);
     }
 
     /**
@@ -74,8 +71,6 @@ public class MapCommands {
             return;
         }
 
-
-        //Call MAP Validator Function to validate the map
         try {
             MapValidator.validateMap(d_Map);
         } catch (Exception e) {
@@ -83,8 +78,6 @@ public class MapCommands {
             System.out.println(e.getMessage());
         }
 
-
-        //System.out.println("Reached Validate Map Command. Argument List : " + p_ArgumentTokens);
     }
 
     /**
@@ -97,11 +90,8 @@ public class MapCommands {
             System.out.println("Wrong Number of Arguments provided. showmap command has no argument.");
         }
 
-
-        //Call MAP Display method.
         ShowMap.displayEditorMap(d_Map);
 
-        //System.out.println("Reached Show Map Command. Argument List : " + p_ArgumentTokens);
     }
 
     /**
@@ -121,10 +111,8 @@ public class MapCommands {
                     l_ContinentValue = Integer.parseInt(p_ArgumentTokens.get(++i));
                     System.out.println("Continent ID: " + l_ContinentName + " Control Value: " + l_ContinentValue);
 
-
                     //CALL ADD CONTINENT FUNCTION
                     MapOperations.addContinent(d_Map, l_ContinentName, l_ContinentValue);
-
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 2 arguments");
@@ -135,10 +123,8 @@ public class MapCommands {
                     l_ContinentName = p_ArgumentTokens.get(++i);
                     System.out.println("Continent ID: " + l_ContinentName);
 
-
                     //CALL REMOVE CONTINENT FUNCTION
                     MapOperations.removeContinent(d_Map, l_ContinentName);
-
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 1 argument");
@@ -171,10 +157,8 @@ public class MapCommands {
 
                     System.out.println("Country ID: " + l_CountryName + " Continent ID: " + l_ContinentName);
 
-
                     //CALL ADD COUNTRY FUNCTION
                     MapOperations.addCountry(d_Map, l_CountryName, l_ContinentName);
-
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 2 arguments");
@@ -185,10 +169,8 @@ public class MapCommands {
                     l_CountryName = p_ArgumentTokens.get(++i);
                     System.out.println("Country ID: " + l_CountryName);
 
-
                     //CALL REMOVE COUNTRY FUNCTION
                     MapOperations.removeCountry(d_Map, l_CountryName);
-
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 1 argument");
@@ -219,10 +201,8 @@ public class MapCommands {
 
                     System.out.println("Country ID: " + l_CountryName + " Neighbor Country ID: " + l_NeighborCountryName);
 
-
                     //CALL ADD NEIGHBOR COUNTRY FUNCTION
                     MapOperations.addNeighborCountry(d_Map, l_NeighborCountryName, l_CountryName);
-
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 2 arguments");
@@ -235,10 +215,8 @@ public class MapCommands {
 
                     System.out.println("Country ID: " + l_CountryName + " Neighbor Country ID: " + l_NeighborCountryName);
 
-
                     //CALL REMOVE NEIGHBOR COUNTRY FUNCTION
                     MapOperations.removeNeighborCountry(d_Map, l_NeighborCountryName, l_CountryName);
-
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 2 argument");
