@@ -55,25 +55,7 @@ public class MapWriter {
         l_Content.append(processAdjacentCountries(p_Map));
         return l_Content.toString();
     }
-
-    /**
-     * This method processes map attributes.
-     *
-     * @param p_Map object of the map is being processed
-     * @return a String that contains map properties.
-     */
-    private static StringBuilder processMapAttribute(Map p_Map) {
-        StringBuilder l_MapAttribute = new StringBuilder();
-        l_MapAttribute.append("[Map]");
-        l_MapAttribute.append("\n");
-
-        for (java.util.Map.Entry<String, String> l_KeyMap : p_Map.getD_MapData().entrySet()) {
-            l_MapAttribute.append(l_KeyMap.getKey() + "=" + l_KeyMap.getValue());
-            l_MapAttribute.append("\n");
-        }
-        return l_MapAttribute;
-    }
-
+    
     /**
      * This method processes the continents.
      *
