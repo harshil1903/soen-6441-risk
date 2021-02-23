@@ -36,10 +36,10 @@ public class MapOperations {
         l_continent.setD_ContinentName(p_ContinentName);
 
         if (p_Map.isContinentPresentInContinentList(p_ContinentName)) {
-            throw new InvalidMapException("The Continent Temp - " + p_ContinentName + "Already Exist");
+            throw new InvalidMapException("The Continent " + p_ContinentName + " Already Exist");
         } else {
             p_Map.addContinentToContinentList(l_continent);
-            System.out.println("The Continent Temp - "+p_ContinentName +"Added Successfully");
+            System.out.println("The Continent "+p_ContinentName +" Added Successfully");
         }
     }
 
@@ -64,6 +64,7 @@ public class MapOperations {
             }
         }
         p_Map.removeContinentFromContinentList(p_ContinentName);
+        System.out.println("Continent "+p_ContinentName+" removed Successfully");
     }
 
     /**
@@ -86,7 +87,7 @@ public class MapOperations {
                 l_country.setD_CountryID(l_continent.getD_Countries().size() + 1);
                 l_country.setD_ContinentID(l_continent.getD_ContinentID());
                 l_continent.addCountryToCountryList(l_country);
-                System.out.println("The Country Added Successfully");
+                System.out.println("The Country "+l_country +" Added Successfully");
             }
         }
 
@@ -106,7 +107,7 @@ public class MapOperations {
                 for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
                     if (l_adjCountry.getD_CountryName().equals(p_CountryName)) {
                         l_country.removeCountryFromAdjacentCountries(p_CountryName);
-                        System.out.println("Country remove successfully");
+                        System.out.println("Country "+p_CountryName+" remove successfully");
                     }
                 }
             }
@@ -132,7 +133,7 @@ public class MapOperations {
                     Country l_tempCountry = l_country.getCountryFromCountryName(p_NeighborName);
                     l_country.addCountryToAdjacentCountries(l_tempCountry);
                     l_tempCountry.addCountryToAdjacentCountries(l_country);
-                    System.out.println("Neighbor Country Added Successfully");
+                    System.out.println("Neighbor Country "+l_tempCountry +" Added Successfully");
                 }
             }
         }
@@ -155,7 +156,7 @@ public class MapOperations {
                     Country l_tempCountry = l_country.getCountryFromCountryName(p_NeighborName);
                     l_country.removeCountryFromAdjacentCountries(p_NeighborName);
                     l_tempCountry.removeCountryFromAdjacentCountries(p_CountryName);
-                    System.out.println("Neighbor country remove successfully");
+                    System.out.println("Neighbor country "+l_tempCountry+" remove successfully");
                 }
             }
         }
