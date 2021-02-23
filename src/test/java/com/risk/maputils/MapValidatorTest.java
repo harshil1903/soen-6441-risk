@@ -93,7 +93,7 @@ public class MapValidatorTest {
      */
     @Test
     public void validateMapForSubgraph() throws InvalidMapException{
-        
+
         assertEquals(true, !MapValidator.isMapConnectedGraph(S_Map));
     }
 
