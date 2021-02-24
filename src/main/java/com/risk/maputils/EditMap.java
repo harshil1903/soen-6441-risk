@@ -18,6 +18,9 @@ import com.risk.models.Continent;
  */
 public class EditMap {
 
+    /**
+     * Map variable that will hold map data when map is loaded.
+     */
     public static Map d_Map = new Map();
 
     /**

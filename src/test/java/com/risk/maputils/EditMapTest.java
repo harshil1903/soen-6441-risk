@@ -1,12 +1,15 @@
 package com.risk.maputils;
 
 import com.risk.exception.InvalidMapException;
-import org.junit.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.Assert.*;
 
 /**
  * This is test class for EditMap
+ *
+ * @author Chirag
  */
 public class EditMapTest {
 
