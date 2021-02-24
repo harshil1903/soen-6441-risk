@@ -51,34 +51,34 @@ public class EditMap {
     /**
      * This Method reads Continents from map file and add it to d_Map variable.
      *
-     * @param p_MapReader Scanner object that helps to read map file.
+     * @param p_mapReader Scanner object that helps to read map file.
      * @throws InvalidMapException if map is not valid.
      */
-    public static void getContinents(Scanner p_MapReader) throws InvalidMapException {
-        int l_Continent_Id = 1;
-        while (p_MapReader.hasNextLine()) {
-            String l_Line = p_MapReader.nextLine();
-            if (l_Line.equals("")) break;
-            String[] l_Parts = l_Line.split(" ");
-            String l_ContinentName = l_Parts[0];
-            int l_ControlValue = Integer.parseInt(l_Parts[1]);
-            Continent l_Continent = new Continent(l_Continent_Id, l_ContinentName, l_ControlValue);
-            d_Map.addContinentToContinentList(l_Continent);
-            l_Continent_Id++;
+    public static void getContinents(Scanner p_mapReader) throws InvalidMapException {
+        int l_continentID = 1;
+        while (p_mapReader.hasNextLine()) {
+            String l_line = p_mapReader.nextLine();
+            if (l_line.equals("")) break;
+            String[] l_parts = l_line.split(" ");
+            String l_continentName = l_parts[0];
+            int l_controlValue = Integer.parseInt(l_parts[1]);
+            Continent l_continent = new Continent(l_continentID, l_continentName, l_controlValue);
+            d_Map.addContinentToContinentList(l_continent);
+            l_continentID++;
         }
     }
 
     /**
      * This method gets country from d_Map.
      *
-     * @param p_Country_Id id of the country.
+     * @param p_countryID id of the country.
      * @return the country object for used in GetCountries.
      */
-    public static Country getCountry(int p_Country_Id) {
-        for (Continent l_Continent : d_Map.getD_Continents()) {
-            for (Country l_Country : l_Continent.getD_Countries()) {
-                if (l_Country.getD_CountryID() == p_Country_Id) {
-                    return l_Country;
+    public static Country getCountry(int p_countryID) {
+        for (Continent l_continent : d_Map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                if (l_country.getD_CountryID() == p_countryID) {
+                    return l_country;
                 }
             }
         }
@@ -88,41 +88,40 @@ public class EditMap {
     /**
      * This Method reads Countries from map file and add it to list in Continent.
      *
-     * @param p_MapReader Scanner objects that helps to read the map.
+     * @param p_mapReader Scanner objects that helps to read the map.
      * @throws InvalidMapException if map is not valid.
      */
-    public static void getCountries(Scanner p_MapReader) throws InvalidMapException {
-        while (p_MapReader.hasNextLine()) {
-            String l_Line = p_MapReader.nextLine();
-            if (l_Line.equals("")) break;
-            String[] l_Parts = l_Line.split(" ");
-            int l_Continent_Id = Integer.parseInt(l_Parts[2]);
-            Continent l_Continent = d_Map.getContinentFromContinentList(l_Continent_Id);
-            int l_Country_Id = Integer.parseInt(l_Parts[0]);
-            String l_CountryName = l_Parts[1];
-            int l_ContinentId = Integer.parseInt(l_Parts[2]);
-            Country l_Country = new Country(l_Country_Id, l_CountryName, l_ContinentId);
-            l_Continent.addCountryToCountryList(l_Country);
+    public static void getCountries(Scanner p_mapReader) throws InvalidMapException {
+        while (p_mapReader.hasNextLine()) {
+            String l_line = p_mapReader.nextLine();
+            if (l_line.equals("")) break;
+            String[] l_parts = l_line.split(" ");
+            int l_continentID = Integer.parseInt(l_parts[2]);
+            Continent l_continent = d_Map.getContinentFromContinentList(l_continentID);
+            int l_countryID = Integer.parseInt(l_parts[0]);
+            String l_countryName = l_parts[1];
+            Country l_country = new Country(l_countryID, l_countryName, l_continentID);
+            l_continent.addCountryToCountryList(l_country);
         }
     }
 
     /**
      * This Method reads Adjacent Countries to a country and it to Adjacency countries list.
      *
-     * @param p_MapReader Scanner object that helps to read map.
+     * @param p_mapReader Scanner object that helps to read map.
      * @throws InvalidMapException if map is not valid.
      */
-    public static void getAdjacentCountries(Scanner p_MapReader) throws InvalidMapException {
-        while (p_MapReader.hasNextLine()) {
-            String l_Line = p_MapReader.nextLine();
-            if (l_Line.equals("")) break;
-            String[] l_Parts = l_Line.split(" ");
-            int l_Country_Id = Integer.parseInt(l_Parts[0]);
-            Country l_Country = getCountry(l_Country_Id);
-            for (int i = 1; i < l_Parts.length; i++) {
-                int l_Neighbour_Id = Integer.parseInt(l_Parts[i]);
-                Country l_Neighbour = getCountry(l_Neighbour_Id);
-                l_Country.addCountryToAdjacentCountries(l_Neighbour);
+    public static void getAdjacentCountries(Scanner p_mapReader) throws InvalidMapException {
+        while (p_mapReader.hasNextLine()) {
+            String l_line = p_mapReader.nextLine();
+            if (l_line.equals("")) break;
+            String[] l_parts = l_line.split(" ");
+            int l_countryID = Integer.parseInt(l_parts[0]);
+            Country l_country = getCountry(l_countryID);
+            for (int i = 1; i < l_parts.length; i++) {
+                int l_neighbourID = Integer.parseInt(l_parts[i]);
+                Country l_neighbour = getCountry(l_neighbourID);
+                l_country.addCountryToAdjacentCountries(l_neighbour);
             }
         }
     }
@@ -130,22 +129,22 @@ public class EditMap {
     /**
      * This Method Loads the Map passed to it.
      *
-     * @param p_Map Reads the map file.
+     * @param p_map Reads the map file.
      */
-    public static void loadMap(File p_Map) {
-        Scanner MapReader = null;
+    public static void loadMap(File p_map) {
+        Scanner l_mapReader = null;
         try {
-            MapReader = new Scanner(p_Map);
-            while (MapReader.hasNextLine()) {
-                String l_Line = MapReader.nextLine();
-                if (l_Line.equals("[continents]")) {
-                    getContinents(MapReader);
+            l_mapReader = new Scanner(p_map);
+            while (l_mapReader.hasNextLine()) {
+                String l_line = l_mapReader.nextLine();
+                if (l_line.equals("[continents]")) {
+                    getContinents(l_mapReader);
                 }
-                if (l_Line.equals("[countries]")) {
-                    getCountries(MapReader);
+                if (l_line.equals("[countries]")) {
+                    getCountries(l_mapReader);
                 }
-                if (l_Line.equals("[borders]")) {
-                    getAdjacentCountries(MapReader);
+                if (l_line.equals("[borders]")) {
+                    getAdjacentCountries(l_mapReader);
                 }
             }
             System.out.println("Loaded map successfully form existing domination file");
@@ -166,15 +165,15 @@ public class EditMap {
     /**
      * This Method loads map and process it accordingly.
      *
-     * @param p_FileName Filename to be loaded if already present or to be created if not.
+     * @param p_fileName Filename to be loaded if already present or to be created if not.
      * @return the Map object with loaded values.
      * @throws InvalidMapException if map is not valid.
      */
-    public static Map editMap(String p_FileName) throws InvalidMapException {
-        String l_Path = "src/main/resources/";
-        String l_FileName = p_FileName + ".map";
-        File l_Map = new File(l_Path + l_FileName);
-        loadMap(l_Map);
+    public static Map editMap(String p_fileName) throws InvalidMapException {
+        String l_path = "src/main/resources/";
+        String l_fileName = p_fileName + ".map";
+        File l_map = new File(l_path + l_fileName);
+        loadMap(l_map);
         return d_Map;
     }
 }

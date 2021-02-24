@@ -10,10 +10,10 @@ public class InvalidMapException extends Exception {
     /**
      * This method throws user define exception if map is not valid.
      *
-     * @param p_Message Message for the exception
+     * @param p_message Message for the exception
      */
-    public InvalidMapException(String p_Message) {
-        super(p_Message);
+    public InvalidMapException(String p_message) {
+        super(p_message);
 
     }
 

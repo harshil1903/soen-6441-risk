@@ -20,82 +20,81 @@ import static com.risk.main.Main.d_PlayerList;
  */
 public class AssignCountries {
     /**
-     * generates random number between zero and p_High-1.
+     * generates random number between zero and p_high-1.
      *
-     * @param p_High upper bound for random number generation.
+     * @param p_high upper bound for random number generation.
      * @return random number generated.
      */
-    public static int getRandomNumber(int p_High) {
-        Random l_Random = new Random();
-        int l_Low = 0;
-        int l_Number = l_Random.nextInt(p_High - l_Low) + l_Low;
-        return l_Number;
+    public static int getRandomNumber(int p_high) {
+        Random l_random = new Random();
+        int l_low = 0;
+        int l_number = l_random.nextInt(p_high - l_low) + l_low;
+        return l_number;
     }
 
     /**
      * helps to fill arraylist with countries present in map.
      *
-     * @param p_Map contains map data
+     * @param p_map contains map data
      * @return filled arraylist of countries
      * @throws InvalidMapException if Map data is not present.
      */
-    public static ArrayList<Country> fillCountryList(Map p_Map) throws InvalidMapException {
-        ArrayList<Country> l_Countries = new ArrayList<>();
-        for (Continent l_Continent : p_Map.getD_Continents()) {
-            for (Country l_Country : l_Continent.getD_Countries()) {
-                l_Countries.add(l_Country);
+    public static ArrayList<Country> fillCountryList(Map p_map) throws InvalidMapException {
+        ArrayList<Country> l_countries = new ArrayList<>();
+        for (Continent l_continent : p_map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                l_countries.add(l_country);
             }
         }
-        return l_Countries;
+        return l_countries;
     }
 
     /**
      * gets a random country form the list and removes it.
      *
-     * @param p_Countries holds the list of all countries yet to assigned.
+     * @param p_countries holds the list of all countries yet to assigned.
      * @return the randomly selected Country.
      */
-    public static Country getRandomCountry(ArrayList<Country> p_Countries) {
-        Country l_Country = null;
-        if (p_Countries.size() != 0) {
-            int l_Num = getRandomNumber(p_Countries.size());
-            l_Country = p_Countries.get(l_Num);
-            int cid = l_Country.getD_CountryID();
-            p_Countries.remove(l_Num);
+    public static Country getRandomCountry(ArrayList<Country> p_countries) {
+        Country l_country = null;
+        if (p_countries.size() != 0) {
+            int l_num = getRandomNumber(p_countries.size());
+            l_country = p_countries.get(l_num);
+            p_countries.remove(l_num);
         }
-        return l_Country;
+        return l_country;
     }
 
     /**
      * assign random countries to players
      *
-     * @param p_List      contains list of players.
-     * @param p_Countries contains list of countries.
-     * @param p_HashMap   contains no of countries left to assign to that player.
+     * @param p_list      contains list of players.
+     * @param p_countries contains list of countries.
+     * @param p_hashMap   contains no of countries left to assign to that player.
      */
-    public static void assignRandomCountries(ArrayList<Player> p_List, ArrayList<Country> p_Countries,
-                                             HashMap<Integer, Integer> p_HashMap) {
+    public static void assignRandomCountries(ArrayList<Player> p_list, ArrayList<Country> p_countries,
+                                             HashMap<Integer, Integer> p_hashMap) {
 
-        for (int i = 0; i < p_List.size(); i++) {
-            int l_Frequency = p_HashMap.get(i);
-            while (l_Frequency != 0) {
-                Country l_RandomCountry = getRandomCountry(p_Countries);
-                p_List.get(i).addCountryToAssignedCountries(l_RandomCountry);
+        for (int i = 0; i < p_list.size(); i++) {
+            int l_frequency = p_hashMap.get(i);
+            while (l_frequency != 0) {
+                Country l_randomCountry = getRandomCountry(p_countries);
+                p_list.get(i).addCountryToAssignedCountries(l_randomCountry);
 
                 for (Continent l_continent : d_Map.getD_Continents()) {
                     for (Country l_country : l_continent.getD_Countries()) {
-                        if (l_country.getD_CountryName().equals(l_RandomCountry.getD_CountryName())) {
-                            l_country.setD_Player(p_List.get(i));
+                        if (l_country.getD_CountryName().equals(l_randomCountry.getD_CountryName())) {
+                            l_country.setD_Player(p_list.get(i));
                         }
                     }
                 }
-                l_Frequency--;
+                l_frequency--;
             }
         }
-        while (p_Countries.size() != 0) {
-            Country l_RandomCountry = getRandomCountry(p_Countries);
-            int playerId = getRandomNumber(p_List.size());
-            p_List.get(playerId).addCountryToAssignedCountries(l_RandomCountry);
+        while (p_countries.size() != 0) {
+            Country l_randomCountry = getRandomCountry(p_countries);
+            int l_playerID = getRandomNumber(p_list.size());
+            p_list.get(l_playerID).addCountryToAssignedCountries(l_randomCountry);
         }
     }
 
@@ -106,12 +105,12 @@ public class AssignCountries {
      * @throws InvalidMapException if Map is not present.
      */
     public static void assignCountries() throws InvalidMapException {
-        ArrayList<Country> l_Countries = fillCountryList(d_Map);
-        HashMap<Integer, Integer> map = new HashMap<>();
+        ArrayList<Country> l_countries = fillCountryList(d_Map);
+        HashMap<Integer, Integer> l_map = new HashMap<>();
         for (int i = 0; i < d_PlayerList.size(); i++) {
-            map.put(i, l_Countries.size() / d_PlayerList.size());
+            l_map.put(i, l_countries.size() / d_PlayerList.size());
         }
-        assignRandomCountries(d_PlayerList, l_Countries, map);
+        assignRandomCountries(d_PlayerList, l_countries, l_map);
         System.out.println("Assigned countries randomly to players");
     }
 }

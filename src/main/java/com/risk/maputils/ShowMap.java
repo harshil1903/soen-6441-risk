@@ -11,20 +11,18 @@ import static com.risk.main.Main.d_PlayerList;
  * This Class is used for displaying the loaded map as well
  * as displaying the game map.
  */
-
-
 public class ShowMap {
 
     /**
      * This method is used to display the Contents of the map i.e the continents,
      * countries and the adjacent countries.
      *
-     * @param p_Map Loaded MAP
+     * @param p_map Loaded MAP
      */
-    public static void displayEditorMap(Map p_Map) {
+    public static void displayEditorMap(Map p_map) {
 
         System.out.println("DISPLAYING MAP");
-        for (Continent l_continent : p_Map.getD_Continents()) {
+        for (Continent l_continent : p_map.getD_Continents()) {
             System.out.println("Continent Name : " + l_continent.getD_ContinentName());
             System.out.println("Countries in the Continent : \n");
             for (Country l_country : l_continent.getD_Countries()) {
@@ -39,9 +37,16 @@ public class ShowMap {
         }
     }
 
-    public static void displayGameMap(Map p_Map) {
+    /**
+     * This method is used to display the Contents of the map i.e the continents,
+     * countries and the adjacent countries along with which player owns the countries
+     * and how many armies are present in each country
+     *
+     * @param p_map the p map
+     */
+    public static void displayGameMap(Map p_map) {
         System.out.println("\n\nDISPLAYING GAME MAP");
-        for (Continent l_continent : p_Map.getD_Continents()) {
+        for (Continent l_continent : p_map.getD_Continents()) {
             System.out.println("Continent Name : " + l_continent.getD_ContinentName());
             System.out.println("Countries in the Continent : \n");
 
@@ -61,10 +66,10 @@ public class ShowMap {
         }
 
         System.out.println("\nPLAYER INFO");
-        for (Player l_Player : d_PlayerList) {
-            System.out.println("\nPlayer " + l_Player.getD_PlayerName().toUpperCase());
+        for (Player l_player : d_PlayerList) {
+            System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase());
             System.out.println("You own the following Countries along with army count in it.");
-            for (Country l_country : l_Player.getD_AssignedCountries()) {
+            for (Country l_country : l_player.getD_AssignedCountries()) {
                 System.out.println("\t" + l_country.getD_CountryName() + " \tArmies : " + l_country.getD_NumberOfArmies());
             }
         }

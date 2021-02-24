@@ -12,70 +12,70 @@ import java.util.List;
  */
 public class MapCommandParser {
 
-    public static boolean d_MapLoaded = false;
+    public static boolean d_mapLoaded = false;
 
     /**
      * Parses map related commands and calls the appropriate MapCommand method.
      *
-     * @param p_Action    command name
-     * @param p_Arguments command options/arguments (if any)
+     * @param p_action    command name
+     * @param p_arguments command options/arguments (if any)
      */
-    public static void mapCommandParser(String p_Action, String p_Arguments) {
+    public static void mapCommandParser(String p_action, String p_arguments) {
 
-        String[] l_ArgumentTokens = p_Arguments.split(" ");
-        List<String> l_ArgumentList = new ArrayList<>(Arrays.asList(l_ArgumentTokens.clone()));
+        String[] l_argumentTokens = p_arguments.split(" ");
+        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
 
-        if (!l_ArgumentList.isEmpty()) {
-            l_ArgumentList.remove(0);
+        if (!l_argumentList.isEmpty()) {
+            l_argumentList.remove(0);
         }
 
-        switch (p_Action) {
+        switch (p_action) {
             case "editmap":
                 try {
-                    d_MapLoaded = MapCommands.editMapCommand(l_ArgumentList);
+                    d_mapLoaded = MapCommands.editMapCommand(l_argumentList);
                 } catch (Exception e) {
                 }
 
                 break;
 
             case "editcontinent":
-                if (d_MapLoaded) {
-                    MapCommands.editContinentCommand(l_ArgumentList);
+                if (d_mapLoaded) {
+                    MapCommands.editContinentCommand(l_argumentList);
                     break;
                 }
                 break;
 
             case "editcountry":
-                if (d_MapLoaded) {
-                    MapCommands.editCountryCommand(l_ArgumentList);
+                if (d_mapLoaded) {
+                    MapCommands.editCountryCommand(l_argumentList);
                     break;
                 }
                 break;
 
             case "editneighbor":
-                if (d_MapLoaded) {
-                    MapCommands.editNeighborCommand(l_ArgumentList);
+                if (d_mapLoaded) {
+                    MapCommands.editNeighborCommand(l_argumentList);
                     break;
                 }
                 break;
 
             case "validatemap":
-                if (d_MapLoaded) {
-                    MapCommands.validateMapCommand(l_ArgumentList);
+                if (d_mapLoaded) {
+                    MapCommands.validateMapCommand(l_argumentList);
                     break;
                 }
                 break;
 
             case "savemap":
-                if (d_MapLoaded) {
-                    MapCommands.saveMapCommand(l_ArgumentList);
+                if (d_mapLoaded) {
+                    MapCommands.saveMapCommand(l_argumentList);
                     break;
                 }
                 break;
 
             case "showmap":
-                if (d_MapLoaded) {
-                    MapCommands.showMapCommand(l_ArgumentList);
+                if (d_mapLoaded) {
+                    MapCommands.showMapCommand(l_argumentList);
                     break;
                 }
                 break;
@@ -87,7 +87,7 @@ public class MapCommandParser {
 
         }
 
-        if (!d_MapLoaded) {
+        if (!d_mapLoaded) {
             System.out.println("No Map is loaded yet, use editmap command to load map");
         }
 
