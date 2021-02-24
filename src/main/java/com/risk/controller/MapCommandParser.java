@@ -12,6 +12,9 @@ import java.util.List;
  */
 public class MapCommandParser {
 
+    /**
+     * Contains true if map is loaded otherwise false
+     */
     public static boolean d_mapLoaded = false;
 
     /**

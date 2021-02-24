@@ -21,6 +21,9 @@ import static com.risk.main.Main.d_PlayerList;
  */
 public class GameEngine {
 
+    /**
+     * Contains true if game is loaded otherwise false.
+     */
     public static boolean d_gameLoaded = false;
 
     /**

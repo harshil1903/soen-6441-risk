@@ -15,7 +15,13 @@ import java.util.Scanner;
  * @author Harshil
  */
 public class Main {
+    /**
+     * Contains map data to be used.
+     */
     public static Map d_Map = new Map();
+    /**
+     * Contains list of players.
+     */
     public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
 
     /**
