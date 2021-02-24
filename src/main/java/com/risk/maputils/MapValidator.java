@@ -248,7 +248,7 @@ public class MapValidator {
                 if (!l_countryList.contains(l_country)) {
                     l_countryList.add(l_country);
                 } else {
-                    throw new InvalidMapException("Country:" + l_country.getD_CountryName() + "must belong to only one continent.");
+                    throw new InvalidMapException("Country:" + l_country.getD_CountryName() + " must belong to only one continent.");
                 }
             }
         }
