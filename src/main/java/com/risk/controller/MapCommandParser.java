@@ -80,6 +80,10 @@ public class MapCommandParser {
                 }
                 break;
 
+            default:
+                System.out.println("Invalid Command");
+                break;
+
 
         }
 

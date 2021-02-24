@@ -21,7 +21,7 @@ import static com.risk.main.Main.d_PlayerList;
  */
 public class GameEngine {
 
-    public static boolean d_GameLoaded = false;
+    public static boolean d_gameLoaded = false;
 
     /**
      * Game play
@@ -30,43 +30,43 @@ public class GameEngine {
     public static void GamePlay() {
 
         //MAIN GAME LOOP
-        boolean l_ContinueMainGameLoop = true;
-        while (l_ContinueMainGameLoop) {
+        boolean l_continueMainGameLoop = true;
+        while (l_continueMainGameLoop) {
             //REINFORCEMENT PHASE
             assignReinforcementArmies();
 
             //ISSUE ORDERS PHASE
             while (!checkReinforcementArmiesCount()) {
-                for (Player l_Player : d_PlayerList) {
-                    if (l_Player.getD_Armies() != 0) {
-                        System.out.println("\n\nPlayer " + l_Player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
-                        System.out.println("You have " + l_Player.getD_Armies() + " number of reinforcement armies");
+                for (Player l_player : d_PlayerList) {
+                    if (l_player.getD_Armies() != 0) {
+                        System.out.println("\n\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
+                        System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
                         System.out.println("You own the following Countries");
-                        for (Country l_country : l_Player.getD_AssignedCountries()) {
+                        for (Country l_country : l_player.getD_AssignedCountries()) {
                             System.out.print("\t\t" + l_country.getD_CountryName() + ", ");
                         }
-                        l_Player.issueOrder();
+                        l_player.issueOrder();
                     } else {
-                        System.out.println("Player " + l_Player.getD_PlayerName() + "'s turn is skipped due to no reinforcement armies left");
+                        System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped due to no reinforcement armies left");
                     }
                 }
             }
             System.out.println();
 
             //EXECUTE ORDERS PHASE
-            int l_NoOrdersPlayerCount = 0;
-            Scanner l_Scanner = new Scanner(System.in);
-            String l_Choice;
-            while (l_NoOrdersPlayerCount <= d_PlayerList.size()) {
+            int l_noOrdersPlayerCount = 0;
+            Scanner l_scanner = new Scanner(System.in);
+            String l_choice;
+            while (l_noOrdersPlayerCount <= d_PlayerList.size()) {
 
-                for (Player l_Player : d_PlayerList) {
-                    Orders l_Order = l_Player.next_order();
-                    if (l_Order != null) {
-                        l_Order.execute();
-                        System.out.println("Order : " + l_Order.getD_countryName() + " has " + l_Order.getD_numberOfArmies() + " armies.");
+                for (Player l_player : d_PlayerList) {
+                    Orders l_order = l_player.nextOrder();
+                    if (l_order != null) {
+                        l_order.execute();
+                        System.out.println("Order : " + l_order.getD_CountryName() + " has " + l_order.getD_NumberOfArmies() + " armies.");
                     } else {
-                        ++l_NoOrdersPlayerCount;
-                        System.out.println("Number of Players with No Orders : " + l_NoOrdersPlayerCount);
+                        ++l_noOrdersPlayerCount;
+                        System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);
                     }
                 }
 
@@ -75,10 +75,10 @@ public class GameEngine {
 
             System.out.print("Continue Main Game Loop? (y/n) : ");
             System.out.println("\nEnter command: ");
-            l_Choice = l_Scanner.nextLine();
+            l_choice = l_scanner.nextLine();
 
-            if (l_Choice.equals("n")) {
-                l_ContinueMainGameLoop = false;
+            if (l_choice.equals("n")) {
+                l_continueMainGameLoop = false;
             }
 
         }
@@ -91,8 +91,8 @@ public class GameEngine {
      * @return whether to continue issue orders or not
      */
     public static boolean checkReinforcementArmiesCount() {
-        for (Player l_Player : d_PlayerList) {
-            if (l_Player.getD_Armies() != 0) {
+        for (Player l_player : d_PlayerList) {
+            if (l_player.getD_Armies() != 0) {
                 return false;
             }
         }
@@ -104,12 +104,12 @@ public class GameEngine {
      * Assign reinforcement armies to each player in the beginning of each turn.
      */
     public static void assignReinforcementArmies() {
-        for (Player l_Player : d_PlayerList) {
-            int l_CountriesOwned = l_Player.getD_AssignedCountries().size();
-            int l_ReinforcementCount;
+        for (Player l_player : d_PlayerList) {
+            int l_countriesOwned = l_player.getD_AssignedCountries().size();
+            int l_reinforcementCount;
 
-            l_ReinforcementCount = Math.max((l_CountriesOwned / 3), 3);
-            l_Player.setD_Armies(l_ReinforcementCount);
+            l_reinforcementCount = Math.max((l_countriesOwned / 3), 3);
+            l_player.setD_Armies(l_reinforcementCount);
         }
     }
 
@@ -139,21 +139,21 @@ public class GameEngine {
     /**
      * Parses GAME related commands and calls the appropriate Game Command method.
      *
-     * @param p_Action    command name
-     * @param p_Arguments command options/arguments (if any)
+     * @param p_action    command name
+     * @param p_arguments command options/arguments (if any)
      */
-    public static void gameCommandParser(String p_Action, String p_Arguments) {
-        String[] l_ArgumentTokens = p_Arguments.split(" ");
-        List<String> l_ArgumentList = new ArrayList<>(Arrays.asList(l_ArgumentTokens.clone()));
+    public static void gameCommandParser(String p_action, String p_arguments) {
+        String[] l_argumentTokens = p_arguments.split(" ");
+        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
 
-        if (!l_ArgumentList.isEmpty()) {
-            l_ArgumentList.remove(0);
+        if (!l_argumentList.isEmpty()) {
+            l_argumentList.remove(0);
         }
 
-        switch (p_Action) {
+        switch (p_action) {
             case "loadmap":
                 try {
-                    d_GameLoaded = GameCommands.loadMapCommand(l_ArgumentList);
+                    d_gameLoaded = GameCommands.loadMapCommand(l_argumentList);
                 } catch (Exception e) {
                     System.out.println("Could not load the requested map.");
                 }
@@ -161,28 +161,32 @@ public class GameEngine {
                 break;
 
             case "gameplayer":
-                if (d_GameLoaded) {
-                    GameCommands.gamePlayerCommand(l_ArgumentList);
+                if (d_gameLoaded) {
+                    GameCommands.gamePlayerCommand(l_argumentList);
                     break;
                 }
                 break;
 
             case "assigncountries":
-                if (d_GameLoaded) {
+                if (d_gameLoaded) {
                     assignCountries();
                     break;
                 }
                 break;
 
             case "showmap":
-                if (d_GameLoaded) {
-                    GameCommands.showMapCommand(l_ArgumentList);
+                if (d_gameLoaded) {
+                    GameCommands.showMapCommand(l_argumentList);
                     break;
                 }
                 break;
+
+            default:
+                System.out.println("Invalid Command \nAllowed Commands are : loadmap, gameplayer, assigncountries, showmap");
+                break;
         }
 
-        if (!d_GameLoaded) {
+        if (!d_gameLoaded) {
             System.out.println("No Map is loaded yet, use loadmap command to load map");
         }
 
@@ -192,28 +196,28 @@ public class GameEngine {
     /**
      * Scan and parse Game related Commands Only
      *
-     * @param p_Action    command name
-     * @param p_Arguments command options/arguments (if any)
+     * @param p_action    command name
+     * @param p_arguments command options/arguments (if any)
      */
-    public static void checkNextGameCommands(String p_Action, String p_Arguments) {
+    public static void checkNextGameCommands(String p_action, String p_arguments) {
 
-        gameCommandParser(p_Action, p_Arguments);
+        gameCommandParser(p_action, p_arguments);
 
-        Scanner l_Scanner = new Scanner(System.in);
-        String l_Command;
+        Scanner l_scanner = new Scanner(System.in);
+        String l_command;
 
         System.out.println("Enter command: ");
-        l_Command = l_Scanner.nextLine();
+        l_command = l_scanner.nextLine();
 
-        while (!l_Command.equals("EXITGAME")) {
-            String l_Action = l_Command.split(" ")[0];
+        while (!l_command.equals("EXITGAME")) {
+            String l_action = l_command.split(" ")[0];
 
-            String l_Arguments = l_Command.substring(l_Action.length());
+            String l_arguments = l_command.substring(l_action.length());
 
-            gameCommandParser(l_Action, l_Arguments);
+            gameCommandParser(l_action, l_arguments);
 
             System.out.println("Enter command: ");
-            l_Command = l_Scanner.nextLine();
+            l_command = l_scanner.nextLine();
         }
     }
 

@@ -7,33 +7,33 @@ package com.risk.models;
  * @author Parth Navsariwala
  */
 public class Orders {
-    String d_CountryName;
-    Country d_Country;
-    int d_NumberOfArmies;
+    String d_countryName;
+    Country d_country;
+    int d_numberOfArmies;
 
     /**
      * constructor for the Orders class
      */
     public Orders() {
-        d_Country = new Country();
+        d_country = new Country();
     }
 
     /**
      * Sets country Id
      *
-     * @param d_CountryName country Id
+     * @param d_countryName country Id
      */
-    public void setD_countryName(String d_CountryName) {
-        this.d_CountryName = d_CountryName;
+    public void setD_CountryName(String d_countryName) {
+        this.d_countryName = d_countryName;
     }
 
     /**
      * Sets number of armies
      *
-     * @param d_NumberOfArmies number of armies
+     * @param d_numberOfArmies number of armies
      */
-    public void setD_numberOfArmies(int d_NumberOfArmies) {
-        this.d_NumberOfArmies = d_NumberOfArmies;
+    public void setD_NumberOfArmies(int d_numberOfArmies) {
+        this.d_numberOfArmies = d_numberOfArmies;
     }
 
     /**
@@ -41,8 +41,8 @@ public class Orders {
      *
      * @return country ID
      */
-    public String getD_countryName() {
-        return d_CountryName;
+    public String getD_CountryName() {
+        return d_countryName;
     }
 
     /**
@@ -50,8 +50,8 @@ public class Orders {
      *
      * @return number of armies
      */
-    public int getD_numberOfArmies() {
-        return d_NumberOfArmies;
+    public int getD_NumberOfArmies() {
+        return d_numberOfArmies;
     }
 
     /**
@@ -59,8 +59,8 @@ public class Orders {
      * Set number of army in each player country
      */
     public void execute() {
-        int l_PreviousArmies = d_Country.getCountryFromCountryName(d_CountryName).getD_NumberOfArmies();
-        d_Country.getCountryFromCountryName(d_CountryName).setD_NumberOfArmies(d_NumberOfArmies + l_PreviousArmies);
+        int l_previousArmies = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
+        d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
     }
 
 }

@@ -20,7 +20,7 @@ public class EditMapTest {
      */
     @Test
     public void editMapFilePresent() throws InvalidMapException {
-        assertFalse(EditMap.editMap("europe").d_Continents.isEmpty());
+        assertFalse(EditMap.editMap("europe").d_continents.isEmpty());
     }
 
     /**
@@ -30,7 +30,7 @@ public class EditMapTest {
      */
     @Test
     public void editMapFileNotPresent() throws InvalidMapException {
-        assertTrue(EditMap.editMap("file not present").d_Continents.isEmpty());
+        assertTrue(EditMap.editMap("file not present").d_continents.isEmpty());
     }
 
 }

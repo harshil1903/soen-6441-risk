@@ -33,16 +33,16 @@ public class Main {
      * The Game execution begins from this method.
      */
     public static void runGame() {
-        Scanner l_Scanner = new Scanner(System.in);
-        String l_Command;
+        Scanner l_scanner = new Scanner(System.in);
+        String l_command;
 
         System.out.println("Enter command: ");
-        l_Command = l_Scanner.nextLine();
+        l_command = l_scanner.nextLine();
 
-        while (!l_Command.equals("EXIT")) {
-            compareCommand(l_Command);
+        while (!l_command.equals("EXIT")) {
+            compareCommand(l_command);
             System.out.println("Enter command: ");
-            l_Command = l_Scanner.nextLine();
+            l_command = l_scanner.nextLine();
         }
 
         System.out.println("GAME HAS ENDED");
@@ -52,21 +52,21 @@ public class Main {
     /**
      * The method compares the command input from user to check what type of command is entered.
      *
-     * @param p_Command command line input
+     * @param p_command command line input
      */
-    public static void compareCommand(String p_Command) {
-        String l_Action = p_Command.split(" ")[0];
+    public static void compareCommand(String p_command) {
+        String l_action = p_command.split(" ")[0];
 
-        String l_Arguments = p_Command.substring(l_Action.length());
+        String l_arguments = p_command.substring(l_action.length());
 
-        List<String> l_GameCommands = Arrays.asList("loadmap");
+        List<String> l_gameCommands = Arrays.asList("loadmap");
 
-        List<String> l_MapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
+        List<String> l_mapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
 
-        if (l_MapCommands.contains(l_Action)) {
-            MapCommandParser.mapCommandParser(l_Action, l_Arguments);
-        } else if (l_GameCommands.contains(l_Action)) {
-            GameEngine.checkNextGameCommands(l_Action, l_Arguments);
+        if (l_mapCommands.contains(l_action)) {
+            MapCommandParser.mapCommandParser(l_action, l_arguments);
+        } else if (l_gameCommands.contains(l_action)) {
+            GameEngine.checkNextGameCommands(l_action, l_arguments);
 
         } else {
             System.out.println("Invalid Command, Try again");

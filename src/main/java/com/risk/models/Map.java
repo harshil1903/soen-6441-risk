@@ -14,15 +14,15 @@ import java.util.Observable;
  */
 public class Map extends Observable {
 
-    public HashMap<String, String> d_MapData;
-    public List<Continent> d_Continents;
+    public HashMap<String, String> d_mapData;
+    public List<Continent> d_continents;
 
     /**
      * Default Constructor
      */
     public Map() {
-        d_MapData = new HashMap<String, String>();
-        d_Continents = new ArrayList<Continent>();
+        d_mapData = new HashMap<String, String>();
+        d_continents = new ArrayList<Continent>();
     }
 
 
@@ -32,16 +32,16 @@ public class Map extends Observable {
      * @return map data
      */
     public HashMap<String, String> getD_MapData() {
-        return d_MapData;
+        return d_mapData;
     }
 
     /**
      * Sets map data in a HashMap format
      *
-     * @param p_MapData map data
+     * @param p_mapData map data
      */
-    public void setD_MapData(HashMap<String, String> p_MapData) {
-        d_MapData = p_MapData;
+    public void setD_MapData(HashMap<String, String> p_mapData) {
+        d_mapData = p_mapData;
     }
 
     /**
@@ -50,62 +50,61 @@ public class Map extends Observable {
      * @return continent list
      */
     public List<Continent> getD_Continents() {
-        return d_Continents;
+        return d_continents;
     }
 
     /**
      * Sets a list of continent to the map.
      *
-     * @param p_Continents continent list
+     * @param p_continents continent list
      */
-    public void setD_Continents(List<Continent> p_Continents) {
-        d_Continents = p_Continents;
+    public void setD_Continents(List<Continent> p_continents) {
+        d_continents = p_continents;
     }
 
 
     /**
      * Add continent to continent list.
      *
-     * @param p_Continent continent
+     * @param p_continent continent
      */
-    public void addContinentToContinentList(Continent p_Continent) {
-        //To be finished later
-        d_Continents.add(p_Continent);
+    public void addContinentToContinentList(Continent p_continent) {
+        d_continents.add(p_continent);
     }
 
     /**
      * This method returns continent from continents list.
      *
-     * @param p_ContinentId gives the id of the continent to be fetched.
+     * @param p_continentId gives the id of the continent to be fetched.
      * @return matching continent from the list.
      */
-    public Continent getContinentFromContinentList(int p_ContinentId) {
-        Continent l_Continent = d_Continents.get(p_ContinentId - 1);
-        return l_Continent;
+    public Continent getContinentFromContinentList(int p_continentId) {
+        Continent l_continent = d_continents.get(p_continentId - 1);
+        return l_continent;
     }
 
     /**
      * Remove continent from continent list.
      *
-     * @param p_ContinentName continent
+     * @param p_continentName continent
      */
-    public void removeContinentFromContinentList(String p_ContinentName) {
-        Continent l_ContinentToBeRemoved = new Continent().getContinentFromContinentName(p_ContinentName);
+    public void removeContinentFromContinentList(String p_continentName) {
+        Continent l_continentToBeRemoved = new Continent().getContinentFromContinentName(p_continentName);
 
-        System.out.println("\n Continent Remove Info  " + l_ContinentToBeRemoved.getD_ContinentName() + " " + l_ContinentToBeRemoved.getD_ContinentID());
+        System.out.println("\n Continent Remove Info  " + l_continentToBeRemoved.getD_ContinentName() + " " + l_continentToBeRemoved.getD_ContinentID());
 
-        d_Continents.remove(l_ContinentToBeRemoved);
+        d_continents.remove(l_continentToBeRemoved);
     }
 
     /**
      * TO check if continent present in continent list
      *
-     * @param p_ContinentName continent
+     * @param p_continentName continent
      * @return whether Continent is present in Map or not
      */
-    public boolean isContinentPresentInContinentList(String p_ContinentName) {
-        Continent l_Continent = new Continent().getContinentFromContinentName(p_ContinentName);
+    public boolean isContinentPresentInContinentList(String p_continentName) {
+        Continent l_continent = new Continent().getContinentFromContinentName(p_continentName);
 
-        return d_Continents.contains(l_Continent);
+        return d_continents.contains(l_continent);
     }
 }

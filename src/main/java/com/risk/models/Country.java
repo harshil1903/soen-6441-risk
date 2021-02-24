@@ -12,47 +12,47 @@ import static com.risk.main.Main.d_Map;
  * @author Harshil
  */
 public class Country {
-    private int d_CountryID;
-    private int d_ContinentID;
-    private String d_ContinentName;
-    private String d_CountryName;
-    private Continent d_BelongToContinent;
-    private Player d_Player;
-    private List<Country> d_AdjacentCountries;
-    private boolean d_IsProcessed = false;
-    private int d_NumberOfArmies;
+    private int d_countryID;
+    private int d_continentID;
+    private String d_continentName;
+    private String d_countryName;
+    private Continent d_belongToContinent;
+    private Player d_player;
+    private List<Country> d_adjacentCountries;
+    private boolean d_isProcessed = false;
+    private int d_numberOfArmies;
 
     /**
      * Default Constructor
      */
     public Country() {
-        d_AdjacentCountries = new ArrayList<>();
+        d_adjacentCountries = new ArrayList<>();
     }
 
     /**
      * Instantiates a new Country.
      *
-     * @param p_CountryID         List of adjacent territories names
-     * @param p_AdjacentCountries List of object of adjacent territories
+     * @param p_countryID         List of adjacent territories names
+     * @param p_adjacentCountries List of object of adjacent territories
      */
-    public Country(int p_CountryID, List<Country> p_AdjacentCountries) {
-        d_CountryID = p_CountryID;
-        d_AdjacentCountries = p_AdjacentCountries;
+    public Country(int p_countryID, List<Country> p_adjacentCountries) {
+        d_countryID = p_countryID;
+        d_adjacentCountries = p_adjacentCountries;
     }
 
     /**
      * Parameterized constructor which instantiates a new country
      *
-     * @param p_CountryID   Country ID
-     * @param p_CountryName Country Name
-     * @param p_ContinentID Continent ID
+     * @param p_countryID   Country ID
+     * @param p_countryName Country Name
+     * @param p_continentID Continent ID
      */
-    public Country(int p_CountryID, String p_CountryName, int p_ContinentID) {
+    public Country(int p_countryID, String p_countryName, int p_continentID) {
 
-        d_CountryID = p_CountryID;
-        d_CountryName = p_CountryName;
-        p_ContinentID = p_ContinentID;
-        d_AdjacentCountries = new ArrayList<>();
+        d_countryID = p_countryID;
+        d_countryName = p_countryName;
+        d_continentID = p_continentID;
+        d_adjacentCountries = new ArrayList<>();
 
     }
 
@@ -62,17 +62,17 @@ public class Country {
      * @return The Country ID
      */
     public int getD_CountryID() {
-        return d_CountryID;
+        return d_countryID;
     }
 
 
     /**
      * Sets Country ID.
      *
-     * @param p_CountryID Country ID
+     * @param p_countryID Country ID
      */
-    public void setD_CountryID(int p_CountryID) {
-        d_CountryID = p_CountryID;
+    public void setD_CountryID(int p_countryID) {
+        d_countryID = p_countryID;
     }
 
 
@@ -82,16 +82,16 @@ public class Country {
      * @return Continent ID
      */
     public int getD_ContinentID() {
-        return d_ContinentID;
+        return d_continentID;
     }
 
     /**
      * Sets continent id.
      *
-     * @param p_ContinentID Continent ID
+     * @param p_continentID Continent ID
      */
-    public void setD_ContinentID(int p_ContinentID) {
-        d_ContinentID = p_ContinentID;
+    public void setD_ContinentID(int p_continentID) {
+        d_continentID = p_continentID;
     }
 
     /**
@@ -100,16 +100,16 @@ public class Country {
      * @return continent name
      */
     public String getD_ContinentName() {
-        return d_ContinentName;
+        return d_continentName;
     }
 
     /**
      * Sets continent name.
      *
-     * @param d_ContinentName continent name
+     * @param d_continentName continent name
      */
-    public void setD_ContinentName(String d_ContinentName) {
-        this.d_ContinentName = d_ContinentName;
+    public void setD_ContinentName(String d_continentName) {
+        this.d_continentName = d_continentName;
     }
 
     /**
@@ -118,16 +118,16 @@ public class Country {
      * @return The Country Name
      */
     public String getD_CountryName() {
-        return d_CountryName;
+        return d_countryName;
     }
 
     /**
      * Sets Country name.
      *
-     * @param p_CountryName Country Name
+     * @param p_countryName Country Name
      */
-    public void setD_CountryName(String p_CountryName) {
-        d_CountryName = p_CountryName;
+    public void setD_CountryName(String p_countryName) {
+        d_countryName = p_countryName;
     }
 
     /**
@@ -136,16 +136,16 @@ public class Country {
      * @return Continent of the country
      */
     public Continent getD_BelongToContinent() {
-        return d_BelongToContinent;
+        return d_belongToContinent;
     }
 
     /**
      * Sets Continent to which country belongs to
      *
-     * @param p_BelongToContinent Continent of the country
+     * @param p_belongToContinent Continent of the country
      */
-    public void setD_BelongToContinent(Continent p_BelongToContinent) {
-        d_BelongToContinent = p_BelongToContinent;
+    public void setD_BelongToContinent(Continent p_belongToContinent) {
+        d_belongToContinent = p_belongToContinent;
     }
 
     /**
@@ -154,16 +154,16 @@ public class Country {
      * @return Player who owns the country
      */
     public Player getD_Player() {
-        return d_Player;
+        return d_player;
     }
 
     /**
      * Sets Player to which country belongs to
      *
-     * @param p_Player Player who owns the country
+     * @param p_player Player who owns the country
      */
-    public void setD_Player(Player p_Player) {
-        d_Player = p_Player;
+    public void setD_Player(Player p_player) {
+        d_player = p_player;
     }
 
     /**
@@ -172,16 +172,16 @@ public class Country {
      * @return adjacent countries list
      */
     public List<Country> getD_AdjacentCountries() {
-        return d_AdjacentCountries;
+        return d_adjacentCountries;
     }
 
     /**
      * Sets a list of adjacent countries.
      *
-     * @param p_AdjacentCountries adjacent countries list
+     * @param p_adjacentCountries adjacent countries list
      */
-    public void setD_AdjacentCountries(List<Country> p_AdjacentCountries) {
-        d_AdjacentCountries = p_AdjacentCountries;
+    public void setD_AdjacentCountries(List<Country> p_adjacentCountries) {
+        d_adjacentCountries = p_adjacentCountries;
     }
 
     /**
@@ -190,16 +190,16 @@ public class Country {
      * @return d_IsProcessed returns boolean value whether country is processed or not
      */
     public boolean isD_IsProcessed() {
-        return d_IsProcessed;
+        return d_isProcessed;
     }
 
     /**
      * To set the country as processed.
      *
-     * @param p_IsProcessed is used to set that the country is processed.
+     * @param p_isProcessed is used to set that the country is processed.
      */
-    public void setD_Processed(boolean p_IsProcessed) {
-        d_IsProcessed = p_IsProcessed;
+    public void setD_Processed(boolean p_isProcessed) {
+        d_isProcessed = p_isProcessed;
     }
 
     /**
@@ -208,30 +208,30 @@ public class Country {
      * @return number of armies
      */
     public int getD_NumberOfArmies() {
-        return d_NumberOfArmies;
+        return d_numberOfArmies;
     }
 
     /**
      * Sets number of armies to be deployed in the country.
      *
-     * @param p_NumberOfArmies number of armies
+     * @param p_numberOfArmies number of armies
      */
-    public void setD_NumberOfArmies(int p_NumberOfArmies) {
-        d_NumberOfArmies = p_NumberOfArmies;
+    public void setD_NumberOfArmies(int p_numberOfArmies) {
+        d_numberOfArmies = p_numberOfArmies;
     }
 
 
     /**
      * Gets country object from country id.
      *
-     * @param p_CountryID country id
+     * @param p_countryID country id
      * @return the country object
      */
-    public Country getCountryFromCountryID(int p_CountryID) {
-        for (Continent l_Continent : d_Map.getD_Continents()) {
-            for (Country l_Country : l_Continent.getD_Countries()) {
-                if (l_Country.getD_CountryID() == p_CountryID) {
-                    return l_Country;
+    public Country getCountryFromCountryID(int p_countryID) {
+        for (Continent l_continent : d_Map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                if (l_country.getD_CountryID() == p_countryID) {
+                    return l_country;
                 }
             }
         }
@@ -243,14 +243,14 @@ public class Country {
     /**
      * Gets country object from country Name.
      *
-     * @param p_CountryName country id
+     * @param p_countryName country id
      * @return the country object
      */
-    public Country getCountryFromCountryName(String p_CountryName) {
-        for (Continent l_Continent : d_Map.getD_Continents()) {
-            for (Country l_Country : l_Continent.getD_Countries()) {
-                if (l_Country.getD_CountryName().equals(p_CountryName)) {
-                    return l_Country;
+    public Country getCountryFromCountryName(String p_countryName) {
+        for (Continent l_continent : d_Map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                if (l_country.getD_CountryName().equals(p_countryName)) {
+                    return l_country;
                 }
             }
         }
@@ -262,33 +262,33 @@ public class Country {
     /**
      * Add country to adjacent countries list.
      *
-     * @param p_Country country to be added
+     * @param p_country country to be added
      */
-    public void addCountryToAdjacentCountries(Country p_Country) {
-        d_AdjacentCountries.add(p_Country);
+    public void addCountryToAdjacentCountries(Country p_country) {
+        d_adjacentCountries.add(p_country);
     }
 
     /**
      * Remove country from adjacent countries list.
      *
-     * @param p_CountryName country to be removed
+     * @param p_countryName country to be removed
      */
-    public void removeCountryFromAdjacentCountries(String p_CountryName) {
-        Country l_CountryToBeRemoved = new Country().getCountryFromCountryName(p_CountryName);
+    public void removeCountryFromAdjacentCountries(String p_countryName) {
+        Country l_countryToBeRemoved = new Country().getCountryFromCountryName(p_countryName);
 
-        d_AdjacentCountries.remove(l_CountryToBeRemoved);
+        d_adjacentCountries.remove(l_countryToBeRemoved);
     }
 
     /**
      * To check if country present in adjacent countries list.
      *
-     * @param p_CountryName country to checked for presence
+     * @param p_countryName country to checked for presence
      * @return whether country is present in the adjacent country list or not
      */
-    public boolean isCountryPresentInAdjacentCountries(String p_CountryName) {
-        Country l_Country = new Country().getCountryFromCountryName(p_CountryName);
+    public boolean isCountryPresentInAdjacentCountries(String p_countryName) {
+        Country l_country = new Country().getCountryFromCountryName(p_countryName);
 
-        return d_AdjacentCountries.contains(l_Country);
+        return d_adjacentCountries.contains(l_country);
     }
 
 
@@ -296,17 +296,17 @@ public class Country {
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object p_Object) {
+    public boolean equals(Object p_object) {
 
-        if (!(p_Object instanceof Country)) {
+        if (!(p_object instanceof Country)) {
             return false;
         }
 
-        if (p_Object == this) {
+        if (p_object == this) {
             return true;
         }
 
-        Country l_Country = (Country) p_Object;
-        return l_Country.getD_CountryName().equalsIgnoreCase(d_CountryName);
+        Country l_country = (Country) p_object;
+        return l_country.getD_CountryName().equalsIgnoreCase(d_countryName);
     }
 }
