@@ -11,7 +11,7 @@ import com.risk.models.Country;
  * This class performs validation of map correctness, also after loading
  * and saving any new map the map should be validated automatically.
  *
- * @author HARSH
+ * @author Harsh
  */
 
 
