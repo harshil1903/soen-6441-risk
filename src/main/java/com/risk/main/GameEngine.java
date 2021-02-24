@@ -45,7 +45,7 @@ public class GameEngine {
                         for (Country l_country : l_Player.getD_AssignedCountries()) {
                             System.out.print("\t\t" + l_country.getD_CountryName() + ", ");
                         }
-                        l_Player.issue_order();
+                        l_Player.issueOrder();
                     } else {
                         System.out.println("Player " + l_Player.getD_PlayerName() + "'s turn is skipped due to no reinforcement armies left");
                     }

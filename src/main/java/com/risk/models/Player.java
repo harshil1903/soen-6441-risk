@@ -196,7 +196,7 @@ public class Player {
      * To add an order to the list of orders held by the player
      * Issue order phase of game
      */
-    public void issue_order() {
+    public void issueOrder() {
         Scanner l_Scanner = new Scanner(System.in);
         String l_Command;
 
@@ -230,7 +230,7 @@ public class Player {
         l_DeploySuccess = deployOrder(l_CountryName, l_NumberOfArmies);
 
         if (!l_DeploySuccess) {
-            issue_order();
+            issueOrder();
         }
 
     }
@@ -241,17 +241,17 @@ public class Player {
      * @return l_tempOrder object of the order class
      */
     public Orders next_order() {
-        Orders l_tempOrder = new Orders();
+        Orders l_TempOrder = new Orders();
         Orders orders = new Orders();
 
         if (d_OrderList.isEmpty()) {
             return null;
         } else {
-            l_tempOrder = d_OrderList.get(0);
+            l_TempOrder = d_OrderList.get(0);
             d_OrderList.remove(d_OrderList.get(0));
         }
 
-        return l_tempOrder;
+        return l_TempOrder;
     }
 
     public boolean deployOrder(String l_CountryName, int l_NumberOfArmies) {

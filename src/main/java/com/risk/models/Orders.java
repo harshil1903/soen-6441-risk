@@ -7,9 +7,9 @@ package com.risk.models;
  * @author Parth Navsariwala
  */
 public class Orders {
-    String d_countryName;
+    String d_CountryName;
     Country d_Country;
-    int d_numberOfArmies;
+    int d_NumberOfArmies;
 
     /**
      * constructor for the Orders class
@@ -21,19 +21,19 @@ public class Orders {
     /**
      * Sets country Id
      *
-     * @param d_countryName country Id
+     * @param d_CountryName country Id
      */
-    public void setD_countryName(String d_countryName) {
-        this.d_countryName = d_countryName;
+    public void setD_countryName(String d_CountryName) {
+        this.d_CountryName = d_CountryName;
     }
 
     /**
      * Sets number of armies
      *
-     * @param d_numberOfArmies number of armies
+     * @param d_NumberOfArmies number of armies
      */
-    public void setD_numberOfArmies(int d_numberOfArmies) {
-        this.d_numberOfArmies = d_numberOfArmies;
+    public void setD_numberOfArmies(int d_NumberOfArmies) {
+        this.d_NumberOfArmies = d_NumberOfArmies;
     }
 
     /**
@@ -42,7 +42,7 @@ public class Orders {
      * @return country ID
      */
     public String getD_countryName() {
-        return d_countryName;
+        return d_CountryName;
     }
 
     /**
@@ -51,7 +51,7 @@ public class Orders {
      * @return number of armies
      */
     public int getD_numberOfArmies() {
-        return d_numberOfArmies;
+        return d_NumberOfArmies;
     }
 
     /**
@@ -59,8 +59,8 @@ public class Orders {
      * Set number of army in each player country
      */
     public void execute() {
-        int l_PreviousArmies = d_Country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
-        d_Country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_PreviousArmies);
+        int l_PreviousArmies = d_Country.getCountryFromCountryName(d_CountryName).getD_NumberOfArmies();
+        d_Country.getCountryFromCountryName(d_CountryName).setD_NumberOfArmies(d_NumberOfArmies + l_PreviousArmies);
     }
 
 }
