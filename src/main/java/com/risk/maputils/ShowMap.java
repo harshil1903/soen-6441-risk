@@ -28,9 +28,13 @@ public class ShowMap {
             for (Country l_country : l_continent.getD_Countries()) {
                 System.out.println("\t" + l_country.getD_CountryName());
                 System.out.print("\tAdjacent Countries : ");
-                for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
-                    System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
-                }
+                try {
+                    for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
+                        System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
+                    }
+                }catch (Exception e)
+                {}
+
                 System.out.println("\n");
             }
             System.out.println("\n");

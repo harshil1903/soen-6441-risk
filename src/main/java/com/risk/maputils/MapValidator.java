@@ -33,6 +33,10 @@ public class MapValidator {
             if (p_map.getD_Continents().size() < 1) {
                 throw new InvalidMapException("There should be atleast one Continent in the graph.");
             } else {
+
+                //validate whether the country belongs to only one continent.
+                validateCountryBelongsToOneContinent(p_map);
+
                 //A map must be subgraph of continents and if it is true then the continents must be subgraph of countries.
                 //This method will validate whether the map is subgraph of continents or not.
                 validateContinents(p_map);
@@ -44,8 +48,6 @@ public class MapValidator {
                     System.out.println("The map is connected");
                 }
 
-                //validate whether the country belongs to only one continent.
-                validateCountryBelongsToOneContinent(p_map);
             }
 
         }
@@ -238,12 +240,13 @@ public class MapValidator {
      * @throws InvalidMapException throws InvalidMapException if map is not valid.
      */
     public static void validateCountryBelongsToOneContinent(Map p_map) throws InvalidMapException {
-        HashMap<Country, Integer> l_countryBelongsToContinentCount = new HashMap<>();
+
+        ArrayList<Country> l_countryList = new ArrayList<>();
 
         for (Continent l_continent : p_map.getD_Continents()) {
             for (Country l_country : l_continent.getD_Countries()) {
-                if (!l_countryBelongsToContinentCount.containsKey(l_country)) {
-                    l_countryBelongsToContinentCount.put(l_country, 1);
+                if (!l_countryList.contains(l_country)) {
+                    l_countryList.add(l_country);
                 } else {
                     throw new InvalidMapException("Country:" + l_country.getD_CountryName() + "must belong to only one continent.");
                 }
