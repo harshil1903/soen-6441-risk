@@ -63,9 +63,8 @@ public class GameEngineTest {
         assertTrue(d_Player1.deployOrder(l_CountryName, l_NumberOfArmies));
     }
 
+}
 
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/master
+
+
+
