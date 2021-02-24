@@ -1,12 +1,12 @@
 package com.risk.maputils;
 
-        import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
-        import org.junit.*;
-        import com.risk.models.Continent;
-        import com.risk.models.Country;
-        import com.risk.models.Map;
-        import com.risk.exception.InvalidMapException;
+import org.junit.*;
+import com.risk.models.Continent;
+import com.risk.models.Country;
+import com.risk.models.Map;
+import com.risk.exception.InvalidMapException;
 
 
 /**
@@ -14,17 +14,16 @@ package com.risk.maputils;
  *
  * @author Harsh
  */
-
 public class MapOperationsTest {
 
-    static Map d_Map;
-    static Continent d_Continent;
-    static Country d_Country;
-    static Country d_AdjCountry;
-    int d_ControlValue1 = 1;
-    int d_ControlValue2 = 2;
-    String d_ContinentName = "TempContinent";
-    String d_CountryName = "TestCountry";
+    static Map d_map;
+    static Continent d_continent;
+    static Country d_country;
+    static Country d_adjCountry;
+    int d_controlValue1 = 1;
+    int d_controlValue2 = 2;
+    String d_continentName = "TempContinent";
+    String d_countryName = "TestCountry";
     String d_AdjacentCountryName = "Test2Country";
 
     /**
@@ -35,13 +34,13 @@ public class MapOperationsTest {
     @BeforeClass
     public static void beforeClass() throws InvalidMapException {
         try {
-            d_Map = new EditMap().editMap("europe");
+            d_map = new EditMap().editMap("europe");
         } catch (Exception e) {
             throw new InvalidMapException(e.getMessage());
         }
-        d_Country = new Country();
-        d_AdjCountry = new Country();
-        d_Continent = new Continent();
+        d_country = new Country();
+        d_adjCountry = new Country();
+        d_continent = new Continent();
 
     }
 
@@ -52,12 +51,12 @@ public class MapOperationsTest {
      */
     @Test
     public void testAddContinent() throws InvalidMapException {
-        MapOperations.addContinent(d_Map, d_ContinentName, d_ControlValue1);
-        for (Continent l_Continent : d_Map.getD_Continents()) {
-            if (l_Continent.getD_ContinentName().equals(d_ContinentName)) {
-                assertEquals(l_Continent.getD_ContinentValue(), d_ControlValue1);
-                assertNotEquals(l_Continent.getD_ContinentValue(), d_ControlValue2);
-                assertEquals(l_Continent.getD_ContinentName(), d_ContinentName);
+        MapOperations.addContinent(d_map, d_continentName, d_controlValue1);
+        for (Continent l_continent : d_map.getD_Continents()) {
+            if (l_continent.getD_ContinentName().equals(d_continentName)) {
+                assertEquals(l_continent.getD_ContinentValue(), d_controlValue1);
+                assertNotEquals(l_continent.getD_ContinentValue(), d_controlValue2);
+                assertEquals(l_continent.getD_ContinentName(), d_continentName);
             }
         }
 
@@ -73,14 +72,14 @@ public class MapOperationsTest {
     @Test
     public void testAddCountry() throws InvalidMapException {
         String cont = null;
-        MapOperations.addContinent(d_Map, d_ContinentName, d_ControlValue1);
-        MapOperations.addCountry(d_Map, d_CountryName, d_ContinentName);
-        for (Continent l_Continent : d_Map.getD_Continents()) {
-            if (l_Continent.getD_ContinentName() == d_ContinentName) {
-                assertNotNull(l_Continent);
-                cont = l_Continent.getD_ContinentName();
+        MapOperations.addContinent(d_map, d_continentName, d_controlValue1);
+        MapOperations.addCountry(d_map, d_countryName, d_continentName);
+        for (Continent l_continent : d_map.getD_Continents()) {
+            if (l_continent.getD_ContinentName() == d_continentName) {
+                assertNotNull(l_continent);
+                cont = l_continent.getD_ContinentName();
                 System.out.println(cont);
-                assertFalse(l_Continent.getD_Countries().contains(d_CountryName));
+                assertFalse(l_continent.getD_Countries().contains(d_countryName));
             }
         }
 

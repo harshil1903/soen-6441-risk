@@ -16,7 +16,7 @@ import static com.risk.main.Main.d_PlayerList;
  * @author Harshil
  */
 public class GameEngineTest {
-    Player d_Player1, d_Player2;
+    Player d_player1, d_player2;
 
     /**
      * This method is executed before every test method.
@@ -30,10 +30,10 @@ public class GameEngineTest {
         } catch (Exception e) {
             throw new InvalidMapException(e.getMessage());
         }
-        d_Player1 = new Player("TestPlayer1");
-        d_PlayerList.add(d_Player1);
-        d_Player2 = new Player("TestPlayer2");
-        d_PlayerList.add(d_Player2);
+        d_player1 = new Player("TestPlayer1");
+        d_PlayerList.add(d_player1);
+        d_player2 = new Player("TestPlayer2");
+        d_PlayerList.add(d_player2);
         AssignCountries.assignCountries();
     }
 
@@ -44,7 +44,7 @@ public class GameEngineTest {
     public void testReinforcementArmies() {
         GameEngine.assignReinforcementArmies();
 
-        assertEquals(4, d_Player1.getD_Armies());
+        assertEquals(4, d_player1.getD_Armies());
     }
 
     /**
@@ -54,13 +54,13 @@ public class GameEngineTest {
     public void testDeployMoreThanReinforcementArmies() {
         GameEngine.assignReinforcementArmies();
 
-        String l_CountryName = d_Player1.getD_AssignedCountries().get(0).getD_CountryName();
-        int l_NumberOfArmies = 6;
+        String l_countryName = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        int l_numberOfArmies = 6;
 
-        assertFalse(d_Player1.deployOrder(l_CountryName, l_NumberOfArmies));
+        assertFalse(d_player1.deployOrder(l_countryName, l_numberOfArmies));
 
-        l_NumberOfArmies = 2;
-        assertTrue(d_Player1.deployOrder(l_CountryName, l_NumberOfArmies));
+        l_numberOfArmies = 2;
+        assertTrue(d_player1.deployOrder(l_countryName, l_numberOfArmies));
     }
 
 }
