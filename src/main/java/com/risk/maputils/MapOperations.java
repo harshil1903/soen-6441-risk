@@ -13,7 +13,7 @@ import static com.risk.main.Main.d_Map;
  * country add and remove for adding and remove country from country list
  * neighbor add and remove for adding and remove adjacent countries from list
  *
- * @author Parth Navsariwala
+ * @author Parth
  */
 
 public class MapOperations {

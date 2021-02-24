@@ -4,7 +4,7 @@ package com.risk.models;
  * This class defines Orders and its properties such as
  * number of Armies and country in which armies are to be deployed
  *
- * @author Parth Navsariwala
+ * @author Parth
  */
 public class Orders {
     String d_countryName;
