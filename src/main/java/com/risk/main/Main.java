@@ -19,7 +19,7 @@ public class Main {
     public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
 
     /**
-     * The entry point of application.
+     * The entry point of application.l
      *
      * @param args the input arguments
      */

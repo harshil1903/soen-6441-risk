@@ -20,7 +20,7 @@ public class MapValidator {
     static String d_AlertMessage = "";
 
     /**
-     * This methodis used for validaion of map.
+     * This method is used for validaion of map.
      *
      * @param p_Map refers to the map object for verification.
      * @throws InvalidMapException is used for the situation where map has certain errors.
@@ -40,6 +40,8 @@ public class MapValidator {
                 //This method will check whether if the map is subgraph of continents.
                 if (!isMapConnectedGraph(p_Map)) {
                     throw new InvalidMapException("The map is not a connected graph i.e Continent is not a subgraph in the map. A map should be connected graph formed by continents.");
+                }else{
+                    System.out.println("The map is connected");
                 }
 
                 //validate whether the country belongs to only one continent.
@@ -156,7 +158,7 @@ public class MapValidator {
      */
 
     public static boolean isMapConnectedGraph(Map p_Map) {
-        System.out.println("The map is connected");
+
         if (p_Map.getD_Continents().size() < 2) {
             return false;
         }

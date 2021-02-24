@@ -20,9 +20,9 @@ import com.risk.exception.InvalidMapException;
 
 public class MapValidatorTest {
 
-    static Continent S_Continent;
-    static Country S_Country;
-    static Map S_Map;
+    static Continent d_Continent;
+    static Country d_Country;
+    static Map d_Map;
 
 
     String d_continentName = "Temp_Cont";
@@ -35,9 +35,9 @@ public class MapValidatorTest {
      */
     @BeforeClass
     public static void beforeClass() {
-        S_Continent = new Continent();
-        S_Country = new Country();
-        S_Map = new Map();
+        d_Continent = new Continent();
+        d_Country = new Country();
+        d_Map = new Map();
     }
 
 
@@ -49,16 +49,16 @@ public class MapValidatorTest {
     @Before
     public void beforeTest() throws InvalidMapException {
         try {
-            S_Map = new EditMap().editMap("europe");
+            d_Map = new EditMap().editMap("europe");
         } catch (Exception e) {
             throw new InvalidMapException(e.getMessage());
         }
-        S_Continent.setD_ContinentName(d_continentName);
-        S_Continent.setD_ContinentValue(d_controlValue);
-        S_Country.setD_CountryName("Country No.1");
+        d_Continent.setD_ContinentName(d_continentName);
+        d_Continent.setD_ContinentValue(d_controlValue);
+        d_Country.setD_CountryName("Country No.1");
 
         d_continentList = new ArrayList<>();
-        d_continentList.add(S_Continent);
+        d_continentList.add(d_Continent);
     }
 
 
@@ -81,8 +81,8 @@ public class MapValidatorTest {
      */
     @Test(expected = InvalidMapException.class)
     public void validateContinentForNullCountry() throws InvalidMapException {
-        S_Map.addContinentToContinentList(S_Continent);
-        MapValidator.validateContinents(S_Map);
+        d_Map.addContinentToContinentList(d_Continent);
+        MapValidator.validateContinents(d_Map);
     }
 
 
@@ -94,7 +94,7 @@ public class MapValidatorTest {
     @Test
     public void validateMapForSubgraph() throws InvalidMapException {
 
-        assertEquals(true, !MapValidator.isMapConnectedGraph(S_Map));
+        assertEquals(true, !MapValidator.isMapConnectedGraph(d_Map));
     }
 
 
@@ -106,24 +106,24 @@ public class MapValidatorTest {
     @Test
     public void validateContinentForSubgraph() throws InvalidMapException {
         List<Country> l_CountryList = new ArrayList<>();
-        l_CountryList.add(S_Country);
+        l_CountryList.add(d_Country);
         Country l_NewCountry = new Country();
         l_NewCountry.setD_CountryName("Country No.2");
         l_CountryList.add(l_NewCountry);
-        S_Continent.setD_Countries(l_CountryList);
-        assertEquals(MapValidator.isContinentConnectedGraph(S_Continent, S_Map), false);
+        d_Continent.setD_Countries(l_CountryList);
+        assertEquals(MapValidator.isContinentConnectedGraph(d_Continent, d_Map), false);
 
         List<Country> l_AdjCountryList = new ArrayList<>();
-        l_AdjCountryList.add(S_Country);
+        l_AdjCountryList.add(d_Country);
         l_NewCountry.setD_AdjacentCountries(l_AdjCountryList);
 
         l_AdjCountryList = new ArrayList<>();
         l_AdjCountryList.add(l_NewCountry);
-        S_Country.setD_AdjacentCountries(l_AdjCountryList);
+        d_Country.setD_AdjacentCountries(l_AdjCountryList);
 
 
-        assertTrue(MapValidator.isContinentConnectedGraph(S_Continent, S_Map));
-        assertEquals(MapValidator.isContinentConnectedGraph(S_Continent, S_Map), true);
+        assertTrue(MapValidator.isContinentConnectedGraph(d_Continent, d_Map));
+        assertEquals(MapValidator.isContinentConnectedGraph(d_Continent, d_Map), true);
     }
 
 

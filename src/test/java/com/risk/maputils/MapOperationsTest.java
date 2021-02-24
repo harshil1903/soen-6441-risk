@@ -1,12 +1,12 @@
 package com.risk.maputils;
 
-import static org.junit.Assert.*;
+        import static org.junit.Assert.*;
 
-import org.junit.*;
-import com.risk.models.Continent;
-import com.risk.models.Country;
-import com.risk.models.Map;
-import com.risk.exception.InvalidMapException;
+        import org.junit.*;
+        import com.risk.models.Continent;
+        import com.risk.models.Country;
+        import com.risk.models.Map;
+        import com.risk.exception.InvalidMapException;
 
 
 /**
@@ -63,21 +63,6 @@ public class MapOperationsTest {
 
     }
 
-//    /**
-//     * This test case is used to check that respective continent is removed from the map.
-//     * @throws InvalidMapException InvalidMapException
-//     */
-//
-//    @Test
-//    public void testRemoveContinent() throws InvalidMapException{
-//        MapOperations.addContinent(d_Map, d_ContinentName, d_ControlValue1);
-//        MapOperations.removeContinent(d_Map,d_ContinentName);
-//        for(Continent l_Continent : d_Map.getD_Continents()){
-//                assertFalse(l_Continent.getD_ContinentName().equals(d_ContinentName));
-//            }
-//        }
-
-    //S_Map.removeContinentFromContinentList(d_ContinentName);
 
 
     /**
@@ -102,41 +87,7 @@ public class MapOperationsTest {
     }
 
 
-    /**
-     * This test case is used to check the remove country functionality
-     *
-     * @throws InvalidMapException InvalidMapException
-     */
-//    @Test
-//    public void testRemoveCountry() throws InvalidMapException {
-//        MapOperations.addContinent(d_Map, d_ContinentName, d_ControlValue1);
-//        MapOperations.addCountry(d_Map, d_CountryName, d_ContinentName);
-//        MapOperations.removeCountry(d_Map, d_CountryName);
-//        //ShowMap.displayEditorMap(d_Map);
-//    }
-//
 
-    /**
-     * This test case is used to check the add neighbour country functionality to any country in the map.
-     *
-     * @throws InvalidMapException InvalidMapException
-     */
-    @Test
-    public void testAddNeighbourCountry() throws InvalidMapException {
-        MapOperations.addContinent(d_Map, d_ContinentName, d_ControlValue1);
-        MapOperations.addCountry(d_Map, d_CountryName, d_ContinentName);
-        MapOperations.addCountry(d_Map, d_AdjacentCountryName, d_ContinentName);
-    }
-//
-//    /**
-//     * This test case is used to check the remove neighbour country functionality to any country in the map.
-//     *
-//     * @throws InvalidMapException InvaliadMapException
-//     */
-//    @Test
-//    public void testRemoveNeighbourCountry() throws InvalidMapException {
-//
-//    }
 
 
 }
