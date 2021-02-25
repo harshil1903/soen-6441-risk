@@ -32,8 +32,8 @@ public class ShowMap {
                     for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
                         System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
                     }
-                }catch (Exception e)
-                {}
+                } catch (Exception e) {
+                }
 
                 System.out.println("\n");
             }

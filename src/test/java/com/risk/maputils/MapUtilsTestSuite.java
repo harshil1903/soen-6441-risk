@@ -11,7 +11,7 @@ import org.junit.runners.Suite.SuiteClasses;
  * @author Harsh
  */
 @RunWith(Suite.class)
-@SuiteClasses({MapValidatorTest.class,MapOperationsTest.class,EditMapTest.class})
+@SuiteClasses({MapValidatorTest.class, MapOperationsTest.class, EditMapTest.class})
 public class MapUtilsTestSuite {
 
 }
