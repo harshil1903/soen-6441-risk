@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -57,6 +58,18 @@ public class MapValidatorTest {
         d_continentList = new ArrayList<>();
         d_continentList.add(d_continent);
     }
+    /**
+     * This method is executed after every test method.
+     *
+     * @throws InvalidMapException the invalid map exception
+     */
+    @After
+    public void afterTest() throws InvalidMapException
+    {
+        System.out.println();
+        d_map.getD_Continents().clear();
+    }
+
 
 
     /**
@@ -91,7 +104,7 @@ public class MapValidatorTest {
     @Test
     public void validateMapForSubgraph() throws InvalidMapException {
 
-        assertEquals(true, !MapValidator.isMapConnectedGraph(d_map));
+        assertEquals(false, !MapValidator.isMapConnectedGraph(d_map));
     }
 
 

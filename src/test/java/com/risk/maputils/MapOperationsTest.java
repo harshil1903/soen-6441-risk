@@ -31,8 +31,8 @@ public class MapOperationsTest {
      *
      * @throws InvalidMapException InvalidMapException
      */
-    @BeforeClass
-    public static void beforeClass() throws InvalidMapException {
+    @Before
+    public void beforeTest() throws InvalidMapException {
         try {
             d_map = new EditMap().editMap("europe");
         } catch (Exception e) {
@@ -43,6 +43,18 @@ public class MapOperationsTest {
         d_continent = new Continent();
 
     }
+    /**
+     * This method is executed after every test method.
+     *
+     * @throws InvalidMapException the invalid map exception
+     */
+    @After
+    public void afterTest() throws InvalidMapException
+    {
+        System.out.println();
+        d_map.getD_Continents().clear();
+    }
+
 
     /**
      * This test case is used to check the add continent functionality.
