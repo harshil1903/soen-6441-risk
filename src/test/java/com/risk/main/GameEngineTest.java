@@ -71,7 +71,7 @@ public class GameEngineTest {
      * Test reinforcement armies count that is assigned to the player.
      */
     @Test
-    public void testReinforcementArmies() throws InvalidMapException{
+    public void testReinforcementArmies(){
 
         System.out.println("\n TEST : Counting reinforcement armies assigned to a player");
 
@@ -92,7 +92,7 @@ public class GameEngineTest {
      * player cannot deploy more armies that there is in their reinforcement pool.
      */
     @Test
-    public void testDeployMoreThanReinforcementArmies() throws InvalidMapException{
+    public void testDeployMoreThanReinforcementArmies(){
 
         System.out.println("\n TEST : Testing that player cannot deploy more armies than he has in his reinforcement pool");
 
