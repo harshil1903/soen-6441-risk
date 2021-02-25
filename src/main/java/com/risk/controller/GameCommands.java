@@ -76,7 +76,6 @@ public class GameCommands {
                     l_playerName = p_argumentTokens.get(++i);
                     System.out.println("Player Name: " + l_playerName);
 
-                    //CALL ADD Player FUNCTION
                     Player l_player = new Player(l_playerName);
                     d_PlayerList.add(l_player);
 
@@ -90,7 +89,6 @@ public class GameCommands {
                     l_playerName = p_argumentTokens.get(++i);
                     System.out.println("Player Name: " + l_playerName);
 
-                    //CALL REMOVE Player FUNCTION
                     for (Player l_player : d_PlayerList) {
                         if (l_player.getD_PlayerName().equals(l_playerName)) {
                             d_PlayerList.remove(l_player);

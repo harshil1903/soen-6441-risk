@@ -111,7 +111,6 @@ public class MapCommands {
                     l_continentValue = Integer.parseInt(p_argumentTokens.get(++i));
                     System.out.println("Continent ID: " + l_continentName + " Control Value: " + l_continentValue);
 
-                    //CALL ADD CONTINENT FUNCTION
                     MapOperations.addContinent(d_Map, l_continentName, l_continentValue);
 
                 } catch (Exception e) {
@@ -123,7 +122,6 @@ public class MapCommands {
                     l_continentName = p_argumentTokens.get(++i);
                     System.out.println("Continent ID: " + l_continentName);
 
-                    //CALL REMOVE CONTINENT FUNCTION
                     MapOperations.removeContinent(d_Map, l_continentName);
 
                 } catch (Exception e) {
@@ -157,7 +155,6 @@ public class MapCommands {
 
                     System.out.println("Country ID: " + l_countryName + " Continent ID: " + l_continentName);
 
-                    //CALL ADD COUNTRY FUNCTION
                     MapOperations.addCountry(d_Map, l_countryName, l_continentName);
 
                 } catch (Exception e) {
@@ -169,7 +166,6 @@ public class MapCommands {
                     l_countryName = p_argumentTokens.get(++i);
                     System.out.println("Country ID: " + l_countryName);
 
-                    //CALL REMOVE COUNTRY FUNCTION
                     MapOperations.removeCountry(d_Map, l_countryName);
 
                 } catch (Exception e) {
@@ -201,7 +197,6 @@ public class MapCommands {
 
                     System.out.println("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
 
-                    //CALL ADD NEIGHBOR COUNTRY FUNCTION
                     MapOperations.addNeighborCountry(d_Map, l_neighborCountryName, l_countryName);
 
                 } catch (Exception e) {
@@ -215,7 +210,6 @@ public class MapCommands {
 
                     System.out.println("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
 
-                    //CALL REMOVE NEIGHBOR COUNTRY FUNCTION
                     MapOperations.removeNeighborCountry(d_Map, l_neighborCountryName, l_countryName);
 
                 } catch (Exception e) {

@@ -34,14 +34,10 @@ public class MapValidator {
                 throw new InvalidMapException("There should be atleast one Continent in the graph.");
             } else {
 
-                //validate whether the country belongs to only one continent.
                 validateCountryBelongsToOneContinent(p_map);
 
-                //A map must be subgraph of continents and if it is true then the continents must be subgraph of countries.
-                //This method will validate whether the map is subgraph of continents or not.
                 validateContinents(p_map);
 
-                //This method will check whether if the map is subgraph of continents.
                 if (!isMapConnectedGraph(p_map)) {
                     throw new InvalidMapException("The map is not a connected graph i.e Continent is not a subgraph in the map. A map should be connected graph formed by continents.");
                 }else{
@@ -57,6 +53,9 @@ public class MapValidator {
     /**
      * This method is used to validate the continents.
      *
+     * A map must be subgraph of continents and if it is true then the continents must be subgraph of countries.
+     * This method will validate whether the map is subgraph of continents or not.
+     *
      * @param p_map map refers to map object to validate the continents.
      * @throws InvalidMapException throws exception if map has any continent related errors.
      */
@@ -67,12 +66,11 @@ public class MapValidator {
             if (l_continent.getD_Countries().size() < 1) {
                 throw new InvalidMapException("There should be atleast one country in any continent.");
             }
-            //At this point it is validated that map is subgraph of continents, now validate whether continent is subgraph of countries.
+
             for (Country l_country : l_continent.getD_Countries()) {
                 validateCountry(l_country, p_map);
             }
 
-            //This method will check whether if the continent is a subgraph of countries.
             if (!isContinentConnectedGraph(l_continent, p_map)) {
                 throw new InvalidMapException("The Continent:- " + l_continent.getD_ContinentName() + " is not connected by its neighbouring countries.A Continent must be connected graph formed by its neighbouring countries in the map.");
             }
@@ -93,14 +91,13 @@ public class MapValidator {
         boolean l_returnValue = true;
         for (Country l_country : p_continent.getD_Countries()) {
             if (l_country.isD_IsProcessed() == false) {
-                l_country.setD_Processed(false);    //The Continent won't be connected only when any of the country is not being visited.
+                l_country.setD_Processed(false);
                 d_alertMessage = l_country.getD_CountryName() + "country is not forming connected graph in the continent" + p_continent.getD_ContinentName() + ".";
                 l_returnValue = false;
                 break;
             }
         }
 
-        //This loop sets the value setD_Processed for all the countries to false for future usage of validation.
         for (Country l_country : p_continent.getD_Countries()) {
             l_country.setD_Processed(false);
         }
@@ -144,7 +141,6 @@ public class MapValidator {
         } else {
             for (Country l_adjCountry : l_adjCountryList) {
                 if (!l_adjCountry.getD_AdjacentCountries().contains(p_country)) {
-                    //add the passed country to the list of adjacent countries if it is not connected to its adjacent country
                     l_adjCountry.getD_AdjacentCountries().add(p_country);
                 }
             }
@@ -214,16 +210,12 @@ public class MapValidator {
         List<Continent> l_adjacentContinents = new ArrayList<>();
         HashSet<Country> l_adjCountryMainSet = new HashSet<>();
 
-        //all unique adjacent countries of entire continent will be added to this list
         for (Country l_country : p_continent.getD_Countries()) {
             l_adjCountryMainSet.addAll(l_country.getD_AdjacentCountries());
         }
 
         for (Continent l_remainingContinent : p_map.getD_Continents()) {
             if (!p_continent.equals(l_remainingContinent)) {
-                //this will be processed if there is any relation between two continents.
-                //also it will return true ony if both the continents are different.
-                //if there are some countries common between two continents i.e they are connected i.e disjoint set is not formed then that continent is adjacent continent.
                 if (!Collections.disjoint(l_adjCountryMainSet, l_remainingContinent.getD_Countries())) {
                     l_adjacentContinents.add(l_remainingContinent);
 

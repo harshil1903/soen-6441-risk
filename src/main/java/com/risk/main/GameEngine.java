@@ -34,13 +34,10 @@ public class GameEngine {
      */
     public static void GamePlay() {
 
-        //MAIN GAME LOOP
         boolean l_continueMainGameLoop = true;
         while (l_continueMainGameLoop) {
-            //REINFORCEMENT PHASE
             assignReinforcementArmies();
 
-            //ISSUE ORDERS PHASE
             while (!checkReinforcementArmiesCount()) {
                 for (Player l_player : d_PlayerList) {
                     if (l_player.getD_Armies() != 0) {
@@ -58,7 +55,6 @@ public class GameEngine {
             }
             System.out.println();
 
-            //EXECUTE ORDERS PHASE
             int l_noOrdersPlayerCount = 0;
             Scanner l_scanner = new Scanner(System.in);
             String l_choice;
