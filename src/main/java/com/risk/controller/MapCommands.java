@@ -38,6 +38,12 @@ public class MapCommands {
             throw new InvalidMapException(e.getMessage());
 
         }
+        try {
+            MapValidator.validateMap(d_Map);
+        } catch (Exception e) {
+            System.out.println("Map Validation Failed");
+            System.out.println(e.getMessage());
+        }
 
         return true;
     }
