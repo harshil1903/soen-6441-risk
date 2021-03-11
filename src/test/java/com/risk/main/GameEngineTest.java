@@ -60,8 +60,7 @@ public class GameEngineTest {
      * @throws InvalidMapException the invalid map exception
      */
     @After
-    public void afterTest() throws InvalidMapException
-    {
+    public void afterTest() throws InvalidMapException {
         System.out.println();
         d_Map.getD_Continents().clear();
         d_PlayerList.clear();
@@ -71,7 +70,7 @@ public class GameEngineTest {
      * Test reinforcement armies count that is assigned to the player.
      */
     @Test
-    public void testReinforcementArmies(){
+    public void testReinforcementArmies() {
 
         System.out.println("\n TEST : Counting reinforcement armies assigned to a player");
 
@@ -92,7 +91,7 @@ public class GameEngineTest {
      * player cannot deploy more armies that there is in their reinforcement pool.
      */
     @Test
-    public void testDeployMoreThanReinforcementArmies(){
+    public void testDeployMoreThanReinforcementArmies() {
 
         System.out.println("\n TEST : Testing that player cannot deploy more armies than he has in his reinforcement pool");
 

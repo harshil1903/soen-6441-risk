@@ -2,6 +2,7 @@ package com.risk.maputils;
 
 import com.risk.exception.InvalidMapException;
 import org.junit.*;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 

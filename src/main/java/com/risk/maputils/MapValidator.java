@@ -40,7 +40,7 @@ public class MapValidator {
 
                 if (!isMapConnectedGraph(p_map)) {
                     throw new InvalidMapException("The map is not a connected graph i.e Continent is not a subgraph in the map. A map should be connected graph formed by continents.");
-                }else{
+                } else {
                     System.out.println("The map is connected");
                 }
 
@@ -52,7 +52,7 @@ public class MapValidator {
 
     /**
      * This method is used to validate the continents.
-     *
+     * <p>
      * A map must be subgraph of continents and if it is true then the continents must be subgraph of countries.
      * This method will validate whether the map is subgraph of continents or not.
      *

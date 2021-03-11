@@ -58,18 +58,17 @@ public class MapValidatorTest {
         d_continentList = new ArrayList<>();
         d_continentList.add(d_continent);
     }
+
     /**
      * This method is executed after every test method.
      *
      * @throws InvalidMapException the invalid map exception
      */
     @After
-    public void afterTest() throws InvalidMapException
-    {
+    public void afterTest() throws InvalidMapException {
         System.out.println();
         d_map.getD_Continents().clear();
     }
-
 
 
     /**

@@ -43,14 +43,14 @@ public class MapOperationsTest {
         d_continent = new Continent();
 
     }
+
     /**
      * This method is executed after every test method.
      *
      * @throws InvalidMapException the invalid map exception
      */
     @After
-    public void afterTest() throws InvalidMapException
-    {
+    public void afterTest() throws InvalidMapException {
         System.out.println();
         d_map.getD_Continents().clear();
     }
@@ -75,7 +75,6 @@ public class MapOperationsTest {
     }
 
 
-
     /**
      * This test case is used to check the add country functionality.
      *
@@ -96,9 +95,6 @@ public class MapOperationsTest {
         }
 
     }
-
-
-
 
 
 }
