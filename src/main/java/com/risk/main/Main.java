@@ -25,7 +25,7 @@ public class Main {
     public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
 
     /**
-     * The entry point of application.l
+     * The entry point of application
      *
      * @param args the input arguments
      */
@@ -70,7 +70,7 @@ public class Main {
         List<String> l_mapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
 
         if (l_mapCommands.contains(l_action)) {
-            MapCommandParser.mapCommandParser(l_action, l_arguments);
+            MapEngine.mapCommandParser(l_action, l_arguments);
         } else if (l_gameCommands.contains(l_action)) {
             GameEngine.checkNextGameCommands(l_action, l_arguments);
 
