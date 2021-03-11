@@ -1,4 +1,6 @@
-package com.risk.controller;
+package com.risk.main;
+
+import com.risk.controller.MapCommands;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +12,7 @@ import java.util.List;
  *
  * @author Harshil
  */
-public class MapCommandParser {
+public class MapEngine {
 
     /**
      * Contains true if map is loaded otherwise false

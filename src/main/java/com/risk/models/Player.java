@@ -1,5 +1,7 @@
 package com.risk.models;
 
+import com.risk.orders.Order;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +21,9 @@ public class Player {
     private String d_playerName;
     private int d_armies;
     private List<Country> d_assignedCountries;
-    private List<Orders> d_orderList;
+    private List<Orders> d_OrderLists;
+    private List<Order> d_orderList;
+    public Order d_currentOrder;
 
     /**
      * Instantiates a new Player.
@@ -31,7 +35,7 @@ public class Player {
         d_playerName = p_PlayerName;
         d_armies = 0;
         d_assignedCountries = new ArrayList<Country>();
-        d_orderList = new ArrayList<Orders>();
+        d_OrderLists = new ArrayList<Orders>();
     }
 
     /**
@@ -112,7 +116,7 @@ public class Player {
      * @return list of orders
      */
     public List<Orders> getD_OrderList() {
-        return d_orderList;
+        return d_OrderLists;
     }
 
     /**
@@ -121,7 +125,7 @@ public class Player {
      * @param p_orderList list of orders
      */
     public void setD_OrderList(List<Orders> p_orderList) {
-        d_orderList = p_orderList;
+        d_OrderLists = p_orderList;
     }
 
 
@@ -140,7 +144,6 @@ public class Player {
         return null;
 
     }
-
 
     /**
      * Add country to assigned countries.
@@ -179,6 +182,22 @@ public class Player {
      * Issue order phase of game
      */
     public void issueOrder() {
+
+        /*
+        if(d_currentOrder.valid())
+        {
+
+            d_armies = d_armies - ((Deploy)d_currentOrder).getD_numberOfArmies();
+            d_OrderList.add(d_currentOrder);
+            System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies + " successfully deployed");
+        }
+
+
+         */
+
+
+
+        //The entire bottom thing should be performed in GameEngine Class
         Scanner l_scanner = new Scanner(System.in);
         String l_command;
 
@@ -225,11 +244,11 @@ public class Player {
     public Orders nextOrder() {
         Orders l_tempOrder = new Orders();
 
-        if (d_orderList.isEmpty()) {
+        if (d_OrderLists.isEmpty()) {
             return null;
         } else {
-            l_tempOrder = d_orderList.get(0);
-            d_orderList.remove(d_orderList.get(0));
+            l_tempOrder = d_OrderLists.get(0);
+            d_OrderLists.remove(d_OrderLists.get(0));
         }
 
         return l_tempOrder;
@@ -243,6 +262,8 @@ public class Player {
      * @return true if order successfully deployed
      */
     public boolean deployOrder(String l_countryName, int l_numberOfArmies) {
+
+        //Not needed anymore
 
         Orders l_orders = new Orders();
         if (d_armies >= l_numberOfArmies) {
@@ -260,7 +281,7 @@ public class Player {
 
 
             d_armies = d_armies - l_numberOfArmies;
-            d_orderList.add(l_orders);
+            d_OrderLists.add(l_orders);
             System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies + " successfully deployed");
             return true;
         } else {

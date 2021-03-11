@@ -36,8 +36,16 @@ public class GameEngine {
 
         boolean l_continueMainGameLoop = true;
         while (l_continueMainGameLoop) {
+
+            //REINFORCEMENT PHASE
             assignReinforcementArmies();
 
+
+            //ISSUE ORDERS PHASE
+            //call a function which scanes for order commands then create an order of that type
+            //Add that order to that Player
+            //call issueOrder() of player which will then add that order's valid method to check
+            // amd then perform necessary operations and add that order to orderlist of player
             while (!checkReinforcementArmiesCount()) {
                 for (Player l_player : d_PlayerList) {
                     if (l_player.getD_Armies() != 0) {
@@ -55,6 +63,7 @@ public class GameEngine {
             }
             System.out.println();
 
+            //EXECUTE ORDERS PHASE
             int l_noOrdersPlayerCount = 0;
             Scanner l_scanner = new Scanner(System.in);
             String l_choice;

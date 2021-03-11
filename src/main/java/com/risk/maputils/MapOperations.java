@@ -78,16 +78,13 @@ public class MapOperations {
         l_country.setD_CountryName(p_countryName);
         for (Continent l_continent : p_map.getD_Continents()) {
             if (l_continent.getD_ContinentName().equals(p_continentName)) {
+                l_country.setD_CountryID(l_continent.getD_Countries().size() + 1);
                 l_country.setD_ContinentID(l_continent.getD_ContinentID());
                 l_continent.addCountryToCountryList(l_country);
                 System.out.println("The Country " + p_countryName + " Added Successfully");
             }
         }
-        int l_countryID = 0;
-        for (Continent l_continent : p_map.getD_Continents()) {
-            l_countryID += l_continent.getD_Countries().size();
-        }
-        l_country.setD_CountryID(l_countryID);
+
     }
 
     /**
