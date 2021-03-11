@@ -61,8 +61,18 @@ public class MapCommands {
         }
 
         File l_file = new File("src/main/resources/" + p_argumentTokens.get(0) + ".map");
+        try {
+            MapValidator.validateMap(d_Map);
+        } catch (Exception e) {
+            System.out.println("Map Validation Failed");
+            System.out.println(e.getMessage());
+        }
+        if (MapValidator.d_isValid == false) {
+            System.out.println("Map cannot be saved");
+        } else {
+            new MapWriter().writeMapFile(d_Map, l_file);
+        }
 
-        new MapWriter().writeMapFile(d_Map, l_file);
 
     }
 

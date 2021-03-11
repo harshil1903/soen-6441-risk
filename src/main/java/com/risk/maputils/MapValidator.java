@@ -18,6 +18,7 @@ import com.risk.models.Country;
 public class MapValidator {
 
     static String d_alertMessage = "";
+    public static boolean d_isValid = false;
 
     /**
      * This method is used for validaion of map.
@@ -47,6 +48,7 @@ public class MapValidator {
             }
 
         }
+        d_isValid = true;
 
     }
 

@@ -42,6 +42,10 @@ public class GameCommands {
         }
 
         MapCommands.validateMapCommand(l_argumentTokens);
+        if (MapValidator.d_isValid == false) {
+            d_Map.getD_Continents().clear();
+        }
+
 
         return true;
     }

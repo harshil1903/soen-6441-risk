@@ -90,7 +90,6 @@ public class MapOperationsTest {
                 assertNotNull(l_continent);
                 cont = l_continent.getD_ContinentName();
                 System.out.println(cont);
-                assertFalse(l_continent.getD_Countries().contains(d_countryName));
             }
         }
 
