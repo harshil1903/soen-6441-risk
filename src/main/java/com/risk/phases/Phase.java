@@ -28,7 +28,6 @@ public abstract class Phase {
             editmap()
         PostLoad
             showmap()
-            editmap()
             validatmap()
             editcountry()
             editcontinent()
@@ -50,6 +49,40 @@ public abstract class Phase {
      */
 
 
+    //PreMapLoad
+    abstract public void editMap();
+
+    //PostMopLoad commands
+    abstract public void validateMap();
+    abstract public void showMap();
+    abstract public void saveMap();
+    abstract public void editCountry();
+    abstract public void editContinent();
+    abstract public void editNeighbor();
+
+    //PreGameLoad
+    abstract public void loadMap();
+
+    //PostGameLoad
+    abstract public void showGameMap();
+    abstract public void addplayer();
+    abstract public void assignCountries();
+
+    //MainGame
+    // reinforcement commands
+    abstract public void reinforce();
+
+    //issue Order
+    abstract public void issueOrder();
+
+    //Execute Order
+    abstract public void executeOrder();
+
+    // end command
+    abstract public void endGame();
+
+    // go to next phase
+    abstract public void next();
 
     /**
      *  Common method to all States.
