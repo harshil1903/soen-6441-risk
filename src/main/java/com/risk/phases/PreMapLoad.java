@@ -8,40 +8,32 @@ public class PreMapLoad extends MapEdit {
         super(p_mapEngine);
     }
 
-    public void editMap(){
+    public void editMap() {
         //Call EditMap Operation from here.
+    }
+
+    public void validateMap() {
         printInvalidCommandMessage();
     }
 
-    public void loadMap() {
-
+    public void showMap() {
+        printInvalidCommandMessage();
     }
 
-    public void showGameMap() {
-
+    public void saveMap() {
+        printInvalidCommandMessage();
     }
 
-    public void addplayer() {
-
+    public void editCountry() {
+        printInvalidCommandMessage();
     }
 
-    public void assignCountries() {
-
+    public void editContinent() {
+        printInvalidCommandMessage();
     }
 
-    public void reinforce() {
-
-    }
-
-    public void issueOrder() {
-
-    }
-
-    public void executeOrder() {
-
-    }
-
-    public void endGame() {
+    public void editNeighbor() {
+        printInvalidCommandMessage();
 
     }
 

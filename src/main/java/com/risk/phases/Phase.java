@@ -60,12 +60,11 @@ public abstract class Phase {
     abstract public void editContinent();
     abstract public void editNeighbor();
 
-    //PreGameLoad
-    abstract public void loadMap();
 
-    //PostGameLoad
+    //GameSetup
+    abstract public void loadMap();
     abstract public void showGameMap();
-    abstract public void addplayer();
+    abstract public void addPlayer();
     abstract public void assignCountries();
 
     //MainGame

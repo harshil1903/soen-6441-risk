@@ -1,28 +1,27 @@
 package com.risk.phases;
 
-import com.risk.main.MapEngine;
+import com.risk.main.GameEngine;
 
-public abstract class MapEdit extends Phase {
+public class GameSetup extends GamePlay{
 
-    MapEdit(MapEngine p_mapEngine){
-        super(p_mapEngine);
+    public GameSetup(GameEngine p_gameEngine) {
+        super(p_gameEngine);
     }
 
-
     public void loadMap() {
-        printInvalidCommandMessage();
+        //Call Loadmap Operation from here.
     }
 
     public void showGameMap() {
-        printInvalidCommandMessage();
+        //Call ShowGamemap Operation from here.
     }
 
     public void addPlayer() {
-        printInvalidCommandMessage();
+        //Call addplayer Operation from here.
     }
 
     public void assignCountries() {
-        printInvalidCommandMessage();
+        //Call assigncountries Operation from here.
     }
 
     public void reinforce() {
@@ -40,7 +39,6 @@ public abstract class MapEdit extends Phase {
     public void endGame() {
         printInvalidCommandMessage();
     }
-
 
     public void next() {
 

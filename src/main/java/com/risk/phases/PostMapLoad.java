@@ -8,48 +8,31 @@ public class PostMapLoad extends MapEdit{
         super(p_mapEngine);
     }
 
-    @Override
-    public void loadMap() {
-
+    public void editMap() {
+        printInvalidCommandMessage();
     }
 
-    @Override
-    public void showGameMap() {
-
+    public void validateMap(){
+        //Call ValidateMap Operation from here.
     }
 
-    @Override
-    public void addplayer() {
-
+    public void showMap(){
+        //Call showMap Operation from here.
     }
 
-    @Override
-    public void assignCountries() {
-
+    public void saveMap(){
+        //Call saveMap Operation from here.
     }
 
-    @Override
-    public void reinforce() {
-
+    public void editCountry(){
+        //Call EditCountry Operation from here.
     }
 
-    @Override
-    public void issueOrder() {
-
+    public void editContinent(){
+        //Call EditContinent Operation from here.
     }
 
-    @Override
-    public void executeOrder() {
-
-    }
-
-    @Override
-    public void endGame() {
-
-    }
-
-    @Override
-    public void next() {
-
+    public void editNeighbor(){
+        //Call EditNeighbor Operation from here.
     }
 }
