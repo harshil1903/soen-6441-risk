@@ -1,11 +1,16 @@
 package com.risk.phases;
 
+import com.risk.main.GameEngine;
 import com.risk.main.MapEngine;
 
 public class PreMapLoad extends MapEdit {
 
     public PreMapLoad(MapEngine p_mapEngine) {
         super(p_mapEngine);
+    }
+
+    public PreMapLoad(GameEngine p_gameEngine) {
+        super(p_gameEngine);
     }
 
     public void editMap() {

@@ -4,6 +4,8 @@ import com.risk.main.GameEngine;
 import com.risk.main.Main;
 import com.risk.main.MapEngine;
 
+import java.util.List;
+
 public abstract class Phase {
 
     GameEngine d_gameEngine;
@@ -62,9 +64,9 @@ public abstract class Phase {
 
 
     //GameSetup
-    abstract public void loadMap();
+    abstract public void loadMap(List<String> p_argumentList);
     abstract public void showGameMap();
-    abstract public void addPlayer();
+    abstract public void addPlayer(List<String> p_argumentTokens);
     abstract public void assignCountries();
 
     //MainGame

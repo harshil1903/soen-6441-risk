@@ -2,8 +2,8 @@ package com.risk.phases;
 
 import com.risk.main.GameEngine;
 
-public abstract class GamePlay extends Phase {
-    GamePlay(GameEngine p_gameEngine) {
+public abstract class Game extends Phase {
+    Game(GameEngine p_gameEngine) {
         super(p_gameEngine);
     }
 
