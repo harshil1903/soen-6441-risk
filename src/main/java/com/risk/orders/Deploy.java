@@ -19,6 +19,10 @@ public class Deploy implements Order {
 
     /**
      * constructor for the Orders class
+     *
+     * @param p_player         player Id
+     * @param p_countryName    Country Id
+     * @param p_numberOfArmies The total number of armies
      */
     public Deploy(Player p_player, String p_countryName, int p_numberOfArmies) {
         d_player = p_player;
@@ -32,7 +36,7 @@ public class Deploy implements Order {
      *
      * @return the boolean
      */
-    public boolean valid(){
+    public boolean valid() {
         if (d_player.getD_Armies() >= d_numberOfArmies) {
 
             ArrayList<String> l_countriesOwnedList = new ArrayList<>();
@@ -63,7 +67,7 @@ public class Deploy implements Order {
     /**
      * Execute.
      */
-    public void execute(){
+    public void execute() {
 
         d_player.setD_Armies(d_player.getD_Armies() - d_numberOfArmies);
         int l_previousArmies = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
