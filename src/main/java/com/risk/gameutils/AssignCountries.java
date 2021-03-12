@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
+import static com.risk.gameutils.GenerateRandomNumber.getRandomNumber;
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
@@ -19,18 +20,7 @@ import static com.risk.main.Main.d_PlayerList;
  * @author Chirag
  */
 public class AssignCountries {
-    /**
-     * generates random number between zero and p_high-1.
-     *
-     * @param p_high upper bound for random number generation.
-     * @return random number generated.
-     */
-    public static int getRandomNumber(int p_high) {
-        Random l_random = new Random();
-        int l_low = 0;
-        int l_number = l_random.nextInt(p_high - l_low) + l_low;
-        return l_number;
-    }
+
 
     /**
      * helps to fill arraylist with countries present in map.
