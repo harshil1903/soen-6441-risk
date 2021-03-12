@@ -2,6 +2,7 @@ package com.risk.phases;
 
 import com.risk.controller.MapCommands;
 import com.risk.main.GameEngine;
+import com.risk.main.GameEngineNew;
 import com.risk.main.MapEngine;
 
 import java.util.List;
@@ -13,6 +14,10 @@ public class PostMapLoad extends MapEdit{
     }
 
     public PostMapLoad(GameEngine p_gameEngine) {
+        super(p_gameEngine);
+    }
+
+    public PostMapLoad(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
 
@@ -50,5 +55,9 @@ public class PostMapLoad extends MapEdit{
 
         //Call EditNeighbor Operation from here.
         MapCommands.editNeighborCommand(p_argumentTokens);
+    }
+
+    public void next() {
+        d_gameEngineNew.setPhase(new PreMapLoad(d_gameEngineNew));
     }
 }

@@ -2,6 +2,7 @@ package com.risk.phases;
 
 import com.risk.controller.GameCommands;
 import com.risk.main.GameEngine;
+import com.risk.main.GameEngineNew;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,9 @@ public abstract class Game extends Phase {
         super(p_gameEngine);
     }
 
+    Game(GameEngineNew p_gameEngine) {
+        super(p_gameEngine);
+    }
     //PreMapLoad
     public void editMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
@@ -22,7 +26,7 @@ public abstract class Game extends Phase {
     }
 
     public void showMap(List<String> p_argumentTokens) {
-        printInvalidCommandMessage();
+        GameCommands.showMapCommand(new ArrayList<>());
     }
 
     public void saveMap(List<String> p_argumentTokens) {
@@ -39,11 +43,5 @@ public abstract class Game extends Phase {
 
     public void editNeighbor(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
-    }
-
-    public void showGameMap() {
-        //Call ShowGamemap Operation from here.
-        GameCommands.showMapCommand(new ArrayList<>());
-
     }
 }

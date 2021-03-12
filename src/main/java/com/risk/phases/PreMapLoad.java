@@ -3,6 +3,7 @@ package com.risk.phases;
 import com.risk.controller.MapCommands;
 import com.risk.exception.InvalidMapException;
 import com.risk.main.GameEngine;
+import com.risk.main.GameEngineNew;
 import com.risk.main.MapEngine;
 
 import java.util.ArrayList;
@@ -15,6 +16,10 @@ public class PreMapLoad extends MapEdit{
     }
 
     public PreMapLoad(GameEngine p_gameEngine) {
+        super(p_gameEngine);
+    }
+
+    public PreMapLoad(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
 
@@ -53,6 +58,6 @@ public class PreMapLoad extends MapEdit{
     }
 
     public void next() {
-
+        d_gameEngineNew.setPhase(new PostMapLoad(d_gameEngineNew));
     }
 }

@@ -3,10 +3,12 @@ package com.risk.main;
 import com.risk.controller.GameCommands;
 import com.risk.controller.MapCommands;
 import com.risk.gameutils.AssignCountries;
+import com.risk.gameutils.Reinforce;
 import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Orders;
 import com.risk.models.Player;
+import com.risk.phases.GameSetup;
 import com.risk.phases.Phase;
 import com.risk.phases.PreMapLoad;
 
@@ -30,7 +32,7 @@ public class GameEngineNew {
      * Contains true if game is loaded otherwise false.
      */
     public static boolean d_gameLoaded = false;
-    private Phase d_gamePhase;
+    private static Phase d_gamePhase;
     int mystart;
     int mycommand;
 
@@ -45,140 +47,55 @@ public class GameEngineNew {
     }
 
 
-    public void start() {
-        Scanner keyboard = new Scanner(System.in);
+
+    /**
+     * The Game execution begins from this method.
+     */
+    public void runGame() {
+        Scanner l_scanner = new Scanner(System.in);
+        String l_command;
+        boolean l_resetPhase;
+
         do {
             System.out.println("1. Edit Map");
             System.out.println("2. Play Game");
             System.out.println("3. Quit");
             System.out.println("Where do you want to start?: ");
-            mystart = keyboard.nextInt();
+            mystart = l_scanner.nextInt();
             switch (mystart) {
                 case 1:
                     // Set the state to Preload
-                    //setPhase(new PreMapLoad(this));
+                    setPhase(new PreMapLoad(this));
                     break;
                 case 2:
                     // Set the state to PlaySetup
-                    //setPhase(new GameSetup(this));
+                    setPhase(new GameSetup(this));
                     break;
                 case 3:
                     System.out.println("Bye!");
-                    return;
+
+                default:
+                    System.out.println("Wrong Input");
+                    continue;
             }
-            do {
-                System.out.println(" =================================================");
-                System.out.println("| #   PHASE                   : command           |");
-                System.out.println(" =================================================");
-                System.out.println("| 1.  Any except MainPlay     : load map          |");
-                System.out.println("| 2.  Any                     : show map          |");
-                System.out.println("| 3.  Edit:PostLoad           : edit country      |");
-                System.out.println("| 4.  Edit:Postload           : save map and play |");
-                System.out.println("| 5.  Play:PlaySetup          : set players       |");
-                System.out.println("| 6.  Play:PlaySetup          : assign countries  |");
-                System.out.println("| 7.  Play:MainPlay:Reinforce : reinforce         |");
-                System.out.println("| 8.  Play:MainPlay:Attack    : attack            |");
-                System.out.println("| 9.  Play:MainPlay:Fortify   : fortify           |");
-                System.out.println("| 10. Play                    : end game          |");
-                System.out.println("| 0.  Any                     : next phase        |");
-                System.out.println(" =================================================");
-                //System.out.println("enter a " + gamePhase.getClass().getSimpleName() + " phase command: ");
-                mycommand = keyboard.nextInt();
-                System.out.println(" =================================================");
-                //
-                // Calls the method corresponding to the action that the user has selected.
-                // Depending on what it the current state object, these method calls will
-                // have a different implementation.
-                //
-                switch (mycommand) {
-                    case 1:
-                        //gamePhase.loadMap();
-                        break;
-                    case 2:
-                        //gamePhase.showMap();
-                        break;
-                    case 3:
-                        //gamePhase.editCountry();
-                        break;
-                    case 4:
-                        //gamePhase.saveMap();
-                        break;
-                    case 5:
-                        //gamePhase.setPlayers();
-                        break;
-                    case 6:
-                        //gamePhase.assignCountries();
-                        break;
-                    case 7:
-                        //gamePhase.reinforce();
-                        break;
-                    case 8:
-                        //gamePhase.attack();
-                        break;
-                    case 9:
-                        //gamePhase.fortify();
-                        break;
-                    case 10:
-                        //gamePhase.endGame();
-                        break;
-                    case 0:
-                        //gamePhase.next();
-                        break;
-                    default:
-                        System.out.println("this command does not exist");
-                }
-            } while (mycommand != 3);
-        } while (mycommand != 3);
-        keyboard.close();
-    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /**
-     * The Game execution begins from this method.
-     */
-    public static void runGame() {
-        Scanner l_scanner = new Scanner(System.in);
-        String l_command;
-
-        System.out.println("Enter command: ");
-        l_command = l_scanner.nextLine();
-
-        while (!l_command.equals("EXIT")) {
-            compareCommand(l_command);
-            System.out.println("Enter command: ");
+            System.out.println("Enter First command: ");
             l_command = l_scanner.nextLine();
-        }
+
+            while (!l_command.equals("EXIT")) {
+
+                l_resetPhase = compareCommand(l_command);
+
+                if(l_resetPhase){
+                    break;
+                }
+
+                System.out.println("Enter command: ");
+                l_command = l_scanner.nextLine();
+            }
+        } while (mystart != 3);
+
+
 
         System.out.println("GAME HAS ENDED");
 
@@ -189,26 +106,76 @@ public class GameEngineNew {
      *
      * @param p_command command line input
      */
-    public static void compareCommand(String p_command) {
+    public boolean compareCommand(String p_command) {
         String l_action = p_command.split(" ")[0];
 
         String l_arguments = p_command.substring(l_action.length());
 
-        List<String> l_gameCommands = Arrays.asList("loadmap");
+        String[] l_argumentTokens = l_arguments.split(" ");
+        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
 
-        List<String> l_mapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
+        l_argumentList.remove(0);
 
-        if (l_mapCommands.contains(l_action)) {
-            mapCommandParser(l_action, l_arguments);
-        } else if (l_gameCommands.contains(l_action)) {
-            checkNextGameCommands(l_action, l_arguments);
-
-        } else {
-            System.out.println("Invalid Command, Try again");
+        System.out.println(l_argumentList.size() + "\nArgument List : ");
+        for(String i : l_argumentList)
+        {
+            System.out.println(i + "\n");
         }
 
-    }
+        switch (l_action){
+            case "editmap":
+                d_gamePhase.editMap(l_argumentList);
+                d_gamePhase.next();
+                break;
 
+            case "validatemap":
+                d_gamePhase.validateMap(l_argumentList);
+                break;
+
+            case "showmap":
+                d_gamePhase.showMap(l_argumentList);
+                break;
+
+            case "savemap":
+                d_gamePhase.saveMap(l_argumentList);
+                return true;
+
+            case "editcontinent":
+                d_gamePhase.editContinent(l_argumentList);
+                break;
+
+            case "editcountry":
+                d_gamePhase.editCountry(l_argumentList);
+                break;
+
+            case "editneighbor":
+                d_gamePhase.editNeighbor(l_argumentList);
+                break;
+
+            case "loadmap":
+                d_gamePhase.loadMap(l_argumentList);
+                break;
+
+            case "gameplayer":
+                d_gamePhase.addPlayer(l_argumentList);
+                break;
+
+            case "assigncountries":
+                if(d_gamePhase.assignCountries()) {
+                    d_gamePhase.next();
+                }
+                break;
+
+            case "end":
+                d_gamePhase.endGame();
+                return true;
+
+
+        }
+
+        return false;
+
+    }
 
 
 
@@ -222,7 +189,7 @@ public class GameEngineNew {
         while (l_continueMainGameLoop) {
 
             //REINFORCEMENT PHASE
-            assignReinforcementArmies();
+            Reinforce.assignReinforcementArmies();
 
 
             //ISSUE ORDERS PHASE
@@ -295,34 +262,6 @@ public class GameEngineNew {
 
 
     /**
-     * Assign reinforcement armies to each player in the beginning of each turn.
-     */
-    public static void assignReinforcementArmies() {
-        for (Player l_player : d_PlayerList) {
-            int l_countriesOwned = l_player.getD_AssignedCountries().size();
-            int l_reinforcementCount, l_flag;
-            String l_playerName = l_player.getD_PlayerName();
-
-            l_reinforcementCount = Math.max((l_countriesOwned / 3), 3);
-
-            for (Continent l_continent : d_Map.getD_Continents()) {
-                l_flag = 0;
-                for (Country l_country : l_continent.getD_Countries()) {
-                    if (!l_country.getD_Player().getD_PlayerName().equals(l_playerName)) {
-                        l_flag = 1;
-                        break;
-                    }
-                }
-                if (l_flag == 0) {
-                    l_reinforcementCount += l_continent.getD_ContinentValue();
-                }
-            }
-
-            l_player.setD_Armies(l_reinforcementCount);
-        }
-    }
-
-    /**
      * Assign Countries randomly among players
      */
     public static void assignCountries() {
@@ -341,172 +280,6 @@ public class GameEngineNew {
         }
 
         GamePlay();
-
-    }
-
-
-    /**
-     * Parses GAME related commands and calls the appropriate Game Command method.
-     *
-     * @param p_action    command name
-     * @param p_arguments command options/arguments (if any)
-     */
-    public static void gameCommandParser(String p_action, String p_arguments) {
-        String[] l_argumentTokens = p_arguments.split(" ");
-        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
-
-        if (!l_argumentList.isEmpty()) {
-            l_argumentList.remove(0);
-        }
-
-        switch (p_action) {
-            case "loadmap":
-                try {
-                    d_gameLoaded = GameCommands.loadMapCommand(l_argumentList);
-                } catch (Exception e) {
-                    System.out.println("Could not load the requested map.");
-                }
-
-                break;
-
-            case "gameplayer":
-                if (d_gameLoaded) {
-                    GameCommands.gamePlayerCommand(l_argumentList);
-                    break;
-                }
-                break;
-
-            case "assigncountries":
-                if (d_gameLoaded) {
-                    assignCountries();
-                    break;
-                }
-                break;
-
-            case "showmap":
-                if (d_gameLoaded) {
-                    GameCommands.showMapCommand(l_argumentList);
-                    break;
-                }
-                break;
-
-            default:
-                System.out.println("Invalid Command \nAllowed Commands are : loadmap, gameplayer, assigncountries, showmap");
-                break;
-        }
-
-        if (!d_gameLoaded) {
-            System.out.println("No Map is loaded yet, use loadmap command to load map");
-        }
-
-    }
-
-
-    /**
-     * Scan and parse Game related Commands Only
-     *
-     * @param p_action    command name
-     * @param p_arguments command options/arguments (if any)
-     */
-    public static void checkNextGameCommands(String p_action, String p_arguments) {
-
-        gameCommandParser(p_action, p_arguments);
-
-        Scanner l_scanner = new Scanner(System.in);
-        String l_command;
-
-        System.out.println("Enter command: ");
-        l_command = l_scanner.nextLine();
-
-        while (!l_command.equals("EXITGAME")) {
-            String l_action = l_command.split(" ")[0];
-
-            String l_arguments = l_command.substring(l_action.length());
-
-            gameCommandParser(l_action, l_arguments);
-
-            System.out.println("Enter command: ");
-            l_command = l_scanner.nextLine();
-        }
-    }
-
-
-    /**
-     * Parses map related commands and calls the appropriate MapCommand method.
-     *
-     * @param p_action    command name
-     * @param p_arguments command options/arguments (if any)
-     */
-    public static void mapCommandParser(String p_action, String p_arguments) {
-
-        String[] l_argumentTokens = p_arguments.split(" ");
-        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
-
-        if (!l_argumentList.isEmpty()) {
-            l_argumentList.remove(0);
-        }
-
-        switch (p_action) {
-            case "editmap":
-                try {
-                    d_mapLoaded = MapCommands.editMapCommand(l_argumentList);
-                } catch (Exception e) {
-                }
-
-                break;
-
-            case "editcontinent":
-                if (d_mapLoaded) {
-                    MapCommands.editContinentCommand(l_argumentList);
-                    break;
-                }
-                break;
-
-            case "editcountry":
-                if (d_mapLoaded) {
-                    MapCommands.editCountryCommand(l_argumentList);
-                    break;
-                }
-                break;
-
-            case "editneighbor":
-                if (d_mapLoaded) {
-                    MapCommands.editNeighborCommand(l_argumentList);
-                    break;
-                }
-                break;
-
-            case "validatemap":
-                if (d_mapLoaded) {
-                    MapCommands.validateMapCommand(l_argumentList);
-                    break;
-                }
-                break;
-
-            case "savemap":
-                if (d_mapLoaded) {
-                    MapCommands.saveMapCommand(l_argumentList);
-                    break;
-                }
-                break;
-
-            case "showmap":
-                if (d_mapLoaded) {
-                    MapCommands.showMapCommand(l_argumentList);
-                    break;
-                }
-                break;
-
-            default:
-                System.out.println("Invalid Command");
-                break;
-
-
-        }
-
-        if (!d_mapLoaded) {
-            System.out.println("No Map is loaded yet, use editmap command to load map");
-        }
 
     }
 

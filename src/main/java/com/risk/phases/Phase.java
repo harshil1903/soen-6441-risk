@@ -1,18 +1,23 @@
 package com.risk.phases;
 
 import com.risk.main.GameEngine;
+import com.risk.main.GameEngineNew;
 import com.risk.main.Main;
 import com.risk.main.MapEngine;
 
 import java.util.List;
 
 public abstract class Phase {
-
+    GameEngineNew d_gameEngineNew;
     GameEngine d_gameEngine;
     MapEngine d_mapEngine;
 
     Phase(GameEngine p_gameEngine){
         d_gameEngine = p_gameEngine;
+    }
+
+    Phase(GameEngineNew p_gameEngine){
+        d_gameEngineNew = p_gameEngine;
     }
 
     Phase(MapEngine p_mapEngine){
@@ -60,16 +65,15 @@ public abstract class Phase {
 
     //GameSetup
     abstract public void loadMap(List<String> p_argumentList);
-    abstract public void showGameMap();
     abstract public void addPlayer(List<String> p_argumentTokens);
-    abstract public void assignCountries();
+    abstract public boolean assignCountries();
 
     //MainGame
     // reinforcement commands
     abstract public void reinforce();
 
     //issue Order
-    abstract public void issueOrder();
+    abstract public void issueOrder(String p_action, String p_arguments);
 
     //Execute Order
     abstract public void executeOrder();

@@ -1,6 +1,7 @@
 package com.risk.phases;
 
 import com.risk.main.GameEngine;
+import com.risk.main.GameEngineNew;
 import com.risk.main.MapEngine;
 
 import java.util.List;
@@ -15,11 +16,11 @@ public abstract class MapEdit extends Phase {
         super(p_gameEngine);
     }
 
-    public void loadMap(List<String> p_argumentList) {
-        printInvalidCommandMessage();
+    MapEdit(GameEngineNew p_gameEngine) {
+        super(p_gameEngine);
     }
 
-    public void showGameMap() {
+    public void loadMap(List<String> p_argumentList) {
         printInvalidCommandMessage();
     }
 
@@ -27,15 +28,16 @@ public abstract class MapEdit extends Phase {
         printInvalidCommandMessage();
     }
 
-    public void assignCountries() {
+    public boolean assignCountries() {
         printInvalidCommandMessage();
+        return false;
     }
 
     public void reinforce() {
         printInvalidCommandMessage();
     }
 
-    public void issueOrder() {
+    public void issueOrder(String p_action, String p_arguments) {
         printInvalidCommandMessage();
     }
 

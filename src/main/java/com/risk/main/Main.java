@@ -30,7 +30,19 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("Welcome to WARZONE");
-        System.out.println("GAME BEGINS");
+        System.out.println("GAME BEGINS\n\n");
+
+        Scanner l_scanner = new Scanner(System.in);
+        String l_command;
+
+        GameEngineNew l_gameEngineNew = new GameEngineNew();
+
+        System.out.println("Enter command: ");
+        l_command = l_scanner.nextLine();
+
+        if(l_command.equals("NEW")){
+            l_gameEngineNew.runGame();
+        }
         runGame();
     }
 
@@ -43,6 +55,7 @@ public class Main {
 
         System.out.println("Enter command: ");
         l_command = l_scanner.nextLine();
+
 
         while (!l_command.equals("EXIT")) {
             compareCommand(l_command);
