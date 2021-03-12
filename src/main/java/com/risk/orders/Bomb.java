@@ -42,8 +42,9 @@ public class Bomb implements Order {
         if(l_countriesOwnedList.contains(d_countryName))
         {
             System.out.println(d_player.getD_PlayerName()+" can not attack bomb on your own country");
+            return false;
         }
-        return false;
+        return true;
     }
 
     /**
