@@ -3,6 +3,8 @@ package com.risk.orders;
 import com.risk.models.Country;
 import com.risk.models.Player;
 
+import java.util.ArrayList;
+
 /**
  * The type Bomb
  *
@@ -32,10 +34,14 @@ public class Bomb implements Order {
      * @return the boolean
      */
     public boolean valid() {
-        //here firstly add if player have a bomb card or not after chirag make cardlist of each player
-        if(d_player.getD_AssignedCountries().contains(d_countryName))
+        //here firstly check if player have a bomb card or not after chirag make cardlist of each player
+        ArrayList<String> l_countriesOwnedList = new ArrayList<>();
+        for (Country l_country : d_player.getD_AssignedCountries()) {
+            l_countriesOwnedList.add(l_country.getD_CountryName());
+        }
+        if(l_countriesOwnedList.contains(d_countryName))
         {
-            System.out.println("You can not attack bomb on your own country");
+            System.out.println(d_player.getD_PlayerName()+" can not attack bomb on your own country");
         }
         return false;
     }
