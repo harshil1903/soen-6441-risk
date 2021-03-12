@@ -1,14 +1,12 @@
 package com.risk.main;
 
 import com.risk.controller.GameCommands;
-import com.risk.controller.MapCommands;
 import com.risk.gameutils.AssignCountries;
 import com.risk.gameutils.Reinforce;
-import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Orders;
 import com.risk.models.Player;
-import com.risk.phases.GameSetup;
+import com.risk.phases.GameStartup;
 import com.risk.phases.Phase;
 import com.risk.phases.PreMapLoad;
 
@@ -17,7 +15,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
@@ -69,7 +66,7 @@ public class GameEngineNew {
                     break;
                 case 2:
                     // Set the state to PlaySetup
-                    setPhase(new GameSetup(this));
+                    setPhase(new GameStartup(this));
                     break;
                 case 3:
                     System.out.println("Bye!");

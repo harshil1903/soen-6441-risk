@@ -11,13 +11,13 @@ import java.util.List;
 
 import static com.risk.main.Main.d_PlayerList;
 
-public class GameSetup extends Game {
+public class GameStartup extends Game {
 
-    public GameSetup(GameEngine p_gameEngine) {
+    public GameStartup(GameEngine p_gameEngine) {
         super(p_gameEngine);
     }
 
-    public GameSetup(GameEngineNew p_gameEngine) {
+    public GameStartup(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
 
@@ -77,6 +77,6 @@ public class GameSetup extends Game {
     }
 
     public void next() {
-        d_gameEngineNew.setPhase(new MainGame(d_gameEngineNew));
+        d_gameEngineNew.setPhase(new GameIssueOrder(d_gameEngineNew));
     }
 }

@@ -63,7 +63,7 @@ public abstract class Phase {
     abstract public void editNeighbor(List<String> p_argumentTokens);
 
 
-    //GameSetup
+    //GameStartup
     abstract public void loadMap(List<String> p_argumentList);
     abstract public void addPlayer(List<String> p_argumentTokens);
     abstract public boolean assignCountries();
