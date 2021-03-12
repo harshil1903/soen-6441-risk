@@ -1,7 +1,10 @@
 package com.risk.phases;
 
+import com.risk.controller.MapCommands;
 import com.risk.main.GameEngine;
 import com.risk.main.MapEngine;
+
+import java.util.List;
 
 public class PostMapLoad extends MapEdit{
 
@@ -13,31 +16,39 @@ public class PostMapLoad extends MapEdit{
         super(p_gameEngine);
     }
 
-    public void editMap() {
+    public void editMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
 
-    public void validateMap(){
+    public void validateMap(List<String> p_argumentTokens) {
         //Call ValidateMap Operation from here.
+        MapCommands.validateMapCommand(p_argumentTokens);
     }
 
-    public void showMap(){
+    public void showMap(List<String> p_argumentTokens){
         //Call showMap Operation from here.
+        MapCommands.showMapCommand(p_argumentTokens);
     }
 
-    public void saveMap(){
+    public void saveMap(List<String> p_argumentTokens){
         //Call saveMap Operation from here.
+        MapCommands.saveMapCommand(p_argumentTokens);
     }
 
-    public void editCountry(){
+    public void editCountry(List<String> p_argumentTokens){
         //Call EditCountry Operation from here.
+        MapCommands.editCountryCommand(p_argumentTokens);
     }
 
-    public void editContinent(){
+    public void editContinent(List<String> p_argumentTokens){
+
         //Call EditContinent Operation from here.
+        MapCommands.editContinentCommand(p_argumentTokens);
     }
 
-    public void editNeighbor(){
+    public void editNeighbor(List<String> p_argumentTokens){
+
         //Call EditNeighbor Operation from here.
+        MapCommands.editNeighborCommand(p_argumentTokens);
     }
 }

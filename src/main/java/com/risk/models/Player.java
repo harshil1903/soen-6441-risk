@@ -1,5 +1,7 @@
 package com.risk.models;
 
+import com.risk.controller.GameCommands;
+import com.risk.orders.Deploy;
 import com.risk.orders.Order;
 
 import java.util.ArrayList;
@@ -180,6 +182,92 @@ public class Player {
     /**
      * To add an order to the list of orders held by the player
      * Issue order phase of game
+     *
+     * @param p_action Type of Order
+     * @param p_arguments Order information
+     */
+    public void issue_Order(String p_action, String p_arguments){
+
+        String[] l_argumentTokens = p_arguments.split(" ");
+        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
+
+        if (!l_argumentList.isEmpty()) {
+            l_argumentList.remove(0);
+        }
+
+        switch (p_action) {
+            case "deploy":
+                //verify argument tokens count
+                //split argumentList into country name and number of armies
+                //d_currentOrder = new Deploy(this,l_countryName, l_numberOfArmies);
+                //d_orderList.add(d_currentOrder)
+                break;
+
+            case "advance":
+                //verify argument tokens count
+                //
+                //d_currentOrder = new Advance(this, l_countryNameFrom, l_countryNameTo, l_numberOfArmies);
+                //d_orderList.add(d_currentOrder)
+                break;
+
+            case "bomb":
+                //verify argument tokens count
+                //
+                //d_currentOrder = new Bomb(this, l_countryName);
+                //d_orderList.add(d_currentOrder)
+                break;
+
+            case "blockade":
+                //verify argument tokens count
+                //
+                //d_currentOrder = new Blockade(this, l_countryName);
+                //d_orderList.add(d_currentOrder)
+                break;
+
+            case "airlift":
+                //verify argument tokens count
+                //
+                //d_currentOrder = new Airlift(this, l_countryNameFrom, l_countryNameTo, l_numberOfArmies);
+                //d_orderList.add(d_currentOrder)
+                break;
+
+            case "negotiate":
+                //verify argument tokens count
+                //
+                //d_currentOrder = new Negotiate(this, otherPlayer);
+                //d_orderList.add(d_currentOrder)
+                break;
+
+            default:
+                System.out.println("Invalid Command \nAllowed Commands are : deploy, advance, bomb, blockade, airlift, negotiate");
+                break;
+        }
+
+
+    }
+
+    /**
+     * First order in the player’s list of orders, then removes it from the list.
+     *
+     * @return l_tempOrder object of the order class
+     */
+    public Order next_Order() {
+        //Order l_tempOrder = new Order();
+
+        if (d_orderList.isEmpty()) {
+            return null;
+        } else {
+            Order l_tempOrder = d_orderList.get(0);
+            d_orderList.remove(d_orderList.get(0));
+            return l_tempOrder;
+        }
+
+
+    }
+
+    /**
+     * To add an order to the list of orders held by the player
+     * Issue order phase of game
      */
     public void issueOrder() {
 
@@ -191,8 +279,6 @@ public class Player {
             d_OrderList.add(d_currentOrder);
             System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies + " successfully deployed");
         }
-
-
          */
 
 

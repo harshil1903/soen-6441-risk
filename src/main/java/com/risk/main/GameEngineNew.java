@@ -1,6 +1,7 @@
 package com.risk.main;
 
 import com.risk.controller.GameCommands;
+import com.risk.controller.MapCommands;
 import com.risk.gameutils.AssignCountries;
 import com.risk.models.Continent;
 import com.risk.models.Country;
@@ -23,7 +24,7 @@ import static com.risk.main.Main.d_PlayerList;
  *
  * @author Harshil
  */
-public class GameEngine2 {
+public class GameEngineNew {
 
     /**
      * Contains true if game is loaded otherwise false.
@@ -32,6 +33,11 @@ public class GameEngine2 {
     private Phase d_gamePhase;
     int mystart;
     int mycommand;
+
+    /**
+     * Contains true if map is loaded otherwise false
+     */
+    public static boolean d_mapLoaded = false;
 
     public void setPhase(Phase p_gamePhase){
         d_gamePhase = p_gamePhase;
@@ -158,17 +164,50 @@ public class GameEngine2 {
 
 
 
+    /**
+     * The Game execution begins from this method.
+     */
+    public static void runGame() {
+        Scanner l_scanner = new Scanner(System.in);
+        String l_command;
 
+        System.out.println("Enter command: ");
+        l_command = l_scanner.nextLine();
 
+        while (!l_command.equals("EXIT")) {
+            compareCommand(l_command);
+            System.out.println("Enter command: ");
+            l_command = l_scanner.nextLine();
+        }
 
+        System.out.println("GAME HAS ENDED");
 
+    }
 
+    /**
+     * The method compares the command input from user to check what type of command is entered.
+     *
+     * @param p_command command line input
+     */
+    public static void compareCommand(String p_command) {
+        String l_action = p_command.split(" ")[0];
 
+        String l_arguments = p_command.substring(l_action.length());
 
+        List<String> l_gameCommands = Arrays.asList("loadmap");
 
+        List<String> l_mapCommands = Arrays.asList("editmap", "validatemap", "savemap", "editcontinent", "editcountry", "editneighbor", "showmap");
 
+        if (l_mapCommands.contains(l_action)) {
+            mapCommandParser(l_action, l_arguments);
+        } else if (l_gameCommands.contains(l_action)) {
+            checkNextGameCommands(l_action, l_arguments);
 
+        } else {
+            System.out.println("Invalid Command, Try again");
+        }
 
+    }
 
 
 
@@ -389,6 +428,86 @@ public class GameEngine2 {
             System.out.println("Enter command: ");
             l_command = l_scanner.nextLine();
         }
+    }
+
+
+    /**
+     * Parses map related commands and calls the appropriate MapCommand method.
+     *
+     * @param p_action    command name
+     * @param p_arguments command options/arguments (if any)
+     */
+    public static void mapCommandParser(String p_action, String p_arguments) {
+
+        String[] l_argumentTokens = p_arguments.split(" ");
+        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
+
+        if (!l_argumentList.isEmpty()) {
+            l_argumentList.remove(0);
+        }
+
+        switch (p_action) {
+            case "editmap":
+                try {
+                    d_mapLoaded = MapCommands.editMapCommand(l_argumentList);
+                } catch (Exception e) {
+                }
+
+                break;
+
+            case "editcontinent":
+                if (d_mapLoaded) {
+                    MapCommands.editContinentCommand(l_argumentList);
+                    break;
+                }
+                break;
+
+            case "editcountry":
+                if (d_mapLoaded) {
+                    MapCommands.editCountryCommand(l_argumentList);
+                    break;
+                }
+                break;
+
+            case "editneighbor":
+                if (d_mapLoaded) {
+                    MapCommands.editNeighborCommand(l_argumentList);
+                    break;
+                }
+                break;
+
+            case "validatemap":
+                if (d_mapLoaded) {
+                    MapCommands.validateMapCommand(l_argumentList);
+                    break;
+                }
+                break;
+
+            case "savemap":
+                if (d_mapLoaded) {
+                    MapCommands.saveMapCommand(l_argumentList);
+                    break;
+                }
+                break;
+
+            case "showmap":
+                if (d_mapLoaded) {
+                    MapCommands.showMapCommand(l_argumentList);
+                    break;
+                }
+                break;
+
+            default:
+                System.out.println("Invalid Command");
+                break;
+
+
+        }
+
+        if (!d_mapLoaded) {
+            System.out.println("No Map is loaded yet, use editmap command to load map");
+        }
+
     }
 
 

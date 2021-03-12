@@ -65,6 +65,7 @@ public class Deploy implements Order {
      */
     public void execute(){
 
+        d_player.setD_Armies(d_player.getD_Armies() - d_numberOfArmies);
         int l_previousArmies = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
         d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
 

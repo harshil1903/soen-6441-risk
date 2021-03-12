@@ -10,11 +10,6 @@ public abstract class Phase {
 
     GameEngine d_gameEngine;
     MapEngine d_mapEngine;
-    Main d_main;
-
-    Phase(Main p_main){
-        d_main = p_main;
-    }
 
     Phase(GameEngine p_gameEngine){
         d_gameEngine = p_gameEngine;
@@ -52,15 +47,15 @@ public abstract class Phase {
 
 
     //PreMapLoad
-    abstract public void editMap();
+    abstract public void editMap(List<String> p_argumentTokens);
 
     //PostMopLoad commands
-    abstract public void validateMap();
-    abstract public void showMap();
-    abstract public void saveMap();
-    abstract public void editCountry();
-    abstract public void editContinent();
-    abstract public void editNeighbor();
+    abstract public void validateMap(List<String> p_argumentTokens);
+    abstract public void showMap(List<String> p_argumentTokens);
+    abstract public void saveMap(List<String> p_argumentTokens);
+    abstract public void editCountry(List<String> p_argumentTokens);
+    abstract public void editContinent(List<String> p_argumentTokens);
+    abstract public void editNeighbor(List<String> p_argumentTokens);
 
 
     //GameSetup
