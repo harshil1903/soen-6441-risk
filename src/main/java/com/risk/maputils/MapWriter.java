@@ -16,6 +16,7 @@ import java.util.List;
  */
 
 public class MapWriter {
+
     /**
      * This method writes the map details to map file
      *
