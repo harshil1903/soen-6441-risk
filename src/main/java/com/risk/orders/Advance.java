@@ -88,7 +88,34 @@ public class Advance implements Order {
 
         } else {
             //logic for the battle
-            int l_attacker = (int) (d_numberOfArmies * 0.6);
+            d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
+            int l_attackerPercentage = (int) (d_numberOfArmies * 0.6);
+            int l_defenderPercentage = (int) (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() * 0.7);
+
+            //Battle Begins....
+            int l_attackerArmy = d_numberOfArmies - l_defenderPercentage;
+            int l_defenderArmy = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() - l_attackerPercentage;
+
+            if (l_defenderArmy <= 0) {
+                //attacker will get card here...
+                d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy);
+                d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
+                d_player.addCountryToAssignedCountries(d_targetCountry);
+                Player l_tempPlayer = d_targetCountry.getD_Player();
+                l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
+                d_targetCountry.setD_Player(d_player);
+            } else {
+                //here defender successfully defend
+                //so attacker can not get card here
+
+                int l_previousArmies = d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).getD_NumberOfArmies();
+                d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy + l_previousArmies);
+                d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
+            }
+
+
+            //unwanted code
+           /* int l_attacker = (int) (d_numberOfArmies * 0.6);
             int l_defender = (int) (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() * 0.7);
 
             if (l_attacker > l_defender) {
@@ -102,7 +129,7 @@ public class Advance implements Order {
             } else if (l_attacker < l_defender) {
                 d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
                 d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defender);
-            }
+            }*/
 
         }
 
