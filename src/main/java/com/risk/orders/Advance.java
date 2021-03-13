@@ -89,8 +89,8 @@ public class Advance implements Order {
         } else {
             //logic for the battle
            //
-            int l_attackerPercentage = (int) (d_numberOfArmies * 0.6);
-            int l_defenderPercentage = (int) (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() * 0.7);
+            int l_attackerPercentage = (int) Math.round(d_numberOfArmies * 0.6);
+            int l_defenderPercentage = (int) Math.round(d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() * 0.7);
 
             //Battle Begins....
             int l_attackerArmy = d_numberOfArmies - l_defenderPercentage;
