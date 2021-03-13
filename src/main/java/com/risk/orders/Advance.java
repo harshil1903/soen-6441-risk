@@ -88,7 +88,7 @@ public class Advance implements Order {
 
         } else {
             //logic for the battle
-            d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
+           //
             int l_attackerPercentage = (int) (d_numberOfArmies * 0.6);
             int l_defenderPercentage = (int) (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() * 0.7);
 
@@ -98,8 +98,8 @@ public class Advance implements Order {
 
             if (l_defenderArmy <= 0) {
                 //attacker will get card here...
-                d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy);
-                d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
+                d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
+                d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_attackerArmy);
                 d_player.addCountryToAssignedCountries(d_targetCountry);
                 Player l_tempPlayer = d_targetCountry.getD_Player();
                 l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
