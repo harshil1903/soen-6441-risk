@@ -56,6 +56,7 @@ public class Bomb implements Order {
      */
     public void execute() {
         int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
-        d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies((l_previousArmy / 2));
+
+        d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(Math.round(l_previousArmy / 2));
     }
 }
