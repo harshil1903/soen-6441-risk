@@ -38,11 +38,10 @@ public class GameEngineNew {
      */
     public static boolean d_mapLoaded = false;
 
-    public void setPhase(Phase p_gamePhase){
+    public void setPhase(Phase p_gamePhase) {
         d_gamePhase = p_gamePhase;
         System.out.println("New Phase : " + d_gamePhase.getClass().getSimpleName());
     }
-
 
 
     /**
@@ -70,6 +69,7 @@ public class GameEngineNew {
                     break;
                 case 3:
                     System.out.println("Bye!");
+                    break;
 
                 default:
                     System.out.println("Wrong Input");
@@ -83,7 +83,7 @@ public class GameEngineNew {
 
                 l_resetPhase = compareCommand(l_command);
 
-                if(l_resetPhase){
+                if (l_resetPhase) {
                     break;
                 }
 
@@ -91,7 +91,6 @@ public class GameEngineNew {
                 l_command = l_scanner.nextLine();
             }
         } while (mystart != 3);
-
 
 
         System.out.println("GAME HAS ENDED");
@@ -113,15 +112,14 @@ public class GameEngineNew {
 
         l_argumentList.remove(0);
 
-        System.out.println(l_argumentList.size() + "\nArgument List : ");
-        for(String i : l_argumentList)
-        {
-            System.out.println(i + "\n");
-        }
+//        System.out.println(l_argumentList.size() + "\nArgument List : ");
+//        for (String i : l_argumentList) {
+//            System.out.println(i + "\n");
+//        }
 
-        switch (l_action){
+        switch (l_action) {
             case "editmap":
-                if(d_gamePhase.editMap(l_argumentList)) {
+                if (d_gamePhase.editMap(l_argumentList)) {
                     d_gamePhase.next();
                 }
                 break;
@@ -159,7 +157,7 @@ public class GameEngineNew {
                 break;
 
             case "assigncountries":
-                if(d_gamePhase.assignCountries()) {
+                if (d_gamePhase.assignCountries()) {
                     d_gamePhase.next();
                 }
                 break;
@@ -172,112 +170,6 @@ public class GameEngineNew {
         }
 
         return false;
-
-    }
-
-
-
-    /**
-     * Game play
-     * Main Game Loop begins from here
-     */
-    public static void GamePlay() {
-
-        boolean l_continueMainGameLoop = true;
-        while (l_continueMainGameLoop) {
-
-            //REINFORCEMENT PHASE
-            Reinforce.assignReinforcementArmies();
-
-
-            //ISSUE ORDERS PHASE
-            //call a function which scanes for order commands then create an order of that type
-            //Add that order to that Player
-            //call issueOrder() of player which will then add that order's valid method to check
-            // amd then perform necessary operations and add that order to orderlist of player
-            while (!checkReinforcementArmiesCount()) {
-                for (Player l_player : d_PlayerList) {
-                    if (l_player.getD_Armies() != 0) {
-                        System.out.println("\n\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
-                        System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
-                        System.out.println("You own the following Countries");
-                        for (Country l_country : l_player.getD_AssignedCountries()) {
-                            System.out.print("\t\t" + l_country.getD_CountryName() + ", ");
-                        }
-                        l_player.issueOrder();
-                    } else {
-                        System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped due to no reinforcement armies left");
-                    }
-                }
-            }
-            System.out.println();
-
-            //EXECUTE ORDERS PHASE
-            int l_noOrdersPlayerCount = 0;
-            Scanner l_scanner = new Scanner(System.in);
-            String l_choice;
-            while (l_noOrdersPlayerCount <= d_PlayerList.size()) {
-
-                for (Player l_player : d_PlayerList) {
-                    Orders l_order = l_player.nextOrder();
-                    if (l_order != null) {
-                        l_order.execute();
-                        System.out.println("Order : " + l_order.getD_CountryName() + " has " + l_order.getD_NumberOfArmies() + " armies.");
-                    } else {
-                        ++l_noOrdersPlayerCount;
-                        System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);
-                    }
-                }
-
-            }
-            GameCommands.showMapCommand(new ArrayList<>());
-
-            System.out.print("Continue Main Game Loop? (y/n) : ");
-            System.out.println("\nEnter command: ");
-            l_choice = l_scanner.nextLine();
-
-            if (l_choice.equals("n")) {
-                l_continueMainGameLoop = false;
-            }
-
-        }
-
-    }
-
-    /**
-     * Check if reinforcement armies are left to be assigned for any player
-     *
-     * @return whether to continue issue orders or not
-     */
-    public static boolean checkReinforcementArmiesCount() {
-        for (Player l_player : d_PlayerList) {
-            if (l_player.getD_Armies() != 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-
-    /**
-     * Assign Countries randomly among players
-     */
-    public static void assignCountries() {
-        if (d_PlayerList.isEmpty()) {
-            System.out.println("No players added, add players first");
-            return;
-        } else if (d_PlayerList.size() == 1) {
-            System.out.println("Cant play the game with 1 player, add atleast 1 more player");
-            return;
-        }
-
-        try {
-            AssignCountries.assignCountries();
-            System.out.println("Countries have been successfully assigned to all the players");
-        } catch (Exception e) {
-        }
-
-        GamePlay();
 
     }
 

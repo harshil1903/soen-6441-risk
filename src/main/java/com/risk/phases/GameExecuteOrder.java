@@ -60,12 +60,12 @@ public class GameExecuteOrder extends Game{
                     System.out.println("Executing Order : " + testOrder);
                 } else {
                     ++l_noOrdersPlayerCount;
-                    System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);
+                    //System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);
                 }
             }
 
         }
-        System.out.println("Executing Orders finished");
+        System.out.println("Executing Orders finished\n NEW TURN \n");
         next();
     }
 

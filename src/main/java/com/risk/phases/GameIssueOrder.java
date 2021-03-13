@@ -36,9 +36,9 @@ public class GameIssueOrder extends Game{
 
     public void reinforce() {
 
-        System.out.println("\nReinforcing Armies\n");
+        System.out.println("\nReinforcing Armies");
         Reinforce.assignReinforcementArmies();
-        System.out.println("\nArmies have been successfully reinforced among players\n");
+        System.out.println("\nArmies have been successfully reinforced among players");
         issueOrder();
 
     }
@@ -52,34 +52,49 @@ public class GameIssueOrder extends Game{
         String l_command;
 
 
-        System.out.println("\nISSUE ORDER PHASE\n");
+        System.out.println("\nISSUE ORDER PHASE");
         while (noOrdersLeftToIssue()){
             for (Player l_player : d_PlayerList) {
 
                 if(!l_player.isD_noOrdersLeft()){
-                    System.out.println("\n\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
+                    System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
                     System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
-                    System.out.println("You own the following Countries");
+                    System.out.println("You own the following Countries along with their adjacent countries");
+
+                    System.out.printf("\t%-15s:\t%-15s%n","COUNTRY","NEIGHBOR COUNTRIES");
                     for (Country l_country : l_player.getD_AssignedCountries()) {
-                        System.out.print("\n\t" + l_country.getD_CountryName() + ", ");
-                        System.out.print("\n\t\tAdjacent Countries : ");
+//                        System.out.print("\n\t" + l_country.getD_CountryName() + " : \t");
+//                        //System.out.print("\n\t\tAdjacent Countries : ");
+//                        for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
+//                            System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
+//                        }
+
+                        System.out.printf("\t%-15s:", l_country.getD_CountryName());
+
                         for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
-                            System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
+                            System.out.printf("\t%-15s ", l_adjCountry.getD_CountryName());
                         }
+                        System.out.println();
                     }
 
-                    System.out.println("\n Enter command: ");
+                    System.out.println("\n\nEnter command: ");
                     l_command = l_scanner.nextLine();
 
                     if(l_command.equals("end")){
                         return;
                     }
 
+                    if(l_command.equals("showmap")){
+                        showMap(new ArrayList<>());
+                        System.out.println("\n\nEnter command: ");
+                        l_command = l_scanner.nextLine();
+                    }
+
                     String l_action = l_command.split(" ")[0];
                     String l_arguments = l_command.substring(l_action.length());
 
 
-                    System.out.println("Issue Command : " + l_action + l_arguments);
+                    //System.out.println("Issue Command : " + l_action + l_arguments);
 
                     l_player.issue_Order(l_action, l_arguments);
 
@@ -95,7 +110,7 @@ public class GameIssueOrder extends Game{
             }
         }
 
-        System.out.println("All orders for the current turn have been issued.");
+        System.out.println("\nAll orders for the current turn have been issued.\n");
         next();
 
     }
