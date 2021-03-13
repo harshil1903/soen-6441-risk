@@ -50,11 +50,11 @@ public class Advance implements Order {
     public boolean valid() {
         //first check player has a advance card or not in card list
 
-        if (d_sourceCountry.getD_NumberOfArmies()>d_numberOfArmies) {
+        if (d_sourceCountry.getD_NumberOfArmies() > d_numberOfArmies) {
             return true;
 
         } else {
-            System.out.println(d_player.getD_PlayerName()+" does not have sufficient armies to be attack to the target country");
+            System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be attack to the target country");
             return false;
         }
     }
@@ -81,34 +81,16 @@ public class Advance implements Order {
 
         } else {
             //logic for the battle
-            int l_attacker=(int)(d_numberOfArmies*0.6);
-            int l_defender=(int) (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies()*0.7);
+            int l_attacker = (int) (d_numberOfArmies * 0.6);
+            int l_defender = (int) (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() * 0.7);
 
-            if(l_attacker>l_defender)
-            {
+            if (l_attacker > l_defender) {
                 d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
                 d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_attacker);
                 d_player.addCountryToAssignedCountries(d_targetCountry);
-            }
-            else if(l_attacker<l_defender)
-            {
-
-            }
-
-
-            if (d_targetCountry.getD_NumberOfArmies() == 0) {
-                //first remove number of army from source country
-
-
-                //then fetch number of army in target country
-                int l_previousArmies = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies();
-
-                //then add source army to target army
-                d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
-
-                //transfer country to attacker countryList
-                d_targetCountry.setD_Player(d_player);
-
+            } else if (l_attacker < l_defender) {
+                d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
+                d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defender);
             }
 
         }
