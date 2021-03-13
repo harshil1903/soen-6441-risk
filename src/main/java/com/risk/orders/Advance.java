@@ -51,9 +51,16 @@ public class Advance implements Order {
         //first check player has a advance card or not in card list
 
         if (d_sourceCountry.getD_NumberOfArmies() > d_numberOfArmies) {
-            return true;
+            if (d_sourceCountryName != d_targetCountryName) {
+                return true;
+            } else {
+                return false;
+            }
 
         } else {
+            if (d_sourceCountry.getD_NumberOfArmies() == d_numberOfArmies) {
+                System.out.println(d_player.getD_PlayerName() + " can not use whole army for attack");
+            }
             System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be attack to the target country");
             return false;
         }
@@ -77,7 +84,6 @@ public class Advance implements Order {
             int l_previousArmies = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies();
 
             //then add source army to target army
-
             d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
 
         } else {
@@ -89,7 +95,7 @@ public class Advance implements Order {
                 d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
                 d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_attacker);
                 d_player.addCountryToAssignedCountries(d_targetCountry);
-                Player l_tempPlayer=d_targetCountry.getD_Player();
+                Player l_tempPlayer = d_targetCountry.getD_Player();
                 l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
                 d_targetCountry.setD_Player(d_player);
 
