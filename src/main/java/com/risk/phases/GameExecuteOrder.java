@@ -9,8 +9,9 @@ public class GameExecuteOrder extends Game{
         super(p_gameEngine);
     }
 
-    public void loadMap(List<String> p_argumentList) {
+    public boolean loadMap(List<String> p_argumentList) {
         printInvalidCommandMessage();
+        return false;
     }
 
     public void addPlayer(List<String> p_argumentTokens) {

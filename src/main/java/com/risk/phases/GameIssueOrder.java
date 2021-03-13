@@ -11,8 +11,9 @@ public class GameIssueOrder extends Game{
         reinforce();
     }
 
-    public void loadMap(List<String> p_argumentList) {
+    public boolean loadMap(List<String> p_argumentList) {
         printInvalidCommandMessage();
+        return false;
     }
 
     public void addPlayer(List<String> p_argumentTokens) {
