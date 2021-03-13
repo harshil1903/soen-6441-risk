@@ -29,6 +29,7 @@ public class Blockade implements Order {
         this.d_countryName = p_countryName;
         this.d_player = p_player;
         d_country = new Country();
+        d_country.getCountryFromCountryName(p_countryName);
     }
 
     /**

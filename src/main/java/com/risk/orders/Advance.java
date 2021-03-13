@@ -38,7 +38,9 @@ public class Advance implements Order {
         this.d_player = p_player;
 
         d_sourceCountry = new Country();
+        d_sourceCountry.getCountryFromCountryName(d_sourceCountryName);
         d_targetCountry = new Country();
+        d_targetCountry.getCountryFromCountryName(d_targetCountryName);
     }
 
 
@@ -112,8 +114,6 @@ public class Advance implements Order {
                 d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy + l_previousArmies);
                 d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
             }
-
-
 
         }
 

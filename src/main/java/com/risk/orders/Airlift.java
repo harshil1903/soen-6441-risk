@@ -37,7 +37,9 @@ public class Airlift implements Order {
         this.d_player = p_player;
 
         d_sourceCountry = new Country();
+        d_sourceCountry.getCountryFromCountryName(d_sourceCountryName);
         d_targetCountry = new Country();
+        d_targetCountry.getCountryFromCountryName(d_targetCountryName);
 
     }
 
