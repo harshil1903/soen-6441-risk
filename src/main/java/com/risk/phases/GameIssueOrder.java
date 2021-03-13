@@ -61,8 +61,8 @@ public class GameIssueOrder extends Game{
                     System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
                     System.out.println("You own the following Countries");
                     for (Country l_country : l_player.getD_AssignedCountries()) {
-                        System.out.print("\n\t\t" + l_country.getD_CountryName() + ", ");
-                        System.out.print("\n\tAdjacent Countries : ");
+                        System.out.print("\n\t" + l_country.getD_CountryName() + ", ");
+                        System.out.print("\n\t\tAdjacent Countries : ");
                         for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
                             System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
                         }

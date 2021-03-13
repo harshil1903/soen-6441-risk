@@ -45,10 +45,19 @@ public class GameExecuteOrder extends Game{
         while (l_noOrdersPlayerCount <= d_PlayerList.size()) {
 
             for (Player l_player : d_PlayerList) {
-                //Order l_order = l_player.next_Order();
-                if (l_player.next_Order() != null) {
+                /*
+                Order l_order = l_player.next_Order();
+                if (l_order != null) {
                     System.out.println("Executing Order");
                     //l_order.execute();
+                } else {
+                    ++l_noOrdersPlayerCount;
+                    System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);
+                }*/
+
+                String testOrder = l_player.testnext_Order();
+                if (testOrder != null) {
+                    System.out.println("Executing Order : " + testOrder);
                 } else {
                     ++l_noOrdersPlayerCount;
                     System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);

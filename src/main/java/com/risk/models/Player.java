@@ -28,6 +28,8 @@ public class Player {
     private List<Order> d_orderList;
     public Order d_currentOrder;
 
+    public List<String> testOrderList;
+
     /**
      * Instantiates a new Player.
      *
@@ -39,6 +41,8 @@ public class Player {
         d_armies = 0;
         d_assignedCountries = new ArrayList<Country>();
         d_OrderLists = new ArrayList<Orders>();
+        d_orderList = new ArrayList<>();
+        testOrderList = new ArrayList<>();
     }
 
     /**
@@ -252,6 +256,8 @@ public class Player {
             l_argumentList.remove(0);
         }
 
+        testOrderList.add(p_action + p_arguments);
+
         switch (p_action) {
             case "deploy":
                 System.out.println("Deploy Order done with " + p_arguments);
@@ -326,6 +332,22 @@ public class Player {
         }
         return l_tempOrder;
 
+    }
+
+    /**
+     * First order in the player’s list of orders, then removes it from the list.
+     *
+     * @return l_tempOrder object of the order class
+     */
+    public String testnext_Order() {
+        String testOrder;
+        if (testOrderList.isEmpty()) {
+            return null;
+        } else {
+            testOrder = testOrderList.get(0);
+            testOrderList.remove(testOrderList.get(0));
+        }
+        return testOrder;
     }
 
     /**
