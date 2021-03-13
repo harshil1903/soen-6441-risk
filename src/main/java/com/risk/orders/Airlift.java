@@ -34,7 +34,7 @@ public class Airlift implements Order {
         this.d_sourceCountryName = p_sourceCountryName;
         this.d_targetCountryName = p_targetCountryName;
         this.d_numberOfArmies = p_numberOfArmies;
-        this.d_player=p_player;
+        this.d_player = p_player;
 
         d_sourceCountry = new Country();
         d_targetCountry = new Country();
@@ -70,15 +70,15 @@ public class Airlift implements Order {
         return true;
     }
 
-    ;
 
     /**
      * Execute.
      */
     public void execute() {
+
+        d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
         int l_previousArmy = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies();
         d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_previousArmy + d_numberOfArmies);
     }
 
-    ;
 }
