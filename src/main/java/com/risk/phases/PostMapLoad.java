@@ -9,20 +9,13 @@ import java.util.List;
 
 public class PostMapLoad extends MapEdit{
 
-    public PostMapLoad(MapEngine p_mapEngine) {
-        super(p_mapEngine);
-    }
-
-    public PostMapLoad(GameEngine p_gameEngine) {
-        super(p_gameEngine);
-    }
-
     public PostMapLoad(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
 
-    public void editMap(List<String> p_argumentTokens) {
+    public boolean editMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
+        return false;
     }
 
     public void validateMap(List<String> p_argumentTokens) {

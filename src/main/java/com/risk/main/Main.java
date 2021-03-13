@@ -43,7 +43,7 @@ public class Main {
         if(l_command.equals("NEW")){
             l_gameEngineNew.runGame();
         }
-        runGame();
+        //runGame();
     }
 
     /**

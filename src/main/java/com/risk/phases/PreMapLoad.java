@@ -11,25 +11,20 @@ import java.util.List;
 
 public class PreMapLoad extends MapEdit{
 
-    public PreMapLoad(MapEngine p_mapEngine) {
-        super(p_mapEngine);
-    }
-
-    public PreMapLoad(GameEngine p_gameEngine) {
-        super(p_gameEngine);
-    }
-
     public PreMapLoad(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
 
-    public void editMap(List<String> p_argumentTokens){
+    public boolean editMap(List<String> p_argumentTokens){
         //Call EditMap Operation from here.
+        boolean l_mapLoaded = false;
         try {
-            boolean l_mapLoaded = MapCommands.editMapCommand(p_argumentTokens);
+            l_mapLoaded = MapCommands.editMapCommand(p_argumentTokens);
         }
         catch (Exception e)
         {}
+
+        return l_mapLoaded;
     }
 
     public void validateMap(List<String> p_argumentTokens) {
