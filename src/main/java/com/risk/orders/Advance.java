@@ -49,7 +49,14 @@ public class Advance implements Order {
      */
     public boolean valid() {
         //first check player has a advance card or not in card list
-        return false;
+
+        if (d_sourceCountry.getD_NumberOfArmies() >= d_numberOfArmies) {
+            return true;
+
+        } else {
+            System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
+            return false;
+        }
     }
 
     /**
@@ -60,7 +67,7 @@ public class Advance implements Order {
         for (Country l_country : d_player.getD_AssignedCountries()) {
             l_countriesOwnedList.add(l_country.getD_CountryName());
         }
-        if(l_countriesOwnedList.contains(d_targetCountryName)){
+        if (l_countriesOwnedList.contains(d_targetCountryName)) {
             //just move army from onr country to another country
 
             //first remove number of army from source country
@@ -72,8 +79,7 @@ public class Advance implements Order {
             //then add source army to target army
             d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
 
-        }
-        else{
+        } else {
             //logic of the battle
         }
 
