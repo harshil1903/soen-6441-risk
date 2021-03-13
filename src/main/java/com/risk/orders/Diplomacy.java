@@ -1,20 +1,22 @@
 package com.risk.orders;
 
-public class Diplomacy implements Order{
+public class Diplomacy implements Order {
 
     /**
      * Valid boolean.
      *
      * @return the boolean
      */
-    public boolean valid(){
+    public boolean valid() {
         return false;
-    };
+    }
+
 
     /**
      * Execute.
      */
-    public void execute(){
+    public void execute() {
 
-    };
+    }
+
 }

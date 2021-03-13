@@ -35,16 +35,20 @@ public class Bomb implements Order {
      */
     public boolean valid() {
         //here firstly check if player have a bomb card or not after chirag make cardlist of each player
-        ArrayList<String> l_countriesOwnedList = new ArrayList<>();
-        for (Country l_country : d_player.getD_AssignedCountries()) {
-            l_countriesOwnedList.add(l_country.getD_CountryName());
-        }
-        if(l_countriesOwnedList.contains(d_countryName))
-        {
-            System.out.println(d_player.getD_PlayerName()+" can not attack bomb on your own country");
+        if (d_country.getD_NumberOfArmies() > 0) {
+            ArrayList<String> l_countriesOwnedList = new ArrayList<>();
+            for (Country l_country : d_player.getD_AssignedCountries()) {
+                l_countriesOwnedList.add(l_country.getD_CountryName());
+            }
+            if (l_countriesOwnedList.contains(d_countryName)) {
+                System.out.println(d_player.getD_PlayerName() + " can not attack bomb on your own country");
+                return false;
+            }
+            return true;
+        } else {
+            System.out.println(d_countryName + " has a 0 army so you can not apply bomb order there");
             return false;
         }
-        return true;
     }
 
     /**
