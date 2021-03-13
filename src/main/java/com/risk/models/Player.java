@@ -1,8 +1,7 @@
 package com.risk.models;
 
 import com.risk.controller.GameCommands;
-import com.risk.orders.Deploy;
-import com.risk.orders.Order;
+import com.risk.orders.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -261,6 +260,8 @@ public class Player {
         switch (p_action) {
             case "deploy":
                 System.out.println("Deploy Order done with " + p_arguments);
+                d_currentOrder = new Deploy(this,l_argumentList.get(0), Integer.parseInt(l_argumentList.get(1)));
+                d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //split argumentList into country name and number of armies
                 //d_currentOrder = new Deploy(this,l_countryName, l_numberOfArmies);
@@ -269,6 +270,8 @@ public class Player {
 
             case "advance":
                 System.out.println("Advance Order");
+                d_currentOrder = new Advance(this,l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
+                d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Advance(this, l_countryNameFrom, l_countryNameTo, l_numberOfArmies);
@@ -277,6 +280,8 @@ public class Player {
 
             case "bomb":
                 System.out.println("Bomb Order");
+                d_currentOrder = new Bomb(this,l_argumentList.get(0));
+                d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Bomb(this, l_countryName);
@@ -285,6 +290,8 @@ public class Player {
 
             case "blockade":
                 System.out.println("Blockade Order");
+                d_currentOrder = new Blockade(this,l_argumentList.get(0));
+                d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Blockade(this, l_countryName);
@@ -293,6 +300,8 @@ public class Player {
 
             case "airlift":
                 System.out.println("Airlift Order");
+                d_currentOrder = new Airlift(this,l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
+                d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Airlift(this, l_countryNameFrom, l_countryNameTo, l_numberOfArmies);
@@ -301,6 +310,8 @@ public class Player {
 
             case "negotiate":
                 System.out.println("Negotiate Order");
+                d_currentOrder = new Diplomacy(this,l_argumentList.get(0));
+                d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Negotiate(this, otherPlayer);
