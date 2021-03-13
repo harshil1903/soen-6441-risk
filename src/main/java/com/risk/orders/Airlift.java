@@ -49,20 +49,24 @@ public class Airlift implements Order {
 
     public boolean valid() {
         //check whether the player has airlift card or not
+        if (d_sourceCountry.getD_NumberOfArmies() >= d_numberOfArmies) {
+            ArrayList<String> l_countriesOwnedList = new ArrayList<>();
+            for (Country l_country : d_player.getD_AssignedCountries()) {
+                l_countriesOwnedList.add(l_country.getD_CountryName());
+            }
 
-        ArrayList<String> l_countriesOwnedList = new ArrayList<>();
-        for (Country l_country : d_player.getD_AssignedCountries()) {
-            l_countriesOwnedList.add(l_country.getD_CountryName());
-        }
-
-        if (!l_countriesOwnedList.contains(d_sourceCountryName)) {
-            System.out.println(d_player.getD_PlayerName() + "can not use Airlift card as source country is not owned");
-            return false;
-        } else if (!l_countriesOwnedList.contains(d_targetCountryName)) {
-            System.out.println(d_player.getD_PlayerName() + "can not use Airlift card on target country is not owned");
-            return false;
-        } else if (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() < d_numberOfArmies) {
-            System.out.println(d_player.getD_PlayerName() + "does not have sufficient armies to be airlifted to the target country");
+            if (!l_countriesOwnedList.contains(d_sourceCountryName)) {
+                System.out.println(d_player.getD_PlayerName() + "can not use Airlift card as source country is not owned");
+                return false;
+            } else if (!l_countriesOwnedList.contains(d_targetCountryName)) {
+                System.out.println(d_player.getD_PlayerName() + "can not use Airlift card on target country is not owned");
+                return false;
+            } else if (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() < d_numberOfArmies) {
+                System.out.println(d_player.getD_PlayerName() + "does not have sufficient armies to be airlifted to the target country");
+                return false;
+            }
+        } else {
+            System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
             return false;
         }
 
