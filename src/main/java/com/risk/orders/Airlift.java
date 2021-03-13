@@ -49,7 +49,7 @@ public class Airlift implements Order {
 
     public boolean valid() {
         //check whether the player has airlift card or not
-        if (d_sourceCountry.getD_NumberOfArmies() >= d_numberOfArmies) {
+        if (d_sourceCountryName != d_targetCountryName) {
             ArrayList<String> l_countriesOwnedList = new ArrayList<>();
             for (Country l_country : d_player.getD_AssignedCountries()) {
                 l_countriesOwnedList.add(l_country.getD_CountryName());
@@ -67,7 +67,7 @@ public class Airlift implements Order {
             }
             return true;
         } else {
-            System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
+            System.out.println("Source country and Target country must be different.");
             return false;
         }
     }
