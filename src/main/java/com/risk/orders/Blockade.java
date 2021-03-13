@@ -43,8 +43,8 @@ public class Blockade implements Order {
         for (Country l_country : d_player.getD_AssignedCountries()) {
             l_countriesOwnedList.add(l_country.getD_CountryName());
         }
-        if(!l_countriesOwnedList.contains(d_countryName)){
-            System.out.println(d_player.getD_PlayerName()+"can not use Blockade card on opponent’s country");
+        if (!l_countriesOwnedList.contains(d_countryName)) {
+            System.out.println(d_player.getD_PlayerName() + "can not use Blockade card on opponent’s country");
             return false;
         }
 
@@ -56,6 +56,6 @@ public class Blockade implements Order {
      */
     public void execute() {
         int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
-        d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies((l_previousArmy*3));
+        d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies((l_previousArmy * 3));
     }
 }
