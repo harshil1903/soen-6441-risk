@@ -80,6 +80,20 @@ public class Advance implements Order {
             d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
 
         } else {
+            if (d_targetCountry.getD_NumberOfArmies() == 0) {
+                //first remove number of army from source country
+                d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
+
+                //then fetch number of army in target country
+                int l_previousArmies = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies();
+
+                //then add source army to target army
+                d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
+
+                //transfer country to attacker countryList
+                d_targetCountry.setD_Player(d_player);
+
+            }
             //logic of the battle
         }
 
