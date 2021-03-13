@@ -108,7 +108,7 @@ public class Advance implements Order {
                 //here defender successfully defend
                 //so attacker can not get card here
 
-                int l_previousArmies = d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).getD_NumberOfArmies();
+                int l_previousArmies = d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies;
                 d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy + l_previousArmies);
                 d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
             }
