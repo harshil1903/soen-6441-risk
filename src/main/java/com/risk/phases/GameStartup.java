@@ -22,13 +22,16 @@ public class GameStartup extends Game {
     }
 
 
-    public void loadMap(List<String> p_argumentList) {
+    public boolean loadMap(List<String> p_argumentList) {
 
         //Call Loadmap Operation from here.
+        boolean l_mapLoaded = false;
         try {
-            boolean d_gameLoaded = GameCommands.loadMapCommand(p_argumentList);
+            l_mapLoaded = GameCommands.loadMapCommand(p_argumentList);
         }
         catch (Exception e){}
+
+        return l_mapLoaded;
 
     }
 

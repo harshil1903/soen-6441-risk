@@ -64,7 +64,7 @@ public abstract class Phase {
 
 
     //GameStartup
-    abstract public void loadMap(List<String> p_argumentList);
+    abstract public boolean loadMap(List<String> p_argumentList);
     abstract public void addPlayer(List<String> p_argumentTokens);
     abstract public boolean assignCountries();
 
