@@ -9,20 +9,11 @@ import java.util.List;
 
 public abstract class Phase {
     GameEngineNew d_gameEngineNew;
-    GameEngine d_gameEngine;
-    MapEngine d_mapEngine;
-
-    Phase(GameEngine p_gameEngine){
-        d_gameEngine = p_gameEngine;
-    }
 
     Phase(GameEngineNew p_gameEngine){
         d_gameEngineNew = p_gameEngine;
     }
 
-    Phase(MapEngine p_mapEngine){
-        d_mapEngine = p_mapEngine;
-    }
 
     /*
     Mapedit
@@ -52,7 +43,7 @@ public abstract class Phase {
 
 
     //PreMapLoad
-    abstract public void editMap(List<String> p_argumentTokens);
+    abstract public boolean editMap(List<String> p_argumentTokens);
 
     //PostMopLoad commands
     abstract public void validateMap(List<String> p_argumentTokens);
@@ -73,7 +64,7 @@ public abstract class Phase {
     abstract public void reinforce();
 
     //issue Order
-    abstract public void issueOrder(String p_action, String p_arguments);
+    abstract public void issueOrder();
 
     //Execute Order
     abstract public void executeOrder();

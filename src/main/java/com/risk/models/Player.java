@@ -22,6 +22,7 @@ public class Player {
     private int d_playerID;
     private String d_playerName;
     private int d_armies;
+    private boolean d_noOrdersLeft;
     private List<Country> d_assignedCountries;
     private List<Orders> d_OrderLists;
     private List<Order> d_orderList;
@@ -179,6 +180,62 @@ public class Player {
         return d_assignedCountries.contains(l_country);
     }
 
+
+    /**
+     * Is d no orders left boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isD_noOrdersLeft() {
+        return d_noOrdersLeft;
+    }
+
+    /**
+     * Sets d no orders left.
+     *
+     * @param p_noOrdersLeft the d no orders left
+     */
+    public void setD_noOrdersLeft(boolean p_noOrdersLeft) {
+        d_noOrdersLeft = p_noOrdersLeft;
+    }
+
+    /**
+     * Gets d order list.
+     *
+     * @return the d order list
+     */
+    public List<Order> getD_orderList() {
+        return d_orderList;
+    }
+
+    /**
+     * Sets d order list.
+     *
+     * @param p_orderList the d order list
+     */
+    public void setD_orderList(List<Order> p_orderList) {
+        d_orderList = p_orderList;
+    }
+
+    /**
+     * Gets d current order.
+     *
+     * @return the d current order
+     */
+    public Order getD_currentOrder() {
+        return d_currentOrder;
+    }
+
+    /**
+     * Sets d current order.
+     *
+     * @param p_currentOrder the d current order
+     */
+    public void setD_currentOrder(Order p_currentOrder) {
+        d_currentOrder = p_currentOrder;
+    }
+
+
     /**
      * To add an order to the list of orders held by the player
      * Issue order phase of game
@@ -197,6 +254,7 @@ public class Player {
 
         switch (p_action) {
             case "deploy":
+                System.out.println("Deploy Order done with " + p_arguments);
                 //verify argument tokens count
                 //split argumentList into country name and number of armies
                 //d_currentOrder = new Deploy(this,l_countryName, l_numberOfArmies);
@@ -204,6 +262,7 @@ public class Player {
                 break;
 
             case "advance":
+                System.out.println("Advance Order");
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Advance(this, l_countryNameFrom, l_countryNameTo, l_numberOfArmies);
@@ -211,6 +270,7 @@ public class Player {
                 break;
 
             case "bomb":
+                System.out.println("Bomb Order");
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Bomb(this, l_countryName);
@@ -218,6 +278,7 @@ public class Player {
                 break;
 
             case "blockade":
+                System.out.println("Blockade Order");
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Blockade(this, l_countryName);
@@ -225,6 +286,7 @@ public class Player {
                 break;
 
             case "airlift":
+                System.out.println("Airlift Order");
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Airlift(this, l_countryNameFrom, l_countryNameTo, l_numberOfArmies);
@@ -232,6 +294,7 @@ public class Player {
                 break;
 
             case "negotiate":
+                System.out.println("Negotiate Order");
                 //verify argument tokens count
                 //
                 //d_currentOrder = new Negotiate(this, otherPlayer);
@@ -252,16 +315,16 @@ public class Player {
      * @return l_tempOrder object of the order class
      */
     public Order next_Order() {
-        //Order l_tempOrder = new Order();
+        Order l_tempOrder;
 
         if (d_orderList.isEmpty()) {
             return null;
         } else {
-            Order l_tempOrder = d_orderList.get(0);
+            l_tempOrder = d_orderList.get(0);
             d_orderList.remove(d_orderList.get(0));
-            return l_tempOrder;
-        }
 
+        }
+        return l_tempOrder;
 
     }
 

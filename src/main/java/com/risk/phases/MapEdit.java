@@ -8,14 +8,6 @@ import java.util.List;
 
 public abstract class MapEdit extends Phase {
 
-    MapEdit(MapEngine p_mapEngine){
-        super(p_mapEngine);
-    }
-
-    MapEdit(GameEngine p_gameEngine) {
-        super(p_gameEngine);
-    }
-
     MapEdit(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
@@ -38,7 +30,7 @@ public abstract class MapEdit extends Phase {
         printInvalidCommandMessage();
     }
 
-    public void issueOrder(String p_action, String p_arguments) {
+    public void issueOrder() {
         printInvalidCommandMessage();
     }
 

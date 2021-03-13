@@ -13,10 +13,6 @@ import static com.risk.main.Main.d_PlayerList;
 
 public class GameStartup extends Game {
 
-    public GameStartup(GameEngine p_gameEngine) {
-        super(p_gameEngine);
-    }
-
     public GameStartup(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
@@ -24,7 +20,7 @@ public class GameStartup extends Game {
 
     public boolean loadMap(List<String> p_argumentList) {
 
-        //Call Loadmap Operation from here.
+        //Call LoadMap Operation from here.
         boolean l_mapLoaded = false;
         try {
             l_mapLoaded = GameCommands.loadMapCommand(p_argumentList);
@@ -37,13 +33,13 @@ public class GameStartup extends Game {
 
     public void addPlayer(List<String> p_argumentTokens) {
 
-        //Call addplayer Operation from here.
+        //Call addPlayer Operation from here.
         GameCommands.gamePlayerCommand(p_argumentTokens);
 
     }
 
     public boolean assignCountries() {
-        //Call assigncountries Operation from here.
+        //Call assignCountries Operation from here.
 
         if (d_PlayerList.isEmpty()) {
             System.out.println("No players added, add players first");
@@ -67,7 +63,7 @@ public class GameStartup extends Game {
         printInvalidCommandMessage();
     }
 
-    public void issueOrder(String p_action, String p_arguments) {
+    public void issueOrder() {
         printInvalidCommandMessage();
     }
 

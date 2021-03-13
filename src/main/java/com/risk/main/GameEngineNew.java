@@ -121,8 +121,9 @@ public class GameEngineNew {
 
         switch (l_action){
             case "editmap":
-                d_gamePhase.editMap(l_argumentList);
-                d_gamePhase.next();
+                if(d_gamePhase.editMap(l_argumentList)) {
+                    d_gamePhase.next();
+                }
                 break;
 
             case "validatemap":

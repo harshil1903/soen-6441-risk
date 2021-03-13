@@ -8,16 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Game extends Phase {
-    Game(GameEngine p_gameEngine) {
-        super(p_gameEngine);
-    }
 
     Game(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
     //PreMapLoad
-    public void editMap(List<String> p_argumentTokens) {
+    public boolean editMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
+        return false;
     }
 
     //PostMopLoad commands
