@@ -30,7 +30,8 @@ public class BombTest {
 
     String d_countryName;
     Player d_player1,d_player2;
-    Country d_country;
+    Country d_country,d_country1,d_country2;
+
     List<Country> d_countriesOwned =new ArrayList<Country>();
 
     @Before
@@ -68,15 +69,6 @@ public class BombTest {
         assertFalse(bomb.valid());
     }
 
-    @Test
-    public void testMoreNumberOfArmies(){
-        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
-        d_country = new Country();
-        d_country=d_country.getCountryFromCountryName(l_countryName1);
-        d_country.setD_NumberOfArmies(10);
-        Bomb bomb = new Bomb(d_player2,l_countryName1);
-        assertTrue(bomb.valid());
-    }
 
     @Test
     public void testBombOwnArmies(){
@@ -86,5 +78,22 @@ public class BombTest {
         d_country.setD_NumberOfArmies(10);
         Bomb bomb = new Bomb(d_player1,l_countryName1);
         assertFalse(bomb.valid());
+    }
+
+    @Test
+    public void testSuccessfulBomb(){
+        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        d_country1 = new Country();
+        d_country2 = new Country();
+        d_country1 = d_country1.getCountryFromCountryName(l_countryName1);
+        d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
+
+        d_country1.setD_NumberOfArmies(10);
+        d_country2.setD_NumberOfArmies(6);
+        Bomb bomb = new Bomb(d_player1,l_countryName2);
+        System.out.println("Armies before bomb in " +l_countryName2 + " are "+ d_country2.getD_NumberOfArmies());
+        bomb.execute();
+        System.out.println("Armies after bomb are: "+ d_country2.getCountryFromCountryName(l_countryName2).getD_NumberOfArmies());
     }
 }
