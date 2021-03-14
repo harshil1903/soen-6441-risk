@@ -48,10 +48,10 @@ public class BlockadeTest {
         d_PlayerList.add(d_player2);
         AssignCountries.assignCountries();
 
-        //d_country = new Country();
+        d_country = new Country();
 
-        //d_country.setD_CountryName("India");
-        //d_country.setD_NumberOfArmies(0);
+        d_country.setD_CountryName("India");
+        d_country.setD_NumberOfArmies(0);
     }
 
     @Test
@@ -79,7 +79,7 @@ public class BlockadeTest {
     @Test
     public void testSuccessfulBlockade() {
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
-        // String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
         d_country = new Country();
         // d_country2 = new Country();
         d_country = d_country.getCountryFromCountryName(l_countryName1);
