@@ -57,6 +57,9 @@ public class AdvanceTest {
         //d_country.setD_NumberOfArmies(0);
     }
 
+    /**
+     * Test method attacker win
+     */
     @Test
     public void testAttacker() {
 
@@ -79,6 +82,34 @@ public class AdvanceTest {
         System.out.println("Defender Army : " + d_country2.getD_NumberOfArmies());
         System.out.println("Attacker win and occupied defender country");
         System.out.println("Remaining army of attacker after attack : " + d_country2.getD_NumberOfArmies());
+        advance.execute();
+    }
+
+    /**
+     * Test method defender win
+     */
+    @Test
+    public void testDefender() {
+
+        //attacker
+        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        d_country1 = new Country();
+        d_country1 = d_country1.getCountryFromCountryName(l_countryName1);
+        d_country1.setD_NumberOfArmies(8);
+        int l_battleArmy = 25;
+
+        //defender
+        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        d_country2 = new Country();
+        d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
+        d_country2.setD_NumberOfArmies(20);
+
+        //Battle
+        Advance advance = new Advance(d_player1, l_countryName1, l_countryName2, 7);
+        System.out.println("Attacker Battle Army : " + l_battleArmy);
+        System.out.println("Defender Army : " + d_country2.getD_NumberOfArmies());
+        System.out.println("Defender win and defend country");
+        System.out.println("Remaining army of defender after attack : " + d_country2.getD_NumberOfArmies());
         advance.execute();
     }
 
