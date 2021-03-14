@@ -45,7 +45,7 @@ public class Blockade implements Order {
                 l_countriesOwnedList.add(l_country.getD_CountryName());
             }
             if (!l_countriesOwnedList.contains(d_countryName)) {
-                System.out.println(d_player.getD_PlayerName() + "can not use Blockade card on opponent’s country");
+                System.out.println(d_player.getD_PlayerName() + " can not use Blockade card on opponent’s country");
                 return false;
             }
             return true;
