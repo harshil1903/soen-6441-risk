@@ -34,7 +34,7 @@ public class BombTest {
 
     @Test
     public void testNumberOfArmies(){
-
+        
     }
 
 
