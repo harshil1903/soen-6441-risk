@@ -24,16 +24,16 @@ import static org.junit.Assert.assertTrue;
  * @author Rishabh
  */
 public class BlockadeTest {
-   /* //String d_countryName;
+    //String d_countryName;
     Player d_player1, d_player2;
     Country d_country;
 
     // List<Country> d_countriesOwned =new ArrayList<Country>();
 
     @Before
-    *//**
+    /**
      * This method is executed before every test method.
-     *//*
+     */
     public void beforeTest() throws InvalidMapException {
 
         try {
@@ -65,7 +65,7 @@ public class BlockadeTest {
         assertFalse(blockade.valid());
     }
 
-
+/*
     @Test
     public void testBlockadeOwnArmies() {
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
@@ -91,6 +91,6 @@ public class BlockadeTest {
         System.out.println("Armies before blockade in " + l_countryName1 + " are " + d_country.getD_NumberOfArmies());
         blockade.execute();
         System.out.println("Armies after bomb are: " + d_country.getCountryFromCountryName(l_countryName1).getD_NumberOfArmies());
-    }*/
-
+    }
+*/
 }
