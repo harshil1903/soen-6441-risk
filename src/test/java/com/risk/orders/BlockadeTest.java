@@ -75,7 +75,7 @@ public class BlockadeTest {
         Blockade blockade = new Blockade(d_player2, l_countryName1);
         assertFalse(blockade.valid());
     }
-/*
+
     @Test
     public void testSuccessfulBlockade() {
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
@@ -92,5 +92,4 @@ public class BlockadeTest {
         blockade.execute();
         System.out.println("Armies after bomb are: " + d_country.getCountryFromCountryName(l_countryName1).getD_NumberOfArmies());
     }
-*/
 }
