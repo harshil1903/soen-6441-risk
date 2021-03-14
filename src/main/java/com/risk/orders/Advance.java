@@ -38,9 +38,9 @@ public class Advance implements Order {
         this.d_player = p_player;
 
         d_sourceCountry = new Country();
-        d_sourceCountry.getCountryFromCountryName(d_sourceCountryName);
+        d_sourceCountry = d_sourceCountry.getCountryFromCountryName(d_sourceCountryName);
         d_targetCountry = new Country();
-        d_targetCountry.getCountryFromCountryName(d_targetCountryName);
+        d_targetCountry = d_targetCountry.getCountryFromCountryName(d_targetCountryName);
     }
 
 
@@ -54,8 +54,11 @@ public class Advance implements Order {
 
         if (d_sourceCountry.getD_NumberOfArmies() > d_numberOfArmies) {
             if (d_sourceCountryName != d_targetCountryName) {
-                return true;
+                if (d_sourceCountry.getD_AdjacentCountries().contains(d_targetCountry)) {
+                    return true;
+                }
             } else {
+                System.out.println("Source country name " + d_targetCountryName + " and Target country name" + d_targetCountryName + "are same so advance order can not apply here");
                 return false;
             }
 
@@ -66,6 +69,7 @@ public class Advance implements Order {
             System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be attack to the target country");
             return false;
         }
+        return false;
     }
 
     /**

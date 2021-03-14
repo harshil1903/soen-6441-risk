@@ -8,6 +8,9 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
 /**
  * To Test the Bomb functionality in the game i.e  on using the bomb card, the target country loses
  * half of their army units.
@@ -29,7 +32,7 @@ public class BombTest {
         d_player1 = new Player("player_1");
         d_country = new Country();
         d_country.setD_CountryName("India");
-        d_country.setD_NumberOfArmies(0);
+        d_country.setD_NumberOfArmies(5);
     }
 
     @Test
