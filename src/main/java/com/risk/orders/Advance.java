@@ -38,9 +38,9 @@ public class Advance implements Order {
         this.d_player = p_player;
 
         d_sourceCountry = new Country();
-        d_sourceCountry=d_sourceCountry.getCountryFromCountryName(d_sourceCountryName);
+        d_sourceCountry.getCountryFromCountryName(d_sourceCountryName);
         d_targetCountry = new Country();
-        d_targetCountry=d_targetCountry.getCountryFromCountryName(d_targetCountryName);
+        d_targetCountry.getCountryFromCountryName(d_targetCountryName);
     }
 
 
@@ -90,7 +90,7 @@ public class Advance implements Order {
 
         } else {
             //logic for the battle
-           //
+            //
             int l_attackerPercentage = (int) Math.round(d_numberOfArmies * 0.6);
             int l_defenderPercentage = (int) Math.round(d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() * 0.7);
 
