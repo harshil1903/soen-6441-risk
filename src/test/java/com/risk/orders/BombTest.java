@@ -68,7 +68,7 @@ public class BombTest {
         assertFalse(bomb.valid());
     }
 
-    /*@Test
+    @Test
     public void testMoreNumberOfArmies(){
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         d_country = new Country();
@@ -76,7 +76,7 @@ public class BombTest {
         d_country.setD_NumberOfArmies(10);
         Bomb bomb = new Bomb(d_player2,l_countryName1);
         assertTrue(bomb.valid());
-    }*/
+    }
 
     @Test
     public void testBombOwnArmies(){
