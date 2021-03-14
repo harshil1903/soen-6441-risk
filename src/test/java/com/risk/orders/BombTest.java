@@ -58,6 +58,10 @@ public class BombTest {
         //d_country.setD_NumberOfArmies(0);
     }
 
+    /**
+     * Test method for test that player can not use bomb card on enemy having zero army
+     */
+
     @Test
     public void testZeroNumberOfArmies(){
 
@@ -69,7 +73,9 @@ public class BombTest {
         assertFalse(bomb.valid());
     }
 
-
+    /**
+     * Test method for test that player can not use bomb card on own country
+     */
     @Test
     public void testBombOwnArmies(){
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
@@ -80,6 +86,9 @@ public class BombTest {
         assertFalse(bomb.valid());
     }
 
+    /**
+     * Test method for check that execute method of bomb class run successfully
+     */
     @Test
     public void testSuccessfulBomb(){
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
