@@ -28,7 +28,7 @@ public class BlockadeTest {
     Player d_player1, d_player2;
     Country d_country;
 
-    // List<Country> d_countriesOwned =new ArrayList<Country>();
+     List<Country> d_countriesOwned =new ArrayList<Country>();
 
     @Before
     /**
