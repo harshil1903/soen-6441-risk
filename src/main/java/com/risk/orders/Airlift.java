@@ -51,7 +51,7 @@ public class Airlift implements Order {
 
     public boolean valid() {
         //check whether the player has airlift card or not
-        if (d_sourceCountryName != d_targetCountryName) {
+        if (!d_sourceCountryName.equals(d_targetCountryName)) {
             ArrayList<String> l_countriesOwnedList = new ArrayList<>();
             for (Country l_country : d_player.getD_AssignedCountries()) {
                 l_countriesOwnedList.add(l_country.getD_CountryName());
