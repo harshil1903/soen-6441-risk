@@ -9,8 +9,16 @@ import com.risk.main.MapEngine;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Pre map load.
+ */
 public class PreMapLoad extends MapEdit{
 
+    /**
+     * Instantiates a new Pre map load.
+     *
+     * @param p_gameEngine the p game engine
+     */
     public PreMapLoad(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }

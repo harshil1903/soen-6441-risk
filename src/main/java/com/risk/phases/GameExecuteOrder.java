@@ -10,7 +10,15 @@ import java.util.Scanner;
 
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * The type Game execute order.
+ */
 public class GameExecuteOrder extends Game{
+    /**
+     * Instantiates a new Game execute order.
+     *
+     * @param p_gameEngine the p game engine
+     */
     GameExecuteOrder(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
         executeOrder();

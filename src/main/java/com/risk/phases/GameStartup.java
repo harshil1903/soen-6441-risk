@@ -11,8 +11,16 @@ import java.util.List;
 
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * The type Game startup.
+ */
 public class GameStartup extends Game {
 
+    /**
+     * Instantiates a new Game startup.
+     *
+     * @param p_gameEngine the p game engine
+     */
     public GameStartup(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }

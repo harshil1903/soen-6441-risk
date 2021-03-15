@@ -7,8 +7,16 @@ import com.risk.main.MapEngine;
 
 import java.util.List;
 
+/**
+ * The type Post map load.
+ */
 public class PostMapLoad extends MapEdit{
 
+    /**
+     * Instantiates a new Post map load.
+     *
+     * @param p_gameEngine the p game engine
+     */
     public PostMapLoad(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
