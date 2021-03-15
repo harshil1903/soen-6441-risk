@@ -66,9 +66,7 @@ public class DiplomacyTest {
         Advance advance=new Advance(d_player1,l_countryName1,l_countryName2,7);
         assertFalse(advance.valid());
 
-        d_player1.removePlayerFromDiplomacyList(d_player2.getD_PlayerName());
-        d_player2.removePlayerFromDiplomacyList(d_player1.getD_PlayerName());
-        assertTrue(advance.valid());
+
 
     }
 }
