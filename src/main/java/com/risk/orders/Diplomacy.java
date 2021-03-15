@@ -44,7 +44,6 @@ public class Diplomacy implements Order {
      * Execute.
      */
     public void execute() {
-        
 
     }
 

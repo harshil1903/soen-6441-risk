@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
@@ -29,6 +30,16 @@ public class Player {
 
     public List<String> testOrderList;
 
+    public List<Player> d_deplomacyPlayerList;
+
+    public List<Player> getDeplomacyPlayer() {
+        return d_deplomacyPlayerList;
+    }
+
+    public void setDeplomacyPlayer(List<Player> p_deplomacyPlayerList) {
+        d_deplomacyPlayerList = p_deplomacyPlayerList;
+    }
+
     /**
      * Instantiates a new Player.
      *
@@ -42,7 +53,28 @@ public class Player {
         d_OrderLists = new ArrayList<Orders>();
         d_orderList = new ArrayList<>();
         testOrderList = new ArrayList<>();
+        d_deplomacyPlayerList = new ArrayList<>();
     }
+
+    public void addPlayerToDeplomacyList(Player p_player) {
+        d_deplomacyPlayerList.add(p_player);
+    }
+
+    public void removePlayerToDeplomacyList(String p_player) {
+        Player l_player = new Player(p_player);
+        d_deplomacyPlayerList.remove(l_player);
+    }
+
+    public Player getPlayerFromPlayerName(String p_playerName) {
+        for (Player l_player : d_PlayerList) {
+            if (l_player.getD_PlayerName().equals(p_playerName)) {
+                return l_player;
+            }
+        }
+        return null;
+
+    }
+
 
     /**
      * Gets player id.
@@ -243,10 +275,10 @@ public class Player {
      * To add an order to the list of orders held by the player
      * Issue order phase of game
      *
-     * @param p_action Type of Order
+     * @param p_action    Type of Order
      * @param p_arguments Order information
      */
-    public void issue_Order(String p_action, String p_arguments){
+    public void issue_Order(String p_action, String p_arguments) {
 
         String[] l_argumentTokens = p_arguments.split(" ");
         List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
@@ -260,7 +292,7 @@ public class Player {
         switch (p_action) {
             case "deploy":
                 System.out.println("Deploy Order done with " + p_arguments);
-                d_currentOrder = new Deploy(this,l_argumentList.get(0), Integer.parseInt(l_argumentList.get(1)));
+                d_currentOrder = new Deploy(this, l_argumentList.get(0), Integer.parseInt(l_argumentList.get(1)));
                 d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //split argumentList into country name and number of armies
@@ -270,7 +302,7 @@ public class Player {
 
             case "advance":
                 System.out.println("Advance Order");
-                d_currentOrder = new Advance(this,l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
+                d_currentOrder = new Advance(this, l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
                 d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
@@ -280,7 +312,7 @@ public class Player {
 
             case "bomb":
                 System.out.println("Bomb Order");
-                d_currentOrder = new Bomb(this,l_argumentList.get(0));
+                d_currentOrder = new Bomb(this, l_argumentList.get(0));
                 d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
@@ -290,7 +322,7 @@ public class Player {
 
             case "blockade":
                 System.out.println("Blockade Order");
-                d_currentOrder = new Blockade(this,l_argumentList.get(0));
+                d_currentOrder = new Blockade(this, l_argumentList.get(0));
                 d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
@@ -300,7 +332,7 @@ public class Player {
 
             case "airlift":
                 System.out.println("Airlift Order");
-                d_currentOrder = new Airlift(this,l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
+                d_currentOrder = new Airlift(this, l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
                 d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
@@ -310,7 +342,7 @@ public class Player {
 
             case "negotiate":
                 System.out.println("Negotiate Order");
-                d_currentOrder = new Diplomacy(this,l_argumentList.get(0));
+                d_currentOrder = new Diplomacy(this, l_argumentList.get(0));
                 d_orderList.add(d_currentOrder);
                 //verify argument tokens count
                 //
@@ -376,7 +408,6 @@ public class Player {
             System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies + " successfully deployed");
         }
          */
-
 
 
         //The entire bottom thing should be performed in GameEngine Class
