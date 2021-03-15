@@ -8,8 +8,6 @@ import com.risk.models.Player;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
