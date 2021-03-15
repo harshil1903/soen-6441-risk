@@ -51,7 +51,6 @@ public class Advance implements Order {
      */
     public boolean valid() {
         //first check player has a advance card or not in card list
-
         if (d_sourceCountry.getD_NumberOfArmies() > d_numberOfArmies) {
             if (d_sourceCountryName != d_targetCountryName) {
                 if (d_sourceCountry.getD_AdjacentCountries().contains(d_targetCountry)) {
@@ -134,6 +133,18 @@ public class Advance implements Order {
 
         }
 
+    }
+
+    public void test1()
+    {
+        if(d_player.getDiplomacyPlayer().contains(d_targetCountry.getD_Player()))
+        {
+            System.out.println("CAN NOT ATTACK");
+
+        }
+        else {
+            System.out.println("CAN ATTACK");
+        }
     }
 
 }

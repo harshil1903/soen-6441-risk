@@ -9,6 +9,7 @@ import static com.risk.main.Main.d_PlayerList;
  */
 public class Diplomacy implements Order {
     Player d_player, d_otherPlayer;
+    String d_playerName;
 
     /**
      * constructor for the diplomacy class
@@ -17,6 +18,8 @@ public class Diplomacy implements Order {
      */
     public Diplomacy(Player p_player, String p_otherPlayer){
         d_player = p_player;
+        d_otherPlayer=new Player();
+
         for(Player l_player : d_PlayerList)
         {
             if(l_player.getD_PlayerName().equals(p_otherPlayer))
@@ -44,7 +47,8 @@ public class Diplomacy implements Order {
      * Execute.
      */
     public void execute() {
-
+        d_player.addPlayerToDiplomacyList(d_otherPlayer.getPlayerFromPlayerName(d_playerName));
+        d_otherPlayer.addPlayerToDiplomacyList(d_player);
     }
 
 }

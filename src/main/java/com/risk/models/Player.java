@@ -1,6 +1,5 @@
 package com.risk.models;
 
-import com.risk.controller.GameCommands;
 import com.risk.orders.*;
 
 import java.util.ArrayList;
@@ -8,7 +7,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
@@ -30,15 +28,12 @@ public class Player {
 
     public List<String> testOrderList;
 
-   /* public List<Player> d_deplomacyPlayerList;
+    public List<Player> d_diplomacyPlayerList;
 
-    public List<Player> getDeplomacyPlayer() {
-        return d_deplomacyPlayerList;
+
+    public Player() {
+        d_diplomacyPlayerList = new ArrayList<>();
     }
-
-    public void setDeplomacyPlayer(List<Player> p_deplomacyPlayerList) {
-        d_deplomacyPlayerList = p_deplomacyPlayerList;
-    }*/
 
     /**
      * Instantiates a new Player.
@@ -53,15 +48,24 @@ public class Player {
         d_OrderLists = new ArrayList<Orders>();
         d_orderList = new ArrayList<>();
         testOrderList = new ArrayList<>();
-        //  d_deplomacyPlayerList = new ArrayList<>();
-    }
-  /*  public void addPlayerToDeplomacyList(Player p_player) {
-        d_deplomacyPlayerList.add(p_player);
+        d_diplomacyPlayerList = new ArrayList<>();
     }
 
-    public void removePlayerToDeplomacyList(String p_player) {
-        Player l_player = new Player(p_player).getPlayerFromPlayerName(p_player);
-        d_deplomacyPlayerList.remove(l_player);
+    public List<Player> getDiplomacyPlayer() {
+        return d_diplomacyPlayerList;
+    }
+
+    public void setDiplomacyPlayer(List<Player> p_diplomacyPlayerList) {
+        d_diplomacyPlayerList = p_diplomacyPlayerList;
+    }
+
+    public void addPlayerToDiplomacyList(Player p_player) {
+        d_diplomacyPlayerList.add(p_player);
+    }
+
+    public void removePlayerFromDiplomacyList(String p_player) {
+        Player l_player = new Player().getPlayerFromPlayerName(p_player);
+        d_diplomacyPlayerList.remove(l_player);
     }
 
     public Player getPlayerFromPlayerName(String p_playerName) {
@@ -71,7 +75,7 @@ public class Player {
             }
         }
         return null;
-    }*/
+    }
 
     /**
      * Gets player id.

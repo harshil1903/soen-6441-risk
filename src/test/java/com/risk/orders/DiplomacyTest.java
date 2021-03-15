@@ -8,9 +8,6 @@ import com.risk.models.Player;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 import static org.junit.Assert.assertFalse;
@@ -57,7 +54,7 @@ public class DiplomacyTest {
 
     @Test
     public void testDiplomacy() {
-      /*  String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         d_country1 = new Country();
         d_country1 = d_country1.getCountryFromCountryName(l_countryName1);
         d_country1.setD_NumberOfArmies(8);
@@ -67,14 +64,15 @@ public class DiplomacyTest {
         d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
         d_country2.setD_NumberOfArmies(8);
 
-        d_player1.addPlayerToDeplomacyList(d_player2);
+        d_player1.addPlayerToDiplomacyList(d_player2);
+        d_player2.addPlayerToDiplomacyList(d_player1);
 
-        System.out.println(d_player1.getDeplomacyPlayer().get(0).getD_PlayerName());
-        Advance advance=new Advance(d_player1,l_countryName1,l_countryName2,7);
-        assertTrue(advance.testCheck());
-        d_player1.removePlayerToDeplomacyList(d_player2.getD_PlayerName());
-        System.out.println(d_player1.getDeplomacyPlayer().size());
-        assertFalse(advance.testCheck());*/
+        Advance advance=new Advance(d_player1,l_countryName1,l_countryName2,8);
+        advance.test1();
+
+        d_player1.removePlayerFromDiplomacyList(d_player2.getD_PlayerName());
+        d_player2.removePlayerFromDiplomacyList(d_player1.getD_PlayerName());
+        advance.test1();
     }
 }
 
