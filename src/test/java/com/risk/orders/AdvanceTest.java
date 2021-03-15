@@ -58,6 +58,9 @@ public class AdvanceTest {
         //d_country.setD_NumberOfArmies(0);
     }
 
+    /**
+     * This method is used to check whether the countries while performing advance order are adjacent or not
+     */
     @Test
     public void testAdjacency(){
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
