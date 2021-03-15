@@ -71,7 +71,6 @@ public class AdvanceTest {
             assertTrue(advance.valid());
         }else {
             assertFalse(advance.valid());
-            System.out.println(l_countryName1 + " is not adjacent to " + l_countryName2);
         }
 
 

@@ -51,38 +51,29 @@ public class Advance implements Order {
      */
     public boolean valid() {
         //first check player has a advance card or not in card list
-        if (d_sourceCountry.getD_NumberOfArmies() > d_numberOfArmies) {
-            if (d_sourceCountryName != d_targetCountryName) {
-                if (d_sourceCountry.getD_AdjacentCountries().contains(d_targetCountry)) {
-                    return true;
+        if (!d_player.getDiplomacyPlayer().contains(d_targetCountry.getD_Player())) {
+            if (d_sourceCountry.getD_NumberOfArmies() > d_numberOfArmies) {
+                if (d_sourceCountryName != d_targetCountryName) {
+                    if (d_sourceCountry.getD_AdjacentCountries().contains(d_targetCountry)) {
+                        return true;
+                    } else {
+                        System.out.println(d_sourceCountryName + " and " + d_targetCountryName + " are not adjacent");
+                        return false;
+                    }
+                } else {
+                    System.out.println("Source country name " + d_targetCountryName + " and Target country name" + d_targetCountryName + "are same so advance order can not apply here");
+                    return false;
                 }
+
             } else {
-                System.out.println("Source country name " + d_targetCountryName + " and Target country name" + d_targetCountryName + "are same so advance order can not apply here");
+                System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be attack to the target country");
                 return false;
             }
-
         } else {
-            if (d_sourceCountry.getD_NumberOfArmies() == d_numberOfArmies) {
-                System.out.println(d_player.getD_PlayerName() + " can not use whole army for attack");
-            }
-            System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be attack to the target country");
+            System.out.println(d_player.getD_PlayerName() + " can not attack on " + d_targetCountry.getD_Player().getD_PlayerName() + " because of diplomacy card");
             return false;
         }
-        return false;
     }
-
-   /* public boolean testCheck()
-    {
-        if(d_player.getDeplomacyPlayer().contains(d_targetCountry.getD_Player()))
-        {
-            System.out.println("Player is in diplomacyList");
-            return true;
-        }
-        else{
-            System.out.println("Player is not in deplomacyList");
-            return false;
-        }
-    }*/
 
     /**
      * Execute.
@@ -135,14 +126,11 @@ public class Advance implements Order {
 
     }
 
-    public void test1()
-    {
-        if(d_player.getDiplomacyPlayer().contains(d_targetCountry.getD_Player()))
-        {
+    public void test1() {
+        if (d_player.getDiplomacyPlayer().contains(d_targetCountry.getD_Player())) {
             System.out.println("CAN NOT ATTACK");
 
-        }
-        else {
+        } else {
             System.out.println("CAN ATTACK");
         }
     }

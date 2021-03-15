@@ -42,14 +42,10 @@ public class DiplomacyTest {
         d_player2 = new Player("player_2");
         d_PlayerList.add(d_player2);
         AssignCountries.assignCountries();
-        /*d_player1.addPlayerToDeplomacyList(d_player2);
-        System.out.println(d_player1.getDeplomacyPlayer().get(0).getD_PlayerName());
-        d_player1.removePlayerToDeplomacyList(d_player2.getD_PlayerName());
-        System.out.println(d_player1.getDeplomacyPlayer().size());*/
     }
 
     /**
-     * Test method for test that player can not use bomb card on enemy having zero army
+     * Test method for test that player can not attack other player which is in diplomacy list
      */
 
     @Test
@@ -67,12 +63,13 @@ public class DiplomacyTest {
         d_player1.addPlayerToDiplomacyList(d_player2);
         d_player2.addPlayerToDiplomacyList(d_player1);
 
-        Advance advance=new Advance(d_player1,l_countryName1,l_countryName2,8);
-        advance.test1();
+        Advance advance=new Advance(d_player1,l_countryName1,l_countryName2,7);
+        assertFalse(advance.valid());
 
         d_player1.removePlayerFromDiplomacyList(d_player2.getD_PlayerName());
         d_player2.removePlayerFromDiplomacyList(d_player1.getD_PlayerName());
-        advance.test1();
+        assertTrue(advance.valid());
+
     }
 }
 
