@@ -21,7 +21,7 @@ public class Blockade implements Order {
     /**
      * constructor of Blockade class
      *
-     * @param p_player      Player Id
+     * @param p_player      Current player object
      * @param p_countryName Country Id
      */
 

@@ -18,8 +18,8 @@ public class Bomb implements Order {
 
     /**
      * constructor for Bomb class
-     *
-     * @param p_countryName Country Id
+     * @param p_player current player object
+     * @param p_countryName Enemy country Id
      */
 
     public Bomb(Player p_player, String p_countryName) {

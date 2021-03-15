@@ -24,7 +24,7 @@ public class Airlift implements Order {
     Player d_player;
 
     /**
-     * @param p_player            Player ID
+     * @param p_player            Current Player Object
      * @param p_sourceCountryName Source country ID
      * @param p_targetCountryName Target country ID
      * @param p_numberOfArmies    Number of armies to be placed from source to target country

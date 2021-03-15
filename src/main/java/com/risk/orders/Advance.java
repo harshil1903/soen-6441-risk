@@ -27,7 +27,7 @@ public class Advance implements Order {
      *
      * @param p_sourceCountryName Source Country Name
      * @param p_targetCountryName Target Country Name
-     * @param p_player            Player Id
+     * @param p_player            Current player object
      * @param p_numberOfArmies    Number of armies
      */
 

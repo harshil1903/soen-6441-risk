@@ -4,9 +4,17 @@ import com.risk.models.Player;
 
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * Type Diplomacy
+ */
 public class Diplomacy implements Order {
     Player d_player, d_otherPlayer;
 
+    /**
+     * constructor for the diplomacy class
+     * @param p_player Current player object
+     * @param p_otherPlayer Other player Id
+     */
     public Diplomacy(Player p_player, String p_otherPlayer){
         d_player = p_player;
         for(Player l_player : d_PlayerList)
@@ -21,7 +29,14 @@ public class Diplomacy implements Order {
      * @return the boolean
      */
     public boolean valid() {
-        return false;
+        if(!d_player.getD_PlayerName().equals(d_otherPlayer.getD_PlayerName()))
+        {
+            return true;
+        }
+        else{
+            System.out.println("Both player name can not be same");
+            return false;
+        }
     }
 
 
@@ -29,6 +44,7 @@ public class Diplomacy implements Order {
      * Execute.
      */
     public void execute() {
+        
 
     }
 
