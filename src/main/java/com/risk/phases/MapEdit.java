@@ -6,8 +6,16 @@ import com.risk.main.MapEngine;
 
 import java.util.List;
 
+/**
+ * The type Map edit.
+ */
 public abstract class MapEdit extends Phase {
 
+    /**
+     * Instantiates a new Map edit.
+     *
+     * @param p_gameEngine the p game engine
+     */
     MapEdit(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }

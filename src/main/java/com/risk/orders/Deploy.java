@@ -7,7 +7,7 @@ import com.risk.models.Player;
 import java.util.ArrayList;
 
 /**
- * The type Deploy.
+ * The Command Pattern Class for Deploy Order
  *
  * @author Harshil
  */
@@ -32,7 +32,7 @@ public class Deploy implements Order {
     }
 
     /**
-     * Valid boolean.
+     * Validate the Deploy command by checking its requirements
      *
      * @return the boolean
      */
@@ -48,15 +48,8 @@ public class Deploy implements Order {
                 return false;
             }
 
-            /*
-            the following code is to be written inside issueorder method of player class
-
-            d_player.setD_Armies(d_player.getD_Armies() - d_numberOfArmies);
-            d_player.d_orderList.add(l_orders);
-            System.out.println("Country: " + d_countryName + " Number of Armies: " + d_numberOfArmies + " successfully deployed");
-            */
-
             return true;
+
         } else {
             System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
             System.out.println("You currently have " + d_player.getD_Armies() + " number of reinforcement armies left.");
@@ -65,7 +58,7 @@ public class Deploy implements Order {
     }
 
     /**
-     * Execute.
+     * Execute the deploy order after checking it's validity in Execute Order State
      */
     public void execute() {
 

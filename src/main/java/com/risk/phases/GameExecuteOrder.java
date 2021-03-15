@@ -10,7 +10,15 @@ import java.util.Scanner;
 
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * The type Game execute order.
+ */
 public class GameExecuteOrder extends Game{
+    /**
+     * Instantiates a new Game execute order.
+     *
+     * @param p_gameEngine the p game engine
+     */
     GameExecuteOrder(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
         executeOrder();
@@ -42,12 +50,15 @@ public class GameExecuteOrder extends Game{
         int l_noOrdersPlayerCount = 0;
         Scanner l_scanner = new Scanner(System.in);
         String l_choice;
-        while (l_noOrdersPlayerCount <= d_PlayerList.size()) {
+        while (l_noOrdersPlayerCount <= d_PlayerList.size())
+        {
 
-            for (Player l_player : d_PlayerList) {
+            for (Player l_player : d_PlayerList)
+            {
 
                 Order l_order = l_player.next_Order();
                 if (l_order != null) {
+
                     System.out.println("Executing Order");
                     if(l_order.valid()){
                         l_order.execute();
@@ -57,7 +68,6 @@ public class GameExecuteOrder extends Game{
                     }
                 } else {
                     ++l_noOrdersPlayerCount;
-                    //System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);
                 }
 
                 String testOrder = l_player.testnext_Order();

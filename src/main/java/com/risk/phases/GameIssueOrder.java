@@ -12,7 +12,15 @@ import java.util.Scanner;
 
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * The type Game issue order.
+ */
 public class GameIssueOrder extends Game{
+    /**
+     * Instantiates a new Game issue order.
+     *
+     * @param p_gameEngine the p game engine
+     */
     GameIssueOrder(GameEngineNew p_gameEngine) {
 
         super(p_gameEngine);
@@ -123,6 +131,11 @@ public class GameIssueOrder extends Game{
         d_gameEngineNew.setPhase(new GameExecuteOrder(d_gameEngineNew));
     }
 
+    /**
+     * No orders left to issue boolean.
+     *
+     * @return the boolean
+     */
     public boolean noOrdersLeftToIssue(){
         for(Player l_Player : d_PlayerList)
         {

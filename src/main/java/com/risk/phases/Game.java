@@ -7,8 +7,16 @@ import com.risk.main.GameEngineNew;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Abstract Class for Game Phase
+ */
 public abstract class Game extends Phase {
 
+    /**
+     * Instantiates a new Game.
+     *
+     * @param p_gameEngine the p game engine
+     */
     Game(GameEngineNew p_gameEngine) {
         super(p_gameEngine);
     }
