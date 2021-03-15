@@ -72,7 +72,7 @@ public class Advance implements Order {
         return false;
     }
 
-    public boolean testCheck()
+   /* public boolean testCheck()
     {
         if(d_player.getDeplomacyPlayer().contains(d_targetCountry.getD_Player()))
         {
@@ -83,7 +83,7 @@ public class Advance implements Order {
             System.out.println("Player is not in deplomacyList");
             return false;
         }
-    }
+    }*/
 
     /**
      * Execute.
