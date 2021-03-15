@@ -101,6 +101,8 @@ public class GameEngineNew {
      * The method compares the command input from user to check what type of command is entered.
      *
      * @param p_command command line input
+     *
+     * @return boolean value to reset the game phase
      */
     public boolean compareCommand(String p_command) {
         String l_action = p_command.split(" ")[0];
