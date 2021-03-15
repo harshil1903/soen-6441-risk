@@ -49,6 +49,10 @@ public class AirliftTest {
 
     }
 
+    /**
+     * This test case is used to verify that source country name and target country names are different and only then the
+     * Airlift can be performed.
+     */
     @Test
     public void testDifferentCountryNames(){
         String l_sourceCountryName = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
@@ -68,6 +72,10 @@ public class AirliftTest {
 
     }
 
+    /**
+     * This test case is used to verify that the player can not perform Airlift on the country that is not owned by
+     * that player.
+     */
     @Test
     public void testAirliftNotOwnedCountry(){
         String l_sourceCountryName = d_player1.getD_AssignedCountries().get(1).getD_CountryName();
@@ -88,6 +96,10 @@ public class AirliftTest {
 
     }
 
+    /**
+     * This test case verifies that the source country has sufficient armies while ordering Airlift to any target
+     * country.
+     */
     @Test
     public void testSufficientArmiesToAirlift(){
         String l_sourceCountryName = d_player1.getD_AssignedCountries().get(3).getD_CountryName();
@@ -107,6 +119,9 @@ public class AirliftTest {
 
     }
 
+    /**
+     * This test case verifies successful behaviour of the Airlift operation with desired results
+     */
     @Test
     public void testSuccessfulAirliftOperation(){
         String l_sourceCountryName = d_player1.getD_AssignedCountries().get(3).getD_CountryName();
