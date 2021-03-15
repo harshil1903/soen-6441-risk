@@ -65,6 +65,31 @@ public class BombTest {
     }
 
     /**
+     *
+     */
+    @Test
+    public void testAdjacentBomb(){
+        ArrayList<String> l_adjacentList = new ArrayList<>();
+
+        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        d_country2 = new Country();
+        d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
+        d_country2.setD_NumberOfArmies(10);
+
+        Bomb bomb = new Bomb(d_player1,l_countryName2);
+        for (Country l_country : d_player1.getD_AssignedCountries()) {
+            for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
+                l_adjacentList.add(l_adjCountry.getD_CountryName());
+            }
+        }
+        if (!l_adjacentList.contains(l_countryName2)) {
+            System.out.println(l_countryName2 + " not adjacent with " + d_player1.getD_PlayerName() + "countries");
+            assertFalse(bomb.valid());
+        }
+    }
+
+
+    /**
      * Test method for test that player can not use bomb card on own country
      */
     @Test
