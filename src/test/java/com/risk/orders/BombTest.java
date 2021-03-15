@@ -8,12 +8,12 @@ import com.risk.models.Country;
 import com.risk.models.Player;
 import org.junit.Before;
 import org.junit.Test;
+
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 import static org.junit.Assert.*;
 
 import com.risk.exception.InvalidMapException;
-
 
 
 import java.util.ArrayList;
@@ -28,17 +28,14 @@ import java.util.List;
  */
 public class BombTest {
 
-    String d_countryName;
-    Player d_player1,d_player2;
-    Country d_country,d_country1,d_country2;
-
-    List<Country> d_countriesOwned =new ArrayList<Country>();
+    Player d_player1, d_player2;
+    Country d_country, d_country1, d_country2;
 
     @Before
     /**
      * This method is executed before every test method.
      */
-    public void beforeTest() throws InvalidMapException{
+    public void beforeTest() throws InvalidMapException {
 
         try {
             d_Map = new EditMap().editMap("europe");
@@ -51,24 +48,19 @@ public class BombTest {
         d_player2 = new Player("player_2");
         d_PlayerList.add(d_player2);
         AssignCountries.assignCountries();
-
-        //d_country = new Country();
-
-        //d_country.setD_CountryName("India");
-        //d_country.setD_NumberOfArmies(0);
     }
 
     /**
      * Test method for test that player can not use bomb card on enemy having zero army
      */
     @Test
-    public void testZeroNumberOfArmies(){
+    public void testZeroNumberOfArmies() {
 
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         d_country = new Country();
-        d_country=d_country.getCountryFromCountryName(l_countryName1);
+        d_country = d_country.getCountryFromCountryName(l_countryName1);
         d_country.setD_NumberOfArmies(0);
-        Bomb bomb = new Bomb(d_player2,l_countryName1);
+        Bomb bomb = new Bomb(d_player2, l_countryName1);
         assertFalse(bomb.valid());
     }
 
@@ -76,22 +68,21 @@ public class BombTest {
      * Test method for test that player can not use bomb card on own country
      */
     @Test
-    public void testBombOwnArmies(){
+    public void testBombOwnArmies() {
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         d_country = new Country();
-        d_country=d_country.getCountryFromCountryName(l_countryName1);
+        d_country = d_country.getCountryFromCountryName(l_countryName1);
         d_country.setD_NumberOfArmies(10);
-        Bomb bomb = new Bomb(d_player1,l_countryName1);
+        Bomb bomb = new Bomb(d_player1, l_countryName1);
         assertFalse(bomb.valid());
     }
-
 
 
     /**
      * Test method for check that execute method of bomb class run successfully
      */
     @Test
-    public void testSuccessfulBomb(){
+    public void testSuccessfulBomb() {
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
         d_country1 = new Country();
@@ -101,13 +92,12 @@ public class BombTest {
 
         d_country1.setD_NumberOfArmies(10);
         d_country2.setD_NumberOfArmies(6);
-        Bomb bomb = new Bomb(d_player1,l_countryName2);
-        System.out.println("Armies before bomb in " +l_countryName2 + " are "+ d_country2.getD_NumberOfArmies());
+        Bomb bomb = new Bomb(d_player1, l_countryName2);
+        System.out.println("Armies before bomb in " + l_countryName2 + " are : " + d_country2.getD_NumberOfArmies());
         bomb.execute();
-        System.out.println("Armies after bomb are: "+ d_country2.getCountryFromCountryName(l_countryName2).getD_NumberOfArmies());
+        assertEquals(d_country2.getD_NumberOfArmies(), 3);
+        System.out.println("Armies after bomb in " + l_countryName2 + " are : " + d_country2.getD_NumberOfArmies());
     }
-
-
 
 
 }

@@ -13,8 +13,7 @@ import java.util.List;
 
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * To Test the blockade card functionality in the game i.e on using blockade card the target territory's army
@@ -24,11 +23,8 @@ import static org.junit.Assert.assertTrue;
  * @author Rishabh
  */
 public class BlockadeTest {
-    //String d_countryName;
     Player d_player1, d_player2;
     Country d_country;
-
-     List<Country> d_countriesOwned =new ArrayList<Country>();
 
     @Before
     /**
@@ -54,6 +50,9 @@ public class BlockadeTest {
         d_country.setD_NumberOfArmies(0);
     }
 
+    /**
+     * This method is to test blockade card when number of armies in country is zero
+     */
     @Test
     public void testZeroNumberOfArmies() {
 
@@ -65,7 +64,9 @@ public class BlockadeTest {
         assertFalse(blockade.valid());
     }
 
-
+    /**
+     * This method is to test blockade card can not apply on opponent's country
+     */
     @Test
     public void testBlockadeOwnArmies() {
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
@@ -76,20 +77,20 @@ public class BlockadeTest {
         assertFalse(blockade.valid());
     }
 
+    /**
+     * This method is to test number of army after applying blockade card on country
+     */
     @Test
     public void testSuccessfulBlockade() {
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
-        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
         d_country = new Country();
-        // d_country2 = new Country();
         d_country = d_country.getCountryFromCountryName(l_countryName1);
-        // d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
 
         d_country.setD_NumberOfArmies(10);
-        //d_country2.setD_NumberOfArmies(6);
         Blockade blockade = new Blockade(d_player1, l_countryName1);
-        System.out.println("Armies before blockade in " + l_countryName1 + " are " + d_country.getD_NumberOfArmies());
+        System.out.println("Armies before blockade in " + l_countryName1 + " are: " + d_country.getD_NumberOfArmies());
         blockade.execute();
-        System.out.println("Armies after bomb are: " + d_country.getCountryFromCountryName(l_countryName1).getD_NumberOfArmies());
+        assertEquals(d_country.getD_NumberOfArmies(),30);
+        System.out.println("Armies after blockade in " + l_countryName1 +" are: " + d_country.getD_NumberOfArmies());
     }
 }

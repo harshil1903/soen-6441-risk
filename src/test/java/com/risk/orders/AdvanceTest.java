@@ -27,11 +27,8 @@ import static org.junit.Assert.*;
 
 public class AdvanceTest {
 
-    String d_countryName;
     Player d_player1, d_player2;
-    Country d_country, d_sourceCountry, d_targetCountry;
-
-    List<Country> d_countriesOwned = new ArrayList<Country>();
+    Country d_sourceCountry, d_targetCountry;
 
     @Before
     /**
@@ -50,11 +47,6 @@ public class AdvanceTest {
         d_player2 = new Player("player_2");
         d_PlayerList.add(d_player2);
         AssignCountries.assignCountries();
-
-        //d_country = new Country();
-
-        //d_country.setD_CountryName("India");
-        //d_country.setD_NumberOfArmies(0);
     }
 
     /**
