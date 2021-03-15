@@ -57,7 +57,7 @@ public class GameEngineNew {
             System.out.println("2. Play Game");
             System.out.println("3. Quit");
             System.out.println("Where do you want to start?: ");
-            mystart = l_scanner.nextInt();
+            mystart = Integer.parseInt(l_scanner.nextLine());
             switch (mystart) {
                 case 1:
                     // Set the state to Preload
@@ -112,10 +112,6 @@ public class GameEngineNew {
 
         l_argumentList.remove(0);
 
-//        System.out.println(l_argumentList.size() + "\nArgument List : ");
-//        for (String i : l_argumentList) {
-//            System.out.println(i + "\n");
-//        }
 
         switch (l_action) {
             case "editmap":
@@ -166,6 +162,8 @@ public class GameEngineNew {
                 d_gamePhase.endGame();
                 return true;
 
+            default:
+                System.out.println("Invalid Command");
 
         }
 
