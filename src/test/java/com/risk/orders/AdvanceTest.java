@@ -58,7 +58,7 @@ public class AdvanceTest {
     }
 
     /**
-     * This method is used to check whether the countries while performing advance order are adjacent or not
+     * This method is used to test whether the countries while performing advance order are adjacent or not
      */
     @Test
     public void testAdjacency(){
@@ -88,7 +88,7 @@ public class AdvanceTest {
     }
 
     /**
-     * Test method attacker win
+     * This method is used to test number of army on source country and target country when attacker win in battle
      */
     @Test
     public void testAttacker() {
@@ -118,7 +118,7 @@ public class AdvanceTest {
     }
 
     /**
-     * Test method defender win
+     * This method is used to test number of army on source country and target country when defender win in battle
      */
     @Test
     public void testDefender() {
