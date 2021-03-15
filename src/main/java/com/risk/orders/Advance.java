@@ -126,13 +126,4 @@ public class Advance implements Order {
 
     }
 
-    public void test1() {
-        if (d_player.getDiplomacyPlayer().contains(d_targetCountry.getD_Player())) {
-            System.out.println("CAN NOT ATTACK");
-
-        } else {
-            System.out.println("CAN ATTACK");
-        }
-    }
-
 }
