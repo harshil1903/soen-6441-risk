@@ -61,7 +61,6 @@ public class BombTest {
     /**
      * Test method for test that player can not use bomb card on enemy having zero army
      */
-
     @Test
     public void testZeroNumberOfArmies(){
 
@@ -86,6 +85,8 @@ public class BombTest {
         assertFalse(bomb.valid());
     }
 
+
+
     /**
      * Test method for check that execute method of bomb class run successfully
      */
@@ -105,4 +106,8 @@ public class BombTest {
         bomb.execute();
         System.out.println("Armies after bomb are: "+ d_country2.getCountryFromCountryName(l_countryName2).getD_NumberOfArmies());
     }
+
+
+
+
 }

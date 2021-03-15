@@ -14,6 +14,7 @@ import java.util.List;
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * To Test the Advance card functionality in the game i.e move some armies from one of the current player’s
@@ -55,6 +56,33 @@ public class AdvanceTest {
 
         //d_country.setD_CountryName("India");
         //d_country.setD_NumberOfArmies(0);
+    }
+
+    @Test
+    public void testAdjacency(){
+        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        System.out.println("Country name 1 is:"+l_countryName1);
+        d_country1 = new Country();
+        d_country1 = d_country1.getCountryFromCountryName(l_countryName1);
+        d_country1.setD_NumberOfArmies(10);
+
+
+        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        System.out.println("Country name 2 is:"+l_countryName2);
+        d_country2 = new Country();
+        d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
+        d_country2.setD_NumberOfArmies(4);
+
+        Advance advance = new Advance(d_player1,l_countryName1,l_countryName2,9);
+
+        if(d_country1.getD_AdjacentCountries().contains(d_country2)){
+            assertTrue(advance.valid());
+        }else {
+            assertFalse(advance.valid());
+            System.out.println(l_countryName1 + " is not adjacent to " + l_countryName2);
+        }
+
+
     }
 
     /**
