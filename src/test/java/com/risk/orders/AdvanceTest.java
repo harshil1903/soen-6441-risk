@@ -13,8 +13,7 @@ import java.util.List;
 
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * To Test the Advance card functionality in the game i.e move some armies from one of the current player’s
@@ -30,7 +29,7 @@ public class AdvanceTest {
 
     String d_countryName;
     Player d_player1, d_player2;
-    Country d_country, d_country1, d_country2;
+    Country d_country, d_sourceCountry, d_targetCountry;
 
     List<Country> d_countriesOwned = new ArrayList<Country>();
 
@@ -62,20 +61,20 @@ public class AdvanceTest {
     public void testAdjacency(){
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         System.out.println("Country name 1 is:"+l_countryName1);
-        d_country1 = new Country();
-        d_country1 = d_country1.getCountryFromCountryName(l_countryName1);
-        d_country1.setD_NumberOfArmies(10);
+        d_sourceCountry = new Country();
+        d_sourceCountry = d_sourceCountry.getCountryFromCountryName(l_countryName1);
+        d_sourceCountry.setD_NumberOfArmies(10);
 
 
         String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
         System.out.println("Country name 2 is:"+l_countryName2);
-        d_country2 = new Country();
-        d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
-        d_country2.setD_NumberOfArmies(4);
+        d_targetCountry = new Country();
+        d_targetCountry = d_targetCountry.getCountryFromCountryName(l_countryName2);
+        d_targetCountry.setD_NumberOfArmies(4);
 
         Advance advance = new Advance(d_player1,l_countryName1,l_countryName2,9);
 
-        if(d_country1.getD_AdjacentCountries().contains(d_country2)){
+        if(d_sourceCountry.getD_AdjacentCountries().contains(d_targetCountry)){
             assertTrue(advance.valid());
         }else {
             assertFalse(advance.valid());
@@ -93,24 +92,26 @@ public class AdvanceTest {
 
         //attacker
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
-        d_country1 = new Country();
-        d_country1 = d_country1.getCountryFromCountryName(l_countryName1);
-        d_country1.setD_NumberOfArmies(8);
+        d_sourceCountry = new Country();
+        d_sourceCountry = d_sourceCountry.getCountryFromCountryName(l_countryName1);
+        d_sourceCountry.setD_NumberOfArmies(8);
         int l_battleArmy = 7;
 
         //defender
         String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
-        d_country2 = new Country();
-        d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
-        d_country2.setD_NumberOfArmies(4);
+        d_targetCountry = new Country();
+        d_targetCountry = d_targetCountry.getCountryFromCountryName(l_countryName2);
+        d_targetCountry.setD_NumberOfArmies(4);
 
         //Battle
-        Advance advance = new Advance(d_player1, l_countryName1, l_countryName2, 7);
+        Advance advance = new Advance(d_player1, l_countryName1, l_countryName2, l_battleArmy);
         System.out.println("Attacker Battle Army : " + l_battleArmy);
-        System.out.println("Defender Army : " + d_country2.getD_NumberOfArmies());
+        System.out.println("Defender Army : " + d_targetCountry.getD_NumberOfArmies());
         System.out.println("Attacker win and occupied defender country");
-        System.out.println("Remaining army of attacker after attack : " + d_country2.getD_NumberOfArmies());
         advance.execute();
+        assertEquals(d_sourceCountry.getD_NumberOfArmies(),3);
+        assertEquals(d_targetCountry.getD_NumberOfArmies(),4);
+        System.out.println("Number of army that occupied defender country : " + d_targetCountry.getD_NumberOfArmies());
     }
 
     /**
@@ -121,24 +122,27 @@ public class AdvanceTest {
 
         //attacker
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
-        d_country1 = new Country();
-        d_country1 = d_country1.getCountryFromCountryName(l_countryName1);
-        d_country1.setD_NumberOfArmies(8);
+        d_sourceCountry = new Country();
+        d_sourceCountry = d_sourceCountry.getCountryFromCountryName(l_countryName1);
+        d_sourceCountry.setD_NumberOfArmies(26);
         int l_battleArmy = 25;
 
         //defender
         String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
-        d_country2 = new Country();
-        d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
-        d_country2.setD_NumberOfArmies(20);
+        d_targetCountry = new Country();
+        d_targetCountry = d_targetCountry.getCountryFromCountryName(l_countryName2);
+        d_targetCountry.setD_NumberOfArmies(20);
 
         //Battle
-        Advance advance = new Advance(d_player1, l_countryName1, l_countryName2, 7);
+        Advance advance = new Advance(d_player1, l_countryName1, l_countryName2, l_battleArmy);
         System.out.println("Attacker Battle Army : " + l_battleArmy);
-        System.out.println("Defender Army : " + d_country2.getD_NumberOfArmies());
+        System.out.println("Defender Army : " + d_targetCountry.getD_NumberOfArmies());
         System.out.println("Defender win and defend country");
-        System.out.println("Remaining army of defender after attack : " + d_country2.getD_NumberOfArmies());
         advance.execute();
+        assertEquals(d_sourceCountry.getD_NumberOfArmies(),12);
+        assertEquals(d_targetCountry.getD_NumberOfArmies(),5);
+        System.out.println("Remaining army on attacker after attack : " + d_sourceCountry.getD_NumberOfArmies());
+        System.out.println("Remaining army on defender after attack : " + d_targetCountry.getD_NumberOfArmies());
     }
 
 
