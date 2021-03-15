@@ -58,13 +58,13 @@ public class Airlift implements Order {
             }
 
             if (!l_countriesOwnedList.contains(d_sourceCountryName)) {
-                System.out.println(d_player.getD_PlayerName() + "can not use Airlift card as source country is not owned");
+                System.out.println(d_player.getD_PlayerName() + " can not use Airlift card as source country is not owned");
                 return false;
             } else if (!l_countriesOwnedList.contains(d_targetCountryName)) {
-                System.out.println(d_player.getD_PlayerName() + "can not use Airlift card on target country is not owned");
+                System.out.println(d_player.getD_PlayerName() + " can not use Airlift card on target country is not owned");
                 return false;
-            } else if (d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() < d_numberOfArmies) {
-                System.out.println(d_player.getD_PlayerName() + "does not have sufficient armies to be airlifted to the target country");
+            } else if (d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).getD_NumberOfArmies() < d_numberOfArmies) {
+                System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be airlifted to the target country");
                 return false;
             }
             return true;
