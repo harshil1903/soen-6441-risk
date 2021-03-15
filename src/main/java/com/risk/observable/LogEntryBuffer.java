@@ -16,7 +16,7 @@ public class LogEntryBuffer {
         String l_fileName = "LogEntry.log";
         FileWriter l_logWriter;
         try {
-            this.d_logWriter = new FileWriter(l_path + l_fileName, false);
+            this.d_logWriter = new FileWriter(l_path + l_fileName);
             System.out.println("New File Created");
         } catch (IOException e) {
             e.printStackTrace();

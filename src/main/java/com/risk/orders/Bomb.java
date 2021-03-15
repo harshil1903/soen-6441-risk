@@ -40,17 +40,17 @@ public class Bomb implements Order {
         //here firstly check if player have a bomb card or not after chirag make cardlist of each player
         if (d_country.getD_NumberOfArmies() > 0) {
             ArrayList<String> l_countriesOwnedList = new ArrayList<>();
-            ArrayList<String> l_adjecentList = new ArrayList<>();
+            ArrayList<String> l_adjacentList = new ArrayList<>();
             for (Country l_country : d_player.getD_AssignedCountries()) {
                 l_countriesOwnedList.add(l_country.getD_CountryName());
             }
 
             for (Country l_country : d_player.getD_AssignedCountries()) {
                 for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
-                    l_adjecentList.add(l_adjCountry.getD_CountryName());
+                    l_adjacentList.add(l_adjCountry.getD_CountryName());
                 }
             }
-            if (!l_adjecentList.contains(d_countryName)) {
+            if (!l_adjacentList.contains(d_countryName)) {
                 System.out.println(d_countryName + " not adjacent with " + d_player.getD_PlayerName() + "countries");
                 return false;
             }

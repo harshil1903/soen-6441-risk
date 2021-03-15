@@ -30,7 +30,7 @@ public class Player {
 
     public List<String> testOrderList;
 
-    /*public List<Player> d_deplomacyPlayerList;
+   /* public List<Player> d_deplomacyPlayerList;
 
     public List<Player> getDeplomacyPlayer() {
         return d_deplomacyPlayerList;
@@ -53,15 +53,14 @@ public class Player {
         d_OrderLists = new ArrayList<Orders>();
         d_orderList = new ArrayList<>();
         testOrderList = new ArrayList<>();
-      //  d_deplomacyPlayerList = new ArrayList<>();
+        //  d_deplomacyPlayerList = new ArrayList<>();
     }
-
-    /*public void addPlayerToDeplomacyList(Player p_player) {
+  /*  public void addPlayerToDeplomacyList(Player p_player) {
         d_deplomacyPlayerList.add(p_player);
     }
 
     public void removePlayerToDeplomacyList(String p_player) {
-        Player l_player = new Player(p_player);
+        Player l_player = new Player(p_player).getPlayerFromPlayerName(p_player);
         d_deplomacyPlayerList.remove(l_player);
     }
 
@@ -72,9 +71,7 @@ public class Player {
             }
         }
         return null;
-
-    }
-*/
+    }*/
 
     /**
      * Gets player id.

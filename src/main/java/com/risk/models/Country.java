@@ -275,7 +275,6 @@ public class Country {
      */
     public void removeCountryFromAdjacentCountries(String p_countryName) {
         Country l_countryToBeRemoved = new Country().getCountryFromCountryName(p_countryName);
-
         d_adjacentCountries.remove(l_countryToBeRemoved);
     }
 
