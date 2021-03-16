@@ -80,6 +80,18 @@ public class Player {
     }
 
     /**
+     * retrieves card list and displays it.
+     */
+    public void showCardList() {
+        System.out.print(d_playerName + " Owns card: ");
+        for (String l_card : d_cardList)
+            System.out.print(l_card + " ");
+
+        System.out.println();
+    }
+
+
+    /**
      * To get list of player which are in diplomacyList
      *
      * @return d_diplomacyPlayerList
