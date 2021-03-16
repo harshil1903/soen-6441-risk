@@ -25,7 +25,7 @@ public class Player {
     private List<Orders> d_OrderLists;
     private List<Order> d_orderList;
     public Order d_currentOrder;
-    public List<String>d_cardList;
+    public List<String> d_cardList;
     public List<String> testOrderList;
 
     public List<Player> d_diplomacyPlayerList;
@@ -51,24 +51,37 @@ public class Player {
         d_orderList = new ArrayList<>();
         testOrderList = new ArrayList<>();
         d_diplomacyPlayerList = new ArrayList<>();
+        d_cardList = new ArrayList<>();
     }
 
 
-    public void addCard(String p_card){
+    /**
+     * adds card to cardList.
+     *
+     * @param p_card card to be added.
+     */
+    public void addCard(String p_card) {
         d_cardList.add(p_card);
     }
 
-    public void removeCard(String p_card){
-        for(int i=0;i<d_cardList.size();i++){
-            String l_card=d_cardList.get(i);
-            if(l_card.equals(p_card)){
+    /**
+     * Finds the card removes it from the card list.
+     *
+     * @param p_card
+     */
+    public void removeCard(String p_card) {
+        for (int i = 0; i < d_cardList.size(); i++) {
+            String l_card = d_cardList.get(i);
+            if (l_card.equals(p_card)) {
                 d_cardList.remove(i);
                 break;
             }
         }
     }
+
     /**
      * To get list of player which are in diplomacyList
+     *
      * @return d_diplomacyPlayerList
      */
     public List<Player> getDiplomacyPlayer() {
@@ -77,6 +90,7 @@ public class Player {
 
     /**
      * To set player in diplomacyList
+     *
      * @param p_diplomacyPlayerList list of player
      */
     public void setDiplomacyPlayer(List<Player> p_diplomacyPlayerList) {
@@ -85,6 +99,7 @@ public class Player {
 
     /**
      * To add player in DiplomacyList
+     *
      * @param p_player player object
      */
     public void addPlayerToDiplomacyList(Player p_player) {
@@ -93,6 +108,7 @@ public class Player {
 
     /**
      * To remove player from DiplomacyList
+     *
      * @param p_player player name
      */
     public void removePlayerFromDiplomacyList(String p_player) {
@@ -102,6 +118,7 @@ public class Player {
 
     /**
      * To get player name
+     *
      * @param p_playerName player name
      * @return l_player
      */
