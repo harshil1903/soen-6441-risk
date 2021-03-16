@@ -7,10 +7,6 @@ import com.risk.models.Country;
 import com.risk.models.Player;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 import static org.junit.Assert.*;
@@ -26,11 +22,12 @@ public class BlockadeTest {
     Player d_player1, d_player2;
     Country d_country;
 
-    @Before
+
     /**
      * This method is executed before every test method.
-     * @throws InvalidMapException
+     * @throws InvalidMapException InvalidMapException
      */
+    @Before
     public void beforeTest() throws InvalidMapException {
 
         try {

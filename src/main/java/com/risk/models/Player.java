@@ -30,7 +30,9 @@ public class Player {
 
     public List<Player> d_diplomacyPlayerList;
 
-
+    /**
+     * Default constructor for player class
+     */
     public Player() {
         d_diplomacyPlayerList = new ArrayList<>();
     }
@@ -51,23 +53,44 @@ public class Player {
         d_diplomacyPlayerList = new ArrayList<>();
     }
 
+    /**
+     * To get list of player which are in diplomacyList
+     * @return d_diplomacyPlayerList
+     */
     public List<Player> getDiplomacyPlayer() {
         return d_diplomacyPlayerList;
     }
 
+    /**
+     * To set player in diplomacyList
+     * @param p_diplomacyPlayerList list of player
+     */
     public void setDiplomacyPlayer(List<Player> p_diplomacyPlayerList) {
         d_diplomacyPlayerList = p_diplomacyPlayerList;
     }
 
+    /**
+     * To add player in DiplomacyList
+     * @param p_player player object
+     */
     public void addPlayerToDiplomacyList(Player p_player) {
         d_diplomacyPlayerList.add(p_player);
     }
 
+    /**
+     * To remove player from DiplomacyList
+     * @param p_player player name
+     */
     public void removePlayerFromDiplomacyList(String p_player) {
         Player l_player = new Player().getPlayerFromPlayerName(p_player);
         d_diplomacyPlayerList.remove(l_player);
     }
 
+    /**
+     * To get player name
+     * @param p_playerName player name
+     * @return l_player
+     */
     public Player getPlayerFromPlayerName(String p_playerName) {
         for (Player l_player : d_PlayerList) {
             if (l_player.getD_PlayerName().equals(p_playerName)) {
