@@ -74,7 +74,10 @@ public class Bomb implements Order {
     public void execute() {
         if (valid()) {
             int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
+            System.out.println("Before Bomb Card number of army in "+d_countryName+" is : "+d_country.getD_NumberOfArmies());
             d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(Math.round(l_previousArmy / 2));
+            System.out.println(d_player.getD_PlayerName()+" applied Bomb Card successfully");
+            System.out.println("After Bomb Card number of army in "+d_countryName+" is : "+d_country.getD_NumberOfArmies());
         }
     }
 }
