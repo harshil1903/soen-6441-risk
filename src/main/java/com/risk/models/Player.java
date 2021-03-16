@@ -90,6 +90,14 @@ public class Player {
         System.out.println();
     }
 
+    /**
+     * returns list of card owned by player
+     *
+     * @return card list owned by player
+     */
+    public List<String> getD_cardList() {
+        return d_cardList;
+    }
 
     /**
      * To get list of player which are in diplomacyList
