@@ -53,6 +53,20 @@ public class Player {
         d_diplomacyPlayerList = new ArrayList<>();
     }
 
+
+    public void addCard(String p_card){
+        d_cardList.add(p_card);
+    }
+
+    public void removeCard(String p_card){
+        for(int i=0;i<d_cardList.size();i++){
+            String l_card=d_cardList.get(i);
+            if(l_card.equals(p_card)){
+                d_cardList.remove(i);
+                break;
+            }
+        }
+    }
     /**
      * To get list of player which are in diplomacyList
      * @return d_diplomacyPlayerList
