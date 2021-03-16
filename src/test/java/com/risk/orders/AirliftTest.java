@@ -25,9 +25,9 @@ import static org.junit.Assert.*;
 
 public class AirliftTest {
 
-    String d_sourceCountryName,d_targetCountryName;
-    Country d_sourceCountry,d_targetCountry;
-    Player d_player1,d_player2;
+    String d_sourceCountryName, d_targetCountryName;
+    Country d_sourceCountry, d_targetCountry;
+    Player d_player1, d_player2;
     int d_numArmies;
 
     @Before
@@ -55,7 +55,7 @@ public class AirliftTest {
      * Airlift can be performed.
      */
     @Test
-    public void testDifferentCountryNames(){
+    public void testDifferentCountryNames() {
         String l_sourceCountryName = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         String l_targetCountryName = d_player1.getD_AssignedCountries().get(1).getD_CountryName();
 
@@ -67,7 +67,7 @@ public class AirliftTest {
         d_targetCountry = d_targetCountry.getCountryFromCountryName(l_targetCountryName);
         d_targetCountry.setD_NumberOfArmies(4);
 
-        Airlift airlift = new Airlift(d_player1,l_sourceCountryName,l_targetCountryName,9);
+        Airlift airlift = new Airlift(d_player1, l_sourceCountryName, l_targetCountryName, 9);
 
         assertTrue(airlift.valid());
 
@@ -78,7 +78,7 @@ public class AirliftTest {
      * that player.
      */
     @Test
-    public void testAirliftNotOwnedCountry(){
+    public void testAirliftNotOwnedCountry() {
         String l_sourceCountryName = d_player1.getD_AssignedCountries().get(1).getD_CountryName();
         String l_targetCountryName = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
 
@@ -90,10 +90,10 @@ public class AirliftTest {
         d_targetCountry = d_targetCountry.getCountryFromCountryName(l_targetCountryName);
         d_targetCountry.setD_NumberOfArmies(4);
 
-        Airlift airlift = new Airlift(d_player1,l_sourceCountryName,l_targetCountryName,9);
+        Airlift airlift = new Airlift(d_player1, l_sourceCountryName, l_targetCountryName, 9);
 
         assertFalse(airlift.valid());
-        System.out.println("Airlift can not be used as Player 1 does not own "+ l_targetCountryName);
+        System.out.println("Airlift can not be used as Player 1 does not own " + l_targetCountryName);
 
     }
 
@@ -102,7 +102,7 @@ public class AirliftTest {
      * country.
      */
     @Test
-    public void testSufficientArmiesToAirlift(){
+    public void testSufficientArmiesToAirlift() {
         String l_sourceCountryName = d_player1.getD_AssignedCountries().get(3).getD_CountryName();
         String l_targetCountryName = d_player1.getD_AssignedCountries().get(2).getD_CountryName();
 
@@ -114,7 +114,7 @@ public class AirliftTest {
         d_targetCountry = d_targetCountry.getCountryFromCountryName(l_targetCountryName);
         d_targetCountry.setD_NumberOfArmies(4);
 
-        Airlift airlift = new Airlift(d_player1,l_sourceCountryName,l_targetCountryName,15);
+        Airlift airlift = new Airlift(d_player1, l_sourceCountryName, l_targetCountryName, 15);
 
         assertFalse(airlift.valid());
 
@@ -124,7 +124,7 @@ public class AirliftTest {
      * This test case verifies successful behaviour of the Airlift operation with desired results
      */
     @Test
-    public void testSuccessfulAirliftOperation(){
+    public void testSuccessfulAirliftOperation() {
         String l_sourceCountryName = d_player1.getD_AssignedCountries().get(3).getD_CountryName();
         String l_targetCountryName = d_player1.getD_AssignedCountries().get(2).getD_CountryName();
 
@@ -136,16 +136,10 @@ public class AirliftTest {
         d_targetCountry = d_targetCountry.getCountryFromCountryName(l_targetCountryName);
         d_targetCountry.setD_NumberOfArmies(4);
 
-        Airlift airlift = new Airlift(d_player1,l_sourceCountryName,l_targetCountryName,5);
+        Airlift airlift = new Airlift(d_player1, l_sourceCountryName, l_targetCountryName, 5);
         airlift.execute();
 
-        assertEquals(d_sourceCountry.getD_NumberOfArmies(),5);
-        assertEquals(d_targetCountry.getD_NumberOfArmies(),9);
-
-        System.out.println("After Performing Airlift, the armies in the source country "+l_sourceCountryName+" are: "+d_sourceCountry.getD_NumberOfArmies());
-        System.out.println("After Performing Airlift, the armies in the target country "+l_targetCountryName+" are: "+d_targetCountry.getD_NumberOfArmies());
+        assertEquals(d_sourceCountry.getD_NumberOfArmies(), 5);
+        assertEquals(d_targetCountry.getD_NumberOfArmies(), 9);
     }
-
-
-
 }

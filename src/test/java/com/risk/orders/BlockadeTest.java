@@ -86,9 +86,7 @@ public class BlockadeTest {
 
         d_country.setD_NumberOfArmies(10);
         Blockade blockade = new Blockade(d_player1, l_countryName1);
-        System.out.println("Armies before blockade in " + l_countryName1 + " are: " + d_country.getD_NumberOfArmies());
         blockade.execute();
         assertEquals(d_country.getD_NumberOfArmies(),30);
-        System.out.println("Armies after blockade in " + l_countryName1 +" are: " + d_country.getD_NumberOfArmies());
     }
 }
