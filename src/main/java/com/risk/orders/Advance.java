@@ -2,6 +2,7 @@ package com.risk.orders;
 
 import com.risk.models.Country;
 import com.risk.models.Player;
+import com.risk.gameutils.AssignCard;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class Advance implements Order {
 
     String d_sourceCountryName;
     String d_targetCountryName;
+    String d_assignedCard;
 
     Country d_sourceCountry;
     Country d_targetCountry;
@@ -51,6 +53,7 @@ public class Advance implements Order {
      */
     public boolean valid() {
         //first check player has a advance card or not in card list
+
         if (!d_player.getDiplomacyPlayer().contains(d_targetCountry.getD_Player())) {
             if (d_sourceCountry.getD_NumberOfArmies() > d_numberOfArmies) {
                 if (d_sourceCountryName != d_targetCountryName) {
@@ -108,6 +111,8 @@ public class Advance implements Order {
 
                 if (l_defenderArmy <= 0) {
                     //attacker will get card here...
+                    d_assignedCard = AssignCard.getCard();
+                    d_player.addCard(d_assignedCard);
                     d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
                     d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_attackerArmy);
                     d_player.addCountryToAssignedCountries(d_targetCountry);
