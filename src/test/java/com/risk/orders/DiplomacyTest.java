@@ -66,8 +66,6 @@ public class DiplomacyTest {
         Advance advance=new Advance(d_player1,l_countryName1,l_countryName2,7);
         assertFalse(advance.valid());
 
-
-
     }
 }
 

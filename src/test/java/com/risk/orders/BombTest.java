@@ -16,6 +16,7 @@ import static org.junit.Assert.*;
 import com.risk.exception.InvalidMapException;
 
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,9 +83,15 @@ public class BombTest {
                 l_adjacentList.add(l_adjCountry.getD_CountryName());
             }
         }
+        System.out.println("Target Country Name : "+l_countryName2);
         if (!l_adjacentList.contains(l_countryName2)) {
-            System.out.println(l_countryName2 + " not adjacent with " + d_player1.getD_PlayerName() + "countries");
+            System.out.println(l_countryName2 + " not adjacent with " + d_player1.getD_PlayerName() + " countries");
             assertFalse(bomb.valid());
+            System.out.println("Return False");
+        }
+        else {
+            assertTrue(bomb.valid());
+            System.out.println("Return True");
         }
     }
 
