@@ -25,7 +25,7 @@ public class Player {
     private List<Orders> d_OrderLists;
     private List<Order> d_orderList;
     public Order d_currentOrder;
-
+    public List<String>d_cardList;
     public List<String> testOrderList;
 
     public List<Player> d_diplomacyPlayerList;
