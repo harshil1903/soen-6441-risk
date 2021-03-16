@@ -39,23 +39,30 @@ public class Blockade implements Order {
      */
     public boolean valid() {
         //here firstly check if player have a blockade card or not after chirag make cardlist of each player
-        if (d_country.getD_NumberOfArmies() > 0) {
-            ArrayList<String> l_countriesOwnedList = new ArrayList<>();
-            for (Country l_country : d_player.getD_AssignedCountries()) {
-                l_countriesOwnedList.add(l_country.getD_CountryName());
-            }
-            if (!l_countriesOwnedList.contains(d_countryName)) {
-                System.out.println(d_player.getD_PlayerName() + " can not use Blockade card on opponent’s country");
+        if (d_player.getD_cardList().contains("blockade")) {
+            if (d_country.getD_NumberOfArmies() > 0) {
+                ArrayList<String> l_countriesOwnedList = new ArrayList<>();
+                for (Country l_country : d_player.getD_AssignedCountries()) {
+                    l_countriesOwnedList.add(l_country.getD_CountryName());
+                }
+                if (!l_countriesOwnedList.contains(d_countryName)) {
+                    System.out.println(d_player.getD_PlayerName() + " can not use Blockade card on opponent’s country");
+                    return false;
+                }
+                return true;
+            } else {
+                System.out.println(d_countryName + " has a 0 army so you can not apply Blockade order there");
                 return false;
             }
-            return true;
+
+
         } else {
-            System.out.println(d_countryName + " has a 0 army so you can not apply Blockade order there");
+            System.out.println("Player does not contain blockade card");
             return false;
         }
 
-
     }
+    
 
     /**
      * Execute.
