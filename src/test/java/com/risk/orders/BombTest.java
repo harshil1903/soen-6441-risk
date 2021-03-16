@@ -35,6 +35,7 @@ public class BombTest {
     @Before
     /**
      * This method is executed before every test method.
+     * @throws InvalidMapException
      */
     public void beforeTest() throws InvalidMapException {
 
