@@ -61,11 +61,11 @@ public class Deploy implements Order {
      * Execute the deploy order after checking it's validity in Execute Order State
      */
     public void execute() {
+        if (valid()) {
+            d_player.setD_Armies(d_player.getD_Armies() - d_numberOfArmies);
+            int l_previousArmies = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
+            d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
 
-        d_player.setD_Armies(d_player.getD_Armies() - d_numberOfArmies);
-        int l_previousArmies = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
-        d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
-
+        }
     }
-
 }

@@ -13,30 +13,29 @@ public class Diplomacy implements Order {
 
     /**
      * constructor for the diplomacy class
-     * @param p_player Current player object
+     *
+     * @param p_player      Current player object
      * @param p_otherPlayer Other player Id
      */
-    public Diplomacy(Player p_player, String p_otherPlayer){
+    public Diplomacy(Player p_player, String p_otherPlayer) {
         d_player = p_player;
-        d_otherPlayer=new Player();
+        d_otherPlayer = new Player();
 
-        for(Player l_player : d_PlayerList)
-        {
-            if(l_player.getD_PlayerName().equals(p_otherPlayer))
+        for (Player l_player : d_PlayerList) {
+            if (l_player.getD_PlayerName().equals(p_otherPlayer))
                 d_otherPlayer = l_player;
         }
     }
+
     /**
-     * Valid boolean.
+     * Valid boolean for check players name are not same
      *
      * @return the boolean
      */
     public boolean valid() {
-        if(!d_player.getD_PlayerName().equals(d_otherPlayer.getD_PlayerName()))
-        {
+        if (!d_player.getD_PlayerName().equals(d_otherPlayer.getD_PlayerName())) {
             return true;
-        }
-        else{
+        } else {
             System.out.println("Both player name can not be same");
             return false;
         }
@@ -44,11 +43,12 @@ public class Diplomacy implements Order {
 
 
     /**
-     * Execute.
+     * Execute method to run diplomacy card
      */
     public void execute() {
-        d_player.addPlayerToDiplomacyList(d_otherPlayer.getPlayerFromPlayerName(d_playerName));
-        d_otherPlayer.addPlayerToDiplomacyList(d_player);
+        if (valid()) {
+            d_player.addPlayerToDiplomacyList(d_otherPlayer.getPlayerFromPlayerName(d_playerName));
+            d_otherPlayer.addPlayerToDiplomacyList(d_player);
+        }
     }
-
 }

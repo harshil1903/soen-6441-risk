@@ -18,7 +18,8 @@ public class Bomb implements Order {
 
     /**
      * constructor for Bomb class
-     * @param p_player current player object
+     *
+     * @param p_player      current player object
      * @param p_countryName Enemy country Id
      */
 
@@ -71,8 +72,9 @@ public class Bomb implements Order {
      * Execute.
      */
     public void execute() {
-        int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
-
-        d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(Math.round(l_previousArmy / 2));
+        if (valid()) {
+            int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
+            d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(Math.round(l_previousArmy / 2));
+        }
     }
 }

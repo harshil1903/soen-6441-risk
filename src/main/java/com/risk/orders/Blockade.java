@@ -29,7 +29,7 @@ public class Blockade implements Order {
         this.d_countryName = p_countryName;
         this.d_player = p_player;
         d_country = new Country();
-        d_country=d_country.getCountryFromCountryName(p_countryName);
+        d_country = d_country.getCountryFromCountryName(p_countryName);
     }
 
     /**
@@ -61,7 +61,9 @@ public class Blockade implements Order {
      * Execute.
      */
     public void execute() {
-        int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
-        d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies((l_previousArmy * 3));
+        if (valid()) {
+            int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
+            d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies((l_previousArmy * 3));
+        }
     }
 }
