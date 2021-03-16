@@ -126,10 +126,8 @@ public class BombTest {
         d_country1.setD_NumberOfArmies(10);
         d_country2.setD_NumberOfArmies(6);
         Bomb bomb = new Bomb(d_player1, l_countryName2);
-        System.out.println("Armies before bomb in " + l_countryName2 + " are : " + d_country2.getD_NumberOfArmies());
         bomb.execute();
         assertEquals(d_country2.getD_NumberOfArmies(), 3);
-        System.out.println("Armies after bomb in " + l_countryName2 + " are : " + d_country2.getD_NumberOfArmies());
     }
 
 
