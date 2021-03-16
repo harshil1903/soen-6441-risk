@@ -40,6 +40,9 @@ public class BlockadeTest {
         d_PlayerList.add(d_player1);
         d_player2 = new Player("player_2");
         d_PlayerList.add(d_player2);
+
+        d_player1.addCard("blockade");
+        d_player2.addCard("blockade");
         AssignCountries.assignCountries();
 
         d_country = new Country();
