@@ -51,25 +51,29 @@ public class Airlift implements Order {
 
     public boolean valid() {
         //check whether the player has airlift card or not
-        if (!d_sourceCountryName.equals(d_targetCountryName)) {
-            ArrayList<String> l_countriesOwnedList = new ArrayList<>();
-            for (Country l_country : d_player.getD_AssignedCountries()) {
-                l_countriesOwnedList.add(l_country.getD_CountryName());
+        if (d_player.getD_cardList().contains("airlift")) {
+            if (!d_sourceCountryName.equals(d_targetCountryName)) {
+                ArrayList<String> l_countriesOwnedList = new ArrayList<>();
+                for (Country l_country : d_player.getD_AssignedCountries()) {
+                    l_countriesOwnedList.add(l_country.getD_CountryName());
+                }
+                if (!l_countriesOwnedList.contains(d_sourceCountryName)) {
+                    System.out.println(d_player.getD_PlayerName() + " can not use Airlift card as source country is not owned");
+                    return false;
+                } else if (!l_countriesOwnedList.contains(d_targetCountryName)) {
+                    System.out.println(d_player.getD_PlayerName() + " can not use Airlift card on target country is not owned");
+                    return false;
+                } else if (d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).getD_NumberOfArmies() < d_numberOfArmies) {
+                    System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be airlifted to the target country");
+                    return false;
+                }
+                return true;
+            } else {
+                System.out.println("Source country and Target country must be different.");
+                return false;
             }
-
-            if (!l_countriesOwnedList.contains(d_sourceCountryName)) {
-                System.out.println(d_player.getD_PlayerName() + " can not use Airlift card as source country is not owned");
-                return false;
-            } else if (!l_countriesOwnedList.contains(d_targetCountryName)) {
-                System.out.println(d_player.getD_PlayerName() + " can not use Airlift card on target country is not owned");
-                return false;
-            } else if (d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).getD_NumberOfArmies() < d_numberOfArmies) {
-                System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be airlifted to the target country");
-                return false;
-            }
-            return true;
         } else {
-            System.out.println("Source country and Target country must be different.");
+            System.out.println("Player does not contain airlift card");
             return false;
         }
     }
