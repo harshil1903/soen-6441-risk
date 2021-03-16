@@ -87,6 +87,7 @@ public class Airlift implements Order {
             d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_previousArmy + d_numberOfArmies);
             System.out.println(d_player.getD_PlayerName() + " applied Airlift Card successfully");
             System.out.println("After Airlift Card number of army in " + d_targetCountryName + " is : " + d_targetCountry.getD_NumberOfArmies());
+            d_player.removeCard("airlift");
         }
     }
 }

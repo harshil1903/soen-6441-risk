@@ -49,6 +49,7 @@ public class Diplomacy implements Order {
         if (valid()) {
             d_player.addPlayerToDiplomacyList(d_otherPlayer.getPlayerFromPlayerName(d_playerName));
             d_otherPlayer.addPlayerToDiplomacyList(d_player);
+            d_player.removeCard("negotiate");
         }
     }
 }

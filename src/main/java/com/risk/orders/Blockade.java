@@ -67,6 +67,7 @@ public class Blockade implements Order {
             d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies((l_previousArmy * 3));
             System.out.println(d_player.getD_PlayerName() + " applied Blockade Card successfully");
             System.out.println("After Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
+            d_player.removeCard("blockade");
         }
     }
 }
