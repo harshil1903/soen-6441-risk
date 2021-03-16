@@ -33,13 +33,20 @@ public class Diplomacy implements Order {
      * @return the boolean
      */
     public boolean valid() {
-        if (!d_player.getD_PlayerName().equals(d_otherPlayer.getD_PlayerName())) {
-            return true;
+        if (d_player.getD_cardList().contains("negotiate")) {
+
+            if (!d_player.getD_PlayerName().equals(d_otherPlayer.getD_PlayerName())) {
+                return true;
+            } else {
+                System.out.println("Both player name can not be same");
+                return false;
+            }
         } else {
-            System.out.println("Both player name can not be same");
+            System.out.println("Player does not contain diplomacy card");
             return false;
         }
     }
+    
 
 
     /**
