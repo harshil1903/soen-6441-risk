@@ -49,7 +49,7 @@ public class LogEntryBuffer extends Observable {
             String l_fileName = "src/main/resources/LogEntry.log";
             d_logWriter = new FileWriter(l_fileName, true);
             String l_data = "Log: " + p_data + "\n";
-            System.out.println(l_data);
+            //System.out.println(l_data);
             d_logWriter.write(l_data);
             d_logWriter.close();
 

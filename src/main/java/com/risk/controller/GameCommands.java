@@ -73,12 +73,27 @@ public class GameCommands {
     public static void gamePlayerCommand(List<String> p_argumentTokens) {
 
         String l_playerName;
+        int l_flag = 0;
 
         for (int i = 0; i < p_argumentTokens.size(); i++) {
             if (p_argumentTokens.get(i).equals("-add")) {
                 try {
                     l_playerName = p_argumentTokens.get(++i);
-                    System.out.println("Player Name: " + l_playerName);
+
+                    for(Player l_player : d_PlayerList){
+                        if(l_player.getD_PlayerName().equals(l_playerName)){
+                            System.out.println("Player with player name " + l_playerName + " already exists. Try again with different name.");
+                            l_flag = 1;
+                            break;
+                        }
+                    }
+
+                    if(l_flag == 1) {
+                        l_flag = 0;
+                        continue;
+                    }
+
+                    System.out.println("Player Name: " + l_playerName + " has joined the Game");
 
                     Player l_player = new Player(l_playerName);
                     d_PlayerList.add(l_player);
@@ -91,7 +106,7 @@ public class GameCommands {
             } else if (p_argumentTokens.get(i).equals("-remove")) {
                 try {
                     l_playerName = p_argumentTokens.get(++i);
-                    System.out.println("Player Name: " + l_playerName);
+                    System.out.println("Player Name: " + l_playerName + " has been removed from the Game");
 
                     for (Player l_player : d_PlayerList) {
                         if (l_player.getD_PlayerName().equals(l_playerName)) {

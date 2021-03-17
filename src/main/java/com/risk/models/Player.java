@@ -425,6 +425,9 @@ public class Player {
                 //d_orderList.add(d_currentOrder)
                 break;
 
+            case "end":
+                return;
+
             default:
                 System.out.println("Invalid Command \nAllowed Commands are : deploy, advance, bomb, blockade, airlift, negotiate");
                 break;
