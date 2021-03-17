@@ -1,2 +1,6 @@
-Log: second line
-Log: Fourth Line
+Log: New Phase : PreMapLoad
+Log: COMMAND : editmap europe
+Log: New Phase : PostMapLoad
+Log: COMMAND : showmap
+Log: COMMAND : validatemap
+Log: COMMAND : EXIT

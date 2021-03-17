@@ -2,6 +2,7 @@ package com.risk.main;
 
 import com.risk.models.Map;
 import com.risk.models.Player;
+import com.risk.observable.LogEntryBuffer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +23,8 @@ public class Main {
      * Contains list of players.
      */
     public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
+
+    public static LogEntryBuffer log = new LogEntryBuffer();
 
     /**
      * The entry point of application

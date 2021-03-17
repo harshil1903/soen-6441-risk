@@ -21,7 +21,7 @@ public class GameIssueOrder extends Game{
      *
      * @param p_gameEngine the p game engine
      */
-    GameIssueOrder(GameEngineNew p_gameEngine) {
+    public GameIssueOrder(GameEngineNew p_gameEngine) {
 
         super(p_gameEngine);
         reinforce();
@@ -61,7 +61,9 @@ public class GameIssueOrder extends Game{
 
 
         System.out.println("\nISSUE ORDER PHASE");
+
         while (noOrdersLeftToIssue()){
+
             for (Player l_player : d_PlayerList) {
 
                 if(!l_player.isD_noOrdersLeft()){
@@ -70,12 +72,8 @@ public class GameIssueOrder extends Game{
                     System.out.println("You own the following Countries along with their adjacent countries");
 
                     System.out.printf("\t%-15s:\t%-15s%n","COUNTRY","NEIGHBOR COUNTRIES");
+
                     for (Country l_country : l_player.getD_AssignedCountries()) {
-//                        System.out.print("\n\t" + l_country.getD_CountryName() + " : \t");
-//                        //System.out.print("\n\t\tAdjacent Countries : ");
-//                        for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
-//                            System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
-//                        }
 
                         System.out.printf("\t%-15s:", l_country.getD_CountryName());
 
@@ -101,9 +99,6 @@ public class GameIssueOrder extends Game{
                     String l_action = l_command.split(" ")[0];
                     String l_arguments = l_command.substring(l_action.length());
 
-
-                    //System.out.println("Issue Command : " + l_action + l_arguments);
-
                     l_player.issue_Order(l_action, l_arguments);
 
                     System.out.println("Do you have more orders left? (y/n)");
@@ -120,6 +115,13 @@ public class GameIssueOrder extends Game{
 
         System.out.println("\nAll orders for the current turn have been issued.\n");
         next();
+
+    }
+
+    public void issueDeployOrder(String p_command){
+        String l_action = p_command.split(" ")[0];
+        String l_arguments = p_command.substring(l_action.length());
+
 
     }
 

@@ -6,6 +6,7 @@ import com.risk.gameutils.Reinforce;
 import com.risk.models.Country;
 import com.risk.models.Orders;
 import com.risk.models.Player;
+import com.risk.phases.GameIssueOrder;
 import com.risk.phases.GameStartup;
 import com.risk.phases.Phase;
 import com.risk.phases.PreMapLoad;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static com.risk.main.Main.d_PlayerList;
+import static com.risk.main.Main.log;
 
 /**
  * Game Engine Class controls the entire flow of Gameplay including all the game phases
@@ -41,6 +43,7 @@ public class GameEngineNew {
     public void setPhase(Phase p_gamePhase) {
         d_gamePhase = p_gamePhase;
         System.out.println("New Phase : " + d_gamePhase.getClass().getSimpleName());
+        log.notify("New Phase : " + d_gamePhase.getClass().getSimpleName());
     }
 
 
@@ -69,7 +72,7 @@ public class GameEngineNew {
                     break;
                 case 3:
                     System.out.println("Bye!");
-                    break;
+                    return;
 
                 default:
                     System.out.println("Wrong Input");
@@ -78,6 +81,7 @@ public class GameEngineNew {
 
             System.out.println("Enter First command: ");
             l_command = l_scanner.nextLine();
+            log.notify("COMMAND : " + l_command);
 
             while (!l_command.equals("EXIT")) {
 
@@ -89,6 +93,8 @@ public class GameEngineNew {
 
                 System.out.println("Enter command: ");
                 l_command = l_scanner.nextLine();
+                log.notify("COMMAND : " + l_command);
+
             }
         } while (mystart != 3);
 
@@ -157,7 +163,12 @@ public class GameEngineNew {
             case "assigncountries":
                 if (d_gamePhase.assignCountries()) {
                     d_gamePhase.next();
+                    d_gamePhase.issueOrder();
                 }
+                break;
+
+            case "issueorder":
+                setPhase(new GameIssueOrder(this));
                 break;
 
             case "end":
