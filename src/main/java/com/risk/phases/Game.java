@@ -50,4 +50,10 @@ public abstract class Game extends Phase {
     public void editNeighbor(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
+
+    @Override
+    public void endGame() {
+        System.out.println("Ending Game");
+        return;
+    }
 }

@@ -83,9 +83,6 @@ public class GameExecuteOrder extends Game{
         next();
     }
 
-    public void endGame() {
-
-    }
 
     public void next() {
         d_gameEngineNew.setPhase(new GameIssueOrder(d_gameEngineNew));

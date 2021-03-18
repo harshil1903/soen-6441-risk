@@ -11,10 +11,7 @@ import com.risk.phases.GameStartup;
 import com.risk.phases.Phase;
 import com.risk.phases.PreMapLoad;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static com.risk.main.Main.d_PlayerList;
 import static com.risk.main.Main.log;
@@ -25,7 +22,7 @@ import static com.risk.main.Main.log;
  *
  * @author Harshil
  */
-public class GameEngineNew {
+public class GameEngineNew extends Observable {
 
     /**
      * Contains true if game is loaded otherwise false.
@@ -163,7 +160,7 @@ public class GameEngineNew {
             case "assigncountries":
                 if (d_gamePhase.assignCountries()) {
                     d_gamePhase.next();
-                    d_gamePhase.issueOrder();
+                    //d_gamePhase.issueOrder();
                 }
                 break;
 

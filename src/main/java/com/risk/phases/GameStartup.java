@@ -79,10 +79,6 @@ public class GameStartup extends Game {
         printInvalidCommandMessage();
     }
 
-    public void endGame() {
-        printInvalidCommandMessage();
-    }
-
     public void next() {
         d_gameEngineNew.setPhase(new GameIssueOrder(d_gameEngineNew));
     }
