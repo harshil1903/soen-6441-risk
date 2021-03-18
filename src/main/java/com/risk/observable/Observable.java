@@ -18,7 +18,7 @@ public class Observable {
      *
      * @param p_o: view to be added to the list of observers to be notified.
      */
-    /* public void attach(Observer p_o) {
+    public void attach(Observer p_o) {
         this.observers.add(p_o);
     }
 
@@ -27,7 +27,7 @@ public class Observable {
      *
      * @param p_o: view to be removed from the list of observers.
      */
-   /* public void detach(Observer p_o) {
+     public void detach(Observer p_o) {
         if (!observers.isEmpty()) {
             observers.remove(p_o);
         }
