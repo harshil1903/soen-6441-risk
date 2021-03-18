@@ -12,4 +12,5 @@ public interface Observer {
      * @param o: Object that is passed by the subject (observable). Very often, this
      *           object is the subject itself, but not necessarily.
      */
+
 }
