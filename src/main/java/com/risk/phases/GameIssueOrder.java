@@ -99,7 +99,8 @@ public class GameIssueOrder extends Game{
                     String l_action = l_command.split(" ")[0];
                     String l_arguments = l_command.substring(l_action.length());
 
-                    l_player.issue_Order(l_action, l_arguments);
+                    l_player.setOrderValues(l_action, l_arguments);
+                    l_player.issue_Order();
 
                     System.out.println("Do you have more orders left? (y/n)");
                     l_command = l_scanner.nextLine();

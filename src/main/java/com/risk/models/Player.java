@@ -30,6 +30,9 @@ public class Player {
 
     public List<Player> d_diplomacyPlayerList;
 
+    private String d_orderType;
+    private String d_orderArgs;
+
     /**
      * Default constructor for player class
      */
@@ -53,6 +56,18 @@ public class Player {
         d_diplomacyPlayerList = new ArrayList<>();
         d_cardList = new ArrayList<>();
     }
+
+    /**
+     * Set order values for issue order execution
+     *
+     * @param p_orderType the order type
+     * @param p_orderArgs the order args
+     */
+    public void setOrderValues(String p_orderType, String p_orderArgs){
+        d_orderType = p_orderType;
+        d_orderArgs = p_orderArgs;
+    }
+
 
 
     /**
@@ -350,23 +365,20 @@ public class Player {
      * To add an order to the list of orders held by the player
      * Issue order phase of game
      *
-     * @param p_action    Type of Order
-     * @param p_arguments Order information
      */
-    public void issue_Order(String p_action, String p_arguments) {
+    public void issue_Order() {
 
-        String[] l_argumentTokens = p_arguments.split(" ");
+        String[] l_argumentTokens = d_orderArgs.split(" ");
         List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
 
         if (!l_argumentList.isEmpty()) {
             l_argumentList.remove(0);
         }
 
-        testOrderList.add(p_action + p_arguments);
 
-        switch (p_action) {
+        switch (d_orderType) {
             case "deploy":
-                System.out.println("Deploy Order done with " + p_arguments);
+                System.out.println("Deploy Order done with " + d_orderArgs);
                 d_currentOrder = new Deploy(this, l_argumentList.get(0), Integer.parseInt(l_argumentList.get(1)));
                 d_orderList.add(d_currentOrder);
                 //verify argument tokens count
