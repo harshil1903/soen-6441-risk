@@ -5,5 +5,11 @@ package com.risk.observable;
  * update method.
  */
 public interface Observer {
-
+    /**
+     * method to be implemented that reacts to the notification generally by
+     * interrogating the model object and displaying its newly updated state.
+     *
+     * @param o: Object that is passed by the subject (observable). Very often, this
+     *           object is the subject itself, but not necessarily.
+     */
 }
