@@ -84,14 +84,14 @@ public class AdvanceTest {
     public void testAttacker() {
 
         //attacker
-        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        String l_countryName1 = "France";
         d_sourceCountry = new Country();
         d_sourceCountry = d_sourceCountry.getCountryFromCountryName(l_countryName1);
         d_sourceCountry.setD_NumberOfArmies(8);
         int l_battleArmy = 7;
 
         //defender
-        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        String l_countryName2 = "England";
         d_targetCountry = new Country();
         d_targetCountry = d_targetCountry.getCountryFromCountryName(l_countryName2);
         d_targetCountry.setD_NumberOfArmies(4);
@@ -102,7 +102,7 @@ public class AdvanceTest {
         System.out.println("Defender Army : " + d_targetCountry.getD_NumberOfArmies());
         System.out.println("Attacker win and occupied defender country");
         advance.execute();
-        assertEquals(d_sourceCountry.getD_NumberOfArmies(),3);
+        assertEquals(d_sourceCountry.getD_NumberOfArmies(),1);
         assertEquals(d_targetCountry.getD_NumberOfArmies(),4);
         System.out.println("Number of army that occupied defender country : " + d_targetCountry.getD_NumberOfArmies());
     }
@@ -114,14 +114,14 @@ public class AdvanceTest {
     public void testDefender() {
 
         //attacker
-        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        String l_countryName1 = "England";
         d_sourceCountry = new Country();
         d_sourceCountry = d_sourceCountry.getCountryFromCountryName(l_countryName1);
         d_sourceCountry.setD_NumberOfArmies(26);
         int l_battleArmy = 25;
 
         //defender
-        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        String l_countryName2 = "France";
         d_targetCountry = new Country();
         d_targetCountry = d_targetCountry.getCountryFromCountryName(l_countryName2);
         d_targetCountry.setD_NumberOfArmies(20);
