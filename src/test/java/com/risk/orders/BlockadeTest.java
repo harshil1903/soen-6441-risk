@@ -44,11 +44,6 @@ public class BlockadeTest {
         d_player1.addCard("blockade");
         d_player2.addCard("blockade");
         AssignCountries.assignCountries();
-
-        d_country = new Country();
-
-        d_country.setD_CountryName("India");
-        d_country.setD_NumberOfArmies(0);
     }
 
     /**

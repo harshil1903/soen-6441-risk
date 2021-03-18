@@ -72,7 +72,7 @@ public class BombTest {
      * Test method for testing that the countries which are adjacent can only be bombed
      */
     @Test
-    public void testAdjacentBomb() {
+    public void testAdjacentBomb(){
 
         ArrayList<String> l_adjacentList = new ArrayList<>();
         String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
@@ -80,18 +80,19 @@ public class BombTest {
         d_country2 = d_country2.getCountryFromCountryName(l_countryName2);
         d_country2.setD_NumberOfArmies(10);
 
-        Bomb bomb = new Bomb(d_player1, l_countryName2);
+        Bomb bomb = new Bomb(d_player1,l_countryName2);
         for (Country l_country : d_player1.getD_AssignedCountries()) {
             for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
                 l_adjacentList.add(l_adjCountry.getD_CountryName());
             }
         }
-        System.out.println("Target Country Name : " + l_countryName2);
+        System.out.println("Target Country Name : "+l_countryName2);
         if (!l_adjacentList.contains(l_countryName2)) {
             System.out.println(l_countryName2 + " not adjacent with " + d_player1.getD_PlayerName() + " countries");
             assertFalse(bomb.valid());
             System.out.println("Return False");
-        } else {
+        }
+        else {
             assertTrue(bomb.valid());
             System.out.println("Return True");
         }
@@ -102,8 +103,9 @@ public class BombTest {
      */
     @Test
     public void testSuccessfulBomb() {
-        String l_countryName1 = "England";
-        String l_countryName2 = "France";
+        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        ArrayList<String> l_adjacentList = new ArrayList<>();
 
         d_country1 = new Country();
         d_country2 = new Country();
@@ -113,8 +115,19 @@ public class BombTest {
         d_country1.setD_NumberOfArmies(10);
         d_country2.setD_NumberOfArmies(6);
         Bomb bomb = new Bomb(d_player1, l_countryName2);
-        bomb.execute();
-        assertEquals(d_country2.getD_NumberOfArmies(), 3);
+
+        for (Country l_country : d_player1.getD_AssignedCountries()) {
+            for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
+                l_adjacentList.add(l_adjCountry.getD_CountryName());
+            }
+        }
+        if (l_adjacentList.contains(l_countryName2)) {
+            bomb.execute();
+            assertEquals(d_country2.getD_NumberOfArmies(), 3);
+        }
+        else{
+            System.out.println(l_countryName2 + " not adjacent with " + d_player1.getD_PlayerName() + " countries so cannot use bomb card");
+        }
     }
 
     /**
@@ -122,6 +135,7 @@ public class BombTest {
      */
     @Test
     public void testBombOwnArmies() {
+        System.out.println("I am in 4st");
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         d_country = new Country();
         d_country = d_country.getCountryFromCountryName(l_countryName1);
