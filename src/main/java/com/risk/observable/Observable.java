@@ -8,7 +8,7 @@ import java.util.Observer;
 /**
  * Class that implements the connection/disconnection mechanism between
  * observers and observables (subject). It also implements the notification
- *  * mechanism that the observable will trigger when its state changes.
+ * mechanism that the observable will trigger when its state changes.
  */
 public class Observable {
     private List<Observer> observers = new ArrayList<Observer>();
@@ -26,8 +26,8 @@ public class Observable {
      * detach a view from the model.
      *
      * @param p_o: view to be removed from the list of observers.
-
-    public void detach(Observer p_o) {
+     */
+   /* public void detach(Observer p_o) {
         if (!observers.isEmpty()) {
             observers.remove(p_o);
         }
@@ -37,10 +37,10 @@ public class Observable {
      * Notify all the views attached to the model.
      *
      * @param p_o: object that contains the information to be observed.
-
-    public void notifyObservers(Observable p_o) {
+     */
+   /* public void notifyObservers(Observable p_o) {
         for (Observer observer : observers) {
-           this.observers.update(p_o);
+           // this.observers.update(p_o);
         }
     }*/
 }
