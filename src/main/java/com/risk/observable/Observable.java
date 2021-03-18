@@ -23,7 +23,7 @@ public class Observable {
     }
 
     /**
-     * detach a view from the model.
+     * detach a view from model.
      *
      * @param p_o: view to be removed from the list of observers.
      */
