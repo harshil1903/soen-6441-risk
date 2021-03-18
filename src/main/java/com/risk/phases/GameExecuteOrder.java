@@ -64,6 +64,7 @@ public class GameExecuteOrder extends Game{
 
                     System.out.println("Executing Order");
                     if(l_order.valid()){
+
                         l_order.execute();
                     }
                     else {
@@ -82,7 +83,11 @@ public class GameExecuteOrder extends Game{
             }
 
         }
-        System.out.println("Executing Orders finished\n NEW TURN \n");
+        System.out.println("Executing Orders finished\n \n\nNEW TURN \n");
+
+        for (Player l_player : d_PlayerList) {
+            l_player.getDiplomacyPlayer().clear();
+        }
 
         l_playerWon = playerWon();
 
