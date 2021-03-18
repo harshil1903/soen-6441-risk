@@ -33,7 +33,11 @@ public class Observable {
         }
     }
 
-
+    /**
+     * Notify all the views attached to the model.
+     *
+     * @param p_o: object that contains the information to be observed.
+     */
      public void notifyObservers(Observable p_o) {
         for (Observer observer : observers) {
            // this.observers.update(p_o);
