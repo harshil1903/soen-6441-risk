@@ -2,7 +2,7 @@ package com.risk.orders;
 
 import com.risk.models.Country;
 import com.risk.models.Player;
-//import com.risk.main.Main.d_NeutralPlayer;
+import static com.risk.main.Main.d_NeutralPlayer;
 import java.util.ArrayList;
 
 /**
@@ -76,7 +76,7 @@ public class Blockade implements Order {
             System.out.println("After Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
             d_player.removeCard("blockade");
             d_player.removeCountryFromAssignedCountries(d_country.getD_CountryID());
-           // d_NeutralPlayer.addCountryToAssignedCountries(d_country);
+            d_NeutralPlayer.addCountryToAssignedCountries(d_country);
 
 
         }

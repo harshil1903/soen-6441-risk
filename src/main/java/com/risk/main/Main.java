@@ -24,7 +24,7 @@ public class Main {
      */
     public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
 
-    public static Player d_NeutralPLayer = new Player();
+    public static Player d_NeutralPlayer = new Player();
 
     public static LogEntryBuffer log = new LogEntryBuffer();
 
