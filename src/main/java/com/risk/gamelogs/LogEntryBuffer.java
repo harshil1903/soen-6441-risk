@@ -1,8 +1,7 @@
-package com.risk.observable;
+package com.risk.gamelogs;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Observable;
 
 /**
  * Observable class
@@ -44,7 +43,9 @@ public class LogEntryBuffer extends Observable {
      * @param p_data
      */
     public void notify(String p_data) {
+
         d_stringBuilder.append("Log: " + p_data + "\n");
+
         try {
             String l_fileName = "src/main/resources/LogEntry.log";
             d_logWriter = new FileWriter(l_fileName, true);

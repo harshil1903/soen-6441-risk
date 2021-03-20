@@ -1,6 +1,4 @@
-package com.risk.observable;
-
-import com.risk.observable.Observable;
+package com.risk.gamelogs;
 
 /**
  * Interface class for the Observer, which forces all views to implement the

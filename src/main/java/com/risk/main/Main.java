@@ -2,7 +2,7 @@ package com.risk.main;
 
 import com.risk.models.Map;
 import com.risk.models.Player;
-import com.risk.observable.LogEntryBuffer;
+import com.risk.gamelogs.LogEntryBuffer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
