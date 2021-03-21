@@ -15,10 +15,9 @@ public class LogWriter implements Observer {
      */
     FileWriter d_logWriter;
 
-    public LogWriter(LogEntryBuffer p_logEntryBuffer)
-    {
-        p_logEntryBuffer.attach(this);
-    }
+//    public LogWriter(LogEntryBuffer p_logEntryBuffer) {
+//        p_logEntryBuffer.attach(this);
+//    }
 
     /**
      * implementation of abstract method of observer
@@ -27,15 +26,10 @@ public class LogWriter implements Observer {
      */
     @Override
     public void update(Observable p_observable_state) {
-        String l_logData;
+        LogEntryBuffer l_logEntryBuffer = (LogEntryBuffer) p_observable_state;
         try {
-            d_logWriter = new FileWriter("src/main/resources/LogEntry.log", true);
-
-            l_logData = ((LogEntryBuffer)p_observable_state).d_logData;
-
-            d_logWriter.write(l_logData);
-
-            //System.out.println("Writing to log file : " + l_logData);
+            d_logWriter = new FileWriter("src/main/resources/LogEntry.log", false);
+            d_logWriter.write(l_logEntryBuffer.d_stringBuilder.toString());
             d_logWriter.close();
         } catch (IOException ioException) {
             ioException.printStackTrace();

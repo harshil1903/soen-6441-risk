@@ -26,7 +26,7 @@ public class Observable {
      *
      * @param p_o: view to be removed from the list of observers.
      */
-     public void detach(Observer p_o) {
+    public void detach(Observer p_o) {
         if (!observers.isEmpty()) {
             observers.remove(p_o);
         }
@@ -37,7 +37,7 @@ public class Observable {
      *
      * @param p_o: object that contains the information to be observed.
      */
-     public void notifyObservers(Observable p_o) {
+    public void notifyObservers(Observable p_o) {
         for (Observer observer : observers) {
             observer.update(p_o);
         }
