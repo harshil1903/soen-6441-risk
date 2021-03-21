@@ -1,11 +1,5 @@
 package com.risk.main;
 
-import com.risk.controller.GameCommands;
-import com.risk.gameutils.AssignCountries;
-import com.risk.gameutils.Reinforce;
-import com.risk.models.Country;
-import com.risk.models.Orders;
-import com.risk.models.Player;
 import com.risk.phases.GameIssueOrder;
 import com.risk.phases.GameStartup;
 import com.risk.phases.Phase;
@@ -13,8 +7,7 @@ import com.risk.phases.PreMapLoad;
 
 import java.util.*;
 
-import static com.risk.main.Main.d_PlayerList;
-import static com.risk.main.Main.log;
+import static com.risk.main.Main.d_Log;
 
 /**
  * Game Engine Class controls the entire flow of Gameplay including all the game phases
@@ -30,7 +23,6 @@ public class GameEngineNew extends Observable {
     public static boolean d_gameLoaded = false;
     private static Phase d_gamePhase;
     int mystart;
-    int mycommand;
 
     /**
      * Contains true if map is loaded otherwise false
@@ -40,7 +32,7 @@ public class GameEngineNew extends Observable {
     public void setPhase(Phase p_gamePhase) {
         d_gamePhase = p_gamePhase;
         System.out.println("New Phase : " + d_gamePhase.getClass().getSimpleName());
-        log.notify("New Phase : " + d_gamePhase.getClass().getSimpleName());
+        d_Log.notify("New Phase : " + d_gamePhase.getClass().getSimpleName());
     }
 
 
@@ -78,7 +70,7 @@ public class GameEngineNew extends Observable {
 
             System.out.println("Enter First command: ");
             l_command = l_scanner.nextLine();
-            log.notify("COMMAND : " + l_command);
+            d_Log.notify("COMMAND : " + l_command);
 
             while (!l_command.equals("EXIT")) {
 
@@ -90,7 +82,7 @@ public class GameEngineNew extends Observable {
 
                 System.out.println("Enter command: ");
                 l_command = l_scanner.nextLine();
-                log.notify("COMMAND : " + l_command);
+                d_Log.notify("COMMAND : " + l_command);
 
             }
         } while (mystart != 3);

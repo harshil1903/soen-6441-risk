@@ -39,7 +39,7 @@ public class Observable {
      */
      public void notifyObservers(Observable p_o) {
         for (Observer observer : observers) {
-           // this.observers.update(p_o);
+            observer.update(p_o);
         }
     }
 }

@@ -10,6 +10,7 @@ public class LogEntryBuffer extends Observable {
      * StringBuilder to keep appended data.
      */
     public static StringBuilder d_stringBuilder;
+    public String d_logData;
 
     /**
      * Default constructor for LogEntryBuffer class.
@@ -22,10 +23,12 @@ public class LogEntryBuffer extends Observable {
     /**
      * Writes data to log file and appends to StringBuilder.
      *
-     * @param p_data
+     * @param p_data log data
      */
     public void notify(String p_data) {
-        d_stringBuilder.append("Log: " + p_data + "\n");
+        //d_stringBuilder.append("Log: " + p_data + "\n");
+        d_logData = p_data + "\n";
+        notifyObservers(this);
         // to call update method.
     }
 }

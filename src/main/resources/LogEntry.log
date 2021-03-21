@@ -1,0 +1,8 @@
+COMMAND : end
+Welcome to warzone
+Game Begins
+New Phase : PreMapLoad
+COMMAND : editmap europe
+New Phase : PostMapLoad
+COMMAND : showmap
+COMMAND : end

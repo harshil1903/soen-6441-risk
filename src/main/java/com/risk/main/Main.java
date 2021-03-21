@@ -1,5 +1,6 @@
 package com.risk.main;
 
+import com.risk.gamelogs.LogWriter;
 import com.risk.models.Map;
 import com.risk.models.Player;
 import com.risk.gamelogs.LogEntryBuffer;
@@ -26,7 +27,9 @@ public class Main {
 
     public static Player d_NeutralPlayer = new Player();
 
-    public static LogEntryBuffer log = new LogEntryBuffer();
+    public static LogEntryBuffer d_Log = new LogEntryBuffer();
+
+    public static LogWriter d_LogWriter = new LogWriter(d_Log);
 
     /**
      * The entry point of application
@@ -35,8 +38,9 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println("Welcome to WARZONE");
+        d_Log.notify("Welcome to warzone");
         System.out.println("GAME BEGINS\n\n");
-
+        d_Log.notify("Game Begins");
         Scanner l_scanner = new Scanner(System.in);
         String l_command;
 
