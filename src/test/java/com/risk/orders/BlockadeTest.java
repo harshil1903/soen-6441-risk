@@ -61,19 +61,6 @@ public class BlockadeTest {
     }
 
     /**
-     * This method is to test blockade card can not apply on opponent's country
-     */
-    @Test
-    public void testBlockadeOwnArmies() {
-        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
-        d_country = new Country();
-        d_country = d_country.getCountryFromCountryName(l_countryName1);
-        d_country.setD_NumberOfArmies(10);
-        Blockade blockade = new Blockade(d_player2, l_countryName1);
-        assertFalse(blockade.valid());
-    }
-
-    /**
      * This method is to test number of army after applying blockade card on country
      */
     @Test
@@ -86,5 +73,18 @@ public class BlockadeTest {
         Blockade blockade = new Blockade(d_player1, l_countryName1);
         blockade.execute();
         assertEquals(d_country.getD_NumberOfArmies(),30);
+    }
+
+    /**
+     * This method is to test blockade card can not apply on opponent's country
+     */
+    @Test
+    public void testBlockadeOwnArmies() {
+        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        d_country = new Country();
+        d_country = d_country.getCountryFromCountryName(l_countryName1);
+        d_country.setD_NumberOfArmies(10);
+        Blockade blockade = new Blockade(d_player2, l_countryName1);
+        assertFalse(blockade.valid());
     }
 }

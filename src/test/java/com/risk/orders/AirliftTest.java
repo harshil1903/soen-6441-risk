@@ -77,6 +77,29 @@ public class AirliftTest {
     }
 
     /**
+     * This test case verifies that the source country has sufficient armies while ordering Airlift to any target
+     * country.
+     */
+    @Test
+    public void testSufficientArmiesToAirlift() {
+        String l_sourceCountryName = d_player1.getD_AssignedCountries().get(3).getD_CountryName();
+        String l_targetCountryName = d_player1.getD_AssignedCountries().get(2).getD_CountryName();
+
+        d_sourceCountry = new Country();
+        d_sourceCountry = d_sourceCountry.getCountryFromCountryName(l_sourceCountryName);
+        d_sourceCountry.setD_NumberOfArmies(10);
+
+        d_targetCountry = new Country();
+        d_targetCountry = d_targetCountry.getCountryFromCountryName(l_targetCountryName);
+        d_targetCountry.setD_NumberOfArmies(4);
+
+        Airlift airlift = new Airlift(d_player1, l_sourceCountryName, l_targetCountryName, 15);
+
+        assertFalse(airlift.valid());
+
+    }
+
+    /**
      * This test case is used to verify that the player can not perform Airlift on the country that is not owned by
      * that player.
      */
@@ -97,29 +120,6 @@ public class AirliftTest {
 
         assertFalse(airlift.valid());
         System.out.println("Airlift can not be used as Player 1 does not own " + l_targetCountryName);
-
-    }
-
-    /**
-     * This test case verifies that the source country has sufficient armies while ordering Airlift to any target
-     * country.
-     */
-    @Test
-    public void testSufficientArmiesToAirlift() {
-        String l_sourceCountryName = d_player1.getD_AssignedCountries().get(3).getD_CountryName();
-        String l_targetCountryName = d_player1.getD_AssignedCountries().get(2).getD_CountryName();
-
-        d_sourceCountry = new Country();
-        d_sourceCountry = d_sourceCountry.getCountryFromCountryName(l_sourceCountryName);
-        d_sourceCountry.setD_NumberOfArmies(10);
-
-        d_targetCountry = new Country();
-        d_targetCountry = d_targetCountry.getCountryFromCountryName(l_targetCountryName);
-        d_targetCountry.setD_NumberOfArmies(4);
-
-        Airlift airlift = new Airlift(d_player1, l_sourceCountryName, l_targetCountryName, 15);
-
-        assertFalse(airlift.valid());
 
     }
 

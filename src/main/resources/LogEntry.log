@@ -1,0 +1,5 @@
+Log: New Phase : GameStartup
+Log: COMMAND : loadmap europe
+Log: COMMAND : editplayer -add P1 -add P2
+Log: COMMAND : gameplayer -add P1 -add P2
+Log: COMMAND : assigncountries
