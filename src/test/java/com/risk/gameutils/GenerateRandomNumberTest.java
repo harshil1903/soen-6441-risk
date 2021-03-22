@@ -37,16 +37,21 @@ public class GenerateRandomNumberTest {
         assertFalse(l_getNum >= 1000 ? true : false);
     }
 
+    /**
+     * Checks if range is valid or not if not throws an exception.
+     *
+     * @throws IllegalArgumentException range should be positive
+     */
     @Test
     public void rangeShouldBePositive() throws IllegalArgumentException {
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            getRandomNumber(0,0);
+        Exception l_exception = assertThrows(IllegalArgumentException.class, () -> {
+            getRandomNumber(0, 0);
         });
-        String expectedMessage = "bound must be positive";
-        String actualMessage = exception.getMessage();
+        String l_expectedMessage = "bound must be positive";
+        String l_actualMessage = l_exception.getMessage();
 
-        assertTrue(actualMessage.contains(expectedMessage));
+        assertTrue(l_actualMessage.contains(l_expectedMessage));
 
     }
 }
