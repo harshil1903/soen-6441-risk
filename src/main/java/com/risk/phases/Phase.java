@@ -59,7 +59,6 @@ public abstract class Phase {
      * @param p_argumentTokens the p argument tokens
      * @return the boolean
      */
-//PreMapLoad
     abstract public boolean editMap(List<String> p_argumentTokens);
 
     /**
@@ -67,7 +66,6 @@ public abstract class Phase {
      *
      * @param p_argumentTokens the p argument tokens
      */
-//PostMopLoad commands
     abstract public void validateMap(List<String> p_argumentTokens);
 
     /**
@@ -112,7 +110,6 @@ public abstract class Phase {
      * @param p_argumentList the p argument list
      * @return the boolean
      */
-//GameStartup
     abstract public boolean loadMap(List<String> p_argumentList);
 
     /**
@@ -132,32 +129,27 @@ public abstract class Phase {
     /**
      * Reinforce.
      */
-//MainGame
     // reinforcement commands
     abstract public void reinforce();
 
     /**
      * Issue order.
      */
-//issue Order
     abstract public void issueOrder();
 
     /**
      * Execute order.
      */
-//Execute Order
     abstract public void executeOrder();
 
     /**
      * End game.
      */
-// end command
     abstract public void endGame();
 
     /**
      * Next.
      */
-// go to next phase
     abstract public void next();
 
     /**

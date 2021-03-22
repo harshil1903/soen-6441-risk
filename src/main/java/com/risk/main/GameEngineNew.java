@@ -52,11 +52,11 @@ public class GameEngineNew extends Observable {
             mystart = Integer.parseInt(l_scanner.nextLine());
             switch (mystart) {
                 case 1:
-                    // Set the state to Preload
+                    // Set the state to PreMapload
                     setPhase(new PreMapLoad(this));
                     break;
                 case 2:
-                    // Set the state to PlaySetup
+                    // Set the state to GameStartup
                     setPhase(new GameStartup(this));
                     break;
                 case 3:
@@ -152,13 +152,9 @@ public class GameEngineNew extends Observable {
             case "assigncountries":
                 if (d_gamePhase.assignCountries()) {
                     d_gamePhase.next();
-                    //d_gamePhase.issueOrder();
                 }
                 break;
 
-            case "issueorder":
-                setPhase(new GameIssueOrder(this));
-                break;
 
             case "end":
                 d_gamePhase.endGame();

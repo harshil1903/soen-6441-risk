@@ -47,7 +47,8 @@ public abstract class MapEdit extends Phase {
     }
 
     public void endGame() {
-        printInvalidCommandMessage();
+        System.out.println("Leaving Phase");
+        return;
     }
 
 

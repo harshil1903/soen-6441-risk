@@ -24,7 +24,6 @@ public class PreMapLoad extends MapEdit{
     }
 
     public boolean editMap(List<String> p_argumentTokens){
-        //Call EditMap Operation from here.
         boolean l_mapLoaded = false;
         try {
             l_mapLoaded = MapCommands.editMapCommand(p_argumentTokens);
