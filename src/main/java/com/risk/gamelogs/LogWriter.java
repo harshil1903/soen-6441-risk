@@ -15,9 +15,9 @@ public class LogWriter implements Observer {
      */
     FileWriter d_logWriter;
 
-//    public LogWriter(LogEntryBuffer p_logEntryBuffer) {
-//        p_logEntryBuffer.attach(this);
-//    }
+    public LogWriter(LogEntryBuffer p_logEntryBuffer) {
+        p_logEntryBuffer.attach(this);
+    }
 
     /**
      * implementation of abstract method of observer

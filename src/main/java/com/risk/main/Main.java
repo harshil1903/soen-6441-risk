@@ -29,7 +29,7 @@ public class Main {
 
     public static LogEntryBuffer d_Log = new LogEntryBuffer();
 
-    public static LogWriter d_LogWriter = new LogWriter();
+    public static LogWriter d_LogWriter = new LogWriter(d_Log);
 
     /**
      * The entry point of application
