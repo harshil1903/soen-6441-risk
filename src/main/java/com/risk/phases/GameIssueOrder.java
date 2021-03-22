@@ -13,7 +13,9 @@ import java.util.Scanner;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
- * The type Game issue order.
+ * Game issue order allows players to issue their orders
+ *
+ * @author Harshil
  */
 public class GameIssueOrder extends Game{
     /**
@@ -58,7 +60,6 @@ public class GameIssueOrder extends Game{
         }
         Scanner l_scanner = new Scanner(System.in);
         String l_command;
-
 
         System.out.println("\nISSUE ORDER PHASE");
 

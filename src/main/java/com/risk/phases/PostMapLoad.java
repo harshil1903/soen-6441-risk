@@ -8,7 +8,10 @@ import com.risk.main.MapEngine;
 import java.util.List;
 
 /**
- * The type Post map load.
+ * Post map load phase allows methods like showmap, validatemap,savemap and other
+ * editmap functionalities
+ *
+ * @author Harshil
  */
 public class PostMapLoad extends MapEdit{
 

@@ -1,5 +1,7 @@
-Log: New Phase : GameStartup
-Log: COMMAND : loadmap europe
-Log: COMMAND : editplayer -add P1 -add P2
-Log: COMMAND : gameplayer -add P1 -add P2
-Log: COMMAND : assigncountries
+Log: Welcome to warzone
+Log: Game Begins
+Log: New Phase : PreMapLoad
+Log: COMMAND : editmap europe
+Log: New Phase : PostMapLoad
+Log: COMMAND : showmap
+Log: COMMAND : end

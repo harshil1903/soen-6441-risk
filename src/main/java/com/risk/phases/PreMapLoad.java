@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Pre map load.
+ * Pre map load phase only allows editmap function to load the map
+ *
+ * @author Harshil
  */
 public class PreMapLoad extends MapEdit{
 
@@ -24,7 +26,6 @@ public class PreMapLoad extends MapEdit{
     }
 
     public boolean editMap(List<String> p_argumentTokens){
-        //Call EditMap Operation from here.
         boolean l_mapLoaded = false;
         try {
             l_mapLoaded = MapCommands.editMapCommand(p_argumentTokens);

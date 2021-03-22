@@ -3,6 +3,7 @@ package com.risk.main;
 import com.risk.controller.MapCommands;
 import com.risk.exception.InvalidMapException;
 import com.risk.gameutils.AssignCountries;
+import com.risk.gameutils.Reinforce;
 import com.risk.maputils.EditMap;
 import com.risk.maputils.ShowMap;
 import com.risk.models.Continent;
@@ -74,7 +75,7 @@ public class GameEngineTest {
 
         System.out.println("\n TEST : Counting reinforcement armies assigned to a player");
 
-        GameEngine.assignReinforcementArmies();
+        Reinforce.assignReinforcementArmies();
 
         System.out.println("Player 1 country count : " + d_player1.getD_AssignedCountries().size());
         System.out.println("Player 2 country count : " + d_player2.getD_AssignedCountries().size());
@@ -95,7 +96,7 @@ public class GameEngineTest {
 
         System.out.println("\n TEST : Testing that player cannot deploy more armies than he has in his reinforcement pool");
 
-        GameEngine.assignReinforcementArmies();
+        Reinforce.assignReinforcementArmies();
 
         System.out.println("Player 1 country count : " + d_player1.getD_AssignedCountries().size());
         System.out.println("Player 2 country count : " + d_player2.getD_AssignedCountries().size());

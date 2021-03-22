@@ -12,7 +12,9 @@ import java.util.List;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
- * The type Game startup.
+ * Game startup allows map loading, assigning players and countries functionalities
+ *
+ * @author Harshil
  */
 public class GameStartup extends Game {
 
