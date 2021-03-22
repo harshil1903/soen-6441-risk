@@ -59,7 +59,6 @@ public class GameIssueOrder extends Game{
         Scanner l_scanner = new Scanner(System.in);
         String l_command;
 
-
         System.out.println("\nISSUE ORDER PHASE");
 
         while (noOrdersLeftToIssue()){

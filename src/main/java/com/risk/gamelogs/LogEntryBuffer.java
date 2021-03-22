@@ -28,6 +28,5 @@ public class LogEntryBuffer extends Observable {
     public void notify(String p_data) {
         d_stringBuilder.append("Log: " + p_data + "\n");
         notifyObservers(this);
-        //d_logWriter.update(this);
     }
 }
