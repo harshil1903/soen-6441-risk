@@ -13,7 +13,9 @@ import java.util.Scanner;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
- * The type Game issue order.
+ * Game issue order allows players to issue their orders
+ *
+ * @author Harshil
  */
 public class GameIssueOrder extends Game{
     /**

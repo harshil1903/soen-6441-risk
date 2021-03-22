@@ -9,6 +9,8 @@ import java.util.List;
 
 /**
  * Phase Class is the parent class for the State Pattern implementation
+ *
+ * @author Harshil
  */
 public abstract class Phase {
     /**

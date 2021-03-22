@@ -7,7 +7,9 @@ import com.risk.main.MapEngine;
 import java.util.List;
 
 /**
- * The type Map edit.
+ * Abstract class for Map Edit phase
+ *
+ * @author Harshil
  */
 public abstract class MapEdit extends Phase {
 

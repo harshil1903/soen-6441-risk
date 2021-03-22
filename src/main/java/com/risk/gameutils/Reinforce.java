@@ -7,6 +7,12 @@ import com.risk.models.Player;
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * Reinforce class helps in counting the number of reinforcement armies and assigning them to each player
+ * in the beginning of a new turn.
+ *
+ * @author Harshil
+ */
 public class Reinforce {
 
     /**

@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Pre map load.
+ * Pre map load phase only allows editmap function to load the map
+ *
+ * @author Harshil
  */
 public class PreMapLoad extends MapEdit{
 

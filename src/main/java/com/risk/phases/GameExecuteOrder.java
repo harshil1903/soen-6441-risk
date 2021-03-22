@@ -15,7 +15,9 @@ import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
- * The type Game execute order.
+ * Game execute order executes the orders of each player in a round robin manner
+ *
+ * @author Harshil
  */
 public class GameExecuteOrder extends Game{
     /**
