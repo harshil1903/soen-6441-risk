@@ -6,7 +6,6 @@ import com.risk.models.Country;
 import com.risk.models.Player;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -93,7 +92,7 @@ public class GameIssueOrder extends Game{
                     String l_arguments = l_command.substring(l_action.length());
 
                     l_player.setOrderValues(l_action, l_arguments);
-                    l_player.issue_Order();
+                    l_player.issueOrder();
 
                     System.out.println("Do you have more orders left? (y/n)");
                     l_command = l_scanner.nextLine();

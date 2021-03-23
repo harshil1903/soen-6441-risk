@@ -6,7 +6,7 @@ import com.risk.main.GameEngineNew;
 import java.util.List;
 
 /**
- * Post map load phase allows methods like showmap, validatemap,savemap and other
+ * Post map load phase allows methods like showmap, validatemap, savemap and other
  * editmap functionalities
  *
  * @author Harshil

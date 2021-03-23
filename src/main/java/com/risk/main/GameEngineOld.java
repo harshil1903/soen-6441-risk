@@ -70,14 +70,14 @@ public class GameEngineOld {
             while (l_noOrdersPlayerCount <= d_PlayerList.size()) {
 
                 for (Player l_player : d_PlayerList) {
-                    Orders l_order = l_player.nextOrder();
-                    if (l_order != null) {
-                        l_order.execute();
-                        System.out.println("Order : " + l_order.getD_CountryName() + " has " + l_order.getD_NumberOfArmies() + " armies.");
-                    } else {
-                        ++l_noOrdersPlayerCount;
-                        System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);
-                    }
+                    //Orders l_order = l_player.nextOrder();
+                   // if (l_order != null) {
+                 //       l_order.execute();
+                  //      System.out.println("Order : " + l_order.getD_CountryName() + " has " + l_order.getD_NumberOfArmies() + " armies.");
+                 //   } else {
+//                        ++l_noOrdersPlayerCount;
+//                        System.out.println("Number of Players with No Orders : " + l_noOrdersPlayerCount);
+//                    }
                 }
 
             }

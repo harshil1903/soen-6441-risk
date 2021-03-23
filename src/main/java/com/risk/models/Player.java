@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Scanner;
 
 import static com.risk.main.Main.d_PlayerList;
-import static com.risk.main.Main.runGame;
 
 /**
  * This class defines Player and its properties such as
@@ -367,7 +366,7 @@ public class Player {
      * Issue order phase of game
      *
      */
-    public void issue_Order() {
+    public void issueOrder() {
 
         String[] l_argumentTokens = d_orderArgs.split(" ");
         List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
@@ -382,60 +381,36 @@ public class Player {
                 System.out.println("Deploy Order done with " + d_orderArgs);
                 d_currentOrder = new Deploy(this, l_argumentList.get(0), Integer.parseInt(l_argumentList.get(1)));
                 d_orderList.add(d_currentOrder);
-                //verify argument tokens count
-                //split argumentList into country name and number of armies
-                //d_currentOrder = new Deploy(this,l_countryName, l_numberOfArmies);
-                //d_orderList.add(d_currentOrder)
                 break;
 
             case "advance":
                 System.out.println("Advance Order");
                 d_currentOrder = new Advance(this, l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
                 d_orderList.add(d_currentOrder);
-                //verify argument tokens count
-                //
-                //d_currentOrder = new Advance(this, l_countryNameFrom, l_countryNameTo, l_numberOfArmies);
-                //d_orderList.add(d_currentOrder)
                 break;
 
             case "bomb":
                 System.out.println("Bomb Order");
                 d_currentOrder = new Bomb(this, l_argumentList.get(0));
                 d_orderList.add(d_currentOrder);
-                //verify argument tokens count
-                //
-                //d_currentOrder = new Bomb(this, l_countryName);
-                //d_orderList.add(d_currentOrder)
                 break;
 
             case "blockade":
                 System.out.println("Blockade Order");
                 d_currentOrder = new Blockade(this, l_argumentList.get(0));
                 d_orderList.add(d_currentOrder);
-                //verify argument tokens count
-                //
-                //d_currentOrder = new Blockade(this, l_countryName);
-                //d_orderList.add(d_currentOrder)
                 break;
 
             case "airlift":
                 System.out.println("Airlift Order");
                 d_currentOrder = new Airlift(this, l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
                 d_orderList.add(d_currentOrder);
-                //verify argument tokens count
-                //
-                //d_currentOrder = new Airlift(this, l_countryNameFrom, l_countryNameTo, l_numberOfArmies);
-                //d_orderList.add(d_currentOrder)
                 break;
 
             case "negotiate":
                 System.out.println("Negotiate Order");
                 d_currentOrder = new Diplomacy(this, l_argumentList.get(0));
                 d_orderList.add(d_currentOrder);
-                //verify argument tokens count
-                //
-                //d_currentOrder = new Negotiate(this, otherPlayer);
-                //d_orderList.add(d_currentOrder)
                 break;
 
             case "end":
@@ -454,7 +429,7 @@ public class Player {
      *
      * @return l_tempOrder object of the order class
      */
-    public Order next_Order() {
+    public Order nextOrder() {
         Order l_tempOrder;
 
         if (d_orderList.isEmpty()) {
@@ -466,133 +441,6 @@ public class Player {
         }
         return l_tempOrder;
 
-    }
-
-    /**
-     * First order in the player’s list of orders, then removes it from the list.
-     *
-     * @return l_tempOrder object of the order class
-     */
-    public String testnext_Order() {
-        String testOrder;
-        if (testOrderList.isEmpty()) {
-            return null;
-        } else {
-            testOrder = testOrderList.get(0);
-            testOrderList.remove(testOrderList.get(0));
-        }
-        return testOrder;
-    }
-
-    /**
-     * To add an order to the list of orders held by the player
-     * Issue order phase of game
-     */
-    public void issueOrder() {
-
-        /*
-        if(d_currentOrder.valid())
-        {
-
-            d_armies = d_armies - ((Deploy)d_currentOrder).getD_numberOfArmies();
-            d_OrderList.add(d_currentOrder);
-            System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies + " successfully deployed");
-        }
-         */
-
-
-        //The entire bottom thing should be performed in GameEngine Class
-        Scanner l_scanner = new Scanner(System.in);
-        String l_command;
-
-        System.out.println("\nEnter command: ");
-        l_command = l_scanner.nextLine();
-
-        String l_action = l_command.split(" ")[0];
-        String l_arguments = l_command.substring(l_action.length());
-
-        List<String> l_orderCommands = Arrays.asList("deploy");
-
-        String[] l_argumentTokens = l_arguments.split(" ");
-        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
-
-        if (!l_argumentList.isEmpty()) {
-            l_argumentList.remove(0);
-        }
-
-        if (l_argumentList.stream().count() != 2) {
-            System.out.println("Wrong Number of Arguments provided.");
-            return;
-        }
-
-        String l_countryName;
-        int l_numberOfArmies;
-        boolean l_deploySuccess;
-
-
-        l_countryName = l_argumentList.get(0);
-        l_numberOfArmies = Integer.parseInt(l_argumentList.get(1));
-        l_deploySuccess = deployOrder(l_countryName, l_numberOfArmies);
-
-        if (!l_deploySuccess) {
-            issueOrder();
-        }
-
-    }
-
-    /**
-     * First order in the player’s list of orders, then removes it from the list.
-     *
-     * @return l_tempOrder object of the order class
-     */
-    public Orders nextOrder() {
-        Orders l_tempOrder = new Orders();
-
-        if (d_OrderLists.isEmpty()) {
-            return null;
-        } else {
-            l_tempOrder = d_OrderLists.get(0);
-            d_OrderLists.remove(d_OrderLists.get(0));
-        }
-
-        return l_tempOrder;
-    }
-
-    /**
-     * Deploy order if requirements met
-     *
-     * @param l_countryName    country name
-     * @param l_numberOfArmies number of armies
-     * @return true if order successfully deployed
-     */
-    public boolean deployOrder(String l_countryName, int l_numberOfArmies) {
-
-        //Not needed anymore
-
-        Orders l_orders = new Orders();
-        if (d_armies >= l_numberOfArmies) {
-            l_orders.setD_CountryName(l_countryName);
-            l_orders.setD_NumberOfArmies(l_numberOfArmies);
-
-            ArrayList<String> l_countriesOwnedList = new ArrayList<>();
-            for (Country l_country : d_assignedCountries) {
-                l_countriesOwnedList.add(l_country.getD_CountryName());
-            }
-            if (!l_countriesOwnedList.contains(l_countryName)) {
-                System.out.println("You do not own this country. Try Again with a country name that has been assigned to you.");
-                return false;
-            }
-
-
-            d_armies = d_armies - l_numberOfArmies;
-            d_OrderLists.add(l_orders);
-            System.out.println("Country: " + l_countryName + " Number of Armies: " + l_numberOfArmies + " successfully deployed");
-            return true;
-        } else {
-            System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
-            System.out.println("You currently have " + d_armies + " number of reinforcement armies left.");
-            return false;
-        }
     }
 
 

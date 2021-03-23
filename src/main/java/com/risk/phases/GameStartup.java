@@ -27,7 +27,6 @@ public class GameStartup extends Game {
 
     public boolean loadMap(List<String> p_argumentList) {
 
-        //Call LoadMap Operation from here.
         boolean l_mapLoaded = false;
         try {
             l_mapLoaded = GameCommands.loadMapCommand(p_argumentList);
@@ -40,13 +39,11 @@ public class GameStartup extends Game {
 
     public void addPlayer(List<String> p_argumentTokens) {
 
-        //Call addPlayer Operation from here.
         GameCommands.gamePlayerCommand(p_argumentTokens);
 
     }
 
     public boolean assignCountries() {
-        //Call assignCountries Operation from here.
 
         if (d_PlayerList.isEmpty()) {
             System.out.println("No players added, add players first");

@@ -10,9 +10,7 @@ import java.util.List;
  * @author Harshil
  */
 public abstract class Phase {
-    /**
-     * The D game engine new.
-     */
+
     GameEngineNew d_gameEngineNew;
 
     /**
@@ -23,34 +21,6 @@ public abstract class Phase {
     Phase(GameEngineNew p_gameEngine){
         d_gameEngineNew = p_gameEngine;
     }
-
-
-    /*
-    Mapedit
-        PreLoad
-            editmap()
-        PostLoad
-            showmap()
-            validatmap()
-            editcountry()
-            editcontinent()
-            editneighbor()
-            showmap()
-
-     Game
-        PreLoad
-            loadmap()
-        Postload
-            showmap()
-            gameplayer()
-            assignocuntries()
-        Main Game
-            showmap()
-            reinforce()
-            issueorder()
-            executeorder()
-     */
-
 
     /**
      * Edit map boolean.

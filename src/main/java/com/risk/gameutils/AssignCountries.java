@@ -8,7 +8,6 @@ import com.risk.models.Player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Random;
 
 import static com.risk.gameutils.GenerateRandomNumber.getRandomNumber;
 import static com.risk.main.Main.d_Map;

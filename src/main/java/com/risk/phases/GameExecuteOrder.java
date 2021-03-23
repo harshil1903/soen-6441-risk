@@ -3,13 +3,11 @@ package com.risk.phases;
 import com.risk.main.GameEngineNew;
 import com.risk.models.Continent;
 import com.risk.models.Country;
-import com.risk.models.Orders;
 import com.risk.models.Player;
 import com.risk.orders.Order;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
@@ -84,7 +82,7 @@ public class GameExecuteOrder extends Game{
             for (Player l_player : d_PlayerList)
             {
 
-                Order l_order = l_player.next_Order();
+                Order l_order = l_player.nextOrder();
                 if (l_order != null) {
 
                     System.out.println("Executing Order");
@@ -98,13 +96,7 @@ public class GameExecuteOrder extends Game{
                 } else {
                     ++l_noOrdersPlayerCount;
                 }
-//
-//                String testOrder = l_player.testnext_Order();
-//                if (testOrder != null) {
-//                    System.out.println("Executing Order : " + testOrder);
-//                } else {
-//                    ++l_noOrdersPlayerCount;
-//                }
+
             }
 
         }

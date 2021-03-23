@@ -37,8 +37,8 @@ public class Bomb implements Order {
      */
     public boolean valid() {
 
-        //here we have to check whether both country is adjecent or not?
-        //here firstly check if player have a bomb card or not after chirag make cardlist of each player
+        //here we have to check whether both country is adjacent or not?
+        //here firstly check if player have a bomb card or not
         if(d_player.getD_cardList().contains("bomb")){
             if (d_country.getD_NumberOfArmies() > 0) {
                 ArrayList<String> l_countriesOwnedList = new ArrayList<>();
