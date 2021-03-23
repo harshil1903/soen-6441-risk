@@ -4,6 +4,8 @@ import static com.risk.gameutils.GenerateRandomNumber.getRandomNumber;
 
 /**
  * Assigning random card to players.
+ *
+ * @author Chirag
  */
 public class AssignCard {
 

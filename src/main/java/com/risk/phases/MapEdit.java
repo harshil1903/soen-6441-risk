@@ -1,8 +1,6 @@
 package com.risk.phases;
 
-import com.risk.main.GameEngine;
 import com.risk.main.GameEngineNew;
-import com.risk.main.MapEngine;
 
 import java.util.List;
 
@@ -22,38 +20,66 @@ public abstract class MapEdit extends Phase {
         super(p_gameEngine);
     }
 
-    public boolean loadMap(List<String> p_argumentList) {
+    /**
+     *  loadmap Command to load the map
+     *
+     * @param p_argumentTokens command parameters
+     */
+    public boolean loadMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
         return false;
     }
 
+    /**
+     *  gameplayer Command to add/remove players
+     *
+     * @param p_argumentTokens command parameters
+     */
     public void addPlayer(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
 
+    /**
+     *  assigncountries Command to assign countries amoong players
+     */
     public boolean assignCountries() {
         printInvalidCommandMessage();
         return false;
     }
 
+    /**
+     *  To reinforce players with their reinforcement armies
+     */
     public void reinforce() {
         printInvalidCommandMessage();
     }
 
+    /**
+     *  Issue orders as per player's choices
+     */
     public void issueOrder() {
         printInvalidCommandMessage();
     }
 
+    /**
+     *  Execute orders once all players have issued their orders
+     */
     public void executeOrder() {
         printInvalidCommandMessage();
     }
 
+    /**
+     *  end Command to leave phase
+     */
     public void endGame() {
         System.out.println("Leaving Phase");
         return;
     }
 
 
+    /**
+     *  To set next phase
+     */
     public void next() {
 
     }

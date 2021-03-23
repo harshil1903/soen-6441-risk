@@ -30,20 +30,9 @@ public class GameIssueOrder extends Game{
 
     }
 
-    public boolean loadMap(List<String> p_argumentList) {
-
-        printInvalidCommandMessage();
-        return false;
-
-    }
-
-
-    public boolean assignCountries() {
-
-        printInvalidCommandMessage();
-        return false;
-    }
-
+    /**
+     *  To reinforce players with their reinforcement armies
+     */
     public void reinforce() {
 
         System.out.println("\nReinforcing Armies");
@@ -53,6 +42,9 @@ public class GameIssueOrder extends Game{
 
     }
 
+    /**
+     *  Issue orders as per player's choices
+     */
     public void issueOrder() {
         for(Player l_Player : d_PlayerList)
         {
@@ -120,6 +112,8 @@ public class GameIssueOrder extends Game{
 
     }
 
+
+    //to be removed
     public void issueDeployOrder(String p_command){
         String l_action = p_command.split(" ")[0];
         String l_arguments = p_command.substring(l_action.length());
@@ -127,7 +121,9 @@ public class GameIssueOrder extends Game{
 
     }
 
-
+    /**
+     *  To set next phase
+     */
     public void next() {
         d_gameEngineNew.setPhase(new GameExecuteOrder(d_gameEngineNew));
     }
@@ -147,16 +143,51 @@ public class GameIssueOrder extends Game{
         return false;
     }
 
-    public void addPlayer(List<String> p_argumentTokens) {
-        printInvalidCommandMessage();
-    }
 
-    public void executeOrder() {
-        printInvalidCommandMessage();
-    }
 
+    /**
+     * To return current phase name in string
+     *
+     * @return Current phase
+     */
     public String currentPhase(){
         return "GameIssueOrder";
     }
 
+
+
+    /**
+     *  loadmap Command to load the map
+     *
+     * @param p_argumentTokens command parameters
+     */
+    public boolean loadMap(List<String> p_argumentTokens) {
+        printInvalidCommandMessage();
+        return false;
+    }
+
+    /**
+     *  assigncountries Command to assign countries amoong players
+     */
+    public boolean assignCountries() {
+        printInvalidCommandMessage();
+        return false;
+    }
+
+
+    /**
+     *  gameplayer Command  to add/remove players
+     *
+     * @param p_argumentTokens command parameters
+     */
+    public void addPlayer(List<String> p_argumentTokens) {
+        printInvalidCommandMessage();
+    }
+
+    /**
+     *  execute orders once all players have issued their orders
+     */
+    public void executeOrder() {
+        printInvalidCommandMessage();
+    }
 }

@@ -14,6 +14,12 @@ import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * The type Game startup test is to test that only valid commands in Game Startup
+ * phase are allowed.
+ *
+ * @author Harshil
+ */
 public class GameStartupTest {
     Player d_player1, d_player2, d_player3, d_player4;
     GameEngineNew d_gameEngine;
@@ -55,6 +61,10 @@ public class GameStartupTest {
 
     }
 
+    /**
+     * Test game startup phase by checking that only valid commands are executed
+     * and invalid commands are invalidated.
+     */
     @Test
     public void testGameStartupPhase()
     {

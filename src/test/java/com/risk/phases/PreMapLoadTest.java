@@ -47,6 +47,10 @@ public class PreMapLoadTest {
 
     }
 
+    /**
+     * Test pre map load phase by checking that only valid commands are executed
+     * and invalid commands are invalidated.
+     */
     @Test
     public void testPreMapLoadPhase()
     {

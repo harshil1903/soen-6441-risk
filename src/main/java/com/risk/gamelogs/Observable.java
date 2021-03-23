@@ -13,33 +13,33 @@ public class Observable {
     private List<Observer> observers = new ArrayList<Observer>();
 
     /**
-     * attach a view to the model.
+     * Dttach an Observer to the Observable.
      *
-     * @param p_o: view to be added to the list of observers to be notified.
+     * @param p_observer: view to be added to the list of observers to be notified.
      */
-    public void attach(Observer p_o) {
-        this.observers.add(p_o);
+    public void attach(Observer p_observer) {
+        this.observers.add(p_observer);
     }
 
     /**
-     * detach a view from model.
+     * Detach an Observer to the Observable.
      *
-     * @param p_o: view to be removed from the list of observers.
+     * @param p_observer: view to be removed from the list of observers.
      */
-    public void detach(Observer p_o) {
+    public void detach(Observer p_observer) {
         if (!observers.isEmpty()) {
-            observers.remove(p_o);
+            observers.remove(p_observer);
         }
     }
 
     /**
-     * Notify all the views attached to the model.
+     * Notify all Observers of the log changes
      *
-     * @param p_o: object that contains the information to be observed.
+     * @param p_observable: object that contains the information to be observed.
      */
-    public void notifyObservers(Observable p_o) {
+    public void notifyObservers(Observable p_observable) {
         for (Observer observer : observers) {
-            observer.update(p_o);
+            observer.update(p_observable);
         }
     }
 }

@@ -10,6 +10,8 @@ import static com.risk.main.Main.d_PlayerList;
 /**
  * This Class is used for displaying the loaded map as well
  * as displaying the game map.
+ *
+ * @author Harshil
  */
 public class ShowMap {
 
@@ -29,19 +31,7 @@ public class ShowMap {
             System.out.printf("\t%-15s:\t%-15s%n","COUNTRY","NEIGHBOR COUNTRIES");
 
             for (Country l_country : l_continent.getD_Countries()) {
-                /*
-                System.out.println("\t" + l_country.getD_CountryName());
-                System.out.print("\tAdjacent Countries : ");
-                try {
-                    for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
-                        System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
-                    }
-                } catch (Exception e) {
-                }
 
-                System.out.println("\n");
-
-                 */
                 System.out.printf("\t%-15s:", l_country.getD_CountryName());
 
                 for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
@@ -69,19 +59,6 @@ public class ShowMap {
             System.out.printf("\t%-15s:\t%-10s:\t%-10s :\t%-15s%n","COUNTRY", "OWNER", "ARMIES", "NEIGHBOR COUNTRIES");
             for (Country l_country : l_continent.getD_Countries()) {
 
-                /*
-                try {
-                    System.out.println("\t" + l_country.getD_CountryName() + " \n\tOwned by: " + l_country.getD_Player().getD_PlayerName() + " \tArmies: " + l_country.getD_NumberOfArmies());
-                } catch (Exception e) {
-                    System.out.println("\t" + l_country.getD_CountryName() + " \n\tOwned by: " + l_country.getD_Player() + " \tArmies: " + l_country.getD_NumberOfArmies());
-                }
-                System.out.print("\tAdjacent Countries : ");
-                for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
-                    System.out.print("\t\t" + l_adjCountry.getD_CountryName() + ", ");
-                }
-                System.out.println("\n");
-                */
-
                 System.out.printf("\t%-15s:", l_country.getD_CountryName());
 
                 try {
@@ -104,7 +81,6 @@ public class ShowMap {
             System.out.println("You own the following Countries along with army count in it.");
             System.out.printf("\t%-15s:\t%-10s%n","COUNTRY", "ARMIES");
             for (Country l_country : l_player.getD_AssignedCountries()) {
-                //System.out.println("\t%-20s" + l_country.getD_CountryName() + " \tArmies : " + l_country.getD_NumberOfArmies());
                 System.out.printf("\t%-15s:   \t%s%n", l_country.getD_CountryName(), l_country.getD_NumberOfArmies());
             }
         }

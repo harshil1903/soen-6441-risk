@@ -93,7 +93,7 @@ public class Main {
         if (l_mapCommands.contains(l_action)) {
             MapEngine.mapCommandParser(l_action, l_arguments);
         } else if (l_gameCommands.contains(l_action)) {
-            GameEngine.checkNextGameCommands(l_action, l_arguments);
+            GameEngineOld.checkNextGameCommands(l_action, l_arguments);
 
         } else {
             System.out.println("Invalid Command, Try again");

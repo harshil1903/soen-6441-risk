@@ -20,6 +20,7 @@ import static com.risk.main.Main.d_PlayerList;
  * @author Harshil
  */
 public class GameExecuteOrder extends Game{
+
     /**
      * Instantiates a new Game execute order.
      *
@@ -30,28 +31,50 @@ public class GameExecuteOrder extends Game{
         executeOrder();
     }
 
-    public boolean loadMap(List<String> p_argumentList) {
+    /**
+     *  loadmap Command to load the map
+     *
+     * @param p_argumentTokens command parameters
+     */
+    public boolean loadMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
         return false;
     }
 
+    /**
+     *  gameplayer Command to add/remove players
+     *
+     * @param p_argumentTokens command parameters
+     */
     public void addPlayer(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
 
+    /**
+     *  assigncountries Command to assign countries amoong players
+     */
     public boolean assignCountries() {
         printInvalidCommandMessage();
         return false;
     }
 
+    /**
+     *  To reinforce players with their reinforcement armies
+     */
     public void reinforce() {
         printInvalidCommandMessage();
     }
 
+    /**
+     *  Issue orders as per player's choices
+     */
     public void issueOrder() {
         printInvalidCommandMessage();
     }
 
+    /**
+     *  Execute orders once all players have issued their orders
+     */
     public void executeOrder() {
         int l_noOrdersPlayerCount = 0;
         String l_playerWon;
@@ -102,6 +125,9 @@ public class GameExecuteOrder extends Game{
         next();
     }
 
+    /**
+     *  To check if a player has won the game
+     */
     public String playerWon(){
         for (Player l_player : d_PlayerList) {
 
@@ -122,10 +148,19 @@ public class GameExecuteOrder extends Game{
         return "";
     }
 
+    /**
+     * To return current phase name in string
+     *
+     * @return Current phase
+     */
     public String currentPhase(){
         return "GameExecuteOrder";
     }
 
+
+    /**
+     *  To set next phase
+     */
     public void next() {
         d_gameEngineNew.setPhase(new GameIssueOrder(d_gameEngineNew));
     }
