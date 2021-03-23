@@ -77,28 +77,28 @@ public class GameStartupTest {
         l_arguments.add("europe");
 
         System.out.println("Testing loadmap command : ");
-        assertTrue(d_gameEngine.d_gamePhase.loadMap(l_arguments));
+        assertTrue(d_gameEngine.d_GamePhase.loadMap(l_arguments));
 
         System.out.println("\n Testing assigncountries command : ");
-        assertTrue(d_gameEngine.d_gamePhase.assignCountries());
+        assertTrue(d_gameEngine.d_GamePhase.assignCountries());
 
         System.out.println("\n Testing editmap command : ");
-        d_gameEngine.d_gamePhase.editMap(l_arguments);
+        d_gameEngine.d_GamePhase.editMap(l_arguments);
 
         System.out.println("\n Testing editcountry command : ");
-        d_gameEngine.d_gamePhase.editCountry(l_arguments);
+        d_gameEngine.d_GamePhase.editCountry(l_arguments);
 
         System.out.println("\n Testing editcontinent command : ");
-        d_gameEngine.d_gamePhase.editContinent(l_arguments);
+        d_gameEngine.d_GamePhase.editContinent(l_arguments);
 
         System.out.println("\n Testing validatemap command : ");
-        d_gameEngine.d_gamePhase.validateMap(l_arguments);
+        d_gameEngine.d_GamePhase.validateMap(l_arguments);
 
         System.out.println("\n Testing savemap command : ");
-        d_gameEngine.d_gamePhase.saveMap(l_arguments);
+        d_gameEngine.d_GamePhase.saveMap(l_arguments);
 
         System.out.println("\n Testing editneighbor command : ");
-        d_gameEngine.d_gamePhase.editNeighbor(l_arguments);
+        d_gameEngine.d_GamePhase.editNeighbor(l_arguments);
 
     }
 }

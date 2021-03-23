@@ -10,6 +10,8 @@ import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
 import com.risk.models.Player;
+import com.risk.orders.Deploy;
+import com.risk.orders.Order;
 import com.risk.phases.PreMapLoad;
 import org.junit.*;
 
@@ -118,11 +120,14 @@ public class GameEngineTest {
         int l_numberOfArmies = 6;
 
         System.out.println("Player 1 trying to deploy 6 armies");
-        assertFalse(d_player1.deployOrder(l_countryName1, l_numberOfArmies));
+        Order l_order = new Deploy(d_player1, l_countryName1, l_numberOfArmies);
+
+        assertFalse(l_order.valid());
 
         l_numberOfArmies = 2;
         System.out.println("Player 2 trying to deploy 2 armies");
-        assertTrue(d_player2.deployOrder(l_countryName2, l_numberOfArmies));
+        l_order = new Deploy(d_player2, l_countryName2, l_numberOfArmies);
+        assertTrue(l_order.valid());
     }
 
 

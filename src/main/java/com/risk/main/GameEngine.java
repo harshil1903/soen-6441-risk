@@ -16,12 +16,8 @@ import static com.risk.main.Main.d_Log;
  */
 public class GameEngine extends Observable {
 
-    /**
-     * Contains true if game is loaded otherwise false.
-     */
-    public static boolean d_gameLoaded = false;
-    public static Phase d_gamePhase;
-    int mystart;
+    public static Phase d_GamePhase;
+    int d_choice;
 
     /**
      * Contains true if map is loaded otherwise false
@@ -29,9 +25,9 @@ public class GameEngine extends Observable {
     public static boolean d_mapLoaded = false;
 
     public void setPhase(Phase p_gamePhase) {
-        d_gamePhase = p_gamePhase;
-        System.out.println("New Phase : " + d_gamePhase.getClass().getSimpleName());
-        d_Log.notify("New Phase : " + d_gamePhase.getClass().getSimpleName());
+        d_GamePhase = p_gamePhase;
+        System.out.println("New Phase : " + d_GamePhase.getClass().getSimpleName());
+        d_Log.notify("New Phase : " + d_GamePhase.getClass().getSimpleName());
     }
 
 
@@ -48,8 +44,8 @@ public class GameEngine extends Observable {
             System.out.println("2. Play Game");
             System.out.println("3. Quit");
             System.out.println("Where do you want to start?: ");
-            mystart = Integer.parseInt(l_scanner.nextLine());
-            switch (mystart) {
+            d_choice = Integer.parseInt(l_scanner.nextLine());
+            switch (d_choice) {
                 case 1:
                     // Set the state to PreMapload
                     setPhase(new PreMapLoad(this));
@@ -84,7 +80,7 @@ public class GameEngine extends Observable {
                 d_Log.notify("COMMAND : " + l_command);
 
             }
-        } while (mystart != 3);
+        } while (d_choice != 3);
 
 
         System.out.println("GAME HAS ENDED");
@@ -111,52 +107,52 @@ public class GameEngine extends Observable {
 
         switch (l_action) {
             case "editmap":
-                if (d_gamePhase.editMap(l_argumentList)) {
-                    d_gamePhase.next();
+                if (d_GamePhase.editMap(l_argumentList)) {
+                    d_GamePhase.next();
                 }
                 break;
 
             case "validatemap":
-                d_gamePhase.validateMap(l_argumentList);
+                d_GamePhase.validateMap(l_argumentList);
                 break;
 
             case "showmap":
-                d_gamePhase.showMap(l_argumentList);
+                d_GamePhase.showMap(l_argumentList);
                 break;
 
             case "savemap":
-                d_gamePhase.saveMap(l_argumentList);
+                d_GamePhase.saveMap(l_argumentList);
                 return true;
 
             case "editcontinent":
-                d_gamePhase.editContinent(l_argumentList);
+                d_GamePhase.editContinent(l_argumentList);
                 break;
 
             case "editcountry":
-                d_gamePhase.editCountry(l_argumentList);
+                d_GamePhase.editCountry(l_argumentList);
                 break;
 
             case "editneighbor":
-                d_gamePhase.editNeighbor(l_argumentList);
+                d_GamePhase.editNeighbor(l_argumentList);
                 break;
 
             case "loadmap":
-                d_gamePhase.loadMap(l_argumentList);
+                d_GamePhase.loadMap(l_argumentList);
                 break;
 
             case "gameplayer":
-                d_gamePhase.addPlayer(l_argumentList);
+                d_GamePhase.addPlayer(l_argumentList);
                 break;
 
             case "assigncountries":
-                if (d_gamePhase.assignCountries()) {
-                    d_gamePhase.next();
+                if (d_GamePhase.assignCountries()) {
+                    d_GamePhase.next();
                 }
                 break;
 
 
             case "end":
-                d_gamePhase.endGame();
+                d_GamePhase.endGame();
                 return true;
 
             default:
