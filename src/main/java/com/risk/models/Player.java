@@ -82,7 +82,7 @@ public class Player {
     /**
      * Finds the card removes it from the card list.
      *
-     * @param p_card
+     * @param p_card    Card name
      */
     public void removeCard(String p_card) {
         for (int i = 0; i < d_cardList.size(); i++) {

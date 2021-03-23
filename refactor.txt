@@ -1,0 +1,12 @@
+Created a common gameEngine from map engine and gameengine (removed old mapengine and gameengine)
+transfered control from main class to gameengine class for entire game
+State pattern for better state handling
+command pattern for commands
+moved game related functions to game utils
+added temp order inside player class to fetch order while issueing it without any arguments or return value
+
+
+old issue order method used to take order input from player class, removed it.
+
+deploy order function was inside player class, removed it
+

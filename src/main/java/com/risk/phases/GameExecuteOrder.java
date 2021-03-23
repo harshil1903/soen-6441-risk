@@ -119,6 +119,8 @@ public class GameExecuteOrder extends Game{
 
     /**
      *  To check if a player has won the game
+     *
+     * @return Name of player won or blank string if nobody has won
      */
     public String playerWon(){
         for (Player l_player : d_PlayerList) {
