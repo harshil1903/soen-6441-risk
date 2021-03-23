@@ -28,7 +28,6 @@ import static com.risk.main.Main.d_PlayerList;
  */
 public class GameEngineTest {
     Player d_player1, d_player2, d_player3, d_player4;
-    GameEngineNew d_gameEngine;
 
 
     /**
@@ -73,7 +72,6 @@ public class GameEngineTest {
             l_player.clearPlayerData();
 
         d_PlayerList.clear();
-
 
     }
 
