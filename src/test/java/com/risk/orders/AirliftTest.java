@@ -5,6 +5,7 @@ import com.risk.gameutils.AssignCountries;
 import com.risk.maputils.EditMap;
 import com.risk.models.Country;
 import com.risk.models.Player;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert.*;
@@ -50,6 +51,25 @@ public class AirliftTest {
         d_player1.addCard("airlift");
         d_player2.addCard("airlift");
         AssignCountries.assignCountries();
+
+    }
+
+    /**
+     * This method is executed after every test method.
+     *
+     * @throws InvalidMapException the invalid map exception
+     */
+    @After
+    public void afterTest() throws InvalidMapException {
+        System.out.println();
+        d_Map.clearMapData();
+        d_Map.getD_Continents().clear();
+
+        for(Player l_player : d_PlayerList)
+            l_player.clearPlayerData();
+
+        d_PlayerList.clear();
+
 
     }
 

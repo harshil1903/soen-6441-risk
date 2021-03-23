@@ -30,6 +30,7 @@ public class GameEngineTest {
     Player d_player1, d_player2, d_player3, d_player4;
     GameEngineNew d_gameEngine;
 
+
     /**
      * This method is executed before every test method.
      *
@@ -39,7 +40,7 @@ public class GameEngineTest {
     public void beforeTest() throws InvalidMapException {
 
         try {
-            d_Map = new EditMap().editMap("europe");
+            d_Map = new EditMap().editMap("europe1");
         } catch (Exception e) {
             throw new InvalidMapException(e.getMessage());
         }
@@ -78,7 +79,7 @@ public class GameEngineTest {
 
     /**
      * Test reinforcement armies count that is assigned to the player.
-     */
+    */
     @Test
     public void testReinforcementArmies() {
 
@@ -96,6 +97,7 @@ public class GameEngineTest {
         assertEquals(3, d_player2.getD_Armies());
 
     }
+
 
     /**
      * player cannot deploy more armies that there is in their reinforcement pool.
@@ -125,22 +127,7 @@ public class GameEngineTest {
         assertTrue(d_player2.deployOrder(l_countryName2, l_numberOfArmies));
     }
 
-    @Test
-    public void testPhases()
-    {
-        System.out.println("\nTEST : Testing that only allowed methods are executed in a certain phase");
 
-        d_gameEngine = new GameEngineNew();
-
-        d_gameEngine.setPhase(new PreMapLoad(d_gameEngine));
-
-        ArrayList<String> l_arguments = new ArrayList<>();
-        l_arguments.add("europe");
-
-        d_gameEngine.d_gamePhase.editMap(l_arguments);
-
-
-    }
 
 }
 

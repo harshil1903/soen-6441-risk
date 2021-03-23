@@ -52,6 +52,7 @@ public class MapOperationsTest {
     @After
     public void afterTest() throws InvalidMapException {
         System.out.println();
+        d_map.clearMapData();
         d_map.getD_Continents().clear();
     }
 
