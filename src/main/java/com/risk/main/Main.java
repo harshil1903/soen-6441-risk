@@ -40,9 +40,9 @@ public class Main {
         System.out.println("GAME BEGINS\n\n");
         d_Log.notify("Game Begins");
 
-        GameEngineNew l_gameEngineNew = new GameEngineNew();
+        GameEngine l_gameEngine = new GameEngine();
 
-        l_gameEngineNew.runGame();
+        l_gameEngine.runGame();
 
     }
 

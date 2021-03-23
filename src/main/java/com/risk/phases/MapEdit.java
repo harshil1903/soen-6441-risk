@@ -1,6 +1,6 @@
 package com.risk.phases;
 
-import com.risk.main.GameEngineNew;
+import com.risk.main.GameEngine;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public abstract class MapEdit extends Phase {
      *
      * @param p_gameEngine the p game engine
      */
-    MapEdit(GameEngineNew p_gameEngine) {
+    MapEdit(GameEngine p_gameEngine) {
         super(p_gameEngine);
     }
 

@@ -1,6 +1,6 @@
 package com.risk.phases;
 
-import com.risk.main.GameEngineNew;
+import com.risk.main.GameEngine;
 
 import java.util.List;
 
@@ -11,15 +11,15 @@ import java.util.List;
  */
 public abstract class Phase {
 
-    GameEngineNew d_gameEngineNew;
+    GameEngine d_gameEngine;
 
     /**
      * Instantiates a new Phase.
      *
      * @param p_gameEngine the p game engine
      */
-    Phase(GameEngineNew p_gameEngine){
-        d_gameEngineNew = p_gameEngine;
+    Phase(GameEngine p_gameEngine){
+        d_gameEngine = p_gameEngine;
     }
 
     /**

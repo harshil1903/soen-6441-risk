@@ -14,7 +14,7 @@ import static com.risk.main.Main.d_Log;
  *
  * @author Harshil
  */
-public class GameEngineNew extends Observable {
+public class GameEngine extends Observable {
 
     /**
      * Contains true if game is loaded otherwise false.

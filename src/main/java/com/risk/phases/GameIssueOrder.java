@@ -1,7 +1,7 @@
 package com.risk.phases;
 
 import com.risk.gameutils.Reinforce;
-import com.risk.main.GameEngineNew;
+import com.risk.main.GameEngine;
 import com.risk.models.Country;
 import com.risk.models.Player;
 
@@ -22,7 +22,7 @@ public class GameIssueOrder extends Game{
      *
      * @param p_gameEngine the p game engine
      */
-    public GameIssueOrder(GameEngineNew p_gameEngine) {
+    public GameIssueOrder(GameEngine p_gameEngine) {
 
         super(p_gameEngine);
         reinforce();
@@ -124,7 +124,7 @@ public class GameIssueOrder extends Game{
      *  To set next phase
      */
     public void next() {
-        d_gameEngineNew.setPhase(new GameExecuteOrder(d_gameEngineNew));
+        d_gameEngine.setPhase(new GameExecuteOrder(d_gameEngine));
     }
 
     /**

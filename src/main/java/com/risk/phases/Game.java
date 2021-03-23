@@ -1,7 +1,7 @@
 package com.risk.phases;
 
 import com.risk.controller.GameCommands;
-import com.risk.main.GameEngineNew;
+import com.risk.main.GameEngine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public abstract class Game extends Phase {
      *
      * @param p_gameEngine the p game engine
      */
-    Game(GameEngineNew p_gameEngine) {
+    Game(GameEngine p_gameEngine) {
         super(p_gameEngine);
     }
 

@@ -1,7 +1,7 @@
 package com.risk.phases;
 
 import com.risk.controller.MapCommands;
-import com.risk.main.GameEngineNew;
+import com.risk.main.GameEngine;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class PreMapLoad extends MapEdit{
      *
      * @param p_gameEngine the p game engine
      */
-    public PreMapLoad(GameEngineNew p_gameEngine) {
+    public PreMapLoad(GameEngine p_gameEngine) {
         super(p_gameEngine);
     }
 
@@ -105,6 +105,6 @@ public class PreMapLoad extends MapEdit{
      *  end Command to leave game
      */
     public void next() {
-        d_gameEngineNew.setPhase(new PostMapLoad(d_gameEngineNew));
+        d_gameEngine.setPhase(new PostMapLoad(d_gameEngine));
     }
 }

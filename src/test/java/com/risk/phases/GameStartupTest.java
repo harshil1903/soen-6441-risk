@@ -1,8 +1,7 @@
 package com.risk.phases;
 
 import com.risk.exception.InvalidMapException;
-import com.risk.main.GameEngineNew;
-import com.risk.maputils.EditMap;
+import com.risk.main.GameEngine;
 import com.risk.models.Player;
 import org.junit.After;
 import org.junit.Before;
@@ -22,7 +21,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class GameStartupTest {
     Player d_player1, d_player2, d_player3, d_player4;
-    GameEngineNew d_gameEngine;
+    GameEngine d_gameEngine;
 
 
     /**
@@ -70,7 +69,7 @@ public class GameStartupTest {
     {
         System.out.println("\nTEST : Testing Game Startup Phase\n");
 
-        d_gameEngine = new GameEngineNew();
+        d_gameEngine = new GameEngine();
 
         d_gameEngine.setPhase(new GameStartup(d_gameEngine));
 

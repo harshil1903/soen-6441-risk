@@ -2,7 +2,7 @@ package com.risk.phases;
 
 import com.risk.controller.GameCommands;
 import com.risk.gameutils.AssignCountries;
-import com.risk.main.GameEngineNew;
+import com.risk.main.GameEngine;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class GameStartup extends Game {
      *
      * @param p_gameEngine the p game engine
      */
-    public GameStartup(GameEngineNew p_gameEngine) {
+    public GameStartup(GameEngine p_gameEngine) {
         super(p_gameEngine);
     }
 
@@ -80,6 +80,6 @@ public class GameStartup extends Game {
     }
 
     public void next() {
-        d_gameEngineNew.setPhase(new GameIssueOrder(d_gameEngineNew));
+        d_gameEngine.setPhase(new GameIssueOrder(d_gameEngine));
     }
 }

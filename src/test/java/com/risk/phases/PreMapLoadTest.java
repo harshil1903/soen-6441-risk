@@ -1,8 +1,7 @@
 package com.risk.phases;
 
 import com.risk.exception.InvalidMapException;
-import com.risk.main.GameEngineNew;
-import com.risk.maputils.EditMap;
+import com.risk.main.GameEngine;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +19,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class PreMapLoadTest {
 
-    GameEngineNew d_gameEngine;
+    GameEngine d_gameEngine;
 
 
     /**
@@ -56,7 +55,7 @@ public class PreMapLoadTest {
     {
         System.out.println("\nTEST : Testing PreMapLoad Phase\n");
 
-        d_gameEngine = new GameEngineNew();
+        d_gameEngine = new GameEngine();
 
         d_gameEngine.setPhase(new PreMapLoad(d_gameEngine));
 
