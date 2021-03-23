@@ -10,8 +10,10 @@ import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
 import com.risk.models.Player;
+import com.risk.phases.PreMapLoad;
 import org.junit.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -26,6 +28,7 @@ import static com.risk.main.Main.d_PlayerList;
  */
 public class GameEngineTest {
     Player d_player1, d_player2, d_player3, d_player4;
+    GameEngineNew d_gameEngine;
 
     /**
      * This method is executed before every test method.
@@ -52,7 +55,6 @@ public class GameEngineTest {
 
         AssignCountries.assignCountries();
 
-
     }
 
     /**
@@ -63,8 +65,15 @@ public class GameEngineTest {
     @After
     public void afterTest() throws InvalidMapException {
         System.out.println();
+        d_Map.clearMapData();
         d_Map.getD_Continents().clear();
+
+        for(Player l_player : d_PlayerList)
+            l_player.clearPlayerData();
+
         d_PlayerList.clear();
+
+
     }
 
     /**
@@ -73,7 +82,7 @@ public class GameEngineTest {
     @Test
     public void testReinforcementArmies() {
 
-        System.out.println("\n TEST : Counting reinforcement armies assigned to a player");
+        System.out.println("\nTEST : Counting reinforcement armies assigned to a player");
 
         Reinforce.assignReinforcementArmies();
 
@@ -94,7 +103,7 @@ public class GameEngineTest {
     @Test
     public void testDeployMoreThanReinforcementArmies() {
 
-        System.out.println("\n TEST : Testing that player cannot deploy more armies than he has in his reinforcement pool");
+        System.out.println("\nTEST : Testing that player cannot deploy more armies than he has in his reinforcement pool");
 
         Reinforce.assignReinforcementArmies();
 
@@ -114,6 +123,23 @@ public class GameEngineTest {
         l_numberOfArmies = 2;
         System.out.println("Player 2 trying to deploy 2 armies");
         assertTrue(d_player2.deployOrder(l_countryName2, l_numberOfArmies));
+    }
+
+    @Test
+    public void testPhases()
+    {
+        System.out.println("\nTEST : Testing that only allowed methods are executed in a certain phase");
+
+        d_gameEngine = new GameEngineNew();
+
+        d_gameEngine.setPhase(new PreMapLoad(d_gameEngine));
+
+        ArrayList<String> l_arguments = new ArrayList<>();
+        l_arguments.add("europe");
+
+        d_gameEngine.d_gamePhase.editMap(l_arguments);
+
+
     }
 
 }

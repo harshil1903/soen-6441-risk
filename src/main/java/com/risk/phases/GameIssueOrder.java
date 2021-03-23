@@ -155,4 +155,8 @@ public class GameIssueOrder extends Game{
         printInvalidCommandMessage();
     }
 
+    public String currentPhase(){
+        return "GameIssueOrder";
+    }
+
 }

@@ -21,7 +21,7 @@ public class GameEngineNew extends Observable {
      * Contains true if game is loaded otherwise false.
      */
     public static boolean d_gameLoaded = false;
-    private static Phase d_gamePhase;
+    public static Phase d_gamePhase;
     int mystart;
 
     /**

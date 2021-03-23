@@ -154,6 +154,8 @@ public abstract class Phase {
      */
     abstract public void next();
 
+    abstract public String currentPhase();
+
     /**
      * Common method to all States.
      */

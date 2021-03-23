@@ -61,6 +61,10 @@ public class PreMapLoad extends MapEdit{
 
     }
 
+    public String currentPhase(){
+        return "PreMapLoad";
+    }
+
     public void next() {
         d_gameEngineNew.setPhase(new PostMapLoad(d_gameEngineNew));
     }

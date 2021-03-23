@@ -122,6 +122,9 @@ public class GameExecuteOrder extends Game{
         return "";
     }
 
+    public String currentPhase(){
+        return "GameExecuteOrder";
+    }
 
     public void next() {
         d_gameEngineNew.setPhase(new GameIssueOrder(d_gameEngineNew));

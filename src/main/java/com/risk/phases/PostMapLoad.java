@@ -61,6 +61,10 @@ public class PostMapLoad extends MapEdit{
         MapCommands.editNeighborCommand(p_argumentTokens);
     }
 
+    public String currentPhase(){
+        return "PostMapLoad";
+    }
+
     public void next() {
         d_gameEngineNew.setPhase(new PreMapLoad(d_gameEngineNew));
     }

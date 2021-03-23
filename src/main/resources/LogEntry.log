@@ -1,7 +1,2 @@
-Log: Welcome to warzone
-Log: Game Begins
 Log: New Phase : PreMapLoad
-Log: COMMAND : editmap europe
-Log: New Phase : PostMapLoad
-Log: COMMAND : showmap
-Log: COMMAND : end
+Log: New Phase : PreMapLoad

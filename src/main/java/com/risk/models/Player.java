@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static com.risk.main.Main.d_PlayerList;
+import static com.risk.main.Main.runGame;
 
 /**
  * This class defines Player and its properties such as
@@ -595,6 +596,14 @@ public class Player {
     }
 
 
+    /**
+     * Clear player data.
+     */
+    public void clearPlayerData(){
+        this.setD_Armies(0);
+        this.getD_AssignedCountries().clear();
+    }
+
     /* (non-Javadoc)
      * @see java.lang.Object#equals(java.lang.Object)
      */
@@ -612,4 +621,5 @@ public class Player {
         Player l_player = (Player) p_object;
         return l_player.getD_PlayerName().equalsIgnoreCase(d_playerName);
     }
+
 }
