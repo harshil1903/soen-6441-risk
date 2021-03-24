@@ -10,8 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import static com.risk.gameutils.GenerateRandomNumber.getRandomNumber;
-import static com.risk.main.Main.d_Map;
-import static com.risk.main.Main.d_PlayerList;
+import static com.risk.main.Main.*;
 
 /**
  * AssignCountries helps in assigning random countries to players.
@@ -101,5 +100,6 @@ public class AssignCountries {
         }
         assignRandomCountries(d_PlayerList, l_countries, l_map);
         System.out.println("Assigned countries randomly to players");
+        d_Log.notify("");
     }
 }
