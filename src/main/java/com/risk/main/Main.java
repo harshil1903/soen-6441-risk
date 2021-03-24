@@ -38,7 +38,7 @@ public class Main {
         d_Log.notify("Welcome to warzone");
 
         System.out.println("GAME BEGINS\n\n");
-        d_Log.notify("Game Begins");
+        //d_Log.notify("Game Begins");
 
         GameEngine l_gameEngine = new GameEngine();
 
