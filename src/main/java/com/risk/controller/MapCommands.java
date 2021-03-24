@@ -37,7 +37,7 @@ public class MapCommands {
             d_Map = new EditMap().editMap(p_argumentTokens.get(0));
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            //d_Log.notify(e.getMessage());
+            d_Log.notify(e.getMessage());
             throw new InvalidMapException(e.getMessage());
 
         }
