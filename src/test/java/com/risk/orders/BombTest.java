@@ -33,11 +33,12 @@ public class BombTest {
     Player d_player1, d_player2;
     Country d_country, d_country1, d_country2;
 
-    @Before
+
     /**
      * This method is executed before every test method.
      * @throws InvalidMapException
      */
+    @Before
     public void beforeTest() throws InvalidMapException {
 
         try {

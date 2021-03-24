@@ -31,11 +31,12 @@ public class AirliftTest {
     Player d_player1, d_player2;
     int d_numArmies;
 
-    @Before
+
     /**
      * This method is executed before every test method.
      * @throws InvalidMapException
      */
+    @Before
     public void beforeTest() throws InvalidMapException {
 
         try {
