@@ -2,6 +2,7 @@ package com.risk.orders;
 
 import com.risk.models.Player;
 
+import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
@@ -57,6 +58,16 @@ public class Diplomacy implements Order {
             d_player.addPlayerToDiplomacyList(d_otherPlayer.getPlayerFromPlayerName(d_playerName));
             d_otherPlayer.addPlayerToDiplomacyList(d_player);
             d_player.removeCard("negotiate");
+            printOrder();
+            d_Log.notify("Order Type : Diplomacy \nPlayer : " + d_player.getD_PlayerName() + " Opponent Player : " + d_otherPlayer.getD_PlayerName()
+                    + " \nSuccessfully Executed\n");
         }
+    }
+
+    /*
+     * Print order.
+     */
+    public void printOrder(){
+        System.out.println();
     }
 }

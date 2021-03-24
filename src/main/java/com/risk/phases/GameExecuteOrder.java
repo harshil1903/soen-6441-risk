@@ -9,8 +9,7 @@ import com.risk.orders.Order;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.risk.main.Main.d_Map;
-import static com.risk.main.Main.d_PlayerList;
+import static com.risk.main.Main.*;
 
 /**
  * Game execute order executes the orders of each player in a round robin manner
@@ -86,12 +85,14 @@ public class GameExecuteOrder extends Game{
                 if (l_order != null) {
 
                     System.out.println("Executing Order");
+                    d_Log.notify("Executing Order");
                     if(l_order.valid()){
 
                         l_order.execute();
                     }
                     else {
                         System.out.println("Invalid Order, not executed");
+                        d_Log.notify("Invalid Order, not executed");
                     }
                 } else {
                     ++l_noOrdersPlayerCount;
@@ -101,6 +102,7 @@ public class GameExecuteOrder extends Game{
 
         }
         System.out.println("Executing Orders finished\n \n\nNEW TURN \n");
+        d_Log.notify("Executing Orders finished\n \n\nNEW TURN \n");
 
         for (Player l_player : d_PlayerList) {
             l_player.getDiplomacyPlayer().clear();
@@ -111,6 +113,7 @@ public class GameExecuteOrder extends Game{
         if(!l_playerWon.equals(""))
         {
             System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
+            d_Log.notify("Player " + l_playerWon+ " has Won the Game!!!");
             showMap(new ArrayList<>());
             endGame();
         }

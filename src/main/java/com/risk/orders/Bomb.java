@@ -5,6 +5,8 @@ import com.risk.models.Player;
 
 import java.util.ArrayList;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * The type Bomb
  *
@@ -86,6 +88,17 @@ public class Bomb implements Order {
             System.out.println(d_player.getD_PlayerName()+" applied Bomb Card successfully");
             System.out.println("After Bomb Card number of army in "+d_countryName+" is : "+d_country.getD_NumberOfArmies());
             d_player.removeCard("bomb");
+
+            printOrder();
+            d_Log.notify("Order Type : Bomb \nPlayer : " + d_player.getD_PlayerName() + " Target Country : " + d_countryName + " \nSuccessfully Executed\n");
+
         }
+    }
+
+    /*
+     * Print order.
+     */
+    public void printOrder(){
+        System.out.println("Order Type : Bomb \nPlayer : " + d_player.getD_PlayerName() + " Target Country : " + d_countryName + " \nSuccessfully Executed\n");
     }
 }

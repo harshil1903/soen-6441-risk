@@ -2,6 +2,8 @@ package com.risk.orders;
 
 import com.risk.models.Country;
 import com.risk.models.Player;
+
+import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_NeutralPlayer;
 import java.util.ArrayList;
 
@@ -75,8 +77,19 @@ public class Blockade implements Order {
             System.out.println(d_player.getD_PlayerName() + " applied Blockade Card successfully");
             System.out.println("After Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
             d_player.removeCard("blockade");
-            //d_player.removeCountryFromAssignedCountries(d_country.getD_CountryID());
-            //d_NeutralPlayer.addCountryToAssignedCountries(d_country);
+            printOrder();
+            d_player.removeCountryFromAssignedCountries(d_country.getD_CountryID());
+            d_NeutralPlayer.addCountryToAssignedCountries(d_country);
+
+            d_Log.notify("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
+
         }
+    }
+
+    /*
+     * Print order.
+     */
+    public void printOrder(){
+        System.out.println("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
     }
 }

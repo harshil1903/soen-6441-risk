@@ -6,6 +6,8 @@ import com.risk.models.Player;
 
 import java.util.ArrayList;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * The Command Pattern Class for Deploy Order
  *
@@ -65,7 +67,18 @@ public class Deploy implements Order {
             d_player.setD_Armies(d_player.getD_Armies() - d_numberOfArmies);
             int l_previousArmies = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
             d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
+            printOrder();
+            d_Log.notify("Order Type : Deploy \nPlayer : " + d_player.getD_PlayerName() + " Country : " + d_countryName
+                    + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Executed\n");
 
         }
+    }
+
+    /*
+     * Print order.
+     */
+    public void printOrder(){
+        System.out.println("Order Type : Deploy \nPlayer : " + d_player.getD_PlayerName() + " Country : " + d_countryName
+               + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Executed\n");
     }
 }

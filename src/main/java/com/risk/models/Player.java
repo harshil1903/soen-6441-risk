@@ -37,7 +37,13 @@ public class Player {
      * Default constructor for player class
      */
     public Player() {
+        d_armies = 0;
+        d_assignedCountries = new ArrayList<Country>();
+        d_OrderLists = new ArrayList<Orders>();
+        d_orderList = new ArrayList<>();
+        testOrderList = new ArrayList<>();
         d_diplomacyPlayerList = new ArrayList<>();
+        d_cardList = new ArrayList<>();
     }
 
     /**

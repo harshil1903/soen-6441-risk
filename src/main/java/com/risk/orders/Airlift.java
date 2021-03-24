@@ -5,6 +5,8 @@ import com.risk.models.Player;
 
 import java.util.ArrayList;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * The type Airlift.
  *
@@ -92,6 +94,18 @@ public class Airlift implements Order {
             System.out.println(d_player.getD_PlayerName() + " applied Airlift Card successfully");
             System.out.println("After Airlift Card number of army in " + d_targetCountryName + " is : " + d_targetCountry.getD_NumberOfArmies());
             d_player.removeCard("airlift");
+            printOrder();
+            d_Log.notify("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
+                    + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " \nSuccessfully Executed\n");
+
         }
+    }
+
+    /*
+     * Print order.
+     */
+    public void printOrder(){
+        System.out.println("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " \nSuccessfully Executed\n");
     }
 }

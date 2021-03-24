@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
@@ -35,8 +36,10 @@ public class GameIssueOrder extends Game{
     public void reinforce() {
 
         System.out.println("\nReinforcing Armies");
+        d_Log.notify("\nReinforcing Armies");
         Reinforce.assignReinforcementArmies();
         System.out.println("\nArmies have been successfully reinforced among players");
+        d_Log.notify("\nArmies have been successfully reinforced among players");
         issueOrder();
 
     }
@@ -53,6 +56,7 @@ public class GameIssueOrder extends Game{
         String l_command;
 
         System.out.println("\nISSUE ORDER PHASE");
+        d_Log.notify("\nISSUE ORDER PHASE");
 
         while (noOrdersLeftToIssue()){
 
@@ -107,6 +111,7 @@ public class GameIssueOrder extends Game{
         }
 
         System.out.println("\nAll orders for the current turn have been issued.\n");
+        d_Log.notify("\nAll orders for the current turn have been issued.\n");
         next();
 
     }

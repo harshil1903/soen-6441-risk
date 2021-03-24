@@ -6,6 +6,8 @@ import com.risk.gameutils.AssignCard;
 
 import java.util.ArrayList;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * The type advance
  *
@@ -129,11 +131,14 @@ public class Advance implements Order {
                 }
 
             }
+            d_Log.notify("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
+                    + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
+            printOrder();
         }
     }
 
     public void printOrder(){
-        System.out.println("\n Order Type : Advance \t Player : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-        + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " Successfully Executed");
+        System.out.println("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
+        + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
     }
 }
