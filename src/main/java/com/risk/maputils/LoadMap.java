@@ -106,6 +106,7 @@ public class LoadMap {
      *
      * @param p_map Reads the map file.
      * @param p_Map Stores data read from p_mapReader
+     * @return the Map object with loaded values.
      */
     public static Map loadMap(File p_map, Map p_Map) {
         Scanner l_mapReader = null;
