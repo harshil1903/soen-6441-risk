@@ -162,7 +162,7 @@ public class MapCommands {
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 1 argument");
-                    //d_Log.notify("Wrong number of Arguments provided. remove option has 1 argument");
+                    d_Log.notify("Wrong number of Arguments provided. remove option has 1 argument");
                     e.printStackTrace();
                     return;
                 }
