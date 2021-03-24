@@ -1,9 +1,9 @@
 Log: Welcome to warzone
 Log: Game Begins
-Log: New Phase : GameStartup
-Log: COMMAND : loadmap europe
-Log: COMMAND : gameplayer -add shivam -add harshil -add megh
-Log: Player Name: shivam has joined the Game
-Log: Player Name: harshil has joined the Game
-Log: Player Name: megh has joined the Game
-Log: COMMAND : assigncountries
+Log: New Phase : PreMapLoad
+Log: COMMAND : editmap europeTest
+Log: Loaded map successfully from existing domination file
+Log: Map Validation Failed 
+Map data has been cleared, use editmap to load a map again
+Log: The Continent:- 1 is not connected by its neighbouring countries.A Continent must be connected graph formed by its neighbouring countries in the map.
+Log: COMMAND : EXIT

@@ -181,11 +181,11 @@ public class MapValidator {
 
     /**
      * This method is used for verifying that the subgraph of the continent is connected.
-     *
-     * @param p_continent refers to the continent
+     * 
+     * @param p_continent refers to the continent 
      * @return
-     * @throws InvalidMapException
-     *
+     * @throws InvalidMapException 
+     * 
      */
 
     public static boolean checkSubGraphConnectivityForContinent(Continent p_continent) throws InvalidMapException{
@@ -208,8 +208,9 @@ public class MapValidator {
     }
 
     /**
+     * This is the BFS traversal method for the verification of subgraph connectivity in the continent
      *
-     * @param 
+     * @param p_country refers to the country
      * @throws InvalidMapException
      */
     public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException{
