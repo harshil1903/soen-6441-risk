@@ -57,6 +57,7 @@ public class MapOperations {
             if (l_continent.getD_ContinentName().equals(p_continentName)) {
                 if (!l_continent.getD_Countries().isEmpty()) {
                     System.out.println("Remove Countries from the continent first");
+                    d_Log.notify("Remove Countries from the continent first");
                     return;
                 }
             }
