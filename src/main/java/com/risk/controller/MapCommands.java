@@ -253,7 +253,7 @@ public class MapCommands {
                     l_neighborCountryName = p_argumentTokens.get(++i);
 
                     System.out.println("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
-                    //d_Log.notify("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
+                    d_Log.notify("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
                     MapOperations.removeNeighborCountry(d_Map, l_neighborCountryName, l_countryName);
 
                 } catch (Exception e) {
