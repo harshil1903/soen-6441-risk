@@ -122,7 +122,7 @@ public class MapCommands {
     public static void showMapCommand(List<String> p_argumentTokens) {
         if (p_argumentTokens.stream().count() != 0) {
             System.out.println("Wrong Number of Arguments provided. showmap command has no argument.");
-            //d_Log.notify("Wrong Number of Arguments provided. showmap command has no argument.");
+            d_Log.notify("Wrong Number of Arguments provided. showmap command has no argument.");
         }
 
         ShowMap.displayEditorMap(d_Map);
