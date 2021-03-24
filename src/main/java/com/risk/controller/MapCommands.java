@@ -168,7 +168,7 @@ public class MapCommands {
                 }
             } else {
                 System.out.println("Invalid option. editneighbor has -add and -remove options only");
-                //d_Log.notify("Invalid option. editneighbor has -add and -remove options only");
+                d_Log.notify("Invalid option. editneighbor has -add and -remove options only");
             }
 
         }
