@@ -64,6 +64,7 @@ public class MapOperations {
         }
         p_map.removeContinentFromContinentList(p_continentName);
         System.out.println("Continent " + p_continentName + " removed Successfully");
+        d_Log.notify("Continent " + p_continentName + " removed Successfully");
     }
 
     /**
