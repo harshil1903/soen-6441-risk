@@ -20,7 +20,11 @@ import static com.risk.main.Main.d_Log;
 public class MapValidator {
 
     static String d_alertMessage = "";
-    public static boolean d_isValid = false; //for clearing the continents of the d_Map variable
+
+    /**
+     * d_isValid variable is for clearing the continents of the d_Map variable.
+     */
+    public static boolean d_isValid = false;
 
     /**
      * This method is used for validation of map.
@@ -183,8 +187,8 @@ public class MapValidator {
      * This method is used for verifying that the subgraph of the continent is connected.
      * 
      * @param p_continent refers to the continent 
-     * 
-     * @throws InvalidMapException 
+     * @return will return true or false accordingly
+     * @throws InvalidMapException throws exception if map is not valid
      * 
      */
 
@@ -211,7 +215,7 @@ public class MapValidator {
      * This is the BFS traversal method for the verification of subgraph connectivity in the continent
      *
      * @param p_country refers to the country
-     * @throws InvalidMapException
+     * @throws InvalidMapException throws exception if map is invalid
      */
     public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException{
         ArrayList<Country> l_adjCountryListBelongToSameContinent = new ArrayList<>();
