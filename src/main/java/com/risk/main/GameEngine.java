@@ -77,7 +77,7 @@ public class GameEngine extends Observable {
 
                 System.out.println("Enter command: ");
                 l_command = l_scanner.nextLine();
-                //d_Log.notify("COMMAND : " + l_command);
+                d_Log.notify("COMMAND : " + l_command);
 
             }
         } while (d_choice != 3);
