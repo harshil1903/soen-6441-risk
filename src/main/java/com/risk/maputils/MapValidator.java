@@ -183,7 +183,7 @@ public class MapValidator {
      * This method is used for verifying that the subgraph of the continent is connected.
      * 
      * @param p_continent refers to the continent 
-     * @return
+     * 
      * @throws InvalidMapException 
      * 
      */
