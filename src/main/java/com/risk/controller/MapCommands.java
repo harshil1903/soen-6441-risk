@@ -192,7 +192,7 @@ public class MapCommands {
                     l_continentName = p_argumentTokens.get(++i);
 
                     System.out.println("Country ID: " + l_countryName + " Continent ID: " + l_continentName);
-                    //d_Log.notify("Country ID: " + l_countryName + " Continent ID: " + l_continentName);
+                    d_Log.notify("Country ID: " + l_countryName + " Continent ID: " + l_continentName);
 
                     MapOperations.addCountry(d_Map, l_countryName, l_continentName);
 
