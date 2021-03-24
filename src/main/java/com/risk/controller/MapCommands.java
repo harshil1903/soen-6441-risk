@@ -157,7 +157,7 @@ public class MapCommands {
                 try {
                     l_continentName = p_argumentTokens.get(++i);
                     System.out.println("Continent ID: " + l_continentName);
-                    //d_Log.notify("Continent ID: " + l_continentName);
+                    d_Log.notify("Continent ID: " + l_continentName);
                     MapOperations.removeContinent(d_Map, l_continentName);
 
                 } catch (Exception e) {
