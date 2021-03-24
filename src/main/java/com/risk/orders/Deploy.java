@@ -6,6 +6,8 @@ import com.risk.models.Player;
 
 import java.util.ArrayList;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * The Command Pattern Class for Deploy Order
  *
@@ -45,6 +47,7 @@ public class Deploy implements Order {
             }
             if (!l_countriesOwnedList.contains(d_countryName)) {
                 System.out.println("You do not own this country. Try Again with a country name that has been assigned to you.");
+                d_Log.notify("You do not own this country. Try Again with a country name that has been assigned to you");
                 return false;
             }
 
@@ -52,7 +55,9 @@ public class Deploy implements Order {
 
         } else {
             System.out.println("You are trying to deploy more armies than you have. Try Again in your next turn.");
+            d_Log.notify("You are trying to deploy more armies than you have. Try Again in your next turn.");
             System.out.println("You currently have " + d_player.getD_Armies() + " number of reinforcement armies left.");
+            d_Log.notify("You currently have " + d_player.getD_Armies() + " number of reinforcement armies left.");
             return false;
         }
     }
@@ -65,7 +70,20 @@ public class Deploy implements Order {
             d_player.setD_Armies(d_player.getD_Armies() - d_numberOfArmies);
             int l_previousArmies = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
             d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
+            printOrder();
+            d_Log.notify("Order Type : Deploy \nPlayer : " + d_player.getD_PlayerName() + " Country : " + d_countryName
+                    + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Executed\n");
 
         }
+    }
+
+    /*
+     * Print order.
+     */
+    public void printOrder(){
+        System.out.println("Order Type : Deploy \nPlayer : " + d_player.getD_PlayerName() + " Country : " + d_countryName
+               + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Executed\n");
+        d_Log.notify("Order Type : Deploy \nPlayer : " + d_player.getD_PlayerName() + " Country : " + d_countryName
+                + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Executed\n");
     }
 }

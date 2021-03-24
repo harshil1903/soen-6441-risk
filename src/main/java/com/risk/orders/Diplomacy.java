@@ -2,6 +2,7 @@ package com.risk.orders;
 
 import com.risk.models.Player;
 
+import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
@@ -38,11 +39,13 @@ public class Diplomacy implements Order {
             if (!d_player.getD_PlayerName().equals(d_otherPlayer.getD_PlayerName())) {
                 return true;
             } else {
-                System.out.println("Both player name can not be same");
+                System.out.println("Both player name cannot be same");
+                d_Log.notify("Both player name cannot be same");
                 return false;
             }
         } else {
             System.out.println("Player does not contain diplomacy card");
+            d_Log.notify("Player does not contain diplomacy card");
             return false;
         }
     }
@@ -57,6 +60,16 @@ public class Diplomacy implements Order {
             d_player.addPlayerToDiplomacyList(d_otherPlayer.getPlayerFromPlayerName(d_playerName));
             d_otherPlayer.addPlayerToDiplomacyList(d_player);
             d_player.removeCard("negotiate");
+            printOrder();
+            d_Log.notify("Order Type : Diplomacy \nPlayer : " + d_player.getD_PlayerName() + " Opponent Player : " + d_otherPlayer.getD_PlayerName()
+                    + " \nSuccessfully Executed\n");
         }
+    }
+
+    /*
+     * Print order.
+     */
+    public void printOrder(){
+        System.out.println();
     }
 }

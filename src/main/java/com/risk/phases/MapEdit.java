@@ -4,6 +4,8 @@ import com.risk.main.GameEngine;
 
 import java.util.List;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * Abstract class for Map Edit phase
  *
@@ -73,6 +75,7 @@ public abstract class MapEdit extends Phase {
      */
     public void endGame() {
         System.out.println("Leaving Phase");
+        d_Log.notify("Leaving Phase");
         return;
     }
 

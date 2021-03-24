@@ -1,4 +1,9 @@
+Log: Welcome to warzone
+Log: Game Begins
 Log: New Phase : GameStartup
-Log: New Phase : PreMapLoad
-Log: New Phase : GameStartup
-Log: New Phase : PreMapLoad
+Log: COMMAND : loadmap europe
+Log: COMMAND : gameplayer -add shivam -add harshil -add megh
+Log: Player Name: shivam has joined the Game
+Log: Player Name: harshil has joined the Game
+Log: Player Name: megh has joined the Game
+Log: COMMAND : assigncountries

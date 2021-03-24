@@ -157,6 +157,7 @@ public class GameEngine extends Observable {
 
             default:
                 System.out.println("Invalid Command");
+                d_Log.notify("Invalid Command");
 
         }
 

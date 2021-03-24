@@ -5,6 +5,7 @@ import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
 
+import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_Map;
 
 /**
@@ -38,6 +39,7 @@ public class MapOperations {
         } else {
             p_map.addContinentToContinentList(l_continent);
             System.out.println("The Continent " + p_continentName + " Added Successfully");
+            d_Log.notify("The Continent" + p_continentName + "Added Successfully");
         }
     }
 
@@ -55,12 +57,14 @@ public class MapOperations {
             if (l_continent.getD_ContinentName().equals(p_continentName)) {
                 if (!l_continent.getD_Countries().isEmpty()) {
                     System.out.println("Remove Countries from the continent first");
+                    d_Log.notify("Remove Countries from the continent first");
                     return;
                 }
             }
         }
         p_map.removeContinentFromContinentList(p_continentName);
         System.out.println("Continent " + p_continentName + " removed Successfully");
+        d_Log.notify("Continent " + p_continentName + " removed Successfully");
     }
 
     /**
@@ -81,6 +85,7 @@ public class MapOperations {
                 l_country.setD_ContinentID(l_continent.getD_ContinentID());
                 l_continent.addCountryToCountryList(l_country);
                 System.out.println("The Country " + p_countryName + " Added Successfully");
+                d_Log.notify("The Country " + p_countryName + " Added Successfully");
             }
         }
         int l_countryID = 0;
@@ -105,6 +110,7 @@ public class MapOperations {
                     if (l_adjCountry.getD_CountryName().equals(p_countryName)) {
                         l_country.removeCountryFromAdjacentCountries(p_countryName);
                         System.out.println("Country " + p_countryName + " remove successfully");
+                        d_Log.notify("Country " + p_countryName + " remove successfully");
                     }
                 }
             }
@@ -131,6 +137,7 @@ public class MapOperations {
                     l_country.addCountryToAdjacentCountries(l_tempCountry);
                     l_tempCountry.addCountryToAdjacentCountries(l_country);
                     System.out.println("Neighbor Country " + p_neighborName + " Added Successfully");
+                    d_Log.notify("Neighbor Country " + p_neighborName + " Added Successfully");
                 }
             }
         }
@@ -154,6 +161,7 @@ public class MapOperations {
                     l_country.removeCountryFromAdjacentCountries(p_neighborName);
                     l_tempCountry.removeCountryFromAdjacentCountries(p_countryName);
                     System.out.println("Neighbor country " + p_neighborName + " remove successfully");
+                    d_Log.notify("Neighbor country " + p_neighborName + " remove successfully");
                 }
             }
         }

@@ -6,6 +6,7 @@ import com.risk.main.GameEngine;
 
 import java.util.List;
 
+import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
@@ -47,15 +48,18 @@ public class GameStartup extends Game {
 
         if (d_PlayerList.isEmpty()) {
             System.out.println("No players added, add players first");
+            d_Log.notify("No players added, add players first");
             return false;
         } else if (d_PlayerList.size() == 1) {
             System.out.println("Cant play the game with 1 player, add atleast 1 more player");
+            d_Log.notify("Cant play the game with 1 player, add atleast 1 more player");
             return false;
         }
 
         try {
             AssignCountries.assignCountries();
             System.out.println("Countries have been successfully assigned to all the players");
+            d_Log.notify("Countries have been successfully assigned to all the players");
         }
         catch (Exception e) {
         }

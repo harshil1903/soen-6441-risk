@@ -5,6 +5,7 @@ import com.risk.models.Country;
 import com.risk.models.Map;
 import com.risk.models.Player;
 
+import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_PlayerList;
 
 /**
@@ -26,6 +27,7 @@ public class ShowMap {
         System.out.println("\n\nDISPLAYING MAP\n");
         for (Continent l_continent : p_map.getD_Continents()) {
             System.out.println("Continent Name : " + l_continent.getD_ContinentName());
+            d_Log.notify("Continent Name : " + l_continent.getD_ContinentName());
             //System.out.println("Countries in the Continent : \n");
 
             System.out.printf("\t%-15s:\t%-15s%n","COUNTRY","NEIGHBOR COUNTRIES");

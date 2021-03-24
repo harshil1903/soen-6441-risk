@@ -12,6 +12,7 @@ import com.risk.models.Map;
 import com.risk.models.Player;
 import com.risk.orders.Deploy;
 import com.risk.orders.Order;
+import com.risk.phases.GameStartup;
 import com.risk.phases.PreMapLoad;
 import org.junit.*;
 
@@ -30,7 +31,7 @@ import static com.risk.main.Main.d_PlayerList;
  */
 public class GameEngineTest {
     Player d_player1, d_player2, d_player3, d_player4;
-
+    GameEngine d_gameEngine = new GameEngine();
 
     /**
      * This method is executed before every test method.
@@ -128,6 +129,17 @@ public class GameEngineTest {
         System.out.println("Player 2 trying to deploy 2 armies");
         l_order = new Deploy(d_player2, l_countryName2, l_numberOfArmies);
         assertTrue(l_order.valid());
+    }
+
+    @Test
+    public void testGameEngineSetPhases(){
+        d_gameEngine.setPhase(new PreMapLoad(d_gameEngine));
+
+        assertEquals("PreMapLoad",d_gameEngine.d_GamePhase.currentPhase());
+
+        d_gameEngine.setPhase(new GameStartup(d_gameEngine));
+
+        assertEquals("GameStartup",d_gameEngine.d_GamePhase.currentPhase());
     }
 
 

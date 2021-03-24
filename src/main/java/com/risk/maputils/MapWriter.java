@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * The class MapWriter will write the data in map file when the user creates a map
  *
@@ -30,6 +32,7 @@ public class MapWriter {
         try {
             if (p_map == null) {
                 System.out.println("Map object is NULL! ");
+                d_Log.notify("Map object is NULL! ");
             }
 
             String l_content = parseMapAndReturnString(p_map);
