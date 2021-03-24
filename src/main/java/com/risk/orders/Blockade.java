@@ -49,17 +49,20 @@ public class Blockade implements Order {
                 }
                 if (!l_countriesOwnedList.contains(d_countryName)) {
                     System.out.println(d_player.getD_PlayerName() + " can not use Blockade card on opponent’s country");
+                    d_Log.notify(d_player.getD_PlayerName() + " can not use Blockade card on opponent’s country");
                     return false;
                 }
                 return true;
             } else {
                 System.out.println(d_countryName + " has a 0 army so you can not apply Blockade order there");
+                d_Log.notify(d_countryName + " has a 0 army so you can not apply Blockade order there");
                 return false;
             }
 
 
         } else {
             System.out.println("Player does not contain blockade card");
+            d_Log.notify("Player doesnot contain blockade card");
             return false;
         }
 
@@ -73,9 +76,12 @@ public class Blockade implements Order {
         if (valid()) {
             int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
             System.out.println("Before Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
+            d_Log.notify("Before Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
             d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies((l_previousArmy * 3));
             System.out.println(d_player.getD_PlayerName() + " applied Blockade Card successfully");
+            d_Log.notify(d_player.getD_PlayerName() + "applied Blockade Card successfully");
             System.out.println("After Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
+            d_Log.notify("After Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
             d_player.removeCard("blockade");
             printOrder();
             d_player.removeCountryFromAssignedCountries(d_country.getD_CountryID());
@@ -91,5 +97,6 @@ public class Blockade implements Order {
      */
     public void printOrder(){
         System.out.println("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
+        d_Log.notify("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
     }
 }

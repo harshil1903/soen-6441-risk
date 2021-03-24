@@ -63,19 +63,23 @@ public class Advance implements Order {
                         return true;
                     } else {
                         System.out.println(d_sourceCountryName + " and " + d_targetCountryName + " are not adjacent");
+                        d_Log.notify(d_sourceCountryName + " and " + d_targetCountryName + " are not adjacent");
                         return false;
                     }
                 } else {
                     System.out.println("Source country name " + d_targetCountryName + " and Target country name" + d_targetCountryName + "are same so advance order can not apply here");
+                    d_Log.notify("Source country name " + d_targetCountryName + " and Target country name" + d_targetCountryName + "are same so advance order can not apply here");
                     return false;
                 }
 
             } else {
                 System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be attack to the target country");
+                d_Log.notify(d_player.getD_PlayerName() + " does not have sufficient armies to be attack to the target country");
                 return false;
             }
         } else {
             System.out.println(d_player.getD_PlayerName() + " can not attack on " + d_targetCountry.getD_Player().getD_PlayerName() + " because of diplomacy card");
+            d_Log.notify(d_player.getD_PlayerName() + " can not attack on " + d_targetCountry.getD_Player().getD_PlayerName() + " because of diplomacy card");
             return false;
         }
     }
@@ -140,5 +144,7 @@ public class Advance implements Order {
     public void printOrder(){
         System.out.println("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
         + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
+        d_Log.notify("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
     }
 }

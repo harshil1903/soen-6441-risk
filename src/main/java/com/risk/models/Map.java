@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Observable;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * This class defines Map and its list of continents.
  *
@@ -93,6 +95,7 @@ public class Map extends Observable {
         Continent l_continentToBeRemoved = new Continent().getContinentFromContinentName(p_continentName);
 
         System.out.println("\n Continent Remove Info  " + l_continentToBeRemoved.getD_ContinentName() + " " + l_continentToBeRemoved.getD_ContinentID());
+        d_Log.notify("\n Continent Remove Info  " + l_continentToBeRemoved.getD_ContinentName() + " " + l_continentToBeRemoved.getD_ContinentID());
 
         d_continents.remove(l_continentToBeRemoved);
     }

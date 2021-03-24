@@ -39,11 +39,13 @@ public class Diplomacy implements Order {
             if (!d_player.getD_PlayerName().equals(d_otherPlayer.getD_PlayerName())) {
                 return true;
             } else {
-                System.out.println("Both player name can not be same");
+                System.out.println("Both player name cannot be same");
+                d_Log.notify("Both player name cannot be same");
                 return false;
             }
         } else {
             System.out.println("Player does not contain diplomacy card");
+            d_Log.notify("Player does not contain diplomacy card");
             return false;
         }
     }

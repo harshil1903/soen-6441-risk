@@ -61,21 +61,26 @@ public class Airlift implements Order {
                 }
                 if (!l_countriesOwnedList.contains(d_sourceCountryName)) {
                     System.out.println(d_player.getD_PlayerName() + " can not use Airlift card as source country is not owned");
+                    d_Log.notify(d_player.getD_PlayerName() + " can not use Airlift card as source country is not owned");
                     return false;
                 } else if (!l_countriesOwnedList.contains(d_targetCountryName)) {
                     System.out.println(d_player.getD_PlayerName() + " can not use Airlift card on target country is not owned");
+                    d_Log.notify(d_player.getD_PlayerName() + " can not use Airlift card on target country is not owned");
                     return false;
                 } else if (d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).getD_NumberOfArmies() < d_numberOfArmies) {
                     System.out.println(d_player.getD_PlayerName() + " does not have sufficient armies to be airlifted to the target country");
+                    d_Log.notify(d_player.getD_PlayerName() + " does not have sufficient armies to be airlifted to the target country");
                     return false;
                 }
                 return true;
             } else {
                 System.out.println("Source country and Target country must be different.");
+                d_Log.notify("Source country and Target country must be different.");
                 return false;
             }
         } else {
             System.out.println("Player does not contain airlift card");
+            d_Log.notify("Player doesnot contain airlift card");
             return false;
         }
     }
@@ -90,9 +95,12 @@ public class Airlift implements Order {
             d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
             int l_previousArmy = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies();
             System.out.println("Before Airlift Card number of army in " + d_targetCountryName + " is : " + d_targetCountry.getD_NumberOfArmies());
+            d_Log.notify("Before Airlift Card number of army in " + d_targetCountryName + " is : " + d_targetCountry.getD_NumberOfArmies());
             d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_previousArmy + d_numberOfArmies);
             System.out.println(d_player.getD_PlayerName() + " applied Airlift Card successfully");
+            d_Log.notify(d_player.getD_PlayerName() + " applied Airlift Card successfully");
             System.out.println("After Airlift Card number of army in " + d_targetCountryName + " is : " + d_targetCountry.getD_NumberOfArmies());
+            d_Log.notify("After Airlift Card number of army in " + d_targetCountryName + " is : " + d_targetCountry.getD_NumberOfArmies());
             d_player.removeCard("airlift");
             printOrder();
             d_Log.notify("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
@@ -106,6 +114,8 @@ public class Airlift implements Order {
      */
     public void printOrder(){
         System.out.println("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " \nSuccessfully Executed\n");
+        d_Log.notify("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
                 + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " \nSuccessfully Executed\n");
     }
 }

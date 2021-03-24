@@ -4,6 +4,8 @@ import com.risk.main.GameEngine;
 
 import java.util.List;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * Phase Class is the parent class for the State Pattern implementation
  *
@@ -128,5 +130,6 @@ public abstract class Phase {
      */
     public void printInvalidCommandMessage() {
         System.out.println("Invalid command in state " + this.getClass().getSimpleName() );
+        d_Log.notify("Invalid command in state" + this.getClass().getSimpleName());
     }
 }
