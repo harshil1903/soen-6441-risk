@@ -100,6 +100,6 @@ public class AssignCountries {
         }
         assignRandomCountries(d_PlayerList, l_countries, l_map);
         System.out.println("Assigned countries randomly to players");
-        d_Log.notify("");
+        d_Log.notify("Assigned countries randomly to players");
     }
 }
