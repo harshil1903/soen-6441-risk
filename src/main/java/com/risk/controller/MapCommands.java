@@ -99,7 +99,7 @@ public class MapCommands {
     public static void validateMapCommand(List<String> p_argumentTokens) {
         if (p_argumentTokens.stream().count() != 0) {
             System.out.println("Wrong Number of Arguments provided. validatemap command has no argument.");
-            //d_Log.notify("Wrong Number of Arguments provided. validatemap command has no argument.");
+            d_Log.notify("Wrong Number of Arguments provided. validatemap command has no argument.");
             return;
         }
 
