@@ -83,7 +83,7 @@ public class MapCommands {
         }
         if (MapValidator.d_isValid == false) {
             System.out.println("Map cannot be saved");
-            //d_Log.notify("Map cannot be saved");
+            d_Log.notify("Map cannot be saved");
         } else {
             new MapWriter().writeMapFile(d_Map, l_file);
         }
