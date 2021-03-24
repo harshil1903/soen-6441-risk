@@ -145,7 +145,7 @@ public class MapCommands {
                     l_continentName = p_argumentTokens.get(++i);
                     l_continentValue = Integer.parseInt(p_argumentTokens.get(++i));
                     System.out.println("Continent ID: " + l_continentName + " Control Value: " + l_continentValue);
-                    //d_Log.notify("Continent ID: " + l_continentName + " Control Value: " + l_continentValue);
+                    d_Log.notify("Continent ID: " + l_continentName + " Control Value: " + l_continentValue);
                     MapOperations.addContinent(d_Map, l_continentName, l_continentValue);
 
                 } catch (Exception e) {
