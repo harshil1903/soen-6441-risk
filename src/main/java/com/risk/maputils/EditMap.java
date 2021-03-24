@@ -101,6 +101,8 @@ public class EditMap {
             int l_countryID = Integer.parseInt(l_parts[0]);
             String l_countryName = l_parts[1];
             Country l_country = new Country(l_countryID, l_countryName, l_continentID);
+            l_country.setD_BelongToContinent(l_continent);
+            l_country.setD_ContinentName(l_continent.getD_ContinentName());
             l_continent.addCountryToCountryList(l_country);
         }
     }
@@ -160,6 +162,7 @@ public class EditMap {
     public static void createMap() {
         d_Map = new Map();
         System.out.println("Map file not presented will be created from scratch");
+        d_Map.d_isEmpty = true;
     }
 
     /**

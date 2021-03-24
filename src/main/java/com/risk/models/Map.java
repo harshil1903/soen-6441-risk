@@ -16,6 +16,7 @@ public class Map extends Observable {
 
     private HashMap<String, String> d_mapData;
     private List<Continent> d_continents;
+    public boolean d_isEmpty = false;
 
     /**
      * Default Constructor

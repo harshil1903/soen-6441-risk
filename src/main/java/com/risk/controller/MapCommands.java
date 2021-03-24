@@ -38,11 +38,18 @@ public class MapCommands {
             throw new InvalidMapException(e.getMessage());
 
         }
+        if(d_Map.d_isEmpty)
+        {
+            return true;
+        }
+
         try {
             MapValidator.validateMap(d_Map);
         } catch (Exception e) {
-            System.out.println("Map Validation Failed");
+            System.out.println("Map Validation Failed \nMap data has been cleared, use editmap to load a map again");
             System.out.println(e.getMessage());
+            d_Map.clearMapData();
+            return false;
         }
 
         return true;

@@ -77,6 +77,15 @@ public class MapValidator {
                 throw new InvalidMapException("The Continent:- " + l_continent.getD_ContinentName() + " is not connected by its neighbouring countries.A Continent must be connected graph formed by its neighbouring countries in the map.");
             }
         }
+
+        for (Continent l_continent : p_map.getD_Continents()) {
+
+            if(!checkSubGraphConnectivityForContinent(l_continent)){
+                throw new InvalidMapException("The Continent:-" + l_continent.getD_ContinentName() + " failed subgraph connectivitiy");
+            }
+        }
+
+
     }
 
 
@@ -149,25 +158,74 @@ public class MapValidator {
             }
         }
 
-        for(Country l_adjCountryBelongToSameContinent : l_adjCountryListBelongToSameContinent){
-             List<Country> l_adj = l_adjCountryBelongToSameContinent.getD_AdjacentCountries(); //main list after removing other continents countries
-             Continent l_cont = p_country.getD_BelongToContinent();
-
-             for(Country l_countryToBeRemoved : l_adj){
-                 if(!l_cont.getD_Countries().contains(l_countryToBeRemoved));
-                 l_adj.remove(l_countryToBeRemoved);
-             }
-
-             if(!l_adj.contains(l_cont.getD_Countries())){
-                 throw new InvalidMapException("Country: " + p_country.getD_CountryName() + " is not adjacent with the countries in the" + l_cont.getD_ContinentName() + "continent.");
-             }
-             //l_adj.remove(l_adjCountryBelongToSameContinent.getD_AdjacentCountries());
-        }
-
-
+//        for(Country l_adjCountryBelongToSameContinent : l_adjCountryListBelongToSameContinent){
+//             List<Country> l_adj = l_adjCountryBelongToSameContinent.getD_AdjacentCountries(); //main list after removing other continents countries
+//             Continent l_cont = p_country.getD_BelongToContinent();
+//
+//             for(Country l_countryToBeRemoved : l_adj){
+//                 if(!l_cont.getD_Countries().contains(l_countryToBeRemoved));
+//                 l_adj.remove(l_countryToBeRemoved);
+//             }
+//
+//             if(!l_adj.contains(l_cont.getD_Countries())){
+//                 throw new InvalidMapException("Country: " + p_country.getD_CountryName() + " is not adjacent with the countries in the" + l_cont.getD_ContinentName() + "continent.");
+//             }
+//             //l_adj.remove(l_adjCountryBelongToSameContinent.getD_AdjacentCountries());
+//        }
 
 
     }
+
+
+    public static boolean checkSubGraphConnectivityForContinent(Continent p_continent) throws InvalidMapException{
+
+        bfsTraversalSubGraphConnectivityForContinent(p_continent.getD_Countries().get(0));
+        boolean l_returnValue = true;
+        for (Country l_country : p_continent.getD_Countries()) {
+            if (l_country.isD_IsProcessed() == false) {
+                l_country.setD_Processed(false);
+                d_alertMessage = l_country.getD_CountryName() + "country is not forming connected graph in the continent" + p_continent.getD_ContinentName() + ".";
+                l_returnValue = false;
+                break;
+            }
+        }
+
+        for (Country l_country : p_continent.getD_Countries()) {
+            l_country.setD_Processed(false);
+        }
+        return l_returnValue;
+    }
+
+    public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException{
+        ArrayList<Country> l_adjCountryListBelongToSameContinent = new ArrayList<>();
+        //System.out.println("Checking Country : " + p_country.getD_CountryName());
+
+        for (Country l_country : p_country.getD_AdjacentCountries()) {
+
+           // System.out.println("SUB GRAPH : Country : " + l_country.getD_CountryName());
+          //  System.out.println("Continents : " + p_country.getD_ContinentName() + "  " + l_country.getD_ContinentName());
+            if (l_country.getD_ContinentName().equals(p_country.getD_ContinentName())) {
+                l_adjCountryListBelongToSameContinent.add(l_country);
+            }
+        }
+
+        //for(Country c : l_adjCountryListBelongToSameContinent)
+        //    System.out.println("After removing SUB GRAPH : Country : " + c.getD_CountryName());
+
+        if (p_country.isD_IsProcessed() == true) {
+            return;
+        }
+
+        p_country.setD_Processed(true);
+
+        for (Country l_country : l_adjCountryListBelongToSameContinent) {
+            if ((l_country.getD_BelongToContinent() == p_country.getD_BelongToContinent()) && l_country.isD_IsProcessed() == false)
+                bfsTraversalSubGraphConnectivityForContinent(l_country);
+        }
+
+
+    }
+
 
     /**
      * This method is used to validate that whether the continents in the map form a graph or not.
