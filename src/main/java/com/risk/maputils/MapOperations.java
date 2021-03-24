@@ -5,6 +5,7 @@ import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
 
+import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_Map;
 
 /**
@@ -38,6 +39,7 @@ public class MapOperations {
         } else {
             p_map.addContinentToContinentList(l_continent);
             System.out.println("The Continent " + p_continentName + " Added Successfully");
+            d_Log.notify("The Continent" + p_continentName + "Added Successfully");
         }
     }
 
