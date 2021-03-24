@@ -137,6 +137,7 @@ public class MapOperations {
                     l_country.addCountryToAdjacentCountries(l_tempCountry);
                     l_tempCountry.addCountryToAdjacentCountries(l_country);
                     System.out.println("Neighbor Country " + p_neighborName + " Added Successfully");
+                    d_Log.notify("Neighbor Country " + p_neighborName + " Added Successfully");
                 }
             }
         }
@@ -160,6 +161,7 @@ public class MapOperations {
                     l_country.removeCountryFromAdjacentCountries(p_neighborName);
                     l_tempCountry.removeCountryFromAdjacentCountries(p_countryName);
                     System.out.println("Neighbor country " + p_neighborName + " remove successfully");
+                    d_Log.notify("Neighbor country " + p_neighborName + " remove successfully");
                 }
             }
         }

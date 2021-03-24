@@ -7,6 +7,8 @@ import com.risk.models.Map;
 import com.risk.models.Continent;
 import com.risk.models.Country;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * This class performs validation of map correctness, also after loading
  * and saving any new map the map should be validated automatically.
@@ -43,6 +45,7 @@ public class MapValidator {
                     throw new InvalidMapException("The map is not a connected graph i.e Continent is not a subgraph in the map. A map should be connected graph formed by continents.");
                 } else {
                     System.out.println("The map is connected");
+                    d_Log.notify("The map is connected");
                 }
 
             }
