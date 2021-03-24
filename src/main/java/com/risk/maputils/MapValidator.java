@@ -23,7 +23,7 @@ public class MapValidator {
     public static boolean d_isValid = false;
 
     /**
-     * This method is used for validaion of map.
+     * This method is used for validation of map.
      *
      * @param p_map refers to the map object for verification.
      * @throws InvalidMapException is used for the situation where map has certain errors.
@@ -84,7 +84,7 @@ public class MapValidator {
         for (Continent l_continent : p_map.getD_Continents()) {
 
             if(!checkSubGraphConnectivityForContinent(l_continent)){
-                throw new InvalidMapException("The Continent:-" + l_continent.getD_ContinentName() + " failed subgraph connectivitiy");
+                throw new InvalidMapException("The Continent:-" + l_continent.getD_ContinentName() + " failed subgraph connectivity");
             }
         }
 
