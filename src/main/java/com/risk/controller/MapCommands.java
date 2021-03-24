@@ -51,7 +51,7 @@ public class MapCommands {
             System.out.println("Map Validation Failed \nMap data has been cleared, use editmap to load a map again");
             d_Log.notify("Map Validation Failed \nMap data has been cleared, use editmap to load a map again");
             System.out.println(e.getMessage());
-            d_Log.notify(e.getMessage());
+            //d_Log.notify(e.getMessage());
             d_Map.clearMapData();
             return false;
         }
