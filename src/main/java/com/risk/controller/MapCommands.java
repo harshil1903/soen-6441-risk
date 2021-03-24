@@ -37,7 +37,7 @@ public class MapCommands {
             d_Map = new EditMap().editMap(p_argumentTokens.get(0));
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            d_Log.notify(e.getMessage());
+            //d_Log.notify(e.getMessage());
             throw new InvalidMapException(e.getMessage());
 
         }
@@ -79,11 +79,11 @@ public class MapCommands {
             System.out.println("Map Validation Failed");
             d_Log.notify("Map Validation Failed");
             System.out.println(e.getMessage());
-            d_Log.notify(e.getMessage());
+            //d_Log.notify(e.getMessage());
         }
         if (MapValidator.d_isValid == false) {
             System.out.println("Map cannot be saved");
-            d_Log.notify("Map cannot be saved");
+            //d_Log.notify("Map cannot be saved");
         } else {
             new MapWriter().writeMapFile(d_Map, l_file);
         }
@@ -99,7 +99,7 @@ public class MapCommands {
     public static void validateMapCommand(List<String> p_argumentTokens) {
         if (p_argumentTokens.stream().count() != 0) {
             System.out.println("Wrong Number of Arguments provided. validatemap command has no argument.");
-            d_Log.notify("Wrong Number of Arguments provided. validatemap command has no argument.");
+            //d_Log.notify("Wrong Number of Arguments provided. validatemap command has no argument.");
             return;
         }
 
@@ -107,9 +107,9 @@ public class MapCommands {
             MapValidator.validateMap(d_Map);
         } catch (Exception e) {
             System.out.println("Map Validation Failed");
-            d_Log.notify("Map Validation Failed");
+            //d_Log.notify("Map Validation Failed");
             System.out.println(e.getMessage());
-            d_Log.notify(e.getMessage());
+            //d_Log.notify(e.getMessage());
         }
 
     }
@@ -122,7 +122,7 @@ public class MapCommands {
     public static void showMapCommand(List<String> p_argumentTokens) {
         if (p_argumentTokens.stream().count() != 0) {
             System.out.println("Wrong Number of Arguments provided. showmap command has no argument.");
-            d_Log.notify("Wrong Number of Arguments provided. showmap command has no argument.");
+            //d_Log.notify("Wrong Number of Arguments provided. showmap command has no argument.");
         }
 
         ShowMap.displayEditorMap(d_Map);
@@ -145,30 +145,30 @@ public class MapCommands {
                     l_continentName = p_argumentTokens.get(++i);
                     l_continentValue = Integer.parseInt(p_argumentTokens.get(++i));
                     System.out.println("Continent ID: " + l_continentName + " Control Value: " + l_continentValue);
-                    d_Log.notify("Continent ID: " + l_continentName + " Control Value: " + l_continentValue);
+                    //d_Log.notify("Continent ID: " + l_continentName + " Control Value: " + l_continentValue);
                     MapOperations.addContinent(d_Map, l_continentName, l_continentValue);
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 2 arguments");
-                    d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
+                    //d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
                     return;
                 }
             } else if (p_argumentTokens.get(i).equals("-remove")) {
                 try {
                     l_continentName = p_argumentTokens.get(++i);
                     System.out.println("Continent ID: " + l_continentName);
-                    d_Log.notify("Continent ID: " + l_continentName);
+                    //d_Log.notify("Continent ID: " + l_continentName);
                     MapOperations.removeContinent(d_Map, l_continentName);
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 1 argument");
-                    d_Log.notify("Wrong number of Arguments provided. remove option has 1 argument");
+                    //d_Log.notify("Wrong number of Arguments provided. remove option has 1 argument");
                     e.printStackTrace();
                     return;
                 }
             } else {
                 System.out.println("Invalid option. editneighbor has -add and -remove options only");
-                d_Log.notify("Invalid option. editneighbor has -add and -remove options only");
+                //d_Log.notify("Invalid option. editneighbor has -add and -remove options only");
             }
 
         }
@@ -192,31 +192,31 @@ public class MapCommands {
                     l_continentName = p_argumentTokens.get(++i);
 
                     System.out.println("Country ID: " + l_countryName + " Continent ID: " + l_continentName);
-                    d_Log.notify("Country ID: " + l_countryName + " Continent ID: " + l_continentName);
+                    //d_Log.notify("Country ID: " + l_countryName + " Continent ID: " + l_continentName);
 
                     MapOperations.addCountry(d_Map, l_countryName, l_continentName);
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 2 arguments");
-                    d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
+                    //d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
                     return;
                 }
             } else if (p_argumentTokens.get(i).equals("-remove")) {
                 try {
                     l_countryName = p_argumentTokens.get(++i);
                     System.out.println("Country ID: " + l_countryName);
-                    d_Log.notify("Country ID: " + l_countryName);
+                    //d_Log.notify("Country ID: " + l_countryName);
 
                     MapOperations.removeCountry(d_Map, l_countryName);
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 1 argument");
-                    d_Log.notify("Wrong number of Arguments provided. remove option has 1 argument");
+                    //d_Log.notify("Wrong number of Arguments provided. remove option has 1 argument");
                     return;
                 }
             } else {
                 System.out.println("Invalid option. editneighbor has -add and -remove options only");
-                d_Log.notify("Invalid option. editneighbor has -add and -remove options only");
+                //d_Log.notify("Invalid option. editneighbor has -add and -remove options only");
             }
 
         }
@@ -239,12 +239,12 @@ public class MapCommands {
                     l_neighborCountryName = p_argumentTokens.get(++i);
 
                     System.out.println("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
-                    d_Log.notify("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
+                    //d_Log.notify("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
                     MapOperations.addNeighborCountry(d_Map, l_neighborCountryName, l_countryName);
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 2 arguments");
-                    d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
+                    //d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
                     return;
                 }
             } else if (p_argumentTokens.get(i).equals("-remove")) {
@@ -253,17 +253,17 @@ public class MapCommands {
                     l_neighborCountryName = p_argumentTokens.get(++i);
 
                     System.out.println("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
-                    d_Log.notify("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
+                    //d_Log.notify("Country ID: " + l_countryName + " Neighbor Country ID: " + l_neighborCountryName);
                     MapOperations.removeNeighborCountry(d_Map, l_neighborCountryName, l_countryName);
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 2 argument");
-                    d_Log.notify("Wrong number of Arguments provided. remove option has 2 argument");
+                    //d_Log.notify("Wrong number of Arguments provided. remove option has 2 argument");
                     return;
                 }
             } else {
                 System.out.println("Invalid option. editneighbor has -add and -remove options only");
-                d_Log.notify("Invalid option. editneighbor has -add and -remove options only");
+                //d_Log.notify("Invalid option. editneighbor has -add and -remove options only");
             }
 
         }
