@@ -109,7 +109,7 @@ public class MapCommands {
             System.out.println("Map Validation Failed");
             d_Log.notify("Map Validation Failed");
             System.out.println(e.getMessage());
-            //d_Log.notify(e.getMessage());
+            d_Log.notify(e.getMessage());
         }
 
     }
