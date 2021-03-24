@@ -85,6 +85,7 @@ public class MapOperations {
                 l_country.setD_ContinentID(l_continent.getD_ContinentID());
                 l_continent.addCountryToCountryList(l_country);
                 System.out.println("The Country " + p_countryName + " Added Successfully");
+                d_Log.notify("The Country " + p_countryName + " Added Successfully");
             }
         }
         int l_countryID = 0;
@@ -109,6 +110,7 @@ public class MapOperations {
                     if (l_adjCountry.getD_CountryName().equals(p_countryName)) {
                         l_country.removeCountryFromAdjacentCountries(p_countryName);
                         System.out.println("Country " + p_countryName + " remove successfully");
+                        d_Log.notify("Country " + p_countryName + " remove successfully");
                     }
                 }
             }
