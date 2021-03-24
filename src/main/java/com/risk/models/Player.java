@@ -25,10 +25,22 @@ public class Player {
     private List<Country> d_assignedCountries;
     private List<Orders> d_OrderLists;
     private List<Order> d_orderList;
+    /**
+     * current order of player
+     */
     public Order d_currentOrder;
+    /**
+     * cardlist of player
+     */
     public List<String> d_cardList;
+    /**
+     * orderlist of player
+     */
     public List<String> testOrderList;
 
+    /**
+     * diplomacy list for each player
+     */
     public List<Player> d_diplomacyPlayerList;
 
     private String d_orderType;
