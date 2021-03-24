@@ -7,8 +7,7 @@ import com.risk.models.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.risk.main.Main.d_Map;
-import static com.risk.main.Main.d_PlayerList;
+import static com.risk.main.Main.*;
 
 /**
  * The Game Commands class performs various Game related commands.
@@ -27,6 +26,7 @@ public class GameCommands {
     public static boolean loadMapCommand(List<String> p_argumentTokens) throws InvalidMapException {
         if (p_argumentTokens.stream().count() != 1) {
             System.out.println("Wrong Number of Arguments provided. editmap command has only one argument.");
+            d_Log.notify("Wrong Number of Arguments provided. editmap command has only one argument.");
             return false;
         }
 
@@ -58,6 +58,7 @@ public class GameCommands {
     public static void showMapCommand(List<String> p_argumentTokens) {
         if (p_argumentTokens.stream().count() != 0) {
             System.out.println("Wrong Number of Arguments provided. showmap command has no argument.");
+            d_Log.notify("Wrong Number of Arguments provided. showmap command has no argument.");
         }
 
         ShowMap.displayGameMap(d_Map);
@@ -80,34 +81,37 @@ public class GameCommands {
                 try {
                     l_playerName = p_argumentTokens.get(++i);
 
-                    for(Player l_player : d_PlayerList){
-                        if(l_player.getD_PlayerName().equals(l_playerName)){
+                    for (Player l_player : d_PlayerList) {
+                        if (l_player.getD_PlayerName().equals(l_playerName)) {
                             System.out.println("Player with player name " + l_playerName + " already exists. Try again with different name.");
+                            d_Log.notify("Player with player name " + l_playerName + " already exists. Try again with different name.");
                             l_flag = 1;
                             break;
                         }
                     }
 
-                    if(l_flag == 1) {
+                    if (l_flag == 1) {
                         l_flag = 0;
                         continue;
                     }
 
                     System.out.println("Player Name: " + l_playerName + " has joined the Game");
 
+                    d_Log.notify("Player Name: " + l_playerName + " has joined the Game");
                     Player l_player = new Player(l_playerName);
                     d_PlayerList.add(l_player);
 
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 1 arguments");
+                    d_Log.notify("Wrong number of Arguments provided. add option has 1 arguments");
                     return;
                 }
             } else if (p_argumentTokens.get(i).equals("-remove")) {
                 try {
                     l_playerName = p_argumentTokens.get(++i);
                     System.out.println("Player Name: " + l_playerName + " has been removed from the Game");
-
+                    d_Log.notify("Player Name: " + l_playerName + " has been removed from the Game");
                     for (Player l_player : d_PlayerList) {
                         if (l_player.getD_PlayerName().equals(l_playerName)) {
                             d_PlayerList.remove(l_player);
@@ -117,11 +121,13 @@ public class GameCommands {
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. remove option has 1 argument");
+                    d_Log.notify("Wrong number of Arguments provided. remove option has 1 argument");
                     e.printStackTrace();
                     return;
                 }
             } else {
                 System.out.println("Invalid option. gameplayer has -add and -remove options only");
+                d_Log.notify("Invalid option. gameplayer has -add and -remove options only");
             }
 
         }
