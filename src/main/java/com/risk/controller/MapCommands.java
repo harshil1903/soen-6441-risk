@@ -205,7 +205,7 @@ public class MapCommands {
                 try {
                     l_countryName = p_argumentTokens.get(++i);
                     System.out.println("Country ID: " + l_countryName);
-                    //d_Log.notify("Country ID: " + l_countryName);
+                    d_Log.notify("Country ID: " + l_countryName);
 
                     MapOperations.removeCountry(d_Map, l_countryName);
 
