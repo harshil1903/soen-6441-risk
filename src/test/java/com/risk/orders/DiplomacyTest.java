@@ -29,7 +29,7 @@ public class DiplomacyTest {
 
     /**
      * This method is executed before every test method.
-     * @throws InvalidMapException
+     * @throws InvalidMapException Invalid Map Exception
      */
     @Before
     public void beforeTest() throws InvalidMapException {
