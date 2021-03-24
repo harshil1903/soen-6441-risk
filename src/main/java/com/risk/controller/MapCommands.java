@@ -244,7 +244,7 @@ public class MapCommands {
 
                 } catch (Exception e) {
                     System.out.println("Wrong number of Arguments provided. add option has 2 arguments");
-                    //d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
+                    d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
                     return;
                 }
             } else if (p_argumentTokens.get(i).equals("-remove")) {
