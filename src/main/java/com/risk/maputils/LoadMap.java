@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import static com.risk.main.Main.d_Log;
+
 /**
  * Loads the data from the map file and stores it in a variable
  *
@@ -117,6 +119,7 @@ public class LoadMap {
                 }
             }
             System.out.println("Loaded map successfully form existing domination file");
+            d_Log.notify("Loaded map successfully from existing domination file");
         } catch (FileNotFoundException | InvalidMapException e) {
 
         }
