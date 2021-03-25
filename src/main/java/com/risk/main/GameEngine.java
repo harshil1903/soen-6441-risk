@@ -16,6 +16,9 @@ import static com.risk.main.Main.d_Log;
  */
 public class GameEngine extends Observable {
 
+    /**
+     * holds the current phase value of the game
+     */
     public static Phase d_GamePhase;
     int d_choice;
 
@@ -24,6 +27,10 @@ public class GameEngine extends Observable {
      */
     public static boolean d_mapLoaded = false;
 
+    /**
+     * sets the current phase value
+     * @param p_gamePhase holds current phase value.
+     */
     public void setPhase(Phase p_gamePhase) {
         d_GamePhase = p_gamePhase;
         System.out.println("New Phase : " + d_GamePhase.getClass().getSimpleName());

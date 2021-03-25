@@ -18,6 +18,9 @@ public class Map extends Observable {
 
     private HashMap<String, String> d_mapData;
     private List<Continent> d_continents;
+    /**
+     * holds true if list is empty otherwise false.
+     */
     public boolean d_isEmpty = false;
 
     /**

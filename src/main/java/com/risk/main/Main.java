@@ -22,10 +22,19 @@ public class Main {
      */
     public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
 
+    /**
+     * holds value of neutral player.
+     */
     public static Player d_NeutralPlayer = new Player();
 
+    /**
+     * Object of LogEntryBuffer class.
+     */
     public static LogEntryBuffer d_Log = new LogEntryBuffer();
 
+    /**
+     * Instance of LogWriter.
+     */
     public static LogWriter d_LogWriter = new LogWriter(d_Log);
 
     /**
