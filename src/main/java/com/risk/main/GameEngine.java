@@ -150,7 +150,6 @@ public class GameEngine extends Observable {
                 }
                 break;
 
-
             case "end":
                 d_GamePhase.endGame();
                 return true;

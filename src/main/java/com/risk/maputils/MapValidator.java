@@ -165,7 +165,6 @@ public class MapValidator {
             }
         }
 
-
     }
 
     /**
@@ -204,31 +203,23 @@ public class MapValidator {
      */
     public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException{
         ArrayList<Country> l_adjCountryListBelongToSameContinent = new ArrayList<>();
-        //System.out.println("Checking Country : " + p_country.getD_CountryName());
 
         for (Country l_country : p_country.getD_AdjacentCountries()) {
 
-           // System.out.println("SUB GRAPH : Country : " + l_country.getD_CountryName());
-          //  System.out.println("Continents : " + p_country.getD_ContinentName() + "  " + l_country.getD_ContinentName());
             if (l_country.getD_ContinentName().equals(p_country.getD_ContinentName())) {
                 l_adjCountryListBelongToSameContinent.add(l_country);
             }
         }
 
-        //for(Country c : l_adjCountryListBelongToSameContinent)
-        //    System.out.println("After removing SUB GRAPH : Country : " + c.getD_CountryName());
-
         if (p_country.isD_IsProcessed() == true) {
             return;
         }
-
         p_country.setD_Processed(true);
 
         for (Country l_country : l_adjCountryListBelongToSameContinent) {
             if ((l_country.getD_BelongToContinent() == p_country.getD_BelongToContinent()) && l_country.isD_IsProcessed() == false)
                 bfsTraversalSubGraphConnectivityForContinent(l_country);
         }
-
 
     }
 

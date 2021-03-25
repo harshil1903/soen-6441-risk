@@ -23,7 +23,6 @@ public class Player {
     private int d_armies;
     private boolean d_noOrdersLeft;
     private List<Country> d_assignedCountries;
-    private List<Orders> d_OrderLists;
     private List<Order> d_orderList;
     /**
      * current order of player
@@ -52,7 +51,6 @@ public class Player {
     public Player() {
         d_armies = 0;
         d_assignedCountries = new ArrayList<Country>();
-        d_OrderLists = new ArrayList<Orders>();
         d_orderList = new ArrayList<>();
         testOrderList = new ArrayList<>();
         d_diplomacyPlayerList = new ArrayList<>();
@@ -69,7 +67,6 @@ public class Player {
         d_playerName = p_PlayerName;
         d_armies = 0;
         d_assignedCountries = new ArrayList<Country>();
-        d_OrderLists = new ArrayList<Orders>();
         d_orderList = new ArrayList<>();
         testOrderList = new ArrayList<>();
         d_diplomacyPlayerList = new ArrayList<>();
@@ -256,24 +253,6 @@ public class Player {
      */
     public void setD_AssignedCountries(List<Country> p_assignedCountries) {
         d_assignedCountries = p_assignedCountries;
-    }
-
-    /**
-     * Gets a list of orders given by the player.
-     *
-     * @return list of orders
-     */
-    public List<Orders> getD_OrderList() {
-        return d_OrderLists;
-    }
-
-    /**
-     * Sets a list of orders given by the player.
-     *
-     * @param p_orderList list of orders
-     */
-    public void setD_OrderList(List<Orders> p_orderList) {
-        d_OrderLists = p_orderList;
     }
 
 

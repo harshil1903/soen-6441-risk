@@ -79,6 +79,8 @@ public class GameIssueOrder extends Game{
                         System.out.println();
                     }
 
+                    l_player.showCardList();
+
                     System.out.println("\n\nEnter command: ");
                     l_command = l_scanner.nextLine();
 

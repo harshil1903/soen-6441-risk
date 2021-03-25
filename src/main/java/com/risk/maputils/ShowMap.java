@@ -56,7 +56,6 @@ public class ShowMap {
         System.out.println("\n\nDISPLAYING GAME MAP");
         for (Continent l_continent : p_map.getD_Continents()) {
             System.out.println("\n\nContinent Name : " + l_continent.getD_ContinentName());
-            //System.out.println("\nCountries with adjacent countries: \n");
 
             System.out.printf("\t%-15s:\t%-10s:\t%-10s :\t%-15s%n","COUNTRY", "OWNER", "ARMIES", "NEIGHBOR COUNTRIES");
             for (Country l_country : l_continent.getD_Countries()) {
