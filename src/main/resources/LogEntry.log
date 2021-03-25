@@ -1,9 +1,76 @@
-Log: Welcome to warzone
-Log: Game Begins
-Log: New Phase : PreMapLoad
-Log: COMMAND : editmap europeTest
 Log: Loaded map successfully from existing domination file
-Log: Map Validation Failed 
-Map data has been cleared, use editmap to load a map again
-Log: The Continent:- 1 is not connected by its neighbouring countries.A Continent must be connected graph formed by its neighbouring countries in the map.
-Log: COMMAND : EXIT
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Advance 
+Player : player_1 Source Country : France Target Country : Luxembourg Number Of Armies : 25
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : player_1 Source Country : France Target Country : Luxembourg Number Of Armies : 25
+Successfully Execute
+
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: France and Czech_Rep are not adjacent
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not use Airlift card on target country is not owned
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Before Airlift Card number of army in Majorca is : 4
+Log: player_1 applied Airlift Card successfully
+Log: After Airlift Card number of army in Majorca is : 9
+Log: Order Type : Airlift 
+Player : player_1 Source Country : Rep_Ireland Target Country : Majorca Number Of Armies : 5 
+Successfully Executed
+
+Log: Order Type : Airlift 
+Player : player_1 Source Country : Rep_Ireland Target Country : Majorca Number Of Armies : 5 
+Successfully Executed
+
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 does not have sufficient armies to be airlifted to the target country
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Luxembourg has a 0 army so you can not apply Blockade order there
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Before Blockade Card number of army in Portugal is : 10
+Log: player_1applied Blockade Card successfully
+Log: After Blockade Card number of army in Portugal is : 30
+Log: Order Type : Blockade 
+Player : player_1 Country to block : Portugal 
+Successfully Executed
+
+Log: Order Type : Blockade 
+Player : player_1 Country to block : Portugal 
+Successfully Executed
+
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: England has a 0 army so you can not apply bomb order there
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not attack bomb on your own country
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Before Bomb Card number of army in Corsica is : 6
+Log: player_1 applied Bomb Card successfully
+Log: After Bomb Card number of army in Corsica is : 3
+Log: Order Type : Bomb 
+Player : player_1 Target Country : Corsica 
+Successfully Executed
+
+Log: Order Type : Bomb 
+Player : player_1 Target Country : Corsica 
+Successfully Executed
+
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not attack on player_2 because of diplomacy card
