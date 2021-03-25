@@ -165,21 +165,6 @@ public class MapValidator {
             }
         }
 
-//        for(Country l_adjCountryBelongToSameContinent : l_adjCountryListBelongToSameContinent){
-//             List<Country> l_adj = l_adjCountryBelongToSameContinent.getD_AdjacentCountries(); //main list after removing other continents countries
-//             Continent l_cont = p_country.getD_BelongToContinent();
-//
-//             for(Country l_countryToBeRemoved : l_adj){
-//                 if(!l_cont.getD_Countries().contains(l_countryToBeRemoved));
-//                 l_adj.remove(l_countryToBeRemoved);
-//             }
-//
-//             if(!l_adj.contains(l_cont.getD_Countries())){
-//                 throw new InvalidMapException("Country: " + p_country.getD_CountryName() + " is not adjacent with the countries in the" + l_cont.getD_ContinentName() + "continent.");
-//             }
-//             //l_adj.remove(l_adjCountryBelongToSameContinent.getD_AdjacentCountries());
-//        }
-
 
     }
 
