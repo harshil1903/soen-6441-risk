@@ -131,6 +131,9 @@ public class GameEngineTest {
         assertTrue(l_order.valid());
     }
 
+    /**
+     * checks the phases in gameEngine
+     */
     @Test
     public void testGameEngineSetPhases(){
         d_gameEngine.setPhase(new PreMapLoad(d_gameEngine));
