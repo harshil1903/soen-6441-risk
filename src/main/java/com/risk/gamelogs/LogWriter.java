@@ -17,6 +17,7 @@ public class LogWriter implements Observer {
 
     /**
      * Parameterized constructor which attaches logEntryBuffer
+     *
      * @param p_logEntryBuffer object of logEntryBuffer
      */
     public LogWriter(LogEntryBuffer p_logEntryBuffer) {

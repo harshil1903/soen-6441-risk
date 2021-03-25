@@ -118,10 +118,10 @@ public class Map extends Observable {
     /**
      * Clear map data.
      */
-    public void clearMapData(){
+    public void clearMapData() {
         for (Continent l_continent : this.getD_Continents()) {
             for (Country l_country : l_continent.getD_Countries()) {
-                    l_country = null;
+                l_country = null;
             }
             l_continent.getD_Countries().clear();
             l_continent = null;

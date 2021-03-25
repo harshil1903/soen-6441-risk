@@ -34,6 +34,7 @@ public class AirliftTest {
 
     /**
      * This method is executed before every test method.
+     *
      * @throws InvalidMapException Invalid Map Exception
      */
     @Before
@@ -66,7 +67,7 @@ public class AirliftTest {
         d_Map.clearMapData();
         d_Map.getD_Continents().clear();
 
-        for(Player l_player : d_PlayerList)
+        for (Player l_player : d_PlayerList)
             l_player.clearPlayerData();
 
         d_PlayerList.clear();

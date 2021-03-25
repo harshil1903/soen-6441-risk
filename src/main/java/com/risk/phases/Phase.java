@@ -20,7 +20,7 @@ public abstract class Phase {
      *
      * @param p_gameEngine the p game engine
      */
-    Phase(GameEngine p_gameEngine){
+    Phase(GameEngine p_gameEngine) {
         d_gameEngine = p_gameEngine;
     }
 
@@ -125,6 +125,7 @@ public abstract class Phase {
 
     /**
      * Signature of currentPhase for classes which extends it.
+     *
      * @return current value of the phase
      */
     abstract public String currentPhase();
@@ -133,7 +134,7 @@ public abstract class Phase {
      * Common method to all States.
      */
     public void printInvalidCommandMessage() {
-        System.out.println("Invalid command in state " + this.getClass().getSimpleName() );
+        System.out.println("Invalid command in state " + this.getClass().getSimpleName());
         d_Log.notify("Invalid command in state" + this.getClass().getSimpleName());
     }
 }

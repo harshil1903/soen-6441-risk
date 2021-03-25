@@ -49,7 +49,6 @@ public class Diplomacy implements Order {
             return false;
         }
     }
-    
 
 
     /**
@@ -69,7 +68,7 @@ public class Diplomacy implements Order {
     /*
      * Print order.
      */
-    public void printOrder(){
+    public void printOrder() {
         System.out.println();
     }
 }

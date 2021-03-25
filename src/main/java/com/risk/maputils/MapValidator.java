@@ -87,7 +87,7 @@ public class MapValidator {
 
         for (Continent l_continent : p_map.getD_Continents()) {
 
-            if(!checkSubGraphConnectivityForContinent(l_continent)){
+            if (!checkSubGraphConnectivityForContinent(l_continent)) {
                 throw new InvalidMapException("The Continent:-" + l_continent.getD_ContinentName() + " failed subgraph connectivity");
             }
         }
@@ -169,14 +169,13 @@ public class MapValidator {
 
     /**
      * This method is used for verifying that the subgraph of the continent is connected.
-     * 
-     * @param p_continent refers to the continent 
+     *
+     * @param p_continent refers to the continent
      * @return will return true or false accordingly
      * @throws InvalidMapException throws exception if map is not valid
-     * 
      */
 
-    public static boolean checkSubGraphConnectivityForContinent(Continent p_continent) throws InvalidMapException{
+    public static boolean checkSubGraphConnectivityForContinent(Continent p_continent) throws InvalidMapException {
 
         bfsTraversalSubGraphConnectivityForContinent(p_continent.getD_Countries().get(0));
         boolean l_returnValue = true;
@@ -201,7 +200,7 @@ public class MapValidator {
      * @param p_country refers to the country
      * @throws InvalidMapException throws exception if map is invalid
      */
-    public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException{
+    public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException {
         ArrayList<Country> l_adjCountryListBelongToSameContinent = new ArrayList<>();
 
         for (Country l_country : p_country.getD_AdjacentCountries()) {

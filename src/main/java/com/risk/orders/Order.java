@@ -19,8 +19,8 @@ public interface Order {
     public boolean valid();
 
     /**
-    * Print order.
-    */
+     * Print order.
+     */
     public void printOrder();
 
 }

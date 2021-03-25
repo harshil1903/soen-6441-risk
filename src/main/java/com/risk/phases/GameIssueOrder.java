@@ -17,7 +17,7 @@ import static com.risk.main.Main.d_PlayerList;
  *
  * @author Harshil
  */
-public class GameIssueOrder extends Game{
+public class GameIssueOrder extends Game {
     /**
      * Instantiates a new Game issue order.
      *
@@ -31,7 +31,7 @@ public class GameIssueOrder extends Game{
     }
 
     /**
-     *  To reinforce players with their reinforcement armies
+     * To reinforce players with their reinforcement armies
      */
     public void reinforce() {
 
@@ -45,11 +45,10 @@ public class GameIssueOrder extends Game{
     }
 
     /**
-     *  Issue orders as per player's choices
+     * Issue orders as per player's choices
      */
     public void issueOrder() {
-        for(Player l_Player : d_PlayerList)
-        {
+        for (Player l_Player : d_PlayerList) {
             l_Player.setD_noOrdersLeft(false);
         }
         Scanner l_scanner = new Scanner(System.in);
@@ -58,16 +57,16 @@ public class GameIssueOrder extends Game{
         System.out.println("\nISSUE ORDER PHASE");
         d_Log.notify("\nISSUE ORDER PHASE");
 
-        while (noOrdersLeftToIssue()){
+        while (noOrdersLeftToIssue()) {
 
             for (Player l_player : d_PlayerList) {
 
-                if(!l_player.isD_noOrdersLeft()){
+                if (!l_player.isD_noOrdersLeft()) {
                     System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
                     System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
                     System.out.println("You own the following Countries along with their adjacent countries");
 
-                    System.out.printf("\t%-15s:\t%-15s%n","COUNTRY","NEIGHBOR COUNTRIES");
+                    System.out.printf("\t%-15s:\t%-15s%n", "COUNTRY", "NEIGHBOR COUNTRIES");
 
                     for (Country l_country : l_player.getD_AssignedCountries()) {
 
@@ -84,11 +83,11 @@ public class GameIssueOrder extends Game{
                     System.out.println("\n\nEnter command: ");
                     l_command = l_scanner.nextLine();
 
-                    if(l_command.equals("end")){
+                    if (l_command.equals("end")) {
                         return;
                     }
 
-                    if(l_command.equals("showmap")){
+                    if (l_command.equals("showmap")) {
                         showMap(new ArrayList<>());
                         System.out.println("\n\nEnter command: ");
                         l_command = l_scanner.nextLine();
@@ -105,8 +104,7 @@ public class GameIssueOrder extends Game{
 
                     if (l_command.equals("n"))
                         l_player.setD_noOrdersLeft(true);
-                }
-                else{
+                } else {
                     System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped because they have no orders left");
                 }
             }
@@ -119,7 +117,7 @@ public class GameIssueOrder extends Game{
     }
 
     /**
-     *  To set next phase
+     * To set next phase
      */
     public void next() {
         d_gameEngine.setPhase(new GameExecuteOrder(d_gameEngine));
@@ -130,10 +128,9 @@ public class GameIssueOrder extends Game{
      *
      * @return the boolean
      */
-    public boolean noOrdersLeftToIssue(){
-        for(Player l_Player : d_PlayerList)
-        {
-            if(!l_Player.isD_noOrdersLeft())
+    public boolean noOrdersLeftToIssue() {
+        for (Player l_Player : d_PlayerList) {
+            if (!l_Player.isD_noOrdersLeft())
                 return true;
         }
 
@@ -141,20 +138,18 @@ public class GameIssueOrder extends Game{
     }
 
 
-
     /**
      * To return current phase name in string
      *
      * @return Current phase
      */
-    public String currentPhase(){
+    public String currentPhase() {
         return "GameIssueOrder";
     }
 
 
-
     /**
-     *  loadmap Command to load the map
+     * loadmap Command to load the map
      *
      * @param p_argumentTokens command parameters
      */
@@ -164,7 +159,7 @@ public class GameIssueOrder extends Game{
     }
 
     /**
-     *  assigncountries Command to assign countries amoong players
+     * assigncountries Command to assign countries amoong players
      */
     public boolean assignCountries() {
         printInvalidCommandMessage();
@@ -173,7 +168,7 @@ public class GameIssueOrder extends Game{
 
 
     /**
-     *  gameplayer Command  to add/remove players
+     * gameplayer Command  to add/remove players
      *
      * @param p_argumentTokens command parameters
      */
@@ -182,7 +177,7 @@ public class GameIssueOrder extends Game{
     }
 
     /**
-     *  execute orders once all players have issued their orders
+     * execute orders once all players have issued their orders
      */
     public void executeOrder() {
         printInvalidCommandMessage();

@@ -24,11 +24,12 @@ import static org.junit.Assert.assertTrue;
 public class DiplomacyTest {
 
     Player d_player1, d_player2;
-    Country d_country1,d_country2;
+    Country d_country1, d_country2;
 
 
     /**
      * This method is executed before every test method.
+     *
      * @throws InvalidMapException Invalid Map Exception
      */
     @Before
@@ -60,7 +61,7 @@ public class DiplomacyTest {
         d_Map.clearMapData();
         d_Map.getD_Continents().clear();
 
-        for(Player l_player : d_PlayerList)
+        for (Player l_player : d_PlayerList)
             l_player.clearPlayerData();
 
         d_PlayerList.clear();
@@ -88,7 +89,7 @@ public class DiplomacyTest {
         d_player1.addPlayerToDiplomacyList(d_player2);
         d_player2.addPlayerToDiplomacyList(d_player1);
 
-        Advance advance=new Advance(d_player1,l_countryName1,l_countryName2,7);
+        Advance advance = new Advance(d_player1, l_countryName1, l_countryName2, 7);
         assertFalse(advance.valid());
 
     }

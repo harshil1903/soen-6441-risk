@@ -30,7 +30,7 @@ public class ShowMap {
             d_Log.notify("Continent Name : " + l_continent.getD_ContinentName());
             //System.out.println("Countries in the Continent : \n");
 
-            System.out.printf("\t%-15s:\t%-15s%n","COUNTRY","NEIGHBOR COUNTRIES");
+            System.out.printf("\t%-15s:\t%-15s%n", "COUNTRY", "NEIGHBOR COUNTRIES");
 
             for (Country l_country : l_continent.getD_Countries()) {
 
@@ -57,7 +57,7 @@ public class ShowMap {
         for (Continent l_continent : p_map.getD_Continents()) {
             System.out.println("\n\nContinent Name : " + l_continent.getD_ContinentName());
 
-            System.out.printf("\t%-15s:\t%-10s:\t%-10s :\t%-15s%n","COUNTRY", "OWNER", "ARMIES", "NEIGHBOR COUNTRIES");
+            System.out.printf("\t%-15s:\t%-10s:\t%-10s :\t%-15s%n", "COUNTRY", "OWNER", "ARMIES", "NEIGHBOR COUNTRIES");
             for (Country l_country : l_continent.getD_Countries()) {
 
                 System.out.printf("\t%-15s:", l_country.getD_CountryName());
@@ -65,7 +65,7 @@ public class ShowMap {
                 try {
                     System.out.printf("\t%-10s:\t %-10d:", l_country.getD_Player().getD_PlayerName().toUpperCase(), l_country.getD_NumberOfArmies());
                 } catch (Exception e) {
-                    System.out.printf("\t%-10s:\t %-10d:", l_country.getD_Player() , l_country.getD_NumberOfArmies());
+                    System.out.printf("\t%-10s:\t %-10d:", l_country.getD_Player(), l_country.getD_NumberOfArmies());
                 }
 
                 for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
@@ -80,7 +80,7 @@ public class ShowMap {
         for (Player l_player : d_PlayerList) {
             System.out.println("\nPlayer: " + l_player.getD_PlayerName().toUpperCase());
             System.out.println("You own the following Countries along with army count in it.");
-            System.out.printf("\t%-15s:\t%-10s%n","COUNTRY", "ARMIES");
+            System.out.printf("\t%-15s:\t%-10s%n", "COUNTRY", "ARMIES");
             for (Country l_country : l_player.getD_AssignedCountries()) {
                 System.out.printf("\t%-15s:   \t%s%n", l_country.getD_CountryName(), l_country.getD_NumberOfArmies());
             }
