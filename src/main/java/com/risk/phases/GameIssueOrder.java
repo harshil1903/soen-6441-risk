@@ -116,15 +116,6 @@ public class GameIssueOrder extends Game{
 
     }
 
-
-    //to be removed
-    public void issueDeployOrder(String p_command){
-        String l_action = p_command.split(" ")[0];
-        String l_arguments = p_command.substring(l_action.length());
-
-
-    }
-
     /**
      *  To set next phase
      */

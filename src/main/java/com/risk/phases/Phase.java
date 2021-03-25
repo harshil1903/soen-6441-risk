@@ -123,6 +123,10 @@ public abstract class Phase {
      */
     abstract public void next();
 
+    /**
+     * Signature of currentPhase for classes which extends it.
+     * @return current value of the phase
+     */
     abstract public String currentPhase();
 
     /**

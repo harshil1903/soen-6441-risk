@@ -20,7 +20,11 @@ import static com.risk.main.Main.d_Log;
 public class MapValidator {
 
     static String d_alertMessage = "";
-    public static boolean d_isValid = false; //for clearing the continents of the d_Map variable
+
+    /**
+     * d_isValid variable is for clearing the continents of the d_Map variable.
+     */
+    public static boolean d_isValid = false;
 
     /**
      * This method is used for validation of map.
@@ -161,21 +165,6 @@ public class MapValidator {
             }
         }
 
-//        for(Country l_adjCountryBelongToSameContinent : l_adjCountryListBelongToSameContinent){
-//             List<Country> l_adj = l_adjCountryBelongToSameContinent.getD_AdjacentCountries(); //main list after removing other continents countries
-//             Continent l_cont = p_country.getD_BelongToContinent();
-//
-//             for(Country l_countryToBeRemoved : l_adj){
-//                 if(!l_cont.getD_Countries().contains(l_countryToBeRemoved));
-//                 l_adj.remove(l_countryToBeRemoved);
-//             }
-//
-//             if(!l_adj.contains(l_cont.getD_Countries())){
-//                 throw new InvalidMapException("Country: " + p_country.getD_CountryName() + " is not adjacent with the countries in the" + l_cont.getD_ContinentName() + "continent.");
-//             }
-//             //l_adj.remove(l_adjCountryBelongToSameContinent.getD_AdjacentCountries());
-//        }
-
 
     }
 
@@ -183,8 +172,8 @@ public class MapValidator {
      * This method is used for verifying that the subgraph of the continent is connected.
      * 
      * @param p_continent refers to the continent 
-     * 
-     * @throws InvalidMapException 
+     * @return will return true or false accordingly
+     * @throws InvalidMapException throws exception if map is not valid
      * 
      */
 
@@ -211,7 +200,7 @@ public class MapValidator {
      * This is the BFS traversal method for the verification of subgraph connectivity in the continent
      *
      * @param p_country refers to the country
-     * @throws InvalidMapException
+     * @throws InvalidMapException throws exception if map is invalid
      */
     public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException{
         ArrayList<Country> l_adjCountryListBelongToSameContinent = new ArrayList<>();
