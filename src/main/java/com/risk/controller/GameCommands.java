@@ -115,6 +115,7 @@ public class GameCommands {
                     for (Player l_player : d_PlayerList) {
                         if (l_player.getD_PlayerName().equals(l_playerName)) {
                             d_PlayerList.remove(l_player);
+                            break;
                         }
                     }
 
