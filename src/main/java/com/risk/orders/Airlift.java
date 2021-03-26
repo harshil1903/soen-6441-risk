@@ -112,7 +112,7 @@ public class Airlift implements Order {
     /*
      * Print order.
      */
-    public void printOrder(){
+    public void printOrder() {
         System.out.println("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
                 + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " \nSuccessfully Executed\n");
         d_Log.notify("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName

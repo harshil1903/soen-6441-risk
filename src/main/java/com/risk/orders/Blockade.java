@@ -5,6 +5,7 @@ import com.risk.models.Player;
 
 import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_NeutralPlayer;
+
 import java.util.ArrayList;
 
 /**
@@ -95,7 +96,7 @@ public class Blockade implements Order {
     /*
      * Print order.
      */
-    public void printOrder(){
+    public void printOrder() {
         System.out.println("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
         d_Log.notify("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
     }

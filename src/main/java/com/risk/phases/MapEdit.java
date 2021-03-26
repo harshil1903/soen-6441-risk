@@ -23,7 +23,7 @@ public abstract class MapEdit extends Phase {
     }
 
     /**
-     *  loadmap Command to load the map
+     * loadmap Command to load the map
      *
      * @param p_argumentTokens command parameters
      */
@@ -33,7 +33,7 @@ public abstract class MapEdit extends Phase {
     }
 
     /**
-     *  gameplayer Command to add/remove players
+     * gameplayer Command to add/remove players
      *
      * @param p_argumentTokens command parameters
      */
@@ -42,7 +42,7 @@ public abstract class MapEdit extends Phase {
     }
 
     /**
-     *  assigncountries Command to assign countries amoong players
+     * assigncountries Command to assign countries amoong players
      */
     public boolean assignCountries() {
         printInvalidCommandMessage();
@@ -50,28 +50,28 @@ public abstract class MapEdit extends Phase {
     }
 
     /**
-     *  To reinforce players with their reinforcement armies
+     * To reinforce players with their reinforcement armies
      */
     public void reinforce() {
         printInvalidCommandMessage();
     }
 
     /**
-     *  Issue orders as per player's choices
+     * Issue orders as per player's choices
      */
     public void issueOrder() {
         printInvalidCommandMessage();
     }
 
     /**
-     *  Execute orders once all players have issued their orders
+     * Execute orders once all players have issued their orders
      */
     public void executeOrder() {
         printInvalidCommandMessage();
     }
 
     /**
-     *  end Command to leave phase
+     * end Command to leave phase
      */
     public void endGame() {
         System.out.println("Leaving Phase");
@@ -81,7 +81,7 @@ public abstract class MapEdit extends Phase {
 
 
     /**
-     *  To set next phase
+     * To set next phase
      */
     public void next() {
 

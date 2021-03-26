@@ -31,8 +31,8 @@ public class GameStartup extends Game {
         boolean l_mapLoaded = false;
         try {
             l_mapLoaded = GameCommands.loadMapCommand(p_argumentList);
+        } catch (Exception e) {
         }
-        catch (Exception e){}
 
         return l_mapLoaded;
 
@@ -60,8 +60,7 @@ public class GameStartup extends Game {
             AssignCountries.assignCountries();
             System.out.println("Countries have been successfully assigned to all the players");
             d_Log.notify("Countries have been successfully assigned to all the players");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
         }
 
         return true;
@@ -79,7 +78,7 @@ public class GameStartup extends Game {
         printInvalidCommandMessage();
     }
 
-    public String currentPhase(){
+    public String currentPhase() {
         return "GameStartup";
     }
 

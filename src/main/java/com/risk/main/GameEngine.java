@@ -29,6 +29,7 @@ public class GameEngine extends Observable {
 
     /**
      * sets the current phase value
+     *
      * @param p_gamePhase holds current phase value.
      */
     public void setPhase(Phase p_gamePhase) {
@@ -98,7 +99,6 @@ public class GameEngine extends Observable {
      * The method compares the command input from user to check what type of command is entered.
      *
      * @param p_command command line input
-     *
      * @return boolean value to reset the game phase
      */
     public boolean compareCommand(String p_command) {
@@ -156,7 +156,6 @@ public class GameEngine extends Observable {
                     d_GamePhase.next();
                 }
                 break;
-
 
             case "end":
                 d_GamePhase.endGame();

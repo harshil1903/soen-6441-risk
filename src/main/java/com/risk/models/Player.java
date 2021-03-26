@@ -23,7 +23,6 @@ public class Player {
     private int d_armies;
     private boolean d_noOrdersLeft;
     private List<Country> d_assignedCountries;
-    private List<Orders> d_OrderLists;
     private List<Order> d_orderList;
     /**
      * current order of player
@@ -52,7 +51,6 @@ public class Player {
     public Player() {
         d_armies = 0;
         d_assignedCountries = new ArrayList<Country>();
-        d_OrderLists = new ArrayList<Orders>();
         d_orderList = new ArrayList<>();
         testOrderList = new ArrayList<>();
         d_diplomacyPlayerList = new ArrayList<>();
@@ -69,7 +67,6 @@ public class Player {
         d_playerName = p_PlayerName;
         d_armies = 0;
         d_assignedCountries = new ArrayList<Country>();
-        d_OrderLists = new ArrayList<Orders>();
         d_orderList = new ArrayList<>();
         testOrderList = new ArrayList<>();
         d_diplomacyPlayerList = new ArrayList<>();
@@ -82,11 +79,10 @@ public class Player {
      * @param p_orderType the order type
      * @param p_orderArgs the order args
      */
-    public void setOrderValues(String p_orderType, String p_orderArgs){
+    public void setOrderValues(String p_orderType, String p_orderArgs) {
         d_orderType = p_orderType;
         d_orderArgs = p_orderArgs;
     }
-
 
 
     /**
@@ -101,7 +97,7 @@ public class Player {
     /**
      * Finds the card removes it from the card list.
      *
-     * @param p_card    Card name
+     * @param p_card Card name
      */
     public void removeCard(String p_card) {
         for (int i = 0; i < d_cardList.size(); i++) {
@@ -258,24 +254,6 @@ public class Player {
         d_assignedCountries = p_assignedCountries;
     }
 
-    /**
-     * Gets a list of orders given by the player.
-     *
-     * @return list of orders
-     */
-    public List<Orders> getD_OrderList() {
-        return d_OrderLists;
-    }
-
-    /**
-     * Sets a list of orders given by the player.
-     *
-     * @param p_orderList list of orders
-     */
-    public void setD_OrderList(List<Orders> p_orderList) {
-        d_OrderLists = p_orderList;
-    }
-
 
     /**
      * Gets player object from player id.
@@ -384,7 +362,6 @@ public class Player {
     /**
      * To add an order to the list of orders held by the player
      * Issue order phase of game
-     *
      */
     public void issueOrder() {
 
@@ -474,7 +451,7 @@ public class Player {
     /**
      * Clear player data.
      */
-    public void clearPlayerData(){
+    public void clearPlayerData() {
         this.setD_Armies(0);
         this.getD_AssignedCountries().clear();
     }

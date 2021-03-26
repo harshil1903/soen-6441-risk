@@ -87,7 +87,7 @@ public class MapValidator {
 
         for (Continent l_continent : p_map.getD_Continents()) {
 
-            if(!checkSubGraphConnectivityForContinent(l_continent)){
+            if (!checkSubGraphConnectivityForContinent(l_continent)) {
                 throw new InvalidMapException("The Continent:-" + l_continent.getD_ContinentName() + " failed subgraph connectivity");
             }
         }
@@ -165,19 +165,17 @@ public class MapValidator {
             }
         }
 
-
     }
 
     /**
      * This method is used for verifying that the subgraph of the continent is connected.
-     * 
-     * @param p_continent refers to the continent 
+     *
+     * @param p_continent refers to the continent
      * @return will return true or false accordingly
      * @throws InvalidMapException throws exception if map is not valid
-     * 
      */
 
-    public static boolean checkSubGraphConnectivityForContinent(Continent p_continent) throws InvalidMapException{
+    public static boolean checkSubGraphConnectivityForContinent(Continent p_continent) throws InvalidMapException {
 
         bfsTraversalSubGraphConnectivityForContinent(p_continent.getD_Countries().get(0));
         boolean l_returnValue = true;
@@ -202,33 +200,25 @@ public class MapValidator {
      * @param p_country refers to the country
      * @throws InvalidMapException throws exception if map is invalid
      */
-    public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException{
+    public static void bfsTraversalSubGraphConnectivityForContinent(Country p_country) throws InvalidMapException {
         ArrayList<Country> l_adjCountryListBelongToSameContinent = new ArrayList<>();
-        //System.out.println("Checking Country : " + p_country.getD_CountryName());
 
         for (Country l_country : p_country.getD_AdjacentCountries()) {
 
-           // System.out.println("SUB GRAPH : Country : " + l_country.getD_CountryName());
-          //  System.out.println("Continents : " + p_country.getD_ContinentName() + "  " + l_country.getD_ContinentName());
             if (l_country.getD_ContinentName().equals(p_country.getD_ContinentName())) {
                 l_adjCountryListBelongToSameContinent.add(l_country);
             }
         }
 
-        //for(Country c : l_adjCountryListBelongToSameContinent)
-        //    System.out.println("After removing SUB GRAPH : Country : " + c.getD_CountryName());
-
         if (p_country.isD_IsProcessed() == true) {
             return;
         }
-
         p_country.setD_Processed(true);
 
         for (Country l_country : l_adjCountryListBelongToSameContinent) {
             if ((l_country.getD_BelongToContinent() == p_country.getD_BelongToContinent()) && l_country.isD_IsProcessed() == false)
                 bfsTraversalSubGraphConnectivityForContinent(l_country);
         }
-
 
     }
 

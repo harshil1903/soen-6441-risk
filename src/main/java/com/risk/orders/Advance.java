@@ -141,9 +141,9 @@ public class Advance implements Order {
         }
     }
 
-    public void printOrder(){
+    public void printOrder() {
         System.out.println("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-        + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
         d_Log.notify("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
                 + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
     }

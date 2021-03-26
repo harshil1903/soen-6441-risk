@@ -51,8 +51,7 @@ public class PreMapLoadTest {
      * and invalid commands are invalidated.
      */
     @Test
-    public void testPreMapLoadPhase()
-    {
+    public void testPreMapLoadPhase() {
         System.out.println("\nTEST : Testing PreMapLoad Phase\n");
 
         d_gameEngine = new GameEngine();

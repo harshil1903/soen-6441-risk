@@ -1,7 +1,6 @@
 package com.risk.orders;
 
 import com.risk.models.Country;
-import com.risk.models.Orders;
 import com.risk.models.Player;
 
 import java.util.ArrayList;
@@ -80,9 +79,9 @@ public class Deploy implements Order {
     /*
      * Print order.
      */
-    public void printOrder(){
+    public void printOrder() {
         System.out.println("Order Type : Deploy \nPlayer : " + d_player.getD_PlayerName() + " Country : " + d_countryName
-               + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Executed\n");
+                + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Executed\n");
         d_Log.notify("Order Type : Deploy \nPlayer : " + d_player.getD_PlayerName() + " Country : " + d_countryName
                 + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Executed\n");
     }

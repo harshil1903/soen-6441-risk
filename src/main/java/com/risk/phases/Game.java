@@ -26,7 +26,7 @@ public abstract class Game extends Phase {
 
 
     /**
-     *  showmap Command
+     * showmap Command
      *
      * @param p_argumentTokens command parameters
      */
@@ -35,9 +35,9 @@ public abstract class Game extends Phase {
     }
 
     /**
-     *  editmap Command
+     * editmap Command
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
     public boolean editMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
@@ -45,52 +45,52 @@ public abstract class Game extends Phase {
     }
 
     /**
-     *  validatemap Command
+     * validatemap Command
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
     public void validateMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
 
     /**
-     *  savemap Command
+     * savemap Command
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
     public void saveMap(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
 
     /**
-     *  editcountry Command
+     * editcountry Command
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
     public void editCountry(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
 
     /**
-     *  editcontinent Command
+     * editcontinent Command
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
     public void editContinent(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
 
     /**
-     *  editneighbor Command
+     * editneighbor Command
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
     public void editNeighbor(List<String> p_argumentTokens) {
         printInvalidCommandMessage();
     }
 
     /**
-     *  end Command to leave game
+     * end Command to leave game
      */
     @Override
     public void endGame() {
