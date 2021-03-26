@@ -125,6 +125,9 @@ public class Advance implements Order {
                     Player l_tempPlayer = d_targetCountry.getD_Player();
                     l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
                     d_targetCountry.setD_Player(d_player);
+                    System.out.println(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
+                    d_Log.notify(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
+
                 } else {
                     //here defender successfully defend
                     //so attacker can not get card here

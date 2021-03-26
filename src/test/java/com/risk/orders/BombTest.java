@@ -155,7 +155,6 @@ public class BombTest {
      */
     @Test
     public void testBombOwnArmies() {
-        System.out.println("I am in 4st");
         String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
         d_country = new Country();
         d_country = d_country.getCountryFromCountryName(l_countryName1);
