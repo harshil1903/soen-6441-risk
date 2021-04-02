@@ -157,6 +157,10 @@ public class GameEngine extends Observable {
                 }
                 break;
 
+            case "tournament":
+                Tournament.begin(l_argumentList);
+                break;
+
             case "end":
                 d_GamePhase.endGame();
                 return true;
