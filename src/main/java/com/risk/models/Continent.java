@@ -181,6 +181,21 @@ public class Continent {
 
     }
 
+    /**
+     * Gets continent object from continent id.
+     *
+     * @param p_countryName Name of the country to be searched
+     * @return the country object
+     */
+    public Country getCountryFromCountryName(String p_countryName) {
+        for (Country l_country : d_countries) {
+            if (l_country.getD_CountryName().equals(p_countryName)) {
+                return l_country;
+            }
+        }
+        return null;
+    }
+
 
     /**
      * Add country to country list
