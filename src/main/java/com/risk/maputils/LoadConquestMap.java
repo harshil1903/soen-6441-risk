@@ -2,6 +2,7 @@ package com.risk.maputils;
 
 import com.risk.exception.InvalidMapException;
 import com.risk.models.Continent;
+import com.risk.models.Country;
 import com.risk.models.Map;
 
 import java.io.File;
@@ -56,7 +57,26 @@ public class LoadConquestMap {
      * @param p_map       Stores data read from p_mapReader
      * @throws InvalidMapException if map is not valid.
      */
-    private static void getConquestCountries(Scanner p_mapReader, Map p_map) {
+    private static void getConquestTerritories(Scanner p_mapReader, Map p_map) {
+        int l_continentID = 1;
+        int l_countryID = 1;
+        while (p_mapReader.hasNextLine()) {
+            String l_line = p_mapReader.nextLine();
+            if (l_line.equals("")){
+                l_continentID++;
+                continue;
+            }
+            String[] l_parts = l_line.split(",");
+            Continent l_continent = p_map.getContinentFromContinentList(l_continentID);
+            String l_countryName = l_parts[0];
+            //System.out.println(l_countryID + l_countryName + l_continentID);
+            Country l_country = new Country(l_countryID, l_countryName, l_continentID);
+            l_country.setD_BelongToContinent(l_continent);
+            l_country.setD_ContinentName(l_continent.getD_ContinentName());
+            l_continent.addCountryToCountryList(l_country);
+            l_countryID++;
+            //l_continentID++;
+        }
     }
 
 
@@ -77,8 +97,8 @@ public class LoadConquestMap {
                 if (l_line.equals("[Continents]")) {
                     getConquestContinents(l_mapReader, p_map);
                 }
-                if (l_line.equals("[countries]")) {
-                    getConquestCountries(l_mapReader, p_map);
+                if (l_line.equals("[Territories]")) {
+                    getConquestTerritories(l_mapReader, p_map);
                 }
                 if (l_line.equals("[borders]")) {
                     getConquestAdjacentCountries(l_mapReader, p_map);
@@ -92,6 +112,8 @@ public class LoadConquestMap {
         return p_map;
     }
 
-
-
+    public static void main(String[] args) {
+        loadConquestMap();
+        displayEditorMap(p_map);
+    }
 }
