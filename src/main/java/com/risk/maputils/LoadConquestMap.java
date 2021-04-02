@@ -10,6 +10,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import static com.risk.main.Main.d_Log;
+import static com.risk.main.Main.d_Map;
+import static com.risk.maputils.LoadMap.getCountry;
 import static com.risk.maputils.ShowMap.displayEditorMap;
 
 /**
@@ -19,6 +21,9 @@ import static com.risk.maputils.ShowMap.displayEditorMap;
  */
 public class LoadConquestMap {
     public static Map p_map = new Map();
+
+
+
 
     /**
      * This Method reads Continents from map file and add it to p_Map variable.
@@ -44,13 +49,19 @@ public class LoadConquestMap {
     /**
      * Helps in Loading Adjacent Countries to the Map
      *
-     * @param p_mapReader Scanner objects that helps to read the map.
-     * @param p_map       Stores data read from p_mapReader
+     * @param p_map   Stores data read from p_mapReader
+     * @param l_parts array of strings consisting adjacent countries
      */
-    private static void getConquestAdjacentCountries(Scanner p_mapReader, Map p_map, String[] l_parts) {
-
-
-
+    private static void getConquestAdjacentCountries(Map p_map, String[] l_parts, Country l_country, int l_continentID) {
+        for (int i = 3; i < l_parts.length; i++) {
+            String l_adjacentCountry = l_parts[i];
+            System.out.println(l_adjacentCountry);
+            Continent l_continent = p_map.getContinentFromContinentList(l_continentID);
+            Country l_neighbour = l_continent.getCountryFromCountryName(l_adjacentCountry);
+            l_country.addCountryToAdjacentCountries(l_neighbour);
+            System.out.print(l_country.getD_CountryName()+"Adding Neighbors "+l_neighbour.getD_CountryName());
+        }
+        System.out.println();
     }
 
     /**
@@ -65,7 +76,7 @@ public class LoadConquestMap {
         int l_countryID = 1;
         while (p_mapReader.hasNextLine()) {
             String l_line = p_mapReader.nextLine();
-            if (l_line.equals("")){
+            if (l_line.equals("")) {
                 l_continentID++;
                 continue;
             }
@@ -77,6 +88,7 @@ public class LoadConquestMap {
             l_country.setD_BelongToContinent(l_continent);
             l_country.setD_ContinentName(l_continent.getD_ContinentName());
             l_continent.addCountryToCountryList(l_country);
+            //getConquestAdjacentCountries(p_map, l_parts, l_country, l_continentID);
             l_countryID++;
             //l_continentID++;
         }
@@ -112,8 +124,8 @@ public class LoadConquestMap {
         return p_map;
     }
 
-    public static void main(String[] args) {
-        loadConquestMap();
-        displayEditorMap(p_map);
-    }
+//    public static void main(String[] args) {
+//        loadConquestMap();
+//        displayEditorMap(p_map);
+//    }
 }
