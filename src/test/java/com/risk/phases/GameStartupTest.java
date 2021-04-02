@@ -53,7 +53,7 @@ public class GameStartupTest {
         d_Map.clearMapData();
         d_Map.getD_Continents().clear();
 
-        for(Player l_player : d_PlayerList)
+        for (Player l_player : d_PlayerList)
             l_player.clearPlayerData();
 
         d_PlayerList.clear();
@@ -65,8 +65,7 @@ public class GameStartupTest {
      * and invalid commands are invalidated.
      */
     @Test
-    public void testGameStartupPhase()
-    {
+    public void testGameStartupPhase() {
         System.out.println("\nTEST : Testing Game Startup Phase\n");
 
         d_gameEngine = new GameEngine();

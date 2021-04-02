@@ -49,7 +49,6 @@ public class Diplomacy implements Order {
             return false;
         }
     }
-    
 
 
     /**
@@ -69,8 +68,7 @@ public class Diplomacy implements Order {
     /*
      * Print order.
      */
-    public void printOrder(){
-        System.out.println("Order Type : Diplomacy \nPlayer : " + d_player.getD_PlayerName() + " Opponent Player : " + d_otherPlayer.getD_PlayerName()
-                + " \nSuccessfully Executed\n");
+    public void printOrder() {
+        System.out.println();
     }
 }

@@ -79,11 +79,10 @@ public class Player {
      * @param p_orderType the order type
      * @param p_orderArgs the order args
      */
-    public void setOrderValues(String p_orderType, String p_orderArgs){
+    public void setOrderValues(String p_orderType, String p_orderArgs) {
         d_orderType = p_orderType;
         d_orderArgs = p_orderArgs;
     }
-
 
 
     /**
@@ -98,7 +97,7 @@ public class Player {
     /**
      * Finds the card removes it from the card list.
      *
-     * @param p_card    Card name
+     * @param p_card Card name
      */
     public void removeCard(String p_card) {
         for (int i = 0; i < d_cardList.size(); i++) {
@@ -363,7 +362,6 @@ public class Player {
     /**
      * To add an order to the list of orders held by the player
      * Issue order phase of game
-     *
      */
     public void issueOrder() {
 
@@ -453,7 +451,7 @@ public class Player {
     /**
      * Clear player data.
      */
-    public void clearPlayerData(){
+    public void clearPlayerData() {
         this.setD_Armies(0);
         this.getD_AssignedCountries().clear();
     }

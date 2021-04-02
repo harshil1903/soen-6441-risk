@@ -125,6 +125,9 @@ public class Advance implements Order {
                     Player l_tempPlayer = d_targetCountry.getD_Player();
                     l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
                     d_targetCountry.setD_Player(d_player);
+                    System.out.println(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
+                    d_Log.notify(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
+
                 } else {
                     //here defender successfully defend
                     //so attacker can not get card here
@@ -141,9 +144,9 @@ public class Advance implements Order {
         }
     }
 
-    public void printOrder(){
+    public void printOrder() {
         System.out.println("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-        + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
         d_Log.notify("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
                 + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
     }

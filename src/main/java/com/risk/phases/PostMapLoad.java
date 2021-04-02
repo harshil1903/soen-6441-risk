@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author Harshil
  */
-public class PostMapLoad extends MapEdit{
+public class PostMapLoad extends MapEdit {
 
     /**
      * Instantiates a new Post map load.
@@ -24,9 +24,9 @@ public class PostMapLoad extends MapEdit{
     }
 
     /**
-     *  editmap Command to load the map
+     * editmap Command to load the map
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
     public boolean editMap(List<String> p_argumentTokens) {
 
@@ -35,9 +35,9 @@ public class PostMapLoad extends MapEdit{
     }
 
     /**
-     *  validatemap Command to validate map
+     * validatemap Command to validate map
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
     public void validateMap(List<String> p_argumentTokens) {
 
@@ -45,51 +45,51 @@ public class PostMapLoad extends MapEdit{
     }
 
     /**
-     *  showmap Command to diplay map
+     * showmap Command to diplay map
      *
      * @param p_argumentTokens command parameters
      */
-    public void showMap(List<String> p_argumentTokens){
+    public void showMap(List<String> p_argumentTokens) {
 
         MapCommands.showMapCommand(p_argumentTokens);
     }
 
     /**
-     *  savemap Command to save map
+     * savemap Command to save map
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
-    public void saveMap(List<String> p_argumentTokens){
+    public void saveMap(List<String> p_argumentTokens) {
 
         MapCommands.saveMapCommand(p_argumentTokens);
     }
 
     /**
-     *  editcountry Command to add/remove country
+     * editcountry Command to add/remove country
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
-    public void editCountry(List<String> p_argumentTokens){
+    public void editCountry(List<String> p_argumentTokens) {
 
         MapCommands.editCountryCommand(p_argumentTokens);
     }
 
     /**
-     *  editcontinent Command to add/remove continent
+     * editcontinent Command to add/remove continent
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
-    public void editContinent(List<String> p_argumentTokens){
+    public void editContinent(List<String> p_argumentTokens) {
 
         MapCommands.editContinentCommand(p_argumentTokens);
     }
 
     /**
-     *  editneighbor Command to add remove neighbor
+     * editneighbor Command to add remove neighbor
      *
-     *  @param p_argumentTokens command parameters
+     * @param p_argumentTokens command parameters
      */
-    public void editNeighbor(List<String> p_argumentTokens){
+    public void editNeighbor(List<String> p_argumentTokens) {
 
         MapCommands.editNeighborCommand(p_argumentTokens);
     }
@@ -99,13 +99,13 @@ public class PostMapLoad extends MapEdit{
      *
      * @return Current phase
      */
-    public String currentPhase(){
+    public String currentPhase() {
 
         return "PostMapLoad";
     }
 
     /**
-     *  end Command to leave game
+     * end Command to leave game
      */
     public void next() {
 

@@ -16,6 +16,8 @@ import static com.risk.main.Main.d_PlayerList;
  */
 public class GameStartup extends Game {
 
+    boolean d_mapLoaded = false;
+
     /**
      * Instantiates a new Game startup.
      *
@@ -28,43 +30,50 @@ public class GameStartup extends Game {
 
     public boolean loadMap(List<String> p_argumentList) {
 
-        boolean l_mapLoaded = false;
-        try {
-            l_mapLoaded = GameCommands.loadMapCommand(p_argumentList);
-        }
-        catch (Exception e){}
 
-        return l_mapLoaded;
+        try {
+            d_mapLoaded = GameCommands.loadMapCommand(p_argumentList);
+        } catch (Exception e) {
+        }
+
+        return d_mapLoaded;
 
     }
 
     public void addPlayer(List<String> p_argumentTokens) {
-
-        GameCommands.gamePlayerCommand(p_argumentTokens);
-
+        if (d_mapLoaded)
+            GameCommands.gamePlayerCommand(p_argumentTokens);
+        else {
+            System.out.println("Map is not loaded");
+            d_Log.notify("Map is not loaded");
+        }
     }
 
     public boolean assignCountries() {
-
-        if (d_PlayerList.isEmpty()) {
-            System.out.println("No players added, add players first");
-            d_Log.notify("No players added, add players first");
+        if (!d_mapLoaded) {
+            System.out.println("Map is not loaded");
+            d_Log.notify("Map is not loaded");
             return false;
-        } else if (d_PlayerList.size() == 1) {
-            System.out.println("Cant play the game with 1 player, add atleast 1 more player");
-            d_Log.notify("Cant play the game with 1 player, add atleast 1 more player");
-            return false;
-        }
+        } else {
+            if (d_PlayerList.isEmpty()) {
+                System.out.println("No players added, add players first");
+                d_Log.notify("No players added, add players first");
+                return false;
+            } else if (d_PlayerList.size() == 1) {
+                System.out.println("Cant play the game with 1 player, add atleast 1 more player");
+                d_Log.notify("Cant play the game with 1 player, add atleast 1 more player");
+                return false;
+            }
 
-        try {
-            AssignCountries.assignCountries();
-            System.out.println("Countries have been successfully assigned to all the players");
-            d_Log.notify("Countries have been successfully assigned to all the players");
-        }
-        catch (Exception e) {
-        }
+            try {
+                AssignCountries.assignCountries();
+                System.out.println("Countries have been successfully assigned to all the players");
+                d_Log.notify("Countries have been successfully assigned to all the players");
+            } catch (Exception e) {
+            }
 
-        return true;
+            return true;
+        }
     }
 
     public void reinforce() {
@@ -79,7 +88,7 @@ public class GameStartup extends Game {
         printInvalidCommandMessage();
     }
 
-    public String currentPhase(){
+    public String currentPhase() {
         return "GameStartup";
     }
 

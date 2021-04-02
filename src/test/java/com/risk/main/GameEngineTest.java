@@ -71,7 +71,7 @@ public class GameEngineTest {
         d_Map.clearMapData();
         d_Map.getD_Continents().clear();
 
-        for(Player l_player : d_PlayerList)
+        for (Player l_player : d_PlayerList)
             l_player.clearPlayerData();
 
         d_PlayerList.clear();
@@ -80,7 +80,7 @@ public class GameEngineTest {
 
     /**
      * Test reinforcement armies count that is assigned to the player.
-    */
+     */
     @Test
     public void testReinforcementArmies() {
 
@@ -135,16 +135,15 @@ public class GameEngineTest {
      * checks the phases in gameEngine
      */
     @Test
-    public void testGameEngineSetPhases(){
+    public void testGameEngineSetPhases() {
         d_gameEngine.setPhase(new PreMapLoad(d_gameEngine));
 
-        assertEquals("PreMapLoad",d_gameEngine.d_GamePhase.currentPhase());
+        assertEquals("PreMapLoad", d_gameEngine.d_GamePhase.currentPhase());
 
         d_gameEngine.setPhase(new GameStartup(d_gameEngine));
 
-        assertEquals("GameStartup",d_gameEngine.d_GamePhase.currentPhase());
+        assertEquals("GameStartup", d_gameEngine.d_GamePhase.currentPhase());
     }
-
 
 
 }

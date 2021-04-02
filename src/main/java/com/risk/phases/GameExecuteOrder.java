@@ -16,7 +16,7 @@ import static com.risk.main.Main.*;
  *
  * @author Harshil
  */
-public class GameExecuteOrder extends Game{
+public class GameExecuteOrder extends Game {
 
     /**
      * Instantiates a new Game execute order.
@@ -29,7 +29,7 @@ public class GameExecuteOrder extends Game{
     }
 
     /**
-     *  loadmap Command to load the map
+     * loadmap Command to load the map
      *
      * @param p_argumentTokens command parameters
      */
@@ -39,7 +39,7 @@ public class GameExecuteOrder extends Game{
     }
 
     /**
-     *  gameplayer Command to add/remove players
+     * gameplayer Command to add/remove players
      *
      * @param p_argumentTokens command parameters
      */
@@ -48,7 +48,7 @@ public class GameExecuteOrder extends Game{
     }
 
     /**
-     *  assigncountries Command to assign countries amoong players
+     * assigncountries Command to assign countries amoong players
      */
     public boolean assignCountries() {
         printInvalidCommandMessage();
@@ -56,41 +56,38 @@ public class GameExecuteOrder extends Game{
     }
 
     /**
-     *  To reinforce players with their reinforcement armies
+     * To reinforce players with their reinforcement armies
      */
     public void reinforce() {
         printInvalidCommandMessage();
     }
 
     /**
-     *  Issue orders as per player's choices
+     * Issue orders as per player's choices
      */
     public void issueOrder() {
         printInvalidCommandMessage();
     }
 
     /**
-     *  Execute orders once all players have issued their orders
+     * Execute orders once all players have issued their orders
      */
     public void executeOrder() {
         int l_noOrdersPlayerCount = 0;
         String l_playerWon;
-        while (l_noOrdersPlayerCount <= d_PlayerList.size())
-        {
+        while (l_noOrdersPlayerCount <= d_PlayerList.size()) {
 
-            for (Player l_player : d_PlayerList)
-            {
+            for (Player l_player : d_PlayerList) {
 
                 Order l_order = l_player.nextOrder();
                 if (l_order != null) {
 
                     System.out.println("Executing Order");
                     d_Log.notify("Executing Order");
-                    if(l_order.valid()){
+                    if (l_order.valid()) {
 
                         l_order.execute();
-                    }
-                    else {
+                    } else {
                         System.out.println("Invalid Order, not executed");
                         d_Log.notify("Invalid Order, not executed");
                     }
@@ -110,10 +107,9 @@ public class GameExecuteOrder extends Game{
 
         l_playerWon = playerWon();
 
-        if(!l_playerWon.equals(""))
-        {
-            System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
-            d_Log.notify("Player " + l_playerWon+ " has Won the Game!!!");
+        if (!l_playerWon.equals("")) {
+            System.out.println("Player " + l_playerWon + " has Won the Game!!!");
+            d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
             showMap(new ArrayList<>());
             endGame();
         }
@@ -121,11 +117,11 @@ public class GameExecuteOrder extends Game{
     }
 
     /**
-     *  To check if a player has won the game
+     * To check if a player has won the game
      *
      * @return Name of player won or blank string if nobody has won
      */
-    public String playerWon(){
+    public String playerWon() {
         for (Player l_player : d_PlayerList) {
 
             String l_playerName = l_player.getD_PlayerName();
@@ -150,13 +146,13 @@ public class GameExecuteOrder extends Game{
      *
      * @return Current phase
      */
-    public String currentPhase(){
+    public String currentPhase() {
         return "GameExecuteOrder";
     }
 
 
     /**
-     *  To set next phase
+     * To set next phase
      */
     public void next() {
         d_gameEngine.setPhase(new GameIssueOrder(d_gameEngine));
