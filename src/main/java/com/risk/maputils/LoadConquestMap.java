@@ -9,10 +9,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import static com.risk.main.Main.d_Log;
-import static com.risk.main.Main.d_Map;
-import static com.risk.maputils.LoadMap.getCountry;
-import static com.risk.maputils.ShowMap.displayEditorMap;
 
 /**
  * Helps in Loading the Conquest Format Map file
@@ -22,7 +18,23 @@ import static com.risk.maputils.ShowMap.displayEditorMap;
 public class LoadConquestMap {
     public static Map p_map = new Map();
 
-
+    /**
+     * This method gets country from p_Map.
+     *
+     * @param p_countryName name of the country.
+     * @param p_Map         Stores data read from p_mapReader
+     * @return the country object for used in GetCountries.
+     */
+    public static Country getCountry(String p_countryName, Map p_Map) {
+        for (Continent l_continent : p_Map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                if (l_country.getD_CountryName().equals(p_countryName)) {
+                    return l_country;
+                }
+            }
+        }
+        return null;
+    }
 
 
     /**
@@ -47,25 +59,49 @@ public class LoadConquestMap {
     }
 
     /**
-     * Helps in Loading Adjacent Countries to the Map
+     * Helps in adding Adjacent Countries to the Map
      *
-     * @param p_map   Stores data read from p_mapReader
-     * @param l_parts array of strings consisting adjacent countries
+     * @param p_map         Stores data read from p_mapReader
+     * @param l_parts       array of strings consisting adjacent countries
+     * @param l_country     Object of country
+     * @param l_continentID Continent ID of the continent
      */
-    private static void getConquestAdjacentCountries(Map p_map, String[] l_parts, Country l_country, int l_continentID) {
-        for (int i = 3; i < l_parts.length; i++) {
+    private static void fillConquestAdjacentTerritories(Map p_map, String[] l_parts, Country l_country, int l_continentID) {
+        Continent l_continent = p_map.getContinentFromContinentList(l_continentID);
+        for (int i = 4; i < l_parts.length; i++) {
             String l_adjacentCountry = l_parts[i];
-            System.out.println(l_adjacentCountry);
-            Continent l_continent = p_map.getContinentFromContinentList(l_continentID);
-            Country l_neighbour = l_continent.getCountryFromCountryName(l_adjacentCountry);
+            Country l_neighbour = getCountry(l_adjacentCountry, p_map);
             l_country.addCountryToAdjacentCountries(l_neighbour);
-            System.out.print(l_country.getD_CountryName()+"Adding Neighbors "+l_neighbour.getD_CountryName());
         }
-        System.out.println();
+    }
+
+
+    /**
+     * Helps in getting Adjacent Countries.
+     *
+     * @param p_mapReader Scanner objects that helps to read the map.
+     * @param p_map       Stores data read from p_mapReader
+     */
+    private static void getConquestAdjacentTerritories(Scanner p_mapReader, Map p_map) {
+        int l_continentID = 1;
+        int l_countryID = 1;
+        while (p_mapReader.hasNextLine()) {
+            String l_line = p_mapReader.nextLine();
+            if (l_line.equals("")) {
+                l_continentID++;
+                continue;
+            }
+            String[] l_parts = l_line.split(",");
+            Continent l_continent = p_map.getContinentFromContinentList(l_continentID);
+            String l_countryName = l_parts[0];
+            Country l_country = l_continent.getCountryFromCountryName(l_countryName);
+            fillConquestAdjacentTerritories(p_map, l_parts, l_country, l_continentID);
+            l_countryID++;
+        }
     }
 
     /**
-     * This Method reads Countries from map file and add it to list in Continent.
+     * This Method reads Territories from map file and add it to list in Continent.
      *
      * @param p_mapReader Scanner objects that helps to read the map.
      * @param p_map       Stores data read from p_mapReader
@@ -83,14 +119,11 @@ public class LoadConquestMap {
             String[] l_parts = l_line.split(",");
             Continent l_continent = p_map.getContinentFromContinentList(l_continentID);
             String l_countryName = l_parts[0];
-            //System.out.println(l_countryID + l_countryName + l_continentID);
             Country l_country = new Country(l_countryID, l_countryName, l_continentID);
             l_country.setD_BelongToContinent(l_continent);
             l_country.setD_ContinentName(l_continent.getD_ContinentName());
             l_continent.addCountryToCountryList(l_country);
-            //getConquestAdjacentCountries(p_map, l_parts, l_country, l_continentID);
             l_countryID++;
-            //l_continentID++;
         }
     }
 
@@ -116,6 +149,14 @@ public class LoadConquestMap {
                     getConquestTerritories(l_mapReader, p_map);
                 }
             }
+
+            l_mapReader = new Scanner(l_map);
+            while (l_mapReader.hasNextLine()) {
+                String l_line = l_mapReader.nextLine();
+                if (l_line.equals("[Territories]")) {
+                    getConquestAdjacentTerritories(l_mapReader, p_map);
+                }
+            }
             System.out.println("Loaded map successfully form existing conquest file");
 
         } catch (FileNotFoundException e) {
@@ -124,8 +165,5 @@ public class LoadConquestMap {
         return p_map;
     }
 
-//    public static void main(String[] args) {
-//        loadConquestMap();
-//        displayEditorMap(p_map);
-//    }
+
 }
