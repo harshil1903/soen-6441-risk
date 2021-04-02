@@ -31,6 +31,8 @@ public class MapCommands {
             return false;
         }
 
+        d_Map.clearMapData();
+
         d_Map.getD_Continents().clear();
 
         try {
