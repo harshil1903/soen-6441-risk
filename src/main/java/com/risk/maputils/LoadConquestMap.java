@@ -1,6 +1,7 @@
 package com.risk.maputils;
 
 import com.risk.exception.InvalidMapException;
+import com.risk.models.Continent;
 import com.risk.models.Map;
 
 import java.io.File;
@@ -8,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import static com.risk.main.Main.d_Log;
+import static com.risk.maputils.ShowMap.displayEditorMap;
 
 /**
  * Helps in Loading the Conquest Format Map file
@@ -15,7 +17,7 @@ import static com.risk.main.Main.d_Log;
  * @author Chirag
  */
 public class LoadConquestMap {
-
+    public static Map p_map = new Map();
 
     /**
      * This Method reads Continents from map file and add it to p_Map variable.
@@ -25,6 +27,17 @@ public class LoadConquestMap {
      * @throws InvalidMapException if map is not valid.
      */
     private static void getConquestContinents(Scanner p_mapReader, Map p_map) {
+        int l_continentID = 1;
+        while (p_mapReader.hasNextLine()) {
+            String l_line = p_mapReader.nextLine();
+            if (l_line.equals("")) break;
+            String[] l_parts = l_line.split("=");
+            String l_continentName = l_parts[0];
+            int l_controlValue = Integer.parseInt(l_parts[1]);
+            Continent l_continent = new Continent(l_continentID, l_continentName, l_controlValue);
+            p_map.addContinentToContinentList(l_continent);
+            l_continentID++;
+        }
     }
 
     /**
@@ -50,24 +63,25 @@ public class LoadConquestMap {
     /**
      * This Method Loads the Conquest Map passed to it.
      *
-     * @param p_map Reads the map file.
-     * @param p_Map Stores data read from p_mapReader
      * @return the Map object with loaded values.
      */
-    public static Map loadConquestMap(File p_map, Map p_Map) {
+    public static Map loadConquestMap() {
+        String l_path = "src/main/resources/";
+        String l_fileName = "Asia.map";
+        File l_map = new File(l_path + l_fileName);
         Scanner l_mapReader = null;
         try {
-            l_mapReader = new Scanner(p_map);
+            l_mapReader = new Scanner(l_map);
             while (l_mapReader.hasNextLine()) {
                 String l_line = l_mapReader.nextLine();
-                if (l_line.equals("[continents]")) {
-                    getConquestContinents(l_mapReader, p_Map);
+                if (l_line.equals("[Continents]")) {
+                    getConquestContinents(l_mapReader, p_map);
                 }
                 if (l_line.equals("[countries]")) {
-                    getConquestCountries(l_mapReader, p_Map);
+                    getConquestCountries(l_mapReader, p_map);
                 }
                 if (l_line.equals("[borders]")) {
-                    getConquestAdjacentCountries(l_mapReader, p_Map);
+                    getConquestAdjacentCountries(l_mapReader, p_map);
                 }
             }
             System.out.println("Loaded map successfully form existing conquest file");
@@ -75,7 +89,9 @@ public class LoadConquestMap {
         } catch (FileNotFoundException e) {
 
         }
-        return p_Map;
+        return p_map;
     }
+
+
 
 }
