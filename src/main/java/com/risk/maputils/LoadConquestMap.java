@@ -47,7 +47,10 @@ public class LoadConquestMap {
      * @param p_mapReader Scanner objects that helps to read the map.
      * @param p_map       Stores data read from p_mapReader
      */
-    private static void getConquestAdjacentCountries(Scanner p_mapReader, Map p_map) {
+    private static void getConquestAdjacentCountries(Scanner p_mapReader, Map p_map, String[] l_parts) {
+
+
+
     }
 
     /**
@@ -99,9 +102,6 @@ public class LoadConquestMap {
                 }
                 if (l_line.equals("[Territories]")) {
                     getConquestTerritories(l_mapReader, p_map);
-                }
-                if (l_line.equals("[borders]")) {
-                    getConquestAdjacentCountries(l_mapReader, p_map);
                 }
             }
             System.out.println("Loaded map successfully form existing conquest file");
