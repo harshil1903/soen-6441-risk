@@ -79,6 +79,14 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
                 l_cheaterAdjCountry.setD_NumberOfArmies(l_cheaterAdjCountry.getD_NumberOfArmies() * 2);
             }
         }
+        for (Country l_cheaterCountry : d_player.getD_AssignedCountries()) {
+            for (Country l_cheaterAdjCountry : l_cheaterCountry.getD_AdjacentCountries()) {
+                if (l_cheaterAdjCountry.getD_Player() != d_player) {
+                    l_cheaterAdjCountry.setD_NumberOfArmies(l_cheaterAdjCountry.getD_NumberOfArmies() * 2);
+                    break;
+                }
+            }
+        }
         return null;
     }
 }
