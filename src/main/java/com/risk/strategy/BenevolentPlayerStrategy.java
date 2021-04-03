@@ -2,9 +2,7 @@ package com.risk.strategy;
 
 import com.risk.models.Country;
 import com.risk.models.Player;
-import com.risk.orders.Advance;
-import com.risk.orders.Deploy;
-import com.risk.orders.Order;
+import com.risk.orders.*;
 
 import java.util.List;
 import java.util.Random;
@@ -67,6 +65,9 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
         for (Country l_tempCountry : d_country) {
             if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies() && d_player.getD_AssignedCountries().contains(l_tempCountry)) {
                 l_myMaxArmies = l_tempCountry;
+            } else {
+                System.out.println("Benevolent Player can not attack on others country");
+                break;
             }
         }
         return l_myMaxArmies;
@@ -86,7 +87,7 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
             switch (l_rndOrder) {
                 case (0):
                     // Deploy Order
-                    l_numOfArmies = l_rand.nextInt(20);
+                    l_numOfArmies = l_rand.nextInt(d_player.getD_Armies());
                     return new Deploy(d_player, toDefend().getD_CountryName(), l_numOfArmies);
                 case (1):
                     // Advance Order
@@ -94,16 +95,12 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
                     return new Advance(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
                 case (2):
                     // AirLift Card
-                    if (d_player.getD_cardList().contains("airlift")) {
-                        l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
-                        return new Advance(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
-                    }
-                case (4):
+                    l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                    return new Airlift(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
+                case (3):
                     //Blockade Card
-                    if (d_player.getD_cardList().contains("blockade")) {
-                        l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
-                        return new Advance(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
-                    }
+                    return new Blockade(d_player,toDefend().getD_CountryName());
+
             }
         }
         return null;
