@@ -2,6 +2,7 @@ package com.risk.strategy;
 
 import com.risk.models.Country;
 import com.risk.models.Player;
+import com.risk.orders.Advance;
 import com.risk.orders.Deploy;
 import com.risk.orders.Order;
 
@@ -38,13 +39,13 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
      * @return current player country with most number of armies
      */
     protected Country toDefend() {
-        Country l_myMaxArmies = d_player.getD_AssignedCountries().get(0);
+        Country l_myMinArmies = d_player.getD_AssignedCountries().get(0);
         for (Country l_tempCountry : d_country) {
-            if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies() & d_player.getD_AssignedCountries().contains(l_tempCountry)) {
-                l_myMaxArmies = l_tempCountry;
+            if (l_myMinArmies.getD_NumberOfArmies() > l_tempCountry.getD_NumberOfArmies() & d_player.getD_AssignedCountries().contains(l_tempCountry)) {
+                l_myMinArmies = l_tempCountry;
             }
         }
-        return l_myMaxArmies;
+        return l_myMinArmies;
     }
 
     /**
@@ -57,12 +58,18 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     }
 
     /**
-     * Decide where armies are moved to. The Defensive player does not move, so it returns null
+     * Decide where armies are moved to.
      *
      * @return null
      */
     protected Country toMoveFrom() {
-        return null;
+        Country l_myMaxArmies = d_player.getD_AssignedCountries().get(0);
+        for (Country l_tempCountry : d_country) {
+            if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies() && d_player.getD_AssignedCountries().contains(l_tempCountry)) {
+                l_myMaxArmies = l_tempCountry;
+            }
+        }
+        return l_myMaxArmies;
     }
 
     /**
@@ -73,8 +80,31 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     @Override
     public Order createOrder() {
         Random l_rand = new Random();
+        int l_rndOrder = l_rand.nextInt(4);
+        int l_numOfArmies;
         if (l_rand.nextInt(5) != 0) {
-            return new Deploy(d_player, toDefend().getD_CountryName(), l_rand.nextInt(20));
+            switch (l_rndOrder) {
+                case (0):
+                    // Deploy Order
+                    l_numOfArmies = l_rand.nextInt(20);
+                    return new Deploy(d_player, toDefend().getD_CountryName(), l_numOfArmies);
+                case (1):
+                    // Advance Order
+                    l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                    return new Advance(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
+                case (2):
+                    // AirLift Card
+                    if (d_player.getD_cardList().contains("airlift")) {
+                        l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                        return new Advance(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
+                    }
+                case (4):
+                    //Blockade Card
+                    if (d_player.getD_cardList().contains("blockade")) {
+                        l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                        return new Advance(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
+                    }
+            }
         }
         return null;
     }
