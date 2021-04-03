@@ -157,6 +157,18 @@ public class GameEngine extends Observable {
                 }
                 break;
 
+            case "tournament":
+                Tournament.begin(l_argumentList);
+                break;
+
+            case "savegame":
+                //Call save game method in GameUtils
+                break;
+
+            case "loadgame":
+                //Call load game method in GameUtils
+                break;
+
             case "end":
                 d_GamePhase.endGame();
                 return true;

@@ -41,7 +41,6 @@ public class Blockade implements Order {
      * @return the boolean
      */
     public boolean valid() {
-        //here firstly check if player have a blockade card or not after chirag make cardlist of each player
         if (d_player.getD_cardList().contains("blockade")) {
             if (d_country.getD_NumberOfArmies() > 0) {
                 ArrayList<String> l_countriesOwnedList = new ArrayList<>();

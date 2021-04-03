@@ -73,13 +73,14 @@ public class GameCommands {
      */
     public static void gamePlayerCommand(List<String> p_argumentTokens) {
 
-        String l_playerName;
+        String l_playerName, l_playerStrategy;
         int l_flag = 0;
 
         for (int i = 0; i < p_argumentTokens.size(); i++) {
             if (p_argumentTokens.get(i).equals("-add")) {
                 try {
                     l_playerName = p_argumentTokens.get(++i);
+                    //l_playerStrategy = p_argumentTokens.get(++i);
 
                     for (Player l_player : d_PlayerList) {
                         if (l_player.getD_PlayerName().equals(l_playerName)) {
@@ -98,7 +99,8 @@ public class GameCommands {
                     System.out.println("Player Name: " + l_playerName + " has joined the Game");
 
                     d_Log.notify("Player Name: " + l_playerName + " has joined the Game");
-                    Player l_player = new Player(l_playerName);
+                    Player l_player = new Player(l_playerName,"Human");
+                    //Player l_player = new Player(l_playerName,l_playerStrategy);
                     d_PlayerList.add(l_player);
 
 
@@ -115,6 +117,7 @@ public class GameCommands {
                     for (Player l_player : d_PlayerList) {
                         if (l_player.getD_PlayerName().equals(l_playerName)) {
                             d_PlayerList.remove(l_player);
+                            break;
                         }
                     }
 

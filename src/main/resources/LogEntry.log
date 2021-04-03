@@ -1,3 +1,13 @@
+Log: Welcome to warzone
+Log: Game Begins
+Log: New Phase : GameStartup
+Log: COMMAND : loadmap europe
 Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 can not use Airlift card on target country is not owned
+Log: The map is connected
+Log: COMMAND : gameplayer -add shivam -add harshil
+Log: Player Name: shivam has joined the Game
+Log: Player Name: harshil has joined the Game
+Log: COMMAND : gameplayer -remove harshil
+Log: Player Name: harshil has been removed from the Game
+Log: COMMAND : gameplayer -remove shivam
+Log: Player Name: shivam has been removed from the Game
