@@ -7,6 +7,12 @@ import com.risk.orders.*;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * BenevolentPlayer Strategy Class
+ *
+ * @author Parth
+ * @author Harsh
+ */
 public class BenevolentPlayerStrategy extends PlayerStrategy {
 
     /**
@@ -74,7 +80,7 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     }
 
     /**
-     * Create an order benevolent player can use only deploy order
+     * Create an order Benevolent Player
      *
      * @return created order
      */
@@ -99,7 +105,7 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
                     return new Airlift(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
                 case (3):
                     //Blockade Card
-                    return new Blockade(d_player,toDefend().getD_CountryName());
+                    return new Blockade(d_player, toDefend().getD_CountryName());
 
             }
         }

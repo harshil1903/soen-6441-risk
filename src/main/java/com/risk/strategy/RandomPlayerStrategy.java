@@ -7,6 +7,12 @@ import com.risk.orders.*;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * RandomPlayer Strategy Class
+ *
+ * @author Parth
+ * @author Harsh
+ */
 public class RandomPlayerStrategy extends PlayerStrategy {
     /**
      * Instantiates a new Player strategy.
@@ -63,7 +69,7 @@ public class RandomPlayerStrategy extends PlayerStrategy {
     }
 
     /**
-     * Create an order benevolent player can use only deploy order
+     * Create an order for Random player
      *
      * @return created order
      */
