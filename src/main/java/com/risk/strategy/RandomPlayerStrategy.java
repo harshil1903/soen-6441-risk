@@ -76,7 +76,7 @@ public class RandomPlayerStrategy extends PlayerStrategy {
             switch (l_rndOrder) {
                 case (0):
                     // Deploy Order
-                    l_numOfArmies = l_rand.nextInt(20);
+                    l_numOfArmies = l_rand.nextInt(d_player.getD_Armies());
                     return new Deploy(d_player, toDefend().getD_CountryName(), l_numOfArmies);
                 case (1):
                     // Advance Order
