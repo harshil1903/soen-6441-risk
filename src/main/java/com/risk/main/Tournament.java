@@ -31,7 +31,7 @@ public class Tournament {
 
         for(int i = 0 ; i < d_listOfPlayerStrategies.size(); i++)
         {
-            Player l_player = new Player(d_listOfPlayerStrategies.get(i));
+            Player l_player = new Player(d_listOfPlayerStrategies.get(i),d_listOfPlayerStrategies.get(i));
             d_PlayerList.add(l_player);
         }
 

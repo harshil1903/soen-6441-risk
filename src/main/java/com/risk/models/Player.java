@@ -1,6 +1,7 @@
 package com.risk.models;
 
 import com.risk.orders.*;
+import com.risk.strategy.PlayerStrategy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,6 +46,10 @@ public class Player {
     private String d_orderType;
     private String d_orderArgs;
 
+    private PlayerStrategy d_playerStrategy;
+    public boolean d_isHuman;
+    public String d_playerStrategyType;
+
     /**
      * Default constructor for player class
      */
@@ -72,6 +77,51 @@ public class Player {
         d_diplomacyPlayerList = new ArrayList<>();
         d_cardList = new ArrayList<>();
     }
+
+    /**
+     * Instantiates a new Player.
+     *
+     * @param p_PlayerName Name of the player
+     */
+    public Player(String p_PlayerName, String p_playerStrategyType) {
+        super();
+        d_playerName = p_PlayerName;
+        d_armies = 0;
+        d_assignedCountries = new ArrayList<Country>();
+        d_orderList = new ArrayList<>();
+        testOrderList = new ArrayList<>();
+        d_diplomacyPlayerList = new ArrayList<>();
+        d_cardList = new ArrayList<>();
+        d_playerStrategyType = p_playerStrategyType;
+
+        if(d_playerStrategyType.equals("Human"))
+        {
+            d_isHuman = true;
+        }
+        else {
+            d_isHuman = false;
+        }
+    }
+
+
+    /**
+     * Gets player strategy.
+     *
+     * @return the d player strategy
+     */
+    public PlayerStrategy getD_playerStrategy() {
+        return d_playerStrategy;
+    }
+
+    /**
+     * Sets player strategy.
+     *
+     * @param p_playerStrategy the d player strategy
+     */
+    public void setD_playerStrategy(PlayerStrategy p_playerStrategy) {
+        this.d_playerStrategy = p_playerStrategy;
+    }
+
 
     /**
      * Set order values for issue order execution
@@ -133,7 +183,7 @@ public class Player {
     /**
      * To get list of player which are in diplomacyList
      *
-     * @return d_diplomacyPlayerList
+     * @return d_diplomacyPlayerList diplomacy player
      */
     public List<Player> getDiplomacyPlayer() {
         return d_diplomacyPlayerList;
@@ -171,7 +221,7 @@ public class Player {
      * To get player name
      *
      * @param p_playerName player name
-     * @return l_player
+     * @return l_player player from player name
      */
     public Player getPlayerFromPlayerName(String p_playerName) {
         for (Player l_player : d_PlayerList) {
@@ -365,66 +415,72 @@ public class Player {
      */
     public void issueOrder() {
 
-        String[] l_argumentTokens = d_orderArgs.split(" ");
-        List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
+        if(d_isHuman) {
 
-        if (!l_argumentList.isEmpty()) {
-            l_argumentList.remove(0);
+            String[] l_argumentTokens = d_orderArgs.split(" ");
+            List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
+
+            if (!l_argumentList.isEmpty()) {
+                l_argumentList.remove(0);
+            }
+
+
+            switch (d_orderType) {
+                case "deploy":
+                    System.out.println("Deploy Order done with " + d_orderArgs);
+                    d_Log.notify("Deploy Order done with " + d_orderArgs);
+                    d_currentOrder = new Deploy(this, l_argumentList.get(0), Integer.parseInt(l_argumentList.get(1)));
+                    d_orderList.add(d_currentOrder);
+                    break;
+
+                case "advance":
+                    System.out.println("Advance Order");
+                    d_Log.notify("Advance Order");
+                    d_currentOrder = new Advance(this, l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
+                    d_orderList.add(d_currentOrder);
+                    break;
+
+                case "bomb":
+                    System.out.println("Bomb Order");
+                    d_Log.notify("Bomb Order");
+                    d_currentOrder = new Bomb(this, l_argumentList.get(0));
+                    d_orderList.add(d_currentOrder);
+                    break;
+
+                case "blockade":
+                    System.out.println("Blockade Order");
+                    d_Log.notify("Blockade Order");
+                    d_currentOrder = new Blockade(this, l_argumentList.get(0));
+                    d_orderList.add(d_currentOrder);
+                    break;
+
+                case "airlift":
+                    System.out.println("Airlift Order");
+                    d_Log.notify("Airlift Order");
+                    d_currentOrder = new Airlift(this, l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
+                    d_orderList.add(d_currentOrder);
+                    break;
+
+                case "negotiate":
+                    System.out.println("Negotiate Order");
+                    d_Log.notify("Negotiate Order");
+                    d_currentOrder = new Diplomacy(this, l_argumentList.get(0));
+                    d_orderList.add(d_currentOrder);
+                    break;
+
+                case "end":
+                    return;
+
+                default:
+                    System.out.println("Invalid Command \nAllowed Commands are : deploy, advance, bomb, blockade, airlift, negotiate");
+                    d_Log.notify("Invalid Command \nAllowed Commands are : deploy, advance, bomb, blockade, airlift, negotiate");
+                    break;
+            }
         }
-
-
-        switch (d_orderType) {
-            case "deploy":
-                System.out.println("Deploy Order done with " + d_orderArgs);
-                d_Log.notify("Deploy Order done with " + d_orderArgs);
-                d_currentOrder = new Deploy(this, l_argumentList.get(0), Integer.parseInt(l_argumentList.get(1)));
-                d_orderList.add(d_currentOrder);
-                break;
-
-            case "advance":
-                System.out.println("Advance Order");
-                d_Log.notify("Advance Order");
-                d_currentOrder = new Advance(this, l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
-                d_orderList.add(d_currentOrder);
-                break;
-
-            case "bomb":
-                System.out.println("Bomb Order");
-                d_Log.notify("Bomb Order");
-                d_currentOrder = new Bomb(this, l_argumentList.get(0));
-                d_orderList.add(d_currentOrder);
-                break;
-
-            case "blockade":
-                System.out.println("Blockade Order");
-                d_Log.notify("Blockade Order");
-                d_currentOrder = new Blockade(this, l_argumentList.get(0));
-                d_orderList.add(d_currentOrder);
-                break;
-
-            case "airlift":
-                System.out.println("Airlift Order");
-                d_Log.notify("Airlift Order");
-                d_currentOrder = new Airlift(this, l_argumentList.get(0), l_argumentList.get(1), Integer.parseInt(l_argumentList.get(2)));
-                d_orderList.add(d_currentOrder);
-                break;
-
-            case "negotiate":
-                System.out.println("Negotiate Order");
-                d_Log.notify("Negotiate Order");
-                d_currentOrder = new Diplomacy(this, l_argumentList.get(0));
-                d_orderList.add(d_currentOrder);
-                break;
-
-            case "end":
-                return;
-
-            default:
-                System.out.println("Invalid Command \nAllowed Commands are : deploy, advance, bomb, blockade, airlift, negotiate");
-                d_Log.notify("Invalid Command \nAllowed Commands are : deploy, advance, bomb, blockade, airlift, negotiate");
-                break;
+        else {
+            d_currentOrder = d_playerStrategy.createOrder();
+            d_orderList.add(d_currentOrder);
         }
-
 
     }
 
