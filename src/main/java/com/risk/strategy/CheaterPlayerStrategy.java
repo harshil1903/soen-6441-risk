@@ -64,8 +64,7 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
     }
 
     /**
-     * Creates an order.
-     * The Cheater player does not issue orders, so this returns null.
+     * Creates an order for Cheater Player
      *
      * @return null
      */
