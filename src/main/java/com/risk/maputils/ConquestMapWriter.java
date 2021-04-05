@@ -1,6 +1,5 @@
 package com.risk.maputils;
 
-
 import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
@@ -8,18 +7,12 @@ import com.risk.models.Map;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
-
-import static com.risk.main.Main.d_Log;
 
 /**
  * Helps in writing Map data back to conquest map file format
  *
  * @author Chirag
  */
-
-
-
 public class ConquestMapWriter {
 
     /**
@@ -36,14 +29,13 @@ public class ConquestMapWriter {
         return l_content.toString();
     }
 
-
     /**
      * This method processes the continents for Conquest.
      *
      * @param p_Map object of the map which is being processed
      * @return a string that contains details of the continents that will eventually be written in the map file.
      */
-    private static StringBuilder processConquestContinent(Map p_Map){
+    private static StringBuilder processConquestContinent(Map p_Map) {
         StringBuilder l_continentData = new StringBuilder();
         l_continentData.append("[Continents]");
         l_continentData.append("\n");
@@ -53,7 +45,6 @@ public class ConquestMapWriter {
         }
         return l_continentData;
     }
-
 
     /**
      * This method is for processing countries.
@@ -82,10 +73,6 @@ public class ConquestMapWriter {
 
     }
 
-
-
-
-
     /**
      * This method writes the map details to map file
      *
@@ -108,5 +95,4 @@ public class ConquestMapWriter {
             System.err.println(e.getMessage());
         }
     }
-
 }
