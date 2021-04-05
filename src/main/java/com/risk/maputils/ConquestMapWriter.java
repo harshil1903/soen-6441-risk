@@ -45,7 +45,14 @@ public class ConquestMapWriter {
      * @return a string that contains details of the continents that will eventually be written in the map file.
      */
     private static StringBuilder processConquestContinent(Map p_Map){
-        return null;
+        StringBuilder l_continentData = new StringBuilder();
+        l_continentData.append("[Continents]");
+        l_continentData.append("\n");
+        for (Continent l_continent : p_Map.getD_Continents()) {
+            l_continentData.append(l_continent.getD_ContinentName() + "=" + l_continent.getD_ContinentValue());
+            l_continentData.append("\n");
+        }
+        return l_continentData;
     }
 
 
