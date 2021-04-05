@@ -89,24 +89,24 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
         Random l_rand = new Random();
         int l_rndOrder = l_rand.nextInt(4);
         int l_numOfArmies;
+        if (d_player.getD_Armies() > 0) {
+            // Deploy Order
+            l_numOfArmies = l_rand.nextInt(d_player.getD_Armies()+1);
+            return new Deploy(d_player, toDefend().getD_CountryName(), l_numOfArmies);
+        }
         if (l_rand.nextInt(5) != 0) {
             switch (l_rndOrder) {
                 case (0):
-                    // Deploy Order
-                    l_numOfArmies = l_rand.nextInt(d_player.getD_Armies());
-                    return new Deploy(d_player, toDefend().getD_CountryName(), l_numOfArmies);
-                case (1):
                     // Advance Order
                     l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
                     return new Advance(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
-                case (2):
+                case (1):
                     // AirLift Card
                     l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
                     return new Airlift(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
-                case (3):
+                case (2):
                     //Blockade Card
                     return new Blockade(d_player, toDefend().getD_CountryName());
-
             }
         }
         return null;
