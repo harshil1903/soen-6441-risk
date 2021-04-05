@@ -22,6 +22,55 @@ import static com.risk.main.Main.d_Log;
 
 public class ConquestMapWriter {
 
+    /**
+     * This method processes the map by calling three different methods and makes a string to be written in map file.
+     *
+     * @param p_Map object of the map which is processed
+     * @return String to be written in the map file
+     */
+    private static String parseConquestMapAndReturnString(Map p_Map) {
+
+        StringBuilder l_content = new StringBuilder();
+        l_content.append(processConquestContinent(p_Map));
+        l_content.append(processTerritories(p_Map));
+        l_content.append(processAdjacentTerritories(p_Map));
+        return l_content.toString();
+    }
+
+
+    /**
+     * This method processes the continents for Conquest.
+     *
+     * @param p_Map object of the map which is being processed
+     * @return a string that contains details of the continents that will eventually be written in the map file.
+     */
+    private static StringBuilder processConquestContinent(Map p_Map){
+        return null;
+    }
+
+
+    /**
+     * This method is for processing countries.
+     *
+     * @param p_Map object of the map that is being processed
+     * @return a string that contains details of countries that will ultimately be written in the map file.
+     */
+    private static StringBuilder processTerritories(Map p_Map) {
+
+        return null;
+    }
+
+
+    /**
+     * This method is for processing adjacent countries.
+     *
+     * @param p_Map object of map that is being processed.
+     * @return a string that contains adjacent countries and that will be written in map file.
+     */
+    private static StringBuilder processAdjacentTerritories(Map p_Map) {
+        return null;
+    }
+
 
 
     /**
@@ -38,9 +87,9 @@ public class ConquestMapWriter {
                 System.out.println("Map object is NULL! ");
             }
 
-            //String l_content = parseConquestMapAndReturnString(p_map);
+            String l_content = parseConquestMapAndReturnString(p_map);
             l_fileWriter = new FileWriter(p_file, false);
-            //l_fileWriter.write(l_content);
+            l_fileWriter.write(l_content);
             l_fileWriter.close();
         } catch (IOException e) {
             System.err.println(e.getMessage());
