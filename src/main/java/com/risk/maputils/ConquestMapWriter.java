@@ -33,7 +33,6 @@ public class ConquestMapWriter {
         StringBuilder l_content = new StringBuilder();
         l_content.append(processConquestContinent(p_Map));
         l_content.append(processTerritories(p_Map));
-        l_content.append(processAdjacentTerritories(p_Map));
         return l_content.toString();
     }
 
@@ -71,6 +70,11 @@ public class ConquestMapWriter {
         for (Continent l_continent : p_Map.getD_Continents()) {
             for (Country l_country : l_continent.getD_Countries()) {
                 l_countryData.append(l_country.getD_CountryName() + "," + l_continent.getD_ContinentName());
+
+                for (Country l_adjacentCountries : l_country.getD_AdjacentCountries()) {
+                    l_countryData.append(",");
+                    l_countryData.append(l_adjacentCountries.getD_CountryName());
+                }
                 l_countryData.append("\n");
             }
         }
@@ -79,15 +83,6 @@ public class ConquestMapWriter {
     }
 
 
-    /**
-     * This method is for processing adjacent countries.
-     *
-     * @param p_Map object of map that is being processed.
-     * @return a string that contains adjacent countries and that will be written in map file.
-     */
-    private static StringBuilder processAdjacentTerritories(Map p_Map) {
-        return null;
-    }
 
 
 
@@ -113,7 +108,5 @@ public class ConquestMapWriter {
             System.err.println(e.getMessage());
         }
     }
-
-
 
 }
