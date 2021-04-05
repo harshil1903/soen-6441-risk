@@ -63,8 +63,19 @@ public class ConquestMapWriter {
      * @return a string that contains details of countries that will ultimately be written in the map file.
      */
     private static StringBuilder processTerritories(Map p_Map) {
+        StringBuilder l_countryData = new StringBuilder();
+        l_countryData.append("\n");
+        l_countryData.append("[Territories]");
+        l_countryData.append("\n");
 
-        return null;
+        for (Continent l_continent : p_Map.getD_Continents()) {
+            for (Country l_country : l_continent.getD_Countries()) {
+                l_countryData.append(l_country.getD_CountryName() + "," + l_continent.getD_ContinentName());
+                l_countryData.append("\n");
+            }
+        }
+        return l_countryData;
+
     }
 
 
