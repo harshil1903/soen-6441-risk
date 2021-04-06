@@ -1,13 +1,2 @@
-Log: Welcome to warzone
-Log: Game Begins
-Log: New Phase : GameStartup
-Log: COMMAND : loadmap europe
 Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: COMMAND : gameplayer -add shivam -add harshil
-Log: Player Name: shivam has joined the Game
-Log: Player Name: harshil has joined the Game
-Log: COMMAND : gameplayer -remove harshil
-Log: Player Name: harshil has been removed from the Game
-Log: COMMAND : gameplayer -remove shivam
-Log: Player Name: shivam has been removed from the Game
+Log: Assigned countries randomly to players

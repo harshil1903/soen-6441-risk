@@ -21,10 +21,10 @@ public abstract class PlayerStrategy {
     /**
      * Instantiates a new Player strategy.
      *
-     * @param p_player the p player
-     * @param p_country    the p map
+     * @param p_player  the p player
+     * @param p_country the p map
      */
-    PlayerStrategy(Player p_player, List<Country> p_country){
+    PlayerStrategy(Player p_player, List<Country> p_country) {
         d_player = p_player;
         d_country = p_country;
     }
@@ -35,4 +35,12 @@ public abstract class PlayerStrategy {
      * @return the order
      */
     public abstract Order createOrder();
+
+    protected abstract Country toAttack();
+
+    protected abstract Country toAttackFrom();
+
+    protected abstract Country toMoveFrom();
+
+    protected abstract Country toDefend();
 }
