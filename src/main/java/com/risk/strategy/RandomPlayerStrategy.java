@@ -76,27 +76,33 @@ public class RandomPlayerStrategy extends PlayerStrategy {
     @Override
     public Order createOrder() {
         Random l_rand = new Random();
-        int l_rndOrder = l_rand.nextInt(3);
+        int l_rndOrder = l_rand.nextInt(5);
         int l_numOfArmies;
-        if (l_rand.nextInt(5) != 0) {
+        if (l_rand.nextInt(5)>=0) {
+            System.out.println(l_rndOrder);
             switch (l_rndOrder) {
                 case (0):
                     // Deploy Order
+                    System.out.println("case 0 called");
                     l_numOfArmies = l_rand.nextInt(d_player.getD_Armies());
                     return new Deploy(d_player, toDefend().getD_CountryName(), l_numOfArmies);
                 case (1):
                     // Advance Order
-                    l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                    System.out.println("case 1 called");
+                    l_numOfArmies = l_rand.nextInt(d_player.getD_Armies());
                     return new Advance(d_player, toMoveFrom().getD_CountryName(), toAttack().getD_CountryName(), l_numOfArmies);
                 case (2):
-                    // AirLift Card
-                    l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                    // AirLift
+                    System.out.println("case 2 called");
+                    l_numOfArmies = l_rand.nextInt(d_player.getD_Armies());
                     return new Airlift(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
                 case (3):
                     //Blockade Card
+                    System.out.println("case 3 called");
                     return new Blockade(d_player, toDefend().getD_CountryName());
                 case (4):
                     //Bomb Card
+                    System.out.println("case 4 called");
                     return new Bomb(d_player, toAttack().getD_CountryName());
             }
         }
