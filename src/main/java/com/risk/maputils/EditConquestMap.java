@@ -144,9 +144,10 @@ public class EditConquestMap {
     /**
      * This Method Loads the Conquest Map passed to it.
      *
+     * @param p_fileName File Name of the conquest file.
      * @return the Map object with loaded values.
      */
-    public static Map loadConquestMap() {
+    public static Map loadConquestMap(String p_fileName) {
         String l_path = "src/main/resources/";
         String l_fileName = "Asia.map";
         File l_map = new File(l_path + l_fileName);
