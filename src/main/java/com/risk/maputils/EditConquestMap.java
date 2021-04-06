@@ -9,13 +9,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import static com.risk.main.Main.d_Log;
+
 
 /**
  * Helps in Loading the Conquest Format Map file
  *
  * @author Chirag
  */
-public class LoadConquestMap {
+public class EditConquestMap {
     public static Map p_map = new Map();
 
     /**
@@ -127,6 +129,17 @@ public class LoadConquestMap {
         }
     }
 
+    /**
+     * This Method Creates a new map.
+     *
+     * @return new map to be created
+     */
+    public static Map createConquestMap() {
+        p_map = new Map();
+        System.out.println("Conquest Map file not presented will be created from scratch");
+        p_map.d_isEmpty = true;
+        return p_map;
+    }
 
     /**
      * This Method Loads the Conquest Map passed to it.
