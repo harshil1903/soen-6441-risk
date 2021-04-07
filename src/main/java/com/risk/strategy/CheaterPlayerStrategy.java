@@ -4,6 +4,8 @@ import com.risk.models.Country;
 import com.risk.models.Player;
 import com.risk.orders.Order;
 
+import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 import java.util.List;
 
 /**
@@ -70,18 +72,32 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
      */
 
     @Override
-    public Order createOrder() {
-        for (Country l_cheaterCountry : d_player.getD_AssignedCountries()) {
-            for (Country l_cheaterAdjCountry : l_cheaterCountry.getD_AdjacentCountries()) {
-                l_cheaterAdjCountry.setD_Player(d_player);
-                d_player.addCountryToAssignedCountries(l_cheaterAdjCountry);
-                l_cheaterAdjCountry.setD_NumberOfArmies(l_cheaterAdjCountry.getD_NumberOfArmies() * 2);
-            }
-        }
+    public Order createOrder() throws ConcurrentModificationException {
+        List<Country> l_tempCountryList = new ArrayList<Country>();
         for (Country l_cheaterCountry : d_player.getD_AssignedCountries()) {
             for (Country l_cheaterAdjCountry : l_cheaterCountry.getD_AdjacentCountries()) {
                 if (l_cheaterAdjCountry.getD_Player() != d_player) {
+                    Player l_tempPlayer = l_cheaterAdjCountry.getD_Player();
+                    l_cheaterAdjCountry.setD_Player(d_player);
+                    l_tempCountryList.add(l_cheaterAdjCountry);
+                    l_tempPlayer.removeCountryFromAssignedCountries(l_cheaterAdjCountry.getD_CountryID());
+                    System.out.println("Cheater Player Occupied Country: " + l_cheaterAdjCountry.getD_CountryName());
+                }
+            }
+        }
+
+
+        for (Country l_newCountry : l_tempCountryList) {
+            if (!d_player.getD_AssignedCountries().contains(l_newCountry))
+                d_player.addCountryToAssignedCountries(l_newCountry);
+        }
+
+        for (Country l_cheaterCountry : d_player.getD_AssignedCountries()) {
+            for (Country l_cheaterAdjCountry : l_cheaterCountry.getD_AdjacentCountries()) {
+                if (l_cheaterAdjCountry.getD_Player() != d_player) {
+                    System.out.println("Number Of Army at " + l_cheaterAdjCountry.getD_CountryName() + " Before Cheater Player Occupied: " + l_cheaterAdjCountry.getD_NumberOfArmies());
                     l_cheaterAdjCountry.setD_NumberOfArmies(l_cheaterAdjCountry.getD_NumberOfArmies() * 2);
+                    System.out.println("Number Of Army at " + l_cheaterAdjCountry.getD_CountryName() + " After Cheater Player Occupied: " + l_cheaterAdjCountry.getD_NumberOfArmies());
                     break;
                 }
             }

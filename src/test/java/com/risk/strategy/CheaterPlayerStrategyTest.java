@@ -12,21 +12,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 import java.util.List;
-import java.util.Random;
 
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
-/**
- * Test cases to strategy of random player
- *
- * @author Harsh
- * @author Parth
- */
-
-public class RandomStrategyTest {
-    Player d_player1;
+public class CheaterPlayerStrategyTest {
+    Player d_player1,d_player2,d_player3;
     List<Country> d_country = new ArrayList<Country>();
 
     /**
@@ -43,7 +36,11 @@ public class RandomStrategyTest {
         }
 
         d_player1 = new Player("player_1");
+        d_player2 = new Player("player_2");
+        d_player3 = new Player("player_3");
         d_PlayerList.add(d_player1);
+        d_PlayerList.add(d_player2);
+        d_PlayerList.add(d_player3);
         AssignCountries.assignCountries();
         for (Continent l_continent : d_Map.getD_Continents()) {
             for (Country l_country : l_continent.getD_Countries()) {
@@ -68,11 +65,9 @@ public class RandomStrategyTest {
      * This method is to test strategy of random player
      */
     @Test
-    public void randomOrderTest() {
-        d_player1.setD_Armies(10);
-        d_player1.setD_playerStrategy(new RandomPlayerStrategy(d_player1, d_country));
-        Order order = d_player1.getD_playerStrategy().createOrder();
-        order.execute();
+    public void cheaterTest() {
+        d_player1.setD_playerStrategy(new CheaterPlayerStrategy(d_player1, d_country));
+        d_player1.getD_playerStrategy().createOrder();
     }
 
 }
