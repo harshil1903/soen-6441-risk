@@ -78,7 +78,7 @@ public class RandomPlayerStrategy extends PlayerStrategy {
         Random l_rand = new Random();
         int l_rndOrder = l_rand.nextInt(5);
         int l_numOfArmies;
-        if (l_rand.nextInt(5)>=0) {
+        if (l_rndOrder >= 0) {
             System.out.println(l_rndOrder);
             switch (l_rndOrder) {
                 case (0):

@@ -87,14 +87,14 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     @Override
     public Order createOrder() {
         Random l_rand = new Random();
-        int l_rndOrder = l_rand.nextInt(4);
+        int l_rndOrder = l_rand.nextInt(3);
         int l_numOfArmies;
         if (d_player.getD_Armies() > 0) {
             // Deploy Order
             l_numOfArmies = l_rand.nextInt(d_player.getD_Armies() + 1);
             return new Deploy(d_player, toDefend().getD_CountryName(), l_numOfArmies);
         } else {
-            if (l_rand.nextInt(5) != 0) {
+            if (l_rndOrder >= 0) {
                 switch (l_rndOrder) {
                     case (0):
                         // Advance Order
