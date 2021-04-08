@@ -21,7 +21,7 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
      * @param p_player  Player object
      * @param p_country List of country
      */
-    BenevolentPlayerStrategy(Player p_player, List<Country> p_country) {
+    public BenevolentPlayerStrategy(Player p_player, List<Country> p_country) {
         super(p_player, p_country);
     }
 

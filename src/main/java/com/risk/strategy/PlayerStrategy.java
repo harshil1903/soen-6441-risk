@@ -24,7 +24,7 @@ public abstract class PlayerStrategy {
      * @param p_player  the p player
      * @param p_country the p map
      */
-    PlayerStrategy(Player p_player, List<Country> p_country) {
+    public PlayerStrategy(Player p_player, List<Country> p_country) {
         d_player = p_player;
         d_country = p_country;
     }

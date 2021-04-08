@@ -20,7 +20,7 @@ public class RandomPlayerStrategy extends PlayerStrategy {
      * @param p_player  Player Object
      * @param p_country List of Country
      */
-    RandomPlayerStrategy(Player p_player, List<Country> p_country) {
+    public RandomPlayerStrategy(Player p_player, List<Country> p_country) {
         super(p_player, p_country);
     }
 

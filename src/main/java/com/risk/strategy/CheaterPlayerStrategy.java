@@ -21,7 +21,7 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
      * @param p_player  Player object
      * @param p_country List of country
      */
-    CheaterPlayerStrategy(Player p_player, List<Country> p_country) {
+    public CheaterPlayerStrategy(Player p_player, List<Country> p_country) {
         super(p_player, p_country);
     }
 
