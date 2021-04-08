@@ -37,6 +37,7 @@ public class AggressiveStrategyTest {
 
         d_player1 = new Player("player_1");
         d_PlayerList.add(d_player1);
+        d_PlayerList.add(new Player("player 2", "benevolent"));
         AssignCountries.assignCountries();
         for (Continent l_continent : d_Map.getD_Continents()) {
             for (Country l_country : l_continent.getD_Countries()) {

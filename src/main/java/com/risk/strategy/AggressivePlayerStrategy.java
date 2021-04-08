@@ -46,6 +46,7 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
             }
         }
 
+
         ArrayList<Country> l_toAttack =  new ArrayList<Country>();
 
 
@@ -118,7 +119,7 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
 
         if (new Random().nextBoolean()) {
             // Deploy Order
-            l_numOfArmies = l_rand.nextInt(d_player.getD_Armies() + 1);
+            //l_numOfArmies = l_rand.nextInt(d_player.getD_Armies() + 1);
             //return new Deploy(d_player, toAttackFrom().getD_CountryName(), l_numOfArmies);
             return new Deploy(d_player, l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
         } else {
