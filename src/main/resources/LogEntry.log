@@ -1,14 +1,580 @@
+Log: Welcome to warzone
+Log: Game Begins
+Log: New Phase : GameStartup
+Log: COMMAND : tournament -M europe -P benevolent aggressive cheater -G 3 -D 15
 Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Wales Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Wales Number Of Armies : 6
+Successfully Executed
+
 Log: Assigned countries randomly to players
 Log: Order Type : Deploy 
-Player : player_1 Country : Slovakia Number Of Armies : 10
+Player : benevolent0 Country : Portugal Number Of Armies : 9
 Successfully Executed
 
 Log: Order Type : Deploy 
-Player : player_1 Country : Slovakia Number Of Armies : 10
+Player : benevolent0 Country : Portugal Number Of Armies : 9
+Successfully Executed
+
+Log: aggressive1 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Wales Target Country : England Number Of Armies : 5
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Wales Target Country : England Number Of Armies : 5
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
 Successfully Executed
 
 Log: Order Type : Deploy 
-Player : player_1 Country : Slovakia Number Of Armies : 10
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Wales Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Wales Number Of Armies : 6
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Player doesnot contain airlift card
+Log: aggressive1 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : N_Ireland Target Country : Scotland Number Of Armies : 8
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : N_Ireland Target Country : Scotland Number Of Armies : 8
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 7
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 7
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : N_Ireland Number Of Armies : 4
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Source country name Portugal and Target country namePortugalare same so advance order can not apply here
+Log: aggressive1 won and got airlift
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : England Target Country : Denmark Number Of Armies : 4
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : England Target Country : Denmark Number Of Armies : 4
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : England Number Of Armies : 8
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : England Number Of Armies : 8
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : England Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : England Number Of Armies : 4
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : England Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : England Number Of Armies : 4
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Wales Target Country : England Number Of Armies : 6
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Wales Target Country : England Number Of Armies : 6
+Successfully Execute
+
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Player doesnot contain blockade card
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Slovakia Target Country : Hungary Number Of Armies : 11
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Slovakia Target Country : Hungary Number Of Armies : 11
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: aggressive1 won and got blockade
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Slovakia Target Country : Poland Number Of Armies : 9
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Slovakia Target Country : Poland Number Of Armies : 9
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: aggressive1 won and got blockade
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Slovakia Target Country : Austria Number Of Armies : 6
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Slovakia Target Country : Austria Number Of Armies : 6
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Austria Target Country : Hungary Number Of Armies : 5
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Austria Target Country : Hungary Number Of Armies : 5
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Austria Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Austria Number Of Armies : 6
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Source country name Hungary and Target country nameHungaryare same so advance order can not apply here
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Player doesnot contain airlift card
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Player doesnot contain airlift card
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Source country name Hungary and Target country nameHungaryare same so advance order can not apply here
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: aggressive1 won and got airlift
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Hungary Target Country : Austria Number Of Armies : 20
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Hungary Target Country : Austria Number Of Armies : 20
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Source country name Hungary and Target country nameHungaryare same so advance order can not apply here
+Log: aggressive1 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Austria Target Country : Hungary Number Of Armies : 19
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Austria Target Country : Hungary Number Of Armies : 19
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Austria Number Of Armies : 36
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Austria Number Of Armies : 36
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: aggressive1 won and got airlift
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Austria Target Country : Italy Number Of Armies : 36
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive1 Source Country : Austria Target Country : Italy Number Of Armies : 36
+Successfully Execute
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Austria Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Austria Number Of Armies : 6
+Successfully Executed
+
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive1 Country : Austria Number Of Armies : 3
 Successfully Executed
 
