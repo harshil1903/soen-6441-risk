@@ -115,6 +115,11 @@ public class Map extends Observable {
         return d_continents.contains(l_continent);
     }
 
+    /**
+     * Get country list of map
+     *
+     * @return the array list of all countries
+     */
     public ArrayList<Country> getCountryListOfMap(){
         ArrayList<Country> l_countries = new ArrayList<>();
 
