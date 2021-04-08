@@ -170,12 +170,18 @@ public class MapCommands {
         if (MapValidator.d_isValid == false) {
             System.out.println("Map cannot be saved");
             d_Log.notify("Map cannot be saved");
-        } else {
+        }
+        else {
             if(p_argumentTokens.get(1).equals("domination")) {
                 new MapWriter().writeMapFile(d_Map, l_file);
+                System.out.println("Map has been saved successfully");
+                d_Log.notify("Map has been saved successfully");
+
             }
             else if(p_argumentTokens.get(1).equals("conquest")){
                 new ConquestMapWriter().writeConquestMapFile(d_Map, l_file);
+                System.out.println("Map has been saved successfully");
+                d_Log.notify("Map has been saved successfully");
             }
         }
 
