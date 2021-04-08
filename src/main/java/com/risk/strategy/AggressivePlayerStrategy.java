@@ -4,6 +4,7 @@ import com.risk.models.Country;
 import com.risk.models.Player;
 import com.risk.orders.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -44,7 +45,23 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
                 return l_country;
             }
         }
-        return null;
+
+        ArrayList<Country> l_toAttack =  new ArrayList<Country>();
+
+
+        for(Country l_country : d_player.getD_AssignedCountries())
+        {
+            for(Country l_adjacentCountry : l_country.getD_AdjacentCountries())
+            {
+                if (l_adjacentCountry.getD_Player() != d_player){
+                    l_toAttack.add(l_adjacentCountry);
+                }
+            }
+        }
+
+        int l_random = new Random().nextInt(l_toAttack.size());
+        return l_toAttack.get(l_random);
+
     }
 
     /**
@@ -93,14 +110,43 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
         Random l_rand = new Random();
         int l_rndOrder = l_rand.nextInt(4);
         int l_numOfArmies;
-        if (d_player.getD_Armies() > 0) {
+
+        Country l_toAttackFrom, l_toAttack;
+
+        l_toAttackFrom = toAttackFrom();
+        l_toAttack = toAttack();
+
+        if (new Random().nextBoolean()) {
             // Deploy Order
             l_numOfArmies = l_rand.nextInt(d_player.getD_Armies() + 1);
-            return new Deploy(d_player, toAttackFrom().getD_CountryName(), l_numOfArmies);
+            //return new Deploy(d_player, toAttackFrom().getD_CountryName(), l_numOfArmies);
+            return new Deploy(d_player, l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
         } else {
             // Advance Order
-            l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies() + 1);
-            return new Advance(d_player, toAttackFrom().getD_CountryName(), toAttack().getD_CountryName(), l_numOfArmies);
+            //l_numOfArmies = l_rand.nextInt(toAttackFrom().getD_NumberOfArmies()) - 1;
+            l_numOfArmies = l_toAttackFrom.getD_NumberOfArmies() - 1;
+            if(l_numOfArmies <= 0)
+            {
+                //return new Deploy(d_player, toAttackFrom().getD_CountryName(), d_player.getD_Armies());
+                return new Deploy(d_player,l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
+            }
+
+            if(l_toAttackFrom.getD_AdjacentCountries().contains(l_toAttack)) {
+                //return new Advance(d_player, toAttackFrom().getD_CountryName(), toAttack().getD_CountryName(), l_numOfArmies);
+                return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_toAttack.getD_CountryName(), l_numOfArmies);
+            }
+            else
+            {
+                for(Country l_country : d_player.getD_AssignedCountries())
+                {
+                    if(l_country.getD_AdjacentCountries().contains(l_toAttack)){
+                        //return new Advance(d_player, toAttackFrom().getD_CountryName(), toAttack().getD_CountryName(), l_numOfArmies);
+                        return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_country.getD_CountryName(), l_numOfArmies);
+                    }
+                }
+            }
         }
+
+        return null;
     }
 }

@@ -89,20 +89,29 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
         Random l_rand = new Random();
         int l_rndOrder = l_rand.nextInt(3);
         int l_numOfArmies;
-        if (d_player.getD_Armies() > 0) {
+        if (new Random().nextBoolean()) {
             // Deploy Order
             l_numOfArmies = l_rand.nextInt(d_player.getD_Armies() + 1);
-            return new Deploy(d_player, toDefend().getD_CountryName(), l_numOfArmies);
+            return new Deploy(d_player, toDefend().getD_CountryName(), d_player.getD_Armies());
         } else {
             if (l_rndOrder >= 0) {
                 switch (l_rndOrder) {
                     case (0):
                         // Advance Order
-                        l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                        //l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                        l_numOfArmies = toMoveFrom().getD_NumberOfArmies() - 1;
+                        if(l_numOfArmies <= 0)
+                        {
+                            return new Deploy(d_player, toDefend().getD_CountryName(), d_player.getD_Armies());
+                        }
                         return new Advance(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
                     case (1):
                         // AirLift Card
                         l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
+                        if(l_numOfArmies <= 0)
+                        {
+                            return new Deploy(d_player, toDefend().getD_CountryName(), d_player.getD_Armies());
+                        }
                         return new Airlift(d_player, toMoveFrom().getD_CountryName(), toDefend().getD_CountryName(), l_numOfArmies);
                     case (2):
                         //Blockade Card

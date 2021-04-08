@@ -1,8 +1,5020 @@
 Log: Welcome to warzone
 Log: Game Begins
-Log: New Phase : PreMapLoad
-Log: COMMAND : editmap asia
+Log: New Phase : GameStartup
+Log: COMMAND : loadmap europe
 Log: Loaded map successfully from existing domination file
-Log: Map Validation Failed 
-Map data has been cleared, use editmap to load a map again
-Log: There should be atleast one Continent in the graph.
+Log: The map is connected
+Log: COMMAND : gameplayer -add harshil aggressive -add shivam benevolent
+Log: Player Name: harshil has joined the Game
+Log: Player Name: shivam has joined the Game
+Log: COMMAND : assigncountries
+Log: Assigned countries randomly to players
+Log: Countries have been successfully assigned to all the players
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : France Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : France Number Of Armies : 4
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 4
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: harshil won and got bomb
+Log: Order Type : Advance 
+Player : harshil Source Country : France Target Country : Spain Number Of Armies : 3
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : harshil Source Country : France Target Country : Spain Number Of Armies : 3
+Successfully Execute
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Rep_Ireland Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Rep_Ireland Number Of Armies : 4
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : France Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : France Number Of Armies : 4
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Advance 
+Player : harshil Source Country : France Target Country : Spain Number Of Armies : 3
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : harshil Source Country : France Target Country : Spain Number Of Armies : 3
+Successfully Execute
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Spain Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Spain Number Of Armies : 4
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: harshil won and got blockade
+Log: Order Type : Advance 
+Player : harshil Source Country : Spain Target Country : Portugal Number Of Armies : 5
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : harshil Source Country : Spain Target Country : Portugal Number Of Armies : 5
+Successfully Execute
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Wales Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Wales Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: harshil does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Spain Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Spain Number Of Armies : 4
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Advance 
+Player : harshil Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 4
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : harshil Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 4
+Successfully Execute
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Spain Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Spain Number Of Armies : 4
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Slovakia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: harshil won and got bomb
+Log: Order Type : Advance 
+Player : harshil Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 9
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : harshil Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 9
+Successfully Execute
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: harshil does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: harshil won and got airlift
+Log: Order Type : Advance 
+Player : harshil Source Country : Rep_Ireland Target Country : Wales Number Of Armies : 7
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : harshil Source Country : Rep_Ireland Target Country : Wales Number Of Armies : 7
+Successfully Execute
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 9
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 19
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 19
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Italy are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Corsica are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Denmark are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Italy are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 5 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 5 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Denmark are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Corsica are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Denmark are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Hungary are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Hungary are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 9
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Italy are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Italy are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Corsica are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Corsica are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Advance 
+Player : shivam Source Country : Belgum Target Country : Luxembourg Number Of Armies : 9
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : shivam Source Country : Belgum Target Country : Luxembourg Number Of Armies : 9
+Successfully Execute
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Source country name Belgum and Target country nameBelgumare same so advance order can not apply here
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Italy are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 12
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Denmark are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Austria are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 20
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 20
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Source country name Belgum and Target country nameBelgumare same so advance order can not apply here
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 9
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Slovakia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Slovakia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 15
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Luxembourg Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Advance 
+Player : shivam Source Country : Belgum Target Country : Luxembourg Number Of Armies : 30
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : shivam Source Country : Belgum Target Country : Luxembourg Number Of Armies : 30
+Successfully Execute
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Source country name Belgum and Target country nameBelgumare same so advance order can not apply here
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Source country name Belgum and Target country nameBelgumare same so advance order can not apply here
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Austria are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Denmark are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Denmark are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 20
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 20
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Italy are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Italy are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Corsica are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Corsica are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Hungary are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Denmark are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 15
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Belgum and Slovakia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Slovakia Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 20
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 20
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain airlift card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and France are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Hungary Number Of Armies : 6
+Successfully Executed
+
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: harshil Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Austria Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 10
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Belgum and Corsica are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: harshil Owns card: 
+Log: shivam Owns card: 
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : harshil Country : Wales Number Of Armies : 5
+Successfully Executed
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : shivam Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Executing Order
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+Log: Executing Order
+Log: Player doesnot contain blockade card
+Log: Invalid Order, not executed
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISS

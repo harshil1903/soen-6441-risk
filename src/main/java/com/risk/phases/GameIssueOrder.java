@@ -113,8 +113,31 @@ public class GameIssueOrder extends Game {
                     }
                 }
                 else {
-                    l_player.issueOrder();
-                    l_player.setD_noOrdersLeft(new Random().nextBoolean());
+                    if (!l_player.isD_noOrdersLeft()) {
+                        System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
+                        System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
+                        System.out.println("You own the following Countries along with their adjacent countries");
+
+                        System.out.printf("\t%-15s:\t%-15s%n", "COUNTRY", "NEIGHBOR COUNTRIES");
+
+                        for (Country l_country : l_player.getD_AssignedCountries()) {
+
+                            System.out.printf("\t%-15s:", l_country.getD_CountryName());
+
+                            for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
+                                System.out.printf("\t%-15s ", l_adjCountry.getD_CountryName());
+                            }
+                            System.out.println();
+                        }
+
+                        l_player.showCardList();
+
+                        l_player.issueOrder();
+                        l_player.setD_noOrdersLeft(new Random().nextBoolean());
+                    }
+                    else {
+                        System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped because they have no orders left");
+                    }
                 }
             }
         }
