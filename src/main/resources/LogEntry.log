@@ -1,83 +1,158 @@
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Czech_Rep has a 0 army so you can not apply Blockade order there
+Log: Portugal has a 0 army so you can not apply Blockade order there
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Before Blockade Card number of army in England is : 10
+Log: Before Blockade Card number of army in Slovakia is : 10
 Log: player_1applied Blockade Card successfully
-Log: After Blockade Card number of army in England is : 30
+Log: After Blockade Card number of army in Slovakia is : 30
 Log: Order Type : Blockade 
-Player : player_1 Country to block : England 
+Player : player_1 Country to block : Slovakia 
 Successfully Executed
 
 Log: Order Type : Blockade 
-Player : player_1 Country to block : England 
+Player : player_1 Country to block : Slovakia 
 Successfully Executed
 
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: player_1 does not have sufficient armies to be attack to the target country
+Log: Player doesnot contain bomb card
+Log: Order Type : Bomb 
+Player : player_1 Target Country : Rep_Ireland 
+Successfully Executed
+
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not attack on player_2 because of diplomacy card
+Log: New Phase : GameStartup
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: Countries have been successfully assigned to all the players
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: New Phase : PreMapLoad
+Log: New Phase : GameStartup
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : player_1 Country : France Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : player_1 Country : France Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : player_1 Country : France Number Of Armies : 3
+Successfully Executed
+
+Log: Loaded map successfully from existing domination file
+Log: The ContinentTempContinentAdded Successfully
+Log: The Country TestCountry Added Successfully
+Log: Loaded map successfully from existing domination file
+Log: The ContinentTempContinentAdded Successfully
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not use Airlift card on target country is not owned
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Before Airlift Card number of army in Majorca is : 4
+Log: player_1 applied Airlift Card successfully
+Log: After Airlift Card number of army in Majorca is : 9
+Log: Order Type : Airlift 
+Player : player_1 Source Country : Czech_Rep Target Country : Majorca Number Of Armies : 5 
+Successfully Executed
+
+Log: Order Type : Airlift 
+Player : player_1 Source Country : Czech_Rep Target Country : Majorca Number Of Armies : 5 
+Successfully Executed
+
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 does not have sufficient armies to be airlifted to the target country
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : player_1 Country : Sardinia Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : player_1 Country : Sardinia Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : player_1 Country : Sardinia Number Of Armies : 4
+Successfully Executed
+
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: The ContinentTempContinentAdded Successfully
+Log: The Country TestCountry Added Successfully
+Log: Loaded map successfully from existing domination file
+Log: The ContinentTempContinentAdded Successfully
+Log: Map file not presented will be created from scratch
+Log: Loaded map successfully from existing domination file
+Log: Map file not presented will be created from scratch
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Switzerland and Slovakia are not adjacent
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 won and got negotiate
 Log: Order Type : Advance 
-Player : player_1 Source Country : Slovakia Target Country : Corsica Number Of Armies : 9
+Player : player_1 Source Country : Germany Target Country : Luxembourg Number Of Armies : 7
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : player_1 Source Country : Germany Target Country : Luxembourg Number Of Armies : 7
 Successfully Execute
 
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: player_1 can not attack on player_2 because of diplomacy card
-Log: New Phase : GameStartup
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Assigned countries randomly to players
-Log: Countries have been successfully assigned to all the players
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: You are trying to deploy more armies than you have. Try Again in your next turn.
-Log: You currently have 3 number of reinforcement armies left.
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: New Phase : PreMapLoad
-Log: New Phase : GameStartup
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : player_1 Country : Czech_Rep Number Of Armies : 7
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : player_1 Country : Czech_Rep Number Of Armies : 7
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : player_1 Country : Czech_Rep Number Of Armies : 7
-Successfully Executed
-
-Log: Loaded map successfully from existing domination file
-Log: The ContinentTempContinentAdded Successfully
-Log: The Country TestCountry Added Successfully
-Log: Loaded map successfully from existing domination file
-Log: The ContinentTempContinentAdded Successfully
+Log: Sicily and Denmark are not adjacent
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
 Log: player_1 can not use Airlift card on target country is not owned
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Before Airlift Card number of army in Germany is : 4
+Log: Before Airlift Card number of army in Poland is : 4
 Log: player_1 applied Airlift Card successfully
-Log: After Airlift Card number of army in Germany is : 9
+Log: After Airlift Card number of army in Poland is : 9
 Log: Order Type : Airlift 
-Player : player_1 Source Country : Majorca Target Country : Germany Number Of Armies : 5 
+Player : player_1 Source Country : Netherlands Target Country : Poland Number Of Armies : 5 
 Successfully Executed
 
 Log: Order Type : Airlift 
-Player : player_1 Source Country : Majorca Target Country : Germany Number Of Armies : 5 
+Player : player_1 Source Country : Netherlands Target Country : Poland Number Of Armies : 5 
 Successfully Executed
 
 Log: Loaded map successfully from existing domination file
@@ -87,105 +162,28 @@ Log: Assigned countries randomly to players
 Log: player_1 does not have sufficient armies to be airlifted to the target country
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : player_1 Country : Belgum Number Of Armies : 10
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : player_1 Country : Belgum Number Of Armies : 10
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : player_1 Country : Belgum Number Of Armies : 10
-Successfully Executed
-
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: The ContinentTempContinentAdded Successfully
-Log: The Country TestCountry Added Successfully
-Log: Loaded map successfully from existing domination file
-Log: The ContinentTempContinentAdded Successfully
-Log: Map file not presented will be created from scratch
-Log: Loaded map successfully from existing domination file
-Log: Map file not presented will be created from scratch
-Log: Loaded map successfully from existing domination file
+Log: Belgum has a 0 army so you can not apply Blockade order there
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: N_Ireland and Switzerland are not adjacent
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Spain and England are not adjacent
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 can not use Airlift card on target country is not owned
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Before Airlift Card number of army in France is : 4
-Log: player_1 applied Airlift Card successfully
-Log: After Airlift Card number of army in France is : 9
-Log: Order Type : Airlift 
-Player : player_1 Source Country : Sicily Target Country : France Number Of Armies : 5 
-Successfully Executed
-
-Log: Order Type : Airlift 
-Player : player_1 Source Country : Sicily Target Country : France Number Of Armies : 5 
-Successfully Executed
-
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 does not have sufficient armies to be airlifted to the target country
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Denmark has a 0 army so you can not apply Blockade order there
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Before Blockade Card number of army in Sardinia is : 10
+Log: Before Blockade Card number of army in Spain is : 10
 Log: player_1applied Blockade Card successfully
-Log: After Blockade Card number of army in Sardinia is : 30
+Log: After Blockade Card number of army in Spain is : 30
 Log: Order Type : Blockade 
-Player : player_1 Country to block : Sardinia 
+Player : player_1 Country to block : Spain 
 Successfully Executed
 
 Log: Order Type : Blockade 
-Player : player_1 Country to block : Sardinia 
+Player : player_1 Country to block : Spain 
 Successfully Executed
 
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Denmark has a 0 army so you can not apply bomb order there
+Log: Rep_Ireland has a 0 army so you can not apply bomb order there
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
 Log: player_1 can not attack bomb on your own country
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Before Bomb Card number of army in Denmark is : 6
-Log: player_1 applied Bomb Card successfully
-Log: After Bomb Card number of army in Denmark is : 3
-Log: Order Type : Bomb 
-Player : player_1 Target Country : Denmark 
-Successfully Executed
-
-Log: Order Type : Bomb 
-Player : player_1 Target Country : Denmark 
-Successfully Executed
-
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
 Log: Loaded map successfully from existing domination file
@@ -227,21 +225,21 @@ Log: New Phase : PreMapLoad
 Log: New Phase : GameStartup
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Corsica has a 0 army so you can not apply bomb order there
+Log: Germany has a 0 army so you can not apply bomb order there
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: player_1 can not attack bomb on your own country
+Log: Sicily not adjacent with player_1countries
 Log: Loaded map successfully from existing domination file
 Log: Assigned countries randomly to players
-Log: Before Bomb Card number of army in Italy is : 6
+Log: Before Bomb Card number of army in Poland is : 6
 Log: player_1 applied Bomb Card successfully
-Log: After Bomb Card number of army in Italy is : 3
+Log: After Bomb Card number of army in Poland is : 3
 Log: Order Type : Bomb 
-Player : player_1 Target Country : Italy 
+Player : player_1 Target Country : Poland 
 Successfully Executed
 
 Log: Order Type : Bomb 
-Player : player_1 Target Country : Italy 
+Player : player_1 Target Country : Poland 
 Successfully Executed
 
 Log: Loaded map successfully from existing domination file

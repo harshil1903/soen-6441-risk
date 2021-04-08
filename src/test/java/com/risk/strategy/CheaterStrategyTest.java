@@ -60,6 +60,13 @@ public class CheaterStrategyTest {
     public void afterTest() throws InvalidMapException {
         d_country.clear();
         d_Map.clearMapData();
+
+        d_Map.getD_Continents().clear();
+
+        for (Player l_player : d_PlayerList)
+            l_player.clearPlayerData();
+
+        d_PlayerList.clear();
     }
 
     /**
