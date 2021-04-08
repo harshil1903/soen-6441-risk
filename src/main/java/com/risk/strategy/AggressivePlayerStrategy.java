@@ -21,7 +21,7 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
      * @param p_player  Player Object
      * @param p_country List of Country
      */
-    AggressivePlayerStrategy(Player p_player, List<Country> p_country) {
+    public AggressivePlayerStrategy(Player p_player, List<Country> p_country) {
         super(p_player, p_country);
     }
 

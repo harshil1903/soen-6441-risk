@@ -1,6 +1,7 @@
 package com.risk.models;
 
 import com.risk.orders.*;
+import com.risk.strategy.AggressivePlayerStrategy;
 import com.risk.strategy.PlayerStrategy;
 
 import java.util.ArrayList;
@@ -94,12 +95,23 @@ public class Player {
         d_cardList = new ArrayList<>();
         d_playerStrategyType = p_playerStrategyType;
 
-        if(d_playerStrategyType.equals("Human"))
+        if(d_playerStrategyType.equals("human"))
         {
             d_isHuman = true;
         }
         else {
             d_isHuman = false;
+        }
+        d_isHuman = false;
+
+        switch (p_playerStrategyType){
+            case "human":
+                d_isHuman = true;
+                break;
+
+            case "aggressive":
+                setD_playerStrategy(new AggressivePlayerStrategy(this, new ArrayList<Country>() ));
+
         }
     }
 
