@@ -1,8 +1,7 @@
 package com.risk.models;
 
 import com.risk.orders.*;
-import com.risk.strategy.AggressivePlayerStrategy;
-import com.risk.strategy.PlayerStrategy;
+import com.risk.strategy.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -111,6 +110,19 @@ public class Player {
 
             case "aggressive":
                 setD_playerStrategy(new AggressivePlayerStrategy(this, new ArrayList<Country>() ));
+                break;
+
+            case "benevolent":
+                setD_playerStrategy(new BenevolentPlayerStrategy(this, new ArrayList<Country>() ));
+                break;
+
+            case "cheater":
+                setD_playerStrategy(new CheaterPlayerStrategy(this, new ArrayList<Country>() ));
+                break;
+
+            case "random":
+                setD_playerStrategy(new RandomPlayerStrategy(this, new ArrayList<Country>() ));
+                break;
 
         }
     }
