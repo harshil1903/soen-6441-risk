@@ -62,6 +62,7 @@ public class RandomStrategyTest {
     @After
     public void afterTest() throws InvalidMapException {
         d_country.clear();
+        d_Map.clearMapData();
     }
 
     /**
@@ -73,6 +74,7 @@ public class RandomStrategyTest {
         d_player1.setD_playerStrategy(new RandomPlayerStrategy(d_player1, d_country));
         Order order = d_player1.getD_playerStrategy().createOrder();
         order.execute();
+        order.printOrder();
     }
 
 }
