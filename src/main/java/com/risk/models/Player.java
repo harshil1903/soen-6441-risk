@@ -8,8 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import static com.risk.main.Main.d_Log;
-import static com.risk.main.Main.d_PlayerList;
+import static com.risk.main.Main.*;
 
 /**
  * This class defines Player and its properties such as
@@ -109,19 +108,19 @@ public class Player {
                 break;
 
             case "aggressive":
-                setD_playerStrategy(new AggressivePlayerStrategy(this, new ArrayList<Country>() ));
+                setD_playerStrategy(new AggressivePlayerStrategy(this, d_Map.getCountryListOfMap() ));
                 break;
 
             case "benevolent":
-                setD_playerStrategy(new BenevolentPlayerStrategy(this, new ArrayList<Country>() ));
+                setD_playerStrategy(new BenevolentPlayerStrategy(this, d_Map.getCountryListOfMap() ));
                 break;
 
             case "cheater":
-                setD_playerStrategy(new CheaterPlayerStrategy(this, new ArrayList<Country>() ));
+                setD_playerStrategy(new CheaterPlayerStrategy(this, d_Map.getCountryListOfMap() ));
                 break;
 
             case "random":
-                setD_playerStrategy(new RandomPlayerStrategy(this, new ArrayList<Country>() ));
+                setD_playerStrategy(new RandomPlayerStrategy(this, d_Map.getCountryListOfMap() ));
                 break;
 
         }
