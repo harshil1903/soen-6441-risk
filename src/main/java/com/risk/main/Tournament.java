@@ -1,5 +1,6 @@
 package com.risk.main;
 
+import com.risk.controller.GameCommands;
 import com.risk.controller.MapCommands;
 import com.risk.exception.InvalidMapException;
 import com.risk.gameutils.AssignCountries;
@@ -8,6 +9,7 @@ import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Player;
 import com.risk.orders.Order;
+import com.risk.strategy.CheaterPlayerStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,9 @@ public class Tournament {
 
     public static void begin(List<String> p_argumentTokens){
 
+        d_listOfPlayerStrategies.clear();
+        d_mapNames.clear();
+
         if(!validateTournamentArguments(p_argumentTokens)){
             System.out.println("Exiting Tournament Mode");
             return;
@@ -31,30 +36,33 @@ public class Tournament {
 
         for(int i = 0 ; i < d_listOfPlayerStrategies.size(); i++)
         {
-            Player l_player = new Player(d_listOfPlayerStrategies.get(i),d_listOfPlayerStrategies.get(i));
+            Player l_player = new Player(d_listOfPlayerStrategies.get(i) + i,d_listOfPlayerStrategies.get(i));
+            System.out.println("Player Name and Strategy : " + l_player.getD_PlayerName() + "   " + l_player.d_playerStrategyType);
             d_PlayerList.add(l_player);
         }
 
         for(int i = 0 ; i < d_mapNames.size(); i++)
         {
-            List<String> l_mapName = new ArrayList<>();
-            l_mapName.add(d_mapNames.get(i));
-            boolean l_mapLoaded = false;
-            try {
-                l_mapLoaded = MapCommands.editMapCommand(l_mapName);
-            }
-            catch (Exception e)
-            {}
-
-            if(!l_mapLoaded){
-                System.out.println("Map "+ d_mapNames.get(i) + " could not be loaded, moving to next map");
-                continue;
-            }
-
             for(int j = 0; j < d_numGames ; j++) {
+                List<String> l_mapName = new ArrayList<>();
+                l_mapName.add(d_mapNames.get(i));
+                boolean l_mapLoaded = false;
+
                 try {
-                    System.out.println("PLAYING GAME " + j + " FOR MAP " + i + ":\n");
+                    l_mapLoaded = MapCommands.editMapCommand(d_mapNames);
+
+                    if(!l_mapLoaded){
+                        System.out.println("Map "+ d_mapNames.get(i) + " could not be loaded, moving to next map");
+                        continue;
+                    }
+
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + j + " FOR MAP " + i + ":\n\n\n");
                     playGame();
+                    d_Map.clearMapData();
+                    d_Map.getD_Continents().clear();
+
+                    for (Player l_player : d_PlayerList)
+                        l_player.clearPlayerData();
                 }
                 catch (Exception e){}
             }
@@ -75,7 +83,10 @@ public class Tournament {
             Reinforce.assignReinforcementArmies();
             System.out.println("\nArmies have been successfully reinforced among players");
 
+
+
             issueOrder();
+
 
             executeOrder();
 
@@ -85,11 +96,12 @@ public class Tournament {
             {
                 System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
                 MapCommands.showMapCommand(new ArrayList<>());
+                break;
             }
         }
 
         if(l_playerWon.equals("")){
-            System.out.println("Game is draw because nobody won in the given number of turns");
+            System.out.println("\n\n\n\nGame is draw because nobody won in the given number of turns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         }
 
 
@@ -97,9 +109,30 @@ public class Tournament {
 
     public static void issueOrder()
     {
-        for(Player l_Player : d_PlayerList)
+        for(Player l_player : d_PlayerList)
         {
-            l_Player.issueOrder();
+            l_player.issueOrder();
+            if (l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy) {
+                System.out.println("INSIDE INSTANCE OF CHEATER CHECK");
+                String l_playerWon = playerWon();
+
+                System.out.println("Printing Cheater Owned Countries \n");
+
+                for(Country l_country : l_player.getD_AssignedCountries())
+                {
+                    System.out.println(l_country.getD_CountryName());
+                    System.out.println(l_player.getD_AssignedCountries().size() + "\n\n\n");
+                }
+
+                if (!l_playerWon.equals("")) {
+                    System.out.println("\n\n******************************************\n");
+                    System.out.println("Player " + l_playerWon + " has Won the Game!!!");
+                    System.out.println("\n******************************************\n\n\n");
+                    d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
+                    GameCommands.showMapCommand(new ArrayList<>());
+                    break;
+                }
+            }
         }
     }
 
@@ -170,24 +203,32 @@ public class Tournament {
     public static boolean validateTournamentArguments(List<String> p_argumentTokens)
     {
         for (int i = 0; i < p_argumentTokens.size(); i++) {
-
+            System.out.println("TOKEN : " + p_argumentTokens.get(i));
             if (p_argumentTokens.get(i).equals("-M")) {
                 i++;
                 while(!p_argumentTokens.get(i).equals("-P")){
+                    System.out.println("MAP : " + p_argumentTokens.get(i));
                     d_mapNames.add(p_argumentTokens.get(i++));
                 }
+                i--;
             }
             else if (p_argumentTokens.get(i).equals("-P")) {
                 i++;
                 while(!p_argumentTokens.get(i).equals("-G")){
+                    System.out.println("Strategy : " + p_argumentTokens.get(i));
                     d_listOfPlayerStrategies.add(p_argumentTokens.get(i++));
                 }
+                i--;
             }
             else if (p_argumentTokens.get(i).equals("-G")) {
-                d_numGames = Integer.parseInt(p_argumentTokens.get(++i));
+                i++;
+                System.out.println("Num of Games : " + p_argumentTokens.get(i));
+                d_numGames = Integer.parseInt(p_argumentTokens.get(i));
             }
             else if (p_argumentTokens.get(i).equals("-D")) {
-                d_maxTurns = Integer.parseInt(p_argumentTokens.get(++i));
+                i++;
+                System.out.println("Num of Turns : " + p_argumentTokens.get(i));
+                d_maxTurns = Integer.parseInt(p_argumentTokens.get(i));
             }
             else {
                 System.out.println("Invalid option. Tournament Mode -M listofmapfiles -P listofplayerstrategies -G numberofgames -D maxnumberofturns options");
