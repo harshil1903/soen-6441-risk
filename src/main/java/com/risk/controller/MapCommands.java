@@ -68,13 +68,14 @@ public class MapCommands {
      * @param p_argumentTokens list of arguments provided with the command
      */
     public static void saveMapCommand(List<String> p_argumentTokens) {
-        if (p_argumentTokens.stream().count() != 1) {
+        if (p_argumentTokens.stream().count() != 2) {
             System.out.println("Wrong Number of Arguments provided. savemap command has only one argument.");
             d_Log.notify("Wrong Number of Arguments provided. savemap command has only one argument.");
             return;
         }
 
         File l_file = new File("src/main/resources/" + p_argumentTokens.get(0) + ".map");
+
         try {
             MapValidator.validateMap(d_Map);
         } catch (Exception e) {
@@ -87,7 +88,12 @@ public class MapCommands {
             System.out.println("Map cannot be saved");
             d_Log.notify("Map cannot be saved");
         } else {
-            new MapWriter().writeMapFile(d_Map, l_file);
+            if(p_argumentTokens.get(1).equals("domination")) {
+                new MapWriter().writeMapFile(d_Map, l_file);
+            }
+            else if(p_argumentTokens.get(1).equals("conquest")){
+                new ConquestMapWriter().writeConquestMapFile(d_Map, l_file);
+            }
         }
 
 
