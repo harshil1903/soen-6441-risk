@@ -4,6 +4,7 @@ import com.risk.gameutils.Reinforce;
 import com.risk.main.GameEngine;
 import com.risk.models.Country;
 import com.risk.models.Player;
+import com.risk.strategy.CheaterPlayerStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Scanner;
 
 import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_PlayerList;
+import static com.risk.main.Tournament.playerWon;
 
 /**
  * Game issue order allows players to issue their orders
@@ -114,6 +116,16 @@ public class GameIssueOrder extends Game {
                 }
                 else {
                     if (!l_player.isD_noOrdersLeft()) {
+
+                        if(l_player.getD_AssignedCountries().size() == 0)
+                        {
+                            System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() +
+                                    " has no countries left and hence is out of the game");
+                            d_PlayerList.remove(l_player);
+                            continue;
+                        }
+
+
                         System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
                         System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
                         System.out.println("You own the following Countries along with their adjacent countries");
@@ -133,6 +145,20 @@ public class GameIssueOrder extends Game {
                         l_player.showCardList();
 
                         l_player.issueOrder();
+
+                        if(l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy)
+                        {
+                            String l_playerWon = playerWon();
+
+                            if (!l_playerWon.equals("")) {
+                                System.out.println("\n\n******************************************\n");
+                                System.out.println("Player " + l_playerWon + " has Won the Game!!!");
+                                System.out.println("\n******************************************\n\n\n");
+                                d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
+                                showMap(new ArrayList<>());
+                                endGame();
+                            }
+                        }
                         l_player.setD_noOrdersLeft(new Random().nextBoolean());
                     }
                     else {

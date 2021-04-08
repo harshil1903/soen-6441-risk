@@ -2,11 +2,13 @@ package com.risk.phases;
 
 import com.risk.controller.GameCommands;
 import com.risk.main.GameEngine;
+import com.risk.main.Main;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.risk.main.Main.d_Log;
+import static com.risk.main.Main.d_PlayerList;
 
 /**
  * Abstract Class for Game Phase
@@ -96,6 +98,6 @@ public abstract class Game extends Phase {
     public void endGame() {
         System.out.println("Ending Game");
         d_Log.notify("Ending Game");
-        return;
+        d_gameEngine.runGame();
     }
 }

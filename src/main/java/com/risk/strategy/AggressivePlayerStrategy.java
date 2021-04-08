@@ -46,6 +46,7 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
             }
         }
 
+
         ArrayList<Country> l_toAttack =  new ArrayList<Country>();
 
 
