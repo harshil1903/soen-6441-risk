@@ -113,7 +113,16 @@ public class Tournament {
         {
             l_player.issueOrder();
             if (l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy) {
+                System.out.println("INSIDE INSTANCE OF CHEATER CHECK");
                 String l_playerWon = playerWon();
+
+                System.out.println("Printing Cheater Owned Countries \n");
+
+                for(Country l_country : l_player.getD_AssignedCountries())
+                {
+                    System.out.println(l_country.getD_CountryName());
+                    System.out.println(l_player.getD_AssignedCountries().size() + "\n\n\n");
+                }
 
                 if (!l_playerWon.equals("")) {
                     System.out.println("\n\n******************************************\n");
