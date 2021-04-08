@@ -4,6 +4,7 @@ import com.risk.exception.InvalidMapException;
 import com.risk.maputils.*;
 import com.risk.models.Player;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,9 @@ import static com.risk.main.Main.*;
  * @author Harshil
  */
 public class GameCommands {
+    public enum d_playerStrategyType {human, aggressive, benevolent, cheater, random}
+
+
     /**
      * Validates the command arguments and then loads the map.
      *
@@ -74,13 +78,16 @@ public class GameCommands {
     public static void gamePlayerCommand(List<String> p_argumentTokens) {
 
         String l_playerName, l_playerStrategy;
-        int l_flag = 0;
+        int l_flag, l_flag1;
 
         for (int i = 0; i < p_argumentTokens.size(); i++) {
+            l_flag = 0;
+            l_flag1 = 0;
+
             if (p_argumentTokens.get(i).equals("-add")) {
                 try {
                     l_playerName = p_argumentTokens.get(++i);
-                    //l_playerStrategy = p_argumentTokens.get(++i);
+                    l_playerStrategy = p_argumentTokens.get(++i);
 
                     for (Player l_player : d_PlayerList) {
                         if (l_player.getD_PlayerName().equals(l_playerName)) {
@@ -96,17 +103,32 @@ public class GameCommands {
                         continue;
                     }
 
+                    for(d_playerStrategyType j : d_playerStrategyType.values())
+                    {
+                        if(j.name().equals(l_playerStrategy)){
+                            l_flag1 = 1;
+                            break;
+                        }
+                    }
+
+                    if(l_flag1 == 0){
+                        System.out.println("Invalid Strategy Type, Player " + l_playerName + " not added. Allowed Types of Strategy are :" +
+                                "human, aggressive, benevolent, cheater, random");
+                        d_Log.notify("Invalid Strategy Type, Player " + l_playerName + " not added. Allowed Types of Strategy are :" +
+                                "human, aggressive, benevolent, cheater, random");
+                        break;
+                    }
                     System.out.println("Player Name: " + l_playerName + " has joined the Game");
 
                     d_Log.notify("Player Name: " + l_playerName + " has joined the Game");
-                    Player l_player = new Player(l_playerName,"Human");
-                    //Player l_player = new Player(l_playerName,l_playerStrategy);
+                    //Player l_player = new Player(l_playerName,"Human");
+                    Player l_player = new Player(l_playerName,l_playerStrategy);
                     d_PlayerList.add(l_player);
 
 
                 } catch (Exception e) {
-                    System.out.println("Wrong number of Arguments provided. add option has 1 arguments");
-                    d_Log.notify("Wrong number of Arguments provided. add option has 1 arguments");
+                    System.out.println("Wrong number of Arguments provided. add option has 2 arguments");
+                    d_Log.notify("Wrong number of Arguments provided. add option has 2 arguments");
                     return;
                 }
             } else if (p_argumentTokens.get(i).equals("-remove")) {
