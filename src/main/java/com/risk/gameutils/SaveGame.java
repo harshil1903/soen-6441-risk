@@ -42,6 +42,25 @@ public class SaveGame {
 
 
     /**
+     * Process the map used in the game and add it to Game file
+     *
+     * @return the Map data to be added to game file.
+     */
+    public StringBuilder processCountries(Map p_Map) {
+        StringBuilder l_countryData = new StringBuilder();
+        l_countryData.append("\n[countries]");
+        for(Continent l_continent:p_Map.getD_Continents()){
+            for(Country l_country:l_continent.getD_Countries()){
+                l_countryData.append("\n"+l_country.getD_CountryName()+" "+l_country.getD_ContinentID()
+                        +" "+l_country.getD_NumberOfArmies());
+            }
+        }
+        l_countryData.append("\n");
+        return l_countryData;
+    }
+
+
+    /**
      * Process the current phase of the game and add it to Game file
      *
      * @return the Map data to be added to game file.
@@ -73,7 +92,7 @@ public class SaveGame {
             for (String card : player.getD_cardList()) {
                 l_playerData.append(card + " ");
             }
-            l_playerData.append("\nNo of Armies:");
+            l_playerData.append("\nNo of Armies: ");
             l_playerData.append(player.getD_Armies());
             l_playerData.append("\n \n");
         }
@@ -89,7 +108,7 @@ public class SaveGame {
      * //     * @param d_PlayerList contains the list of all the players
      */
     //public void saveGame(Map p_Map, Phase p_gamePhase, ArrayList<Player> d_PlayerList,String d_fileName){
-    public void saveGame(String d_fileName, ArrayList<Player> d_PlayerListGame) {
+    public void saveGame(String d_fileName, ArrayList<Player> d_PlayerListGame,Map p_Map) {
         String p_mapName = "europe";
 
 
@@ -106,6 +125,9 @@ public class SaveGame {
             StringBuilder l_phaseData = processPhase();
             l_fileWriter.write(l_phaseData.toString());
 
+            StringBuilder l_countryData = processCountries(p_Map);
+            l_fileWriter.write(l_countryData.toString());
+
             StringBuilder l_playerData = processPlayers(d_PlayerListGame);
             l_fileWriter.write(l_playerData.toString());
 
@@ -116,30 +138,30 @@ public class SaveGame {
     }
 
 
-//    public static void main(String[] args) throws InvalidMapException {
-//        SaveGame sg = new SaveGame();
-//
-//        /**
-//         * Contains list of players.
-//         */
-//        ArrayList<Player> d_PlayerListGame = new ArrayList<Player>();
-//        Player P1 = new Player("P1");
-//        Player P2 = new Player("P2");
-//        Player P3 = new Player("P3");
-//        P1.addCard("first");
-//        P2.addCard("first");
-//        P2.addCard("first");
-//        P3.addCard("first");
-//        P3.addCard("first");
-//        P3.addCard("last");
-//        d_PlayerListGame.add(P1);
-//        d_PlayerListGame.add(P2);
-//        d_PlayerListGame.add(P3);
-//
-//        Map d_Map= EditMap.editMap("europe");
-//        assignCountries(d_PlayerListGame,d_Map);
-//        sg.saveGame("Game1",d_PlayerListGame);
-//        //displayGameMap(d_Map);
-//
-//    }
+    public static void main(String[] args) throws InvalidMapException {
+        SaveGame sg = new SaveGame();
+
+        /**
+         * Contains list of players.
+         */
+        ArrayList<Player> d_PlayerListGame = new ArrayList<Player>();
+        Player P1 = new Player("P1");
+        Player P2 = new Player("P2");
+        Player P3 = new Player("P3");
+        P1.addCard("first");
+        P2.addCard("first");
+        P2.addCard("first");
+        P3.addCard("first");
+        P3.addCard("first");
+        P3.addCard("last");
+        d_PlayerListGame.add(P1);
+        d_PlayerListGame.add(P2);
+        d_PlayerListGame.add(P3);
+
+        Map d_Map= EditMap.editMap("europe");
+        assignCountries(d_PlayerListGame,d_Map);
+        sg.saveGame("Game1",d_PlayerListGame,d_Map);
+        //displayGameMap(d_Map);
+
+    }
 }
