@@ -18,6 +18,9 @@ import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_PlayerList;
 import static com.risk.main.Main.d_Map;
 
+
+
+//tournament -M europe -P benevolent benevolent cheater -G 3 -D 15
 public class Tournament {
     static ArrayList<String> d_mapNames = new ArrayList<>();
     static ArrayList<String> d_listOfPlayerStrategies = new ArrayList<>();
@@ -56,7 +59,7 @@ public class Tournament {
                         continue;
                     }
 
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + j + " FOR MAP " + i + ":\n\n\n");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + j+1 + " FOR MAP " + i+1 + ":\n\n\n");
                     playGame();
                     d_Map.clearMapData();
                     d_Map.getD_Continents().clear();
@@ -74,14 +77,16 @@ public class Tournament {
         int l_turnCount = 0;
         String l_playerWon = "";
 
+        AssignCountries.assignCountries();
+        System.out.println("\n\nCountries have been successfully assigned to all the players\n\n");
+
         for(int i = 0 ; i < d_maxTurns ; i++)
         {
-            AssignCountries.assignCountries();
-            System.out.println("Countries have been successfully assigned to all the players");
+            System.out.println("\n\nNEW TURN \n\n");
 
-            System.out.println("\nReinforcing Armies");
+            System.out.println("\nReinforcing Armies\n\n");
             Reinforce.assignReinforcementArmies();
-            System.out.println("\nArmies have been successfully reinforced among players");
+            System.out.println("\nArmies have been successfully reinforced among players\n\n\n\n");
 
 
 
@@ -97,6 +102,20 @@ public class Tournament {
                 System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
                 MapCommands.showMapCommand(new ArrayList<>());
                 break;
+            }
+
+            for(Player p : d_PlayerList)
+            {
+                if(p.getD_AssignedCountries().size() == d_Map.getCountryListOfMap().size())
+                {
+                    System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
+                    MapCommands.showMapCommand(new ArrayList<>());
+                    break;
+                }
+            }
+
+            for(Country c : d_Map.getCountryListOfMap()){
+                System.out.println("Country Name : " + c.getD_CountryName() + "   Owned by : " + c.getD_Player().getD_PlayerName());
             }
         }
 
@@ -116,14 +135,15 @@ public class Tournament {
                 System.out.println("INSIDE INSTANCE OF CHEATER CHECK");
                 String l_playerWon = playerWon();
 
-                System.out.println("Printing Cheater Owned Countries \n");
+//                System.out.println("Printing Cheater Owned Countries \n");
+//
+//                for(Country l_country : l_player.getD_AssignedCountries())
+//                {
+//                    System.out.println(l_country.getD_CountryName());
+//                }
 
-                for(Country l_country : l_player.getD_AssignedCountries())
-                {
-                    System.out.println(l_country.getD_CountryName());
-                    System.out.println(l_player.getD_AssignedCountries().size() + "\n\n\n");
-                }
-
+                System.out.println("Player Won value : " + l_playerWon);
+                System.out.println(l_player.getD_AssignedCountries().size() + "\n\n\n");
                 if (!l_playerWon.equals("")) {
                     System.out.println("\n\n******************************************\n");
                     System.out.println("Player " + l_playerWon + " has Won the Game!!!");
@@ -164,7 +184,7 @@ public class Tournament {
             }
 
         }
-        System.out.println("Executing Orders finished\n \n\nNEW TURN \n");
+        System.out.println("Executing Orders finished\n \n");
 
         for (Player l_player : d_PlayerList) {
             l_player.getDiplomacyPlayer().clear();
