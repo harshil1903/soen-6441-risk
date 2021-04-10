@@ -16,43 +16,68 @@ import java.util.Scanner;
 
 /**
  * Helps in loading previously load game form the game file.
+ *
  * @author Chirag
  */
 public class LoadGame {
 
-    private static Map d_Map=new Map();
+    private static Map d_Map = new Map();
     private static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
-    private  static Phase d_GamePhase;
+    private static Phase d_GamePhase;
 
     /**
      * returns map data member.
+     *
      * @return Map to be returned.
      */
-    public static Map getD_Map() {return d_Map;}
+    public static Map getD_Map() {
+        return d_Map;
+    }
 
     /**
      * returns list of player
+     *
      * @return arraylist of player
      */
-    public static ArrayList<Player> getD_PlayerList(){ return d_PlayerList;}
+    public static ArrayList<Player> getD_PlayerList() {
+        return d_PlayerList;
+    }
 
     /**
      * returns phase of the saved game
+     *
      * @return current phase of the game
      */
-    public static Phase getD_GamePhase(){return d_GamePhase;}
+    public static Phase getD_GamePhase() {
+        return d_GamePhase;
+    }
 
 
-
-    public static void fillMap(Scanner p_gameReader) throws InvalidMapException {
+    /**
+     * Retrieves the map name asd creates new map.
+     * @param p_gameReader reads the game file
+     * @throws InvalidMapException if game file not present
+     */
+    public static void getMap(Scanner p_gameReader) throws InvalidMapException {
         while (p_gameReader.hasNextLine()) {
             String l_line = p_gameReader.nextLine();
             if (l_line.equals("")) break;
             String[] l_parts = l_line.split(" ");
-            String p_mapName=l_parts[0];
-            d_Map= EditMap.editMap(p_mapName);
+            String p_mapName = l_parts[0];
+            d_Map = EditMap.editMap(p_mapName);
         }
     }
+
+    public static void getPhase(Scanner p_gameReader) {
+        while (p_gameReader.hasNextLine()) {
+            String l_line = p_gameReader.nextLine();
+            if (l_line.equals("")) break;
+            String[] l_parts = l_line.split(" ");
+            String p_phaseName = l_parts[0];
+            //phase to be set
+            }
+        }
+
 
 
     public static void loadGame(String p_gameFile) {
@@ -66,11 +91,11 @@ public class LoadGame {
                 while (l_gameReader.hasNextLine()) {
                     String l_line = l_gameReader.nextLine();
                     if (l_line.equals("[map]")) {
-                        fillMap(l_gameReader);
+                        getMap(l_gameReader);
                     }
-//                    if (l_line.equals("[countries]")) {
-//                        getCountries(l_gameReader, p_Map);
-//                    }
+                    if (l_line.equals("[phase]")) {
+                        getPhase(l_gameReader);
+                    }
 //                    if (l_line.equals("[borders]")) {
 //                        getAdjacentCountries(l_gameReader, p_Map);
 //                    }
@@ -87,10 +112,11 @@ public class LoadGame {
 
         }
     }
-    public static void main(String[] args) {
-        LoadGame.loadGame("Game1");
-        ShowMap.displayEditorMap(d_Map);
 
-    }
+//    public static void main(String[] args) {
+//        LoadGame.loadGame("Game1");
+//        //ShowMap.displayEditorMap(d_Map);
+//
+//    }
 }
 
