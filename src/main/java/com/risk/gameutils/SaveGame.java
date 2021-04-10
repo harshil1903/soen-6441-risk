@@ -41,29 +41,44 @@ public class SaveGame {
     }
 
 
-    public StringBuilder processPlayers(ArrayList<Player> d_PlayerList){
-        StringBuilder l_mapData = new StringBuilder();
-        l_mapData.append("\n");
-        l_mapData.append("[players]");
-        l_mapData.append("\n");
-        for(Player player:d_PlayerList){
-            l_mapData.append(player.getD_PlayerName());
-            //l_mapData.append("\n \n");
-            l_mapData.append("\nCountries Owned: ");
-            for(Country l_country:player.getD_AssignedCountries()){
-                l_mapData.append(l_country.getD_CountryName()+" ");
-            }
-            l_mapData.append("\nCards: ");
+    /**
+     * Process the current phase of the game and add it to Game file
+     *
+     * @return the Map data to be added to game file.
+     */
+    public StringBuilder processPhase() {
+        String p_phaseName = "PostMapLoad";
+        StringBuilder l_phaseData = new StringBuilder();
+        l_phaseData.append("\n[phase]");
+        l_phaseData.append("\n");
+        l_phaseData.append(p_phaseName);
+        l_phaseData.append("\n");
+        return l_phaseData;
+    }
 
-            for(String card:player.getD_cardList()){
-                l_mapData.append(card+" ");
+    public StringBuilder processPlayers(ArrayList<Player> d_PlayerList) {
+        StringBuilder l_playerData = new StringBuilder();
+        l_playerData.append("\n");
+        l_playerData.append("[players]");
+        l_playerData.append("\n");
+        for (Player player : d_PlayerList) {
+            l_playerData.append(player.getD_PlayerName());
+            //l_mapData.append("\n \n");
+            l_playerData.append("\nCountries Owned: ");
+            for (Country l_country : player.getD_AssignedCountries()) {
+                l_playerData.append(l_country.getD_CountryName() + " ");
             }
-            l_mapData.append("\nNo of Armies:");
-            l_mapData.append(player.getD_Armies());
-            l_mapData.append("\n \n");
+            l_playerData.append("\nCards: ");
+
+            for (String card : player.getD_cardList()) {
+                l_playerData.append(card + " ");
+            }
+            l_playerData.append("\nNo of Armies:");
+            l_playerData.append(player.getD_Armies());
+            l_playerData.append("\n \n");
         }
-        l_mapData.append("\n");
-        return l_mapData;
+        l_playerData.append("\n");
+        return l_playerData;
     }
 
     /**
@@ -74,7 +89,7 @@ public class SaveGame {
      * //     * @param d_PlayerList contains the list of all the players
      */
     //public void saveGame(Map p_Map, Phase p_gamePhase, ArrayList<Player> d_PlayerList,String d_fileName){
-    public void saveGame(String d_fileName,ArrayList<Player> d_PlayerListGame) {
+    public void saveGame(String d_fileName, ArrayList<Player> d_PlayerListGame) {
         String p_mapName = "europe";
 
 
@@ -87,8 +102,13 @@ public class SaveGame {
             l_fileWriter = new FileWriter(l_map, false);
             StringBuilder l_mapData = processMap();
             l_fileWriter.write(l_mapData.toString());
+
+            StringBuilder l_phaseData = processPhase();
+            l_fileWriter.write(l_phaseData.toString());
+
             StringBuilder l_playerData = processPlayers(d_PlayerListGame);
             l_fileWriter.write(l_playerData.toString());
+
             l_fileWriter.close();
         } catch (IOException e) {
             System.err.println(e.getMessage());
