@@ -136,6 +136,7 @@ public class Map extends Observable {
     public void clearMapData() {
         for (Continent l_continent : this.getD_Continents()) {
             for (Country l_country : l_continent.getD_Countries()) {
+                l_country.getD_AdjacentCountries().clear();
                 l_country = null;
             }
             l_continent.getD_Countries().clear();
