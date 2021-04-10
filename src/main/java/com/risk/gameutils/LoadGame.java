@@ -80,6 +80,21 @@ public class LoadGame {
 
 
 
+    public static void getCountries(Scanner p_gameReader){
+        while (p_gameReader.hasNextLine()) {
+            String l_line = p_gameReader.nextLine();
+            if (l_line.equals("")) break;
+            String[] l_parts = l_line.split(" ");
+            String p_countryName = l_parts[0];
+            int p_continentId=Integer.parseInt(l_parts[1]);
+            int p_armies=Integer.parseInt(l_parts[2]);
+            System.out.println(p_countryName +" "+p_continentId+" "+p_armies);
+            Continent l_continent=d_Map.getContinentFromContinentList(p_continentId);
+            Country l_country=l_continent.getCountryFromCountryName(p_countryName);
+            l_country.setD_NumberOfArmies(p_armies);
+        }
+    }
+
     public static void loadGame(String p_gameFile) {
         String l_path = "src/main/resources/";
         String l_fileName = p_gameFile + ".game";
@@ -96,9 +111,9 @@ public class LoadGame {
                     if (l_line.equals("[phase]")) {
                         getPhase(l_gameReader);
                     }
-//                    if (l_line.equals("[borders]")) {
-//                        getAdjacentCountries(l_gameReader, p_Map);
-//                    }
+                    if (l_line.equals("[countries]")) {
+                        getCountries(l_gameReader);
+                    }
                 }
                 System.out.println("Loaded map successfully form existing domination file");
 
