@@ -138,30 +138,30 @@ public class SaveGame {
     }
 
 
-    public static void main(String[] args) throws InvalidMapException {
-        SaveGame sg = new SaveGame();
-
-        /**
-         * Contains list of players.
-         */
-        ArrayList<Player> d_PlayerListGame = new ArrayList<Player>();
-        Player P1 = new Player("P1");
-        Player P2 = new Player("P2");
-        Player P3 = new Player("P3");
-        P1.addCard("first");
-        P2.addCard("first");
-        P2.addCard("first");
-        P3.addCard("first");
-        P3.addCard("first");
-        P3.addCard("last");
-        d_PlayerListGame.add(P1);
-        d_PlayerListGame.add(P2);
-        d_PlayerListGame.add(P3);
-
-        Map d_Map= EditMap.editMap("europe");
-        assignCountries(d_PlayerListGame,d_Map);
-        sg.saveGame("Game1",d_PlayerListGame,d_Map);
-        //displayGameMap(d_Map);
-
-    }
+//    public static void main(String[] args) throws InvalidMapException {
+//        SaveGame sg = new SaveGame();
+//
+//        /**
+//         * Contains list of players.
+//         */
+//        ArrayList<Player> d_PlayerListGame = new ArrayList<Player>();
+//        Player P1 = new Player("P1");
+//        Player P2 = new Player("P2");
+//        Player P3 = new Player("P3");
+//        P1.addCard("first");
+//        P2.addCard("first");
+//        P2.addCard("first");
+//        P3.addCard("first");
+//        P3.addCard("first");
+//        P3.addCard("last");
+//        d_PlayerListGame.add(P1);
+//        d_PlayerListGame.add(P2);
+//        d_PlayerListGame.add(P3);
+//
+//        Map d_Map= EditMap.editMap("europe");
+//        assignCountries(d_PlayerListGame,d_Map);
+//        sg.saveGame("Game1",d_PlayerListGame,d_Map);
+//        //displayGameMap(d_Map);
+//
+//    }
 }
