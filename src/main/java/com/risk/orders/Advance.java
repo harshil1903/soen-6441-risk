@@ -135,6 +135,8 @@ public class Advance implements Order {
                     int l_previousArmies = d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies;
                     d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy + l_previousArmies);
                     d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
+                    System.out.println(d_player.getD_PlayerName() + "Successfully Defend Country " + d_targetCountryName);
+                    d_Log.notify(d_player.getD_PlayerName() + "Successfully Defend Country " + d_targetCountryName);
                 }
 
             }
