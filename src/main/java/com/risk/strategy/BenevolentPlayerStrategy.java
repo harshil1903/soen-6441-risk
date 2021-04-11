@@ -18,6 +18,9 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     /**
      * Instantiates a new Player strategy.
      *
+     * It focuses on protecting its weak countries (deploys on its weakest country, never attacks, then moves its
+     * armies in order to reinforce its weaker country).
+     *
      * @param p_player  Player object
      * @param p_country List of country
      */
@@ -40,8 +43,6 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
      * Decide which country should be defend
      * Benevolent Player decide to defend its country with the most armies
      *
-     * It focuses on protecting its weak countries (deploys on its weakest country, never attacks, then moves its
-     * armies in order to reinforce its weaker country).
      *
      * @return current player country with most number of armies
      */
