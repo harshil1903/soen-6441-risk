@@ -17,6 +17,9 @@ public class RandomPlayerStrategy extends PlayerStrategy {
     /**
      * Instantiates a new Player strategy.
      *
+     * This kind of strategy deploys on a random country, attacks random neighboring countries, and moves
+     * armies randomly between its countries.
+     *
      * @param p_player  Player Object
      * @param p_country List of Country
      */
