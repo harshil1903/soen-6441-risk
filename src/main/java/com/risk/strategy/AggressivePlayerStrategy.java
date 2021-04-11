@@ -28,7 +28,10 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
 
     /**
      * Decide the country to attack to
-     * Aggressive Player always attack with its strongest country
+     * Aggressive Player always attack with its strongest country.
+     *
+     * It focuses on centralization of forces and then attack, i.e. it deploys on its strongest country, then always
+     * attack with its strongest country, then moves its armies in order to maximize aggregation of forces in one country.
      *
      * @return l_country target country
      */
