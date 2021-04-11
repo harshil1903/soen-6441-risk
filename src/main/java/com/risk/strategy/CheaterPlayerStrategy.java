@@ -20,6 +20,13 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
     /**
      * Instantiates a new Player strategy.
      *
+     * In this type of strategy, issueOrder() method conquers all the immediate neighboring enemy countries,
+     * and then doubles the number of armies on its countries that have enemy neighbors.
+     *
+     * The cheater’s strategy implementation will still be called when the issueOrder() method, but will not end up
+     * creating orders, but rather implement the above-stated behavior by directly affecting the map during the order
+     * creation phase.
+     *
      * @param p_player  Player object
      * @param p_country List of country
      */
