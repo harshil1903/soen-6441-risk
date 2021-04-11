@@ -76,12 +76,13 @@ public class SaveGame {
     }
 
     public StringBuilder processPlayers(ArrayList<Player> d_PlayerList) {
+        int l_playerId=1;
         StringBuilder l_playerData = new StringBuilder();
         l_playerData.append("\n");
         l_playerData.append("[players]");
         l_playerData.append("\n");
         for (Player player : d_PlayerList) {
-            l_playerData.append(player.getD_PlayerName());
+            l_playerData.append(l_playerId+" "+player.getD_PlayerName());
             //l_mapData.append("\n \n");
             l_playerData.append("\nCountries Owned: ");
             for (Country l_country : player.getD_AssignedCountries()) {
@@ -94,7 +95,8 @@ public class SaveGame {
             }
             l_playerData.append("\nNo of Armies: ");
             l_playerData.append(player.getD_Armies());
-            l_playerData.append("\n \n");
+            l_playerData.append("\n\n");
+            l_playerId++;
         }
         l_playerData.append("\n");
         return l_playerData;
@@ -138,30 +140,30 @@ public class SaveGame {
     }
 
 
-//    public static void main(String[] args) throws InvalidMapException {
-//        SaveGame sg = new SaveGame();
-//
-//        /**
-//         * Contains list of players.
-//         */
-//        ArrayList<Player> d_PlayerListGame = new ArrayList<Player>();
-//        Player P1 = new Player("P1");
-//        Player P2 = new Player("P2");
-//        Player P3 = new Player("P3");
-//        P1.addCard("first");
-//        P2.addCard("first");
-//        P2.addCard("first");
-//        P3.addCard("first");
-//        P3.addCard("first");
-//        P3.addCard("last");
-//        d_PlayerListGame.add(P1);
-//        d_PlayerListGame.add(P2);
-//        d_PlayerListGame.add(P3);
-//
-//        Map d_Map= EditMap.editMap("europe");
-//        assignCountries(d_PlayerListGame,d_Map);
-//        sg.saveGame("Game1",d_PlayerListGame,d_Map);
-//        //displayGameMap(d_Map);
-//
-//    }
+    public static void main(String[] args) throws InvalidMapException {
+        SaveGame sg = new SaveGame();
+
+        /**
+         * Contains list of players.
+         */
+        ArrayList<Player> d_PlayerListGame = new ArrayList<Player>();
+        Player P1 = new Player("P1");
+        Player P2 = new Player("P2");
+        Player P3 = new Player("P3");
+        P1.addCard("first");
+        P2.addCard("first");
+        P2.addCard("first");
+        P3.addCard("first");
+        P3.addCard("first");
+        P3.addCard("last");
+        d_PlayerListGame.add(P1);
+        d_PlayerListGame.add(P2);
+        d_PlayerListGame.add(P3);
+
+        Map d_Map= EditMap.editMap("europe");
+        assignCountries(d_PlayerListGame,d_Map);
+        sg.saveGame("Game1",d_PlayerListGame,d_Map);
+        //displayGameMap(d_Map);
+
+    }
 }
