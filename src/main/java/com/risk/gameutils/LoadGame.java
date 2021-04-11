@@ -156,11 +156,14 @@ public class LoadGame {
                     if (l_line.equals("[countries]")) {
                         getCountries(l_gameReader);
                     }
+                    if (l_line.equals("[players]")) {
+                        getPlayers(l_gameReader);
+                    }
                 }
                 System.out.println("Loaded Game successfully form existing game file");
 
 
-                System.out.println("Game will be loaded");
+                System.out.println("Game is loaded");
 
             } catch (FileNotFoundException | InvalidMapException e) {
                 System.out.println("Game file not found");

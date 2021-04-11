@@ -93,7 +93,7 @@ public class SaveGame {
             for (String card : player.getD_cardList()) {
                 l_playerData.append(card + " ");
             }
-            l_playerData.append("\nNo of Armies: ");
+            l_playerData.append("\nArmies: ");
             l_playerData.append(player.getD_Armies());
             l_playerData.append("\n\n");
             l_playerId++;
