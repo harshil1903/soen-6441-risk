@@ -135,12 +135,6 @@ public class Tournament {
                 System.out.println("INSIDE INSTANCE OF CHEATER CHECK");
                 String l_playerWon = playerWon();
 
-//                System.out.println("Printing Cheater Owned Countries \n");
-//
-//                for(Country l_country : l_player.getD_AssignedCountries())
-//                {
-//                    System.out.println(l_country.getD_CountryName());
-//                }
 
                 System.out.println("Player Won value : " + l_playerWon);
                 System.out.println(l_player.getD_AssignedCountries().size() + "\n\n\n");
@@ -201,7 +195,7 @@ public class Tournament {
         for (Player l_player : d_PlayerList) {
 
             String l_playerName = l_player.getD_PlayerName();
-
+            System.out.println("\n\nPlayer Name : " + l_playerName +"\n\n");
             for (Continent l_continent : d_Map.getD_Continents()) {
 
                 for (Country l_country : l_continent.getD_Countries()) {

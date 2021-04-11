@@ -5,9 +5,9 @@ Log: COMMAND : tournament -M europe -P benevolent benevolent cheater -G 3 -D 15
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
-Log: Player doesnot contain blockade card
-Log: Player doesnot contain blockade card
 Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Player doesnot contain blockade card
 Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Continent Name : North_Europe
 Log: Continent Name : East_Europe
@@ -17,148 +17,24 @@ Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
 Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 12
+Player : benevolent0 Country : Portugal Number Of Armies : 12
 Successfully Executed
 
 Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 12
+Player : benevolent0 Country : Portugal Number Of Armies : 12
 Successfully Executed
 
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 12
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 12
-Successfully Executed
-
-Log: Player doesnot contain airlift card
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Player doesnot contain airlift card
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 9
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 9
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 3
-Successfully Executed
-
-Log: Player doesnot contain airlift card
-Log: Player doesnot contain airlift card
-Log: Player doesnot contain airlift card
-Log: Source country name Sicily and Target country nameSicilyare same so advance order can not apply here
-Log: Source country name Hungary and Target country nameHungaryare same so advance order can not apply here
-Log: Player doesnot contain airlift card
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 12
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 12
-Successfully Executed
-
-Log: Source country name Sicily and Target country nameSicilyare same so advance order can not apply here
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 3
-Successfully Executed
-
-Log: Player doesnot contain blockade card
-Log: Source country name Hungary and Target country nameHungaryare same so advance order can not apply here
-Log: Source country name Sicily and Target country nameSicilyare same so advance order can not apply here
-Log: Player doesnot contain airlift card
-Log: Player doesnot contain airlift card
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 9
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Hungary Number Of Armies : 9
-Successfully Executed
-
-Log: Player doesnot contain blockade card
-Log: Player doesnot contain blockade card
+Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
 Log: Order Type : Deploy 
-Player : benevolent0 Country : Wales Number Of Armies : 3
+Player : benevolent0 Country : Portugal Number Of Armies : 3
 Successfully Executed
 
 Log: Order Type : Deploy 
-Player : benevolent0 Country : Wales Number Of Armies : 3
+Player : benevolent0 Country : Portugal Number Of Armies : 3
 Successfully Executed
 
 Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Source country name Wales and Target country nameWalesare same so advance order can not apply here
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Continent Name : North_Europe
-Log: Continent Name : East_Europe
-Log: Continent Name : South_Europe
-Log: Continent Name : West_Europe
+Log: Player doesnot contain airlift card

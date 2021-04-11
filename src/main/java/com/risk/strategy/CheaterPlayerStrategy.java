@@ -74,10 +74,10 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
      */
 
     @Override
-    public Order createOrder() {
+    public Order createOrder() throws ConcurrentModificationException{
         List<Country> l_tempCountryList = new ArrayList<Country>();
 
-        /*
+
         for (Country l_cheaterCountry : d_player.getD_AssignedCountries()) {
             for (Country l_cheaterAdjCountry : l_cheaterCountry.getD_AdjacentCountries()) {
                 if (l_cheaterAdjCountry.getD_Player() != d_player) {
@@ -85,25 +85,15 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
                     l_cheaterAdjCountry.setD_Player(d_player);
                     l_tempCountryList.add(l_cheaterAdjCountry);
                     l_tempPlayer.removeCountryFromAssignedCountries(l_cheaterAdjCountry.getD_CountryID());
-                    //l_tempPlayer.getD_AssignedCountries().remove(l_cheaterCountry);
-
-//                    for(Country l : l_tempPlayer.getD_AssignedCountries() ){
-//                        System.out.println("Enemy Country : " + l.getD_CountryName());
-//                    }
                     System.out.println("Cheater Player Occupied Country: " + l_cheaterAdjCountry.getD_CountryName());
                 }
             }
         }
 
-         */
+         /*
 
         System.out.println("\n\nINSIDE CHEATER CREATE ORDER\n\n");
 
-        for (Country l : d_player.getD_AssignedCountries()) {
-            System.out.println("Cheater Country : " + l.getD_CountryName());
-        }
-
-        System.out.println("\n\n");
         List<Country> l_cheaterCountries = d_player.getD_AssignedCountries();
         List<Country> l_cheaterAdjacentCountries;
 
@@ -114,8 +104,7 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
             {
                 System.out.println("Cheater adjacent Country: " + l_cheaterAdjacentCountry.getD_CountryName() + " Owned by : "+ l_cheaterAdjacentCountry.getD_Player().getD_PlayerName());
                 if(!l_cheaterAdjacentCountry.getD_Player().getD_PlayerName().equals(d_player.getD_PlayerName())){
-                    //Player l_tempPlayer = l_cheaterAdjacentCountry.getD_Player();
-                    //l_cheaterAdjacentCountry.setD_Player(d_player);
+
                     l_tempCountryList.add(l_cheaterAdjacentCountry);
 
 
@@ -126,12 +115,13 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
                         }
                     }
                     l_cheaterAdjacentCountry.getCountryFromCountryName(l_cheaterAdjacentCountry.getD_CountryName()).setD_Player(d_player);
-                    //l_tempPlayer.removeCountryFromAssignedCountries(l_cheaterAdjacentCountry.getD_CountryID());
                     System.out.println("Cheater Player Occupied Country: " + l_cheaterAdjacentCountry.getD_CountryName());
                 }
             }
         }
 
+
+         */
 
         for (Country l_newCountry : l_tempCountryList) {
             if (!d_player.getD_AssignedCountries().contains(l_newCountry))
@@ -145,7 +135,6 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
             }
         }
 
-        System.out.println("\n\nCHEATER CREATE ORDER FINISHED\n\n");
 
         for (Country l_cheaterCountry : d_player.getD_AssignedCountries()) {
             for (Country l_cheaterAdjCountry : l_cheaterCountry.getD_AdjacentCountries()) {
