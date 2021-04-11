@@ -19,14 +19,25 @@ import static com.risk.main.Main.d_PlayerList;
 import static com.risk.main.Main.d_Map;
 
 
-
 //  tournament -M europe Asia -P benevolent benevolent cheater -G 3 -D 15
+
+/**
+ * The type Tournament class to run a tournament of multiple games among multiple maps
+ *
+ * @author Harshil
+ */
 public class Tournament {
     static ArrayList<String> d_mapNames = new ArrayList<>();
     static ArrayList<String> d_listOfPlayerStrategies = new ArrayList<>();
+
     static int d_numGames;
     static int d_maxTurns;
 
+    /**
+     * Begin method to initiate the tournament
+     *
+     * @param p_argumentTokens arguments of maps, strategies, number of games and number of turns
+     */
     public static void begin(List<String> p_argumentTokens){
 
         d_listOfPlayerStrategies.clear();
@@ -76,6 +87,12 @@ public class Tournament {
 
     }
 
+    /**
+     * Play game runs the a single instant of entire game from assigning countries, reinforcing armies, issuing orders
+     * to executing orders until either a player wins or the max number of allowed turns are played
+     *
+     * @throws InvalidMapException the invalid map exception
+     */
     public static void playGame() throws InvalidMapException {
         int l_turnCount = 0;
         String l_playerWon = "";
@@ -133,6 +150,9 @@ public class Tournament {
 
     }
 
+    /**
+     * Issue order creates an order for each player
+     */
     public static void issueOrder()
     {
         for(Player l_player : d_PlayerList)
@@ -157,6 +177,9 @@ public class Tournament {
         }
     }
 
+    /**
+     * Execute order executes an order after fetching it from player's orderlist
+     */
     public static void executeOrder()
     {
         int l_noOrdersPlayerCount = 0;
@@ -194,7 +217,7 @@ public class Tournament {
     }
 
     /**
-     *  To check if a player has won the game
+     * To check if a player has won the game
      *
      * @return Name of player won or blank string if nobody has won
      */
@@ -232,8 +255,12 @@ public class Tournament {
     }
 
 
-
-
+    /**
+     * Validate tournament arguments boolean.
+     *
+     * @param p_argumentTokens argument tokens
+     * @return the boolean
+     */
     public static boolean validateTournamentArguments(List<String> p_argumentTokens)
     {
         for (int i = 0; i < p_argumentTokens.size(); i++) {
