@@ -68,6 +68,14 @@ public class GameIssueOrder extends Game {
 
                     if (!l_player.isD_noOrdersLeft()) {
 
+                        if(l_player.getD_AssignedCountries().size() == 0)
+                        {
+                            System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() +
+                                    " has no countries left and hence is out of the game");
+                            d_PlayerList.remove(l_player);
+                            continue;
+                        }
+
                         System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
                         System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
                         System.out.println("You own the following Countries along with their adjacent countries");

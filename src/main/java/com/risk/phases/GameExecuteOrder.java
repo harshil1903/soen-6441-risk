@@ -122,23 +122,34 @@ public class GameExecuteOrder extends Game {
      * @return Name of player won or blank string if nobody has won
      */
     public String playerWon() {
-        for (Player l_player : d_PlayerList) {
+//        for (Player l_player : d_PlayerList) {
+//
+//            String l_playerName = l_player.getD_PlayerName();
+//
+//            for (Continent l_continent : d_Map.getD_Continents()) {
+//
+//                for (Country l_country : l_continent.getD_Countries()) {
+//
+//                    if (!l_country.getD_Player().getD_PlayerName().equals(l_playerName)) {
+//                        return "";
+//                    }
+//                }
+//            }
+//
+//            return l_playerName;
+//        }
+//        return "";
 
-            String l_playerName = l_player.getD_PlayerName();
+        String l_winner = d_Map.getCountryListOfMap().get(0).getD_Player().getD_PlayerName();
 
-            for (Continent l_continent : d_Map.getD_Continents()) {
-
-                for (Country l_country : l_continent.getD_Countries()) {
-
-                    if (!l_country.getD_Player().getD_PlayerName().equals(l_playerName)) {
-                        return "";
-                    }
-                }
+        for(Country l_country : d_Map.getCountryListOfMap())
+        {
+            if(!l_country.getD_Player().getD_PlayerName().equals(l_winner))
+            {
+                return "";
             }
-
-            return l_playerName;
         }
-        return "";
+        return l_winner;
     }
 
     /**

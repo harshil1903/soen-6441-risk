@@ -1,14 +1,32 @@
 Log: Welcome to warzone
 Log: Game Begins
 Log: New Phase : GameStartup
+Log: COMMAND : System.out.println("\n\n******************************************\n");
+Log: Invalid Command
+Log: COMMAND :                                 System.out.println("Player " + l_playerWon + " has Won the Game!!!");
+Log: Invalid Command
+Log: COMMAND :                                 System.out.println("\n******************************************\n\n\n");
+Log: Invalid Command
+Log: COMMAND :                                 d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
+Log: Invalid Command
+Log: COMMAND : 
+Log: Invalid Command
 Log: COMMAND : tournament -M europe -P benevolent benevolent cheater -G 3 -D 15
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Slovakia Number Of Armies : 3
+Successfully Executed
+
 Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Player cheater2 has Won the Game!!!
 Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Player doesnot contain blockade card
-Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Continent Name : North_Europe
 Log: Continent Name : East_Europe
 Log: Continent Name : South_Europe
@@ -16,25 +34,17 @@ Log: Continent Name : West_Europe
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Portugal Number Of Armies : 12
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Portugal Number Of Armies : 12
-Successfully Executed
-
 Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Player cheater2 has Won the Game!!!
+Log: Player doesnot contain blockade card
+Log: Player doesnot contain blockade card
+Log: Continent Name : North_Europe
+Log: Continent Name : East_Europe
+Log: Continent Name : South_Europe
+Log: Continent Name : West_Europe
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Portugal Number Of Armies : 3
-Successfully Executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Portugal Number Of Armies : 3
-Successfully Executed
-
 Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Player doesnot contain airlift card
+Log: You do not own this country. Try Again with a country name that has been assigned to you

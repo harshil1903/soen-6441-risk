@@ -59,7 +59,7 @@ public class Tournament {
                         continue;
                     }
 
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + j+1 + " FOR MAP " + i+1 + ":\n\n\n");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + (j+1) + " FOR MAP " + (i+1) + ":\n\n\n");
                     playGame();
                     d_Map.clearMapData();
                     d_Map.getD_Continents().clear();
@@ -84,7 +84,7 @@ public class Tournament {
         {
             System.out.println("\n\nNEW TURN \n\n");
 
-            System.out.println("\nReinforcing Armies\n\n");
+            System.out.println("\nReinforcing Armies\n");
             Reinforce.assignReinforcementArmies();
             System.out.println("\nArmies have been successfully reinforced among players\n\n\n\n");
 
@@ -103,20 +103,20 @@ public class Tournament {
                 MapCommands.showMapCommand(new ArrayList<>());
                 break;
             }
-
-            for(Player p : d_PlayerList)
-            {
-                if(p.getD_AssignedCountries().size() == d_Map.getCountryListOfMap().size())
-                {
-                    System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
-                    MapCommands.showMapCommand(new ArrayList<>());
-                    break;
-                }
-            }
-
-            for(Country c : d_Map.getCountryListOfMap()){
-                System.out.println("Country Name : " + c.getD_CountryName() + "   Owned by : " + c.getD_Player().getD_PlayerName());
-            }
+//
+//            for(Player p : d_PlayerList)
+//            {
+//                if(p.getD_AssignedCountries().size() == d_Map.getCountryListOfMap().size())
+//                {
+//                    System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
+//                    MapCommands.showMapCommand(new ArrayList<>());
+//                    break;
+//                }
+//            }
+//
+//            for(Country c : d_Map.getCountryListOfMap()){
+//                System.out.println("Country Name : " + c.getD_CountryName() + "   Owned by : " + c.getD_Player().getD_PlayerName());
+//            }
         }
 
         if(l_playerWon.equals("")){
@@ -192,23 +192,36 @@ public class Tournament {
      * @return Name of player won or blank string if nobody has won
      */
     public static String playerWon(){
-        for (Player l_player : d_PlayerList) {
+//        int l_flag;
+//
+//        for (Player l_player : d_PlayerList) {
+//            l_flag = 0;
+//            String l_playerName = l_player.getD_PlayerName();
+//            System.out.println("\n\nPlayer Name : " + l_playerName +"\n\n");
+//            for (Continent l_continent : d_Map.getD_Continents()) {
+//
+//                for (Country l_country : l_continent.getD_Countries()) {
+//
+//                    if (!l_country.getD_Player().getD_PlayerName().equals(l_playerName)) {
+//                        //return "";
+//                        l_flag = 1;
+//                    }
+//                }
+//            }
+//
+//            return l_playerName;
+//        }
+//        return "";
+        String l_winner = d_Map.getCountryListOfMap().get(0).getD_Player().getD_PlayerName();
 
-            String l_playerName = l_player.getD_PlayerName();
-            System.out.println("\n\nPlayer Name : " + l_playerName +"\n\n");
-            for (Continent l_continent : d_Map.getD_Continents()) {
-
-                for (Country l_country : l_continent.getD_Countries()) {
-
-                    if (!l_country.getD_Player().getD_PlayerName().equals(l_playerName)) {
-                        return "";
-                    }
-                }
+        for(Country l_country : d_Map.getCountryListOfMap())
+        {
+            if(!l_country.getD_Player().getD_PlayerName().equals(l_winner))
+            {
+                return "";
             }
-
-            return l_playerName;
         }
-        return "";
+        return l_winner;
     }
 
 
