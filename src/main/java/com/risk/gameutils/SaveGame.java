@@ -81,20 +81,20 @@ public class SaveGame {
         l_playerData.append("\n");
         l_playerData.append("[players]");
         l_playerData.append("\n");
-        for (Player player : d_PlayerList) {
-            l_playerData.append(l_playerId+" "+player.getD_PlayerName());
+        for (Player l_player : d_PlayerList) {
+            l_playerData.append(l_playerId+" "+l_player.getD_PlayerName()+" "+l_player.d_playerStrategyType);
             //l_mapData.append("\n \n");
             l_playerData.append("\nCountries Owned: ");
-            for (Country l_country : player.getD_AssignedCountries()) {
+            for (Country l_country : l_player.getD_AssignedCountries()) {
                 l_playerData.append(l_country.getD_CountryName() + " ");
             }
             l_playerData.append("\nCards: ");
 
-            for (String card : player.getD_cardList()) {
+            for (String card : l_player.getD_cardList()) {
                 l_playerData.append(card + " ");
             }
             l_playerData.append("\nArmies: ");
-            l_playerData.append(player.getD_Armies());
+            l_playerData.append(l_player.getD_Armies());
             l_playerData.append("\n\n");
             l_playerId++;
         }
@@ -148,14 +148,17 @@ public class SaveGame {
 //         */
 //        ArrayList<Player> d_PlayerListGame = new ArrayList<Player>();
 //        Player P1 = new Player("P1");
+//        P1.d_playerStrategyType="cheater";
 //        Player P2 = new Player("P2");
+//        P2.d_playerStrategyType="human";
 //        Player P3 = new Player("P3");
-//        P1.addCard("first");
-//        P2.addCard("first");
-//        P2.addCard("first");
-//        P3.addCard("first");
-//        P3.addCard("first");
-//        P3.addCard("last");
+//        P3.d_playerStrategyType="aggressive";
+//        P1.addCard("advance");
+//        P2.addCard("airlift");
+//        P2.addCard("blockade");
+//        P3.addCard("bomb");
+//        P3.addCard("diplomacy");
+//        P3.addCard("advance");
 //        d_PlayerListGame.add(P1);
 //        d_PlayerListGame.add(P2);
 //        d_PlayerListGame.add(P3);

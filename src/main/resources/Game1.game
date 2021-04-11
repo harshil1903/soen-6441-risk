@@ -31,19 +31,19 @@ Portugal 4 0
 Luxembourg 4 0
 
 [players]
-1 P1
-Countries Owned: Denmark Wales Spain Scotland Belgum Italy Czech_Rep N_Ireland 
-Cards: first 
+1 P1 cheater
+Countries Owned: Belgum Hungary Corsica France Czech_Rep Switzerland Sicily Slovakia 
+Cards: advance 
 Armies: 0
 
-2 P2
-Countries Owned: Rep_Ireland Slovakia France Sicily England Corsica Luxembourg Sardinia 
-Cards: first first 
+2 P2 human
+Countries Owned: Scotland Netherlands Denmark Germany Poland Spain N_Ireland Italy 
+Cards: airlift blockade 
 Armies: 0
 
-3 P3
-Countries Owned: Netherlands Majorca Germany Austria Switzerland Hungary Poland Portugal 
-Cards: first first last 
+3 P3 aggressive
+Countries Owned: Wales England Austria Majorca Sardinia Luxembourg Portugal Rep_Ireland 
+Cards: bomb diplomacy advance 
 Armies: 0
 
 

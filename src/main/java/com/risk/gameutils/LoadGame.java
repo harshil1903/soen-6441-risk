@@ -104,7 +104,9 @@ public class LoadGame {
             String[] l_parts = l_line.split(" ");
             int p_playerId = Integer.parseInt(l_parts[0]);
             String p_playerName = l_parts[1];
+            String p_playerStrategy=l_parts[2];
             Player l_player = new Player();
+            l_player.d_playerStrategyType=p_playerStrategy;
             d_PlayerList.add(l_player);
 
             l_line = p_gameReader.nextLine();
