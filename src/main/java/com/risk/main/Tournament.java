@@ -20,7 +20,7 @@ import static com.risk.main.Main.d_Map;
 
 
 
-//tournament -M europe -P benevolent benevolent cheater -G 3 -D 15
+//  tournament -M europe -P benevolent benevolent cheater -G 3 -D 15
 public class Tournament {
     static ArrayList<String> d_mapNames = new ArrayList<>();
     static ArrayList<String> d_listOfPlayerStrategies = new ArrayList<>();
@@ -46,6 +46,7 @@ public class Tournament {
 
         for(int i = 0 ; i < d_mapNames.size(); i++)
         {
+
             for(int j = 0; j < d_numGames ; j++) {
                 List<String> l_mapName = new ArrayList<>();
                 l_mapName.add(d_mapNames.get(i));
@@ -59,15 +60,17 @@ public class Tournament {
                         continue;
                     }
 
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + (j+1) + " FOR MAP " + (i+1) + ":\n\n\n");
-                    playGame();
-                    d_Map.clearMapData();
-                    d_Map.getD_Continents().clear();
 
-                    for (Player l_player : d_PlayerList)
-                        l_player.clearPlayerData();
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + (j+1) + " FOR MAP " + (i+1) + ":\n\n\n");
+
+                    playGame();
+
+                    d_Map.clearMapData();
                 }
                 catch (Exception e){}
+                for (Player l_player : d_PlayerList)
+                    l_player.clearPlayerData();
+
             }
         }
 
@@ -78,13 +81,13 @@ public class Tournament {
         String l_playerWon = "";
 
         AssignCountries.assignCountries();
-        System.out.println("\n\nCountries have been successfully assigned to all the players\n\n");
+        System.out.println("\n\nCountries have been successfully assigned to all the players\n");
 
         for(int i = 0 ; i < d_maxTurns ; i++)
         {
-            System.out.println("\n\nNEW TURN \n\n");
+            System.out.println("\n\nNEW TURN ");
 
-            System.out.println("\nReinforcing Armies\n");
+            System.out.println("\nReinforcing Armies");
             Reinforce.assignReinforcementArmies();
             System.out.println("\nArmies have been successfully reinforced among players\n\n\n\n");
 
@@ -99,8 +102,11 @@ public class Tournament {
 
             if(!l_playerWon.equals(""))
             {
-                System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
-                MapCommands.showMapCommand(new ArrayList<>());
+                System.out.println("\n\n******************************************\n");
+                System.out.println("Player " + l_playerWon + " has Won the Game!!!");
+                System.out.println("\n******************************************\n\n\n");
+                d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
+                GameCommands.showMapCommand(new ArrayList<>());
                 break;
             }
 //
@@ -131,22 +137,22 @@ public class Tournament {
         for(Player l_player : d_PlayerList)
         {
             l_player.issueOrder();
-            if (l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy) {
-                System.out.println("INSIDE INSTANCE OF CHEATER CHECK");
-                String l_playerWon = playerWon();
-
-
-                System.out.println("Player Won value : " + l_playerWon);
-                System.out.println(l_player.getD_AssignedCountries().size() + "\n\n\n");
-                if (!l_playerWon.equals("")) {
-                    System.out.println("\n\n******************************************\n");
-                    System.out.println("Player " + l_playerWon + " has Won the Game!!!");
-                    System.out.println("\n******************************************\n\n\n");
-                    d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
-                    GameCommands.showMapCommand(new ArrayList<>());
-                    break;
-                }
-            }
+//            if (l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy) {
+//                System.out.println("INSIDE INSTANCE OF CHEATER CHECK");
+//                String l_playerWon = playerWon();
+//
+//
+//                System.out.println("Player Won value : " + l_playerWon);
+//                System.out.println(l_player.getD_AssignedCountries().size() + "\n\n\n");
+//                if (!l_playerWon.equals("")) {
+//                    System.out.println("\n\n******************************************\n");
+//                    System.out.println("Player " + l_playerWon + " has Won the Game!!!");
+//                    System.out.println("\n******************************************\n\n\n");
+//                    d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
+//                    GameCommands.showMapCommand(new ArrayList<>());
+//                    break;
+//                }
+//            }
         }
     }
 

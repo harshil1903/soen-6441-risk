@@ -146,6 +146,7 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
                 }
             }
         }
+        System.out.println("\n\n");
         return null;
     }
 }

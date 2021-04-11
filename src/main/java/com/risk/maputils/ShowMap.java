@@ -85,5 +85,7 @@ public class ShowMap {
                 System.out.printf("\t%-15s:   \t%s%n", l_country.getD_CountryName(), l_country.getD_NumberOfArmies());
             }
         }
+
+        System.out.println("\n");
     }
 }
