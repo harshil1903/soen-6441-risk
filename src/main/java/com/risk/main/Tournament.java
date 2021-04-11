@@ -20,7 +20,7 @@ import static com.risk.main.Main.d_Map;
 
 
 
-//  tournament -M europe -P benevolent benevolent cheater -G 3 -D 15
+//  tournament -M europe Asia -P benevolent benevolent cheater -G 3 -D 15
 public class Tournament {
     static ArrayList<String> d_mapNames = new ArrayList<>();
     static ArrayList<String> d_listOfPlayerStrategies = new ArrayList<>();
@@ -46,14 +46,14 @@ public class Tournament {
 
         for(int i = 0 ; i < d_mapNames.size(); i++)
         {
+            List<String> l_mapName = new ArrayList<>();
+            l_mapName.add(d_mapNames.get(i));
+            boolean l_mapLoaded = false;
 
             for(int j = 0; j < d_numGames ; j++) {
-                List<String> l_mapName = new ArrayList<>();
-                l_mapName.add(d_mapNames.get(i));
-                boolean l_mapLoaded = false;
 
                 try {
-                    l_mapLoaded = MapCommands.editMapCommand(d_mapNames);
+                    l_mapLoaded = MapCommands.editMapCommand(l_mapName);
 
                     if(!l_mapLoaded){
                         System.out.println("Map "+ d_mapNames.get(i) + " could not be loaded, moving to next map");
@@ -126,7 +126,8 @@ public class Tournament {
         }
 
         if(l_playerWon.equals("")){
-            System.out.println("\n\n\n\nGame is draw because nobody won in the given number of turns\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            System.out.println("\n\n\n\nGame is draw because nobody won in the given number of turns\n\n\n");
+            GameCommands.showMapCommand(new ArrayList<>());
         }
 
 

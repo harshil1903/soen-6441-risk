@@ -42,7 +42,7 @@ public class MapCommands {
                 l_mapReader = new Scanner(l_map);
                 while (l_mapReader.hasNextLine()) {
                     String l_line = l_mapReader.nextLine();
-                    if (l_line.equals("[continents]")) {
+                    if (l_line.equals("[Continents]")) {
                         l_line = l_mapReader.nextLine();
                         if(l_line.contains("=")){
                             return 2;
@@ -75,8 +75,6 @@ public class MapCommands {
         }
 
         d_Map.clearMapData();
-
-        d_Map.getD_Continents().clear();
 
         //Test for the type of Map
         if(checkMapType(p_argumentTokens.get(0)) == 1)

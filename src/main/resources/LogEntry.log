@@ -1,21 +1,464 @@
 Log: Welcome to warzone
 Log: Game Begins
 Log: New Phase : GameStartup
-Log: COMMAND : tournament -M europe -P benevolent benevolent cheater -G 3 -D 15
+Log: COMMAND : tournament -M europe Asia -P benevolent benevolent aggressive -G 3 -D 15
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Player cheater2 has Won the Game!!!
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Assigned countries randomly to players
-Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Successfully Executed
+
 Log: Player doesnot contain blockade card
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Player cheater2 has Won the Game!!!
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Player doesnot contain blockade card
+Log: aggressive2 won and got airlift
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Corsica Target Country : Majorca Number Of Armies : 5
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Corsica Target Country : Majorca Number Of Armies : 5
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 6
+Successfully Executed
+
+Log: Source country name Switzerland and Target country nameSwitzerlandare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 6
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Successfully Executed
+
+Log: Corsica and Spain are not adjacent
+Log: Source country name Netherlands and Target country nameNetherlandsare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 6
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Corsica and Belgum are not adjacent
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 6
+Successfully Executed
+
+Log: Corsica and England are not adjacent
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Successfully Executed
+
+Log: Corsica and England are not adjacent
+Log: Source country name Netherlands and Target country nameNetherlandsare same so advance order can not apply here
+Log: Player doesnot contain blockade card
+Log: Corsica and France are not adjacent
+Log: Player doesnot contain airlift card
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Corsica Number Of Armies : 3
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Source country name Switzerland and Target country nameSwitzerlandare same so advance order can not apply here
+Log: Corsica and England are not adjacent
+Log: Source country name Netherlands and Target country nameNetherlandsare same so advance order can not apply here
+Log: Player doesnot contain airlift card
+Log: Corsica and Belgum are not adjacent
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: aggressive2 won and got airlift
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Rep_Ireland Target Country : Spain Number Of Armies : 2
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Rep_Ireland Target Country : Spain Number Of Armies : 2
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Source country name Poland and Target country namePolandare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Source country name Poland and Target country namePolandare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: aggressive2 won and got blockade
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Rep_Ireland Target Country : England Number Of Armies : 15
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Rep_Ireland Target Country : England Number Of Armies : 15
+Successfully Execute
+
+Log: Player doesnot contain blockade card
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: aggressive2 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Rep_Ireland Target Country : Wales Number Of Armies : 6
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Rep_Ireland Target Country : Wales Number Of Armies : 6
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 18
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 18
+Successfully Executed
+
+Log: Source country name Belgum and Target country nameBelgumare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Poland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 9
+Successfully Executed
+
+Log: Rep_Ireland and Majorca are not adjacent
+Log: Source country name Poland and Target country namePolandare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Successfully Executed
+
+Log: Rep_Ireland and Austria are not adjacent
+Log: Source country name Poland and Target country namePolandare same so advance order can not apply here
+Log: Source country name Belgum and Target country nameBelgumare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Rep_Ireland Number Of Armies : 9
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 6
+Successfully Executed
+
+Log: Rep_Ireland and Luxembourg are not adjacent
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
@@ -35,6 +478,947 @@ Log: Order Type : Deploy
 Player : benevolent1 Country : Wales Number Of Armies : 3
 Successfully Executed
 
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Player cheater2 has Won the Game!!!
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Source country name Wales and Target country nameWalesare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Source country name Wales and Target country nameWalesare same so advance order can not apply here
+Log: aggressive2 won and got blockade
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Sardinia Number Of Armies : 5
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Sardinia Number Of Armies : 5
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Source country name Wales and Target country nameWalesare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 12
+Successfully Executed
+
+Log: aggressive2 won and got airlift
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Italy Number Of Armies : 6
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Italy Number Of Armies : 6
+Successfully Execute
+
+Log: Player doesnot contain blockade card
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 6
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Sicily and Netherlands are not adjacent
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Sicily and Czech_Rep are not adjacent
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 9
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Player doesnot contain airlift card
+Log: Sicily and Austria are not adjacent
+Log: Source country name Rep_Ireland and Target country nameRep_Irelandare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 6
+Successfully Executed
+
+Log: Sicily and Czech_Rep are not adjacent
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Successfully Executed
+
+Log: Sicily and Netherlands are not adjacent
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Successfully Executed
+
+Log: Source country name Wales and Target country nameWalesare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 12
+Successfully Executed
+
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: aggressive2 won and got bomb
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Iran Number Of Armies : 4
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Iran Number Of Armies : 4
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Source country name United Arab Emigrants and Target country nameUnited Arab Emigrantsare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: aggressive2 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Uzbekistan Number Of Armies : 25
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Uzbekistan Number Of Armies : 25
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 20
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 20
+Successfully Executed
+
+Log: Source country name United Arab Emigrants and Target country nameUnited Arab Emigrantsare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 11
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 11
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Source country name Kyrgyzstan and Target country nameKyrgyzstanare same so advance order can not apply here
+Log: Source country name United Arab Emigrants and Target country nameUnited Arab Emigrantsare same so advance order can not apply here
+Log: aggressive2 won and got bomb
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Tajikistan Number Of Armies : 17
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Tajikistan Number Of Armies : 17
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 9
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 9
+Successfully Executed
+
+Log: Source country name United Arab Emigrants and Target country nameUnited Arab Emigrantsare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 12
+Successfully Executed
+
+Log: Source country name Kyrgyzstan and Target country nameKyrgyzstanare same so advance order can not apply here
+Log: Source country name United Arab Emigrants and Target country nameUnited Arab Emigrantsare same so advance order can not apply here
+Log: Afghanistan and Syria are not adjacent
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 8
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 8
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 20
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 20
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Kyrgyzstan Number Of Armies : 4
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : United Arab Emigrants Number Of Armies : 10
+Successfully Executed
+
+Log: Afghanistan and Vietnam are not adjacent
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: aggressive2 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Iran Number Of Armies : 4
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Iran Number Of Armies : 4
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 10
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Source country name Yemen and Target country nameYemenare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 15
+Successfully Executed
+
+Log: aggressive2 won and got blockade
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Tajikistan Number Of Armies : 20
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Tajikistan Number Of Armies : 20
+Successfully Execute
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 11
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 11
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Source country name Yemen and Target country nameYemenare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 27
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 27
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 6
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: aggressive2 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Pakistan Number Of Armies : 29
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Afghanistan Target Country : Pakistan Number Of Armies : 29
+Successfully Execute
+
+Log: Source country name China and Target country nameChinaare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Afghanistan Number Of Armies : 12
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Player doesnot contain blockade card
+Log: Afghanistan and North Korea are not adjacent
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : China Number Of Armies : 12
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Afghanistan and Israel are not adjacent
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 15
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Yemen Number Of Armies : 15
+Successfully Executed
+
+Log: Afghanistan and North Korea are not adjacent
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Kazakhstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Kazakhstan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 10
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Source country name Kazakhstan and Target country nameKazakhstanare same so advance order can not apply here
+Log: aggressive2 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Uzbekistan Target Country : Kazakhstan Number Of Armies : 19
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Uzbekistan Target Country : Kazakhstan Number Of Armies : 19
+Successfully Execute
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 25
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 25
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 10
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 20
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 20
+Successfully Executed
+
+Log: Source country name Turkey and Target country nameTurkeyare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 10
+Successfully Executed
+
+Log: aggressive2 won and got bomb
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Uzbekistan Target Country : Turkmenistan Number Of Armies : 20
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Uzbekistan Target Country : Turkmenistan Number Of Armies : 20
+Successfully Execute
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 10
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 10
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 11
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 11
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 5
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 5
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: aggressive2 won and got airlift
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Uzbekistan Target Country : Kyrgyzstan Number Of Armies : 11
+Successfully Execute
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Uzbekistan Target Country : Kyrgyzstan Number Of Armies : 11
+Successfully Execute
+
+Log: Player doesnot contain blockade card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 14
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 14
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 12
+Successfully Executed
+
+Log: Player doesnot contain airlift card
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 4
+Successfully Executed
+
+Log: Uzbekistan and Omen are not adjacent
+Log: Source country name Iraq and Target country nameIraqare same so advance order can not apply here
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Turkey Number Of Armies : 4
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Uzbekistan Number Of Armies : 12
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 20
+Successfully Executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Iraq Number Of Armies : 20
+Successfully Executed
+
+Log: Player doesnot contain blockade card
+Log: Uzbekistan and Cyprus are not adjacent

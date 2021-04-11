@@ -5,8 +5,11 @@ import com.risk.maputils.*;
 import com.risk.models.Player;
 
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import static com.risk.main.Main.*;
 
@@ -18,6 +21,43 @@ import static com.risk.main.Main.*;
  */
 public class GameCommands {
     public enum d_playerStrategyType {human, aggressive, benevolent, cheater, random}
+
+
+    /**
+     * Check map type
+     *
+     * @param p_fileName  file name
+     * @return whether it is Conquest or Domination File
+     */
+    public static int checkMapType(String p_fileName){
+        String l_path = "src/main/resources/";
+        String l_fileName = p_fileName + ".map";
+        File l_map = new File(l_path + l_fileName);
+
+        if (!l_map.exists()){
+            return 1;
+        }
+        else {
+            Scanner l_mapReader = null;
+            try {
+                l_mapReader = new Scanner(l_map);
+                while (l_mapReader.hasNextLine()) {
+                    String l_line = l_mapReader.nextLine();
+                    if (l_line.equals("[Continents]")) {
+                        l_line = l_mapReader.nextLine();
+                        if(l_line.contains("=")){
+                            return 2;
+                        }
+                        else {
+                            return 1;
+                        }
+                    }
+                }
+            }
+            catch (FileNotFoundException e){}
+        }
+        return 1;
+    }
 
 
     /**
@@ -34,22 +74,43 @@ public class GameCommands {
             return false;
         }
 
-        ArrayList<String> l_argumentTokens = new ArrayList<>();
+        d_Map.clearMapData();
 
-        d_Map.getD_Continents().clear();
+        //Test for the type of Map
+        if(checkMapType(p_argumentTokens.get(0)) == 1)
+        {
+            try {
+                d_Map = new EditMap().editMap(p_argumentTokens.get(0));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                d_Log.notify(e.getMessage());
+                throw new InvalidMapException(e.getMessage());
 
+            }
+        }
+        else{
+            try {
+                d_Map = new EditMapAdapter(new EditConquestMap()).editMap(p_argumentTokens.get(0));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                d_Log.notify(e.getMessage());
+                throw new InvalidMapException(e.getMessage());
+
+            }
+        }
+        if (d_Map.d_isEmpty) {
+            return true;
+        }
         try {
-            d_Map = new EditMap().editMap(p_argumentTokens.get(0));
+            MapValidator.validateMap(d_Map);
         } catch (Exception e) {
+            System.out.println("Map Validation Failed \nMap data has been cleared, use editmap to load a map again");
+            d_Log.notify("Map Validation Failed \nMap data has been cleared, use editmap to load a map again");
             System.out.println(e.getMessage());
-            throw new InvalidMapException(e.getMessage());
+            d_Log.notify(e.getMessage());
+            d_Map.clearMapData();
+            return false;
         }
-
-        MapCommands.validateMapCommand(l_argumentTokens);
-        if (MapValidator.d_isValid == false) {
-            d_Map.getD_Continents().clear();
-        }
-
 
         return true;
     }
