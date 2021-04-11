@@ -154,19 +154,19 @@ public class GameIssueOrder extends Game {
 
                         l_player.issueOrder();
 
-                        if(l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy)
-                        {
-                            String l_playerWon = playerWon();
-
-                            if (!l_playerWon.equals("")) {
-                                System.out.println("\n\n******************************************\n");
-                                System.out.println("Player " + l_playerWon + " has Won the Game!!!");
-                                System.out.println("\n******************************************\n\n\n");
-                                d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
-                                showMap(new ArrayList<>());
-                                endGame();
-                            }
-                        }
+//                        if(l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy)
+//                        {
+//                            String l_playerWon = playerWon();
+//
+//                            if (!l_playerWon.equals("")) {
+//                                System.out.println("\n\n******************************************\n");
+//                                System.out.println("Player " + l_playerWon + " has Won the Game!!!");
+//                                System.out.println("\n******************************************\n\n\n");
+//                                d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
+//                                showMap(new ArrayList<>());
+//                                endGame();
+//                            }
+//                        }
                         l_player.setD_noOrdersLeft(new Random().nextBoolean());
                     }
                     else {
