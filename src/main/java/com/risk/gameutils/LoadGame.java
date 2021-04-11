@@ -14,6 +14,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static com.risk.maputils.EditConquestMap.getCountry;
+
 /**
  * Helps in loading previously load game form the game file.
  *
@@ -55,6 +57,7 @@ public class LoadGame {
 
     /**
      * Retrieves the map name asd creates new map.
+     *
      * @param p_gameReader reads the game file
      * @throws InvalidMapException if game file not present
      */
@@ -75,10 +78,64 @@ public class LoadGame {
             String[] l_parts = l_line.split(" ");
             String p_phaseName = l_parts[0];
             //phase to be set
-            }
         }
+    }
 
 
+    public static void getCountries(Scanner p_gameReader) {
+        while (p_gameReader.hasNextLine()) {
+            String l_line = p_gameReader.nextLine();
+            if (l_line.equals("")) break;
+            String[] l_parts = l_line.split(" ");
+            String p_countryName = l_parts[0];
+            int p_continentId = Integer.parseInt(l_parts[1]);
+            int p_armies = Integer.parseInt(l_parts[2]);
+            Continent l_continent = d_Map.getContinentFromContinentList(p_continentId);
+            Country l_country = l_continent.getCountryFromCountryName(p_countryName);
+            l_country.setD_NumberOfArmies(p_armies);
+        }
+    }
+
+
+    public static void getPlayers(Scanner p_gameReader) {
+        while (p_gameReader.hasNextLine()) {
+            String l_line = p_gameReader.nextLine();
+            if (l_line.equals("")) continue;
+            String[] l_parts = l_line.split(" ");
+            int p_playerId = Integer.parseInt(l_parts[0]);
+            String p_playerName = l_parts[1];
+            Player l_player = new Player();
+            d_PlayerList.add(l_player);
+
+            l_line = p_gameReader.nextLine();
+            l_parts = l_line.split(" ");
+
+            for (int i = 1; i < l_parts.length; i++) {
+                Country l_country = getCountry(l_parts[i], d_Map);
+                l_player.addCountryToAssignedCountries(l_country);
+            }
+
+            l_line = p_gameReader.nextLine();
+            l_parts = l_line.split(" ");
+            for (int i = 1; i < l_parts.length; i++) {
+                String l_card = l_parts[i];
+                l_player.addCard(l_card);
+            }
+
+            l_line = p_gameReader.nextLine();
+            l_parts = l_line.split(" ");
+            int l_armies = Integer.parseInt(l_parts[1]);
+            l_player.setD_Armies(l_armies);
+
+
+//            int p_continentId=Integer.parseInt(l_parts[1]);
+//            int p_armies=Integer.parseInt(l_parts[2]);
+//            System.out.println(p_countryName +" "+p_continentId+" "+p_armies);
+//            Continent l_continent=d_Map.getContinentFromContinentList(p_continentId);
+//            Country l_country=l_continent.getCountryFromCountryName(p_countryName);
+//            l_country.setD_NumberOfArmies(p_armies);
+        }
+    }
 
     public static void loadGame(String p_gameFile) {
         String l_path = "src/main/resources/";
@@ -96,11 +153,11 @@ public class LoadGame {
                     if (l_line.equals("[phase]")) {
                         getPhase(l_gameReader);
                     }
-//                    if (l_line.equals("[borders]")) {
-//                        getAdjacentCountries(l_gameReader, p_Map);
-//                    }
+                    if (l_line.equals("[countries]")) {
+                        getCountries(l_gameReader);
+                    }
                 }
-                System.out.println("Loaded map successfully form existing domination file");
+                System.out.println("Loaded Game successfully form existing game file");
 
 
                 System.out.println("Game will be loaded");

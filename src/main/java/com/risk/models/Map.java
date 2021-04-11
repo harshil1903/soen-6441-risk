@@ -152,5 +152,6 @@ public class Map extends Observable {
             l_continent = null;
         }
         this.getD_Continents().clear();
+        this.getCountryListOfMap().clear();
     }
 }

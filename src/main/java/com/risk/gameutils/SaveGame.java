@@ -76,12 +76,13 @@ public class SaveGame {
     }
 
     public StringBuilder processPlayers(ArrayList<Player> d_PlayerList) {
+        int l_playerId=1;
         StringBuilder l_playerData = new StringBuilder();
         l_playerData.append("\n");
         l_playerData.append("[players]");
         l_playerData.append("\n");
         for (Player player : d_PlayerList) {
-            l_playerData.append(player.getD_PlayerName());
+            l_playerData.append(l_playerId+" "+player.getD_PlayerName());
             //l_mapData.append("\n \n");
             l_playerData.append("\nCountries Owned: ");
             for (Country l_country : player.getD_AssignedCountries()) {
@@ -94,7 +95,8 @@ public class SaveGame {
             }
             l_playerData.append("\nNo of Armies: ");
             l_playerData.append(player.getD_Armies());
-            l_playerData.append("\n \n");
+            l_playerData.append("\n\n");
+            l_playerId++;
         }
         l_playerData.append("\n");
         return l_playerData;

@@ -18,6 +18,9 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     /**
      * Instantiates a new Player strategy.
      *
+     * It focuses on protecting its weak countries (deploys on its weakest country, never attacks, then moves its
+     * armies in order to reinforce its weaker country).
+     *
      * @param p_player  Player object
      * @param p_country List of country
      */
@@ -39,6 +42,7 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     /**
      * Decide which country should be defend
      * Benevolent Player decide to defend its country with the most armies
+     *
      *
      * @return current player country with most number of armies
      */
@@ -115,13 +119,18 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
                         // AirLift Card
                         //l_numOfArmies = l_rand.nextInt(l_toMoveFrom.getD_NumberOfArmies());
                         l_numOfArmies = l_toMoveFrom.getD_NumberOfArmies() - 1;
-                        if(l_numOfArmies <= 0)
+                        if(l_numOfArmies <= 0 ||!d_player.d_cardList.contains("airlift"))
                         {
                             return new Deploy(d_player, l_toDefend.getD_CountryName(), d_player.getD_Armies());
                         }
                         return new Airlift(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                     case (2):
                         //Blockade Card
+                        l_numOfArmies = l_toMoveFrom.getD_NumberOfArmies() - 1;
+                        if(l_numOfArmies <= 0 ||!d_player.d_cardList.contains("blockade"))
+                        {
+                            return new Deploy(d_player, l_toDefend.getD_CountryName(), d_player.getD_Armies());
+                        }
                         return new Blockade(d_player,l_toDefend.getD_CountryName());
                 }
             }
