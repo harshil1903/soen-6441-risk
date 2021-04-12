@@ -67,9 +67,9 @@ public class Advance implements Order {
                         return false;
                     }
                 } else {
-                    System.out.println("Source country name " + d_targetCountryName + " and Target country name " + d_targetCountryName + " are same so advance order can not apply here");
-                    d_Log.notify("Source country name " + d_targetCountryName + " and Target country name " + d_targetCountryName + " are same so advance order can not apply here");
-                    return false;
+                    System.out.println("Source country name " + d_targetCountryName + " and Target country name " + d_targetCountryName + " are same so advance order does not changes anything");
+                    d_Log.notify("Source country name " + d_targetCountryName + " and Target country name " + d_targetCountryName + " are same so advance order does not changes anything");
+                    return true;
                 }
 
             } else {
@@ -134,7 +134,11 @@ public class Advance implements Order {
                     //so attacker can not get card here
 
                     int l_previousArmies = d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies;
-                    d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy + l_previousArmies);
+
+                    if(l_attackerArmy > 0)
+                        d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy + l_previousArmies);
+                    else
+                        d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_previousArmies);
                     d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
                     System.out.println(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
                     d_Log.notify(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
