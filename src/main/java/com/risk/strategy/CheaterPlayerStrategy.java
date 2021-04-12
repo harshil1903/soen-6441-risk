@@ -135,12 +135,6 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
                 d_player.addCountryToAssignedCountries(l_newCountry);
         }
 
-//        for(Player p : d_PlayerList) {
-//            System.out.println("\n\nEnemy Player : " + p.getD_PlayerName());
-//            for (Country l : p.getD_AssignedCountries()) {
-//                System.out.println("Enemy Country : " + l.getD_CountryName());
-//            }
-//        }
 
         System.out.println("\n");
         for (Country l_cheaterCountry : d_player.getD_AssignedCountries()) {

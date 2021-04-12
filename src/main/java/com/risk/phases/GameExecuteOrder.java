@@ -84,13 +84,14 @@ public class GameExecuteOrder extends Game {
 
                     System.out.println("Executing Order");
                     d_Log.notify("Executing Order");
-                    if (l_order.valid()) {
-
-                        l_order.execute();
-                    } else {
-                        System.out.println("Invalid Order, not executed");
-                        d_Log.notify("Invalid Order, not executed");
-                    }
+//                    if (l_order.valid()) {
+//
+//                        l_order.execute();
+//                    } else {
+//                        System.out.println("Invalid Order, not executed");
+//                        d_Log.notify("Invalid Order, not executed");
+//                    }
+                    l_order.execute();
                 } else {
                     ++l_noOrdersPlayerCount;
                 }
@@ -122,23 +123,6 @@ public class GameExecuteOrder extends Game {
      * @return Name of player won or blank string if nobody has won
      */
     public String playerWon() {
-//        for (Player l_player : d_PlayerList) {
-//
-//            String l_playerName = l_player.getD_PlayerName();
-//
-//            for (Continent l_continent : d_Map.getD_Continents()) {
-//
-//                for (Country l_country : l_continent.getD_Countries()) {
-//
-//                    if (!l_country.getD_Player().getD_PlayerName().equals(l_playerName)) {
-//                        return "";
-//                    }
-//                }
-//            }
-//
-//            return l_playerName;
-//        }
-//        return "";
 
         String l_winner = d_Map.getCountryListOfMap().get(0).getD_Player().getD_PlayerName();
 

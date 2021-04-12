@@ -90,7 +90,7 @@ public class Airlift implements Order {
      * Execute.
      */
     public void execute() {
-
+        printOrder();
         if (valid()) {
             d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
             int l_previousArmy = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies();
@@ -102,10 +102,12 @@ public class Airlift implements Order {
             System.out.println("After Airlift Card number of army in " + d_targetCountryName + " is : " + d_targetCountry.getD_NumberOfArmies());
             d_Log.notify("After Airlift Card number of army in " + d_targetCountryName + " is : " + d_targetCountry.getD_NumberOfArmies());
             d_player.removeCard("airlift");
-            printOrder();
-            d_Log.notify("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-                    + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " \nSuccessfully Executed\n");
+            System.out.println("Order Executed Successfully\n");
 
+        }
+        else {
+            System.out.println("Invalid Order, not executed\n");
+            d_Log.notify("Invalid Order, not executed\n");
         }
     }
 
@@ -114,8 +116,8 @@ public class Airlift implements Order {
      */
     public void printOrder() {
         System.out.println("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " \nSuccessfully Executed\n");
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies);
         d_Log.notify("Order Type : Airlift \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + " \nSuccessfully Executed\n");
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies);
     }
 }

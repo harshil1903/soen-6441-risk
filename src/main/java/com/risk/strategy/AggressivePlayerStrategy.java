@@ -7,6 +7,7 @@ import com.risk.orders.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * AggressivePlayer Strategy Class
@@ -15,6 +16,7 @@ import java.util.Random;
  * @author Harsh
  */
 public class AggressivePlayerStrategy extends PlayerStrategy {
+    int d_flag = 0;
 
     /**
      * Instantiates a new Player strategy.
@@ -37,6 +39,7 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
      */
 
     protected Country toAttack() {
+        d_flag = 0;
         Country l_myMaxArmies = d_player.getD_AssignedCountries().get(0);
         for (Country l_tempCountry : d_country) {
             if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies() && d_player.getD_AssignedCountries().contains(l_tempCountry)) {
@@ -49,7 +52,7 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
             }
         }
 
-
+        d_flag = 1;
         ArrayList<Country> l_toAttack =  new ArrayList<Country>();
 
 
@@ -63,8 +66,9 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
             }
         }
 
-        int l_random = new Random().nextInt(l_toAttack.size());
-        return l_toAttack.get(l_random);
+        List<Country> l_newList = l_toAttack.stream().distinct().collect(Collectors.toList());
+        int l_random = new Random().nextInt(l_newList.size());
+        return l_newList.get(l_random);
 
     }
 
@@ -84,7 +88,7 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
      * @return null
      */
     protected Country toAttackFrom() {
-        Country l_myMaxArmies = d_player.getD_AssignedCountries().get(0);
+        Country l_myMaxArmies = d_player.getD_AssignedCountries().get(new Random().nextInt(d_player.getD_AssignedCountries().size()));
         for (Country l_tempCountry : d_country) {
             if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies() && d_player.getD_AssignedCountries().contains(l_tempCountry)) {
                 l_myMaxArmies = l_tempCountry;
@@ -120,23 +124,37 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
         l_toAttackFrom = toAttackFrom();
         l_toAttack = toAttack();
 
+        l_numOfArmies = l_toAttackFrom.getD_NumberOfArmies() - 1;
+
+
+        System.out.println("Aggressive Player max army country : ");
+//        if(d_flag == 1){
+//
+//            for(Country l_country : d_player.getD_AssignedCountries())
+//            {
+//                if(l_country.getD_AdjacentCountries().contains(l_toAttack)){
+//                    l_toAttack = l_country;
+//                    break;
+//                }
+//            }
+//
+//            return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_toAttack.getD_CountryName(), l_toAttackFrom.getD_NumberOfArmies() - 1);
+//        }
+
+
         if (new Random().nextBoolean()) {
-            // Deploy Order
-            //l_numOfArmies = l_rand.nextInt(d_player.getD_Armies() + 1);
-            //return new Deploy(d_player, toAttackFrom().getD_CountryName(), l_numOfArmies);
+
             return new Deploy(d_player, l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
-        } else {
-            // Advance Order
-            //l_numOfArmies = l_rand.nextInt(toAttackFrom().getD_NumberOfArmies()) - 1;
-            l_numOfArmies = l_toAttackFrom.getD_NumberOfArmies() - 1;
+        }
+        else {
+
             if(l_numOfArmies <= 0)
             {
-                //return new Deploy(d_player, toAttackFrom().getD_CountryName(), d_player.getD_Armies());
                 return new Deploy(d_player,l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
             }
 
-            if(l_toAttackFrom.getD_AdjacentCountries().contains(l_toAttack)) {
-                //return new Advance(d_player, toAttackFrom().getD_CountryName(), toAttack().getD_CountryName(), l_numOfArmies);
+            if(l_toAttackFrom.getD_AdjacentCountries().contains(l_toAttack))
+            {
                 return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_toAttack.getD_CountryName(), l_numOfArmies);
             }
             else
@@ -144,7 +162,6 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
                 for(Country l_country : d_player.getD_AssignedCountries())
                 {
                     if(l_country.getD_AdjacentCountries().contains(l_toAttack)){
-                        //return new Advance(d_player, toAttackFrom().getD_CountryName(), toAttack().getD_CountryName(), l_numOfArmies);
                         return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_country.getD_CountryName(), l_numOfArmies);
                     }
                 }

@@ -64,6 +64,7 @@ public class GameIssueOrder extends Game {
 
             for (Player l_player : d_PlayerList) {
 
+                /*
                 if(l_player.d_isHuman) {
 
                     if (!l_player.isD_noOrdersLeft()) {
@@ -154,24 +155,76 @@ public class GameIssueOrder extends Game {
 
                         l_player.issueOrder();
 
-//                        if(l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy)
-//                        {
-//                            String l_playerWon = playerWon();
-//
-//                            if (!l_playerWon.equals("")) {
-//                                System.out.println("\n\n******************************************\n");
-//                                System.out.println("Player " + l_playerWon + " has Won the Game!!!");
-//                                System.out.println("\n******************************************\n\n\n");
-//                                d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
-//                                showMap(new ArrayList<>());
-//                                endGame();
-//                            }
-//                        }
                         l_player.setD_noOrdersLeft(new Random().nextBoolean());
                     }
                     else {
                         System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped because they have no orders left");
                     }
+                }
+                */
+
+                if(!l_player.isD_noOrdersLeft()){
+                    if(l_player.getD_AssignedCountries().size() == 0)
+                    {
+                        System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() +
+                                " has no countries left and hence is out of the game");
+                        d_PlayerList.remove(l_player);
+                        continue;
+                    }
+
+
+                    System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() + "'s turn to issue order. ");
+                    System.out.println("You have " + l_player.getD_Armies() + " number of reinforcement armies");
+                    System.out.println("You own the following Countries along with their adjacent countries");
+
+                    System.out.printf("\t%-15s:\t%-15s%n", "COUNTRY", "NEIGHBOR COUNTRIES");
+
+                    for (Country l_country : l_player.getD_AssignedCountries()) {
+
+                        System.out.printf("\t%-15s:", l_country.getD_CountryName());
+
+                        for (Country l_adjCountry : l_country.getD_AdjacentCountries()) {
+                            System.out.printf("\t%-15s ", l_adjCountry.getD_CountryName());
+                        }
+                        System.out.println();
+                    }
+
+                    l_player.showCardList();
+
+                    if(l_player.d_isHuman){
+                        System.out.println("\n\nEnter command: ");
+                        l_command = l_scanner.nextLine();
+
+                        if (l_command.equals("end")) {
+                            return;
+                        }
+
+                        if (l_command.equals("showmap")) {
+                            showMap(new ArrayList<>());
+                            System.out.println("\n\nEnter command: ");
+                            l_command = l_scanner.nextLine();
+                        }
+
+                        String l_action = l_command.split(" ")[0];
+                        String l_arguments = l_command.substring(l_action.length());
+
+                        l_player.setOrderValues(l_action, l_arguments);
+                        l_player.issueOrder();
+
+                        System.out.println("Do you have more orders left? (y/n)");
+                        l_command = l_scanner.nextLine();
+
+                        if (l_command.equals("n"))
+                            l_player.setD_noOrdersLeft(true);
+                    }
+                    else{
+                        l_player.issueOrder();
+
+                        l_player.setD_noOrdersLeft(new Random().nextBoolean());
+                    }
+                }
+                else {
+                    System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped because they have no orders left");
                 }
             }
         }

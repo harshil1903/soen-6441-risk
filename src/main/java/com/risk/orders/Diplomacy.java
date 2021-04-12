@@ -55,13 +55,16 @@ public class Diplomacy implements Order {
      * Execute method to run diplomacy card
      */
     public void execute() {
+        printOrder();
         if (valid()) {
             d_player.addPlayerToDiplomacyList(d_otherPlayer.getPlayerFromPlayerName(d_playerName));
             d_otherPlayer.addPlayerToDiplomacyList(d_player);
             d_player.removeCard("negotiate");
-            printOrder();
-            d_Log.notify("Order Type : Diplomacy \nPlayer : " + d_player.getD_PlayerName() + " Opponent Player : " + d_otherPlayer.getD_PlayerName()
-                    + " \nSuccessfully Executed\n");
+            System.out.println("Order Executed Successfully\n");
+        }
+        else {
+            System.out.println("Invalid Order, not executed\n");
+            d_Log.notify("Invalid Order, not executed\n");
         }
     }
 
@@ -69,6 +72,7 @@ public class Diplomacy implements Order {
      * Print order.
      */
     public void printOrder() {
-        System.out.println();
+        System.out.println("Order Type : Diplomacy \nPlayer : " + d_player.getD_PlayerName() + " Opponent Player : " + d_otherPlayer.getD_PlayerName());
+        d_Log.notify("Order Type : Diplomacy \nPlayer : " + d_player.getD_PlayerName() + " Opponent Player : " + d_otherPlayer.getD_PlayerName());
     }
 }

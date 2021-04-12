@@ -85,6 +85,7 @@ public class Bomb implements Order {
      * Execute.
      */
     public void execute() {
+        printOrder();
         if (valid()) {
             int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
             System.out.println("Before Bomb Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
@@ -96,9 +97,12 @@ public class Bomb implements Order {
             d_Log.notify("After Bomb Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
             d_player.removeCard("bomb");
 
-            printOrder();
-            d_Log.notify("Order Type : Bomb \nPlayer : " + d_player.getD_PlayerName() + " Target Country : " + d_countryName + " \nSuccessfully Executed\n");
+            System.out.println("Order Executed Successfully\n");
 
+        }
+        else {
+            System.out.println("Invalid Order, not executed\n");
+            d_Log.notify("Invalid Order, not executed\n");
         }
     }
 
@@ -106,7 +110,7 @@ public class Bomb implements Order {
      * Print order.
      */
     public void printOrder() {
-        System.out.println("Order Type : Bomb \nPlayer : " + d_player.getD_PlayerName() + " Target Country : " + d_countryName + " \nSuccessfully Executed\n");
-        d_Log.notify("Order Type : Bomb \nPlayer : " + d_player.getD_PlayerName() + " Target Country : " + d_countryName + " \nSuccessfully Executed\n");
+        System.out.println("Order Type : Bomb \nPlayer : " + d_player.getD_PlayerName() + " Target Country : " + d_countryName);
+        d_Log.notify("Order Type : Bomb \nPlayer : " + d_player.getD_PlayerName() + " Target Country : " + d_countryName);
     }
 }

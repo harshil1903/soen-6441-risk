@@ -73,6 +73,7 @@ public class Blockade implements Order {
      * Execute.
      */
     public void execute() {
+        printOrder();
         if (valid()) {
             int l_previousArmy = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
             System.out.println("Before Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
@@ -83,12 +84,13 @@ public class Blockade implements Order {
             System.out.println("After Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
             d_Log.notify("After Blockade Card number of army in " + d_countryName + " is : " + d_country.getD_NumberOfArmies());
             d_player.removeCard("blockade");
-            printOrder();
             d_player.removeCountryFromAssignedCountries(d_country.getD_CountryID());
             d_NeutralPlayer.addCountryToAssignedCountries(d_country);
-
-            d_Log.notify("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
-
+            System.out.println("Order Executed Successfully\n");
+        }
+        else {
+            System.out.println("Invalid Order, not executed\n");
+            d_Log.notify("Invalid Order, not executed\n");
         }
     }
 
@@ -96,7 +98,7 @@ public class Blockade implements Order {
      * Print order.
      */
     public void printOrder() {
-        System.out.println("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
-        d_Log.notify("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName + " \nSuccessfully Executed\n");
+        System.out.println("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName );
+        d_Log.notify("Order Type : Blockade \nPlayer : " + d_player.getD_PlayerName() + " Country to block : " + d_countryName );
     }
 }

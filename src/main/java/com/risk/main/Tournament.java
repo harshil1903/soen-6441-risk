@@ -5,11 +5,9 @@ import com.risk.controller.MapCommands;
 import com.risk.exception.InvalidMapException;
 import com.risk.gameutils.AssignCountries;
 import com.risk.gameutils.Reinforce;
-import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Player;
 import com.risk.orders.Order;
-import com.risk.strategy.CheaterPlayerStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +18,7 @@ import static com.risk.main.Main.d_Map;
 
 
 //  tournament -M europe Asia -P benevolent benevolent cheater -G 3 -D 15
+//  tournament -M europe Asia -P benevolent benevolent aggressive -G 3 -D 15
 
 /**
  * The type Tournament class to run a tournament of multiple games among multiple maps
@@ -42,6 +41,7 @@ public class Tournament {
 
         d_listOfPlayerStrategies.clear();
         d_mapNames.clear();
+        d_PlayerList.clear();
 
         if(!validateTournamentArguments(p_argumentTokens)){
             System.out.println("Exiting Tournament Mode");
@@ -105,13 +105,11 @@ public class Tournament {
             System.out.println("\n\nNEW TURN ");
 
             System.out.println("\nReinforcing Armies");
+
             Reinforce.assignReinforcementArmies();
             System.out.println("\nArmies have been successfully reinforced among players\n\n\n\n");
 
-
-
             issueOrder();
-
 
             executeOrder();
 
@@ -126,20 +124,7 @@ public class Tournament {
                 GameCommands.showMapCommand(new ArrayList<>());
                 break;
             }
-//
-//            for(Player p : d_PlayerList)
-//            {
-//                if(p.getD_AssignedCountries().size() == d_Map.getCountryListOfMap().size())
-//                {
-//                    System.out.println("Player " + l_playerWon+ " has Won the Game!!!");
-//                    MapCommands.showMapCommand(new ArrayList<>());
-//                    break;
-//                }
-//            }
-//
-//            for(Country c : d_Map.getCountryListOfMap()){
-//                System.out.println("Country Name : " + c.getD_CountryName() + "   Owned by : " + c.getD_Player().getD_PlayerName());
-//            }
+
         }
 
         if(l_playerWon.equals("")){
@@ -158,22 +143,6 @@ public class Tournament {
         for(Player l_player : d_PlayerList)
         {
             l_player.issueOrder();
-//            if (l_player.getD_playerStrategy() instanceof CheaterPlayerStrategy) {
-//                System.out.println("INSIDE INSTANCE OF CHEATER CHECK");
-//                String l_playerWon = playerWon();
-//
-//
-//                System.out.println("Player Won value : " + l_playerWon);
-//                System.out.println(l_player.getD_AssignedCountries().size() + "\n\n\n");
-//                if (!l_playerWon.equals("")) {
-//                    System.out.println("\n\n******************************************\n");
-//                    System.out.println("Player " + l_playerWon + " has Won the Game!!!");
-//                    System.out.println("\n******************************************\n\n\n");
-//                    d_Log.notify("Player " + l_playerWon + " has Won the Game!!!");
-//                    GameCommands.showMapCommand(new ArrayList<>());
-//                    break;
-//                }
-//            }
         }
     }
 
@@ -194,13 +163,7 @@ public class Tournament {
                 if (l_order != null) {
 
                     System.out.println("Executing Order");
-                    if(l_order.valid()){
-
-                        l_order.execute();
-                    }
-                    else {
-                        System.out.println("Invalid Order, not executed");
-                    }
+                    l_order.execute();
                 } else {
                     ++l_noOrdersPlayerCount;
                 }
@@ -222,26 +185,7 @@ public class Tournament {
      * @return Name of player won or blank string if nobody has won
      */
     public static String playerWon(){
-//        int l_flag;
-//
-//        for (Player l_player : d_PlayerList) {
-//            l_flag = 0;
-//            String l_playerName = l_player.getD_PlayerName();
-//            System.out.println("\n\nPlayer Name : " + l_playerName +"\n\n");
-//            for (Continent l_continent : d_Map.getD_Continents()) {
-//
-//                for (Country l_country : l_continent.getD_Countries()) {
-//
-//                    if (!l_country.getD_Player().getD_PlayerName().equals(l_playerName)) {
-//                        //return "";
-//                        l_flag = 1;
-//                    }
-//                }
-//            }
-//
-//            return l_playerName;
-//        }
-//        return "";
+
         String l_winner = d_Map.getCountryListOfMap().get(0).getD_Player().getD_PlayerName();
 
         for(Country l_country : d_Map.getCountryListOfMap())

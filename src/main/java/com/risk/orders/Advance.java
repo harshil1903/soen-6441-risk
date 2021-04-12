@@ -67,8 +67,8 @@ public class Advance implements Order {
                         return false;
                     }
                 } else {
-                    System.out.println("Source country name " + d_targetCountryName + " and Target country name" + d_targetCountryName + "are same so advance order can not apply here");
-                    d_Log.notify("Source country name " + d_targetCountryName + " and Target country name" + d_targetCountryName + "are same so advance order can not apply here");
+                    System.out.println("Source country name " + d_targetCountryName + " and Target country name " + d_targetCountryName + " are same so advance order can not apply here");
+                    d_Log.notify("Source country name " + d_targetCountryName + " and Target country name " + d_targetCountryName + " are same so advance order can not apply here");
                     return false;
                 }
 
@@ -88,6 +88,7 @@ public class Advance implements Order {
      * Execute.
      */
     public void execute() {
+        printOrder();
         if (valid()) {
             ArrayList<String> l_countriesOwnedList = new ArrayList<>();
             for (Country l_country : d_player.getD_AssignedCountries()) {
@@ -135,21 +136,23 @@ public class Advance implements Order {
                     int l_previousArmies = d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies;
                     d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy + l_previousArmies);
                     d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
-                    System.out.println(d_player.getD_PlayerName() + "Successfully Defend Country " + d_targetCountryName);
-                    d_Log.notify(d_player.getD_PlayerName() + "Successfully Defend Country " + d_targetCountryName);
+                    System.out.println(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
+                    d_Log.notify(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
                 }
 
             }
-            d_Log.notify("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-                    + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
-            printOrder();
+            System.out.println("Order Executed Successfully\n");
+        }
+        else {
+            System.out.println("Invalid Order, not executed\n");
+            d_Log.notify("Invalid Order, not executed\n");
         }
     }
 
     public void printOrder() {
         System.out.println("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies);
         d_Log.notify("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
-                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies + "\nSuccessfully Execute\n");
+                + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies);
     }
 }
