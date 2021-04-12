@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import static com.risk.main.Main.d_Log;
+import static com.risk.main.Main.d_Map;
 
 
 /**
@@ -18,7 +19,7 @@ import static com.risk.main.Main.d_Log;
  * @author Chirag
  */
 public class EditConquestMap {
-    public static Map p_map = new Map();
+    public static Map d_map = new Map();
 
     /**
      * This method gets country from p_Map.
@@ -135,10 +136,10 @@ public class EditConquestMap {
      * @return new map to be created
      */
     public static Map createConquestMap() {
-        p_map = new Map();
+        d_map = new Map();
         System.out.println("Conquest Map file not presented will be created from scratch");
-        p_map.d_isEmpty = true;
-        return p_map;
+        d_map.d_isEmpty = true;
+        return d_map;
     }
 
     /**
@@ -149,7 +150,8 @@ public class EditConquestMap {
      */
     public static Map loadConquestMap(String p_fileName) {
         String l_path = "src/main/resources/";
-        String l_fileName = "Asia.map";
+        String l_fileName = p_fileName + ".map";
+        d_Map.d_mapName = p_fileName;
         File l_map = new File(l_path + l_fileName);
         Scanner l_mapReader = null;
         try {
@@ -157,10 +159,10 @@ public class EditConquestMap {
             while (l_mapReader.hasNextLine()) {
                 String l_line = l_mapReader.nextLine();
                 if (l_line.equals("[Continents]")) {
-                    getConquestContinents(l_mapReader, p_map);
+                    getConquestContinents(l_mapReader, d_map);
                 }
                 if (l_line.equals("[Territories]")) {
-                    getConquestTerritories(l_mapReader, p_map);
+                    getConquestTerritories(l_mapReader, d_map);
                 }
             }
 
@@ -168,16 +170,15 @@ public class EditConquestMap {
             while (l_mapReader.hasNextLine()) {
                 String l_line = l_mapReader.nextLine();
                 if (l_line.equals("[Territories]")) {
-                    getConquestAdjacentTerritories(l_mapReader, p_map);
+                    getConquestAdjacentTerritories(l_mapReader, d_map);
                 }
             }
             System.out.println("Loaded map successfully form existing conquest file");
 
         } catch (FileNotFoundException e) {
-
+            d_map = createConquestMap();
+            d_map.d_mapName = p_fileName;
         }
-        return p_map;
+        return d_map;
     }
-
-
 }

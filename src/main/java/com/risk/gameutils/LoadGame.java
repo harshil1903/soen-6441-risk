@@ -85,7 +85,7 @@ public class LoadGame {
         while (p_gameReader.hasNextLine()) {
             String l_line = p_gameReader.nextLine();
             if (l_line.equals("")) break;
-            String[] l_parts = l_line.split(" ");
+            String[] l_parts = l_line.split(",");
             String p_countryName = l_parts[0];
             int p_continentId = Integer.parseInt(l_parts[1]);
             int p_armies = Integer.parseInt(l_parts[2]);
@@ -109,7 +109,7 @@ public class LoadGame {
             d_PlayerList.add(l_player);
 
             l_line = p_gameReader.nextLine();
-            l_parts = l_line.split(" ");
+            l_parts = l_line.split(",");
 
             for (int i = 1; i < l_parts.length; i++) {
                 Country l_country = getCountry(l_parts[i], d_Map);

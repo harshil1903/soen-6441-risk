@@ -34,7 +34,7 @@ public class EditMapAdapter extends EditMap {
     public static Map editMap(String p_fileName) throws InvalidMapException {
 
         String l_path = "src/main/resources/";
-        String l_fileName = p_fileName + ".map";
+        String l_fileName = p_fileName+".map";
         File l_map = new File(l_path + l_fileName);
         if (l_map.exists())
             return d_editConquestMap.loadConquestMap(p_fileName);

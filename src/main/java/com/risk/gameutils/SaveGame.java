@@ -45,8 +45,8 @@ public class SaveGame {
         l_countryData.append("\n[countries]");
         for (Continent l_continent : p_Map.getD_Continents()) {
             for (Country l_country : l_continent.getD_Countries()) {
-                l_countryData.append("\n" + l_country.getD_CountryName() + " " + l_country.getD_ContinentID()
-                        + " " + l_country.getD_NumberOfArmies());
+                l_countryData.append("\n" + l_country.getD_CountryName() + "," + l_country.getD_ContinentID()
+                        + "," + l_country.getD_NumberOfArmies());
             }
         }
         l_countryData.append("\n");
@@ -80,7 +80,7 @@ public class SaveGame {
             //l_mapData.append("\n \n");
             l_playerData.append("\nCountries Owned: ");
             for (Country l_country : l_player.getD_AssignedCountries()) {
-                l_playerData.append(l_country.getD_CountryName() + " ");
+                l_playerData.append(l_country.getD_CountryName() + ",");
             }
             l_playerData.append("\nCards: ");
 
