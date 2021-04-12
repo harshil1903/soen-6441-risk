@@ -4,6 +4,7 @@ import com.risk.models.Country;
 import com.risk.models.Player;
 import com.risk.orders.*;
 
+import java.io.CharArrayReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -40,15 +41,13 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
 
     protected Country toAttack() {
         d_flag = 0;
-        Country l_myMaxArmies = d_player.getD_AssignedCountries().get(0);
-        for (Country l_tempCountry : d_country) {
-            if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies() && d_player.getD_AssignedCountries().contains(l_tempCountry)) {
-                l_myMaxArmies = l_tempCountry;
-            }
-        }
+        Country l_myMaxArmies = toAttackFrom();
+
         for (Country l_country : l_myMaxArmies.getD_AdjacentCountries()) {
-            if (l_country.getD_Player() != d_player) {
-                return l_country;
+            if (!l_country.getD_Player().getD_PlayerName().equals(d_player.getD_PlayerName())) {
+                    System.out.println(" \nfirst : " + l_country.getD_CountryName());
+                    return l_country;
+
             }
         }
 
@@ -89,8 +88,10 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
      */
     protected Country toAttackFrom() {
         Country l_myMaxArmies = d_player.getD_AssignedCountries().get(new Random().nextInt(d_player.getD_AssignedCountries().size()));
-        for (Country l_tempCountry : d_country) {
-            if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies() && d_player.getD_AssignedCountries().contains(l_tempCountry)) {
+        List<Country> l_countryList = d_player.getD_AssignedCountries();
+
+        for (Country l_tempCountry : l_countryList) {
+            if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies()) {
                 l_myMaxArmies = l_tempCountry;
             }
         }
@@ -127,7 +128,19 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
         l_numOfArmies = l_toAttackFrom.getD_NumberOfArmies() - 1;
 
 
-        System.out.println("Aggressive Player max army country : ");
+        for(Country l_country : d_player.getD_AssignedCountries())
+        {
+            System.out.println("\nCountry : " + l_country.getD_CountryName());
+            for(Country l : l_country.getD_AdjacentCountries())
+            {
+                System.out.print("   " + l.getD_CountryName());
+            }
+        }
+
+        System.out.println("\nAggressive Player max army country : " + l_toAttackFrom.getD_CountryName() + "  " + l_toAttackFrom.getD_NumberOfArmies());
+
+        System.out.println("\nAggressive Player to attack country : " + l_toAttack.getD_CountryName() + "  " + l_toAttack.getD_NumberOfArmies());
+
 //        if(d_flag == 1){
 //
 //            for(Country l_country : d_player.getD_AssignedCountries())

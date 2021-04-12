@@ -19,6 +19,7 @@ import static com.risk.main.Main.d_Map;
 
 //  tournament -M europe Asia -P benevolent benevolent cheater -G 3 -D 15
 //  tournament -M europe Asia -P benevolent benevolent aggressive -G 3 -D 15
+//  tournament -M europe -P benevolent benevolent aggressive -G 3 -D 15
 
 /**
  * The type Tournament class to run a tournament of multiple games among multiple maps
