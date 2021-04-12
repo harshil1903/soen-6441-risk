@@ -55,6 +55,7 @@ public class EditMap {
         String l_path = "src/main/resources/";
         String l_fileName = p_fileName + ".map";
         d_Map.d_mapName=p_fileName;
+        d_Map.d_mapType="domination";
         File l_map = new File(l_path + l_fileName);
         if (l_map.exists())
             return LoadMap.loadMap(l_map, d_Map);

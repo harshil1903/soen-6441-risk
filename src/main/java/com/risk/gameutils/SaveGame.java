@@ -29,7 +29,7 @@ public class SaveGame {
         StringBuilder l_mapData = new StringBuilder();
         l_mapData.append("[map]");
         l_mapData.append("\n");
-        l_mapData.append(l_mapName);
+        l_mapData.append(l_mapName+" "+p_Map.d_mapType);
         l_mapData.append("\n");
         return l_mapData;
     }
@@ -59,7 +59,7 @@ public class SaveGame {
      *
      * @return the Map data to be added to game file.
      */
-    public StringBuilder processPhase( Phase p_gamePhase) {
+    public StringBuilder processPhase(Phase p_gamePhase) {
         String l_phaseName = p_gamePhase.getClass().getSimpleName();
         StringBuilder l_phaseData = new StringBuilder();
         l_phaseData.append("\n[phase]");
@@ -103,9 +103,9 @@ public class SaveGame {
      * //     * @param p_gamePhase  contains the current phase of the game
      * //     * @param d_PlayerList contains the list of all the players
      */
-    public void saveGame(Map p_Map, Phase p_gamePhase, ArrayList<Player> d_PlayerListGame,String d_gameFileName){
+    public void saveGame(Map p_Map, Phase p_gamePhase, ArrayList<Player> d_PlayerListGame, String d_gameFileName) {
         String l_path = "src/main/resources/";
-        String l_fileName = d_gameFileName + "test2.game";
+        String l_fileName = d_gameFileName + ".game";
         File l_map = new File(l_path + l_fileName);
         FileWriter l_fileWriter;
         try {

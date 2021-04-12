@@ -28,16 +28,22 @@ public class EditMapAdapter extends EditMap {
      * Overridden editMap method of EditMap class
      *
      * @param p_fileName File name of the conquest file
-     * @return Map pbject to be used in the game
+     * @return Map object to be used in the game
      * @throws InvalidMapException if Map is invalid.
      */
     public static Map editMap(String p_fileName) throws InvalidMapException {
 
         String l_path = "src/main/resources/";
-        String l_fileName = p_fileName+".map";
+        String l_fileName = p_fileName + ".map";
         File l_map = new File(l_path + l_fileName);
-        if (l_map.exists())
+        if (l_map.exists()) {
+//            Map l_Map = d_editConquestMap.loadConquestMap(p_fileName);
+//            l_Map.d_mapName = p_fileName;
             return d_editConquestMap.loadConquestMap(p_fileName);
-        return d_editConquestMap.createConquestMap();
+        }
+
+//        Map l_Map = d_editConquestMap.createConquestMap(p_fileName);
+//        l_Map.d_mapName = p_fileName;
+        return d_editConquestMap.createConquestMap(p_fileName);
     }
 }

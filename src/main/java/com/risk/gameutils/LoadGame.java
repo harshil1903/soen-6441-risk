@@ -1,6 +1,7 @@
 package com.risk.gameutils;
 
 import com.risk.exception.InvalidMapException;
+import com.risk.maputils.EditConquestMap;
 import com.risk.maputils.EditMap;
 import com.risk.models.Continent;
 import com.risk.models.Country;
@@ -66,7 +67,10 @@ public class LoadGame {
             if (l_line.equals("")) break;
             String[] l_parts = l_line.split(" ");
             String p_mapName = l_parts[0];
-            d_Map = EditMap.editMap(p_mapName);
+            String p_mapType = l_parts[1];
+            if (p_mapType.equals("domination"))
+                d_Map = EditMap.editMap(p_mapName);
+            else d_Map = EditConquestMap.loadConquestMap(p_mapName);
         }
     }
 
@@ -86,9 +90,12 @@ public class LoadGame {
             String l_line = p_gameReader.nextLine();
             if (l_line.equals("")) break;
             String[] l_parts = l_line.split(",");
+            for (String noob : l_parts)
+                System.out.println(noob);
             String p_countryName = l_parts[0];
             int p_continentId = Integer.parseInt(l_parts[1]);
             int p_armies = Integer.parseInt(l_parts[2]);
+            System.out.println("Part 1:" + l_parts[0]);
             Continent l_continent = d_Map.getContinentFromContinentList(p_continentId);
             Country l_country = l_continent.getCountryFromCountryName(p_countryName);
             l_country.setD_NumberOfArmies(p_armies);
@@ -113,7 +120,7 @@ public class LoadGame {
 
             for (int i = 1; i < l_parts.length; i++) {
                 Country l_country = getCountry(l_parts[i], d_Map);
-                if(l_country != null){
+                if (l_country != null) {
                     l_player.addCountryToAssignedCountries(l_country);
                     l_country.setD_Player(l_player);
                 }
@@ -123,7 +130,7 @@ public class LoadGame {
             l_parts = l_line.split(" ");
             for (int i = 1; i < l_parts.length; i++) {
                 String l_card = l_parts[i];
-                if(l_card != null){
+                if (l_card != null) {
                     l_player.addCard(l_card);
                 }
 

@@ -19,7 +19,7 @@ public class Map extends Observable {
     private HashMap<String, String> d_mapData;
     private List<Continent> d_continents;
     public String d_mapName="";
-    private String d_mapType;
+    public String d_mapType;
     /**
      * holds true if list is empty otherwise false.
      */

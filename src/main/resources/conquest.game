@@ -1,0 +1,68 @@
+[map]
+Asia conquest
+
+[phase]
+GameIssueOrder
+
+[countries]
+Saudi Arabia,1,0
+Kuwait,1,0
+Buhrain,1,0
+Qatar,1,0
+United Arab Emigrants,1,0
+Omen,1,0
+Yemen,1,0
+Turkey,2,0
+Cyprus,2,0
+Syria,2,0
+Iraq,2,0
+Jordan,2,0
+Lebanon,2,0
+Israel,2,0
+Russia,3,0
+Japan,3,0
+North Korea,3,0
+South Korea,3,0
+China,3,0
+Mongolia,3,0
+Kazakhstan,3,0
+Georgia,4,0
+Armenia,4,0
+Azerbaijan,4,0
+Iran,4,0
+Turkmenistan,4,0
+Uzbekistan,4,0
+Kyrgyzstan,4,0
+Tajikistan,4,0
+Afghanistan,4,0
+Pakistan,4,0
+India,5,0
+Nepal,5,0
+Bhuntan,5,0
+Bangladesh,5,0
+Sri Lanka,5,0
+Maldives,5,0
+Myanmar,6,0
+Thailand,6,0
+Laos,6,0
+Vietnam,6,0
+Cambodia,6,0
+West Malaysia,6,0
+Singapore,6,0
+Indonesia,7,0
+East Malaysia,7,0
+Brunei,7,0
+Philippines,7,0
+
+[players]
+1 P1 human
+Countries Owned: Kyrgyzstan,Japan,West Malaysia,Singapore,Turkmenistan,South Korea,Myanmar,Philippines,Saudi Arabia,Mongolia,Brunei,China,Afghanistan,Israel,Russia,Sri Lanka,Jordan,Azerbaijan,Laos,East Malaysia,Thailand,Uzbekistan,Turkey,India,
+Cards: 
+Armies: 8
+
+2 P2 human
+Countries Owned: Pakistan,Tajikistan,Bhuntan,Syria,United Arab Emigrants,Lebanon,Kuwait,Cyprus,Omen,North Korea,Indonesia,Qatar,Bangladesh,Georgia,Nepal,Kazakhstan,Iraq,Cambodia,Buhrain,Maldives,Armenia,Iran,Yemen,Vietnam,
+Cards: 
+Armies: 8
+
+

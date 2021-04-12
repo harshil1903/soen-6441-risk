@@ -9,8 +9,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import static com.risk.main.Main.d_Log;
-import static com.risk.main.Main.d_Map;
 
 
 /**
@@ -135,10 +133,12 @@ public class EditConquestMap {
      *
      * @return new map to be created
      */
-    public static Map createConquestMap() {
+    public static Map createConquestMap(String p_fileName) {
         d_map = new Map();
         System.out.println("Conquest Map file not presented will be created from scratch");
         d_map.d_isEmpty = true;
+        d_map.d_mapName = p_fileName;
+        d_map.d_mapType="conquest";
         return d_map;
     }
 
@@ -151,7 +151,8 @@ public class EditConquestMap {
     public static Map loadConquestMap(String p_fileName) {
         String l_path = "src/main/resources/";
         String l_fileName = p_fileName + ".map";
-        d_Map.d_mapName = p_fileName;
+        d_map.d_mapName = p_fileName;
+        d_map.d_mapType="conquest";
         File l_map = new File(l_path + l_fileName);
         Scanner l_mapReader = null;
         try {
@@ -173,11 +174,12 @@ public class EditConquestMap {
                     getConquestAdjacentTerritories(l_mapReader, d_map);
                 }
             }
+            d_map.d_mapName = p_fileName;
             System.out.println("Loaded map successfully form existing conquest file");
 
+
         } catch (FileNotFoundException e) {
-            d_map = createConquestMap();
-            d_map.d_mapName = p_fileName;
+                createConquestMap(p_fileName);
         }
         return d_map;
     }
