@@ -145,11 +145,19 @@ public class GameExecuteOrder extends Game {
         return "GameExecuteOrder";
     }
 
+    public void loadGame(List<String> p_argumentTokens) {
+        printInvalidCommandMessage();
+    }
+
+    public void saveGame(List<String> p_argumentTokens) {
+        printInvalidCommandMessage();
+    }
 
     /**
      * To set next phase
      */
     public void next() {
         d_gameEngine.setPhase(new GameIssueOrder(d_gameEngine));
+        d_gameEngine.getPhase().reinforce();
     }
 }

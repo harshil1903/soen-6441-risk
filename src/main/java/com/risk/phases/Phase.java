@@ -130,6 +130,11 @@ public abstract class Phase {
      */
     abstract public String currentPhase();
 
+
+    abstract public void loadGame(List<String> p_argumentTokens);
+
+    abstract public void saveGame(List<String> p_argumentTokens);
+
     /**
      * Common method to all States.
      */

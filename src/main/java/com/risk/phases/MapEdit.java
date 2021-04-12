@@ -79,6 +79,14 @@ public abstract class MapEdit extends Phase {
         return;
     }
 
+    public void loadGame(List<String> p_argumentTokens) {
+        printInvalidCommandMessage();
+    }
+
+
+    public void saveGame(List<String> p_argumentTokens) {
+        printInvalidCommandMessage();
+    }
 
     /**
      * To set next phase

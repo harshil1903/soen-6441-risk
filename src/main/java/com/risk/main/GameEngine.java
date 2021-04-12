@@ -1,5 +1,6 @@
 package com.risk.main;
 
+import com.risk.phases.GameIssueOrder;
 import com.risk.phases.GameStartup;
 import com.risk.phases.Phase;
 import com.risk.phases.PreMapLoad;
@@ -36,6 +37,15 @@ public class GameEngine extends Observable {
         d_GamePhase = p_gamePhase;
         System.out.println("New Phase : " + d_GamePhase.getClass().getSimpleName());
         d_Log.notify("New Phase : " + d_GamePhase.getClass().getSimpleName());
+    }
+
+    /**
+     * Gets the current phase value
+     *
+     * @return Current Game Phase
+     */
+    public Phase getPhase() {
+        return d_GamePhase;
     }
 
 
@@ -153,7 +163,8 @@ public class GameEngine extends Observable {
 
             case "assigncountries":
                 if (d_GamePhase.assignCountries()) {
-                    d_GamePhase.next();
+                    setPhase(new GameIssueOrder(this));
+                    d_GamePhase.reinforce();
                 }
                 break;
 
@@ -162,11 +173,11 @@ public class GameEngine extends Observable {
                 break;
 
             case "savegame":
-                //Call save game method in GameUtils
+                d_GamePhase.saveGame(l_argumentList);
                 break;
 
             case "loadgame":
-                //Call load game method in GameUtils
+                d_GamePhase.loadGame(l_argumentList);
                 break;
 
             case "end":

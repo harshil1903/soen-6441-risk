@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static com.risk.main.Main.d_PlayerList;
 import static com.risk.maputils.EditConquestMap.getCountry;
 
 /**
@@ -80,6 +81,7 @@ public class LoadGame {
 
 
     public static void getCountries(Scanner p_gameReader) {
+        System.out.println("INSIDE Get Countries ");
         while (p_gameReader.hasNextLine()) {
             String l_line = p_gameReader.nextLine();
             if (l_line.equals("")) break;
@@ -102,7 +104,7 @@ public class LoadGame {
             int l_playerId = Integer.parseInt(l_parts[0]);
             String l_playerName = l_parts[1];
             String l_playerStrategy = l_parts[2];
-            Player l_player = new Player();
+            Player l_player = new Player(l_playerName, l_playerStrategy);
             l_player.d_playerStrategyType = l_playerStrategy;
             d_PlayerList.add(l_player);
 
@@ -111,14 +113,20 @@ public class LoadGame {
 
             for (int i = 1; i < l_parts.length; i++) {
                 Country l_country = getCountry(l_parts[i], d_Map);
-                l_player.addCountryToAssignedCountries(l_country);
+                if(l_country != null){
+                    l_player.addCountryToAssignedCountries(l_country);
+                    l_country.setD_Player(l_player);
+                }
             }
 
             l_line = p_gameReader.nextLine();
             l_parts = l_line.split(" ");
             for (int i = 1; i < l_parts.length; i++) {
                 String l_card = l_parts[i];
-                l_player.addCard(l_card);
+                if(l_card != null){
+                    l_player.addCard(l_card);
+                }
+
             }
 
             l_line = p_gameReader.nextLine();

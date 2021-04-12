@@ -1,19 +1,14 @@
 package com.risk.phases;
 
 import com.risk.gameutils.Reinforce;
+import com.risk.gameutils.SaveGame;
 import com.risk.main.GameEngine;
 import com.risk.models.Country;
 import com.risk.models.Player;
-import com.risk.strategy.CheaterPlayerStrategy;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
-import static com.risk.main.Main.d_Log;
-import static com.risk.main.Main.d_PlayerList;
-import static com.risk.main.Tournament.playerWon;
+import static com.risk.main.Main.*;
 
 /**
  * Game issue order allows players to issue their orders
@@ -29,7 +24,7 @@ public class GameIssueOrder extends Game {
     public GameIssueOrder(GameEngine p_gameEngine) {
 
         super(p_gameEngine);
-        reinforce();
+        //reinforce();
 
     }
 
@@ -205,8 +200,19 @@ public class GameIssueOrder extends Game {
                             l_command = l_scanner.nextLine();
                         }
 
+
                         String l_action = l_command.split(" ")[0];
                         String l_arguments = l_command.substring(l_action.length());
+
+                        System.out.println("ISSUE ORDER l_Action : " + l_action + " l_Arguments : " + l_arguments);
+
+                        if(l_action.equals("savegame")){
+                            String[] l_argumentTokens = l_arguments.split(" ");
+                            List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
+                            l_argumentList.remove(0);
+                            saveGame(l_argumentList);
+                            continue;
+                        }
 
                         l_player.setOrderValues(l_action, l_arguments);
                         l_player.issueOrder();
@@ -266,6 +272,14 @@ public class GameIssueOrder extends Game {
         return "GameIssueOrder";
     }
 
+    public void loadGame(List<String> p_argumentTokens) {
+        printInvalidCommandMessage();
+    }
+
+    public void saveGame(List<String> p_argumentTokens) {
+        SaveGame l_game = new SaveGame();
+        l_game.saveGame(d_Map, d_gameEngine.getPhase(), d_PlayerList, p_argumentTokens.get(0));
+    }
 
     /**
      * loadmap Command to load the map
@@ -278,7 +292,7 @@ public class GameIssueOrder extends Game {
     }
 
     /**
-     * assigncountries Command to assign countries amoong players
+     * assigncountries Command to assign countries among players
      */
     public boolean assignCountries() {
         printInvalidCommandMessage();

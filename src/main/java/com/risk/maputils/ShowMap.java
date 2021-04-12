@@ -79,10 +79,19 @@ public class ShowMap {
         System.out.println("\nPLAYER INFO");
         for (Player l_player : d_PlayerList) {
             System.out.println("\nPlayer: " + l_player.getD_PlayerName().toUpperCase());
+            if(l_player.getD_AssignedCountries().size() == 0){
+                System.out.println("Countries haven't been assigned to the player yet");
+                continue;
+            }
+
             System.out.println("You own the following Countries along with army count in it.");
             System.out.printf("\t%-15s:\t%-10s%n", "COUNTRY", "ARMIES");
+
+
             for (Country l_country : l_player.getD_AssignedCountries()) {
-                System.out.printf("\t%-15s:   \t%s%n", l_country.getD_CountryName(), l_country.getD_NumberOfArmies());
+                if (l_country != null) {
+                    System.out.printf("\t%-15s:   \t%s%n", l_country.getD_CountryName(), l_country.getD_NumberOfArmies());
+                }
             }
         }
 

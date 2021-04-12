@@ -1,0 +1,44 @@
+[map]
+europe
+
+[phase]
+GameIssueOrder
+
+[countries]
+England 1 4
+Scotland 1 0
+N_Ireland 1 0
+Rep_Ireland 1 0
+Wales 1 0
+Belgum 1 1
+Netherlands 1 0
+Denmark 2 0
+Germany 2 0
+Poland 2 0
+Czech_Rep 2 0
+Slovakia 2 0
+Hungary 3 0
+Austria 3 0
+Switzerland 3 0
+Italy 3 3
+Sicily 3 0
+Sardinia 3 0
+Corsica 3 0
+Majorca 4 0
+France 4 3
+Spain 4 0
+Portugal 4 0
+Luxembourg 4 0
+
+[players]
+1 Harshil human
+Countries Owned: Austria Slovakia Rep_Ireland Switzerland Belgum N_Ireland Poland Germany Hungary Scotland Corsica Czech_Rep France 
+Cards: airlift 
+Armies: 8
+
+2 Shivam human
+Countries Owned: Majorca Sicily Spain Wales Sardinia Portugal Denmark Italy Netherlands Luxembourg England 
+Cards: 
+Armies: 10
+
+

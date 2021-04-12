@@ -5,7 +5,6 @@ import com.risk.models.Country;
 import com.risk.models.Map;
 import com.risk.models.Player;
 import com.risk.phases.Phase;
-import com.risk.phases.PreMapLoad;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -106,7 +105,7 @@ public class SaveGame {
      */
     public void saveGame(Map p_Map, Phase p_gamePhase, ArrayList<Player> d_PlayerListGame,String d_gameFileName){
         String l_path = "src/main/resources/";
-        String l_fileName = d_gameFileName + ".game";
+        String l_fileName = d_gameFileName + "test2.game";
         File l_map = new File(l_path + l_fileName);
         FileWriter l_fileWriter;
         try {
