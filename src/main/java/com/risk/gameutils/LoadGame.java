@@ -2,12 +2,10 @@ package com.risk.gameutils;
 
 import com.risk.exception.InvalidMapException;
 import com.risk.maputils.EditMap;
-import com.risk.maputils.ShowMap;
 import com.risk.models.Continent;
 import com.risk.models.Country;
 import com.risk.models.Map;
 import com.risk.models.Player;
-import com.risk.phases.Phase;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,9 +21,9 @@ import static com.risk.maputils.EditConquestMap.getCountry;
  */
 public class LoadGame {
 
-    private static Map d_Map = new Map();
-    private static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
-    private static Phase d_GamePhase;
+    public static Map d_Map = new Map();
+    public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
+    public static String d_gamePhaseName = "";
 
     /**
      * returns map data member.
@@ -50,8 +48,8 @@ public class LoadGame {
      *
      * @return current phase of the game
      */
-    public static Phase getD_GamePhase() {
-        return d_GamePhase;
+    public static String getD_GamePhase() {
+        return d_gamePhaseName;
     }
 
 
@@ -76,8 +74,7 @@ public class LoadGame {
             String l_line = p_gameReader.nextLine();
             if (l_line.equals("")) break;
             String[] l_parts = l_line.split(" ");
-            String p_phaseName = l_parts[0];
-            //phase to be set
+            d_gamePhaseName = l_parts[0];
         }
     }
 
@@ -102,11 +99,11 @@ public class LoadGame {
             String l_line = p_gameReader.nextLine();
             if (l_line.equals("")) continue;
             String[] l_parts = l_line.split(" ");
-            int p_playerId = Integer.parseInt(l_parts[0]);
-            String p_playerName = l_parts[1];
-            String p_playerStrategy=l_parts[2];
+            int l_playerId = Integer.parseInt(l_parts[0]);
+            String l_playerName = l_parts[1];
+            String l_playerStrategy = l_parts[2];
             Player l_player = new Player();
-            l_player.d_playerStrategyType=p_playerStrategy;
+            l_player.d_playerStrategyType = l_playerStrategy;
             d_PlayerList.add(l_player);
 
             l_line = p_gameReader.nextLine();
@@ -128,14 +125,6 @@ public class LoadGame {
             l_parts = l_line.split(" ");
             int l_armies = Integer.parseInt(l_parts[1]);
             l_player.setD_Armies(l_armies);
-
-
-//            int p_continentId=Integer.parseInt(l_parts[1]);
-//            int p_armies=Integer.parseInt(l_parts[2]);
-//            System.out.println(p_countryName +" "+p_continentId+" "+p_armies);
-//            Continent l_continent=d_Map.getContinentFromContinentList(p_continentId);
-//            Country l_country=l_continent.getCountryFromCountryName(p_countryName);
-//            l_country.setD_NumberOfArmies(p_armies);
         }
     }
 
@@ -163,22 +152,11 @@ public class LoadGame {
                     }
                 }
                 System.out.println("Loaded Game successfully form existing game file");
-
-
-                System.out.println("Game is loaded");
-
             } catch (FileNotFoundException | InvalidMapException e) {
                 System.out.println("Game file not found");
             }
-
-
         }
     }
 
-//    public static void main(String[] args) {
-//        LoadGame.loadGame("Game1");
-//        //ShowMap.displayEditorMap(d_Map);
-//
-//    }
 }
 

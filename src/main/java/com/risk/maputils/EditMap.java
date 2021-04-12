@@ -54,6 +54,7 @@ public class EditMap {
     public static Map editMap(String p_fileName) throws InvalidMapException {
         String l_path = "src/main/resources/";
         String l_fileName = p_fileName + ".map";
+        d_Map.d_mapName=p_fileName;
         File l_map = new File(l_path + l_fileName);
         if (l_map.exists())
             return LoadMap.loadMap(l_map, d_Map);
