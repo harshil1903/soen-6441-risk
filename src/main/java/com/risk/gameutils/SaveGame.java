@@ -135,7 +135,7 @@ public class SaveGame {
             l_fileWriter.close();
         } catch (IOException e) {
             System.err.println(e.getMessage());
-            d_Log.notify(e.getMessage());
+            
         }
     }
 }
