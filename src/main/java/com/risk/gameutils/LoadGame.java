@@ -195,10 +195,11 @@ public class LoadGame {
                     }
                 }
                 System.out.println("Loaded Game successfully form existing game file");
-                d_Log.notify("Loaded Game successfully form existing game file");
+
             } catch (FileNotFoundException | InvalidMapException e) {
                 System.out.println("Game file not found");
-                d_Log.notify("Game file not found");
+                
+
             }
         }
     }
