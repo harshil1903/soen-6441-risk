@@ -182,7 +182,7 @@ public class EditConquestMap {
             }
             d_map.d_mapName = p_fileName;
             System.out.println("Loaded map successfully form existing conquest file");
-            
+            d_Log.notify("Loaded map successfully form existing conquest file");
 
         } catch (FileNotFoundException e) {
             createConquestMap(p_fileName);
