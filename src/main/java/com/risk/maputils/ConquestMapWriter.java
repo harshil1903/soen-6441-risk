@@ -87,6 +87,7 @@ public class ConquestMapWriter {
         try {
             if (p_map == null) {
                 System.out.println("Map object is NULL! ");
+                d_Log.notify("Map object is NULL! ");
 
             }
 
@@ -96,7 +97,8 @@ public class ConquestMapWriter {
             l_fileWriter.close();
         } catch (IOException e) {
             System.err.println(e.getMessage());
-            
+            d_Log.notify(e.getMessage());
+
         }
     }
 }
