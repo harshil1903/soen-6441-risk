@@ -85,17 +85,13 @@ public class LoadGame {
 
 
     public static void getCountries(Scanner p_gameReader) {
-        System.out.println("INSIDE Get Countries ");
         while (p_gameReader.hasNextLine()) {
             String l_line = p_gameReader.nextLine();
             if (l_line.equals("")) break;
             String[] l_parts = l_line.split(",");
-            for (String noob : l_parts)
-                System.out.println(noob);
             String p_countryName = l_parts[0];
             int p_continentId = Integer.parseInt(l_parts[1]);
             int p_armies = Integer.parseInt(l_parts[2]);
-            System.out.println("Part 1:" + l_parts[0]);
             Continent l_continent = d_Map.getContinentFromContinentList(p_continentId);
             Country l_country = l_continent.getCountryFromCountryName(p_countryName);
             l_country.setD_NumberOfArmies(p_armies);
