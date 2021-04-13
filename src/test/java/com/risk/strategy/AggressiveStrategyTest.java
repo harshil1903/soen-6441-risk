@@ -18,6 +18,11 @@ import java.util.Random;
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * Test class for AggressiveStrategy Class.
+ *
+ * @author Parth
+ */
 public class AggressiveStrategyTest {
     Player d_player1;
     List<Country> d_country = new ArrayList<Country>();
@@ -71,7 +76,7 @@ public class AggressiveStrategyTest {
     @Test
     public void aggressiveTest() {
         d_player1.setD_Armies(10);
-        d_player1.setD_playerStrategy(new AggressivePlayerStrategy(d_player1,d_country));
+        d_player1.setD_playerStrategy(new AggressivePlayerStrategy(d_player1, d_country));
         Order order = d_player1.getD_playerStrategy().createOrder();
         order.execute();
         order.printOrder();

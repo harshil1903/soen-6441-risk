@@ -16,7 +16,7 @@ public class EditMapAdapter extends EditMap {
     private static EditConquestMap d_editConquestMap;
 
     /**
-     * Parameterized constructor for LoadMapAdapter.
+     * Parameterized constructor for EditMapAdapter.
      *
      * @param p_editConquestMap object of LoadConquestMap
      */
@@ -36,14 +36,8 @@ public class EditMapAdapter extends EditMap {
         String l_path = "src/main/resources/";
         String l_fileName = p_fileName + ".map";
         File l_map = new File(l_path + l_fileName);
-        if (l_map.exists()) {
-//            Map l_Map = d_editConquestMap.loadConquestMap(p_fileName);
-//            l_Map.d_mapName = p_fileName;
+        if (l_map.exists())
             return d_editConquestMap.loadConquestMap(p_fileName);
-        }
-
-//        Map l_Map = d_editConquestMap.createConquestMap(p_fileName);
-//        l_Map.d_mapName = p_fileName;
         return d_editConquestMap.createConquestMap(p_fileName);
     }
 }

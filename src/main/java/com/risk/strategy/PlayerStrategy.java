@@ -36,11 +36,27 @@ public abstract class PlayerStrategy {
      */
     public abstract Order createOrder();
 
+    /**
+     * abstract of toAttack.
+     * @return Country to be attacked.
+     */
     protected abstract Country toAttack();
 
+    /**
+     * abstract of toAttackFrom.
+     * @return Country to be AttackFrom.
+     */
     protected abstract Country toAttackFrom();
 
+    /**
+     * abstract of toMoveFrom.
+     * @return Country to be MoveFrom.
+     */
     protected abstract Country toMoveFrom();
 
+    /**
+     * abstract of toDefend.
+     * @return Country to be Defend.
+     */
     protected abstract Country toDefend();
 }

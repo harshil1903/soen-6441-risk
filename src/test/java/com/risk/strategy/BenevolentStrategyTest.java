@@ -18,6 +18,11 @@ import java.util.Random;
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * Test class for BenevolentStrategy class.
+ *
+ * @author Parth.
+ */
 public class BenevolentStrategyTest {
     Player d_player1;
     List<Country> d_country = new ArrayList<Country>();

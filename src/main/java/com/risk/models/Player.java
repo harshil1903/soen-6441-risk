@@ -46,7 +46,13 @@ public class Player {
     private String d_orderArgs;
 
     private PlayerStrategy d_playerStrategy;
+    /**
+     * boolean to check if it is human or not.
+     */
     public boolean d_isHuman;
+    /**
+     * Strategy of the player.
+     */
     public String d_playerStrategyType;
 
     /**
@@ -81,6 +87,7 @@ public class Player {
      * Instantiates a new Player.
      *
      * @param p_PlayerName Name of the player
+     * @param p_playerStrategyType Strategy of the player
      */
     public Player(String p_PlayerName, String p_playerStrategyType) {
         super();

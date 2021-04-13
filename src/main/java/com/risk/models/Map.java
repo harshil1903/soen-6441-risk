@@ -18,7 +18,13 @@ public class Map extends Observable {
 
     private HashMap<String, String> d_mapData;
     private List<Continent> d_continents;
+   /**
+    * Name of the Map
+    */
     public String d_mapName="";
+    /**
+     * Type of the map
+     */
     public String d_mapType;
     /**
      * holds true if list is empty otherwise false.
@@ -36,6 +42,8 @@ public class Map extends Observable {
 
     /**
      * Parameterized Constructor for Map
+     * @param p_mapName Name to be set of the map
+     * @param p_mapType Type of the map
      */
     public Map(String p_mapName,String p_mapType) {
         d_mapData = new HashMap<String, String>();

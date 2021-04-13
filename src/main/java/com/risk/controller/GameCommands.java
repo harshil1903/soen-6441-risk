@@ -20,7 +20,30 @@ import static com.risk.main.Main.*;
  * @author Harshil
  */
 public class GameCommands {
-    public enum d_playerStrategyType {human, aggressive, benevolent, cheater, random}
+    /**
+     * enum of player strategy to be used in the game.
+     */
+    public enum d_playerStrategyType {
+        /**
+         * enum for human strategy
+         */
+        human,
+        /**
+         * enum for aggressive strategy
+         */
+        aggressive,
+        /**
+         * enum for benevolent strategy
+         */
+        benevolent,
+        /**
+         * enum for cheater strategy
+         */
+        cheater,
+        /**
+         * enum for random strategy
+         */
+        random}
 
 
     /**

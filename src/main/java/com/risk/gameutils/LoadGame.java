@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static com.risk.main.Main.d_PlayerList;
+import static com.risk.main.Main.d_Log;
 import static com.risk.maputils.EditConquestMap.getCountry;
 
 /**
@@ -23,8 +23,20 @@ import static com.risk.maputils.EditConquestMap.getCountry;
  */
 public class LoadGame {
 
-    public static Map d_Map = new Map();
-    public static ArrayList<Player> d_PlayerList = new ArrayList<Player>();
+
+    /**
+     * Map object to be filled when game is loaded
+     */
+    public static Map d_map = new Map();
+
+    /**
+     * Player list object to be filled when game is loaded
+     */
+    public static ArrayList<Player> d_playerList = new ArrayList<Player>();
+
+    /**
+     * Current game phase of the game.
+     */
     public static String d_gamePhaseName = "";
 
     /**
@@ -33,7 +45,7 @@ public class LoadGame {
      * @return Map to be returned.
      */
     public static Map getD_Map() {
-        return d_Map;
+        return d_map;
     }
 
     /**
@@ -42,7 +54,7 @@ public class LoadGame {
      * @return arraylist of player
      */
     public static ArrayList<Player> getD_PlayerList() {
-        return d_PlayerList;
+        return d_playerList;
     }
 
     /**
@@ -58,7 +70,7 @@ public class LoadGame {
     /**
      * Retrieves the map name asd creates new map.
      *
-     * @param p_gameReader reads the game file
+     * @param p_gameReader helps in accessing game file
      * @throws InvalidMapException if game file not present
      */
     public static void getMap(Scanner p_gameReader) throws InvalidMapException {
@@ -69,11 +81,16 @@ public class LoadGame {
             String p_mapName = l_parts[0];
             String p_mapType = l_parts[1];
             if (p_mapType.equals("domination"))
-                d_Map = EditMap.editMap(p_mapName);
-            else d_Map = EditConquestMap.loadConquestMap(p_mapName);
+                d_map = EditMap.editMap(p_mapName);
+            else d_map = EditConquestMap.loadConquestMap(p_mapName);
         }
     }
 
+    /**
+     * retrieves current game phase from game file.
+     *
+     * @param p_gameReader helps in accessing game file
+     */
     public static void getPhase(Scanner p_gameReader) {
         while (p_gameReader.hasNextLine()) {
             String l_line = p_gameReader.nextLine();
@@ -84,6 +101,11 @@ public class LoadGame {
     }
 
 
+    /**
+     * retrieves countries from game file.
+     *
+     * @param p_gameReader helps in accessing game file
+     */
     public static void getCountries(Scanner p_gameReader) {
         while (p_gameReader.hasNextLine()) {
             String l_line = p_gameReader.nextLine();
@@ -92,13 +114,18 @@ public class LoadGame {
             String p_countryName = l_parts[0];
             int p_continentId = Integer.parseInt(l_parts[1]);
             int p_armies = Integer.parseInt(l_parts[2]);
-            Continent l_continent = d_Map.getContinentFromContinentList(p_continentId);
+            Continent l_continent = d_map.getContinentFromContinentList(p_continentId);
             Country l_country = l_continent.getCountryFromCountryName(p_countryName);
             l_country.setD_NumberOfArmies(p_armies);
         }
     }
 
 
+    /**
+     * retrieves players from game file.
+     *
+     * @param p_gameReader helps in accessing game file
+     */
     public static void getPlayers(Scanner p_gameReader) {
         while (p_gameReader.hasNextLine()) {
             String l_line = p_gameReader.nextLine();
@@ -109,13 +136,13 @@ public class LoadGame {
             String l_playerStrategy = l_parts[2];
             Player l_player = new Player(l_playerName, l_playerStrategy);
             l_player.d_playerStrategyType = l_playerStrategy;
-            d_PlayerList.add(l_player);
+            d_playerList.add(l_player);
 
             l_line = p_gameReader.nextLine();
             l_parts = l_line.split(",");
 
             for (int i = 1; i < l_parts.length; i++) {
-                Country l_country = getCountry(l_parts[i], d_Map);
+                Country l_country = getCountry(l_parts[i], d_map);
                 if (l_country != null) {
                     l_player.addCountryToAssignedCountries(l_country);
                     l_country.setD_Player(l_player);
@@ -139,6 +166,11 @@ public class LoadGame {
         }
     }
 
+    /**
+     * entry method for the class which helps in loading the game.
+     *
+     * @param p_gameFile Name of the game file
+     */
     public static void loadGame(String p_gameFile) {
         String l_path = "src/main/resources/";
         String l_fileName = p_gameFile + ".game";
@@ -163,8 +195,10 @@ public class LoadGame {
                     }
                 }
                 System.out.println("Loaded Game successfully form existing game file");
+                d_Log.notify("Loaded Game successfully form existing game file");
             } catch (FileNotFoundException | InvalidMapException e) {
                 System.out.println("Game file not found");
+                d_Log.notify("Game file not found");
             }
         }
     }

@@ -18,6 +18,11 @@ import java.util.List;
 import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 
+/**
+ * Test class for CheaterStrategy class.
+ *
+ * @author Parth.
+ */
 public class CheaterStrategyTest {
     Player d_player1,d_player2,d_player3;
     List<Country> d_country = new ArrayList<Country>();
