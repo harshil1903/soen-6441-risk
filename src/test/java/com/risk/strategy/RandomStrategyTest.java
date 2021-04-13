@@ -79,7 +79,8 @@ public class RandomStrategyTest {
         d_player1.setD_Armies(10);
         d_player1.setD_playerStrategy(new RandomPlayerStrategy(d_player1, d_country));
         Order order = d_player1.getD_playerStrategy().createOrder();
-        
+        order.execute();
+        order.printOrder();
     }
 
 }
