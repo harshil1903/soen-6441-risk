@@ -80,7 +80,7 @@ public class CheaterStrategyTest {
     @Test
     public void cheaterTest() {
         d_player1.setD_playerStrategy(new CheaterPlayerStrategy(d_player1, d_country));
-        d_player1.getD_playerStrategy().createOrder();
+
 
     }
 
