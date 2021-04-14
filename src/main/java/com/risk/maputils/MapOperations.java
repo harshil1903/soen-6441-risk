@@ -12,7 +12,7 @@ import static com.risk.main.Main.d_Map;
  * This class defined different operation on class such as
  * continent add and remove for adding and remove continent from continent list
  * country add and remove for adding and remove country from country list
- * neighbor add and remove for adding and remove adjacent countries from list
+ * neighbor add and remove for adding and remove adjacent countries from list of country
  *
  * @author Parth
  */

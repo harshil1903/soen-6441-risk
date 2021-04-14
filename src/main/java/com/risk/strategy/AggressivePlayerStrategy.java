@@ -108,7 +108,7 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
 
 
     /**
-     * Creates an order for Aggressive Player
+     * Creates an order for Aggressive Player and call advanced method for attack
      *
      * @return null
      */
