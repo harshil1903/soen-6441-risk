@@ -47,9 +47,11 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
      * @return current player country with most number of armies
      */
     protected Country toDefend() {
-        Country l_myMinArmies = d_player.getD_AssignedCountries().get(0);
-        for (Country l_tempCountry : d_country) {
-            if (l_myMinArmies.getD_NumberOfArmies() > l_tempCountry.getD_NumberOfArmies() & d_player.getD_AssignedCountries().contains(l_tempCountry)) {
+        Country l_myMinArmies = d_player.getD_AssignedCountries().get(new Random().nextInt(d_player.getD_AssignedCountries().size()));
+        List<Country> l_countryList = d_player.getD_AssignedCountries();
+
+        for (Country l_tempCountry : l_countryList) {
+            if (l_myMinArmies.getD_NumberOfArmies() > l_tempCountry.getD_NumberOfArmies()) {
                 l_myMinArmies = l_tempCountry;
             }
         }
@@ -71,13 +73,12 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
      * @return null
      */
     protected Country toMoveFrom() {
-        Country l_myMaxArmies = d_player.getD_AssignedCountries().get(0);
-        for (Country l_tempCountry : d_country) {
-            if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies() && d_player.getD_AssignedCountries().contains(l_tempCountry)) {
+        Country l_myMaxArmies = d_player.getD_AssignedCountries().get(new Random().nextInt(d_player.getD_AssignedCountries().size()));
+        List<Country> l_countryList = d_player.getD_AssignedCountries();
+
+        for (Country l_tempCountry : l_countryList) {
+            if (l_myMaxArmies.getD_NumberOfArmies() < l_tempCountry.getD_NumberOfArmies()) {
                 l_myMaxArmies = l_tempCountry;
-            } else {
-                System.out.println("Benevolent Player can not attack on others country");
-                break;
             }
         }
         return l_myMaxArmies;
