@@ -1,374 +1,309 @@
-Log: Welcome to warzone
-Log: Game Begins
-Log: New Phase : GameStartup
-Log: COMMAND : tournament -M europe -P benevolent benevolent aggressive -G 3 -D 15
+Log: Conquest Map file not presented will be created from scratch
+Log: Loaded map successfully form existing conquest file
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Rep_Ireland has a 0 army so you can not apply Blockade order there
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Blockade 
+Player : player_1 Country to block : Wales
+Log: Before Blockade Card number of army in Wales is : 10
+Log: player_1applied Blockade Card successfully
+Log: After Blockade Card number of army in Wales is : 30
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : player_1 Country : Hungary Number Of Armies : 5
+Log: Order Type : Deploy 
+Player : player_1 Country : Hungary Number Of Armies : 5
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not attack on player_2 because of diplomacy card
+Log: Only 1 to 5 Games allowed
+Log: Only 10 to 50 Turns allowed
+Log: Only 2 to 4 Player Strategies allowed
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
 Log: Order Type : Deploy 
-Player : benevolent0 Country : Poland Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Belgum Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Spain Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Germany Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : Belgum Target Country : Sicily Number Of Armies : 2
-Log: Belgum and Sicily are not adjacent
+Player : benevolent0 Country : Slovakia Number Of Armies : 3
+Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Invalid Order, not executed
 
 Log: Order Type : Deploy 
-Player : aggressive2 Country : Spain Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent0 Source Country : Germany Target Country : Majorca Number Of Armies : 2
-Log: Germany and Majorca are not adjacent
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Invalid Order, not executed
+
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 6
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Majorca Number Of Armies : 6
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Scotland Number Of Armies : 3
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Corsica Number Of Armies : 6
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Portugal Number Of Armies : 3
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Invalid Order, not executed
+
+Log: Player cheater2 has Won the Game!!!
+Log: Only 1 to 5 Maps allowed
+Log: Loaded map successfully form existing conquest file
+Log: Loaded Game successfully form existing game file
+Log: New Phase : GameStartup
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: Countries have been successfully assigned to all the players
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: New Phase : PreMapLoad
+Log: New Phase : GameStartup
+Log: Only 1 to 5 Games allowed
+Log: Only 10 to 50 Turns allowed
+Log: Only 2 to 4 Player Strategies allowed
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Slovakia Number Of Armies : 3
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 6
+Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Invalid Order, not executed
 
 Log: Order Type : Deploy 
 Player : benevolent1 Country : Hungary Number Of Armies : 6
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 5
-Log: aggressive2 won and got airlift
-Log: Order Type : Advance 
-Player : benevolent0 Source Country : Germany Target Country : Majorca Number Of Armies : 2
-Log: Germany and Majorca are not adjacent
+Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Invalid Order, not executed
 
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Corsica Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Luxembourg Number Of Armies : 9
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Sicily Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Majorca Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Switzerland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Wales Number Of Armies : 13
-Log: Portugal and Wales are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Italy Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Czech_Rep Number Of Armies : 13
-Log: Portugal and Czech_Rep are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : England Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : Hungary Target Country : Denmark Number Of Armies : 5
-Log: Hungary and Denmark are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Scotland Number Of Armies : 13
-Log: Portugal and Scotland are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : N_Ireland Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Denmark Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 12
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sardinia Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Switzerland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 25
-Log: Portugal and Slovakia are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Majorca Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Corsica Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Austria Number Of Armies : 25
-Log: Portugal and Austria are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Germany Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Sicily Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Spain Number Of Armies : 25
-Log: Order Type : Deploy 
-Player : benevolent0 Country : England Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : Corsica Target Country : Rep_Ireland Number Of Armies : 5
-Log: Corsica and Rep_Ireland are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Spain Number Of Armies : 12
-Log: Order Type : Advance 
-Player : benevolent0 Source Country : Luxembourg Target Country : N_Ireland Number Of Armies : 8
-Log: Luxembourg and N_Ireland are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Belgum Number Of Armies : 6
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 37
-Log: aggressive2 won and got airlift
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Poland Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Corsica Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Rep_Ireland Number Of Armies : 6
+Log: Player cheater2 has Won the Game!!!
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
 Log: Order Type : Deploy 
-Player : benevolent0 Country : N_Ireland Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Portugal Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent0 Source Country : N_Ireland Target Country : France Number Of Armies : 2
-Log: N_Ireland and France are not adjacent
+Player : benevolent0 Country : England Number Of Armies : 3
+Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Invalid Order, not executed
 
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : Portugal Target Country : Spain Number Of Armies : 2
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Rep_Ireland Target Country : Spain Number Of Armies : 2
-Log: benevolent1 Successfully Defend Country Spain
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Netherlands Number Of Armies : 3
+Log: You do not own this country. Try Again with a country name that has been assigned to you
+Log: Invalid Order, not executed
+
 Log: Order Type : Deploy 
 Player : benevolent0 Country : Scotland Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent1 Country : England Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Rep_Ireland Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent0 Country : France Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Netherlands Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Wales Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Corsica Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Rep_Ireland Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Switzerland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : England Target Country : Sardinia Number Of Armies : 5
-Log: England and Sardinia are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Rep_Ireland Target Country : Spain Number Of Armies : 13
-Log: aggressive2 won and got bomb
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Belgum Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Sardinia Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Spain Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Italy Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Germany Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 17
-Log: aggressive2 won and got airlift
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Poland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : Sardinia Target Country : Czech_Rep Number Of Armies : 5
-Log: Sardinia and Czech_Rep are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Austria Number Of Armies : 15
-Log: Portugal and Austria are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Advance 
-Player : benevolent0 Source Country : Scotland Target Country : Italy Number Of Armies : 5
-Log: Scotland and Italy are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : England Target Country : Czech_Rep Number Of Armies : 5
-Log: England and Czech_Rep are not adjacent
+Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Invalid Order, not executed
 
 Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 9
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Wales Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Czech_Rep Number Of Armies : 9
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : France Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : Czech_Rep Target Country : Netherlands Number Of Armies : 8
-Log: Czech_Rep and Netherlands are not adjacent
+Player : benevolent1 Country : N_Ireland Number Of Armies : 6
+Log: You do not own this country. Try Again with a country name that has been assigned to you
 Log: Invalid Order, not executed
 
+Log: Player cheater2 has Won the Game!!!
+Log: Only 1 to 5 Maps allowed
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
 Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 3
+Player : player_1 Country : Spain Number Of Armies : 10
 Log: Order Type : Deploy 
-Player : benevolent0 Country : Belgum Number Of Armies : 3
+Player : player_1 Country : Spain Number Of Armies : 10
+Log: Loaded map successfully from existing domination file
+Log: The ContinentTempContinentAdded Successfully
+Log: The Country TestCountry Added Successfully
+Log: Loaded map successfully from existing domination file
+Log: The ContinentTempContinentAdded Successfully
+Log: Loaded map successfully form existing conquest file
+Log: Loaded Game successfully form existing game file
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not use Airlift card on target country is not owned
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Airlift 
+Player : player_1 Source Country : Germany Target Country : Czech_Rep Number Of Armies : 5
+Log: Before Airlift Card number of army in Czech_Rep is : 4
+Log: player_1 applied Airlift Card successfully
+Log: After Airlift Card number of army in Czech_Rep is : 9
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 does not have sufficient armies to be airlifted to the target country
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
 Log: Order Type : Deploy 
-Player : benevolent1 Country : Netherlands Number Of Armies : 6
+Player : player_1 Country : Sicily Number Of Armies : 10
 Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Player : player_1 Country : Sicily Number Of Armies : 10
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: The ContinentTempContinentAdded Successfully
+Log: The Country TestCountry Added Successfully
+Log: Loaded map successfully from existing domination file
+Log: The ContinentTempContinentAdded Successfully
+Log: Map file not presented will be created from scratch
+Log: Loaded map successfully from existing domination file
+Log: Conquest Map file not presented will be created from scratch
+Log: Loaded map successfully form existing conquest file
+Log: Map file not presented will be created from scratch
+Log: Loaded map successfully from existing domination file
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Italy and Corsica are not adjacent
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
 Log: Order Type : Advance 
-Player : benevolent1 Source Country : Netherlands Target Country : Corsica Number Of Armies : 8
-Log: Netherlands and Corsica are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : N_Ireland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : Netherlands Target Country : Corsica Number Of Armies : 8
-Log: Netherlands and Corsica are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Austria Number Of Armies : 36
-Log: Portugal and Austria are not adjacent
-Log: Invalid Order, not executed
-
+Player : player_1 Source Country : Netherlands Target Country : Belgum Number Of Armies : 25
+Log: player_2 Successfully Defend Country Belgum
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Scotland and Portugal are not adjacent
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not use Airlift card on target country is not owned
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Airlift 
+Player : player_1 Source Country : Luxembourg Target Country : Belgum Number Of Armies : 5
+Log: Before Airlift Card number of army in Belgum is : 4
+Log: player_1 applied Airlift Card successfully
+Log: After Airlift Card number of army in Belgum is : 9
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 does not have sufficient armies to be airlifted to the target country
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Rep_Ireland has a 0 army so you can not apply Blockade order there
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Blockade 
+Player : player_1 Country to block : Austria
+Log: Before Blockade Card number of army in Austria is : 10
+Log: player_1applied Blockade Card successfully
+Log: After Blockade Card number of army in Austria is : 30
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Austria has a 0 army so you can not apply bomb order there
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Portugal not adjacent with player_1countries
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not attack on player_2 because of diplomacy card
+Log: New Phase : PreMapLoad
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: New Phase : GameStartup
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
 Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Denmark Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : France Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Majorca Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Belgum Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Austria Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Majorca Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Portugal Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent1 Source Country : Austria Target Country : Scotland Number Of Armies : 2
-Log: Austria and Scotland are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Majorca Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Czech_Rep Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Spain Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Majorca Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Slovakia Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Scotland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Majorca Target Country : Spain Number Of Armies : 11
-Log: aggressive2 won and got blockade
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Poland Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Switzerland Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Spain Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Germany Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Spain Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Corsica Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Netherlands Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Spain Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Slovakia Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : England Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Spain Number Of Armies : 3
-Log: Order Type : Advance 
-Player : benevolent0 Source Country : Slovakia Target Country : Corsica Number Of Armies : 5
-Log: Slovakia and Corsica are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : England Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 21
-Log: aggressive2 won and got bomb
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Sicily Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent1 Country : France Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Luxembourg Number Of Armies : 18
-Log: Portugal and Luxembourg are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Belgum Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Germany Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Hungary Number Of Armies : 18
-Log: Portugal and Hungary are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Advance 
-Player : benevolent0 Source Country : Sicily Target Country : Poland Number Of Armies : 8
-Log: Sicily and Poland are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Scotland Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Luxembourg Number Of Armies : 18
-Log: Portugal and Luxembourg are not adjacent
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Denmark Number Of Armies : 6
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Switzerland Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : aggressive2 Country : Portugal Number Of Armies : 15
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Czech_Rep Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Netherlands Number Of Armies : 3
-Log: Order Type : Advance 
-Player : aggressive2 Source Country : Portugal Target Country : Italy Number Of Armies : 33
-Log: Portugal and Italy are not adjacent
-Log: Invalid Order, not executed
-
+Log: Countries have been successfully assigned to all the players
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Invalid command in stateGameStartup
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: New Phase : PreMapLoad
+Log: New Phase : GameStartup
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Denmark has a 0 army so you can not apply bomb order there
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: player_1 can not attack bomb on your own country
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Order Type : Bomb 
+Player : player_1 Target Country : Portugal
+Log: Before Bomb Card number of army in Portugal is : 6
+Log: player_1 applied Bomb Card successfully
+Log: After Bomb Card number of army in Portugal is : 3
+Log: Loaded map successfully from existing domination file
+Log: Assigned countries randomly to players
+Log: Hungary not adjacent with player_1countries
+Log: New Phase : PreMapLoad
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad
+Log: Invalid command in statePreMapLoad

@@ -27,11 +27,21 @@ import static com.risk.main.Main.d_Map;
  * @author Harshil
  */
 public class Tournament {
-    static ArrayList<String> d_mapNames = new ArrayList<>();
-    static ArrayList<String> d_listOfPlayerStrategies = new ArrayList<>();
+    static ArrayList<String> d_mapNames;
+    static ArrayList<String> d_listOfPlayerStrategies;
 
     static int d_numGames;
     static int d_maxTurns;
+
+
+    /**
+     * Instantiates a new Tournament.
+     */
+    Tournament(){
+        d_mapNames = new ArrayList<>();
+        d_listOfPlayerStrategies = new ArrayList<>();
+    }
+
 
     /**
      * Begin method to initiate the tournament
@@ -39,7 +49,8 @@ public class Tournament {
      * @param p_argumentTokens arguments of maps, strategies, number of games and number of turns
      */
     public static void begin(List<String> p_argumentTokens){
-
+        d_mapNames = new ArrayList<>();
+        d_listOfPlayerStrategies = new ArrayList<>();
         d_listOfPlayerStrategies.clear();
         d_mapNames.clear();
         d_PlayerList.clear();
@@ -85,6 +96,9 @@ public class Tournament {
 
             }
         }
+        d_listOfPlayerStrategies.clear();
+        d_mapNames.clear();
+        d_PlayerList.clear();
 
     }
 
@@ -208,6 +222,9 @@ public class Tournament {
      */
     public static boolean validateTournamentArguments(List<String> p_argumentTokens)
     {
+        d_mapNames = new ArrayList<>();
+        d_listOfPlayerStrategies = new ArrayList<>();
+
         for (int i = 0; i < p_argumentTokens.size(); i++) {
             System.out.println("TOKEN : " + p_argumentTokens.get(i));
             if (p_argumentTokens.get(i).equals("-M")) {

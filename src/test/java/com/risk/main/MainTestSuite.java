@@ -10,6 +10,6 @@ import org.junit.runners.Suite.SuiteClasses;
  * @author Harshil
  */
 @RunWith(Suite.class)
-@SuiteClasses({GameEngineTest.class})
+@SuiteClasses({GameEngineTest.class, TournamentTest.class})
 public class MainTestSuite {
 }
