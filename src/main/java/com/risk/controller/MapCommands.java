@@ -45,9 +45,11 @@ public class MapCommands {
                     if (l_line.equals("[Continents]")) {
                         l_line = l_mapReader.nextLine();
                         if(l_line.contains("=")){
+                            //2 signifies the map is of Conquest Type
                             return 2;
                         }
                         else {
+                            //1 signifies the map is of Domination Type
                             return 1;
                         }
                     }
@@ -113,33 +115,6 @@ public class MapCommands {
         }
 
         return true;
-        /*
-        try {
-            d_Map = new EditMap().editMap(p_argumentTokens.get(0));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            d_Log.notify(e.getMessage());
-            throw new InvalidMapException(e.getMessage());
-
-        }
-        if (d_Map.d_isEmpty) {
-            return true;
-        }
-
-        try {
-            MapValidator.validateMap(d_Map);
-        } catch (Exception e) {
-            System.out.println("Map Validation Failed \nMap data has been cleared, use editmap to load a map again");
-            d_Log.notify("Map Validation Failed \nMap data has been cleared, use editmap to load a map again");
-            System.out.println(e.getMessage());
-            d_Log.notify(e.getMessage());
-            d_Map.clearMapData();
-            return false;
-        }
-
-        return true;
-
-         */
     }
 
 

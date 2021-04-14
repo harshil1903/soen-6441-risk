@@ -24,26 +24,17 @@ public class GameCommands {
      * enum of player strategy to be used in the game.
      */
     public enum d_playerStrategyType {
-        /**
-         * enum for human strategy
-         */
+
         human,
-        /**
-         * enum for aggressive strategy
-         */
+
         aggressive,
-        /**
-         * enum for benevolent strategy
-         */
+
         benevolent,
-        /**
-         * enum for cheater strategy
-         */
+
         cheater,
-        /**
-         * enum for random strategy
-         */
-        random}
+
+        random
+    }
 
 
     /**
