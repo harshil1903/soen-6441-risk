@@ -84,13 +84,7 @@ public class GameExecuteOrder extends Game {
 
                     System.out.println("Executing Order");
                     d_Log.notify("Executing Order");
-//                    if (l_order.valid()) {
-//
-//                        l_order.execute();
-//                    } else {
-//                        System.out.println("Invalid Order, not executed");
-//                        d_Log.notify("Invalid Order, not executed");
-//                    }
+
                     l_order.execute();
                 } else {
                     ++l_noOrdersPlayerCount;
