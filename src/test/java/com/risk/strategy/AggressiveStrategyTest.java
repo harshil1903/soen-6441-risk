@@ -71,7 +71,7 @@ public class AggressiveStrategyTest {
     }
 
     /**
-     * This method is to test strategy of random player
+     * This method is to test strategy of aggressive player
      */
     @Test
     public void aggressiveTest() {

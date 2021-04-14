@@ -167,4 +167,31 @@ public class AdvanceTest {
             System.out.println(l_countryName1 + " and " + l_countryName2 + " are not adjacent so player can not attack");
         }
     }
+
+    /**
+     * This method is used to test validity of order
+     */
+    @Test
+    public void testOrderValidity(){
+        //attacker
+        String l_countryName1 = d_player1.getD_AssignedCountries().get(0).getD_CountryName();
+        d_sourceCountry = new Country();
+        d_sourceCountry = d_sourceCountry.getCountryFromCountryName(l_countryName1);
+        d_sourceCountry.setD_NumberOfArmies(8);
+        int l_battleArmy = 7;
+
+        //defender
+        String l_countryName2 = d_player2.getD_AssignedCountries().get(0).getD_CountryName();
+        d_targetCountry = new Country();
+        d_targetCountry = d_targetCountry.getCountryFromCountryName(l_countryName2);
+        d_targetCountry.setD_NumberOfArmies(4);
+
+        //Battle
+        Advance advance = new Advance(d_player1, l_countryName1, l_countryName2, l_battleArmy);
+        if (d_sourceCountry.getD_AdjacentCountries().contains(d_targetCountry)) {
+            assertTrue(advance.valid());
+        } else {
+            System.out.println(l_countryName1 + " and " + l_countryName2 + " are not adjacent so player can not attack");
+        }
+    }
 }
