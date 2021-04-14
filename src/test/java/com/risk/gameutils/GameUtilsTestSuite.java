@@ -9,6 +9,6 @@ import org.junit.runners.Suite;
  * @author Chirag
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({GenerateRandomNumberTest.class,LoadGameTest.class})
+@Suite.SuiteClasses({GenerateRandomNumberTest.class,LoadGameTest.class,SaveGameTest.class})
 public class GameUtilsTestSuite {
 }

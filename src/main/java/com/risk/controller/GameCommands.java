@@ -24,15 +24,25 @@ public class GameCommands {
      * enum of player strategy to be used in the game.
      */
     public enum d_playerStrategyType {
-
+        /**
+         * enum for human strategy
+         */
         human,
-
+        /**
+         * enum for aggressive strategy
+         */
         aggressive,
-
+        /**
+         * enum for benevolent strategy
+         */
         benevolent,
-
+        /**
+         * enum for cheater strategy
+         */
         cheater,
-
+        /**
+         * enum for random strategy
+         */
         random
     }
 
@@ -40,18 +50,17 @@ public class GameCommands {
     /**
      * Check map type
      *
-     * @param p_fileName  file name
+     * @param p_fileName file name
      * @return whether it is Conquest or Domination File
      */
-    public static int checkMapType(String p_fileName){
+    public static int checkMapType(String p_fileName) {
         String l_path = "src/main/resources/";
         String l_fileName = p_fileName + ".map";
         File l_map = new File(l_path + l_fileName);
 
-        if (!l_map.exists()){
+        if (!l_map.exists()) {
             return 1;
-        }
-        else {
+        } else {
             Scanner l_mapReader = null;
             try {
                 l_mapReader = new Scanner(l_map);
@@ -59,16 +68,15 @@ public class GameCommands {
                     String l_line = l_mapReader.nextLine();
                     if (l_line.equals("[Continents]")) {
                         l_line = l_mapReader.nextLine();
-                        if(l_line.contains("=")){
+                        if (l_line.contains("=")) {
                             return 2;
-                        }
-                        else {
+                        } else {
                             return 1;
                         }
                     }
                 }
+            } catch (FileNotFoundException e) {
             }
-            catch (FileNotFoundException e){}
         }
         return 1;
     }
@@ -91,8 +99,7 @@ public class GameCommands {
         d_Map.clearMapData();
 
         //Test for the type of Map
-        if(checkMapType(p_argumentTokens.get(0)) == 1)
-        {
+        if (checkMapType(p_argumentTokens.get(0)) == 1) {
             try {
                 d_Map = new EditMap().editMap(p_argumentTokens.get(0));
             } catch (Exception e) {
@@ -101,8 +108,7 @@ public class GameCommands {
                 throw new InvalidMapException(e.getMessage());
 
             }
-        }
-        else{
+        } else {
             try {
                 d_Map = new EditMapAdapter(new EditConquestMap()).editMap(p_argumentTokens.get(0));
             } catch (Exception e) {
@@ -178,15 +184,14 @@ public class GameCommands {
                         continue;
                     }
 
-                    for(d_playerStrategyType j : d_playerStrategyType.values())
-                    {
-                        if(j.name().equals(l_playerStrategy)){
+                    for (d_playerStrategyType j : d_playerStrategyType.values()) {
+                        if (j.name().equals(l_playerStrategy)) {
                             l_flag1 = 1;
                             break;
                         }
                     }
 
-                    if(l_flag1 == 0){
+                    if (l_flag1 == 0) {
                         System.out.println("Invalid Strategy Type, Player " + l_playerName + " not added. Allowed Types of Strategy are :" +
                                 "human, aggressive, benevolent, cheater, random");
                         d_Log.notify("Invalid Strategy Type, Player " + l_playerName + " not added. Allowed Types of Strategy are :" +
@@ -196,7 +201,7 @@ public class GameCommands {
                     System.out.println("Player Name: " + l_playerName + " has joined the Game");
 
                     d_Log.notify("Player Name: " + l_playerName + " has joined the Game");
-                    Player l_player = new Player(l_playerName,l_playerStrategy);
+                    Player l_player = new Player(l_playerName, l_playerStrategy);
                     d_PlayerList.add(l_player);
 
 

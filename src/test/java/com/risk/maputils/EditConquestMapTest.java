@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
 public class EditConquestMapTest {
 
     /**
-     * Tests if file exist and is not empty.
+     * Tests if file exist.
      *
      * @throws InvalidMapException if Map is invalid.
      */
@@ -32,6 +32,16 @@ public class EditConquestMapTest {
     @Test
     public void editMapFileNotPresent() throws InvalidMapException {
         assertTrue(EditConquestMap.loadConquestMap("file not present").getD_Continents().isEmpty());
+    }
+
+    /**
+     * Tests if file exist and is not empty.
+     *
+     * @throws InvalidMapException if Map is invalid.
+     */
+    @Test
+    public void editMapFilePresentNotEmpty() throws InvalidMapException {
+        assertTrue(!EditConquestMap.loadConquestMap("Belize").getD_Continents().isEmpty());
     }
 
 }
