@@ -205,7 +205,6 @@ public class GameCommands {
                     System.out.println("Player Name: " + l_playerName + " has joined the Game");
 
                     d_Log.notify("Player Name: " + l_playerName + " has joined the Game");
-                    //Player l_player = new Player(l_playerName,"Human");
                     Player l_player = new Player(l_playerName,l_playerStrategy);
                     d_PlayerList.add(l_player);
 
