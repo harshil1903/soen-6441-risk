@@ -14,6 +14,11 @@ import static com.risk.main.Main.d_Map;
 import static com.risk.main.Main.d_PlayerList;
 import static org.junit.Assert.*;
 
+/**
+ * The Tournament test class
+ *
+ * @author Harshil
+ */
 public class TournamentTest {
     List<String> d_argumentList;
     String l_command;
