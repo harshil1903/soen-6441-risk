@@ -5,6 +5,8 @@ import com.risk.models.Player;
 import com.risk.gameutils.AssignCard;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 import static com.risk.main.Main.d_Log;
 
@@ -159,4 +161,78 @@ public class Advance implements Order {
         d_Log.notify("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
                 + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies);
     }
+
+
+    /**
+     * Perform one time attack, compare the result of dice, do deduction of result. check if the country is conquered
+     *
+     */
+    public void testExecute(){
+        printOrder();
+        if(valid()) {
+
+            int l_sourceArmies = d_sourceCountry.getD_NumberOfArmies();
+            int l_targetArmies = d_targetCountry.getD_NumberOfArmies();
+
+            ArrayList<Integer> attackDice = rollNDice(l_sourceArmies);
+            ArrayList<Integer> defensiveDice = rollNDice(l_targetArmies);
+
+
+            for (int i = 0; i < Math.min(defensiveDice.size(), attackDice.size()); i++) {
+
+                if (attackDice.get(i) * 0.6 > defensiveDice.get(i) * 0.7) {
+                    l_targetArmies--;
+                } else {
+                    l_sourceArmies--;
+                }
+            }
+
+            if (l_targetArmies <= 0) {
+                //Attacker Won
+                if (l_sourceArmies > 0) {
+                    d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
+                    d_targetCountry.setD_NumberOfArmies(l_sourceArmies);
+                }
+                d_player.addCountryToAssignedCountries(d_targetCountry);
+
+                Player l_tempPlayer = d_targetCountry.getD_Player();
+                l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
+                d_targetCountry.setD_Player(d_player);
+
+                d_assignedCard = AssignCard.getCard();
+                d_player.addCard(d_assignedCard);
+                System.out.println(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
+                d_Log.notify(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
+            }
+            else {
+                //Defender won
+                if (l_sourceArmies > 0) {
+                    d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
+                    d_targetCountry.setD_NumberOfArmies(l_targetArmies);
+                    System.out.println(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
+                    d_Log.notify(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
+                }
+
+            }
+            System.out.println("Order Executed Successfully\n");
+        }
+        else {
+            System.out.println("Invalid Order, not executed\n");
+            d_Log.notify("Invalid Order, not executed\n");
+        }
+    }
+
+
+    public ArrayList<Integer> rollNDice(int p_numberOfDice){
+
+        ArrayList<Integer> result = new ArrayList<>();
+        for (int i = 0; i < p_numberOfDice; i++){
+            result.add(new Random().nextInt(p_numberOfDice)+1);
+        }
+
+        Collections.sort(result);
+        Collections.reverse(result);
+        return result;
+    }
+
 }
