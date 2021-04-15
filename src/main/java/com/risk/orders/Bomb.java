@@ -99,8 +99,7 @@ public class Bomb implements Order {
 
             System.out.println("Order Executed Successfully\n");
 
-        }
-        else {
+        } else {
             System.out.println("Invalid Order, not executed\n");
             d_Log.notify("Invalid Order, not executed\n");
         }

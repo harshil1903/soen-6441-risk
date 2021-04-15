@@ -53,7 +53,7 @@ public class Country {
         d_countryName = p_countryName;
         d_continentID = p_continentID;
         d_adjacentCountries = new ArrayList<>();
-        d_numberOfArmies=0;
+        d_numberOfArmies = 0;
 
     }
 

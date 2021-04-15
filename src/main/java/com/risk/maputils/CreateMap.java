@@ -6,6 +6,8 @@ import static com.risk.main.Main.d_Log;
 
 /**
  * Creates a new map from scratch if not present
+ *
+ * @author Rishabh
  */
 public class CreateMap {
 

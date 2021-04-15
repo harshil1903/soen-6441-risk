@@ -16,9 +16,10 @@ import java.util.Random;
 public class BenevolentPlayerStrategy extends PlayerStrategy {
 
     static int l_numOfArmies;
+
     /**
      * Instantiates a new Player strategy.
-     *
+     * <p>
      * It focuses on protecting its weak countries (deploys on its weakest country, never attacks, then moves its
      * armies in order to reinforce its weaker country).
      *
@@ -43,7 +44,6 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     /**
      * Decide which country should be defend
      * Benevolent Player decide to defend its country with the most armies
-     *
      *
      * @return current player country with most number of armies
      */
@@ -101,36 +101,32 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
 
         l_numOfArmies = l_toMoveFrom.getD_NumberOfArmies() - 1;
 
-        if(d_player.d_armiesForAdvance > 0){
+        if (d_player.d_armiesForAdvance > 0) {
             d_player.d_armiesForAdvance = 0;
             return new Deploy(d_player, toDefend().getD_CountryName(), d_player.getD_Armies());
-        }
-        else {
+        } else {
             if (l_rndOrder >= 0) {
                 switch (l_rndOrder) {
                     case (0):
                         // Advance Order
-                        if(l_numOfArmies > 0)
-                        {
-                            System.out.println("This1:"+l_numOfArmies);
+                        if (l_numOfArmies > 0) {
+                            System.out.println("This1:" + l_numOfArmies);
                             return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                         }
                     case (1):
                         // AirLift Card
-                        if(l_numOfArmies > 0 ||!d_player.d_cardList.contains("airlift"))
-                        {
-                            System.out.println("This2:"+l_numOfArmies);
+                        if (l_numOfArmies > 0 || !d_player.d_cardList.contains("airlift")) {
+                            System.out.println("This2:" + l_numOfArmies);
                             return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                         }
                         return new Airlift(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                     case (2):
                         //Blockade Card
-                        if(l_numOfArmies > 0 ||!d_player.d_cardList.contains("blockade"))
-                        {
-                            System.out.println("This3:"+l_numOfArmies);
+                        if (l_numOfArmies > 0 || !d_player.d_cardList.contains("blockade")) {
+                            System.out.println("This3:" + l_numOfArmies);
                             return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                         }
-                        return new Blockade(d_player,l_toDefend.getD_CountryName());
+                        return new Blockade(d_player, l_toDefend.getD_CountryName());
                 }
             }
         }

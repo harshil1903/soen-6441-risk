@@ -121,10 +121,8 @@ public class GameExecuteOrder extends Game {
 
         String l_winner = d_Map.getCountryListOfMap().get(0).getD_Player().getD_PlayerName();
 
-        for(Country l_country : d_Map.getCountryListOfMap())
-        {
-            if(!l_country.getD_Player().getD_PlayerName().equals(l_winner))
-            {
+        for (Country l_country : d_Map.getCountryListOfMap()) {
+            if (!l_country.getD_Player().getD_PlayerName().equals(l_winner)) {
                 return "";
             }
         }

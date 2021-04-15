@@ -79,7 +79,7 @@ public class ShowMap {
         System.out.println("\nPLAYER INFO");
         for (Player l_player : d_PlayerList) {
             System.out.println("\nPlayer: " + l_player.getD_PlayerName().toUpperCase());
-            if(l_player.getD_AssignedCountries().size() == 0){
+            if (l_player.getD_AssignedCountries().size() == 0) {
                 System.out.println("Countries haven't been assigned to the player yet");
                 continue;
             }

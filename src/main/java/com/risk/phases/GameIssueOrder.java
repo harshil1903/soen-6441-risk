@@ -59,9 +59,8 @@ public class GameIssueOrder extends Game {
             for (Player l_player : d_PlayerList) {
 
 
-                if(!l_player.isD_noOrdersLeft()){
-                    if(l_player.getD_AssignedCountries().size() == 0)
-                    {
+                if (!l_player.isD_noOrdersLeft()) {
+                    if (l_player.getD_AssignedCountries().size() == 0) {
                         System.out.println("\nPlayer " + l_player.getD_PlayerName().toUpperCase() +
                                 " has no countries left and hence is out of the game");
                         d_PlayerList.remove(l_player);
@@ -87,7 +86,7 @@ public class GameIssueOrder extends Game {
 
                     l_player.showCardList();
 
-                    if(l_player.d_isHuman){
+                    if (l_player.d_isHuman) {
                         System.out.println("\n\nEnter command: ");
                         l_command = l_scanner.nextLine();
 
@@ -107,7 +106,7 @@ public class GameIssueOrder extends Game {
 
                         System.out.println("ISSUE ORDER l_Action : " + l_action + " l_Arguments : " + l_arguments);
 
-                        if(l_action.equals("savegame")){
+                        if (l_action.equals("savegame")) {
                             String[] l_argumentTokens = l_arguments.split(" ");
                             List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
                             l_argumentList.remove(0);
@@ -123,14 +122,12 @@ public class GameIssueOrder extends Game {
 
                         if (l_command.equals("n"))
                             l_player.setD_noOrdersLeft(true);
-                    }
-                    else{
+                    } else {
                         l_player.issueOrder();
 
                         l_player.setD_noOrdersLeft(new Random().nextBoolean());
                     }
-                }
-                else {
+                } else {
                     System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped because they have no orders left");
                 }
             }

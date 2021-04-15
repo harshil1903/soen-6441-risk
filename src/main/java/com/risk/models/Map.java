@@ -18,10 +18,10 @@ public class Map extends Observable {
 
     private HashMap<String, String> d_mapData;
     private List<Continent> d_continents;
-   /**
-    * Name of the Map
-    */
-    public String d_mapName="";
+    /**
+     * Name of the Map
+     */
+    public String d_mapName = "";
     /**
      * Type of the map
      */
@@ -37,15 +37,16 @@ public class Map extends Observable {
     public Map() {
         d_mapData = new HashMap<String, String>();
         d_continents = new ArrayList<Continent>();
-        d_mapName="";
+        d_mapName = "";
     }
 
     /**
      * Parameterized Constructor for Map
+     *
      * @param p_mapName Name to be set of the map
      * @param p_mapType Type of the map
      */
-    public Map(String p_mapName,String p_mapType) {
+    public Map(String p_mapName, String p_mapType) {
         d_mapData = new HashMap<String, String>();
         d_continents = new ArrayList<Continent>();
     }
@@ -138,10 +139,10 @@ public class Map extends Observable {
      *
      * @return the array list of all countries
      */
-    public ArrayList<Country> getCountryListOfMap(){
+    public ArrayList<Country> getCountryListOfMap() {
         ArrayList<Country> l_countries = new ArrayList<>();
 
-        for(Continent l_continent : getD_Continents()){
+        for (Continent l_continent : getD_Continents()) {
             l_countries.addAll(l_continent.getD_Countries());
         }
 

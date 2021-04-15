@@ -19,10 +19,10 @@ import static com.risk.main.Main.d_PlayerList;
 public class CheaterPlayerStrategy extends PlayerStrategy {
     /**
      * Instantiates a new Player strategy.
-     *
+     * <p>
      * In this type of strategy, issueOrder() method conquers all the immediate neighboring enemy countries,
      * and then doubles the number of armies on its countries that have enemy neighbors.
-     *
+     * <p>
      * The cheater’s strategy implementation will still be called when the issueOrder() method, but will not end up
      * creating orders, but rather implement the above-stated behavior by directly affecting the map during the order
      * creation phase.
@@ -81,7 +81,7 @@ public class CheaterPlayerStrategy extends PlayerStrategy {
      */
 
     @Override
-    public Order createOrder() throws ConcurrentModificationException{
+    public Order createOrder() throws ConcurrentModificationException {
         List<Country> l_tempCountryList = new ArrayList<Country>();
 
 

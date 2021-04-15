@@ -93,15 +93,14 @@ public class GameStartup extends Game {
 
         ArrayList<Player> l_players = LoadGame.getD_PlayerList();
 
-        for(Player l_player : l_players)
-        {
+        for (Player l_player : l_players) {
             System.out.println("Player name : " + l_player.getD_PlayerName());
             d_PlayerList.add(l_player);
         }
 
         String l_gamePhase = LoadGame.getD_GamePhase();
 
-        switch (l_gamePhase){
+        switch (l_gamePhase) {
             case "GameStartup":
                 d_gameEngine.setPhase(new GameStartup(d_gameEngine));
                 break;

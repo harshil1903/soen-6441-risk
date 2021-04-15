@@ -104,8 +104,7 @@ public class Airlift implements Order {
             d_player.removeCard("airlift");
             System.out.println("Order Executed Successfully\n");
 
-        }
-        else {
+        } else {
             System.out.println("Invalid Order, not executed\n");
             d_Log.notify("Invalid Order, not executed\n");
         }

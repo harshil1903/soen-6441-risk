@@ -59,6 +59,7 @@ public class SaveGame {
 
     /**
      * Process the current phase of the game and add it to Game file
+     *
      * @param p_gamePhase Game phase to be saved.
      * @return the phase data to be added to game file.
      */
@@ -75,16 +76,17 @@ public class SaveGame {
 
     /**
      * Process the players of the game and add it to Game file
-     * @param d_playerList list of players to be saved.
+     *
+     * @param p_playerList list of players to be saved.
      * @return the phase data to be added to game file.
      */
-    public StringBuilder processPlayers(ArrayList<Player> d_playerList) {
+    public StringBuilder processPlayers(ArrayList<Player> p_playerList) {
         int l_playerId = 1;
         StringBuilder l_playerData = new StringBuilder();
         l_playerData.append("\n");
         l_playerData.append("[players]");
         l_playerData.append("\n");
-        for (Player l_player : d_playerList) {
+        for (Player l_player : p_playerList) {
             l_playerData.append(l_playerId + " " + l_player.getD_PlayerName() + " " + l_player.d_playerStrategyType);
             //l_mapData.append("\n \n");
             l_playerData.append("\nCountries Owned: ");

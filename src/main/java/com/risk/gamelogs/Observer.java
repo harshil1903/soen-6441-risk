@@ -3,6 +3,8 @@ package com.risk.gamelogs;
 /**
  * Interface class for the Observer, which forces all views to implement the
  * update method.
+ *
+ * @author Rishabh
  */
 public interface Observer {
     /**

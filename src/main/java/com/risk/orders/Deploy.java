@@ -71,8 +71,7 @@ public class Deploy implements Order {
             int l_previousArmies = d_country.getCountryFromCountryName(d_countryName).getD_NumberOfArmies();
             d_country.getCountryFromCountryName(d_countryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
             System.out.println("Order Executed Successfully\n");
-        }
-        else {
+        } else {
             System.out.println("Invalid Order, not executed\n");
             d_Log.notify("Invalid Order, not executed\n");
         }

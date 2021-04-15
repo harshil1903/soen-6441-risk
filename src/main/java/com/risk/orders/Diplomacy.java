@@ -7,6 +7,8 @@ import static com.risk.main.Main.d_PlayerList;
 
 /**
  * Type Diplomacy
+ *
+ * @author Rishabh
  */
 public class Diplomacy implements Order {
     Player d_player, d_otherPlayer;
@@ -61,8 +63,7 @@ public class Diplomacy implements Order {
             d_otherPlayer.addPlayerToDiplomacyList(d_player);
             d_player.removeCard("negotiate");
             System.out.println("Order Executed Successfully\n");
-        }
-        else {
+        } else {
             System.out.println("Invalid Order, not executed\n");
             d_Log.notify("Invalid Order, not executed\n");
         }

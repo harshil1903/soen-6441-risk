@@ -68,16 +68,16 @@ public class EditConquestMap {
      * Helps in adding Adjacent Countries to the Map
      *
      * @param p_map         Stores data read from p_mapReader
-     * @param l_parts       array of strings consisting adjacent countries
-     * @param l_country     Object of country
-     * @param l_continentID Continent ID of the continent
+     * @param p_parts       array of strings consisting adjacent countries
+     * @param p_country     Object of country
+     * @param p_continentID Continent ID of the continent
      */
-    private static void fillConquestAdjacentTerritories(Map p_map, String[] l_parts, Country l_country, int l_continentID) {
-        Continent l_continent = p_map.getContinentFromContinentList(l_continentID);
-        for (int i = 4; i < l_parts.length; i++) {
-            String l_adjacentCountry = l_parts[i];
+    private static void fillConquestAdjacentTerritories(Map p_map, String[] p_parts, Country p_country, int p_continentID) {
+        Continent l_continent = p_map.getContinentFromContinentList(p_continentID);
+        for (int i = 4; i < p_parts.length; i++) {
+            String l_adjacentCountry = p_parts[i];
             Country l_neighbour = getCountry(l_adjacentCountry, p_map);
-            l_country.addCountryToAdjacentCountries(l_neighbour);
+            p_country.addCountryToAdjacentCountries(l_neighbour);
         }
     }
 

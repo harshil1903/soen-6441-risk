@@ -25,18 +25,17 @@ public class MapCommands {
     /**
      * Check map type
      *
-     * @param p_fileName  file name
+     * @param p_fileName file name
      * @return whether it is Conquest or Domination File
      */
-    public static int checkMapType(String p_fileName){
+    public static int checkMapType(String p_fileName) {
         String l_path = "src/main/resources/";
         String l_fileName = p_fileName + ".map";
         File l_map = new File(l_path + l_fileName);
 
-        if (!l_map.exists()){
+        if (!l_map.exists()) {
             return 1;
-        }
-        else {
+        } else {
             Scanner l_mapReader = null;
             try {
                 l_mapReader = new Scanner(l_map);
@@ -44,22 +43,20 @@ public class MapCommands {
                     String l_line = l_mapReader.nextLine();
                     if (l_line.equals("[Continents]")) {
                         l_line = l_mapReader.nextLine();
-                        if(l_line.contains("=")){
+                        if (l_line.contains("=")) {
                             //2 signifies the map is of Conquest Type
                             return 2;
-                        }
-                        else {
+                        } else {
                             //1 signifies the map is of Domination Type
                             return 1;
                         }
                     }
                 }
+            } catch (FileNotFoundException e) {
             }
-            catch (FileNotFoundException e){}
         }
         return 1;
     }
-
 
 
     /**
@@ -79,8 +76,7 @@ public class MapCommands {
         d_Map.clearMapData();
 
         //Test for the type of Map
-        if(checkMapType(p_argumentTokens.get(0)) == 1)
-        {
+        if (checkMapType(p_argumentTokens.get(0)) == 1) {
             try {
                 d_Map = new EditMap().editMap(p_argumentTokens.get(0));
             } catch (Exception e) {
@@ -89,8 +85,7 @@ public class MapCommands {
                 throw new InvalidMapException(e.getMessage());
 
             }
-        }
-        else{
+        } else {
             try {
                 d_Map = new EditMapAdapter(new EditConquestMap()).editMap(p_argumentTokens.get(0));
             } catch (Exception e) {
@@ -143,15 +138,13 @@ public class MapCommands {
         if (MapValidator.d_isValid == false) {
             System.out.println("Map cannot be saved");
             d_Log.notify("Map cannot be saved");
-        }
-        else {
-            if(p_argumentTokens.get(1).equals("domination")) {
+        } else {
+            if (p_argumentTokens.get(1).equals("domination")) {
                 new MapWriter().writeMapFile(d_Map, l_file);
                 System.out.println("Map has been saved successfully");
                 d_Log.notify("Map has been saved successfully");
 
-            }
-            else if(p_argumentTokens.get(1).equals("conquest")){
+            } else if (p_argumentTokens.get(1).equals("conquest")) {
                 new ConquestMapWriter().writeConquestMapFile(d_Map, l_file);
                 System.out.println("Map has been saved successfully");
                 d_Log.notify("Map has been saved successfully");

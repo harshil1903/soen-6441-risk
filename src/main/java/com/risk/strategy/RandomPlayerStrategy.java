@@ -16,7 +16,7 @@ import java.util.Random;
 public class RandomPlayerStrategy extends PlayerStrategy {
     /**
      * Instantiates a new Player strategy.
-     *
+     * <p>
      * This kind of strategy deploys on a random country, attacks random neighboring countries, and moves
      * armies randomly between its countries.
      *

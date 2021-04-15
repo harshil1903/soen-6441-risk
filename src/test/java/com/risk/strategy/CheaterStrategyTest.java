@@ -24,7 +24,7 @@ import static com.risk.main.Main.d_PlayerList;
  * @author Parth.
  */
 public class CheaterStrategyTest {
-    Player d_player1,d_player2,d_player3;
+    Player d_player1, d_player2, d_player3;
     List<Country> d_country = new ArrayList<Country>();
 
     /**

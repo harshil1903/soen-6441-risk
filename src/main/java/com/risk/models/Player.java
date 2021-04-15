@@ -90,7 +90,7 @@ public class Player {
     /**
      * Instantiates a new Player.
      *
-     * @param p_PlayerName Name of the player
+     * @param p_PlayerName         Name of the player
      * @param p_playerStrategyType Strategy of the player
      */
     public Player(String p_PlayerName, String p_playerStrategyType) {
@@ -104,34 +104,32 @@ public class Player {
         d_cardList = new ArrayList<>();
         d_playerStrategyType = p_playerStrategyType;
 
-        if(d_playerStrategyType.equals("human"))
-        {
+        if (d_playerStrategyType.equals("human")) {
             d_isHuman = true;
-        }
-        else {
+        } else {
             d_isHuman = false;
         }
         d_isHuman = false;
 
-        switch (p_playerStrategyType){
+        switch (p_playerStrategyType) {
             case "human":
                 d_isHuman = true;
                 break;
 
             case "aggressive":
-                setD_playerStrategy(new AggressivePlayerStrategy(this, d_Map.getCountryListOfMap() ));
+                setD_playerStrategy(new AggressivePlayerStrategy(this, d_Map.getCountryListOfMap()));
                 break;
 
             case "benevolent":
-                setD_playerStrategy(new BenevolentPlayerStrategy(this, d_Map.getCountryListOfMap() ));
+                setD_playerStrategy(new BenevolentPlayerStrategy(this, d_Map.getCountryListOfMap()));
                 break;
 
             case "cheater":
-                setD_playerStrategy(new CheaterPlayerStrategy(this, d_Map.getCountryListOfMap() ));
+                setD_playerStrategy(new CheaterPlayerStrategy(this, d_Map.getCountryListOfMap()));
                 break;
 
             case "random":
-                setD_playerStrategy(new RandomPlayerStrategy(this, d_Map.getCountryListOfMap() ));
+                setD_playerStrategy(new RandomPlayerStrategy(this, d_Map.getCountryListOfMap()));
                 break;
 
         }
@@ -449,7 +447,7 @@ public class Player {
      */
     public void issueOrder() {
 
-        if(d_isHuman) {
+        if (d_isHuman) {
 
             String[] l_argumentTokens = d_orderArgs.split(" ");
             List<String> l_argumentList = new ArrayList<>(Arrays.asList(l_argumentTokens.clone()));
@@ -510,8 +508,7 @@ public class Player {
                     d_Log.notify("Invalid Command \nAllowed Commands are : deploy, advance, bomb, blockade, airlift, negotiate");
                     break;
             }
-        }
-        else {
+        } else {
             d_currentOrder = d_playerStrategy.createOrder();
             d_orderList.add(d_currentOrder);
         }

@@ -8,6 +8,8 @@ import java.util.List;
  * Class that implements the connection/disconnection mechanism between
  * observers and observables (subject). It also implements the notification
  * mechanism that the observable will trigger when its state changes.
+ *
+ * @author Rishabh
  */
 public class Observable {
     private List<Observer> observers = new ArrayList<Observer>();
