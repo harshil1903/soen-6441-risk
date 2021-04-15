@@ -76,6 +76,7 @@ public class AggressiveStrategyTest {
     @Test
     public void aggressiveTest() {
         d_player1.setD_Armies(10);
+        d_player1.d_armiesForAdvance = 10;
         d_player1.setD_playerStrategy(new AggressivePlayerStrategy(d_player1, d_country));
         Order order = d_player1.getD_playerStrategy().createOrder();
         order.execute();
