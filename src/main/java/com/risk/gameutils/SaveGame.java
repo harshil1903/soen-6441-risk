@@ -133,6 +133,8 @@ public class SaveGame {
             l_fileWriter.write(l_playerData.toString());
 
             l_fileWriter.close();
+            System.out.println("Saved Game Successfully");
+            d_Log.notify("Saved Game Successfully");
         } catch (IOException e) {
             System.err.println(e.getMessage());
             d_Log.notify(e.getMessage());

@@ -1,44 +1,44 @@
 [map]
-europe
+europe domination
 
 [phase]
-GameStartup
+GameIssueOrder
 
 [countries]
-England 1 0
-Scotland 1 0
-N_Ireland 1 0
-Rep_Ireland 1 0
-Wales 1 0
-Belgum 1 0
-Netherlands 1 0
-Denmark 2 0
-Germany 2 0
-Poland 2 0
-Czech_Rep 2 0
-Slovakia 2 0
-Hungary 3 0
-Austria 3 0
-Switzerland 3 0
-Italy 3 0
-Sicily 3 0
-Sardinia 3 0
-Corsica 3 0
-Majorca 4 0
-France 4 0
-Spain 4 0
-Portugal 4 0
-Luxembourg 4 0
+England,1,0
+Scotland,1,0
+N_Ireland,1,0
+Rep_Ireland,1,0
+Wales,1,0
+Belgum,1,0
+Netherlands,1,0
+Denmark,2,0
+Germany,2,0
+Poland,2,0
+Czech_Rep,2,0
+Slovakia,2,0
+Hungary,3,0
+Austria,3,0
+Switzerland,3,0
+Italy,3,0
+Sicily,3,4
+Sardinia,3,0
+Corsica,3,0
+Majorca,4,0
+France,4,0
+Spain,4,4
+Portugal,4,0
+Luxembourg,4,0
 
 [players]
-1 harshil human
-Countries Owned: 
+1 P1 human
+Countries Owned: Belgum,Denmark,N_Ireland,Slovakia,Portugal,Austria,Corsica,Spain,Switzerland,Scotland,France,Italy,
 Cards: 
-Armies: 0
+Armies: 4
 
-2 shivam human
-Countries Owned: 
+2 p2 human
+Countries Owned: Hungary,Netherlands,Poland,Germany,Wales,England,Sardinia,Rep_Ireland,Sicily,Majorca,Luxembourg,Czech_Rep,
 Cards: 
-Armies: 0
+Armies: 4
 
 

@@ -87,74 +87,8 @@ public class Advance implements Order {
     }
 
     /**
-     * Execute.
+     * Prints the order.
      */
-    public void Execute() {
-        printOrder();
-        if (valid()) {
-            ArrayList<String> l_countriesOwnedList = new ArrayList<>();
-            for (Country l_country : d_player.getD_AssignedCountries()) {
-                l_countriesOwnedList.add(l_country.getD_CountryName());
-            }
-            if (l_countriesOwnedList.contains(d_targetCountryName)) {
-                //just move army from onr country to another country
-
-                //first remove number of army from source country
-                d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
-
-                //then fetch number of army in target country
-                int l_previousArmies = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies();
-
-                //then add source army to target army
-                d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(d_numberOfArmies + l_previousArmies);
-
-            } else {
-                //logic for the battle
-                //
-                int l_attackerPercentage = (int) Math.round(d_numberOfArmies * 0.6);
-                int l_defenderPercentage = (int) Math.round(d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() * 0.7);
-
-                //Battle Begins....
-                int l_attackerArmy = d_numberOfArmies - l_defenderPercentage;
-                int l_defenderArmy = d_targetCountry.getCountryFromCountryName(d_targetCountryName).getD_NumberOfArmies() - l_attackerPercentage;
-
-                if (l_defenderArmy <= 0) {
-                    //attacker will get card here...
-                    d_assignedCard = AssignCard.getCard();
-                    d_player.addCard(d_assignedCard);
-                    d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
-                    d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_attackerArmy);
-                    d_player.addCountryToAssignedCountries(d_targetCountry);
-                    Player l_tempPlayer = d_targetCountry.getD_Player();
-                    l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
-                    d_targetCountry.setD_Player(d_player);
-                    System.out.println(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
-                    d_Log.notify(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
-
-                } else {
-                    //here defender successfully defend
-                    //so attacker can not get card here
-
-                    int l_previousArmies = d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies;
-
-                    if(l_attackerArmy > 0)
-                        d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_attackerArmy + l_previousArmies);
-                    else
-                        d_sourceCountry.getCountryFromCountryName(d_sourceCountryName).setD_NumberOfArmies(l_previousArmies);
-                    d_targetCountry.getCountryFromCountryName(d_targetCountryName).setD_NumberOfArmies(l_defenderArmy);
-                    System.out.println(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
-                    d_Log.notify(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
-                }
-
-            }
-            System.out.println("Order Executed Successfully\n");
-        }
-        else {
-            System.out.println("Invalid Order, not executed\n");
-            d_Log.notify("Invalid Order, not executed\n");
-        }
-    }
-
     public void printOrder() {
         System.out.println("Order Type : Advance \nPlayer : " + d_player.getD_PlayerName() + " Source Country : " + d_sourceCountryName
                 + " Target Country : " + d_targetCountryName + " Number Of Armies : " + d_numberOfArmies);
@@ -165,11 +99,10 @@ public class Advance implements Order {
 
     /**
      * Perform one time attack, compare the result of dice, do deduction of result. check if the country is conquered
-     *
      */
-    public void execute(){
+    public void execute() {
         printOrder();
-        if(valid()) {
+        if (valid()) {
 
             int l_sourceArmies = d_numberOfArmies;
             int l_targetArmies = d_targetCountry.getD_NumberOfArmies();
@@ -195,7 +128,7 @@ public class Advance implements Order {
                 }
                 d_player.addCountryToAssignedCountries(d_targetCountry);
 
-                if(!d_sourceCountry.getD_Player().getD_PlayerName().equals(d_targetCountry.getD_Player().getD_PlayerName())){
+                if (!d_sourceCountry.getD_Player().getD_PlayerName().equals(d_targetCountry.getD_Player().getD_PlayerName())) {
                     d_assignedCard = AssignCard.getCard();
                     d_player.addCard(d_assignedCard);
                     System.out.println(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
@@ -204,8 +137,7 @@ public class Advance implements Order {
                 Player l_tempPlayer = d_targetCountry.getD_Player();
                 l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
                 d_targetCountry.setD_Player(d_player);
-            }
-            else {
+            } else {
                 //Defender won
 
                 d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - l_sourceArmies);
@@ -216,23 +148,26 @@ public class Advance implements Order {
 
             }
             System.out.println("Order Executed Successfully\n");
-        }
-        else {
+        } else {
             System.out.println("Invalid Order, not executed\n");
             d_Log.notify("Invalid Order, not executed\n");
         }
     }
 
 
-    public ArrayList<Integer> rollNDice(int p_numberOfDice){
+    /**
+     * Assign random strength to each army of the country.
+     *
+     * @param p_numberOfDice no of armies.
+     * @return arraylist of strength of armies
+     */
+    public ArrayList<Integer> rollNDice(int p_numberOfDice) {
 
         ArrayList<Integer> result = new ArrayList<>();
-        for (int i = 0; i < p_numberOfDice; i++){
-            result.add(new Random().nextInt(p_numberOfDice)+1);
+        for (int i = 0; i < p_numberOfDice; i++) {
+            result.add(new Random().nextInt(p_numberOfDice) + 1);
         }
 
-        //Collections.sort(result);
-        //Collections.reverse(result);
         return result;
     }
 

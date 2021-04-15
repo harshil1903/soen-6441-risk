@@ -26,3 +26,6 @@ EXITGAME (in capital to Exit Game Mode)
 
 EXIT(to exit Game entirely)
 
+tournament -M europe Asia -P benevolent benevolent cheater -G 3 -D 15
+tournament -M europe Asia -P benevolent benevolent aggressive -G 3 -D 15
+tournament -M europe -P benevolent benevolent aggressive -G 3 -D 15

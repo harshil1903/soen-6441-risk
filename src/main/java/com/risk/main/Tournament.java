@@ -16,10 +16,6 @@ import static com.risk.main.Main.d_PlayerList;
 import static com.risk.main.Main.d_Map;
 
 
-//  tournament -M europe Asia -P benevolent benevolent cheater -G 3 -D 15
-//  tournament -M europe Asia -P benevolent benevolent aggressive -G 3 -D 15
-//  tournament -M europe -P benevolent benevolent aggressive -G 3 -D 15
-
 /**
  * The type Tournament class to run a tournament of multiple games among multiple maps
  *
@@ -36,7 +32,7 @@ public class Tournament {
     /**
      * Instantiates a new Tournament.
      */
-    Tournament(){
+    Tournament() {
         d_mapNames = new ArrayList<>();
         d_listOfPlayerStrategies = new ArrayList<>();
     }
@@ -47,49 +43,47 @@ public class Tournament {
      *
      * @param p_argumentTokens arguments of maps, strategies, number of games and number of turns
      */
-    public static void begin(List<String> p_argumentTokens){
+    public static void begin(List<String> p_argumentTokens) {
         d_mapNames = new ArrayList<>();
         d_listOfPlayerStrategies = new ArrayList<>();
         d_listOfPlayerStrategies.clear();
         d_mapNames.clear();
         d_PlayerList.clear();
 
-        if(!validateTournamentArguments(p_argumentTokens)){
+        if (!validateTournamentArguments(p_argumentTokens)) {
             System.out.println("Exiting Tournament Mode");
             return;
         }
 
-        for(int i = 0 ; i < d_listOfPlayerStrategies.size(); i++)
-        {
-            Player l_player = new Player(d_listOfPlayerStrategies.get(i) + i,d_listOfPlayerStrategies.get(i));
+        for (int i = 0; i < d_listOfPlayerStrategies.size(); i++) {
+            Player l_player = new Player(d_listOfPlayerStrategies.get(i) + i, d_listOfPlayerStrategies.get(i));
             System.out.println("Player Name and Strategy : " + l_player.getD_PlayerName() + "   " + l_player.d_playerStrategyType);
             d_PlayerList.add(l_player);
         }
 
-        for(int i = 0 ; i < d_mapNames.size(); i++)
-        {
+        for (int i = 0; i < d_mapNames.size(); i++) {
             List<String> l_mapName = new ArrayList<>();
             l_mapName.add(d_mapNames.get(i));
             boolean l_mapLoaded = false;
 
-            for(int j = 0; j < d_numGames ; j++) {
+            for (int j = 0; j < d_numGames; j++) {
 
                 try {
                     l_mapLoaded = MapCommands.editMapCommand(l_mapName);
 
-                    if(!l_mapLoaded){
-                        System.out.println("Map "+ d_mapNames.get(i) + " could not be loaded, moving to next map");
+                    if (!l_mapLoaded) {
+                        System.out.println("Map " + d_mapNames.get(i) + " could not be loaded, moving to next map");
                         continue;
                     }
 
 
-                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + (j+1) + " FOR MAP " + (i+1) + ":\n\n\n");
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPLAYING GAME " + (j + 1) + " FOR MAP " + (i + 1) + ":\n\n\n");
 
                     playGame();
 
                     d_Map.clearMapData();
+                } catch (Exception e) {
                 }
-                catch (Exception e){}
                 for (Player l_player : d_PlayerList)
                     l_player.clearPlayerData();
 
@@ -108,14 +102,12 @@ public class Tournament {
      * @throws InvalidMapException the invalid map exception
      */
     public static void playGame() throws InvalidMapException {
-        int l_turnCount = 0;
         String l_playerWon = "";
 
         AssignCountries.assignCountries();
         System.out.println("\n\nCountries have been successfully assigned to all the players\n");
 
-        for(int i = 0 ; i < d_maxTurns ; i++)
-        {
+        for (int i = 0; i < d_maxTurns; i++) {
             System.out.println("\n\nNEW TURN ");
 
             System.out.println("\nReinforcing Armies");
@@ -129,8 +121,7 @@ public class Tournament {
 
             l_playerWon = playerWon();
 
-            if(!l_playerWon.equals(""))
-            {
+            if (!l_playerWon.equals("")) {
                 System.out.println("\n\n******************************************\n");
                 System.out.println("Player " + l_playerWon + " has Won the Game!!!");
                 System.out.println("\n******************************************\n\n\n");
@@ -141,7 +132,7 @@ public class Tournament {
 
         }
 
-        if(l_playerWon.equals("")){
+        if (l_playerWon.equals("")) {
             System.out.println("\n\n\n\nGame is draw because nobody won in the given number of turns\n\n\n");
             GameCommands.showMapCommand(new ArrayList<>());
         }
@@ -152,12 +143,7 @@ public class Tournament {
     /**
      * Issue order creates an order for each player
      */
-    public static void issueOrder()
-    {
-//        for(Player l_player : d_PlayerList)
-//        {
-//            l_player.issueOrder();
-//        }
+    public static void issueOrder() {
         for (Player l_Player : d_PlayerList) {
             l_Player.setD_noOrdersLeft(false);
         }
@@ -170,13 +156,12 @@ public class Tournament {
             for (Player l_player : d_PlayerList) {
 
 
-                if(!l_player.isD_noOrdersLeft()){
+                if (!l_player.isD_noOrdersLeft()) {
 
                     l_player.issueOrder();
                     l_player.setD_noOrdersLeft(new Random().nextBoolean());
 
-                }
-                else {
+                } else {
                     System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped because they have no orders left");
                 }
             }
@@ -186,14 +171,11 @@ public class Tournament {
     /**
      * Execute order executes an order after fetching it from player's orderlist
      */
-    public static void executeOrder()
-    {
+    public static void executeOrder() {
         int l_noOrdersPlayerCount = 0;
-        while (l_noOrdersPlayerCount <= d_PlayerList.size())
-        {
+        while (l_noOrdersPlayerCount <= d_PlayerList.size()) {
 
-            for (Player l_player : d_PlayerList)
-            {
+            for (Player l_player : d_PlayerList) {
 
                 Order l_order = l_player.nextOrder();
 
@@ -235,14 +217,12 @@ public class Tournament {
      *
      * @return Name of player won or blank string if nobody has won
      */
-    public static String playerWon(){
+    public static String playerWon() {
 
         String l_winner = d_Map.getCountryListOfMap().get(0).getD_Player().getD_PlayerName();
 
-        for(Country l_country : d_Map.getCountryListOfMap())
-        {
-            if(!l_country.getD_Player().getD_PlayerName().equals(l_winner))
-            {
+        for (Country l_country : d_Map.getCountryListOfMap()) {
+            if (!l_country.getD_Player().getD_PlayerName().equals(l_winner)) {
                 return "";
             }
         }
@@ -256,8 +236,7 @@ public class Tournament {
      * @param p_argumentTokens argument tokens
      * @return the boolean
      */
-    public static boolean validateTournamentArguments(List<String> p_argumentTokens)
-    {
+    public static boolean validateTournamentArguments(List<String> p_argumentTokens) {
         d_mapNames = new ArrayList<>();
         d_listOfPlayerStrategies = new ArrayList<>();
 
@@ -265,58 +244,52 @@ public class Tournament {
             System.out.println("TOKEN : " + p_argumentTokens.get(i));
             if (p_argumentTokens.get(i).equals("-M")) {
                 i++;
-                while(!p_argumentTokens.get(i).equals("-P")){
+                while (!p_argumentTokens.get(i).equals("-P")) {
                     System.out.println("MAP : " + p_argumentTokens.get(i));
                     d_mapNames.add(p_argumentTokens.get(i++));
                 }
                 i--;
-            }
-            else if (p_argumentTokens.get(i).equals("-P")) {
+            } else if (p_argumentTokens.get(i).equals("-P")) {
                 i++;
-                while(!p_argumentTokens.get(i).equals("-G")){
+                while (!p_argumentTokens.get(i).equals("-G")) {
                     System.out.println("Strategy : " + p_argumentTokens.get(i));
                     d_listOfPlayerStrategies.add(p_argumentTokens.get(i++));
                 }
                 i--;
-            }
-            else if (p_argumentTokens.get(i).equals("-G")) {
+            } else if (p_argumentTokens.get(i).equals("-G")) {
                 i++;
                 System.out.println("Num of Games : " + p_argumentTokens.get(i));
                 d_numGames = Integer.parseInt(p_argumentTokens.get(i));
-            }
-            else if (p_argumentTokens.get(i).equals("-D")) {
+            } else if (p_argumentTokens.get(i).equals("-D")) {
                 i++;
                 System.out.println("Num of Turns : " + p_argumentTokens.get(i));
                 d_maxTurns = Integer.parseInt(p_argumentTokens.get(i));
-            }
-            else {
+            } else {
                 System.out.println("Invalid option. Tournament Mode -M listofmapfiles -P listofplayerstrategies -G numberofgames -D maxnumberofturns options");
                 d_Log.notify("Invalid option. Tournament Mode -M listofmapfiles -P listofplayerstrategies -G numberofgames -D maxnumberofturns options");
                 return false;
             }
         }
 
-        if(d_mapNames.size() > 5 || d_mapNames.size() < 1){
+        if (d_mapNames.size() > 5 || d_mapNames.size() < 1) {
             System.out.println("Only 1 to 5 Maps allowed");
             d_Log.notify("Only 1 to 5 Maps allowed");
             return false;
         }
 
-        if(d_listOfPlayerStrategies.size() > 4 || d_listOfPlayerStrategies.size() < 2){
+        if (d_listOfPlayerStrategies.size() > 4 || d_listOfPlayerStrategies.size() < 2) {
             System.out.println("Only 2 to 4 Player Strategies allowed");
             d_Log.notify("Only 2 to 4 Player Strategies allowed");
             return false;
         }
 
-        if(d_numGames > 5 || d_numGames < 1)
-        {
+        if (d_numGames > 5 || d_numGames < 1) {
             System.out.println("Only 1 to 5 Games allowed");
             d_Log.notify("Only 1 to 5 Games allowed");
             return false;
         }
 
-        if(d_maxTurns > 50 || d_maxTurns < 10)
-        {
+        if (d_maxTurns > 50 || d_maxTurns < 10) {
             System.out.println("Only 10 to 50 Turns allowed");
             d_Log.notify("Only 10 to 50 Turns allowed");
             return false;

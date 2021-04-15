@@ -201,8 +201,10 @@ public class LoadGame {
                 d_Log.notify("Game file not found");
 
 
-
             }
+        } else {
+            System.out.println("Game file not found");
+            d_Log.notify("Game file not found");
         }
     }
 

@@ -24,6 +24,9 @@ public class Player {
     private boolean d_noOrdersLeft;
     private List<Country> d_assignedCountries;
     private List<Order> d_orderList;
+    /**
+     * Armies for advance move
+     */
     public int d_armiesForAdvance;
     /**
      * current order of player

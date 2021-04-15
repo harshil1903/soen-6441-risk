@@ -15,6 +15,7 @@ import java.util.Random;
  */
 public class BenevolentPlayerStrategy extends PlayerStrategy {
 
+    static int l_numOfArmies;
     /**
      * Instantiates a new Player strategy.
      *
@@ -93,7 +94,7 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
     public Order createOrder() {
         Random l_rand = new Random();
         int l_rndOrder = l_rand.nextInt(3);
-        int l_numOfArmies;
+
 
         Country l_toDefend = toDefend();
         Country l_toMoveFrom = toMoveFrom();
@@ -109,24 +110,30 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
                 switch (l_rndOrder) {
                     case (0):
                         // Advance Order
-                        return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
+                        if(l_numOfArmies > 0)
+                        {
+                            System.out.println("This1:"+l_numOfArmies);
+                            return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
+                        }
                     case (1):
                         // AirLift Card
-                        if(l_numOfArmies <= 0 ||!d_player.d_cardList.contains("airlift"))
+                        if(l_numOfArmies > 0 ||!d_player.d_cardList.contains("airlift"))
                         {
+                            System.out.println("This2:"+l_numOfArmies);
                             return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                         }
                         return new Airlift(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                     case (2):
                         //Blockade Card
-                        if(l_numOfArmies <= 0 ||!d_player.d_cardList.contains("blockade"))
+                        if(l_numOfArmies > 0 ||!d_player.d_cardList.contains("blockade"))
                         {
+                            System.out.println("This3:"+l_numOfArmies);
                             return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                         }
                         return new Blockade(d_player,l_toDefend.getD_CountryName());
                 }
             }
-            return null;
         }
+        return null;
     }
 }
