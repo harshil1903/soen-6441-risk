@@ -89,7 +89,7 @@ public class Advance implements Order {
     /**
      * Execute.
      */
-    public void execute() {
+    public void Execute() {
         printOrder();
         if (valid()) {
             ArrayList<String> l_countriesOwnedList = new ArrayList<>();
@@ -167,11 +167,11 @@ public class Advance implements Order {
      * Perform one time attack, compare the result of dice, do deduction of result. check if the country is conquered
      *
      */
-    public void testExecute(){
+    public void execute(){
         printOrder();
         if(valid()) {
 
-            int l_sourceArmies = d_sourceCountry.getD_NumberOfArmies();
+            int l_sourceArmies = d_numberOfArmies;
             int l_targetArmies = d_targetCountry.getD_NumberOfArmies();
 
             ArrayList<Integer> attackDice = rollNDice(l_sourceArmies);
@@ -206,12 +206,12 @@ public class Advance implements Order {
             }
             else {
                 //Defender won
-                if (l_sourceArmies > 0) {
-                    d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - d_numberOfArmies);
-                    d_targetCountry.setD_NumberOfArmies(l_targetArmies);
-                    System.out.println(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
-                    d_Log.notify(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defend Country " + d_targetCountryName);
-                }
+
+                d_sourceCountry.setD_NumberOfArmies(d_sourceCountry.getD_NumberOfArmies() - l_sourceArmies);
+                d_targetCountry.setD_NumberOfArmies(l_targetArmies);
+                System.out.println(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defended Country " + d_targetCountryName);
+                d_Log.notify(d_targetCountry.getD_Player().getD_PlayerName() + " Successfully Defended Country " + d_targetCountryName);
+
 
             }
             System.out.println("Order Executed Successfully\n");
@@ -230,8 +230,8 @@ public class Advance implements Order {
             result.add(new Random().nextInt(p_numberOfDice)+1);
         }
 
-        Collections.sort(result);
-        Collections.reverse(result);
+        //Collections.sort(result);
+        //Collections.reverse(result);
         return result;
     }
 

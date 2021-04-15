@@ -1,328 +1,122 @@
-Log: Conquest Map file not presented will be created from scratch
-Log: Loaded map successfully form existing conquest file
-Log: Only 1 to 5 Games allowed
-Log: Only 10 to 50 Turns allowed
-Log: Only 2 to 4 Player Strategies allowed
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Denmark Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Portugal Number Of Armies : 3
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Denmark Number Of Armies : 3
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Portugal Number Of Armies : 3
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
-
-Log: Player cheater2 has Won the Game!!!
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Germany Number Of Armies : 3
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Luxembourg Number Of Armies : 3
-Log: Only 1 to 5 Maps allowed
-Log: Loaded map successfully form existing conquest file
-Log: Loaded Game successfully form existing game file
+Log: Welcome to warzone
+Log: Game Begins
 Log: New Phase : GameStartup
+Log: COMMAND : loadmap europe
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
+Log: COMMAND : gameplayer -add harshil human -add shivam human
+Log: Player Name: harshil has joined the Game
+Log: Player Name: shivam has joined the Game
+Log: COMMAND : assigncountries
 Log: Assigned countries randomly to players
 Log: Countries have been successfully assigned to all the players
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: You are trying to deploy more armies than you have. Try Again in your next turn.
-Log: You currently have 3 number of reinforcement armies left.
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: New Phase : PreMapLoad
-Log: New Phase : GameStartup
-Log: Only 1 to 5 Games allowed
-Log: Only 10 to 50 Turns allowed
-Log: Only 2 to 4 Player Strategies allowed
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Germany Number Of Armies : 3
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
+Log: New Phase : GameIssueOrder
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: Deploy Order done with  Germany 4
+Log: shivam Owns card: 
+Log: Deploy Order done with  Denmark 2
+Log: 
+All orders for the current turn have been issued.
 
+Log: Executing Order
 Log: Order Type : Deploy 
-Player : benevolent1 Country : Italy Number Of Armies : 3
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
+Player : harshil Country : Germany Number Of Armies : 4
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Denmark Number Of Armies : 2
+Log: Executing Orders finished
+ 
 
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Spain Number Of Armies : 6
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
+NEW TURN 
 
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Luxembourg Number Of Armies : 6
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
+Log: New Phase : GameIssueOrder
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: Advance Order
+Log: shivam Owns card: 
+Log: Deploy Order done with  Poland 6
+Log: 
+All orders for the current turn have been issued.
 
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : benevolent0 Country : Portugal Number Of Armies : 9
-Log: You are trying to deploy more armies than you have. Try Again in your next turn.
-Log: You currently have 3 number of reinforcement armies left.
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
-
-Log: Order Type : Deploy 
-Player : benevolent0 Country : N_Ireland Number Of Armies : 3
-Log: You do not own this country. Try Again with a country name that has been assigned to you
-Log: Invalid Order, not executed
-
-Log: Only 1 to 5 Maps allowed
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : player_1 Country : Corsica Number Of Armies : 10
-Log: Order Type : Deploy 
-Player : player_1 Country : Corsica Number Of Armies : 10
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : player_1 Country : Spain Number Of Armies : 10
-Log: Order Type : Deploy 
-Player : player_1 Country : Spain Number Of Armies : 10
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Airlift 
-Player : player_1 Source Country : England Target Country : Portugal Number Of Armies : 2
-Log: Player doesnot contain airlift card
-Log: Invalid Order, not executed
-
-Log: Order Type : Airlift 
-Player : player_1 Source Country : England Target Country : Portugal Number Of Armies : 2
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : player_1 Country : Czech_Rep Number Of Armies : 10
-Log: Order Type : Deploy 
-Player : player_1 Country : Czech_Rep Number Of Armies : 10
-Log: Loaded map successfully from existing domination file
-Log: The ContinentTempContinentAdded Successfully
-Log: The Country TestCountry Added Successfully
-Log: Loaded map successfully from existing domination file
-Log: The ContinentTempContinentAdded Successfully
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Deploy 
-Player : player_1 Country : Netherlands Number Of Armies : 10
-Log: Order Type : Deploy 
-Player : player_1 Country : Netherlands Number Of Armies : 10
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
+Log: Executing Order
 Log: Order Type : Advance 
-Player : player_1 Source Country : Switzerland Target Country : France Number Of Armies : 7
-Log: player_1 won and got airlift
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Advance 
-Player : player_1 Source Country : Austria Target Country : Italy Number Of Armies : 25
-Log: player_2 Successfully Defend Country Italy
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Spain and Germany are not adjacent
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Germany and Italy are not adjacent
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 can not use Airlift card on target country is not owned
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Airlift 
-Player : player_1 Source Country : Germany Target Country : Portugal Number Of Armies : 5
-Log: Before Airlift Card number of army in Portugal is : 4
-Log: player_1 applied Airlift Card successfully
-Log: After Airlift Card number of army in Portugal is : 9
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 does not have sufficient armies to be airlifted to the target country
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Luxembourg has a 0 army so you can not apply Blockade order there
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Blockade 
-Player : player_1 Country to block : Denmark
-Log: Before Blockade Card number of army in Denmark is : 10
-Log: player_1applied Blockade Card successfully
-Log: After Blockade Card number of army in Denmark is : 30
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Austria has a 0 army so you can not apply bomb order there
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Corsica not adjacent with player_1countries
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Bomb 
-Player : player_1 Target Country : Sicily
-Log: Before Bomb Card number of army in Sicily is : 6
-Log: player_1 applied Bomb Card successfully
-Log: After Bomb Card number of army in Sicily is : 3
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 can not attack on player_2 because of diplomacy card
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Austria has a 0 army so you can not apply Blockade order there
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Blockade 
-Player : player_1 Country to block : France
-Log: Before Blockade Card number of army in France is : 10
-Log: player_1applied Blockade Card successfully
-Log: After Blockade Card number of army in France is : 30
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Bomb 
-Player : player_1 Target Country : Italy
-Log: Player doesnot contain bomb card
-Log: Invalid Order, not executed
+Player : harshil Source Country : Germany Target Country : Denmark Number Of Armies : 3
+Log: shivam Successfully Defended Country Denmark
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Poland Number Of Armies : 6
+Log: Executing Orders finished
+ 
 
-Log: Order Type : Bomb 
-Player : player_1 Target Country : Italy
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 can not attack on player_2 because of diplomacy card
-Log: Loaded map successfully form existing conquest file
-Log: Loaded Game successfully form existing game file
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 can not use Airlift card on target country is not owned
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Airlift 
-Player : player_1 Source Country : Majorca Target Country : Italy Number Of Armies : 5
-Log: Before Airlift Card number of army in Italy is : 4
-Log: player_1 applied Airlift Card successfully
-Log: After Airlift Card number of army in Italy is : 9
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 does not have sufficient armies to be airlifted to the target country
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: Loaded map successfully from existing domination file
-Log: The ContinentTempContinentAdded Successfully
-Log: The Country TestCountry Added Successfully
-Log: Loaded map successfully from existing domination file
-Log: The ContinentTempContinentAdded Successfully
-Log: Map file not presented will be created from scratch
-Log: Loaded map successfully from existing domination file
-Log: Conquest Map file not presented will be created from scratch
-Log: Loaded map successfully form existing conquest file
-Log: Map file not presented will be created from scratch
-Log: Loaded map successfully from existing domination file
-Log: New Phase : PreMapLoad
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: New Phase : GameStartup
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Assigned countries randomly to players
-Log: Countries have been successfully assigned to all the players
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Invalid command in stateGameStartup
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: You are trying to deploy more armies than you have. Try Again in your next turn.
-Log: You currently have 3 number of reinforcement armies left.
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: New Phase : PreMapLoad
-Log: New Phase : GameStartup
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Hungary has a 0 army so you can not apply bomb order there
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: player_1 can not attack bomb on your own country
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: Order Type : Bomb 
-Player : player_1 Target Country : N_Ireland
-Log: Before Bomb Card number of army in N_Ireland is : 6
-Log: player_1 applied Bomb Card successfully
-Log: After Bomb Card number of army in N_Ireland is : 3
-Log: Loaded map successfully from existing domination file
-Log: Assigned countries randomly to players
-Log: New Phase : PreMapLoad
-Log: Loaded map successfully from existing domination file
-Log: The map is connected
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
-Log: Invalid command in statePreMapLoad
+NEW TURN 
+
+Log: New Phase : GameIssueOrder
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: Deploy Order done with  Germany 8
+Log: shivam Owns card: 
+Log: Deploy Order done with  Poland 4
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Germany Number Of Armies : 8
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Poland Number Of Armies : 4
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: New Phase : GameIssueOrder
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: Deploy Order done with  Germany 4
+Log: shivam Owns card: 
+Log: Deploy Order done with  Italy 2
+Log: 
+All orders for the current turn have been issued.
+
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : harshil Country : Germany Number Of Armies : 4
+Log: Executing Order
+Log: Order Type : Deploy 
+Player : shivam Country : Italy Number Of Armies : 2
+Log: Executing Orders finished
+ 
+
+NEW TURN 
+
+Log: New Phase : GameIssueOrder
+Log: 
+Reinforcing Armies
+Log: 
+Armies have been successfully reinforced among players
+Log: 
+ISSUE ORDER PHASE
+Log: harshil Owns card: 
+Log: Deploy Order done with  Germany Poland 10

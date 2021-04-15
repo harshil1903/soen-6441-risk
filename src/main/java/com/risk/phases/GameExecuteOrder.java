@@ -86,6 +86,7 @@ public class GameExecuteOrder extends Game {
                     d_Log.notify("Executing Order");
 
                     l_order.execute();
+
                 } else {
                     ++l_noOrdersPlayerCount;
                 }
