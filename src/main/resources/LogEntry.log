@@ -1,122 +1,3406 @@
 Log: Welcome to warzone
 Log: Game Begins
 Log: New Phase : GameStartup
-Log: COMMAND : loadmap europe
+Log: COMMAND : tournament -M europe -P benevolent benevolent aggressive -G 3 -D 50
 Log: Loaded map successfully from existing domination file
 Log: The map is connected
-Log: COMMAND : gameplayer -add harshil human -add shivam human
-Log: Player Name: harshil has joined the Game
-Log: Player Name: shivam has joined the Game
-Log: COMMAND : assigncountries
 Log: Assigned countries randomly to players
-Log: Countries have been successfully assigned to all the players
-Log: New Phase : GameIssueOrder
-Log: 
-Reinforcing Armies
-Log: 
-Armies have been successfully reinforced among players
 Log: 
 ISSUE ORDER PHASE
-Log: harshil Owns card: 
-Log: Deploy Order done with  Germany 4
-Log: shivam Owns card: 
-Log: Deploy Order done with  Denmark 2
-Log: 
-All orders for the current turn have been issued.
-
-Log: Executing Order
 Log: Order Type : Deploy 
-Player : harshil Country : Germany Number Of Armies : 4
-Log: Executing Order
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
 Log: Order Type : Deploy 
-Player : shivam Country : Denmark Number Of Armies : 2
-Log: Executing Orders finished
- 
-
-NEW TURN 
-
-Log: New Phase : GameIssueOrder
-Log: 
-Reinforcing Armies
-Log: 
-Armies have been successfully reinforced among players
-Log: 
-ISSUE ORDER PHASE
-Log: harshil Owns card: 
-Log: Advance Order
-Log: shivam Owns card: 
-Log: Deploy Order done with  Poland 6
-Log: 
-All orders for the current turn have been issued.
-
-Log: Executing Order
+Player : benevolent1 Country : France Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
 Log: Order Type : Advance 
-Player : harshil Source Country : Germany Target Country : Denmark Number Of Armies : 3
-Log: shivam Successfully Defended Country Denmark
-Log: Executing Order
-Log: Order Type : Deploy 
-Player : shivam Country : Poland Number Of Armies : 6
-Log: Executing Orders finished
- 
+Player : benevolent0 Source Country : N_Ireland Target Country : Sardinia Number Of Armies : -1
+Log: N_Ireland and Sardinia are not adjacent
+Log: Invalid Order, not executed
 
-NEW TURN 
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : Sicily Number Of Armies : -1
+Log: Wales and Sicily are not adjacent
+Log: Invalid Order, not executed
 
-Log: New Phase : GameIssueOrder
-Log: 
-Reinforcing Armies
-Log: 
-Armies have been successfully reinforced among players
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Germany Number Of Armies : -1
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Austria Target Country : Switzerland Number Of Armies : -1
 Log: 
 ISSUE ORDER PHASE
-Log: harshil Owns card: 
-Log: Deploy Order done with  Germany 8
-Log: shivam Owns card: 
-Log: Deploy Order done with  Poland 4
-Log: 
-All orders for the current turn have been issued.
-
-Log: Executing Order
 Log: Order Type : Deploy 
-Player : harshil Country : Germany Number Of Armies : 8
-Log: Executing Order
+Player : benevolent0 Country : Denmark Number Of Armies : 3
 Log: Order Type : Deploy 
-Player : shivam Country : Poland Number Of Armies : 4
-Log: Executing Orders finished
- 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Germany Number Of Armies : 2
+Log: N_Ireland and Germany are not adjacent
+Log: Invalid Order, not executed
 
-NEW TURN 
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Sardinia Number Of Armies : 2
+Log: aggressive2 won and got airlift
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Switzerland Number Of Armies : 2
+Log: N_Ireland and Switzerland are not adjacent
+Log: Invalid Order, not executed
 
-Log: New Phase : GameIssueOrder
-Log: 
-Reinforcing Armies
-Log: 
-Armies have been successfully reinforced among players
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Sardinia Number Of Armies : 2
+Log: aggressive2 Successfully Defended Country Sardinia
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Switzerland Number Of Armies : 2
+Log: N_Ireland and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
 Log: 
 ISSUE ORDER PHASE
-Log: harshil Owns card: 
-Log: Deploy Order done with  Germany 4
-Log: shivam Owns card: 
-Log: Deploy Order done with  Italy 2
-Log: 
-All orders for the current turn have been issued.
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Sardinia Number Of Armies : 2
+Log: N_Ireland and Sardinia are not adjacent
+Log: Invalid Order, not executed
 
-Log: Executing Order
 Log: Order Type : Deploy 
-Player : harshil Country : Germany Number Of Armies : 4
-Log: Executing Order
+Player : benevolent1 Country : Wales Number Of Armies : 3
 Log: Order Type : Deploy 
-Player : shivam Country : Italy Number Of Armies : 2
-Log: Executing Orders finished
- 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Spain Number Of Armies : 2
+Log: N_Ireland and Spain are not adjacent
+Log: Invalid Order, not executed
 
-NEW TURN 
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Spain Number Of Armies : 2
+Log: N_Ireland and Spain are not adjacent
+Log: Invalid Order, not executed
 
-Log: New Phase : GameIssueOrder
-Log: 
-Reinforcing Armies
-Log: 
-Armies have been successfully reinforced among players
 Log: 
 ISSUE ORDER PHASE
-Log: harshil Owns card: 
-Log: Deploy Order done with  Germany Poland 10
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 6
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Sicily Number Of Armies : 5
+Log: benevolent1 Successfully Defended Country Sicily
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Germany Number Of Armies : 2
+Log: benevolent0 Successfully Defended Country Germany
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Spain Number Of Armies : 2
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 6
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : France Target Country : Hungary Number Of Armies : 2
+Log: France and Hungary are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : France Target Country : Hungary Number Of Armies : 2
+Log: France and Hungary are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Switzerland Target Country : Spain Number Of Armies : 5
+Log: Switzerland and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Switzerland Target Country : Slovakia Number Of Armies : 5
+Log: Switzerland and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Switzerland Target Country : Spain Number Of Armies : 5
+Log: Switzerland and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Austria Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : France Target Country : Hungary Number Of Armies : 2
+Log: France and Hungary are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Switzerland Target Country : Austria Number Of Armies : 5
+Log: benevolent0 Successfully Defended Country Austria
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Switzerland Target Country : Austria Number Of Armies : 5
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Slovakia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Hungary Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Sicily Number Of Armies : 13
+Log: aggressive2 won and got blockade
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Austria Number Of Armies : 2
+Log: Spain and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : Portugal Number Of Armies : 2
+Log: Scotland and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 12
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Majorca Target Country : Poland Number Of Armies : 2
+Log: Majorca and Poland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 12
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Luxembourg Number Of Armies : 12
+Log: Sicily and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 12
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Luxembourg Number Of Armies : 12
+Log: Sicily and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 12
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 12
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : France Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 6
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 15
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 15
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Germany Number Of Armies : 4
+Log: benevolent0 Successfully Defended Country Germany
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 15
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 6
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Slovakia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : France Target Country : Wales Number Of Armies : 5
+Log: France and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Corsica Number Of Armies : 24
+Log: Sicily and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 24
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Hungary Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Spain Number Of Armies : 5
+Log: Slovakia and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 27
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : N_Ireland Number Of Armies : 5
+Log: Slovakia and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Corsica Number Of Armies : 27
+Log: Sicily and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : N_Ireland Number Of Armies : 5
+Log: Spain and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Poland Target Country : Portugal Number Of Armies : 5
+Log: Poland and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : Portugal Number Of Armies : 5
+Log: Hungary and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Majorca Target Country : Portugal Number Of Armies : 5
+Log: Majorca and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Hungary Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : Portugal Number Of Armies : 8
+Log: Hungary and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : Wales Number Of Armies : 8
+Log: Hungary and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Germany Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : Scotland Number Of Armies : 8
+Log: Hungary and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Switzerland Number Of Armies : 7
+Log: Denmark and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 39
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : France Number Of Armies : 8
+Log: Hungary and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 39
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Switzerland Number Of Armies : 7
+Log: Denmark and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 42
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 42
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 42
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : France Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 45
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Spain Number Of Armies : 8
+Log: N_Ireland and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Spain Number Of Armies : 8
+Log: N_Ireland and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Slovakia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : Portugal Number Of Armies : 8
+Log: Hungary and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : France Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Austria Number Of Armies : 8
+Log: Spain and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Austria Number Of Armies : 8
+Log: benevolent0 Successfully Defended Country Austria
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Slovakia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Slovakia Number Of Armies : 8
+Log: Spain and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Austria Number Of Armies : 8
+Log: Spain and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 60
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 60
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 63
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 63
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Slovakia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Hungary Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 63
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Germany Number Of Armies : 10
+Log: benevolent0 Successfully Defended Country Germany
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : Hungary Number Of Armies : 11
+Log: Wales and Hungary are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 63
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Italy Number Of Armies : 63
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 63
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : Majorca Number Of Armies : 11
+Log: Hungary and Majorca are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Italy Number Of Armies : 66
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 6
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 62
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Majorca Target Country : Poland Number Of Armies : 11
+Log: Majorca and Poland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 6
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Corsica Number Of Armies : 6
+Log: Sicily and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 6
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : France Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 15
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 15
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : France Target Country : Hungary Number Of Armies : 14
+Log: France and Hungary are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Corsica Number Of Armies : 18
+Log: Sicily and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 6
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Rep_Ireland Number Of Armies : 18
+Log: Sicily and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 18
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 18
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Germany Number Of Armies : 6
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Majorca Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 18
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 18
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 18
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 18
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : France Target Country : Wales Number Of Armies : 14
+Log: France and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Germany Target Country : Denmark Number Of Armies : 10
+Log: benevolent0 Successfully Defended Country Denmark
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Portugal Target Country : Hungary Number Of Armies : 14
+Log: Portugal and Hungary are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 21
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 6
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Italy Number Of Armies : 21
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Hungary Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Luxembourg Number Of Armies : 21
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Denmark Number Of Armies : 10
+Log: Slovakia and Denmark are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 21
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 6
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Germany Number Of Armies : 10
+Log: Slovakia and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Majorca Target Country : Poland Number Of Armies : 14
+Log: Majorca and Poland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 26
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Germany Number Of Armies : 10
+Log: Slovakia and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 26
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Germany Number Of Armies : 10
+Log: Slovakia and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 26
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Germany Number Of Armies : 10
+Log: Slovakia and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 7
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Hungary Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : France Number Of Armies : 17
+Log: Scotland and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : France Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : France Number Of Armies : 17
+Log: Hungary and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 10
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 10
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 8
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 8
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 8
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : Majorca Number Of Armies : 17
+Log: Wales and Majorca are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 10
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 10
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Hungary Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : France Number Of Armies : 17
+Log: Scotland and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 8
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 8
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 4
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 4
+Log: benevolent0 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Italy Target Country : Switzerland Number Of Armies : 4
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : France Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Corsica Number Of Armies : 3
+Log: Sicily and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 3
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Luxembourg Number Of Armies : 3
+Log: Sicily and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Hungary Target Country : Wales Number Of Armies : 20
+Log: Hungary and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 3
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Corsica Number Of Armies : 3
+Log: Sicily and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Switzerland Number Of Armies : 10
+Log: Slovakia and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Corsica Number Of Armies : 6
+Log: Sicily and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 6
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Germany Number Of Armies : 10
+Log: Slovakia and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Poland Target Country : Scotland Number Of Armies : 20
+Log: Poland and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : Czech_Rep Number Of Armies : 6
+Log: Sicily and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 9
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Slovakia Target Country : Germany Number Of Armies : 10
+Log: Slovakia and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : France Target Country : Majorca Number Of Armies : 20
+Log: France and Majorca are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 12
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Sicily Target Country : England Number Of Armies : 12
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Sicily Number Of Armies : 3
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Slovakia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Slovakia Number Of Armies : 5
+Log: aggressive2 won and got negotiate
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Slovakia Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Austria Number Of Armies : 4
+Log: benevolent1 Successfully Defended Country Austria
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Austria Number Of Armies : 4
+Log: benevolent1 Successfully Defended Country Austria
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Austria Number Of Armies : 4
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Luxembourg Number Of Armies : 2
+Log: Netherlands and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : Rep_Ireland Number Of Armies : 2
+Log: Scotland and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Austria Number Of Armies : 4
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Rep_Ireland Number Of Armies : 2
+Log: Switzerland and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Austria Number Of Armies : 4
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Wales Number Of Armies : 2
+Log: Switzerland and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Czech_Rep Number Of Armies : 3
+Log: aggressive2 won and got bomb
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Wales Number Of Armies : 2
+Log: Switzerland and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Germany Number Of Armies : 3
+Log: benevolent0 Successfully Defended Country Germany
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Germany Number Of Armies : 5
+Log: benevolent0 Successfully Defended Country Germany
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Germany Number Of Armies : 5
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Germany Number Of Armies : 5
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Italy Number Of Armies : 2
+Log: Netherlands and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Germany Number Of Armies : 4
+Log: aggressive2 won and got negotiate
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Germany Number Of Armies : 4
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Luxembourg Number Of Armies : 2
+Log: benevolent0 Successfully Defended Country Luxembourg
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Austria Target Country : Rep_Ireland Number Of Armies : 3
+Log: Austria and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Belgum Number Of Armies : 2
+Log: benevolent0 Successfully Defended Country Belgum
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : France Number Of Armies : 3
+Log: Poland and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Luxembourg Number Of Armies : 2
+Log: Spain and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 3
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Hungary Target Country : Luxembourg Number Of Armies : 2
+Log: Hungary and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 3
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Slovakia Number Of Armies : 10
+Log: aggressive2 Successfully Defended Country Slovakia
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Hungary Number Of Armies : 5
+Log: Spain and Hungary are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Rep_Ireland Number Of Armies : 5
+Log: Switzerland and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Rep_Ireland Number Of Armies : 5
+Log: Switzerland and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Rep_Ireland Target Country : Austria Number Of Armies : 5
+Log: Rep_Ireland and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 29
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Austria Target Country : Switzerland Number Of Armies : 6
+Log: benevolent1 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 36
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 36
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Portugal Number Of Armies : 36
+Log: Poland and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Sardinia Number Of Armies : 36
+Log: Poland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Austria Number Of Armies : 7
+Log: benevolent1 Successfully Defended Country Austria
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Belgum Number Of Armies : 8
+Log: Italy and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : Austria Number Of Armies : 8
+Log: Scotland and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 50
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 8
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : Austria Number Of Armies : 8
+Log: Scotland and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 50
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Luxembourg Number Of Armies : 8
+Log: Italy and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : Austria Number Of Armies : 8
+Log: Scotland and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : Austria Number Of Armies : 8
+Log: Scotland and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 8
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : France Number Of Armies : 57
+Log: Poland and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Hungary Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : Austria Number Of Armies : 8
+Log: Scotland and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Netherlands Number Of Armies : 8
+Log: Spain and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Sardinia Number Of Armies : 71
+Log: Poland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 71
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 71
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 85
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 85
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Slovakia Number Of Armies : 85
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Slovakia Number Of Armies : 85
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 85
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 7
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Luxembourg Target Country : Belgum Number Of Armies : 11
+Log: benevolent0 Successfully Defended Country Belgum
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Slovakia Number Of Armies : 14
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 7 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Slovakia Number Of Armies : 14
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Belgum Number Of Armies : 11
+Log: benevolent0 Successfully Defended Country Belgum
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Austria Target Country : Switzerland Number Of Armies : 10
+Log: benevolent1 Successfully Defended Country Switzerland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Austria Number Of Armies : 84
+Log: benevolent1 Successfully Defended Country Austria
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Belgum Number Of Armies : 11
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Belgum Number Of Armies : 11
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Belgum Number Of Armies : 11
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Slovakia Number Of Armies : 7
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Austria Number Of Armies : 15
+Log: aggressive2 won and got bomb
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Netherlands Number Of Armies : 8
+Log: Spain and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Rep_Ireland Target Country : Switzerland Number Of Armies : 8
+Log: Rep_Ireland and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Netherlands Number Of Armies : 8
+Log: Spain and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : Switzerland Number Of Armies : 8
+Log: Wales and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Netherlands Number Of Armies : 8
+Log: Spain and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 8
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : France Number Of Armies : 22
+Log: Poland and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 22
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Rep_Ireland Target Country : Scotland Number Of Armies : 11
+Log: Rep_Ireland and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Luxembourg Number Of Armies : 8
+Log: Netherlands and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Rep_Ireland Target Country : Wales Number Of Armies : 11
+Log: benevolent1 Successfully Defended Country Wales
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Sardinia Number Of Armies : 38
+Log: Poland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 8
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Hungary Number Of Armies : 10
+Log: Belgum and Hungary are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 54
+Log: Poland and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Majorca Number Of Armies : 10
+Log: Belgum and Majorca are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : France Number Of Armies : 54
+Log: Poland and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Netherlands Number Of Armies : 10
+Log: benevolent0 Successfully Defended Country Netherlands
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Sardinia Number Of Armies : 54
+Log: Poland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Spain Number Of Armies : 10
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Sardinia Number Of Armies : 54
+Log: Poland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Majorca Number Of Armies : 10
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Poland Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Netherlands Number Of Armies : 10
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : N_Ireland Number Of Armies : 11
+Log: Wales and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Slovakia Number Of Armies : 62
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : France Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : England Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Belgum Number Of Armies : 11
+Log: Italy and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Rep_Ireland Target Country : Switzerland Number Of Armies : 11
+Log: Rep_Ireland and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Poland Target Country : Slovakia Number Of Armies : 62
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Rep_Ireland Target Country : Switzerland Number Of Armies : 11
+Log: Rep_Ireland and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Slovakia Number Of Armies : 8
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Slovakia Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Hungary Number Of Armies : 69
+Log: aggressive2 won and got bomb
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Slovakia Target Country : Hungary Number Of Armies : 69
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : Scotland Number Of Armies : 14
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Netherlands Number Of Armies : 11
+Log: Italy and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 76
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Belgum Number Of Armies : 11
+Log: Italy and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 76
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Belgum Number Of Armies : 11
+Log: Italy and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 76
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Belgum Number Of Armies : 11
+Log: Italy and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : France Number Of Armies : 76
+Log: Hungary and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 6
+Log: Order Type : Deploy 
+Player : benevolent1 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 76
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Belgum Number Of Armies : 11
+Log: Italy and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Scotland Target Country : N_Ireland Number Of Armies : 14
+Log: benevolent1 Successfully Defended Country N_Ireland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Sardinia Number Of Armies : 76
+Log: Hungary and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 6
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 0 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : N_Ireland Number Of Armies : 14
+Log: Wales and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 76
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Sardinia Number Of Armies : 84
+Log: Hungary and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Spain Number Of Armies : 16
+Log: Belgum and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Spain Number Of Armies : 16
+Log: Belgum and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Spain Number Of Armies : 16
+Log: Belgum and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Majorca Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : N_Ireland Number Of Armies : 14
+Log: Wales and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Sardinia Number Of Armies : 100
+Log: Hungary and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Majorca Number Of Armies : 16
+Log: Belgum and Majorca are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Netherlands Number Of Armies : 16
+Log: benevolent0 Successfully Defended Country Netherlands
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : N_Ireland Number Of Armies : 14
+Log: Wales and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : France Number Of Armies : 108
+Log: Hungary and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : Scotland Number Of Armies : 14
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 108
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : N_Ireland Number Of Armies : 14
+Log: Wales and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Portugal Number Of Armies : 116
+Log: Hungary and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : N_Ireland Number Of Armies : 14
+Log: Wales and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Netherlands Target Country : Italy Number Of Armies : 13
+Log: Netherlands and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 132
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : N_Ireland Number Of Armies : 17
+Log: Wales and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : Scotland Number Of Armies : 17
+Log: Wales and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : France Number Of Armies : 148
+Log: Hungary and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Sardinia Number Of Armies : 148
+Log: Hungary and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Italy Target Country : Majorca Number Of Armies : 14
+Log: Italy and Majorca are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 156
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Spain Target Country : Majorca Number Of Armies : 14
+Log: benevolent0 Successfully Defended Country Majorca
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Majorca Number Of Armies : 14
+Log: Belgum and Majorca are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Switzerland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Belgum Target Country : Spain Number Of Armies : 14
+Log: Belgum and Spain are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 164
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Sardinia Number Of Armies : 164
+Log: Hungary and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Majorca Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Wales Number Of Armies : 19
+Log: Switzerland and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : France Number Of Armies : 172
+Log: Hungary and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Wales Number Of Armies : 19
+Log: Switzerland and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Portugal Number Of Armies : 172
+Log: Hungary and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : Wales Number Of Armies : 19
+Log: Switzerland and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Portugal Number Of Armies : 172
+Log: Hungary and Portugal are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Switzerland Target Country : N_Ireland Number Of Armies : 19
+Log: Switzerland and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Scotland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Hungary Number Of Armies : 8
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Wales Target Country : Rep_Ireland Number Of Armies : 20
+Log: benevolent1 Successfully Defended Country Rep_Ireland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : England Number Of Armies : 180
+Log: Hungary and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Hungary Target Country : Sardinia Number Of Armies : 180
+Log: Hungary and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Loaded map successfully from existing domination file
+Log: The map is connected
+Log: Assigned countries randomly to players
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : England Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Sardinia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Portugal Target Country : Wales Number Of Armies : 2
+Log: Portugal and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Portugal Target Country : Czech_Rep Number Of Armies : 2
+Log: Portugal and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Portugal Target Country : Wales Number Of Armies : 2
+Log: Portugal and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Portugal Target Country : N_Ireland Number Of Armies : 2
+Log: Portugal and N_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Belgum Number Of Armies : 2
+Log: Sicily and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 5
+Log: benevolent0 Successfully Defended Country Portugal
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Portugal Target Country : Rep_Ireland Number Of Armies : 2
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Germany Number Of Armies : 2
+Log: Sicily and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Portugal Target Country : N_Ireland Number Of Armies : 2
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Sardinia Target Country : Rep_Ireland Number Of Armies : 2
+Log: Sardinia and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Czech_Rep Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Belgum Number Of Armies : 2
+Log: Sicily and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Netherlands Number Of Armies : 2
+Log: Sicily and Netherlands are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Italy Target Country : Belgum Number Of Armies : 2
+Log: Italy and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 7
+Log: aggressive2 won and got airlift
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 7
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 7
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 7
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Czech_Rep Target Country : Rep_Ireland Number Of Armies : 2
+Log: Czech_Rep and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Portugal Number Of Armies : 7
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 6
+Log: Portugal and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Switzerland Number Of Armies : 6
+Log: Portugal and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : France Number Of Armies : 9
+Log: Portugal and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Netherlands Target Country : Germany Number Of Armies : 2
+Log: benevolent1 Successfully Defended Country Germany
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : England Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Sardinia Number Of Armies : 2
+Log: N_Ireland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Italy Target Country : England Number Of Armies : 2
+Log: Italy and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Scotland Number Of Armies : 15
+Log: Portugal and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Italy Target Country : England Number Of Armies : 2
+Log: Italy and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Scotland Number Of Armies : 15
+Log: Portugal and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : England Target Country : Sicily Number Of Armies : 5
+Log: England and Sicily are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Czech_Rep Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : England Target Country : Netherlands Number Of Armies : 5
+Log: benevolent1 Successfully Defended Country Netherlands
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : France Number Of Armies : 21
+Log: Portugal and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Belgum Target Country : Netherlands Number Of Armies : 5
+Log: benevolent1 Successfully Defended Country Netherlands
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Czech_Rep Target Country : Wales Number Of Armies : 5
+Log: Czech_Rep and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : England Number Of Armies : 5
+Log: Germany and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Czech_Rep Target Country : Wales Number Of Armies : 5
+Log: Czech_Rep and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Czech_Rep Target Country : Wales Number Of Armies : 5
+Log: Czech_Rep and Wales are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Sardinia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : England Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : England Number Of Armies : 5
+Log: Germany and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Switzerland Number Of Armies : 30
+Log: Portugal and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Corsica Number Of Armies : 30
+Log: Portugal and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Austria Number Of Armies : 5
+Log: Sicily and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Austria Number Of Armies : 5
+Log: Sicily and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Austria Number Of Armies : 5
+Log: benevolent1 Successfully Defended Country Austria
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Wales Target Country : Czech_Rep Number Of Armies : 8
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Austria Number Of Armies : 5
+Log: Sicily and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 42
+Log: Portugal and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Luxembourg Number Of Armies : 8
+Log: Denmark and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Austria Number Of Armies : 5
+Log: Sicily and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Corsica Number Of Armies : 42
+Log: Portugal and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Wales Target Country : Czech_Rep Number Of Armies : 8
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Italy Number Of Armies : 5
+Log: benevolent1 Successfully Defended Country Italy
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Wales Target Country : Czech_Rep Number Of Armies : 8
+Log: Wales and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Austria Number Of Armies : 5
+Log: benevolent1 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Czech_Rep Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Austria Number Of Armies : 5
+Log: benevolent1 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Italy Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : France Number Of Armies : 45
+Log: Portugal and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Belgum Target Country : Italy Number Of Armies : 5
+Log: Belgum and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Belgum Target Country : Germany Number Of Armies : 5
+Log: benevolent1 Successfully Defended Country Germany
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Sardinia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Rep_Ireland Target Country : Sardinia Number Of Armies : 8
+Log: Rep_Ireland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Poland Target Country : Germany Number Of Armies : 5
+Log: benevolent1 Successfully Defended Country Germany
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 54
+Log: Portugal and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Sardinia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Denmark Number Of Armies : 8
+Log: Source country name Denmark and Target country name Denmark are same so advance order does not changes anything
+Log: benevolent0 Successfully Defended Country Denmark
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 8
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Luxembourg Number Of Armies : 8
+Log: benevolent0 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Poland Target Country : Austria Number Of Armies : 6
+Log: Poland and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Poland Target Country : Austria Number Of Armies : 6
+Log: Poland and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Austria Target Country : Italy Number Of Armies : 6
+Log: benevolent1 Successfully Defended Country Italy
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Czech_Rep Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Sardinia Target Country : Czech_Rep Number Of Armies : 11
+Log: Sardinia and Czech_Rep are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Poland Target Country : Sicily Number Of Armies : 6
+Log: Poland and Sicily are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Luxembourg Number Of Armies : 11
+Log: N_Ireland and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Austria Number Of Armies : 7
+Log: Sicily and Austria are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 72
+Log: Portugal and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Belgum Number Of Armies : 7
+Log: Sicily and Belgum are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : England Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Sardinia Target Country : Luxembourg Number Of Armies : 11
+Log: Sardinia and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Italy Number Of Armies : 7
+Log: benevolent1 Successfully Defended Country Italy
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Switzerland Number Of Armies : 75
+Log: Portugal and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Wales Target Country : Luxembourg Number Of Armies : 11
+Log: Wales and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Czech_Rep Target Country : Luxembourg Number Of Armies : 11
+Log: Czech_Rep and Luxembourg are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Switzerland Number Of Armies : 81
+Log: Portugal and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Scotland Number Of Armies : 84
+Log: Portugal and Scotland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Belgum Target Country : Sicily Number Of Armies : 7
+Log: Belgum and Sicily are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 87
+Log: Portugal and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Belgum Target Country : Sicily Number Of Armies : 7
+Log: Belgum and Sicily are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Switzerland Number Of Armies : 87
+Log: Portugal and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : France Number Of Armies : 87
+Log: Portugal and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Czech_Rep Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 87
+Log: Portugal and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Sardinia Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Czech_Rep Target Country : Sardinia Number Of Armies : 14
+Log: Czech_Rep and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Czech_Rep Target Country : Sardinia Number Of Armies : 14
+Log: Czech_Rep and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Czech_Rep Target Country : Sardinia Number Of Armies : 14
+Log: Czech_Rep and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Wales Target Country : Sardinia Number Of Armies : 14
+Log: Wales and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Germany Number Of Armies : 7
+Log: Sicily and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : N_Ireland Target Country : Sardinia Number Of Armies : 14
+Log: N_Ireland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Rep_Ireland Target Country : Sardinia Number Of Armies : 14
+Log: Rep_Ireland and Sardinia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 6
+Log: You are trying to deploy more armies than you have. Try Again in your next turn.
+Log: You currently have 3 number of reinforcement armies left.
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Poland Number Of Armies : 8
+Log: benevolent1 Successfully Defended Country Poland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Switzerland Number Of Armies : 99
+Log: Portugal and Switzerland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Denmark Number Of Armies : 6
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Poland Target Country : Germany Number Of Armies : 7
+Log: benevolent1 Successfully Defended Country Germany
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 102
+Log: Portugal and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : Germany Number Of Armies : 7
+Log: Sicily and Germany are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Luxembourg Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Corsica Number Of Armies : 105
+Log: Portugal and Corsica are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Czech_Rep Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Germany Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : France Number Of Armies : 108
+Log: Portugal and France are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Slovakia Number Of Armies : 108
+Log: Portugal and Slovakia are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : N_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Portugal Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Italy Number Of Armies : 9
+Log: Germany and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Spain Number Of Armies : 111
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Portugal Target Country : Switzerland Number Of Armies : 111
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Wales Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Belgum Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Sicily Number Of Armies : 9
+Log: Germany and Sicily are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 110
+Log: benevolent0 Successfully Defended Country Rep_Ireland
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Netherlands Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 4
+Log: benevolent0 Successfully Defended Country Rep_Ireland
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Austria Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Sicily Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : benevolent1 Country : England Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : England Number Of Armies : 10
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : England Number Of Armies : 10
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Sicily Target Country : England Number Of Armies : 10
+Log: Sicily and England are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Poland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 15
+Log: benevolent0 Successfully Defended Country Rep_Ireland
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 15
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 15
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Germany Number Of Armies : 3
+Log: Order Type : Advance 
+Player : aggressive2 Source Country : Spain Target Country : Rep_Ireland Number Of Armies : 15
+Log: aggressive2 does not have sufficient armies to be attack to the target country
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : benevolent1 Country : Italy Number Of Armies : 3
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Italy Number Of Armies : 12
+Log: Germany and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Italy Number Of Armies : 12
+Log: Germany and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent0 Source Country : Denmark Target Country : Rep_Ireland Number Of Armies : 18
+Log: Denmark and Rep_Ireland are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Italy Number Of Armies : 12
+Log: Germany and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Italy Number Of Armies : 12
+Log: Germany and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: 
+ISSUE ORDER PHASE
+Log: Order Type : Deploy 
+Player : benevolent0 Country : Rep_Ireland Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Italy Number Of Armies : 12
+Log: Germany and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Deploy 
+Player : aggressive2 Country : Spain Number Of Armies : 3
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Italy Number Of Armies : 12
+Log: Germany and Italy are not adjacent
+Log: Invalid Order, not executed
+
+Log: Order Type : Advance 
+Player : benevolent1 Source Country : Germany Target Country : Italy Number Of Armies : 12
+Log: Germany and Italy are not adjacent
+Log: Invalid Order, not executed
+

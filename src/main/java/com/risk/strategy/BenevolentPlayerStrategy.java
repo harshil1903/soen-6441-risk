@@ -98,39 +98,30 @@ public class BenevolentPlayerStrategy extends PlayerStrategy {
         Country l_toDefend = toDefend();
         Country l_toMoveFrom = toMoveFrom();
 
+        l_numOfArmies = l_toMoveFrom.getD_NumberOfArmies() - 1;
 
-        if (new Random().nextBoolean()) {
-            // Deploy Order
-            //l_numOfArmies = l_rand.nextInt(d_player.getD_Armies() + 1);
-            l_numOfArmies = l_toDefend.getD_NumberOfArmies() - 1;
-            return new Deploy(d_player, l_toDefend.getD_CountryName(), d_player.getD_Armies());
-        } else {
+        if(d_player.d_armiesForAdvance > 0){
+            d_player.d_armiesForAdvance = 0;
+            return new Deploy(d_player, toDefend().getD_CountryName(), d_player.getD_Armies());
+        }
+        else {
             if (l_rndOrder >= 0) {
                 switch (l_rndOrder) {
                     case (0):
                         // Advance Order
-                        //l_numOfArmies = l_rand.nextInt(toMoveFrom().getD_NumberOfArmies());
-                        l_numOfArmies = l_toMoveFrom.getD_NumberOfArmies() - 1;
-                        if(l_numOfArmies <= 0)
-                        {
-                            return new Deploy(d_player, l_toDefend.getD_CountryName(), d_player.getD_Armies());
-                        }
                         return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                     case (1):
                         // AirLift Card
-                        //l_numOfArmies = l_rand.nextInt(l_toMoveFrom.getD_NumberOfArmies());
-                        l_numOfArmies = l_toMoveFrom.getD_NumberOfArmies() - 1;
                         if(l_numOfArmies <= 0 ||!d_player.d_cardList.contains("airlift"))
                         {
-                            return new Deploy(d_player, l_toDefend.getD_CountryName(), d_player.getD_Armies());
+                            return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                         }
                         return new Airlift(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                     case (2):
                         //Blockade Card
-                        l_numOfArmies = l_toMoveFrom.getD_NumberOfArmies() - 1;
                         if(l_numOfArmies <= 0 ||!d_player.d_cardList.contains("blockade"))
                         {
-                            return new Deploy(d_player, l_toDefend.getD_CountryName(), d_player.getD_Armies());
+                            return new Advance(d_player, l_toMoveFrom.getD_CountryName(), l_toDefend.getD_CountryName(), l_numOfArmies);
                         }
                         return new Blockade(d_player,l_toDefend.getD_CountryName());
                 }

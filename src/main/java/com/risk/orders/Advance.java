@@ -195,14 +195,15 @@ public class Advance implements Order {
                 }
                 d_player.addCountryToAssignedCountries(d_targetCountry);
 
+                if(!d_sourceCountry.getD_Player().getD_PlayerName().equals(d_targetCountry.getD_Player().getD_PlayerName())){
+                    d_assignedCard = AssignCard.getCard();
+                    d_player.addCard(d_assignedCard);
+                    System.out.println(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
+                    d_Log.notify(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
+                }
                 Player l_tempPlayer = d_targetCountry.getD_Player();
                 l_tempPlayer.removeCountryFromAssignedCountries(d_targetCountry.getD_CountryID());
                 d_targetCountry.setD_Player(d_player);
-
-                d_assignedCard = AssignCard.getCard();
-                d_player.addCard(d_assignedCard);
-                System.out.println(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
-                d_Log.notify(d_player.getD_PlayerName() + " won and got " + d_assignedCard);
             }
             else {
                 //Defender won

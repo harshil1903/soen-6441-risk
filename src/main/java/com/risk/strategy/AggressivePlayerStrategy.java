@@ -127,37 +127,57 @@ public class AggressivePlayerStrategy extends PlayerStrategy {
         l_numOfArmies = l_toAttackFrom.getD_NumberOfArmies() - 1;
 
 
+        if(d_player.d_armiesForAdvance > 0){
+            d_player.d_armiesForAdvance = 0;
+            return new Deploy(d_player, l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
+        }
+
+
+        if(d_flag == 1){
+            for(Country l_country : d_player.getD_AssignedCountries())
+            {
+                if(l_country.getD_AdjacentCountries().contains(l_toAttack)){
+                    return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_country.getD_CountryName(), l_numOfArmies);
+                }
+            }
+        }
+
+        if(l_toAttackFrom.getD_AdjacentCountries().contains(l_toAttack))
+        {
+            return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_toAttack.getD_CountryName(), l_numOfArmies);
+        }
+
 
         System.out.println("\nAggressive Player max army country : " + l_toAttackFrom.getD_CountryName() + "  " + l_toAttackFrom.getD_NumberOfArmies());
 
         System.out.println("\nAggressive Player to attack country : " + l_toAttack.getD_CountryName() + "  " + l_toAttack.getD_NumberOfArmies());
 
 
-        if (new Random().nextBoolean()) {
-
-            return new Deploy(d_player, l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
-        }
-        else {
-
-            if(l_numOfArmies <= 0)
-            {
-                return new Deploy(d_player,l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
-            }
-
-            if(l_toAttackFrom.getD_AdjacentCountries().contains(l_toAttack))
-            {
-                return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_toAttack.getD_CountryName(), l_numOfArmies);
-            }
-            else
-            {
-                for(Country l_country : d_player.getD_AssignedCountries())
-                {
-                    if(l_country.getD_AdjacentCountries().contains(l_toAttack)){
-                        return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_country.getD_CountryName(), l_numOfArmies);
-                    }
-                }
-            }
-        }
+//        if (new Random().nextBoolean()) {
+//
+//            return new Deploy(d_player, l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
+//        }
+//        else {
+//
+//            if(l_numOfArmies <= 0)
+//            {
+//                return new Deploy(d_player,l_toAttackFrom.getD_CountryName(), d_player.getD_Armies());
+//            }
+//
+//            if(l_toAttackFrom.getD_AdjacentCountries().contains(l_toAttack))
+//            {
+//                return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_toAttack.getD_CountryName(), l_numOfArmies);
+//            }
+//            else
+//            {
+//                for(Country l_country : d_player.getD_AssignedCountries())
+//                {
+//                    if(l_country.getD_AdjacentCountries().contains(l_toAttack)){
+//                        return new Advance(d_player, l_toAttackFrom.getD_CountryName(), l_country.getD_CountryName(), l_numOfArmies);
+//                    }
+//                }
+//            }
+//        }
 
         return null;
     }

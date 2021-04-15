@@ -9,8 +9,7 @@ import com.risk.models.Country;
 import com.risk.models.Player;
 import com.risk.orders.Order;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import static com.risk.main.Main.d_Log;
 import static com.risk.main.Main.d_PlayerList;
@@ -155,9 +154,32 @@ public class Tournament {
      */
     public static void issueOrder()
     {
-        for(Player l_player : d_PlayerList)
-        {
-            l_player.issueOrder();
+//        for(Player l_player : d_PlayerList)
+//        {
+//            l_player.issueOrder();
+//        }
+        for (Player l_Player : d_PlayerList) {
+            l_Player.setD_noOrdersLeft(false);
+        }
+
+        System.out.println("\nISSUE ORDER PHASE");
+        d_Log.notify("\nISSUE ORDER PHASE");
+
+        while (noOrdersLeftToIssue()) {
+
+            for (Player l_player : d_PlayerList) {
+
+
+                if(!l_player.isD_noOrdersLeft()){
+
+                    l_player.issueOrder();
+                    l_player.setD_noOrdersLeft(new Random().nextBoolean());
+
+                }
+                else {
+                    System.out.println("Player " + l_player.getD_PlayerName() + "'s turn is skipped because they have no orders left");
+                }
+            }
         }
     }
 
@@ -192,6 +214,20 @@ public class Tournament {
             l_player.getDiplomacyPlayer().clear();
         }
 
+    }
+
+    /**
+     * No orders left to issue boolean.
+     *
+     * @return the boolean
+     */
+    public static boolean noOrdersLeftToIssue() {
+        for (Player l_Player : d_PlayerList) {
+            if (!l_Player.isD_noOrdersLeft())
+                return true;
+        }
+
+        return false;
     }
 
     /**

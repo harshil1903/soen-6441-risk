@@ -55,6 +55,7 @@ public class Reinforce {
             }
 
             l_player.setD_Armies(l_player.getD_Armies() + l_reinforcementCount);
+            l_player.d_armiesForAdvance = l_player.getD_Armies();
         }
     }
 }
